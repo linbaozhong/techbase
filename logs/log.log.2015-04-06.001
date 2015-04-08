@@ -1,0 +1,439 @@
+2015/04/05 18:04:24 [log.go:108] [D] Loading language: en-US 
+2015/04/05 18:04:24 [c_base.go:58] [E] Fail to set message file: open conf/locale_en-US.ini: The system cannot find the file specified. 
+2015/04/05 18:04:24 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 18:04:24 [app.go:96] [I] http server Running on :8080
+2015/04/05 18:04:35 [router.go:876] [C] the request url is  / 
+2015/04/05 18:04:35 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:home/index.html 
+2015/04/05 18:04:35 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/05 18:04:35 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:208 
+2015/04/05 18:04:35 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:179 
+2015/04/05 18:04:35 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:801 
+2015/04/05 18:04:35 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/05 18:04:35 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/05 18:04:35 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/05 18:05:25 [log.go:108] [D] Loading language: en-US 
+2015/04/05 18:05:25 [c_base.go:58] [E] Fail to set message file: open conf/locale_en-US.ini: The system cannot find the file specified. 
+2015/04/05 18:05:25 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 18:05:25 [app.go:96] [I] http server Running on :8080
+2015/04/05 18:05:30 [router.go:876] [C] the request url is  / 
+2015/04/05 18:05:30 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/04/05 18:05:30 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/05 18:05:30 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/04/05 18:05:30 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/04/05 18:05:30 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:94 
+2015/04/05 18:05:30 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:83 
+2015/04/05 18:05:30 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:237 
+2015/04/05 18:05:30 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:179 
+2015/04/05 18:05:30 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:801 
+2015/04/05 18:05:30 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/05 18:05:30 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/05 18:05:30 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/05 18:05:42 [router.go:876] [C] the request url is  / 
+2015/04/05 18:05:42 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/04/05 18:05:42 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/05 18:05:42 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/04/05 18:05:42 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/04/05 18:05:42 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:94 
+2015/04/05 18:05:42 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:83 
+2015/04/05 18:05:42 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:237 
+2015/04/05 18:05:42 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:179 
+2015/04/05 18:05:42 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:801 
+2015/04/05 18:05:42 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/05 18:05:42 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/05 18:05:42 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/05 18:06:17 [router.go:876] [C] the request url is  / 
+2015/04/05 18:06:17 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/04/05 18:06:17 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/05 18:06:17 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/04/05 18:06:17 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/04/05 18:06:17 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:94 
+2015/04/05 18:06:17 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:83 
+2015/04/05 18:06:17 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:237 
+2015/04/05 18:06:17 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:179 
+2015/04/05 18:06:17 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:801 
+2015/04/05 18:06:17 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/05 18:06:17 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/05 18:06:17 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/05 18:24:02 [router.go:876] [C] the request url is  / 
+2015/04/05 18:24:02 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/04/05 18:24:02 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/05 18:24:02 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/04/05 18:24:02 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/04/05 18:24:02 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:94 
+2015/04/05 18:24:02 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:83 
+2015/04/05 18:24:02 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:237 
+2015/04/05 18:24:02 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:179 
+2015/04/05 18:24:02 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:801 
+2015/04/05 18:24:02 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/05 18:24:02 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/05 18:24:02 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/05 18:25:58 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 18:25:58 [app.go:96] [I] http server Running on :8080
+2015/04/05 18:26:04 [router.go:876] [C] the request url is  / 
+2015/04/05 18:26:04 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/04/05 18:26:04 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/05 18:26:04 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/04/05 18:26:04 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/04/05 18:26:04 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:94 
+2015/04/05 18:26:04 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:83 
+2015/04/05 18:26:04 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:237 
+2015/04/05 18:26:04 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:179 
+2015/04/05 18:26:04 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:801 
+2015/04/05 18:26:04 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/05 18:26:04 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/05 18:26:04 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/05 18:31:43 [router.go:876] [C] the request url is  / 
+2015/04/05 18:31:43 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/04/05 18:31:43 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/05 18:31:43 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/04/05 18:31:43 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/04/05 18:31:43 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:94 
+2015/04/05 18:31:43 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:83 
+2015/04/05 18:31:43 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:237 
+2015/04/05 18:31:43 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:179 
+2015/04/05 18:31:43 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:801 
+2015/04/05 18:31:43 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/05 18:31:43 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/05 18:31:43 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/05 18:31:45 [router.go:876] [C] the request url is  / 
+2015/04/05 18:31:45 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/04/05 18:31:45 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/05 18:31:45 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/04/05 18:31:45 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/04/05 18:31:45 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:94 
+2015/04/05 18:31:45 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:83 
+2015/04/05 18:31:45 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:237 
+2015/04/05 18:31:45 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:179 
+2015/04/05 18:31:45 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:801 
+2015/04/05 18:31:45 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/05 18:31:45 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/05 18:31:45 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/05 18:33:07 [log.go:108] [D] Loading language: en-US 
+2015/04/05 18:33:07 [log.go:108] [D] Loading language: zh-CN 
+2015/04/05 18:33:07 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 18:33:07 [app.go:96] [I] http server Running on :8080
+2015/04/05 18:33:43 [log.go:108] [D] Loading language: en-US 
+2015/04/05 18:33:43 [log.go:108] [D] Loading language: zh-CN 
+2015/04/05 18:33:43 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 18:33:43 [app.go:96] [I] http server Running on :8080
+2015/04/05 18:33:47 [router.go:845] [D] | GET        | /                                        | 2.0001ms         | match      | /                                        | 
+2015/04/05 18:33:47 [staticfile.go:62] [W] GetFileAttributesEx static/bootstrap.min.css: The system cannot find the file specified. 
+2015/04/05 18:34:44 [router.go:845] [D] | GET        | /                                        | 3.0002ms         | match      | /                                        | 
+2015/04/05 18:34:44 [staticfile.go:62] [W] GetFileAttributesEx static/bootstrap.min.css: The system cannot find the file specified. 
+2015/04/05 18:35:43 [log.go:108] [D] Loading language: en-US 
+2015/04/05 18:35:43 [log.go:108] [D] Loading language: zh-CN 
+2015/04/05 18:35:43 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 18:35:43 [app.go:96] [I] http server Running on :8080
+2015/04/05 18:35:47 [log.go:108] [D] Home/Get Info:en-US 
+2015/04/05 18:35:47 [router.go:845] [D] | GET        | /                                        | 3.0002ms         | match      | /                                        | 
+2015/04/05 18:35:47 [staticfile.go:62] [W] GetFileAttributesEx static/bootstrap.min.css: The system cannot find the file specified. 
+2015/04/05 18:37:39 [staticfile.go:62] [W] GetFileAttributesEx static/bootstrap.min.css: The system cannot find the file specified. 
+2015/04/05 18:37:46 [log.go:108] [D] Home/Get Info:en-US 
+2015/04/05 18:37:46 [router.go:845] [D] | GET        | /                                        | 5.0003ms         | match      | /                                        | 
+2015/04/05 18:39:08 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 18:39:08 [app.go:96] [I] http server Running on :8080
+2015/04/05 18:39:09 [log.go:108] [D] Home/Get Info:en-US 
+2015/04/05 18:39:09 [router.go:845] [D] | GET        | /                                        | 4.0002ms         | match      | /                                        | 
+2015/04/05 18:39:21 [log.go:108] [D] Home/Get Info:en-US 
+2015/04/05 18:39:21 [router.go:845] [D] | GET        | /                                        | 11.0006ms        | match      | /                                        | 
+2015/04/05 18:40:40 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 18:40:40 [app.go:96] [I] http server Running on :8080
+2015/04/05 18:40:44 [log.go:108] [D] Home/Get Info:en-US 
+2015/04/05 18:40:44 [router.go:845] [D] | GET        | /                                        | 7.0004ms         | match      | /                                        | 
+2015/04/05 18:41:56 [log.go:108] [D] Loading language: en-US 
+2015/04/05 18:41:56 [log.go:108] [D] Loading language: zh-CN 
+2015/04/05 18:41:56 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 18:41:56 [app.go:96] [I] http server Running on :8080
+2015/04/05 18:42:01 [router.go:845] [D] | GET        | /                                        | 9.0005ms         | match      | /                                        | 
+2015/04/05 18:43:24 [log.go:108] [D] Loading language: en-US 
+2015/04/05 18:43:24 [log.go:108] [D] Loading language: zh-CN 
+2015/04/05 18:43:24 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 18:43:24 [app.go:96] [I] http server Running on :8080
+2015/04/05 18:43:27 [router.go:845] [D] | GET        | /                                        | 5.0003ms         | match      | /                                        | 
+2015/04/05 18:47:54 [router.go:845] [D] | GET        | /                                        | 7.0004ms         | match      | /                                        | 
+2015/04/05 19:29:04 [log.go:108] [D] Loading language: en-US 
+2015/04/05 19:29:04 [log.go:108] [D] Loading language: zh-CN 
+2015/04/05 19:29:04 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 19:29:04 [app.go:96] [I] http server Running on :8080
+2015/04/05 19:31:09 [router.go:845] [D] | GET        | /                                        | 8.0005ms         | match      | /                                        | 
+2015/04/05 19:31:18 [router.go:845] [D] | GET        | /                                        | 10.0006ms        | match      | /                                        | 
+2015/04/05 19:35:27 [router.go:845] [D] | GET        | /                                        | 3.0002ms         | match      | /                                        | 
+2015/04/05 19:47:43 [router.go:845] [D] | GET        | /                                        | 8.0004ms         | match      | /                                        | 
+2015/04/05 19:50:25 [router.go:845] [D] | GET        | /                                        | 14.0008ms        | match      | /                                        | 
+2015/04/05 19:52:54 [router.go:845] [D] | GET        | /                                        | 8.0005ms         | match      | /                                        | 
+2015/04/05 19:55:00 [router.go:845] [D] | GET        | /                                        | 6.0003ms         | match      | /                                        | 
+2015/04/05 19:55:03 [router.go:845] [D] | GET        | /                                        | 4.0003ms         | match      | /                                        | 
+2015/04/05 19:56:48 [router.go:845] [D] | GET        | /                                        | 7.0004ms         | match      | /                                        | 
+2015/04/05 19:58:52 [router.go:845] [D] | GET        | /                                        | 12.0006ms        | match      | /                                        | 
+2015/04/05 20:03:17 [router.go:845] [D] | GET        | /                                        | 14.0008ms        | match      | /                                        | 
+2015/04/05 20:25:08 [router.go:845] [D] | GET        | /                                        | 7.0004ms         | match      | /                                        | 
+2015/04/05 20:25:27 [router.go:845] [D] | GET        | /                                        | 10.0006ms        | match      | /                                        | 
+2015/04/05 20:29:21 [router.go:845] [D] | GET        | /                                        | 4.0002ms         | match      | /                                        | 
+2015/04/05 20:29:35 [router.go:845] [D] | GET        | /                                        | 4.0002ms         | match      | /                                        | 
+2015/04/05 20:32:59 [router.go:845] [D] | GET        | /                                        | 6.0003ms         | match      | /                                        | 
+2015/04/05 20:32:59 [router.go:845] [D] | GET        | /index_files/logo000.png                 | 89.0051ms        | notmatch   | 
+2015/04/05 20:35:31 [router.go:845] [D] | GET        | /                                        | 7.0004ms         | match      | /                                        | 
+2015/04/05 20:35:31 [staticfile.go:62] [W] GetFileAttributesEx static/img/logo000.png: The system cannot find the file specified. 
+2015/04/05 20:37:04 [router.go:845] [D] | GET        | /                                        | 8.0005ms         | match      | /                                        | 
+2015/04/05 20:37:04 [staticfile.go:62] [W] GetFileAttributesEx static/img/logo000.png: The system cannot find the file specified. 
+2015/04/05 20:37:04 [staticfile.go:62] [W] GetFileAttributesEx static/img/logo000.png: The system cannot find the file specified. 
+2015/04/05 20:41:23 [router.go:845] [D] | GET        | /                                        | 4.0002ms         | match      | /                                        | 
+2015/04/05 20:41:34 [router.go:845] [D] | GET        | /                                        | 5.0003ms         | match      | /                                        | 
+2015/04/05 20:41:45 [router.go:845] [D] | GET        | /                                        | 3.0002ms         | match      | /                                        | 
+2015/04/05 20:45:58 [router.go:845] [D] | GET        | /                                        | 6.0004ms         | match      | /                                        | 
+2015/04/05 20:47:26 [router.go:845] [D] | GET        | /                                        | 3.0001ms         | match      | /                                        | 
+2015/04/05 20:49:36 [router.go:845] [D] | GET        | /                                        | 7.0004ms         | match      | /                                        | 
+2015/04/05 20:52:05 [router.go:845] [D] | GET        | /                                        | 7.0004ms         | match      | /                                        | 
+2015/04/05 20:52:05 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 397.0227ms       | notmatch   | 
+2015/04/05 21:22:26 [router.go:845] [D] | GET        | /                                        | 100.0057ms       | match      | /                                        | 
+2015/04/05 21:22:27 [router.go:845] [D] | GET        | /img/brand/2.png                         | 1ms              | notmatch   | 
+2015/04/05 21:22:27 [router.go:845] [D] | GET        | /img/brand/3.png                         | 209.012ms        | notmatch   | 
+2015/04/05 21:22:27 [router.go:845] [D] | GET        | /img/brand/1.png                         | 116.0066ms       | notmatch   | 
+2015/04/05 21:22:27 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 1.0001ms         | notmatch   | 
+2015/04/05 21:22:27 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 3.0002ms         | notmatch   | 
+2015/04/05 21:22:27 [router.go:845] [D] | GET        | /index_files/logo.png                    | 3.0002ms         | notmatch   | 
+2015/04/05 21:22:27 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 4.0003ms         | notmatch   | 
+2015/04/05 21:34:40 [router.go:845] [D] | GET        | /                                        | 10.0006ms        | match      | /                                        | 
+2015/04/05 21:34:40 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 0                | notmatch   | 
+2015/04/05 21:34:40 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 92.0053ms        | notmatch   | 
+2015/04/05 21:34:40 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 115.0066ms       | notmatch   | 
+2015/04/05 21:34:41 [router.go:845] [D] | GET        | /index_files/logo.png                    | 120.0069ms       | notmatch   | 
+2015/04/05 21:34:41 [router.go:845] [D] | GET        | /img/brand/1.png                         | 436.0249ms       | notmatch   | 
+2015/04/05 21:34:41 [router.go:845] [D] | GET        | /index_files/banner01.png                | 440.0252ms       | notmatch   | 
+2015/04/05 21:34:41 [router.go:845] [D] | GET        | /img/brand/2.png                         | 420.0241ms       | notmatch   | 
+2015/04/05 21:34:41 [router.go:845] [D] | GET        | /index_files/banner02.png                | 4.0002ms         | notmatch   | 
+2015/04/05 21:34:41 [router.go:845] [D] | GET        | /img/brand/3.png                         | 258.0148ms       | notmatch   | 
+2015/04/05 21:36:01 [router.go:845] [D] | GET        | /                                        | 74.0042ms        | match      | /                                        | 
+2015/04/05 21:36:02 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 156.0089ms       | notmatch   | 
+2015/04/05 21:36:02 [router.go:845] [D] | GET        | /index_files/logo.png                    | 15.0009ms        | notmatch   | 
+2015/04/05 21:36:02 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:36:02 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:36:02 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 155.0089ms       | notmatch   | 
+2015/04/05 21:36:02 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 165.0095ms       | notmatch   | 
+2015/04/05 21:36:02 [router.go:845] [D] | GET        | /img/brand/2.png                         | 170.0098ms       | notmatch   | 
+2015/04/05 21:36:02 [router.go:845] [D] | GET        | /img/brand/1.png                         | 175.0101ms       | notmatch   | 
+2015/04/05 21:36:02 [router.go:845] [D] | GET        | /img/brand/3.png                         | 174.0099ms       | notmatch   | 
+2015/04/05 21:36:27 [router.go:845] [D] | GET        | /                                        | 76.0044ms        | match      | /                                        | 
+2015/04/05 21:36:27 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 184.0106ms       | notmatch   | 
+2015/04/05 21:36:27 [router.go:845] [D] | GET        | /index_files/logo.png                    | 2.0001ms         | notmatch   | 
+2015/04/05 21:36:27 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:36:27 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:36:27 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 233.0133ms       | notmatch   | 
+2015/04/05 21:36:27 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 237.0135ms       | notmatch   | 
+2015/04/05 21:36:27 [router.go:845] [D] | GET        | /img/brand/2.png                         | 240.0137ms       | notmatch   | 
+2015/04/05 21:36:28 [router.go:845] [D] | GET        | /img/brand/1.png                         | 243.0139ms       | notmatch   | 
+2015/04/05 21:36:28 [router.go:845] [D] | GET        | /img/brand/3.png                         | 243.0139ms       | notmatch   | 
+2015/04/05 21:39:12 [router.go:845] [D] | GET        | /                                        | 127.0072ms       | match      | /                                        | 
+2015/04/05 21:39:13 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 146.0084ms       | notmatch   | 
+2015/04/05 21:39:13 [router.go:845] [D] | GET        | /index_files/logo.png                    | 18.001ms         | notmatch   | 
+2015/04/05 21:39:13 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 3.0002ms         | notmatch   | 
+2015/04/05 21:39:13 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 5.0003ms         | notmatch   | 
+2015/04/05 21:39:13 [router.go:845] [D] | GET        | /img/brand/3.png                         | 230.0132ms       | notmatch   | 
+2015/04/05 21:39:13 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:39:13 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:39:13 [router.go:845] [D] | GET        | /img/brand/2.png                         | 61.0035ms        | notmatch   | 
+2015/04/05 21:39:13 [router.go:845] [D] | GET        | /img/brand/1.png                         | 64.0037ms        | notmatch   | 
+2015/04/05 21:41:11 [router.go:845] [D] | GET        | /                                        | 81.0047ms        | match      | /                                        | 
+2015/04/05 21:41:12 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 141.0081ms       | notmatch   | 
+2015/04/05 21:41:12 [router.go:845] [D] | GET        | /index_files/logo.png                    | 3.0002ms         | notmatch   | 
+2015/04/05 21:41:12 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:41:12 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:41:12 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 140.008ms        | notmatch   | 
+2015/04/05 21:41:12 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 148.0085ms       | notmatch   | 
+2015/04/05 21:41:12 [router.go:845] [D] | GET        | /img/brand/2.png                         | 150.0086ms       | notmatch   | 
+2015/04/05 21:41:12 [router.go:845] [D] | GET        | /img/brand/1.png                         | 153.0088ms       | notmatch   | 
+2015/04/05 21:41:12 [router.go:845] [D] | GET        | /img/brand/3.png                         | 151.0086ms       | notmatch   | 
+2015/04/05 21:44:23 [router.go:845] [D] | GET        | /                                        | 100.0057ms       | match      | /                                        | 
+2015/04/05 21:44:23 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 191.0109ms       | notmatch   | 
+2015/04/05 21:44:24 [router.go:845] [D] | GET        | /index_files/logo.png                    | 3.0002ms         | notmatch   | 
+2015/04/05 21:44:24 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:44:24 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:44:24 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 144.0083ms       | notmatch   | 
+2015/04/05 21:44:24 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 150.0086ms       | notmatch   | 
+2015/04/05 21:44:24 [router.go:845] [D] | GET        | /img/brand/2.png                         | 154.0088ms       | notmatch   | 
+2015/04/05 21:44:24 [router.go:845] [D] | GET        | /img/brand/1.png                         | 157.009ms        | notmatch   | 
+2015/04/05 21:44:24 [router.go:845] [D] | GET        | /img/brand/3.png                         | 155.0089ms       | notmatch   | 
+2015/04/05 21:46:32 [router.go:845] [D] | GET        | /                                        | 90.0051ms        | match      | /                                        | 
+2015/04/05 21:46:32 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 1.0001ms         | notmatch   | 
+2015/04/05 21:46:32 [router.go:845] [D] | GET        | /index_files/logo.png                    | 50.0028ms        | notmatch   | 
+2015/04/05 21:46:32 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 31.0018ms        | notmatch   | 
+2015/04/05 21:46:32 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 30.0017ms        | notmatch   | 
+2015/04/05 21:46:32 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 1.0001ms         | notmatch   | 
+2015/04/05 21:46:32 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:46:32 [router.go:845] [D] | GET        | /img/brand/1.png                         | 179.0102ms       | notmatch   | 
+2015/04/05 21:46:32 [router.go:845] [D] | GET        | /img/brand/3.png                         | 215.0123ms       | notmatch   | 
+2015/04/05 21:46:32 [router.go:845] [D] | GET        | /img/brand/2.png                         | 195.0111ms       | notmatch   | 
+2015/04/05 21:46:32 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:46:33 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 31.0018ms        | notmatch   | 
+2015/04/05 21:46:33 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 38.0022ms        | notmatch   | 
+2015/04/05 21:46:33 [router.go:845] [D] | GET        | /index_files/logo.png                    | 43.0025ms        | notmatch   | 
+2015/04/05 21:47:54 [router.go:845] [D] | GET        | /                                        | 76.0043ms        | match      | /                                        | 
+2015/04/05 21:47:54 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 280.016ms        | notmatch   | 
+2015/04/05 21:47:54 [router.go:845] [D] | GET        | /index_files/logo.png                    | 11.0006ms        | notmatch   | 
+2015/04/05 21:47:55 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:47:55 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:47:55 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 121.0069ms       | notmatch   | 
+2015/04/05 21:47:55 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 122.007ms        | notmatch   | 
+2015/04/05 21:47:55 [router.go:845] [D] | GET        | /img/brand/2.png                         | 124.0071ms       | notmatch   | 
+2015/04/05 21:47:55 [router.go:845] [D] | GET        | /img/brand/1.png                         | 125.0071ms       | notmatch   | 
+2015/04/05 21:47:55 [router.go:845] [D] | GET        | /img/brand/3.png                         | 122.007ms        | notmatch   | 
+2015/04/05 21:49:39 [router.go:845] [D] | GET        | /                                        | 76.0043ms        | match      | /                                        | 
+2015/04/05 21:49:40 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 151.0086ms       | notmatch   | 
+2015/04/05 21:49:40 [router.go:845] [D] | GET        | /index_files/logo.png                    | 15.0009ms        | notmatch   | 
+2015/04/05 21:49:40 [router.go:845] [D] | GET        | /img/brand/3.png                         | 159.0091ms       | notmatch   | 
+2015/04/05 21:49:40 [router.go:845] [D] | GET        | /img/brand/1.png                         | 195.0112ms       | notmatch   | 
+2015/04/05 21:49:40 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:49:40 [router.go:845] [D] | GET        | /img/brand/2.png                         | 193.0111ms       | notmatch   | 
+2015/04/05 21:49:40 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:49:40 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 12.0007ms        | notmatch   | 
+2015/04/05 21:49:40 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 18.0011ms        | notmatch   | 
+2015/04/05 21:51:21 [router.go:845] [D] | GET        | /                                        | 81.0046ms        | match      | /                                        | 
+2015/04/05 21:51:22 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 193.011ms        | notmatch   | 
+2015/04/05 21:51:22 [router.go:845] [D] | GET        | /index_files/logo.png                    | 6.0003ms         | notmatch   | 
+2015/04/05 21:51:22 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:51:22 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:51:22 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 93.0053ms        | notmatch   | 
+2015/04/05 21:51:22 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 96.0055ms        | notmatch   | 
+2015/04/05 21:51:22 [router.go:845] [D] | GET        | /img/brand/2.png                         | 115.0065ms       | notmatch   | 
+2015/04/05 21:51:22 [router.go:845] [D] | GET        | /img/brand/1.png                         | 127.0072ms       | notmatch   | 
+2015/04/05 21:51:22 [router.go:845] [D] | GET        | /img/brand/3.png                         | 133.0076ms       | notmatch   | 
+2015/04/05 21:53:08 [router.go:845] [D] | GET        | /                                        | 114.0065ms       | match      | /                                        | 
+2015/04/05 21:53:08 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 341.0195ms       | notmatch   | 
+2015/04/05 21:53:08 [router.go:845] [D] | GET        | /index_files/logo.png                    | 29.0016ms        | notmatch   | 
+2015/04/05 21:53:08 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 7.0004ms         | notmatch   | 
+2015/04/05 21:53:08 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 56.0032ms        | notmatch   | 
+2015/04/05 21:53:08 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:53:08 [router.go:845] [D] | GET        | /img/brand/2.png                         | 55.0032ms        | notmatch   | 
+2015/04/05 21:53:08 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:53:08 [router.go:845] [D] | GET        | /img/brand/3.png                         | 235.0134ms       | notmatch   | 
+2015/04/05 21:53:09 [router.go:845] [D] | GET        | /img/brand/1.png                         | 204.0117ms       | notmatch   | 
+2015/04/05 21:53:09 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 1ms              | notmatch   | 
+2015/04/05 21:53:09 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 6.0003ms         | notmatch   | 
+2015/04/05 21:53:09 [router.go:845] [D] | GET        | /index_files/logo.png                    | 8.0004ms         | notmatch   | 
+2015/04/05 21:53:09 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 12.0006ms        | notmatch   | 
+2015/04/05 21:54:09 [router.go:845] [D] | GET        | /                                        | 100.0057ms       | match      | /                                        | 
+2015/04/05 21:54:09 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 135.0077ms       | notmatch   | 
+2015/04/05 21:54:10 [router.go:845] [D] | GET        | /index_files/logo.png                    | 2.0001ms         | notmatch   | 
+2015/04/05 21:54:10 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:54:10 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:54:10 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 194.0111ms       | notmatch   | 
+2015/04/05 21:54:10 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 199.0114ms       | notmatch   | 
+2015/04/05 21:54:10 [router.go:845] [D] | GET        | /img/brand/2.png                         | 202.0115ms       | notmatch   | 
+2015/04/05 21:54:10 [router.go:845] [D] | GET        | /img/brand/1.png                         | 205.0117ms       | notmatch   | 
+2015/04/05 21:54:10 [router.go:845] [D] | GET        | /img/brand/3.png                         | 204.0117ms       | notmatch   | 
+2015/04/05 21:59:45 [router.go:845] [D] | GET        | /                                        | 121.0069ms       | match      | /                                        | 
+2015/04/05 21:59:45 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 4.0002ms         | notmatch   | 
+2015/04/05 21:59:45 [router.go:845] [D] | GET        | /img/brand/1.png                         | 130.0075ms       | notmatch   | 
+2015/04/05 21:59:45 [router.go:845] [D] | GET        | /img/brand/2.png                         | 101.0058ms       | notmatch   | 
+2015/04/05 21:59:45 [router.go:845] [D] | GET        | /img/brand/3.png                         | 34.002ms         | notmatch   | 
+2015/04/05 21:59:45 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 21:59:45 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 21:59:45 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 131.0075ms       | notmatch   | 
+2015/04/05 21:59:45 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 115.0066ms       | notmatch   | 
+2015/04/05 21:59:46 [router.go:845] [D] | GET        | /index_files/logo.png                    | 145.0083ms       | notmatch   | 
+2015/04/05 22:00:38 [staticfile.go:62] [W] GetFileAttributesEx html/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 22:06:12 [router.go:845] [D] | GET        | /                                        | 88.005ms         | match      | /                                        | 
+2015/04/05 22:06:12 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 1ms              | notmatch   | 
+2015/04/05 22:06:12 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 261.015ms        | notmatch   | 
+2015/04/05 22:06:12 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 264.0151ms       | notmatch   | 
+2015/04/05 22:06:12 [router.go:845] [D] | GET        | /index_files/logo.png                    | 267.0153ms       | notmatch   | 
+2015/04/05 22:06:12 [router.go:845] [D] | GET        | /img/brand/1.png                         | 177.0102ms       | notmatch   | 
+2015/04/05 22:06:12 [router.go:845] [D] | GET        | /img/brand/2.png                         | 185.0106ms       | notmatch   | 
+2015/04/05 22:06:13 [router.go:845] [D] | GET        | /img/brand/3.png                         | 175.01ms         | notmatch   | 
+2015/04/05 22:08:31 [router.go:845] [D] | GET        | /                                        | 107.0061ms       | match      | /                                        | 
+2015/04/05 22:08:32 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 87.005ms         | notmatch   | 
+2015/04/05 22:08:32 [router.go:845] [D] | GET        | /index_files/logo.png                    | 2.0001ms         | notmatch   | 
+2015/04/05 22:08:32 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 272.0155ms       | notmatch   | 
+2015/04/05 22:08:32 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 300.0171ms       | notmatch   | 
+2015/04/05 22:08:32 [router.go:845] [D] | GET        | /img/brand/2.png                         | 320.0183ms       | notmatch   | 
+2015/04/05 22:08:32 [router.go:845] [D] | GET        | /img/brand/1.png                         | 370.0211ms       | notmatch   | 
+2015/04/05 22:08:32 [router.go:845] [D] | GET        | /img/brand/3.png                         | 266.0152ms       | notmatch   | 
+2015/04/05 22:09:26 [router.go:845] [D] | GET        | /                                        | 125.0071ms       | match      | /                                        | 
+2015/04/05 22:09:26 [router.go:845] [D] | GET        | /index_files/logo.png                    | 183.0104ms       | notmatch   | 
+2015/04/05 22:09:26 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 5.0003ms         | notmatch   | 
+2015/04/05 22:09:27 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 126.0072ms       | notmatch   | 
+2015/04/05 22:09:27 [router.go:845] [D] | GET        | /img/brand/3.png                         | 129.0073ms       | notmatch   | 
+2015/04/05 22:09:27 [router.go:845] [D] | GET        | /img/brand/2.png                         | 130.0075ms       | notmatch   | 
+2015/04/05 22:09:27 [router.go:845] [D] | GET        | /img/brand/1.png                         | 133.0076ms       | notmatch   | 
+2015/04/05 22:14:31 [router.go:845] [D] | GET        | /                                        | 74.0042ms        | match      | /                                        | 
+2015/04/05 22:14:32 [router.go:845] [D] | GET        | /img/brand/1.png                         | 155.0089ms       | notmatch   | 
+2015/04/05 22:14:32 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 162.0093ms       | notmatch   | 
+2015/04/05 22:14:32 [router.go:845] [D] | GET        | /img/brand/2.png                         | 388.0222ms       | notmatch   | 
+2015/04/05 22:14:32 [router.go:845] [D] | GET        | /img/brand/3.png                         | 235.0134ms       | notmatch   | 
+2015/04/05 22:14:32 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 7.0004ms         | notmatch   | 
+2015/04/05 22:14:32 [router.go:845] [D] | GET        | /index_files/logo.png                    | 154.0088ms       | notmatch   | 
+2015/04/05 22:15:16 [router.go:845] [D] | GET        | /                                        | 73.0041ms        | match      | /                                        | 
+2015/04/05 22:15:17 [router.go:845] [D] | GET        | /index_files/logo.png                    | 337.0193ms       | notmatch   | 
+2015/04/05 22:15:17 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 7.0004ms         | notmatch   | 
+2015/04/05 22:15:17 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 284.0163ms       | notmatch   | 
+2015/04/05 22:15:17 [router.go:845] [D] | GET        | /img/brand/3.png                         | 303.0174ms       | notmatch   | 
+2015/04/05 22:15:17 [router.go:845] [D] | GET        | /img/brand/2.png                         | 308.0176ms       | notmatch   | 
+2015/04/05 22:15:17 [router.go:845] [D] | GET        | /img/brand/1.png                         | 320.0183ms       | notmatch   | 
+2015/04/05 22:15:54 [router.go:845] [D] | GET        | /                                        | 113.0065ms       | match      | /                                        | 
+2015/04/05 22:15:54 [router.go:845] [D] | GET        | /index_files/logo.png                    | 235.0134ms       | notmatch   | 
+2015/04/05 22:15:55 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 39.0022ms        | notmatch   | 
+2015/04/05 22:15:55 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 117.0067ms       | notmatch   | 
+2015/04/05 22:15:55 [router.go:845] [D] | GET        | /img/brand/2.png                         | 247.0141ms       | notmatch   | 
+2015/04/05 22:15:55 [router.go:845] [D] | GET        | /img/brand/1.png                         | 251.0143ms       | notmatch   | 
+2015/04/05 22:15:55 [router.go:845] [D] | GET        | /img/brand/3.png                         | 124.0071ms       | notmatch   | 
+2015/04/05 22:15:55 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 10.0006ms        | notmatch   | 
+2015/04/05 22:15:55 [router.go:845] [D] | GET        | /index_files/logo.png                    | 13.0008ms        | notmatch   | 
+2015/04/05 22:20:54 [router.go:845] [D] | GET        | /                                        | 140.008ms        | match      | /                                        | 
+2015/04/05 22:20:54 [router.go:845] [D] | GET        | /index_files/logo.png                    | 139.0079ms       | notmatch   | 
+2015/04/05 22:20:54 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 2.0001ms         | notmatch   | 
+2015/04/05 22:20:54 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 170.0097ms       | notmatch   | 
+2015/04/05 22:20:54 [router.go:845] [D] | GET        | /img/brand/3.png                         | 214.0122ms       | notmatch   | 
+2015/04/05 22:20:54 [router.go:845] [D] | GET        | /img/brand/2.png                         | 228.013ms        | notmatch   | 
+2015/04/05 22:20:54 [router.go:845] [D] | GET        | /img/brand/1.png                         | 232.0132ms       | notmatch   | 
+2015/04/05 22:25:25 [router.go:845] [D] | GET        | /                                        | 35.002ms         | match      | /                                        | 
+2015/04/05 22:25:25 [router.go:845] [D] | GET        | /index_files/logo.png                    | 91.0052ms        | notmatch   | 
+2015/04/05 22:25:25 [router.go:845] [D] | GET        | /index_files/logo(1).png                 | 5.0003ms         | notmatch   | 
+2015/04/05 22:25:25 [router.go:845] [D] | GET        | /index_files/logo(2).png                 | 118.0067ms       | notmatch   | 
+2015/04/05 22:27:15 [router.go:845] [D] | GET        | /                                        | 135.0078ms       | match      | /                                        | 
+2015/04/05 22:27:17 [router.go:845] [D] | GET        | /                                        | 72.0042ms        | match      | /                                        | 
+2015/04/05 22:27:51 [router.go:845] [D] | GET        | /                                        | 516.0296ms       | match      | /                                        | 
+2015/04/05 22:27:56 [log.go:108] [D] Loading language: en-US 
+2015/04/05 22:27:56 [log.go:108] [D] Loading language: zh-CN 
+2015/04/05 22:27:56 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 22:27:57 [app.go:96] [I] http server Running on :8080
+2015/04/05 22:28:02 [router.go:845] [D] | GET        | /                                        | 92.0052ms        | match      | /                                        | 
+2015/04/05 22:28:02 [staticfile.go:62] [W] GetFileAttributesEx htm/images/banner02.png: The system cannot find the path specified. 
+2015/04/05 22:28:03 [staticfile.go:62] [W] GetFileAttributesEx htm/images/banner01.png: The system cannot find the path specified. 
+2015/04/05 22:28:40 [router.go:845] [D] | GET        | /                                        | 74.0043ms        | match      | /                                        | 
+2015/04/05 22:29:07 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/05 22:29:07 [app.go:96] [I] http server Running on :8080
+2015/04/05 22:29:16 [router.go:845] [D] | GET        | /                                        | 64.0036ms        | match      | /                                        | 
+2015/04/05 22:29:17 [staticfile.go:62] [W] GetFileAttributesEx html/brand/3.png: The system cannot find the file specified. 
+2015/04/05 22:29:17 [staticfile.go:62] [W] GetFileAttributesEx html/brand/2.png: The system cannot find the file specified. 
+2015/04/05 22:29:17 [staticfile.go:62] [W] GetFileAttributesEx html/brand/1.png: The system cannot find the file specified. 
+2015/04/05 22:32:14 [router.go:845] [D] | GET        | /                                        | 130.0074ms       | match      | /                                        | 
+2015/04/05 22:36:00 [router.go:845] [D] | GET        | /                                        | 79.0046ms        | match      | /                                        | 
+2015/04/05 22:36:00 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 118.0067ms       | notmatch   | 
+2015/04/05 22:36:47 [router.go:845] [D] | GET        | /                                        | 127.0073ms       | match      | /                                        | 
+2015/04/05 22:36:47 [router.go:845] [D] | GET        | /index_files/weixin-qr.png               | 169.0097ms       | notmatch   | 
+2015/04/05 22:37:56 [router.go:845] [D] | GET        | /                                        | 119.0068ms       | match      | /                                        | 
+2015/04/05 22:39:57 [router.go:845] [D] | GET        | /                                        | 118.0067ms       | match      | /                                        | 
+2015/04/05 22:42:22 [router.go:845] [D] | GET        | /                                        | 34.0019ms        | match      | /                                        | 
+2015/04/05 22:42:46 [router.go:845] [D] | GET        | /                                        | 34.002ms         | match      | /                                        | 
+2015/04/05 22:54:58 [router.go:845] [D] | GET        | /                                        | 95.0054ms        | match      | /                                        | 
+2015/04/05 23:03:36 [router.go:845] [D] | GET        | /                                        | 85.0049ms        | match      | /                                        | 
+2015/04/05 23:06:51 [router.go:845] [D] | GET        | /                                        | 139.0079ms       | match      | /                                        | 
+2015/04/05 23:08:27 [router.go:845] [D] | GET        | /                                        | 82.0047ms        | match      | /                                        | 
+2015/04/05 23:08:33 [router.go:845] [D] | GET        | /                                        | 70.004ms         | match      | /                                        | 
+2015/04/05 23:09:01 [router.go:845] [D] | GET        | /                                        | 96.0055ms        | match      | /                                        | 
+2015/04/05 23:09:04 [router.go:845] [D] | GET        | /                                        | 73.0042ms        | match      | /                                        | 
+2015/04/05 23:09:32 [router.go:845] [D] | GET        | /                                        | 102.0058ms       | match      | /                                        | 
+2015/04/05 23:12:39 [router.go:845] [D] | GET        | /                                        | 121.0069ms       | match      | /                                        | 
+2015/04/05 23:14:30 [router.go:845] [D] | GET        | /                                        | 110.0063ms       | match      | /                                        | 
+2015/04/05 23:26:57 [router.go:845] [D] | GET        | /                                        | 132.0076ms       | match      | /                                        | 
+2015/04/05 23:28:07 [router.go:845] [D] | GET        | /                                        | 38.0021ms        | match      | /                                        | 
+2015/04/05 23:30:27 [router.go:845] [D] | GET        | /                                        | 288.0164ms       | match      | /                                        | 
+2015/04/05 23:31:41 [router.go:845] [D] | GET        | /                                        | 37.0021ms        | match      | /                                        | 
+2015/04/05 23:33:07 [router.go:845] [D] | GET        | /                                        | 32.0019ms        | match      | /                                        | 
+2015/04/05 23:34:12 [router.go:845] [D] | GET        | /                                        | 34.0019ms        | match      | /                                        | 
+2015/04/05 23:38:50 [router.go:845] [D] | GET        | /                                        | 578.033ms        | match      | /                                        | 
+2015/04/05 23:39:25 [router.go:845] [D] | GET        | /                                        | 92.0053ms        | match      | /                                        | 
+2015/04/05 23:44:15 [router.go:845] [D] | GET        | /                                        | 74.0042ms        | match      | /                                        | 
+2015/04/05 23:53:14 [router.go:845] [D] | GET        | /                                        | 90.0052ms        | match      | /                                        | 
+2015/04/05 23:55:45 [router.go:845] [D] | GET        | /                                        | 162.0093ms       | match      | /                                        | 
+2015/04/05 23:57:43 [router.go:845] [D] | GET        | /                                        | 320.0183ms       | match      | /                                        | 

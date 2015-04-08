@@ -1,0 +1,491 @@
+* {
+	font-family: 'PingHei 200', "Lucida Grande", "Lucida Sans Unicode", "Helvetica", "Arial", "Verdana", "sans-serif";
+	color: inherit;
+}
+body {
+	font-size: 18px;
+	color: #666;
+}
+h3 {
+	font-size: 35px;
+}
+.link {
+	font-size: 19px;
+	font-weight: 200;
+	margin-left: 1em;
+}
+.fa {
+	color: inherit;
+	padding: 0 5px;
+}
+.slideshow {
+	overflow: hidden;
+	font-weight: bold;
+	line-height: 1.5;
+}
+.slideshow {
+	position: relative;
+}
+.slides {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	height: 420px;
+	width: 100%;
+	overflow: hidden;
+	/*background: #ddd;*/
+	
+	color: #333;
+	box-shadow: 0px 0px 5px #dfdfdf;
+}
+.no-js .slides {
+	height: auto;
+}
+.slides > li {
+	-webkit-perspective: 1600px;
+	perspective: 1600px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	height: 100%;
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: center;
+}
+.no-js .slides > li {
+	position: relative;
+	visibility: visible;
+}
+.slides > li.banner-1 {
+	background-image: url(/html/images/banner02.png);
+}
+.slides > li.banner-2 {
+	background-image: url(/html/images/banner01.png);
+}
+.slideshow > nav span:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	width: 32px;
+	font-size: 14px;
+	content: "\f10c";
+}
+.slideshow > nav span.current:before {
+	content: "\f111";
+}
+.description {
+	width: 100%;
+	height: 100%;
+	font-size: 1.5em;
+	position: relative;
+	z-index: 1000;
+	letter-spacing: .2em;
+	padding-top: 120px;
+	padding-left: 80px
+}
+.no-js .description {
+	opacity: 1;
+}
+.description h2 {
+	font-size: 200%;
+}
+/* Show/Hide */
+
+.slides > li.current,
+.slides > li.show {
+	display: block;
+}
+.description {
+	-webkit-transition: opacity 0.75s;
+	transition: opacity 0.75s;
+}
+.current .description,
+.show .description {
+	opacity: 1;
+}
+.hide .description {
+	opacity: 0;
+}
+@media screen and (min-width: 768px) {
+	.pc-hide {
+		display: none;
+	}
+	#header.header_shadow {
+		box-shadow: 0 2px 5px #666;
+	}
+	#header {
+		z-index: 1000;
+		background: rgba(0, 0, 0, 0.7);
+	}
+	#header .navbar-brand img {
+		display: inline;
+		margin-top: -8px;
+	}
+	#header .navbar-nav {
+		margin-top: 25px;
+	}
+	#header .navbar-nav li a {
+		color: #fff;
+		padding: 5px 15px 5px 15px;
+	}
+	#header .navbar-nav li a:hover {
+		/*border-bottom: solid 2px #999999;*/
+		
+		opacity: .6;
+		background-color: rgba(255, 255, 255, 0);
+	}
+	#header .navbar-nav .active a {
+		/*border-bottom: solid 2px #cd0000;*/
+		
+		opacity: .5;
+	}
+	#header .navbar-nav .active a:hover {
+		/*border-bottom: solid 2px #999999;*/
+	}
+	/*联系我们*/
+	
+	.cxxx {
+		display: none;
+		position: fixed;
+		top: 60px;
+		background-color: #fff;
+		box-shadow: 0px 0px 2px #666;
+		min-width: 140px;
+		min-height: 300px;
+		padding: 10px;
+		text-align: center;
+	}
+	.cxxx #close-cxxx {
+		display: none;
+	}
+	.cxxx p {
+		width: 100%;
+		/*padding-left: 24px;*/
+		text-align: left;
+		text-overflow: clip;
+		overflow: hidden;
+		white-space: normal;
+		word-wrap: break-word;
+		font-size: 14px;
+	}
+	.cxxx img {
+		top: 10px;
+		width: 180px;
+		display: inline;
+		margin-bottom: 10px;
+	}
+	.sec {
+		display: table;
+		position: relative;
+	}
+	.sec .text-side,.sec .img-side {
+		display: table-cell;
+		vertical-align: middle;
+		float: none;
+	}
+}
+@media screen and (max-width: 768px) {
+	.phone-hide {
+		display: none !important;
+	}
+	#footer {
+		padding-bottom: 50px;
+	}
+	#header .navbar-header {
+		display: none;
+	}
+	#header .navbar {
+		position: fixed;
+		left: 0px;
+		bottom: 0px;
+		background-color: #fff;
+		z-index: 1000;
+		width: 100%;
+		margin: 0px 0px;
+	}
+	#header .navbar .pages-div ul {
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+	#header .navbar .pages-div ul li {
+		width: 32%;
+		padding: 0px;
+		display: inline-block;
+		margin: 0px;
+	}
+	#header .navbar .pages-div ul li a {
+		text-align: center;
+		font-size: 1em;
+		color: #666;
+	}
+	#header .navbar .pages-div ul li.active {
+		border-top: 2px solid red;
+	}
+	#header .title-bar {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 50px;
+		background-color: #fff;
+		border-bottom: 1px solid #999;
+		z-index: 1000;
+	}
+	#header .title-bar h3 {
+		position: relative;
+		padding-top: 10px;
+		margin: 0px;
+		height: 100%;
+		width: 100%;
+	}
+	#header .title-bar .title {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+	}
+	#header .title-bar .communicate {
+		position: absolute;
+		text-algin: right;
+		padding-right: 20px;
+		right: 0px;
+	}
+	/*联系我们*/
+	
+	.cxxx {
+		display: none;
+		position: fixed;
+		top: 50px;
+		left: 0px;
+		bottom: 0px;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		padding: 10px;
+		padding-top: 40px;
+		z-index: 999;
+		text-align: center;
+	}
+	.cxxx #close-cxxx {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		font-size: 200%;
+		color: #cd0000;
+	}
+	.cxxx p {
+		width: 100%;
+		text-overflow: clip;
+		over-flow: hidden;
+		white-space: normal;
+		word-wrap: break-word;
+		color: #fff;
+	}
+	.cxxx img {
+		top: 10px;
+		width: 180px;
+		display: inline;
+		margin-bottom: 10px;
+	}
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/*font-weight: bold;*/
+}
+h4 {
+	font-size: 24px;
+}
+h5 {
+	font-size: 18px;
+	font-weight: 600;
+}
+a:hover {
+	text-decoration: none;
+}
+/*品牌列表手机端格式和电脑基本一样*/
+
+.brand-zone {
+	position: relative;
+	margin-left: -25px;
+	margin-right: -25px;
+}
+.brand-zone .brand-card-container {
+	padding: 2px 10px;
+}
+.brand-zone .brand-card {
+	position: relative;
+	top: 5px;
+	/*padding: 5px;*/
+	
+	margin: 0px;
+	z-index: 100;
+	height: 220px;
+	background-position: center center;
+	background-size: cover;
+}
+.brand-zone .brand-card .logo-img {
+	position: relative;
+	left: 5px;
+	top: 5px;
+	width: 75px;
+	height: 75px;
+}
+.brand-zone .brand-card .logo-img img {
+	width: 100%;
+	border: 1px solid #eee;
+}
+.brand-zone .brand-card .brand-footer {
+	position: absolute;
+	left: 85px;
+	top: 5px;
+	padding: 2px 10px;
+	margin: 0px;
+}
+.brand-zone .brand-card .brand-footer .brand:name {
+	color: red;
+	font-size: .8em;
+}
+.brand-zone .brand-card .brand-footer .brand-financ {
+	position: relative;
+}
+.brand-zone .brand-card .brand-info {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	padding: 10px 10px;
+	margin: 10px 5px;
+}
+.brand-zone .brand-card .brand-info p {
+	/*height: 105px;*/
+	
+	overflow: hidden;
+	white-space: normal;
+	word-wrap: break-word;
+	line-height: 1.35;
+}
+.brand-zone .brand-card .brand-info .btn {
+	display: none;
+	position: absolute;
+	bottom: 10px;
+	left: 30%;
+	z-index: 101;
+}
+#footer {
+	position: relative;
+	top: 60px;
+	padding: 20px;
+	background-color: #333;
+	color: #999;
+	margin: 0;
+	line-height: initial;
+	font-size: 14px;
+}
+#footer h4 {
+	font-weight: bold;
+	font-size: inherit;
+}
+#footer.fixfooter {
+	position: fixed !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	top: auto !important;
+}
+#footer .copyright-div {
+	border-top: 1px solid #444;
+	margin-top: 10px;
+	padding-top: 10px;
+	text-align: center;
+}
+#footer .qr,
+#footer .wx {
+	text-align: center;
+	width: 100%;
+}
+#footer .qr img,
+#footer .wx img {
+	display: inline;
+	width: 100px;
+}
+#footer p {
+	width: 100%;
+	padding: 0px;
+	margin-bottom: 5px;
+}
+#footer a {
+	color: #666;
+}
+@media screen and (min-width: 768px) {
+	#banner {
+		position: relative;
+		margin-bottom: 30px;
+	}
+	#banner .small {
+		font-size: 0.7em;
+		font-weight: initial;
+		line-height: normal;
+	}
+	#consult-rec {
+		position: relative;
+		top: 20px;
+		left: 9%;
+		width: 84%;
+		padding: 30px 0px;
+		border-top: solid 1px #ccc;
+		border-bottom: solid 1px #666;
+	}
+	.more-brand {
+		position: relative;
+		top: 5px;
+		width: 100%;
+		text-align: right;
+		padding: 0 15px;
+		font-size: 19px;
+	}
+}
+@media screen and (max-width: 768px) {
+	/*手机*/
+	
+	.container {
+		position: relative;
+		top: 55px;
+		width: 100%;
+		padding: 0px;
+		margin: 0px;
+	}
+	#banner {
+		position: relative;
+	}
+	#consult-rec {
+		position: relative;
+		top: 20px;
+		left: 9%;
+		width: 84%;
+		padding: 30px 0px;
+		border-top: solid 1px #ccc;
+		border-bottom: solid 1px #666;
+	}
+	.brand-zone {
+		position: relative;
+		margin: 0px 0px;
+		padding: 0px;
+	}
+	.brand-zone .more-brand {
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		text-align: center;
+		padding: 5px 15px;
+		font-size: 1.5em;
+	}
+	.brand-zone .brand-card-container {
+		padding: 0px;
+	}
+	.brand-zone .brand-card-container .brand-card {
+		box-shadow: none;
+		border-bottom: 1px solid #ccc;
+	}
+}

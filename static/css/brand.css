@@ -1,0 +1,95 @@
+	@media screen and (min-width: 768px) {
+		.sec aside {
+			position: fixed;
+			bottom: 200px;
+			top: 100px;
+			width: 290px;
+		}
+		.brand-card {
+			position: relative;
+			padding: 0px 5px;
+			margin: 0px;
+			z-index: 100;
+		}
+		.brand-card .logo-img {
+			position: relative;
+			left: 5px;
+			top: 5px;
+			min-width: 100px;
+			max-width: 100px;
+			height: 100px;
+		}
+		.brand-card .logo-img img{
+			width:100%;
+			border: 1px solid #eee;
+		}
+		.brand-card .brand-footer {
+			position: absolute;
+			left: 125px;
+			top: 5px;
+			padding: 2px 10px;
+			margin: 0px;
+		}
+		.brand-card .brand-info {
+			position: relative;
+			left: 0px;
+			top: 20px;
+			width: 100%;
+			padding: 10px 10px;
+			margin: 0px;
+		}
+		.sec .img-side {
+			text-align: center;
+		}
+		.sec .img-side img {
+			display: initial;
+		}
+		.sec article{
+			clear: both;
+		}
+		.sec article:after{
+			content: '';
+			clear: both;
+		}
+		.sec .photo{
+			margin-bottom:1.1em ;
+		}
+		.sec .photo img{
+			width:100px;
+			border: 1px solid #eee;
+		}
+		.sec-up {
+			position: absolute;
+			left: 0;
+			top: 150px;
+			right: 0;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-size: 1.5em;
+			color: #ddd;
+			cursor: pointer;
+			display: none;
+		}
+		.sec-down {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-size: 1.5em;
+			color: #ddd;
+			cursor: pointer;
+		}
+		.sec-down:hover {
+			color: #666;
+		}
+		#experiece dl{
+			margin-left: 1.5em;
+		}
+		#experiece dd{
+			margin-bottom:1.1em;
+		}
+	}
