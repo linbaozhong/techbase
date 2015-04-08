@@ -111,7 +111,17 @@
 	$(function() {
 		$(".lianxiwe").hover(function(e) {
 			var _this = $(this);
-			$(".cxxx").css('left', _this.offset().left).show();
+			if ($(window).width() - _this.offset().left >= $(".cxxx").outerWidth()) {
+				$(".cxxx").css({
+					'left':_this.offset().left,
+					'right':'inherit'
+				}).show();
+			}else{
+				$(".cxxx").css({
+					'right': 10,
+					'left':'inherit'
+				}).show();
+			}
 		}, function() {
 			$(this).css("border-bottom", "none");
 			$(".cxxx").hide();
