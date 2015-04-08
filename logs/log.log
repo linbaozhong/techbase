@@ -746,3 +746,10 @@
 2015/04/08 16:55:56 [router.go:845] [D] | GET        | /                                        | 96.0055ms        | match      | /                                        | 
 2015/04/08 16:56:49 [router.go:845] [D] | GET        | /                                        | 81.0047ms        | match      | /                                        | 
 2015/04/08 16:59:17 [router.go:845] [D] | GET        | /                                        | 295.0169ms       | match      | /                                        | 
+2015/04/08 20:21:36 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/08 20:21:36 [app.go:96] [I] http server Running on :8080
+2015/04/08 20:21:49 [router.go:845] [D] | GET        | /                                        | 21.0012ms        | match      | /                                        | 
+2015/04/08 20:40:26 [router.go:845] [D] | GET        | /                                        | 87.005ms         | match      | /                                        | 
+2015/04/08 20:40:29 [router.go:845] [D] | GET        | /                                        | 121.0069ms       | match      | /                                        | 
+2015/04/08 20:41:03 [router.go:845] [D] | GET        | /                                        | 126.0072ms       | match      | /                                        | 
+2015/04/08 20:41:06 [router.go:845] [D] | GET        | /                                        | 59.0034ms        | match      | /                                        | 

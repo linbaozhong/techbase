@@ -111,7 +111,7 @@
 	$(function() {
 		$(".lianxiwe").hover(function(e) {
 			var _this = $(this);
-			if ($(window).width() - _this.offset().left >= $(".cxxx").outerWidth()) {
+			if ($(window).width() - _this.offset().left >= $(".cxxx").outerWidth()+10) {
 				$(".cxxx").css({
 					'left':_this.offset().left,
 					'right':'inherit'
