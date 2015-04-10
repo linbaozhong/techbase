@@ -9,6 +9,9 @@ body {
 h3 {
 	font-size: 35px;
 }
+#go-top:hover{
+	opacity: 1 !important;
+}
 .link {
 	font-size: 19px;
 	font-weight: 200;
@@ -119,7 +122,7 @@ h3 {
 	}
 	#header .navbar-brand img {
 		display: inline;
-		margin-top: -8px;
+		margin-top: -12px;
 	}
 	#header .navbar-nav {
 		margin-top: 25px;
@@ -418,6 +421,7 @@ a:hover {
 #footer a {
 	color: #666;
 }
+
 @media screen and (min-width: 768px) {
 	#banner {
 		position: relative;

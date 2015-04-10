@@ -18,7 +18,7 @@
 			line-height: 50px;
 			text-align: center;
 			font-size: 1.5em;
-			color: #ddd;
+			color: #666;
 			cursor: pointer;
 			display: none;
 		}
@@ -27,19 +27,23 @@
 			left: 0;
 			bottom: 0;
 			right: 0;
-			height: 50px;
-			line-height: 50px;
+			height: 60px;
+			/*line-height: 50px;*/
 			text-align: center;
 			font-size: 1.5em;
-			color: #ddd;
-			cursor: pointer;
-		}
-		.sec-down:hover{
 			color: #666;
+			cursor: pointer;
 		}
 		body {
 			overflow: hidden;
 		}
+		/*@-webkit-keyframes name{
+			0%{margin-top: 0px;}
+			100%{margin-top: 25px;}
+		}
+		.sec-down i{
+			-webkit-animation: name .5s infinite alternate;
+		}*/
 	}
 </style>
 <div id="container" style="margin-top:0;">
@@ -133,6 +137,7 @@
 			_this.parent().prev().find('span.sec-down').show();
 		});
 	});
+	
 	_sections.mousewheel(function(e, delta) {
 		var _this = $(this);
 		if (delta < 0) {
@@ -141,4 +146,12 @@
 			_this.find('span.sec-up').click();
 		};
 	});
+	// 循环动画向下箭头
+	(function(){
+		function runIt(){
+			$('span.sec-down i').animate({marginTop:20},500);
+			$('span.sec-down i').animate({marginTop:0},500,runIt);
+		}
+		runIt();
+	})();
 </script>

@@ -10,7 +10,7 @@
 		<meta property="qc:admins" content="6050272677640117256375" />
 		<link rel="stylesheet" href="/static/css/pinghei.css">
 		<link rel="shortcut icon" href="/static/img/favicon.ico" />
-		<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="/static/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/static/css/default.css">
 		<script type="text/javascript" src="/static/js/jquery-2.1.1.min.js"></script>
@@ -43,13 +43,13 @@
 						<li {{if eq .index "brandshow"}} class="active" {{end}}><a href="/brandshow">她品牌</a>
 						</li>
 						<li{{if eq .index "home"}} class="active" {{end}}><a href="/home">她本营</a>
-						</li>
-						<li class="phone-hide {{if eq .index "media"}} active {{end}}"><a href="/media">她资讯</a>
-						</li>
-						<li class="phone-hide {{if eq .index "community"}} active {{end}}"><a href="/community">她社区</a>
-						</li>
-						<li class="phone-hide lianxiwe"><a href="#">联系我们</a>
-						</li>
+							</li>
+							<li class="phone-hide {{if eq .index " media "}} active {{end}}"><a href="/media">她资讯</a>
+							</li>
+							<li class="phone-hide {{if eq .index " community "}} active {{end}}"><a href="/community">她社区</a>
+							</li>
+							<li class="phone-hide lianxiwe"><a href="#">联系我们</a>
+							</li>
 					</ul>
 				</nav>
 				<div class="cxxx">
@@ -103,6 +103,11 @@
 					</p>
 				</div>
 			</div>
+			<div class="col-md-2 col-sm-2 row text-right">
+				<a id="go-top" href="javascript:;" class="hidden" style="position:fixed;z-index:999;bottom: 225px;display: inline-block;width: 32px;color:white;font-size:14px;background: #2476CE;padding: 10px 6px;opacity:0.3;">
+				<i class="fa fa-angle-up"></i>
+				</a>
+			</div>
 		</footer>
 	</body>
 
@@ -111,15 +116,15 @@
 	$(function() {
 		$(".lianxiwe").hover(function(e) {
 			var _this = $(this);
-			if ($(window).width() - _this.offset().left >= $(".cxxx").outerWidth()+10) {
+			if ($(window).width() - _this.offset().left >= $(".cxxx").outerWidth() + 10) {
 				$(".cxxx").css({
-					'left':_this.offset().left,
-					'right':'inherit'
+					'left': _this.offset().left,
+					'right': 'inherit'
 				}).show();
-			}else{
+			} else {
 				$(".cxxx").css({
 					'right': 10,
-					'left':'inherit'
+					'left': 'inherit'
 				}).show();
 			}
 		}, function() {
@@ -151,13 +156,18 @@
 			var _slide = $('#slideshow'),
 				_width = _slide.width();
 			_slide.find('.slides li').css('width', _width);
-			
 		}).scroll(function() {
 			if ($(document).scrollTop() > 50) {
 				$('#header').addClass('header_shadow');
+				$('#go-top').removeClass('hidden');
 			} else {
 				$('#header').removeClass('header_shadow');
+				$('#go-top').addClass('hidden');
 			}
 		}).resize();
+		//
+		$('#go-top').click(function(){
+			$('html,body').animate({scrollTop:0});
+		});
 	});
 </script>
