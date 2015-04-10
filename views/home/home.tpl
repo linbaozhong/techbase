@@ -146,11 +146,12 @@
 			_this.find('span.sec-up').click();
 		};
 	});
+
 	// 循环动画向下箭头
 	(function(){
 		function runIt(){
-			$('span.sec-down i').animate({marginTop:20},500);
-			$('span.sec-down i').animate({marginTop:0},500,runIt);
+			$('span.sec-down i').animate({marginTop:20},600);
+			$('span.sec-down i').animate({marginTop:0},600,runIt);
 		}
 		runIt();
 	})();

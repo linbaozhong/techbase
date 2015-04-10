@@ -10,10 +10,10 @@
 		<meta property="qc:admins" content="6050272677640117256375" />
 		<link rel="stylesheet" href="/static/css/pinghei.css">
 		<link rel="shortcut icon" href="/static/img/favicon.ico" />
-		<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="//libs.useso.com/js/font-awesome/4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="//libs.useso.com/js/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/static/css/default.css">
-		<script type="text/javascript" src="/static/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="//libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
 		<script type="text/javascript" src="/static/js/jquery.mousewheel.js"></script>
 	</head>
 
