@@ -17,7 +17,6 @@
 		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 		<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
 		<!--<script type="text/javascript" src="/static/js/jquery.mousewheel.js"></script>-->
-		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
 	</head>
 
 	<body>
@@ -114,9 +113,54 @@
 				</a>
 			</div>
 		</footer>
-		<div class="x-data">
-			
+		<div class="text-center" id="signin" style="display:none;">
+			<header>
+				<div class="row" style="margin-top:30px;">
+					<div class="col-md-3 col-sm-3">
+						
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<div>她本营</div>
+						<div class="" style="margin-top:30px;">
+							女性科技互联网创业生态圈
+						</div>
+						<a href="/helper" target="_blank" title="隐私说明"><span style="position:absolute;top:0;right:0;"><i class="fa fa-info-circle"></i></span></a>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						
+					</div>
+				</div>
+
+				<div class="" style="margin-top:30px;">
+					<div class="col-md-4 col-sm-4">
+						<hr />
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<h5>微信扫码登录</h5>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<hr />
+					</div>
+				</div>
+			</header>
+			<div id="signin-weixin">
+
+			</div>
+			<footer></footer>
 		</div>
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+		<script type="text/javascript">
+			var obj = new WxLogin({
+				id: "signin-weixin",
+				appid: "wxd65694259ffb67ec",
+				scope: "snsapi_login",
+				redirect_uri: "http://niux.ren/connect/wx_callback",
+				state: "",
+				style: "white",
+				href: ""
+			});
+		</script>
+
 	</body>
 
 </html>
@@ -190,22 +234,12 @@
 			});
 		});
 		// 登录
-		function signin(){
+		$('.login').click(function() {
 			$('#signin').popWindow({
 				width: 600,
 				height: 600,
 				close: '<span><i class="fa fa-times"></i></span>'
 			});
-		};
-		
-		$('.login').click(function() {
-			if ($('#signin').length) {
-				signin();
-			}else{
-				$('.x-data').load('/static/inc/weixin.html',function(){
-					signin();
-				});
-			}
 		});
 	});
 </script>

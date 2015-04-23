@@ -60,8 +60,3 @@ func (this *Home) Brand() {
 		this.setTplNames(id)
 	}
 }
-
-// 帮助
-func (this *Home) Help() {
-
-}

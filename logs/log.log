@@ -1066,24 +1066,3 @@
 2015/04/23 18:31:38 [router.go:845] [D] | GET        | /                                        | 15.0009ms        | match      | /                                        | 
 2015/04/23 18:34:37 [router.go:845] [D] | GET        | /                                        | 22.0012ms        | match      | /                                        | 
 2015/04/23 18:36:13 [router.go:845] [D] | GET        | /                                        | 26.0015ms        | match      | /                                        | 
-2015/04/23 20:28:36 [log.go:108] [D] Loading language: en-US 
-2015/04/23 20:28:36 [log.go:108] [D] Loading language: zh-CN 
-2015/04/23 20:28:36 [main.go:16] [I] techbase 1.1.14.1105 
-2015/04/23 20:28:36 [app.go:96] [I] http server Running on :8088
-2015/04/23 20:30:47 [log.go:108] [D] Loading language: en-US 
-2015/04/23 20:30:47 [log.go:108] [D] Loading language: zh-CN 
-2015/04/23 20:30:47 [main.go:16] [I] techbase 1.1.14.1105 
-2015/04/23 20:30:47 [app.go:96] [I] http server Running on :80
-2015/04/23 20:31:14 [router.go:845] [D] | GET        | /                                        | 58.0033ms        | match      | /                                        | 
-2015/04/23 20:36:57 [router.go:845] [D] | GET        | /                                        | 80.0046ms        | match      | /                                        | 
-2015/04/23 20:37:55 [router.go:845] [D] | GET        | /                                        | 54.0031ms        | match      | /                                        | 
-2015/04/23 20:40:57 [router.go:845] [D] | GET        | /                                        | 208.0119ms       | match      | /                                        | 
-2015/04/23 20:41:37 [router.go:845] [D] | GET        | /                                        | 537.0307ms       | match      | /                                        | 
-2015/04/23 20:42:45 [router.go:845] [D] | GET        | /                                        | 260.0149ms       | match      | /                                        | 
-2015/04/23 21:36:11 [router.go:845] [D] | GET        | /                                        | 159.0091ms       | match      | /                                        | 
-2015/04/23 21:36:51 [router.go:845] [D] | GET        | /                                        | 266.0152ms       | match      | /                                        | 
-2015/04/23 21:52:14 [main.go:16] [I] techbase 1.1.14.1105 
-2015/04/23 21:52:14 [app.go:96] [I] http server Running on :80
-2015/04/23 22:31:54 [router.go:845] [D] | GET        | /                                        | 105.006ms        | match      | /                                        | 
-2015/04/23 22:46:30 [router.go:845] [D] | GET        | /                                        | 114.0065ms       | match      | /                                        | 
-2015/04/23 22:46:43 [router.go:845] [D] | GET        | /                                        | 81.0046ms        | match      | /                                        | 

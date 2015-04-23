@@ -76,21 +76,15 @@ jQuery弹窗插件 By 哈利蔺特
 		}
 		// 关闭按钮
 		if (opts.close && !closeBtn.length) {
-			closeBtn = $('<div class="pop-close" title="关闭" style="position:fixed;top:' + marginY + 'px;right:' + marginX + 'px;width:25px;height:25px;line-height:25px;text-align:center;z-index:99000;cursor:pointer;display:none;"></div>').appendTo($('body'));
+			closeBtn = $('<div class="pop-close" title="关闭" style="position:fixed;top:' + marginY + 'px;right:' + marginX + 'px;width:25px;height:25px;line-height:25px;text-align:center;z-index:99000;cursor:pointer;opacity:0.2;display:none;"></div>').appendTo($('body'));
 			closeBtn.html(opts.close).click(function() {
 				closeSelf();
 			}).hover(
 				function() {
-					$(this).css({
-						background:'rgba(255,0,0,1)',
-						color:'#fff'
-						});
+					$(this).css('opacity', 0.6);
 				},
 				function() {
-					$(this).css({
-						color:'#999',
-						background:'rgba(255,0,0,0)'
-						});
+					$(this).css('opacity', 0.2);
 				}
 			);
 		}
