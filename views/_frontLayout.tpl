@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="zh-CN">
 
 	<head>
 		<meta charset="utf-8">
@@ -10,68 +10,72 @@
 		<meta property="qc:admins" content="6050272677640117256375" />
 		<link rel="stylesheet" href="/static/css/pinghei.css">
 		<link rel="shortcut icon" href="/static/img/favicon.ico" />
-		<link rel="stylesheet" type="text/css" href="//libs.useso.com/js/font-awesome/4.2.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="//libs.useso.com/js/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/static/css/default.css">
-		<script type="text/javascript" src="//libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
-		<script type="text/javascript" src="/static/js/jquery.mousewheel.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<!--<link rel="stylesheet" href="/static/css/default.css">-->
+		<link rel="stylesheet" href="/static/css/reset.css">
+		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+		<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script type="text/javascript" src="/static/js/jquery.mousewheel.js"></script>-->
 	</head>
 
 	<body>
-		<header id="header" class="navbar-fixed-top">
+		<header class="navbar-fixed-top">
 			<div class="container">
-
-				<div class="title-bar pc-hide">
-					<h3><span class="title">她首页</span>
-			<a class="communicate"><span class="glyphicon glyphicon-qrcode"></span></a></h3>
-				</div>
-				<nav style="height:65px;padding: 0 30px;">
+				<nav style="height:65px;">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">TECHBASE</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="/" style="padding:15px 0;">
+						<a class="navbar-brand" href="/" style="padding:0;">
 							<img src="/static/img/logo001.png" class="img-responsive" alt="logo">
 						</a>
 					</div>
+					<ul class="nav navbar-nav" style="margin-left:40px;">
+						<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
+						</li>
+						<li class="tachuangtou {{if eq .index " brandshow "}}active {{end}}"><a href="javascript:;">她创投</a>
+						</li>
+						<li class="{{if eq .index " media "}} active {{end}}"><a href="/media">她媒体</a>
+						</li>
+						<li class="{{if eq .index " community "}} active {{end}}"><a href="/community">她社区</a>
+						</li>
+						<li {{if eq .index "home"}} class="active" {{end}}><a href="/home">她本营</a>
+						</li>
+
+					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页<span class="sr-only">(current)</span></a>
+						<li class="login"><a href="javascript:;">登录</a>
 						</li>
-						<li {{if eq .index "brandshow"}} class="active" {{end}}><a href="/brandshow">她品牌</a>
+						<li class="guanzhuwe">
+							<a href="javascript:;">关注我们</a>
 						</li>
-						<li{{if eq .index "home"}} class="active" {{end}}><a href="/home">她本营</a>
-							</li>
-							<li class="phone-hide {{if eq .index " media "}} active {{end}}"><a href="/media">她资讯</a>
-							</li>
-							<li class="phone-hide {{if eq .index " community "}} active {{end}}"><a href="/community">她社区</a>
-							</li>
-							<li class="phone-hide lianxiwe"><a href="#">联系我们</a>
-							</li>
 					</ul>
 				</nav>
-				<div class="cxxx">
-					<a href="/" id="close-cxxx"><span class="glyphicon glyphicon-remove"></span></a>
-					<img class="img-responsive" src="/static/img/weixin-qr.png">
-					<div class="co-card">
-						<p>扫描二维码关注我们</p>
-						<p>微信公众号 TechBase她本营</p>
-						<p>邮件 techbase@tabenying.com</p>
-					</div>
-				</div>
+			</div>
+			<div class="nav-children">
+				<ul class="nav-children-li">
+					<li><a href="/xiangmu">项目</a>
+					</li>
+					<li><a href="/touziren">投资人</a>
+					</li>
+				</ul>
 			</div>
 		</header>
+
+		<div class="header-ermeima">
+			<img src="/static/img/weixin-qr.png">
+			<div class="co-card">
+				<p>扫描二维码关注我们</p>
+				<p>微信公众号 TechBase她本营</p>
+				<p>邮件 techbase@tabenying.com</p>
+			</div>
+		</div>
 		{{.LayoutContent}}
 		<!--END container-->
-		<div id="footer_0" style="margin-top:20px;">
+		<div id="footer_0" style="margin-top:30px;">
 		</div>
-
 		<footer class="row" id="footer">
 			<div class="col-md-2 col-sm-2 row"></div>
 			<div class="col-md-8 col-sm-8">
-				<div class="row phone-hide">
+				<div class="row">
 					<div class="col-md-4 col-sm-12">
 						<p class="qr">
 							<img class="img-responsive" src="/static/img/weixin-qr.png">
@@ -104,46 +108,108 @@
 				</div>
 			</div>
 			<div class="col-md-2 col-sm-2 row text-right">
-				<a id="go-top" href="javascript:;" class="hidden" style="position:fixed;z-index:999;bottom: 225px;display: inline-block;width: 32px;color:white;font-size:14px;background: #2476CE;padding: 10px 6px;opacity:0.3;">
-				<i class="fa fa-angle-up"></i>
+				<a class="hidden" id="go-top" href="javascript:;">
+					<i class="fa fa-angle-up"></i>
 				</a>
 			</div>
 		</footer>
+		<div class="text-center" id="signin" style="display:none;">
+			<header>
+				<div class="row" style="margin-top:30px;">
+					<div class="col-md-3 col-sm-3">
+						
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<div>她本营</div>
+						<div class="" style="margin-top:30px;">
+							女性科技互联网创业生态圈
+						</div>
+						<a href="/helper" target="_blank" title="隐私说明"><span style="position:absolute;top:0;right:0;"><i class="fa fa-info-circle"></i></span></a>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						
+					</div>
+				</div>
+
+				<div class="" style="margin-top:30px;">
+					<div class="col-md-4 col-sm-4">
+						<hr />
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<h5>微信扫码登录</h5>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<hr />
+					</div>
+				</div>
+			</header>
+			<div id="signin-weixin">
+
+			</div>
+			<footer></footer>
+		</div>
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+		<script type="text/javascript">
+			var obj = new WxLogin({
+				id: "signin-weixin",
+				appid: "wxd65694259ffb67ec",
+				scope: "snsapi_login",
+				redirect_uri: "http://niux.ren/connect/wx_callback",
+				state: "",
+				style: "white",
+				href: ""
+			});
+		</script>
+
 	</body>
 
 </html>
 <script type="text/javascript">
 	$(function() {
-		$(".lianxiwe").hover(function(e) {
+		var isover = false;
+		// 联系我们
+		$(".guanzhuwe").hover(function(e) {
 			var _this = $(this);
-			if ($(window).width() - _this.offset().left >= $(".cxxx").outerWidth() + 10) {
-				$(".cxxx").css({
+			if ($(window).width() - _this.offset().left >= $(".header-ermeima").outerWidth() + 10) {
+				$(".header-ermeima").css({
 					'left': _this.offset().left,
 					'right': 'inherit'
 				}).show();
 			} else {
-				$(".cxxx").css({
+				$(".header-ermeima").css({
 					'right': 10,
 					'left': 'inherit'
 				}).show();
 			}
 		}, function() {
 			$(this).css("border-bottom", "none");
-			$(".cxxx").hide();
+			$(".header-ermeima").hide();
 		});
-		$(".communicate").click(function() {
-			$(".cxxx").toggle(function() {
-				$(".communicate").css("color", "#cd0000");
-			}, function() {
-				$(".communicate").css("color", "#cc6600");
+		// 他创投
+		function mouseleave() {
+			setTimeout(function() {
+				if (!isover) {
+					$("div.nav-children").stop().delay(500).fadeOut();
+				}
+			}, 500);
+		};
+		$(".tachuangtou").hover(function(e) {
+			var _this = $(this);
+			$("ul.nav-children-li").css({
+				'margin-left': _this.offset().left
 			});
+			$("div.nav-children").stop().fadeIn();
+		}, function() {
+			isover = false;
+			mouseleave();
 		});
-		$("#close-cxxx").click(function() {
-			$(".cxxx").hide();
+		$("div.nav-children").hover(function(e) {
+			isover = true;
+		}, function(e) {
+			isover = false;
+			mouseleave();
 		});
-	});
-	// 页脚自适应沉底，页眉自适应浮动
-	$(function() {
+		// 页脚自适应沉底，页眉自适应浮动
 		$(window).resize(function() {
 			// 页脚
 			var _footer_0 = $('#footer_0'),
@@ -152,22 +218,28 @@
 			if (_footer_0.offset().top > _footer.offset().top) {
 				_footer.removeClass('fixfooter');
 			}
-			// 幻灯
-			var _slide = $('#slideshow'),
-				_width = _slide.width();
-			_slide.find('.slides li').css('width', _width);
 		}).scroll(function() {
 			if ($(document).scrollTop() > 50) {
-				$('#header').addClass('header_shadow');
+				$('header.navbar-fixed-top').addClass('header_shadow');
 				$('#go-top').removeClass('hidden');
 			} else {
-				$('#header').removeClass('header_shadow');
+				$('header.navbar-fixed-top').removeClass('header_shadow');
 				$('#go-top').addClass('hidden');
 			}
 		}).resize();
-		//
-		$('#go-top').click(function(){
-			$('html,body').animate({scrollTop:0});
+		// 
+		$('#go-top').click(function() {
+			$('html,body').animate({
+				scrollTop: 0
+			});
+		});
+		// 登录
+		$('.login').click(function() {
+			$('#signin').popWindow({
+				width: 600,
+				height: 600,
+				close: '<span><i class="fa fa-times"></i></span>'
+			});
 		});
 	});
 </script>

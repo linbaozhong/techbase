@@ -1,0 +1,236 @@
+* {
+	font-family: 'PingHei 200', "Lucida Grande", "Lucida Sans Unicode", "Helvetica", "Arial", "Verdana", "sans-serif";
+	color: inherit;
+}
+body {
+	font-size: 18px;
+	color: #666;
+}
+h4 {
+	font-size: 24px;
+}
+h5 {
+	font-size: 18px;
+	font-weight: 600;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+	color: inherit;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/*导航条*/
+
+.navbar-fixed-top {
+	background: rgba(0, 0, 0, .6);
+}
+.navbar-fixed-top * {
+	color: #fff;
+}
+.navbar-fixed-top .nav {
+	margin-top: 15px;
+}
+
+.navbar-fixed-top .active a{
+	color: #bbb;
+}
+.navbar-fixed-top .nav a:hover{
+	color: orange;
+	background: rgba(255,255,255,0) !important;
+}
+.navbar-fixed-top.header_shadow {
+		box-shadow: 0 2px 5px #666;
+}
+.nav-children{
+	position: absolute;
+	top:65px;
+	left:0;
+	right:0;
+	height:30px;
+	z-index: 2000;
+	font-size: .9em;
+	background:rgba(255,255,255,.7);
+	display: none;
+}
+.nav-children a{
+	color: #000;
+}
+.nav-children a:hover{
+	color: orangered;
+}
+.nav-children .nav-children-li{
+	display: inline-flex;
+}
+.nav-children .nav-children-li li{
+	padding: 6px 10px;
+}
+/*联系我们*/
+
+.header-ermeima {
+	display: none;
+	position: fixed;
+	top: 65px;
+	background-color: #fff;
+	box-shadow: 0px 0px 2px #666;
+	min-width: 140px;
+	min-height: 300px;
+	padding: 10px;
+	text-align: center;
+	z-index: 2000;
+}
+.header-ermeima p {
+	width: 100%;
+	/*padding-left: 24px;*/
+	
+	text-align: left;
+	text-overflow: clip;
+	overflow: hidden;
+	white-space: normal;
+	word-wrap: break-word;
+	font-size: 14px;
+}
+.header-ermeima img {
+	top: 10px;
+	width: 180px;
+	display: inline;
+	margin-bottom: 10px;
+}
+/*页脚*/
+
+#footer {
+	position: relative;
+	top: 60px;
+	padding: 20px;
+	background-color: #333;
+	margin: 0;
+	line-height: initial;
+	font-size: 14px;
+}
+#footer * {
+	color: #999;
+}
+#footer h4 {
+	font-weight: bold;
+	font-size: inherit;
+}
+#footer.fixfooter {
+	position: fixed !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	top: auto !important;
+}
+#footer .copyright-div {
+	border-top: 1px solid #444;
+	margin-top: 10px;
+	padding-top: 10px;
+	text-align: center;
+}
+#footer .qr,
+#footer .wx {
+	text-align: center;
+	width: 100%;
+}
+#footer .qr img,
+#footer .wx img {
+	display: inline;
+	width: 100px;
+}
+#footer p {
+	width: 100%;
+	padding: 0px;
+	margin-bottom: 5px;
+}
+#go-top {
+	position: fixed;
+	z-index: 999;
+	bottom: 225px;
+	display: inline-block;
+	width: 32px;
+	font-size: 14px;
+	background: #2476CE;
+	padding: 10px 6px;
+	opacity: 0.3;
+	text-align: center;
+}
+#go-top * {
+	color: #fff;
+}
+#go-top:hover {
+	opacity: 1 !important;
+}
+
+/*品牌*/
+.brand-zone {
+	position: relative;
+	margin-left: -25px;
+	margin-right: -25px;
+}
+.brand-zone .brand-card-container {
+	padding: 2px 10px;
+}
+.brand-zone .brand-card {
+	position: relative;
+	top: 5px;
+	/*padding: 5px;*/
+	
+	margin: 0px;
+	z-index: 100;
+	height: 220px;
+	background-position: center center;
+	background-size: cover;
+}
+.brand-zone .brand-card .logo-img {
+	position: relative;
+	left: 5px;
+	top: 5px;
+	width: 75px;
+	height: 75px;
+}
+.brand-zone .brand-card .logo-img img {
+	width: 100%;
+	border: 1px solid #eee;
+}
+.brand-zone .brand-card .brand-footer {
+	position: absolute;
+	left: 85px;
+	top: 5px;
+	padding: 2px 10px;
+	margin: 0px;
+}
+.brand-zone .brand-card .brand-footer .brand:name {
+	color: red;
+	font-size: .8em;
+}
+.brand-zone .brand-card .brand-footer .brand-financ {
+	position: relative;
+}
+.brand-zone .brand-card .brand-info {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	padding: 10px 10px;
+	margin: 10px 5px;
+}
+.brand-zone .brand-card .brand-info p {
+	/*height: 105px;*/
+	
+	overflow: hidden;
+	white-space: normal;
+	word-wrap: break-word;
+	line-height: 1.35;
+}
+.brand-zone .brand-card .brand-info .btn {
+	display: none;
+	position: absolute;
+	bottom: 10px;
+	left: 30%;
+	z-index: 101;
+}
+

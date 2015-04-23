@@ -1,96 +1,25 @@
 <style type="text/css">
-	.banner {
-		position: relative;
-		margin-bottom: 30px;
-	}
-	.banner .small {
-		font-size: 0.7em;
-		font-weight: initial;
-		line-height: normal;
-	}
-	.slideshow {
-		overflow: hidden;
-		font-weight: bold;
-		line-height: 1.5;
-		position: relative;
-	}
-	.slideshow * {
-		color: #fff;
-	}
-	.slideshow > .banner-nav {
-		text-align: center;
-		position: absolute;
-		width: 100%;
-		bottom: 10px;
-	}
-	.slideshow > .banner-nav span {
-		display: inline-block;
-		cursor: pointer;
-		margin: 0 3px;
-		-webkit-transition: background-color 0.2s;
-		transition: background-color 0.2s;
-	}
-	.slideshow > .banner-nav span:before {
-		font: normal normal normal 14px/1 FontAwesome;
-		width: 32px;
-		font-size: 14px;
-		content: "\f10c";
-	}
-	.slideshow > .banner-nav span.current:before {
-		content: "\f111";
-	}
-	.slides {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		position: relative;
-		height: 420px;
-		width: 100%;
-		overflow: hidden;
-		color: #333;
-	}
-	.slides > li {
-		-webkit-perspective: 1600px;
-		perspective: 1600px;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		display: none;
-		height: 100%;
-		background-size: cover;
-		background-position-x: center;
-		background-position-y: center;
-	}
-	.slides > li.banner-1 {
-		background-image: url(/html/images/banner02.png);
-	}
-	.slides > li.banner-2 {
-		background-image: url(/html/images/banner01.png);
-	}
-	.slides .description {
-		width: 100%;
-		height: 100%;
-		font-size: 1.5em;
-		position: relative;
-		z-index: 1000;
-		letter-spacing: .2em;
-		padding-top: 120px;
-		padding-left: 80px;
-	}
-	.slides .description h2 {
-		font-size: 200%;
-	}
-	.slides > li.current,
-	.slides > li.show {
-		display: block;
-	}
-	.more-brand {
-		text-align: right;
+	@media screen and (min-width: 768px) {
+		.slideshow > nav {
+			text-align: center;
+			position: absolute;
+			width: 100%;
+			bottom: 10px;
+		}
+		.description a {
+			color: #fff;
+		}
+		.slideshow > nav span {
+			display: inline-block;
+			cursor: pointer;
+			margin: 0 3px;
+			-webkit-transition: background-color 0.2s;
+			transition: background-color 0.2s;
+		}
 	}
 </style>
-<div class="banner">
-	<div class="slideshow">
+<div class="" id="banner">
+	<div class="slideshow" id="slideshow">
 		<ol class="slides">
 			<li class="current banner-1">
 				<div class="description">
@@ -175,15 +104,15 @@
 <script type="text/javascript">
 	(function($) {
 		var speed = 5000,
-			count = $('.slideshow li').length,
+			count = $('#slideshow li').length,
 			index = 0;
 		var slidetimes;
-
-		function start(index) {
-			$('.slideshow .banner-nav span').eq(index).addClass('current').siblings().removeClass('current');
-			$('.slideshow li').eq(index).fadeIn('slow').siblings('li').fadeOut('slow');
+		
+		function start(index){
+			$('#slideshow .banner-nav span').eq(index).addClass('current').siblings().removeClass('current');
+			$('#slideshow li').eq(index).fadeIn('slow').siblings('li').fadeOut('slow');
 		};
-
+		
 		function slideshow() {
 			slidetimes = setInterval(function() {
 				if (index == count) {
@@ -193,12 +122,12 @@
 				index++;
 			}, speed);
 		};
-		$('.slideshow li').hover(function() {
+		$('#slideshow li').hover(function(){
 			clearInterval(slidetimes);
-		}, function() {
+		},function(){
 			slideshow();
 		});
-		$('.slideshow .banner-nav span').click(function() {
+		$('#slideshow .banner-nav span').click(function(){
 			start($(this).index());
 		});
 		slideshow();
