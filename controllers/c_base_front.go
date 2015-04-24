@@ -7,6 +7,7 @@ type Front struct {
 func (this *Front) Prepare() {
 	this.Base.Prepare()
 	this.allowRequest()
+	this.Data["index"] = ""
 
 	this.Layout = "_frontLayout.tpl"
 	this.LayoutSections = make(map[string]string)

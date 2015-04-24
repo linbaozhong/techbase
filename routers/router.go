@@ -17,5 +17,10 @@ func init() {
 	beego.Router("/community", home, "get:Community")
 	beego.Router("/herstart", home, "get:HerStart")
 	beego.Router("/brand/:id", home, "get:Brand")
+	beego.Router("/signout", home, "post:SignOut")
+	beego.Router("/home/error/:msg", home, "get:Error")
 	beego.AutoRouter(home)
+
+	conn := &controllers.Connect{}
+	beego.AutoRouter(conn)
 }

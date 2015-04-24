@@ -1,8 +1,8 @@
 package controllers
 
 import (
-//"techbase/models"
-//"zouzhe/utils"
+	//"techbase/models"
+	"zouzhe/utils"
 )
 
 type Home struct {
@@ -64,4 +64,19 @@ func (this *Home) Brand() {
 // 帮助
 func (this *Home) Help() {
 
+}
+
+// 签出
+func (this *Home) SignOut() {
+	this.loginOut()
+	this.renderJson(utils.JsonMessage(true, "", ""))
+}
+
+/*
+* 通用错误消息地址
+ */
+func (this *Home) Error() {
+	this.trace(this.GetString("msg"))
+	this.Data["message"] = this.GetString("msg")
+	this.setTplNames("error")
 }

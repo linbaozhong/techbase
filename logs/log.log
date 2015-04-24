@@ -1087,3 +1087,300 @@
 2015/04/23 22:31:54 [router.go:845] [D] | GET        | /                                        | 105.006ms        | match      | /                                        | 
 2015/04/23 22:46:30 [router.go:845] [D] | GET        | /                                        | 114.0065ms       | match      | /                                        | 
 2015/04/23 22:46:43 [router.go:845] [D] | GET        | /                                        | 81.0046ms        | match      | /                                        | 
+2015/04/24 10:45:32 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 10:45:35 [app.go:96] [I] http server Running on :80
+2015/04/24 10:47:04 [router.go:845] [D] | GET        | /                                        | 19.0011ms        | match      | /                                        | 
+2015/04/24 10:57:31 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 10:57:32 [app.go:96] [I] http server Running on :80
+2015/04/24 10:59:44 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 10:59:44 [app.go:96] [I] http server Running on :80
+2015/04/24 11:04:41 [router.go:845] [D] | GET        | /ifr_status/                             | 1ms              | notmatch   | 
+2015/04/24 11:35:48 [router.go:845] [D] | GET        | /ifr_status/                             | 1.0001ms         | notmatch   | 
+2015/04/24 11:47:35 [router.go:845] [D] | GET        | /                                        | 18.0011ms        | match      | /                                        | 
+2015/04/24 11:51:19 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 11:51:19 [app.go:96] [I] http server Running on :80
+2015/04/24 11:56:01 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 11:56:01 [app.go:96] [I] http server Running on :80
+2015/04/24 12:05:48 [router.go:845] [D] | GET        | /ifr_status/                             | 2.0001ms         | notmatch   | 
+2015/04/24 12:19:30 [router.go:845] [D] | GET        | /                                        | 24.0013ms        | match      | /                                        | 
+2015/04/24 13:15:42 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 13:15:42 [app.go:96] [I] http server Running on :80
+2015/04/24 14:15:07 [router.go:845] [D] | GET        | /                                        | 105.006ms        | match      | /                                        | 
+2015/04/24 14:19:36 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/04/24 14:19:56 [router.go:845] [D] | GET        | /                                        | 23.0013ms        | match      | /                                        | 
+2015/04/24 15:36:28 [router.go:845] [D] | GET        | /                                        | 219.0126ms       | match      | /                                        | 
+2015/04/24 15:38:46 [router.go:845] [D] | GET        | /                                        | 61.0035ms        | match      | /                                        | 
+2015/04/24 15:39:23 [router.go:845] [D] | GET        | /connect/wx_callback                     | 21.0012ms        | notmatch   | 
+2015/04/24 15:40:45 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 15:40:46 [app.go:96] [I] http server Running on :80
+2015/04/24 15:40:57 [router.go:876] [C] the request url is  /connect/wx_callback 
+2015/04/24 15:40:57 [router.go:877] [C] Handler crashed with error interface conversion: interface is nil, not string 
+2015/04/24 15:40:57 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/24 15:40:57 [router.go:883] [C] C:/Users/999119~1/AppData/Local/Temp/1/makerelease561213055/go/src/pkg/runtime/iface.goc:292 
+2015/04/24 15:40:57 [router.go:883] [C] C:/Users/999119~1/AppData/Local/Temp/1/makerelease561213055/go/src/pkg/runtime/iface.goc:280 
+2015/04/24 15:40:57 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/controllers/c_connect.go:57 
+2015/04/24 15:40:57 [router.go:883] [C] E:/Go/src/pkg/runtime/asm_386.s:383 
+2015/04/24 15:40:57 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:563 
+2015/04/24 15:40:57 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:411 
+2015/04/24 15:40:57 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:794 
+2015/04/24 15:40:57 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/24 15:40:57 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/24 15:40:57 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/24 15:41:16 [router.go:845] [D] | GET        | /                                        | 29.0016ms        | match      | /                                        | 
+2015/04/24 15:41:33 [router.go:876] [C] the request url is  /connect/wx_callback 
+2015/04/24 15:41:33 [router.go:877] [C] Handler crashed with error interface conversion: interface is nil, not string 
+2015/04/24 15:41:33 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/24 15:41:33 [router.go:883] [C] C:/Users/999119~1/AppData/Local/Temp/1/makerelease561213055/go/src/pkg/runtime/iface.goc:292 
+2015/04/24 15:41:33 [router.go:883] [C] C:/Users/999119~1/AppData/Local/Temp/1/makerelease561213055/go/src/pkg/runtime/iface.goc:280 
+2015/04/24 15:41:33 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/controllers/c_connect.go:57 
+2015/04/24 15:41:33 [router.go:883] [C] E:/Go/src/pkg/runtime/asm_386.s:383 
+2015/04/24 15:41:33 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:563 
+2015/04/24 15:41:33 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:411 
+2015/04/24 15:41:33 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:794 
+2015/04/24 15:41:33 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/24 15:41:33 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/24 15:41:33 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/24 15:46:03 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 15:46:03 [app.go:96] [I] http server Running on :80
+2015/04/24 15:50:04 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/24 15:50:22 [router.go:876] [C] the request url is  /connect/wx_callback 
+2015/04/24 15:50:22 [router.go:877] [C] Handler crashed with error interface conversion: interface is nil, not string 
+2015/04/24 15:50:22 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/24 15:50:22 [router.go:883] [C] C:/Users/999119~1/AppData/Local/Temp/1/makerelease561213055/go/src/pkg/runtime/iface.goc:292 
+2015/04/24 15:50:22 [router.go:883] [C] C:/Users/999119~1/AppData/Local/Temp/1/makerelease561213055/go/src/pkg/runtime/iface.goc:280 
+2015/04/24 15:50:22 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/controllers/c_connect.go:57 
+2015/04/24 15:50:22 [router.go:883] [C] E:/Go/src/pkg/runtime/asm_386.s:383 
+2015/04/24 15:50:22 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:563 
+2015/04/24 15:50:22 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:411 
+2015/04/24 15:50:22 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:794 
+2015/04/24 15:50:22 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/24 15:50:22 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/24 15:50:22 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/24 15:51:32 [router.go:845] [D] | GET        | /                                        | 32.0018ms        | match      | /                                        | 
+2015/04/24 15:52:13 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/24 15:52:49 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/24 15:53:01 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/24 16:00:00 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 16:00:00 [app.go:96] [I] http server Running on :80
+2015/04/24 16:55:21 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/24 16:57:38 [router.go:876] [C] the request url is  /connect/wx_callback 
+2015/04/24 16:57:38 [router.go:877] [C] Handler crashed with error interface conversion: interface is nil, not string 
+2015/04/24 16:57:38 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/24 16:57:38 [router.go:883] [C] C:/Users/999119~1/AppData/Local/Temp/1/makerelease561213055/go/src/pkg/runtime/iface.goc:292 
+2015/04/24 16:57:38 [router.go:883] [C] C:/Users/999119~1/AppData/Local/Temp/1/makerelease561213055/go/src/pkg/runtime/iface.goc:280 
+2015/04/24 16:57:38 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/controllers/c_connect.go:57 
+2015/04/24 16:57:38 [router.go:883] [C] E:/Go/src/pkg/runtime/asm_386.s:383 
+2015/04/24 16:57:38 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:563 
+2015/04/24 16:57:38 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:411 
+2015/04/24 16:57:38 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:794 
+2015/04/24 16:57:38 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/24 16:57:38 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/24 16:57:38 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/24 16:58:39 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 16:58:39 [app.go:96] [I] http server Running on :80
+2015/04/24 16:59:03 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 16:59:03 [app.go:96] [I] http server Running on :80
+2015/04/24 16:59:12 [router.go:845] [D] | GET        | /                                        | 35.002ms         | match      | /                                        | 
+2015/04/24 16:59:27 [router.go:845] [D] | GET        | /connect/wx_callback                     | 1.0130579s       | match      | /connect/wx_callback/*                   | 
+2015/04/24 16:59:27 [router.go:845] [D] | POST       | /signtrace                               | 1.0001ms         | notmatch   | 
+2015/04/24 17:00:33 [router.go:845] [D] | GET        | /connect/wx_callback                     | 328.0188ms       | match      | /connect/wx_callback/*                   | 
+2015/04/24 17:00:33 [log.go:108] [D] Connect/Connect_Error Info: 
+2015/04/24 17:00:33 [router.go:876] [C] the request url is  /connect/connect_error 
+2015/04/24 17:00:33 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:connect/connect_error.tpl 
+2015/04/24 17:00:33 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/24 17:00:33 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:253 
+2015/04/24 17:00:33 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/24 17:00:33 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/24 17:00:33 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/24 17:00:33 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/24 17:00:33 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/24 17:00:46 [router.go:845] [D] | GET        | /                                        | 35.0021ms        | match      | /                                        | 
+2015/04/24 17:01:04 [router.go:845] [D] | GET        | /connect/wx_callback                     | 359.0205ms       | match      | /connect/wx_callback/*                   | 
+2015/04/24 17:01:04 [log.go:108] [D] Connect/SignTrace Info:创建新的账户 
+2015/04/24 17:01:04 [router.go:845] [D] | POST       | /connect/signtrace                       | 261.0149ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:01:04 [router.go:845] [D] | GET        | /                                        | 28.0016ms        | match      | /                                        | 
+2015/04/24 17:08:01 [router.go:845] [D] | GET        | /                                        | 28.0016ms        | match      | /                                        | 
+2015/04/24 17:09:06 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 17:09:06 [app.go:96] [I] http server Running on :80
+2015/04/24 17:09:08 [router.go:845] [D] | GET        | /                                        | 31.0017ms        | match      | /                                        | 
+2015/04/24 17:09:13 [router.go:845] [D] | GET        | /                                        | 29.0016ms        | match      | /                                        | 
+2015/04/24 17:09:58 [router.go:845] [D] | GET        | /connect/wx_callback                     | 737.0422ms       | match      | /connect/wx_callback/*                   | 
+2015/04/24 17:09:58 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:09:58 [router.go:845] [D] | POST       | /connect/signtrace                       | 325.0186ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:09:58 [router.go:845] [D] | GET        | /                                        | 20.0012ms        | match      | /                                        | 
+2015/04/24 17:09:58 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:09:58 [router.go:845] [D] | POST       | /connect/signtrace                       | 283.0162ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:22:17 [router.go:845] [D] | GET        | /                                        | 27.0015ms        | match      | /                                        | 
+2015/04/24 17:22:17 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:22:18 [router.go:845] [D] | POST       | /connect/signtrace                       | 153.0087ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:22:20 [router.go:845] [D] | GET        | /                                        | 32.0019ms        | match      | /                                        | 
+2015/04/24 17:22:20 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:22:20 [router.go:845] [D] | POST       | /connect/signtrace                       | 99.0057ms        | match      | /connect/signtrace/*                     | 
+2015/04/24 17:22:47 [router.go:845] [D] | GET        | /                                        | 33.0018ms        | match      | /                                        | 
+2015/04/24 17:22:50 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:22:51 [router.go:845] [D] | POST       | /connect/signtrace                       | 143.0082ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:24:34 [router.go:845] [D] | GET        | /                                        | 34.002ms         | match      | /                                        | 
+2015/04/24 17:24:34 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:24:34 [router.go:845] [D] | POST       | /connect/signtrace                       | 127.0073ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:24:50 [router.go:845] [D] | GET        | /                                        | 34.002ms         | match      | /                                        | 
+2015/04/24 17:24:50 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:24:50 [router.go:845] [D] | POST       | /connect/signtrace                       | 213.0122ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:25:40 [router.go:845] [D] | GET        | /                                        | 29.0016ms        | match      | /                                        | 
+2015/04/24 17:25:40 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:25:41 [router.go:845] [D] | POST       | /connect/signtrace                       | 97.0055ms        | match      | /connect/signtrace/*                     | 
+2015/04/24 17:26:43 [router.go:845] [D] | GET        | /                                        | 23.0013ms        | match      | /                                        | 
+2015/04/24 17:26:43 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:26:43 [router.go:845] [D] | POST       | /connect/signtrace                       | 107.0061ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:28:58 [router.go:845] [D] | GET        | /                                        | 28.0016ms        | match      | /                                        | 
+2015/04/24 17:28:58 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:28:59 [router.go:845] [D] | POST       | /connect/signtrace                       | 97.0055ms        | match      | /connect/signtrace/*                     | 
+2015/04/24 17:29:02 [router.go:845] [D] | GET        | /                                        | 29.0017ms        | match      | /                                        | 
+2015/04/24 17:29:02 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:29:02 [router.go:845] [D] | POST       | /connect/signtrace                       | 156.0089ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:29:03 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/04/24 17:29:03 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:29:03 [router.go:845] [D] | POST       | /connect/signtrace                       | 101.0058ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:33:11 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 17:33:11 [app.go:96] [I] http server Running on :80
+2015/04/24 17:38:23 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/04/24 17:38:23 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:38:23 [router.go:845] [D] | POST       | /connect/signtrace                       | 194.0111ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:38:24 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/04/24 17:38:24 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:38:24 [router.go:845] [D] | POST       | /connect/signtrace                       | 111.0064ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:38:36 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/24 17:38:43 [router.go:845] [D] | GET        | /                                        | 31.0018ms        | match      | /                                        | 
+2015/04/24 17:38:43 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:38:43 [router.go:845] [D] | POST       | /connect/signtrace                       | 117.0067ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:42:02 [router.go:845] [D] | GET        | /                                        | 34.002ms         | match      | /                                        | 
+2015/04/24 17:42:02 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:42:02 [router.go:845] [D] | POST       | /connect/signtrace                       | 103.0059ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:42:05 [router.go:845] [D] | POST       | /signout                                 | 1.0001ms         | notmatch   | 
+2015/04/24 17:43:30 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 17:43:30 [app.go:96] [I] http server Running on :80
+2015/04/24 17:43:32 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/04/24 17:43:32 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:43:32 [router.go:845] [D] | POST       | /connect/signtrace                       | 128.0073ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:43:35 [router.go:845] [D] | POST       | /signout                                 | 0                | match      | /signout                                 | 
+2015/04/24 17:46:13 [router.go:845] [D] | GET        | /                                        | 36.0021ms        | match      | /                                        | 
+2015/04/24 17:47:03 [router.go:845] [D] | GET        | /connect/wx_callback                     | 751.043ms        | match      | /connect/wx_callback/*                   | 
+2015/04/24 17:47:03 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:47:04 [router.go:845] [D] | POST       | /connect/signtrace                       | 306.0175ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:47:04 [router.go:845] [D] | GET        | /                                        | 21.0012ms        | match      | /                                        | 
+2015/04/24 17:47:04 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:47:04 [router.go:845] [D] | POST       | /connect/signtrace                       | 114.0065ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:47:40 [router.go:845] [D] | POST       | /signout                                 | 0                | match      | /signout                                 | 
+2015/04/24 17:49:16 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/24 17:49:30 [router.go:845] [D] | GET        | /connect/wx_callback                     | 339.0194ms       | match      | /connect/wx_callback/*                   | 
+2015/04/24 17:49:30 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:49:30 [router.go:845] [D] | POST       | /connect/signtrace                       | 111.0063ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:49:30 [router.go:845] [D] | GET        | /                                        | 22.0013ms        | match      | /                                        | 
+2015/04/24 17:49:30 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:49:30 [router.go:845] [D] | POST       | /connect/signtrace                       | 110.0063ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:49:46 [router.go:845] [D] | POST       | /signout                                 | 0                | match      | /signout                                 | 
+2015/04/24 17:50:07 [router.go:845] [D] | POST       | /signout                                 | 0                | match      | /signout                                 | 
+2015/04/24 17:50:11 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/24 17:50:13 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/24 17:50:13 [router.go:845] [D] | GET        | /                                        | 29.0017ms        | match      | /                                        | 
+2015/04/24 17:51:08 [router.go:845] [D] | GET        | /                                        | 19.0011ms        | match      | /                                        | 
+2015/04/24 17:51:54 [router.go:845] [D] | GET        | /connect/wx_callback                     | 352.0201ms       | match      | /connect/wx_callback/*                   | 
+2015/04/24 17:51:54 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:51:54 [router.go:845] [D] | POST       | /connect/signtrace                       | 161.0092ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:51:54 [router.go:845] [D] | GET        | /                                        | 27.0015ms        | match      | /                                        | 
+2015/04/24 17:51:55 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:51:55 [router.go:845] [D] | POST       | /connect/signtrace                       | 101.0057ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:52:23 [router.go:845] [D] | POST       | /signout                                 | 1ms              | match      | /signout                                 | 
+2015/04/24 17:55:13 [router.go:845] [D] | GET        | /                                        | 35.002ms         | match      | /                                        | 
+2015/04/24 17:55:14 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/24 17:55:15 [router.go:845] [D] | GET        | /                                        | 20.0011ms        | match      | /                                        | 
+2015/04/24 17:55:16 [router.go:845] [D] | GET        | /                                        | 31.0018ms        | match      | /                                        | 
+2015/04/24 17:55:48 [router.go:845] [D] | GET        | /                                        | 28.0016ms        | match      | /                                        | 
+2015/04/24 17:56:25 [router.go:845] [D] | GET        | /                                        | 32.0018ms        | match      | /                                        | 
+2015/04/24 17:56:37 [router.go:845] [D] | GET        | /connect/wx_callback                     | 360.0206ms       | match      | /connect/wx_callback/*                   | 
+2015/04/24 17:56:38 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:56:38 [router.go:845] [D] | POST       | /connect/signtrace                       | 173.0099ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:56:38 [router.go:845] [D] | GET        | /                                        | 26.0015ms        | match      | /                                        | 
+2015/04/24 17:56:38 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/24 17:56:38 [router.go:845] [D] | POST       | /connect/signtrace                       | 110.0063ms       | match      | /connect/signtrace/*                     | 
+2015/04/24 17:56:45 [router.go:845] [D] | POST       | /signout                                 | 0                | match      | /signout                                 | 
+2015/04/24 18:03:40 [router.go:845] [D] | GET        | /                                        | 22.0012ms        | match      | /                                        | 
+2015/04/24 18:10:01 [router.go:845] [D] | GET        | /helper                                  | 1.0001ms         | notmatch   | 
+2015/04/24 18:12:02 [router.go:845] [D] | GET        | /                                        | 31.0017ms        | match      | /                                        | 
+2015/04/24 18:13:57 [router.go:845] [D] | GET        | /                                        | 28.0016ms        | match      | /                                        | 
+2015/04/24 18:16:09 [router.go:845] [D] | GET        | /                                        | 36.0021ms        | match      | /                                        | 
+2015/04/24 18:16:29 [router.go:845] [D] | GET        | /                                        | 34.0019ms        | match      | /                                        | 
+2015/04/24 18:19:26 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/24 18:19:32 [router.go:845] [D] | GET        | /                                        | 34.002ms         | match      | /                                        | 
+2015/04/24 18:19:37 [router.go:845] [D] | GET        | /                                        | 32.0018ms        | match      | /                                        | 
+2015/04/24 18:19:45 [router.go:845] [D] | GET        | /                                        | 34.002ms         | match      | /                                        | 
+2015/04/24 18:19:46 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/04/24 18:19:54 [router.go:845] [D] | GET        | /                                        | 35.002ms         | match      | /                                        | 
+2015/04/24 18:20:00 [router.go:845] [D] | GET        | /                                        | 36.002ms         | match      | /                                        | 
+2015/04/24 18:22:46 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:22:46 [app.go:96] [I] http server Running on :80
+2015/04/24 18:23:32 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:23:32 [app.go:96] [I] http server Running on :80
+2015/04/24 18:24:29 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:24:29 [app.go:96] [I] http server Running on :80
+2015/04/24 18:26:35 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:26:35 [app.go:96] [I] http server Running on :80
+2015/04/24 18:28:40 [router.go:845] [D] | GET        | /home/error/出多了                          | 28.0016ms        | match      | /home/error/:msg                         | 
+2015/04/24 18:28:40 [router.go:845] [D] | GET        | /home/static/js/jquery.cookie.js         | 1.0001ms         | notmatch   | 
+2015/04/24 18:32:11 [router.go:845] [D] | GET        | /home/error/hello                        | 34.002ms         | match      | /home/error/:msg                         | 
+2015/04/24 18:32:11 [router.go:845] [D] | GET        | /home/static/js/jquery.cookie.js         | 1.0001ms         | notmatch   | 
+2015/04/24 18:33:42 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:33:42 [app.go:96] [I] http server Running on :80
+2015/04/24 18:33:42 [router.go:876] [C] the request url is  / 
+2015/04/24 18:33:42 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:home/get.tpl 
+2015/04/24 18:33:42 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/24 18:33:42 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/04/24 18:33:42 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/24 18:33:42 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/24 18:33:42 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/24 18:33:42 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/24 18:33:42 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/24 18:33:52 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:33:52 [app.go:96] [I] http server Running on :80
+2015/04/24 18:33:56 [router.go:845] [D] | GET        | /                                        | 29.0016ms        | match      | /                                        | 
+2015/04/24 18:34:37 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:34:37 [app.go:96] [I] http server Running on :80
+2015/04/24 18:34:46 [router.go:845] [D] | GET        | /home/error/hello                        | 29.0017ms        | match      | /home/error/:msg                         | 
+2015/04/24 18:34:46 [router.go:845] [D] | GET        | /home/static/js/jquery.cookie.js         | 1ms              | notmatch   | 
+2015/04/24 18:35:18 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:35:18 [app.go:96] [I] http server Running on :80
+2015/04/24 18:37:05 [router.go:845] [D] | GET        | /home/error/hello                        | 26.0015ms        | match      | /home/error/:msg                         | 
+2015/04/24 18:38:03 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:38:03 [app.go:96] [I] http server Running on :80
+2015/04/24 18:38:06 [log.go:108] [D] Home/Error Info: 
+2015/04/24 18:38:06 [router.go:845] [D] | GET        | /home/error/hello                        | 26.0015ms        | match      | /home/error/:msg                         | 
+2015/04/24 18:38:54 [log.go:108] [D] Home/Error Info: 
+2015/04/24 18:38:54 [router.go:845] [D] | GET        | /home/error/msg=hello                    | 29.0016ms        | match      | /home/error/:msg                         | 
+2015/04/24 18:39:04 [log.go:108] [D] Home/Error Info:hello 
+2015/04/24 18:39:04 [router.go:845] [D] | GET        | /home/error/                             | 30.0017ms        | match      | /home/error/*                            | 
+2015/04/24 18:39:16 [log.go:108] [D] Home/Error Info:hello 
+2015/04/24 18:39:16 [router.go:845] [D] | GET        | /home/error                              | 26.0015ms        | match      | /home/error/*                            | 
+2015/04/24 18:40:52 [log.go:108] [D] Home/Error Info:hello 
+2015/04/24 18:40:52 [router.go:845] [D] | GET        | /home/error                              | 31.0018ms        | match      | /home/error/*                            | 
+2015/04/24 18:41:35 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:41:35 [app.go:96] [I] http server Running on :80
+2015/04/24 18:41:40 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:41:40 [app.go:96] [I] http server Running on :80
+2015/04/24 18:41:45 [log.go:108] [D] Home/Error Info:hello 
+2015/04/24 18:41:45 [log.go:108] [D] template Execute err: template: _frontLayout.tpl:37:15: executing "_frontLayout.tpl" at <eq .index "index">: error calling eq: invalid type for comparison 
+2015/04/24 18:41:45 [router.go:876] [C] the request url is  /home/error 
+2015/04/24 18:41:45 [router.go:877] [C] Handler crashed with error template: _frontLayout.tpl:37:15: executing "_frontLayout.tpl" at <eq .index "index">: error calling eq: invalid type for comparison 
+2015/04/24 18:41:45 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/24 18:41:45 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/04/24 18:41:45 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/24 18:41:45 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/24 18:41:45 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/24 18:42:31 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:42:31 [app.go:96] [I] http server Running on :80
+2015/04/24 18:42:32 [log.go:108] [D] Home/Error Info:hello 
+2015/04/24 18:42:32 [router.go:845] [D] | GET        | /home/error                              | 15.0009ms        | match      | /home/error/*                            | 
+2015/04/24 18:42:42 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:42:42 [app.go:96] [I] http server Running on :80
+2015/04/24 18:42:59 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 18:42:59 [app.go:96] [I] http server Running on :80
+2015/04/24 18:42:59 [log.go:108] [D] Home/Error Info:hello 
+2015/04/24 18:42:59 [router.go:845] [D] | GET        | /home/error                              | 32.0018ms        | match      | /home/error/*                            | 

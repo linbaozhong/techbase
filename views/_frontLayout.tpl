@@ -13,8 +13,12 @@
 		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<!--<link rel="stylesheet" href="/static/css/default.css">-->
+		<script type="text/javascript">
+			var snow = {};
+		</script>
 		<link rel="stylesheet" href="/static/css/reset.css">
 		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+		<script src="/static/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
 		<!--<script type="text/javascript" src="/static/js/jquery.mousewheel.js"></script>-->
 		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
@@ -45,6 +49,14 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li class="login"><a href="javascript:;">登录</a>
 						</li>
+						<li id="avatar" class="snow-profile" style="display:none;">
+							<a href="javascript:;"><img src="" style="width:19px;height:19px;" />
+							<span class="nickname">
+							</span></a>
+						</li>
+						<li id="logout" class="snow-profile" style="display:none;">
+							<a href="javascript:;">注销</a>
+						</li>
 						<li class="guanzhuwe">
 							<a href="javascript:;">关注我们</a>
 						</li>
@@ -71,7 +83,7 @@
 		</div>
 		{{.LayoutContent}}
 		<!--END container-->
-		<div id="footer_0" style="margin-top:30px;">
+		<div id="footer_0" style="margin-top:35px;">
 		</div>
 		<footer class="row" id="footer">
 			<div class="col-md-2 col-sm-2 row"></div>
@@ -121,6 +133,7 @@
 
 </html>
 <script type="text/javascript">
+
 	$(function() {
 		var isover = false;
 		// 联系我们
@@ -193,7 +206,7 @@
 		function signin(){
 			$('#signin').popWindow({
 				width: 600,
-				height: 600,
+				height: 560,
 				close: '<span><i class="fa fa-times"></i></span>'
 			});
 		};
@@ -207,5 +220,42 @@
 				});
 			}
 		});
+		// 签出
+		$('#logout').click(function(){
+			$.post('/signout',function(json){
+				if (json.ok) {
+					//snow.checkin(false);
+					window.location = window.location;
+				}
+			});
+		});
+		// 检查是否已经登录
+		snow.checkin = function(state){
+			if (state && $.cookie('_snow_token') && $.cookie('_snow_token').length) {
+				var _avatar = $('#avatar');
+				_avatar.find('img').attr('src', $.cookie('avatar'));
+				_avatar.find('.nickname').text($.cookie('nickname'));
+				$('.snow-profile').show();
+				$('.login').hide();
+//				//记录登录状态
+//				$.post('/connect/signtrace', {
+//					from: $.cookie('from'),
+//					token: $.cookie('token'),
+//					openId: $.cookie('openid'),
+//					nickName: $.cookie('nickname'),
+//					avatar_1: $.cookie('avatar')
+//				}, function(d) {
+//					if (d.ok) {
+//						console.log('Successfully login');
+//					}else{
+//						console.log('Login failed');
+//					}
+//				});
+			} else {
+				$('.snow-profile').hide();
+				$('.login').show();
+			}
+		};
+		snow.checkin(true);
 	});
 </script>

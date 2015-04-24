@@ -34,12 +34,13 @@
 	<footer></footer>
 </div>
 <script type="text/javascript">
+
 	var obj = new WxLogin({
 		id: "signin-weixin",
 		appid: "wxd65694259ffb67ec",
 		scope: "snsapi_login",
 		redirect_uri: "http://niux.ren/connect/wx_callback",
-		state: "",
+		state: escape(window.location.href),
 		style: "white",
 		href: ""
 	});

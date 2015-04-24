@@ -55,9 +55,10 @@ jQuery弹窗插件 By 哈利蔺特
 				right: 'auto',
 				bottom: 'auto'
 			});
+			// 考虑滚动条的宽度
 			if (self.outerHeight() > opts.height) {
 				closeBtn.css({
-					right: marginX + 20,
+					right: marginX ,//+ 20,
 					top: marginY
 				});
 			} else {
@@ -69,7 +70,7 @@ jQuery弹窗插件 By 哈利蔺特
 		});
 		// 最外层遮罩
 		if (!container.length) {
-			container = $('<div class="pop-container" style="position:fixed;top:0;right:0;bottom:0;left:0;background:#000000;opacity:0.8;z-index:90000;display:none;"></div>').appendTo($('body'));
+			container = $('<div class="pop-container" style="position:fixed;top:0;right:0;bottom:0;left:0;background:#000000;opacity:0.7;z-index:90000;display:none;"></div>').appendTo($('body'));
 			container.click(function() {
 				closeSelf();
 			});
@@ -82,21 +83,21 @@ jQuery弹窗插件 By 哈利蔺特
 			}).hover(
 				function() {
 					$(this).css({
-						background:'rgba(255,0,0,1)',
+						background:'rgba(204,51,51,1)',
 						color:'#fff'
 						});
 				},
 				function() {
 					$(this).css({
 						color:'#999',
-						background:'rgba(255,0,0,0)'
+						background:'rgba(204,51,51,0)'
 						});
 				}
 			);
 		}
 		// 弹窗
 		if (!model.length) {
-			model = $('<div class="pop-model" style="position:fixed;top:' + (height / 2) + 'px;right:' + (width / 2) + 'px;bottom:' + (height / 2) + 'px;left:' + (width / 2) + 'px;background:#ffffff;z-index:90001;overflow-x:hidden;overflow-y:auto;display:none;"></div>').appendTo($('body'));
+			model = $('<div class="pop-model" style="position:fixed;top:' + (height / 2) + 'px;right:' + (width / 2) + 'px;bottom:' + (height / 2) + 'px;left:' + (width / 2) + 'px;background:#ffffff;z-index:90001;overflow-x:hidden;overflow-y:hidden;display:none;"></div>').appendTo($('body'));
 		} else if (model.is(':hidden')) {
 			model.css({
 				top: height / 2,
