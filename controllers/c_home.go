@@ -63,7 +63,7 @@ func (this *Home) Brand() {
 
 // 帮助
 func (this *Home) Help() {
-
+	this.setTplNames("help")
 }
 
 // 签出

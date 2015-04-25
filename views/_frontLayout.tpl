@@ -36,7 +36,7 @@
 					<ul class="nav navbar-nav" style="margin-left:40px;">
 						<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
 						</li>
-						<li class="tachuangtou {{if eq .index " brandshow "}}active {{end}}"><a href="javascript:;">她创投</a>
+						<li class="menu {{if eq .index " brandshow "}}active {{end}}" data-rel = "submenu-1"><a href="javascript:;">她创投</a>
 						</li>
 						<li class="{{if eq .index " media "}} active {{end}}"><a href="/media">她媒体</a>
 						</li>
@@ -47,33 +47,42 @@
 
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li class="login"><a href="javascript:;">登录</a>
+						<li class="login menu" data-rel = "submenu-0"><a href="javascript:;">登录</a>
 						</li>
-						<li id="avatar" class="snow-profile" style="display:none;">
+						<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
 							<a href="javascript:;"><img src="" style="width:19px;height:19px;" />
 							<span class="nickname">
 							</span></a>
 						</li>
-						<li id="logout" class="snow-profile" style="display:none;">
-							<a href="javascript:;">注销</a>
-						</li>
-						<li class="guanzhuwe">
+						<li class="menu" data-rel = "submenu-2">
 							<a href="javascript:;">关注我们</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
-			<div class="nav-children">
-				<ul class="nav-children-li">
-					<li><a href="/xiangmu">项目</a>
-					</li>
-					<li><a href="/touziren">投资人</a>
-					</li>
-				</ul>
-			</div>
-		</header>
 
-		<div class="header-ermeima">
+		</header>
+		<div class="submenu submenu-0">
+			<ul class="">
+				<li><a href="/xiangmu">我的帐号</a>
+				</li>
+				<li><a href="/touziren">我的公司</a>
+				</li>
+				<li><a href="/touziren">我的投资</a>
+				</li>
+				<li id="logout"><a href="javascript:;">退出</a>
+				</li>
+			</ul>
+		</div>
+		<div class="submenu submenu-1">
+			<ul class="">
+				<li><a href="/xiangmu">项目</a>
+				</li>
+				<li><a href="/touziren">投资人</a>
+				</li>
+			</ul>
+		</div>
+		<div class="submenu submenu-2">
 			<img src="/static/img/weixin-qr.png">
 			<div class="co-card">
 				<p>扫描二维码关注我们</p>
@@ -135,48 +144,41 @@
 <script type="text/javascript">
 
 	$(function() {
-		var isover = false;
-		// 联系我们
-		$(".guanzhuwe").hover(function(e) {
-			var _this = $(this);
-			if ($(window).width() - _this.offset().left >= $(".header-ermeima").outerWidth() + 10) {
-				$(".header-ermeima").css({
-					'left': _this.offset().left,
-					'right': 'inherit'
-				}).show();
-			} else {
-				$(".header-ermeima").css({
-					'right': 10,
-					'left': 'inherit'
-				}).show();
-			}
-		}, function() {
-			$(this).css("border-bottom", "none");
-			$(".header-ermeima").hide();
-		});
 		// 他创投
-		function mouseleave() {
+		function mouseleave(obj) {
 			setTimeout(function() {
-				if (!isover) {
-					$("div.nav-children").stop().delay(500).fadeOut();
+				if (obj.data('hide')) {
+					obj.stop().slideUp('fast');
 				}
-			}, 500);
+			}, 100);
 		};
-		$(".tachuangtou").hover(function(e) {
-			var _this = $(this);
-			$("ul.nav-children-li").css({
-				'margin-left': _this.offset().left
-			});
-			$("div.nav-children").stop().fadeIn();
-		}, function() {
-			isover = false;
-			mouseleave();
-		});
-		$("div.nav-children").hover(function(e) {
-			isover = true;
+
+		$(".menu").hover(
+			function(e) {
+				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',false);
+				
+				if ($(window).width() - _this.offset().left >= _target.outerWidth() + 10) {
+					_target.css({
+						'left': _this.offset().left-((_target.outerWidth()-_this.outerWidth())/2),
+						'right': 'inherit'
+					}).slideDown('fast');
+				} else {
+					_target.css({
+						'right': 10,
+						'left': 'inherit'
+					}).slideDown('fast');
+				}
+			}, 
+			function() {
+				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',true);
+				mouseleave(_target);
+			}
+		);
+
+		$(".submenu").hover(function(e) {
+			$(this).data('hide',false)
 		}, function(e) {
-			isover = false;
-			mouseleave();
+			mouseleave($(this).data('hide',true));
 		});
 		// 页脚自适应沉底，页眉自适应浮动
 		$(window).resize(function() {

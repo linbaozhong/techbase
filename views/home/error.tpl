@@ -1,3 +1,3 @@
-<div class="container text-center" style="margin-top:80px;">
+<article class="container text-center">
 	<h2>{{.message}}</h2>
-</div>
+</article>

@@ -1384,3 +1384,70 @@
 2015/04/24 18:42:59 [app.go:96] [I] http server Running on :80
 2015/04/24 18:42:59 [log.go:108] [D] Home/Error Info:hello 
 2015/04/24 18:42:59 [router.go:845] [D] | GET        | /home/error                              | 32.0018ms        | match      | /home/error/*                            | 
+2015/04/24 20:20:56 [log.go:108] [D] Loading language: en-US 
+2015/04/24 20:20:56 [log.go:108] [D] Loading language: zh-CN 
+2015/04/24 20:20:56 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 20:20:56 [app.go:96] [I] http server Running on :80
+2015/04/24 20:24:32 [log.go:108] [D] Loading language: en-US 
+2015/04/24 20:24:32 [log.go:108] [D] Loading language: zh-CN 
+2015/04/24 20:24:32 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 20:24:32 [app.go:96] [I] http server Running on :80
+2015/04/24 20:36:58 [router.go:845] [D] | GET        | /                                        | 63.0036ms        | match      | /                                        | 
+2015/04/24 20:37:07 [router.go:845] [D] | GET        | /helper                                  | 0                | notmatch   | 
+2015/04/24 20:40:39 [log.go:108] [D] Loading language: en-US 
+2015/04/24 20:40:39 [log.go:108] [D] Loading language: zh-CN 
+2015/04/24 20:40:39 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/24 20:40:39 [app.go:96] [I] http server Running on :80
+2015/04/24 20:42:22 [router.go:845] [D] | GET        | /                                        | 135.0077ms       | match      | /                                        | 
+2015/04/24 20:42:29 [router.go:876] [C] the request url is  /help 
+2015/04/24 20:42:29 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:home/help.tpl 
+2015/04/24 20:42:29 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/24 20:42:29 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:208 
+2015/04/24 20:42:29 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:179 
+2015/04/24 20:42:29 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:801 
+2015/04/24 20:42:29 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/24 20:42:29 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/24 20:42:29 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/24 20:43:11 [router.go:845] [D] | GET        | /help                                    | 102.0058ms       | match      | /help                                    | 
+2015/04/24 20:46:07 [router.go:845] [D] | GET        | /help                                    | 271.0155ms       | match      | /help                                    | 
+2015/04/24 20:47:14 [router.go:845] [D] | GET        | /help                                    | 76.0044ms        | match      | /help                                    | 
+2015/04/24 20:56:19 [router.go:845] [D] | GET        | /help                                    | 123.0071ms       | match      | /help                                    | 
+2015/04/24 21:01:49 [router.go:845] [D] | GET        | /help                                    | 97.0055ms        | match      | /help                                    | 
+2015/04/24 21:02:54 [router.go:845] [D] | GET        | /help                                    | 110.0063ms       | match      | /help                                    | 
+2015/04/24 21:06:02 [router.go:845] [D] | GET        | /help                                    | 116.0067ms       | match      | /help                                    | 
+2015/04/24 21:13:34 [router.go:845] [D] | GET        | /help                                    | 95.0055ms        | match      | /help                                    | 
+2015/04/24 21:14:56 [router.go:845] [D] | GET        | /help                                    | 117.0067ms       | match      | /help                                    | 
+2015/04/24 21:16:20 [router.go:845] [D] | GET        | /help                                    | 109.0062ms       | match      | /help                                    | 
+2015/04/24 21:16:50 [router.go:845] [D] | GET        | /help                                    | 101.0058ms       | match      | /help                                    | 
+2015/04/24 21:21:33 [router.go:845] [D] | GET        | /help                                    | 89.0051ms        | match      | /help                                    | 
+2015/04/24 21:26:27 [router.go:845] [D] | GET        | /help                                    | 102.0059ms       | match      | /help                                    | 
+2015/04/24 21:30:22 [router.go:845] [D] | GET        | /help                                    | 88.005ms         | match      | /help                                    | 
+2015/04/24 21:31:41 [router.go:845] [D] | GET        | /help                                    | 80.0045ms        | match      | /help                                    | 
+2015/04/24 21:37:16 [router.go:845] [D] | GET        | /help                                    | 77.0044ms        | match      | /help                                    | 
+2015/04/24 21:38:30 [router.go:845] [D] | GET        | /help                                    | 89.0051ms        | match      | /help                                    | 
+2015/04/24 21:40:24 [router.go:845] [D] | GET        | /help                                    | 73.0042ms        | match      | /help                                    | 
+2015/04/24 21:43:08 [router.go:845] [D] | GET        | /help                                    | 108.0062ms       | match      | /help                                    | 
+2015/04/24 21:45:38 [router.go:845] [D] | GET        | /help                                    | 125.0072ms       | match      | /help                                    | 
+2015/04/24 21:48:38 [router.go:845] [D] | GET        | /                                        | 102.0059ms       | match      | /                                        | 
+2015/04/24 21:49:54 [router.go:845] [D] | GET        | /                                        | 109.0062ms       | match      | /                                        | 
+2015/04/24 21:53:00 [router.go:845] [D] | GET        | /                                        | 114.0065ms       | match      | /                                        | 
+2015/04/24 21:53:54 [router.go:845] [D] | GET        | /                                        | 92.0052ms        | match      | /                                        | 
+2015/04/24 21:57:40 [router.go:845] [D] | GET        | /xiangmu                                 | 1.0001ms         | notmatch   | 
+2015/04/24 22:12:51 [router.go:845] [D] | GET        | /                                        | 150.0085ms       | match      | /                                        | 
+2015/04/24 22:13:01 [router.go:845] [D] | POST       | /signout                                 | 14.0008ms        | match      | /signout                                 | 
+2015/04/24 22:13:01 [router.go:845] [D] | GET        | /                                        | 90.0051ms        | match      | /                                        | 
+2015/04/24 22:16:34 [router.go:845] [D] | GET        | /                                        | 161.0092ms       | match      | /                                        | 
+2015/04/24 22:16:38 [router.go:845] [D] | GET        | /xiangmu                                 | 0                | notmatch   | 
+2015/04/24 22:16:49 [router.go:845] [D] | GET        | /touziren                                | 2.0001ms         | notmatch   | 
+2015/04/24 22:19:24 [router.go:845] [D] | GET        | /                                        | 93.0053ms        | match      | /                                        | 
+2015/04/25 08:26:05 [log.go:108] [D] Loading language: en-US 
+2015/04/25 08:26:05 [log.go:108] [D] Loading language: zh-CN 
+2015/04/25 08:26:05 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/25 08:26:05 [app.go:96] [I] http server Running on :80
+2015/04/25 08:26:21 [router.go:845] [D] | GET        | /                                        | 58.0033ms        | match      | /                                        | 
+2015/04/25 08:27:02 [router.go:845] [D] | GET        | /                                        | 80.0045ms        | match      | /                                        | 
+2015/04/25 08:31:43 [router.go:845] [D] | GET        | /                                        | 127.0073ms       | match      | /                                        | 
+2015/04/25 08:34:11 [log.go:108] [D] Loading language: en-US 
+2015/04/25 08:34:11 [log.go:108] [D] Loading language: zh-CN 
+2015/04/25 08:34:11 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/25 08:34:11 [app.go:96] [I] http server Running on :80
