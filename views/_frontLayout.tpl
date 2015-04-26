@@ -21,7 +21,6 @@
 		<script src="/static/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
 		<!--<script type="text/javascript" src="/static/js/jquery.mousewheel.js"></script>-->
-		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
 	</head>
 
 	<body>
@@ -47,7 +46,7 @@
 
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li class="login menu" data-rel = "submenu-0"><a href="javascript:;">登录</a>
+						<li class="login"><a href="javascript:;">登录</a>
 						</li>
 						<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
 							<a href="javascript:;"><img src="" style="width:19px;height:19px;" />
@@ -63,18 +62,20 @@
 
 		</header>
 		<div class="submenu submenu-0">
+			<i class="fa fa-caret-up"></i>
 			<ul class="">
-				<li><a href="/xiangmu">我的帐号</a>
+				<li><a href="/my/profile">我的帐号</a>
 				</li>
-				<li><a href="/touziren">我的公司</a>
+				<li><a href="/my/company">我的公司</a>
 				</li>
-				<li><a href="/touziren">我的投资</a>
+				<li><a href="/my/touzi">我的投资</a>
 				</li>
 				<li id="logout"><a href="javascript:;">退出</a>
 				</li>
 			</ul>
 		</div>
 		<div class="submenu submenu-1">
+			<i class="fa fa-caret-up"></i>
 			<ul class="">
 				<li><a href="/xiangmu">项目</a>
 				</li>
@@ -83,6 +84,7 @@
 			</ul>
 		</div>
 		<div class="submenu submenu-2">
+			<i class="fa fa-caret-up"></i>
 			<img src="/static/img/weixin-qr.png">
 			<div class="co-card">
 				<p>扫描二维码关注我们</p>
@@ -227,7 +229,7 @@
 			$.post('/signout',function(json){
 				if (json.ok) {
 					//snow.checkin(false);
-					window.location = window.location;
+					window.location = "/";
 				}
 			});
 		});
@@ -261,3 +263,4 @@
 		snow.checkin(true);
 	});
 </script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>

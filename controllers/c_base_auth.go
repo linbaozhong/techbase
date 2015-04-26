@@ -21,6 +21,12 @@ func (this *Auth) Prepare() {
 			this.end()
 		}
 	}
+
+	this.Data["index"] = ""
+
+	this.Layout = "_frontLayout.tpl"
+	this.LayoutSections = make(map[string]string)
+
 }
 
 func (this *Auth) Finish() {

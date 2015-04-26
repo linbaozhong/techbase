@@ -28,6 +28,7 @@ func init() {
 	// 帐户信息管理
 	act := &controllers.Accounts{}
 	beego.Router("/my/profile", act, "get:Profile")
+	beego.Router("/my/save", act, "post:Post")
 	beego.AutoRouter(act)
 	// 系统后台管理
 	admin := &controllers.Admin{}

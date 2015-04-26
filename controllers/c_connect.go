@@ -112,7 +112,7 @@ func (this *Connect) Wx_Callback() {
 	// 写入cookie
 	this.cookie("openid", _account.OpenId)
 	this.cookie("token", _account.Token)
-	this.cookie("nickname", _account.NickName)
+	this.cookie("nickname", utils.UrlEncode(_account.NickName))
 	this.cookie("avatar", _account.Avatar_1)
 
 	// 清空旧的用户信息
@@ -279,7 +279,7 @@ func (this *Connect) QQ_Callback() {
 	// 写入cookie
 	this.cookie("openid", _account.OpenId)
 	this.cookie("token", _account.Token)
-	this.cookie("nickname", _account.NickName)
+	this.cookie("nickname", utils.UrlEncode(_account.NickName))
 	this.cookie("avatar", _account.Avatar_1)
 
 	//

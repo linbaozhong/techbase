@@ -366,28 +366,28 @@ func (this *Base) allowRequest() bool {
 	return this._sonw_token(this.currentUser.Id, this.currentUser.From) == this.Ctx.GetCookie("_snow_token")
 }
 
-// //读取登录用户的Cookie信息
-// func (this *Base) GetCurrentUser(cookie string) (currentuser *models.Current) {
-// 	currentuser = new(models.Current)
+////读取登录用户的Cookie信息
+//func (this *Base) GetCurrentUser(cookie string) (currentuser *models.Current) {
+//	currentuser = new(models.Current)
 
-// 	cookie = utils.CookieDecode(cookie)
+//	cookie = utils.CookieDecode(cookie)
 
-// 	//拆分cookie
-// 	curr := strings.Split(cookie, "|")
-// 	if len(curr) > 0 {
-// 		currentuser.Id, _ = utils.Str2int64(curr[0]) //strconv.ParseInt(curr[0], 10, 0)
-// 	}
-// 	if len(curr) > 1 {
-// 		currentuser.Name = curr[1]
-// 	}
-// 	if len(curr) > 2 {
-// 		currentuser.Avatar = curr[2]
-// 	}
-// 	if len(curr) > 3 {
-// 		currentuser.Role = curr[3]
-// 	}
-// 	return
-// }
+//	//拆分cookie
+//	curr := strings.Split(cookie, "|")
+//	if len(curr) > 0 {
+//		currentuser.Id, _ = utils.Str2int64(curr[0]) //strconv.ParseInt(curr[0], 10, 0)
+//	}
+//	if len(curr) > 1 {
+//		currentuser.Name = curr[1]
+//	}
+//	if len(curr) > 2 {
+//		currentuser.Avatar = curr[2]
+//	}
+//	if len(curr) > 3 {
+//		currentuser.Role = curr[3]
+//	}
+//	return
+//}
 
 /*
 * 返回form表单中checkbox的状态值的bool形式

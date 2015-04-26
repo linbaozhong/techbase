@@ -61,6 +61,12 @@ ul{
 	text-align: center;
 	z-index: 2000;
 }
+.submenu .fa-caret-up{
+	  margin-top: -30px;
+  display: block;
+  color: rgba(255,255,255,.8);
+  font-size: 32px;
+}
 .submenu * {
 	color:inherit;
 }
@@ -97,6 +103,14 @@ article.container{
 }
 article p{
 	text-align: left;
+}
+/*表单*/
+form .alert{
+	visibility:hidden;
+	font-size: .9em;
+}
+form .alert.visible{
+	visibility:visible;
 }
 /*页脚*/
 

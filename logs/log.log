@@ -1451,3 +1451,338 @@
 2015/04/25 08:34:11 [log.go:108] [D] Loading language: zh-CN 
 2015/04/25 08:34:11 [main.go:16] [I] techbase 1.1.14.1105 
 2015/04/25 08:34:11 [app.go:96] [I] http server Running on :80
+2015/04/26 12:08:33 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 12:08:33 [app.go:96] [I] http server Running on :80
+2015/04/26 12:08:46 [router.go:845] [D] | GET        | /                                        | 49.0028ms        | match      | /                                        | 
+2015/04/26 12:08:58 [router.go:845] [D] | GET        | /my/profile                              | 24.0014ms        | match      | /my/profile                              | 
+2015/04/26 12:13:42 [log.go:108] [D] Loading language: en-US 
+2015/04/26 12:13:42 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 12:13:42 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 12:13:42 [app.go:96] [I] http server Running on :80
+2015/04/26 12:14:11 [router.go:845] [D] | GET        | /my/profile                              | 32.0018ms        | match      | /my/profile                              | 
+2015/04/26 12:14:15 [router.go:845] [D] | GET        | /my/profile                              | 19.0011ms        | match      | /my/profile                              | 
+2015/04/26 12:15:13 [log.go:108] [D] Loading language: en-US 
+2015/04/26 12:15:13 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 12:15:13 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 12:15:13 [app.go:96] [I] http server Running on :80
+2015/04/26 12:15:19 [router.go:845] [D] | GET        | /login                                   | 1.0001ms         | notmatch   | 
+2015/04/26 12:16:25 [log.go:108] [D] Loading language: en-US 
+2015/04/26 12:16:25 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 12:16:25 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 12:16:25 [app.go:96] [I] http server Running on :80
+2015/04/26 12:16:55 [router.go:845] [D] | GET        | /my/profile                              | 299.0171ms       | match      | /my/profile                              | 
+2015/04/26 12:25:48 [router.go:845] [D] | GET        | /my/profile                              | 74.0042ms        | match      | /my/profile                              | 
+2015/04/26 12:27:35 [router.go:845] [D] | GET        | /my/profile                              | 96.0055ms        | match      | /my/profile                              | 
+2015/04/26 12:28:29 [router.go:845] [D] | GET        | /my/profile                              | 83.0047ms        | match      | /my/profile                              | 
+2015/04/26 12:29:07 [router.go:845] [D] | GET        | /my/profile                              | 71.0041ms        | match      | /my/profile                              | 
+2015/04/26 12:45:54 [router.go:845] [D] | GET        | /my/profile                              | 96.0054ms        | match      | /my/profile                              | 
+2015/04/26 12:47:15 [router.go:845] [D] | GET        | /my/profile                              | 116.0067ms       | match      | /my/profile                              | 
+2015/04/26 12:48:48 [router.go:845] [D] | GET        | /my/profile                              | 81.0047ms        | match      | /my/profile                              | 
+2015/04/26 18:09:14 [log.go:108] [D] Loading language: en-US 
+2015/04/26 18:09:14 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 18:09:14 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:09:14 [app.go:96] [I] http server Running on :80
+2015/04/26 18:10:22 [router.go:845] [D] | GET        | /                                        | 220.0126ms       | match      | /                                        | 
+2015/04/26 18:11:23 [log.go:108] [D] Loading language: en-US 
+2015/04/26 18:11:23 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 18:11:23 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:11:23 [app.go:96] [I] http server Running on :80
+2015/04/26 18:14:07 [router.go:845] [D] | GET        | /                                        | 86.0049ms        | match      | /                                        | 
+2015/04/26 18:14:43 [router.go:845] [D] | GET        | /connect/wx_callback                     | 892.0511ms       | match      | /connect/wx_callback/*                   | 
+2015/04/26 18:14:43 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/26 18:14:43 [router.go:845] [D] | POST       | /connect/signtrace                       | 30.0018ms        | match      | /connect/signtrace/*                     | 
+2015/04/26 18:14:43 [router.go:845] [D] | GET        | /                                        | 40.0023ms        | match      | /                                        | 
+2015/04/26 18:16:32 [router.go:845] [D] | GET        | /                                        | 58.0034ms        | match      | /                                        | 
+2015/04/26 18:16:45 [log.go:108] [D] Accounts/Profile Info:&models.Profile{
+    Id: 1,
+    Telphone: ,
+    Email: ,
+    Intro: ,
+    Updated: 0,
+    Ip: ,
+} 
+2015/04/26 18:16:45 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 18:16:45 [router.go:845] [D] | GET        | /my/profile                              | 111.0064ms       | match      | /my/profile                              | 
+2015/04/26 18:17:55 [log.go:108] [D] Loading language: en-US 
+2015/04/26 18:17:55 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 18:17:55 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:17:55 [app.go:96] [I] http server Running on :80
+2015/04/26 18:17:59 [log.go:108] [D] Accounts/Profile Info: 
+2015/04/26 18:17:59 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 18:17:59 [router.go:845] [D] | GET        | /my/profile                              | 71.004ms         | match      | /my/profile                              | 
+2015/04/26 18:19:03 [log.go:108] [D] Accounts/Profile Info: 
+2015/04/26 18:19:03 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 18:19:03 [router.go:845] [D] | GET        | /my/profile                              | 149.0086ms       | match      | /my/profile                              | 
+2015/04/26 18:19:50 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:19:50 [app.go:96] [I] http server Running on :80
+2015/04/26 18:20:12 [log.go:108] [D] Loading language: en-US 
+2015/04/26 18:20:12 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 18:20:12 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:20:12 [app.go:96] [I] http server Running on :80
+2015/04/26 18:20:17 [log.go:108] [D] Accounts/Profile Info: 
+2015/04/26 18:20:17 [log.go:108] [D] Accounts/Profile Info:cookic 
+2015/04/26 18:20:17 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 18:20:17 [router.go:845] [D] | GET        | /my/profile                              | 132.0076ms       | match      | /my/profile                              | 
+2015/04/26 18:21:37 [log.go:108] [D] Loading language: en-US 
+2015/04/26 18:21:37 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 18:21:37 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:21:37 [app.go:96] [I] http server Running on :80
+2015/04/26 18:21:38 [log.go:108] [D] Accounts/Profile Info:weixin 
+2015/04/26 18:21:38 [log.go:108] [D] Accounts/Profile Info:cookic 
+2015/04/26 18:21:38 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 18:21:38 [router.go:845] [D] | GET        | /my/profile                              | 131.0075ms       | match      | /my/profile                              | 
+2015/04/26 18:23:41 [log.go:108] [D] Loading language: en-US 
+2015/04/26 18:23:41 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 18:23:41 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:23:41 [app.go:96] [I] http server Running on :80
+2015/04/26 18:23:55 [log.go:108] [D] Accounts/Profile Info:weixin 
+2015/04/26 18:23:55 [log.go:108] [D] Accounts/Profile Info:cookic 
+2015/04/26 18:23:55 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 18:23:56 [router.go:845] [D] | GET        | /my/profile                              | 155.0089ms       | match      | /my/profile                              | 
+2015/04/26 18:24:26 [log.go:108] [D] Loading language: en-US 
+2015/04/26 18:24:26 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 18:24:26 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:24:26 [app.go:96] [I] http server Running on :80
+2015/04/26 18:24:30 [log.go:108] [D] Accounts/Profile Info: 
+2015/04/26 18:24:30 [log.go:108] [D] Accounts/Profile Info:cookic 
+2015/04/26 18:24:31 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 18:24:31 [router.go:845] [D] | GET        | /my/profile                              | 118.0068ms       | match      | /my/profile                              | 
+2015/04/26 18:28:49 [log.go:108] [D] Loading language: en-US 
+2015/04/26 18:28:49 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 18:28:49 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:28:49 [app.go:96] [I] http server Running on :80
+2015/04/26 18:28:55 [log.go:108] [D] Accounts/Profile Info: 
+2015/04/26 18:28:55 [log.go:108] [D] Accounts/Profile Info:cookic 
+2015/04/26 18:28:55 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 18:28:56 [router.go:845] [D] | GET        | /my/profile                              | 148.0085ms       | match      | /my/profile                              | 
+2015/04/26 18:38:53 [log.go:108] [D] Loading language: en-US 
+2015/04/26 18:38:53 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 18:38:53 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:38:53 [app.go:96] [I] http server Running on :80
+2015/04/26 18:42:39 [router.go:845] [D] | POST       | /signout                                 | 1ms              | match      | /signout                                 | 
+2015/04/26 18:42:39 [router.go:845] [D] | GET        | /login                                   | 10.0006ms        | notmatch   | 
+2015/04/26 18:42:52 [router.go:845] [D] | GET        | /                                        | 105.006ms        | match      | /                                        | 
+2015/04/26 18:43:22 [router.go:845] [D] | GET        | /                                        | 68.0038ms        | match      | /                                        | 
+2015/04/26 18:43:42 [router.go:845] [D] | GET        | /connect/wx_callback                     | 937.0536ms       | match      | /connect/wx_callback/*                   | 
+2015/04/26 18:43:42 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/26 18:43:42 [router.go:845] [D] | POST       | /connect/signtrace                       | 31.0018ms        | match      | /connect/signtrace/*                     | 
+2015/04/26 18:43:43 [router.go:845] [D] | GET        | /                                        | 101.0058ms       | match      | /                                        | 
+2015/04/26 18:43:53 [router.go:845] [D] | GET        | /                                        | 192.011ms        | match      | /                                        | 
+2015/04/26 18:44:28 [log.go:108] [D] Accounts/Profile Info:%E5%A4%A9%E7%84%B6%E5%91%86 
+2015/04/26 18:44:28 [log.go:108] [D] Accounts/Profile Info:cookic 
+2015/04/26 18:44:28 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 18:44:28 [router.go:845] [D] | GET        | /my/profile                              | 97.0056ms        | match      | /my/profile                              | 
+2015/04/26 18:48:28 [log.go:108] [D] Accounts/Profile Info:%E5%A4%A9%E7%84%B6%E5%91%86 
+2015/04/26 18:48:28 [log.go:108] [D] Accounts/Profile Info:cookic 
+2015/04/26 18:48:28 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 18:48:28 [router.go:845] [D] | GET        | /my/profile                              | 68.0039ms        | match      | /my/profile                              | 
+2015/04/26 18:51:26 [log.go:108] [D] Loading language: en-US 
+2015/04/26 18:51:26 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 18:51:26 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:51:26 [app.go:96] [I] http server Running on :80
+2015/04/26 18:51:30 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 18:51:30 [router.go:845] [D] | GET        | /my/profile                              | 78.0044ms        | match      | /my/profile                              | 
+2015/04/26 18:52:28 [log.go:108] [D] Loading language: en-US 
+2015/04/26 18:52:28 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 18:52:28 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 18:52:28 [app.go:96] [I] http server Running on :80
+2015/04/26 20:05:50 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 20:05:50 [router.go:845] [D] | GET        | /my/profile                              | 108.0062ms       | match      | /my/profile                              | 
+2015/04/26 20:06:36 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 20:06:36 [router.go:845] [D] | GET        | /my/profile                              | 130.0074ms       | match      | /my/profile                              | 
+2015/04/26 20:06:53 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 20:06:53 [router.go:845] [D] | GET        | /my/profile                              | 133.0076ms       | match      | /my/profile                              | 
+2015/04/26 20:11:48 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 20:11:48 [router.go:845] [D] | GET        | /my/profile                              | 125.0071ms       | match      | /my/profile                              | 
+2015/04/26 20:21:13 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 20:21:13 [router.go:845] [D] | GET        | /my/profile                              | 128.0073ms       | match      | /my/profile                              | 
+2015/04/26 20:22:11 [router.go:845] [D] | GET        | /                                        | 430.0246ms       | match      | /                                        | 
+2015/04/26 20:22:51 [router.go:845] [D] | GET        | /                                        | 155.0089ms       | match      | /                                        | 
+2015/04/26 20:23:30 [router.go:845] [D] | GET        | /                                        | 147.0084ms       | match      | /                                        | 
+2015/04/26 20:23:59 [router.go:845] [D] | GET        | /                                        | 126.0072ms       | match      | /                                        | 
+2015/04/26 20:24:09 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 20:24:09 [router.go:845] [D] | GET        | /my/profile                              | 120.0069ms       | match      | /my/profile                              | 
+2015/04/26 20:30:56 [log.go:108] [D] Loading language: en-US 
+2015/04/26 20:30:56 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 20:30:56 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 20:30:57 [app.go:96] [I] http server Running on :80
+2015/04/26 20:36:18 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 20:36:18 [router.go:845] [D] | GET        | /my/profile                              | 150.0086ms       | match      | /my/profile                              | 
+2015/04/26 20:40:04 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 20:40:04 [router.go:845] [D] | GET        | /my/profile                              | 103.0059ms       | match      | /my/profile                              | 
+2015/04/26 20:40:37 [router.go:845] [D] | POST       | /my/save                                 | 4.0002ms         | notmatch   | 
+2015/04/26 20:42:11 [log.go:108] [D] Loading language: en-US 
+2015/04/26 20:42:11 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 20:42:11 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 20:42:11 [app.go:96] [I] http server Running on :80
+2015/04/26 20:42:22 [log.go:108] [D] Accounts/Post Info:&models.Profile{
+    Id: 1,
+    Telphone: 13831128728,
+    Email: 1@3.com,
+    Intro: intro,
+    Updated: 1430052142817,
+    Ip: 127.0.0.1,
+} 
+2015/04/26 20:42:22 [router.go:876] [C] the request url is  /my/save 
+2015/04/26 20:42:22 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:accounts/post.tpl 
+2015/04/26 20:42:22 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/26 20:42:22 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:208 
+2015/04/26 20:42:22 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:179 
+2015/04/26 20:42:22 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:801 
+2015/04/26 20:42:22 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/26 20:42:22 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/26 20:42:22 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/26 20:46:13 [log.go:108] [D] Loading language: en-US 
+2015/04/26 20:46:13 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 20:46:13 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 20:46:13 [app.go:96] [I] http server Running on :80
+2015/04/26 20:47:08 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 20:47:08 [router.go:845] [D] | POST       | /my/save                                 | 23.0013ms        | match      | /my/save                                 | 
+2015/04/26 20:56:44 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 20:56:44 [router.go:845] [D] | GET        | /my/profile                              | 106.006ms        | match      | /my/profile                              | 
+2015/04/26 20:57:26 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 20:57:26 [router.go:845] [D] | GET        | /my/profile                              | 67.0038ms        | match      | /my/profile                              | 
+2015/04/26 21:07:57 [log.go:108] [D] Loading language: en-US 
+2015/04/26 21:07:57 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 21:07:57 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 21:07:57 [app.go:96] [I] http server Running on :80
+2015/04/26 21:08:19 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:08:19 [router.go:845] [D] | GET        | /my/profile                              | 82.0047ms        | match      | /my/profile                              | 
+2015/04/26 21:08:21 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:08:21 [router.go:845] [D] | POST       | /my/save                                 | 18.001ms         | match      | /my/save                                 | 
+2015/04/26 21:09:07 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:09:07 [router.go:845] [D] | POST       | /my/save                                 | 24.0014ms        | match      | /my/save                                 | 
+2015/04/26 21:10:21 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:10:21 [router.go:845] [D] | GET        | /my/profile                              | 106.0061ms       | match      | /my/profile                              | 
+2015/04/26 21:10:23 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:10:23 [router.go:845] [D] | POST       | /my/save                                 | 12.0007ms        | match      | /my/save                                 | 
+2015/04/26 21:10:50 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:10:50 [router.go:845] [D] | GET        | /my/profile                              | 55.0032ms        | match      | /my/profile                              | 
+2015/04/26 21:10:52 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:10:52 [router.go:845] [D] | POST       | /my/save                                 | 16.0009ms        | match      | /my/save                                 | 
+2015/04/26 21:11:43 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:11:43 [router.go:845] [D] | GET        | /my/profile                              | 158.0091ms       | match      | /my/profile                              | 
+2015/04/26 21:11:45 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:11:45 [router.go:845] [D] | POST       | /my/save                                 | 21.0012ms        | match      | /my/save                                 | 
+2015/04/26 21:14:20 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:14:20 [router.go:845] [D] | GET        | /my/profile                              | 80.0045ms        | match      | /my/profile                              | 
+2015/04/26 21:14:21 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:14:21 [router.go:845] [D] | POST       | /my/save                                 | 15.0009ms        | match      | /my/save                                 | 
+2015/04/26 21:14:53 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:14:53 [router.go:845] [D] | GET        | /my/profile                              | 118.0068ms       | match      | /my/profile                              | 
+2015/04/26 21:14:54 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:14:54 [router.go:845] [D] | POST       | /my/save                                 | 19.0011ms        | match      | /my/save                                 | 
+2015/04/26 21:14:57 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:14:57 [router.go:845] [D] | POST       | /my/save                                 | 18.001ms         | match      | /my/save                                 | 
+2015/04/26 21:15:36 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:15:36 [router.go:845] [D] | POST       | /my/save                                 | 23.0013ms        | match      | /my/save                                 | 
+2015/04/26 21:16:17 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:16:17 [router.go:845] [D] | GET        | /my/profile                              | 119.0068ms       | match      | /my/profile                              | 
+2015/04/26 21:16:18 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:16:18 [router.go:845] [D] | POST       | /my/save                                 | 17.001ms         | match      | /my/save                                 | 
+2015/04/26 21:16:53 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:16:53 [router.go:845] [D] | GET        | /my/profile                              | 170.0098ms       | match      | /my/profile                              | 
+2015/04/26 21:16:55 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:16:55 [router.go:845] [D] | POST       | /my/save                                 | 17.0009ms        | match      | /my/save                                 | 
+2015/04/26 21:16:58 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:16:58 [router.go:845] [D] | POST       | /my/save                                 | 21.0012ms        | match      | /my/save                                 | 
+2015/04/26 21:17:53 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:17:53 [router.go:845] [D] | GET        | /my/profile                              | 123.0071ms       | match      | /my/profile                              | 
+2015/04/26 21:17:56 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:17:56 [router.go:845] [D] | POST       | /my/save                                 | 17.001ms         | match      | /my/save                                 | 
+2015/04/26 21:19:01 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:19:01 [router.go:845] [D] | GET        | /my/profile                              | 98.0056ms        | match      | /my/profile                              | 
+2015/04/26 21:19:30 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:19:30 [router.go:845] [D] | GET        | /my/profile                              | 128.0073ms       | match      | /my/profile                              | 
+2015/04/26 21:21:44 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:21:44 [router.go:845] [D] | GET        | /my/profile                              | 130.0074ms       | match      | /my/profile                              | 
+2015/04/26 21:21:48 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:21:48 [router.go:845] [D] | POST       | /my/save                                 | 15.0008ms        | match      | /my/save                                 | 
+2015/04/26 21:22:38 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:22:38 [router.go:845] [D] | GET        | /my/profile                              | 136.0078ms       | match      | /my/profile                              | 
+2015/04/26 21:22:45 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:22:45 [router.go:845] [D] | POST       | /my/save                                 | 17.001ms         | match      | /my/save                                 | 
+2015/04/26 21:22:52 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:22:52 [router.go:845] [D] | GET        | /my/profile                              | 96.0055ms        | match      | /my/profile                              | 
+2015/04/26 21:22:58 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:22:58 [router.go:845] [D] | POST       | /my/save                                 | 18.0011ms        | match      | /my/save                                 | 
+2015/04/26 21:24:11 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:24:11 [router.go:845] [D] | POST       | /my/save                                 | 20.0012ms        | match      | /my/save                                 | 
+2015/04/26 21:24:17 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:24:17 [router.go:845] [D] | POST       | /my/save                                 | 15.0009ms        | match      | /my/save                                 | 
+2015/04/26 21:24:19 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:24:19 [router.go:845] [D] | GET        | /my/profile                              | 42.0024ms        | match      | /my/profile                              | 
+2015/04/26 21:24:45 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:24:45 [router.go:845] [D] | POST       | /my/save                                 | 16.0009ms        | match      | /my/save                                 | 
+2015/04/26 21:24:55 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:24:55 [router.go:845] [D] | POST       | /my/save                                 | 21.0012ms        | match      | /my/save                                 | 
+2015/04/26 21:33:45 [log.go:108] [D] Loading language: en-US 
+2015/04/26 21:33:45 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 21:33:45 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 21:33:45 [app.go:96] [I] http server Running on :80
+2015/04/26 21:36:16 [log.go:108] [D] Loading language: en-US 
+2015/04/26 21:36:16 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 21:36:16 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 21:36:16 [app.go:96] [I] http server Running on :80
+2015/04/26 21:38:40 [log.go:108] [D] Loading language: en-US 
+2015/04/26 21:38:40 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 21:38:40 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 21:38:40 [app.go:96] [I] http server Running on :80
+2015/04/26 21:43:46 [log.go:108] [D] Loading language: en-US 
+2015/04/26 21:43:46 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 21:43:46 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 21:43:46 [app.go:96] [I] http server Running on :80
+2015/04/26 21:44:01 [router.go:845] [D] | GET        | /                                        | 57.0032ms        | match      | /                                        | 
+2015/04/26 21:44:07 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:44:07 [router.go:845] [D] | GET        | /my/profile                              | 125.0071ms       | match      | /my/profile                              | 
+2015/04/26 21:44:13 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:44:13 [router.go:845] [D] | POST       | /my/save                                 | 1.0001ms         | match      | /my/save                                 | 
+2015/04/26 21:44:28 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:44:28 [router.go:845] [D] | GET        | /my/profile                              | 108.0062ms       | match      | /my/profile                              | 
+2015/04/26 21:44:35 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:44:35 [router.go:845] [D] | POST       | /my/save                                 | 0                | match      | /my/save                                 | 
+2015/04/26 21:45:01 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:45:01 [router.go:845] [D] | POST       | /my/save                                 | 0                | match      | /my/save                                 | 
+2015/04/26 21:47:52 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 21:47:52 [router.go:845] [D] | GET        | /my/profile                              | 119.0068ms       | match      | /my/profile                              | 
+2015/04/26 21:48:01 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 21:48:01 [router.go:845] [D] | POST       | /my/save                                 | 1.0001ms         | match      | /my/save                                 | 
+2015/04/26 21:49:51 [log.go:108] [D] Loading language: en-US 
+2015/04/26 21:49:51 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 21:49:51 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 21:49:51 [app.go:96] [I] http server Running on :80
+2015/04/26 21:50:08 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 21:50:08 [app.go:96] [I] http server Running on :80
+2015/04/26 21:56:04 [log.go:108] [D] Loading language: en-US 
+2015/04/26 21:56:04 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 21:56:04 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 21:56:04 [app.go:96] [I] http server Running on :80
+2015/04/26 22:04:44 [log.go:108] [D] Loading language: en-US 
+2015/04/26 22:04:44 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 22:04:44 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 22:04:44 [app.go:96] [I] http server Running on :80
+2015/04/26 22:05:49 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 22:05:50 [router.go:845] [D] | GET        | /my/profile                              | 118.0068ms       | match      | /my/profile                              | 
+2015/04/26 22:06:30 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 22:06:30 [router.go:845] [D] | POST       | /my/save                                 | 1ms              | match      | /my/save                                 | 
+2015/04/26 22:08:21 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 22:08:21 [router.go:845] [D] | POST       | /my/save                                 | 0                | match      | /my/save                                 | 
+2015/04/26 22:08:24 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 22:08:24 [router.go:845] [D] | POST       | /my/save                                 | 0                | match      | /my/save                                 | 
+2015/04/26 22:08:31 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/26 22:08:31 [router.go:845] [D] | GET        | /my/profile                              | 159.0091ms       | match      | /my/profile                              | 
+2015/04/26 22:08:56 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 22:08:56 [router.go:845] [D] | POST       | /my/save                                 | 1.0001ms         | match      | /my/save                                 | 
+2015/04/26 22:11:24 [log.go:108] [D] Loading language: en-US 
+2015/04/26 22:11:24 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 22:11:24 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 22:11:24 [app.go:96] [I] http server Running on :80
+2015/04/26 22:11:41 [log.go:108] [D] Loading language: en-US 
+2015/04/26 22:11:41 [log.go:108] [D] Loading language: zh-CN 
+2015/04/26 22:11:41 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/26 22:11:41 [app.go:96] [I] http server Running on :80
+2015/04/26 22:11:50 [log.go:108] [D] Accounts/Post Info:zh-CN 
+2015/04/26 22:11:50 [router.go:845] [D] | POST       | /my/save                                 | 51.0029ms        | match      | /my/save                                 | 
+2015/04/26 22:20:46 [router.go:845] [D] | POST       | /signout                                 | 0                | match      | /signout                                 | 
+2015/04/26 22:20:46 [router.go:845] [D] | GET        | /                                        | 58.0033ms        | match      | /                                        | 
+2015/04/26 22:22:30 [router.go:845] [D] | GET        | /xiangmu                                 | 6.0004ms         | notmatch   | 

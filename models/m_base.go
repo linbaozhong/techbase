@@ -50,8 +50,8 @@ type Field struct {
 
 //错误信息
 type Error struct {
-	Key     string
-	Message string
+	Key     string `json:"key"`
+	Message string `json:"message"`
 }
 
 //分页
