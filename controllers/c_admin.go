@@ -29,7 +29,7 @@ func (this *Admin) Prepare() {
 		}
 	}
 
-	this.Layout = "_adminLayout.tpl"
+	//this.Layout = "_adminLayout.tpl"
 
 }
 

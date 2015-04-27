@@ -65,7 +65,15 @@
 			<ul class="">
 				<li><a href="/basic/index/0">国家</a>
 				</li>
-				<li><a href="/basic/index/1">城市</a>
+				<li><a href="/basic/index/2">城市</a>
+				</li>
+				<li><a href="/basic/index/3">领域</a>
+				</li>
+				<li><a href="/basic/index/4">运营状态</a>
+				</li>
+				<li><a href="/basic/index/5">职位</a>
+				</li>
+				<li><a href="/basic/index/6">融资轮次</a>
 				</li>
 			</ul>
 		</div>

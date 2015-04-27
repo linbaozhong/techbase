@@ -4,9 +4,14 @@
 
 		</div>
 		<div class="col-md-10">
-			<h2>她本营</h2>
-			<h4>女性科技互联网创业生态圈</h4>
-			<hr />
+			<div class="form-horizontal" style="margin-bottom:30px;">
+				<div class="form-group">
+					<label class="control-label">基础数据 - </label>
+					{{str2html .options}}
+					<label class="control-label"> - {{.subTitle}}</label>
+				</div>
+			</div>
+			
 			<!--数据在这里-->
 			<table class="table table-bordered table-condensed table-hover" id="snow-list">
 				<tbody>
@@ -51,19 +56,27 @@
 	</form>
 </article>
 <script type="text/javascript">
+	function push_item(item){
+		var _html = [];
+		 _html.push('<tr>');                                                         
+		 _html.push('<td class="text-center">'+item.name+'</td>');                                                         
+		 _html.push('<td class="text-center">'+item.value+'</td>');                                                         
+		 _html.push('<td class="text-center"><i class="fa '+(item.status?'fa-check-square-o':'fa-square-o')+'"></i></td>');                                                         
+		 _html.push('<td class="text-center"><button class="btn btn-primary btn-edit">修改</button></td>');                                                         
+		 _html.push('</tr>'); 
+		 $('#snow-list tbody').append(_html.join(''));
+	
+	}
+	function push_list(list){
+		$.each(list, function(index,item) {   
+			push_item(item);
+		});
+	}
+		
 	$(function() {
 		$.getJSON('/basic/list/{{.typeid}}',function(json){
 			if (json.ok) {
-				var _html = [];
-				$.each(json.data, function(index,item) {    
-					 _html.push('<tr>');                                                         
-					 _html.push('<td class="text-center">'+item.name+'</td>');                                                         
-					 _html.push('<td class="text-center">'+item.value+'</td>');                                                         
-					 _html.push('<td class="text-center"><i class="fa '+(item.status?'fa-check-square-o':'fa-square-o')+'"></i></td>');                                                         
-					 _html.push('<td class="text-center"><button class="btn btn-primary btn-edit">修改</button></td>');                                                         
-					 _html.push('</tr>');                                                         
-				});
-				$('#snow-list tbody').append(_html.join(''));
+				push_list(json.data);
 			} else{
 				
 			}
@@ -81,15 +94,17 @@
 			});
 		});
 		
-		// 保存
+		// 提交表单
 		$('#snow-form form').submit(function(e){
 			e.preventDefault();
-			$.post('/basic/save',$(this).serialize(),function(json){
-				console.log(json);
+			var _form = $(this);
+			$.post('/basic/save',_form.serialize(),function(json){
+				//console.log(json);
 				if (json.ok) {
 					snow.popWindow.close();
+					push_item(json.data);
 				} else{
-					
+					_form.children('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( ,'+json.message);
 				}
 			});
 		})

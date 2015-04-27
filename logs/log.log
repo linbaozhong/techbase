@@ -2195,3 +2195,161 @@
 2015/04/27 18:46:08 [log.go:108] [D] Basic/Index Info:0 
 2015/04/27 18:46:08 [log.go:108] [D] Basic/Index Info:zh-CN 
 2015/04/27 18:46:08 [router.go:845] [D] | GET        | /basic/index/0                           | 24.0014ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 20:36:17 [log.go:108] [D] Loading language: en-US 
+2015/04/27 20:36:17 [log.go:108] [D] Loading language: zh-CN 
+2015/04/27 20:36:17 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 20:36:17 [app.go:96] [I] http server Running on :80
+2015/04/27 20:36:37 [router.go:845] [D] | GET        | /                                        | 44.0025ms        | match      | /                                        | 
+2015/04/27 20:37:36 [router.go:845] [D] | GET        | /                                        | 261.0149ms       | match      | /                                        | 
+2015/04/27 20:40:26 [router.go:845] [D] | GET        | /connect/wx_callback                     | 1.5630894s       | match      | /connect/wx_callback/*                   | 
+2015/04/27 20:40:26 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/27 20:40:26 [router.go:845] [D] | GET        | /                                        | 80.0046ms        | match      | /                                        | 
+2015/04/27 20:41:59 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/27 20:41:59 [router.go:845] [D] | GET        | /my/profile                              | 498.0285ms       | match      | /my/profile                              | 
+2015/04/27 20:43:33 [log.go:108] [D] Loading language: en-US 
+2015/04/27 20:43:33 [log.go:108] [D] Loading language: zh-CN 
+2015/04/27 20:43:33 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 20:43:33 [app.go:96] [I] http server Running on :80
+2015/04/27 20:43:54 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 20:43:54 [app.go:96] [I] http server Running on :80
+2015/04/27 20:43:59 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/27 20:43:59 [router.go:845] [D] | GET        | /my/profile                              | 105.006ms        | match      | /my/profile                              | 
+2015/04/27 20:44:20 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 20:44:20 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 20:44:20 [router.go:845] [D] | GET        | /basic/index/0                           | 95.0054ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 20:57:35 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 20:57:35 [app.go:96] [I] http server Running on :80
+2015/04/27 20:58:56 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 20:58:56 [router.go:845] [D] | GET        | /basic/index/0                           | 151.0087ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 20:59:12 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 20:59:12 [router.go:845] [D] | GET        | /basic/index/1                           | 120.0069ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 21:00:18 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:00:18 [router.go:845] [D] | GET        | /basic/index/1                           | 89.0051ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:00:29 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:00:29 [router.go:845] [D] | GET        | /basic/index/0                           | 91.0052ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:00:31 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:00:31 [router.go:845] [D] | GET        | /basic/index/1                           | 81.0046ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:03:35 [log.go:108] [D] Loading language: en-US 
+2015/04/27 21:03:35 [log.go:108] [D] Loading language: zh-CN 
+2015/04/27 21:03:35 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 21:03:35 [app.go:96] [I] http server Running on :80
+2015/04/27 21:04:21 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 21:04:21 [app.go:96] [I] http server Running on :80
+2015/04/27 21:04:27 [log.go:108] [D] Basic/Index Info:false 
+2015/04/27 21:04:27 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:04:27 [router.go:845] [D] | GET        | /basic/index/1                           | 85.0048ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:04:37 [log.go:108] [D] Basic/Index Info:true 
+2015/04/27 21:04:37 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:04:37 [router.go:845] [D] | GET        | /basic/index/0                           | 98.0056ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:04:52 [log.go:108] [D] Basic/Index Info:false 
+2015/04/27 21:04:52 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:04:52 [router.go:845] [D] | GET        | /basic/index/1                           | 99.0056ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:06:02 [log.go:108] [D] Loading language: en-US 
+2015/04/27 21:06:02 [log.go:108] [D] Loading language: zh-CN 
+2015/04/27 21:06:02 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 21:06:02 [app.go:96] [I] http server Running on :80
+2015/04/27 21:06:07 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:06:07 [router.go:845] [D] | GET        | /basic/index/1                           | 89.0051ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:06:10 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:06:10 [router.go:845] [D] | GET        | /basic/index/0                           | 87.0049ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:12:05 [log.go:108] [D] Loading language: en-US 
+2015/04/27 21:12:05 [log.go:108] [D] Loading language: zh-CN 
+2015/04/27 21:12:05 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 21:12:05 [app.go:96] [I] http server Running on :80
+2015/04/27 21:12:05 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:12:05 [router.go:845] [D] | GET        | /basic/index/1                           | 69.004ms         | match      | /basic/index/:typeid                     | 
+2015/04/27 21:12:12 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:12:12 [router.go:845] [D] | GET        | /basic/index/0                           | 201.0115ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 21:13:26 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 21:13:26 [app.go:96] [I] http server Running on :80
+2015/04/27 21:13:26 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:13:26 [router.go:845] [D] | GET        | /basic/index/1                           | 274.0156ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 21:15:46 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:15:46 [router.go:845] [D] | GET        | /basic/index/1                           | 94.0054ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:15:54 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:15:54 [router.go:845] [D] | GET        | /basic/index/4                           | 75.0043ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:15:57 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:15:57 [router.go:845] [D] | GET        | /basic/index/3                           | 88.0051ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:16:00 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:16:00 [router.go:845] [D] | GET        | /basic/index/5                           | 99.0057ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:16:03 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:16:03 [router.go:845] [D] | GET        | /basic/index/6                           | 103.0059ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 21:17:18 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:17:18 [router.go:845] [D] | GET        | /basic/index/6                           | 88.005ms         | match      | /basic/index/:typeid                     | 
+2015/04/27 21:18:28 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:18:28 [router.go:845] [D] | GET        | /basic/index/6                           | 128.0074ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 21:19:04 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:19:04 [router.go:845] [D] | GET        | /basic/index/6                           | 140.008ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:19:51 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:19:51 [router.go:845] [D] | GET        | /basic/index/6                           | 106.0061ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 21:20:53 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 21:20:53 [router.go:845] [D] | GET        | /basic/index/0                           | 81.0047ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 21:35:26 [log.go:108] [D] Loading language: en-US 
+2015/04/27 21:35:26 [log.go:108] [D] Loading language: zh-CN 
+2015/04/27 21:35:26 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 21:35:26 [app.go:96] [I] http server Running on :80
+2015/04/27 22:01:36 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 22:01:36 [app.go:96] [I] http server Running on :80
+2015/04/27 22:01:51 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:01:51 [router.go:845] [D] | GET        | /basic/index/2                           | 89.0051ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 22:03:41 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:03:41 [router.go:845] [D] | GET        | /basic/index/2                           | 81.0046ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 22:05:32 [log.go:108] [D] Loading language: en-US 
+2015/04/27 22:05:32 [log.go:108] [D] Loading language: zh-CN 
+2015/04/27 22:05:32 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 22:05:32 [app.go:96] [I] http server Running on :80
+2015/04/27 22:05:34 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:05:34 [router.go:845] [D] | GET        | /basic/index/2                           | 79.0046ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 22:06:38 [log.go:108] [D] template Execute err: template: basic/index.tpl:9:14: executing "basic/index.tpl" at <.options>: invalid value; expected string 
+2015/04/27 22:06:38 [router.go:876] [C] the request url is  /basic/index/0 
+2015/04/27 22:06:38 [router.go:877] [C] Handler crashed with error template: basic/index.tpl:9:14: executing "basic/index.tpl" at <.options>: invalid value; expected string 
+2015/04/27 22:06:38 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/27 22:06:38 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/04/27 22:06:38 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/27 22:06:38 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/27 22:06:38 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/27 22:06:51 [log.go:108] [D] template Execute err: template: basic/index.tpl:9:14: executing "basic/index.tpl" at <.options>: invalid value; expected string 
+2015/04/27 22:06:51 [router.go:876] [C] the request url is  /basic/index/4 
+2015/04/27 22:06:51 [router.go:877] [C] Handler crashed with error template: basic/index.tpl:9:14: executing "basic/index.tpl" at <.options>: invalid value; expected string 
+2015/04/27 22:06:51 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/04/27 22:06:51 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/04/27 22:06:51 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/04/27 22:06:51 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/04/27 22:06:51 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/04/27 22:13:05 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:13:07 [log.go:108] [D] Loading language: en-US 
+2015/04/27 22:13:07 [log.go:108] [D] Loading language: zh-CN 
+2015/04/27 22:13:07 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 22:13:07 [app.go:96] [I] http server Running on :80
+2015/04/27 22:13:09 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:13:09 [router.go:845] [D] | GET        | /basic/index/2                           | 67.0038ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 22:17:44 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:17:44 [router.go:845] [D] | GET        | /basic/index/2                           | 115.0066ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 22:18:03 [log.go:108] [D] Loading language: en-US 
+2015/04/27 22:18:03 [log.go:108] [D] Loading language: zh-CN 
+2015/04/27 22:18:03 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 22:18:03 [app.go:96] [I] http server Running on :80
+2015/04/27 22:18:08 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:18:08 [router.go:845] [D] | GET        | /basic/index/2                           | 152.0087ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 22:25:00 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:25:00 [router.go:845] [D] | GET        | /basic/index/2                           | 100.0057ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 22:27:05 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:27:05 [router.go:845] [D] | GET        | /basic/index/2                           | 106.0061ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 22:27:30 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:27:30 [router.go:845] [D] | GET        | /basic/index/2                           | 118.0067ms       | match      | /basic/index/:typeid                     | 
+2015/04/27 22:30:02 [log.go:108] [D] Loading language: en-US 
+2015/04/27 22:30:02 [log.go:108] [D] Loading language: zh-CN 
+2015/04/27 22:30:02 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 22:30:02 [app.go:96] [I] http server Running on :80
+2015/04/27 22:30:08 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:30:08 [router.go:845] [D] | GET        | /basic/index/2                           | 85.0049ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 22:30:12 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:30:12 [router.go:845] [D] | GET        | /basic/index/0                           | 76.0043ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 22:30:15 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:30:15 [router.go:845] [D] | GET        | /basic/index/3                           | 80.0046ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 22:30:17 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:30:17 [router.go:845] [D] | GET        | /basic/index/2                           | 95.0054ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 22:30:22 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:30:22 [router.go:845] [D] | GET        | /basic/index/0                           | 87.005ms         | match      | /basic/index/:typeid                     | 
+2015/04/27 22:36:08 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 22:36:08 [router.go:845] [D] | GET        | /basic/index/2                           | 93.0053ms        | match      | /basic/index/:typeid                     | 

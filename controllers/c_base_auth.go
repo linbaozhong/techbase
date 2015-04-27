@@ -39,7 +39,7 @@ func (this *Auth) Prepare() {
 
 	this.Data["index"] = ""
 
-	this.Layout = "_frontLayout.tpl"
+	this.Layout = "_adminLayout.tpl"
 	this.LayoutSections = make(map[string]string)
 
 }
