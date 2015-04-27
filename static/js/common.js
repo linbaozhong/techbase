@@ -15,7 +15,7 @@ jQuery弹窗插件 By 哈利蔺特
 			width = wd.width(),
 			height = wd.height() - 20,
 			defaults = {
-				close: '关闭',
+				close: 'X',
 				width: self.width(),
 				height: height,
 				speed: 600
@@ -124,5 +124,10 @@ jQuery弹窗插件 By 哈利蔺特
 		if (container.is(':hidden')) {
 			container.fadeIn(opts.speed);
 		}
+		//
+		this.close = function(){
+			closeSelf();
+		};
+		return this;
 	};
 })(jQuery);

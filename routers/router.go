@@ -30,7 +30,13 @@ func init() {
 	beego.Router("/my/profile", act, "get:Profile")
 	beego.Router("/my/save", act, "post:Post")
 	beego.AutoRouter(act)
-	// 系统后台管理
+	// 后台管理
 	admin := &controllers.Admin{}
 	beego.AutoRouter(admin)
+	// 基础数据管理
+	basic := &controllers.Basic{}
+	beego.Router("/basic/index/:typeid", basic, "get:Index")
+	beego.Router("/basic/list/:typeid", basic, "get:List")
+	beego.Router("/basic/save", basic, "Post:Save")
+	beego.AutoRouter(basic)
 }

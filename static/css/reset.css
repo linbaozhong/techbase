@@ -25,6 +25,17 @@ ul{
 	margin: 0;
 	padding: 0;
 }
+/*修正bootstrap*/
+.form-control{
+	font-size: 16px;
+}
+.btn{
+	font-size:18px;
+}
+table .btn{
+	padding-top:0;
+	padding-bottom: 0;
+}
 /*导航条*/
 
 .navbar-fixed-top {
@@ -112,6 +123,7 @@ form .alert{
 form .alert.visible{
 	visibility:visible;
 }
+
 /*页脚*/
 
 #footer {

@@ -1,6 +1,7 @@
 package models
 
 import (
+	"fmt"
 	// "errors"
 	//"fmt"
 	"github.com/astaxie/beego/validation"
@@ -20,6 +21,7 @@ type Accounts struct {
 	Avatar_2     string `json:"avatar_2" valid:"MaxSize(250)"`
 	AccessToken  string `json:"accessToken" valid:"MaxSize(150)"`
 	RefreshToken string `json:"refreshToken" valid:"MaxSize(150)"`
+	Role         int    `json:"role"`
 	Status       int    `json:"status" valid:"Range(0,1)"`
 	Deleted      int    `json:"deleted" valid:"Range(0,1)"`
 	Updator      int64  `json:"updator"`
@@ -59,6 +61,16 @@ func (this *Accounts) Post() (error, []Error) {
 		_, err = db.Insert(this)
 	}
 	return err, nil
+}
+
+// 读取用户角色
+func (this *Accounts) GetRole() (int, error) {
+	if ok, err := db.Get(this); ok {
+		return this.Role, nil
+	} else {
+		fmt.Println(err)
+		return -1, err
+	}
 }
 
 // 更新第三方登录的refreshToken

@@ -33,7 +33,7 @@ type Current struct {
 	Name   string `json:"name"`
 	Avatar string `json:"avatar"`
 	From   string `json:"from"`
-	Role   string `json:"role"`
+	Role   int    `json:"role"`
 }
 
 //公共字段
@@ -45,7 +45,7 @@ type Field struct {
 	Updated  int64
 	Ip       string
 	Name     string
-	Role     string
+	Role     int
 }
 
 //错误信息

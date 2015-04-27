@@ -65,6 +65,7 @@ func appconf(key string) string {
 }
 
 func (this *Base) Prepare() {
+
 	this.currentUser = new(models.Current)
 	// 读取当前控制器和方法名称
 	this.controllerName, this.actionName = this.GetControllerAndAction()
@@ -248,12 +249,14 @@ func (this *Base) setJsonData(data interface{}) {
 func (this *Base) renderJson(data interface{}) {
 	this.setJsonData(data)
 	this.ServeJson()
+	this.end()
 }
 
 //返回jsonp响应
 func (this *Base) renderJsonp(data interface{}) {
 	this.setJsonData(data)
 	this.ServeJsonp()
+	this.end()
 }
 
 //返回html字符串格式响应

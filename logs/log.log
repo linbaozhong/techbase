@@ -1786,3 +1786,412 @@
 2015/04/26 22:20:46 [router.go:845] [D] | POST       | /signout                                 | 0                | match      | /signout                                 | 
 2015/04/26 22:20:46 [router.go:845] [D] | GET        | /                                        | 58.0033ms        | match      | /                                        | 
 2015/04/26 22:22:30 [router.go:845] [D] | GET        | /xiangmu                                 | 6.0004ms         | notmatch   | 
+2015/04/27 12:26:52 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 12:26:54 [app.go:96] [I] http server Running on :80
+2015/04/27 12:27:22 [router.go:845] [D] | GET        | /                                        | 36.0021ms        | match      | /                                        | 
+2015/04/27 12:28:21 [router.go:845] [D] | GET        | /connect/wx_callback                     | 797.0456ms       | match      | /connect/wx_callback/*                   | 
+2015/04/27 12:28:21 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/27 12:28:21 [router.go:845] [D] | GET        | /                                        | 27.0016ms        | match      | /                                        | 
+2015/04/27 12:28:42 [log.go:108] [D] Accounts/Profile Info:0 
+2015/04/27 12:28:42 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/27 12:28:42 [router.go:845] [D] | GET        | /my/profile                              | 26.0015ms        | match      | /my/profile                              | 
+2015/04/27 12:28:59 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/27 12:28:59 [router.go:845] [D] | GET        | /my/profile                              | 27.0015ms        | match      | /my/profile                              | 
+2015/04/27 12:29:34 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 12:29:34 [app.go:96] [I] http server Running on :80
+2015/04/27 12:57:48 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 12:57:48 [app.go:96] [I] http server Running on :80
+2015/04/27 13:01:05 [router.go:845] [D] | GET        | /                                        | 36.002ms         | match      | /                                        | 
+2015/04/27 13:01:13 [router.go:845] [D] | GET        | /                                        | 27.0015ms        | match      | /                                        | 
+2015/04/27 13:05:46 [router.go:845] [D] | GET        | /                                        | 23.0014ms        | match      | /                                        | 
+2015/04/27 13:07:34 [router.go:845] [D] | GET        | /                                        | 38.0021ms        | match      | /                                        | 
+2015/04/27 13:07:50 [router.go:845] [D] | GET        | /                                        | 22.0013ms        | match      | /                                        | 
+2015/04/27 13:09:27 [router.go:845] [D] | GET        | /connect/wx_callback                     | 808.0462ms       | match      | /connect/wx_callback/*                   | 
+2015/04/27 13:09:27 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/04/27 13:09:27 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/04/27 13:09:37 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/27 13:09:37 [router.go:845] [D] | GET        | /my/profile                              | 18.0011ms        | match      | /my/profile                              | 
+2015/04/27 13:12:03 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/27 13:12:03 [router.go:845] [D] | GET        | /my/profile                              | 30.0018ms        | match      | /my/profile                              | 
+2015/04/27 13:14:44 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/27 13:14:44 [router.go:845] [D] | GET        | /my/profile                              | 25.0014ms        | match      | /my/profile                              | 
+2015/04/27 13:47:21 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 13:47:21 [app.go:96] [I] http server Running on :80
+2015/04/27 13:47:25 [log.go:108] [D] / Info:000 
+2015/04/27 13:47:25 [log.go:108] [D] Accounts/Profile Info:111 
+2015/04/27 13:47:25 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/27 13:47:25 [router.go:845] [D] | GET        | /my/profile                              | 36.002ms         | match      | /my/profile                              | 
+2015/04/27 13:47:55 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 13:47:55 [app.go:96] [I] http server Running on :80
+2015/04/27 13:47:59 [log.go:108] [D] / Info:111 
+2015/04/27 13:47:59 [router.go:876] [C] the request url is  /my/profile 
+2015/04/27 13:47:59 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/04/27 13:47:59 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/27 13:47:59 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:552 
+2015/04/27 13:47:59 [router.go:883] [C] E:/Go/src/pkg/runtime/os_windows.c:359 
+2015/04/27 13:47:59 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/controllers/c_base.go:361 
+2015/04/27 13:47:59 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/controllers/c_base_auth.go:16 
+2015/04/27 13:47:59 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:760 
+2015/04/27 13:47:59 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/27 13:47:59 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/27 13:47:59 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/27 13:48:46 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 13:48:46 [app.go:96] [I] http server Running on :80
+2015/04/27 13:48:49 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/27 13:48:49 [router.go:845] [D] | GET        | /my/profile                              | 34.002ms         | match      | /my/profile                              | 
+2015/04/27 13:58:09 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 13:58:09 [app.go:96] [I] http server Running on :80
+2015/04/27 14:00:47 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:00:47 [app.go:96] [I] http server Running on :80
+2015/04/27 14:01:24 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:01:24 [app.go:96] [I] http server Running on :80
+2015/04/27 14:01:32 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:01:32 [app.go:96] [I] http server Running on :80
+2015/04/27 14:16:39 [log.go:108] [D] Home/Error Info: 
+2015/04/27 14:16:39 [router.go:845] [D] | GET        | /home/error                              | 18.001ms         | match      | /home/error/*                            | 
+2015/04/27 14:17:56 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:17:56 [app.go:96] [I] http server Running on :80
+2015/04/27 14:18:10 [log.go:108] [D] Home/Error Info: 
+2015/04/27 14:18:10 [router.go:845] [D] | GET        | /home/error                              | 28.0016ms        | match      | /home/error/*                            | 
+2015/04/27 14:19:03 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:19:03 [app.go:96] [I] http server Running on :80
+2015/04/27 14:19:19 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:19:19 [app.go:96] [I] http server Running on :80
+2015/04/27 14:19:25 [router.go:845] [D] | GET        | /admin                                   | 2.0001ms         | notmatch   | 
+2015/04/27 14:19:41 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:19:41 [app.go:96] [I] http server Running on :80
+2015/04/27 14:19:44 [router.go:845] [D] | GET        | /admin                                   | 1.0001ms         | notmatch   | 
+2015/04/27 14:20:41 [log.go:108] [D] Admin/Get Info:-1,  1 
+2015/04/27 14:20:41 [log.go:108] [D] Home/Error Info: 
+2015/04/27 14:20:41 [router.go:845] [D] | GET        | /home/error/拒绝访问未授权的功能，请联系系统管理员……        | 33.0018ms        | match      | /home/error/:msg                         | 
+2015/04/27 14:23:59 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:23:59 [app.go:96] [I] http server Running on :80
+2015/04/27 14:24:15 [log.go:108] [D] Admin/Get Info:-1,  1 
+2015/04/27 14:24:15 [log.go:108] [D] Home/Error Info: 
+2015/04/27 14:24:15 [router.go:845] [D] | GET        | /home/error                              | 25.0014ms        | match      | /home/error/*                            | 
+2015/04/27 14:26:30 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:26:30 [app.go:96] [I] http server Running on :80
+2015/04/27 14:26:39 [log.go:108] [D] Admin/Get Info:-1,  1 
+2015/04/27 14:26:39 [log.go:108] [D] Home/Error Info: 
+2015/04/27 14:26:39 [router.go:845] [D] | GET        | /home/error                              | 34.0019ms        | match      | /home/error/*                            | 
+2015/04/27 14:28:17 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:28:17 [app.go:96] [I] http server Running on :80
+2015/04/27 14:28:27 [log.go:108] [D] Admin/Get Info:-1,  1 
+2015/04/27 14:28:27 [log.go:108] [D] Home/Error Info: 
+2015/04/27 14:28:27 [router.go:845] [D] | GET        | /home/error                              | 29.0017ms        | match      | /home/error/*                            | 
+2015/04/27 14:29:25 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:29:25 [app.go:96] [I] http server Running on :80
+2015/04/27 14:32:45 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:32:46 [app.go:96] [I] http server Running on :80
+2015/04/27 14:32:56 [log.go:108] [D] Admin/Get Info:0,  1 
+2015/04/27 14:32:56 [log.go:108] [D] Admin/Get Info:zh-CN 
+2015/04/27 14:32:56 [router.go:845] [D] | GET        | /admin/get                               | 3.0002ms         | match      | /admin/get/*                             | 
+2015/04/27 14:33:48 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:33:48 [app.go:96] [I] http server Running on :80
+2015/04/27 14:34:31 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:34:31 [router.go:876] [C] the request url is  /admin/index 
+2015/04/27 14:34:31 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:admin/index.tpl 
+2015/04/27 14:34:31 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/27 14:34:31 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/04/27 14:34:31 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/27 14:34:31 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/27 14:34:31 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/27 14:34:31 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/27 14:34:31 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/27 14:35:58 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:35:58 [app.go:96] [I] http server Running on :80
+2015/04/27 14:36:34 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:36:34 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 14:36:34 [router.go:845] [D] | GET        | /admin/index                             | 24.0014ms        | match      | /admin/index/*                           | 
+2015/04/27 14:36:54 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/27 14:36:54 [router.go:845] [D] | GET        | /my/profile                              | 35.002ms         | match      | /my/profile                              | 
+2015/04/27 14:38:45 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:38:45 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 14:38:45 [router.go:845] [D] | GET        | /admin/index                             | 22.0012ms        | match      | /admin/index/*                           | 
+2015/04/27 14:41:12 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:41:13 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 14:41:13 [router.go:845] [D] | GET        | /admin/index                             | 26.0015ms        | match      | /admin/index/*                           | 
+2015/04/27 14:41:53 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:41:53 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 14:41:53 [router.go:845] [D] | GET        | /admin/index                             | 30.0017ms        | match      | /admin/index/*                           | 
+2015/04/27 14:42:17 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:42:17 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 14:42:17 [router.go:845] [D] | GET        | /admin/index                             | 24.0013ms        | match      | /admin/index/*                           | 
+2015/04/27 14:42:52 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:42:52 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 14:42:52 [router.go:845] [D] | GET        | /admin/index                             | 19.0011ms        | match      | /admin/index/*                           | 
+2015/04/27 14:44:30 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:44:30 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 14:44:30 [router.go:845] [D] | GET        | /admin/index                             | 21.0012ms        | match      | /admin/index/*                           | 
+2015/04/27 14:46:14 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:46:14 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 14:46:14 [router.go:845] [D] | GET        | /admin/index                             | 31.0018ms        | match      | /admin/index/*                           | 
+2015/04/27 14:48:37 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:48:37 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 14:48:37 [router.go:845] [D] | GET        | /admin/index                             | 26.0015ms        | match      | /admin/index/*                           | 
+2015/04/27 14:50:28 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:50:28 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 14:50:28 [router.go:845] [D] | GET        | /admin/index                             | 17.001ms         | match      | /admin/index/*                           | 
+2015/04/27 14:51:07 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 14:51:07 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 14:51:07 [router.go:845] [D] | GET        | /admin/index                             | 19.0011ms        | match      | /admin/index/*                           | 
+2015/04/27 14:54:17 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 14:54:17 [app.go:96] [I] http server Running on :80
+2015/04/27 14:54:35 [staticfile.go:62] [W] GetFileAttributesEx html/error/dd: The system cannot find the path specified. 
+2015/04/27 14:54:51 [staticfile.go:62] [W] GetFileAttributesEx html/error: The system cannot find the file specified. 
+2015/04/27 14:55:03 [log.go:108] [D] Home/Error Info:dd 
+2015/04/27 14:55:03 [router.go:845] [D] | GET        | /home/error/dd                           | 34.002ms         | match      | /home/error/:msg                         | 
+2015/04/27 15:58:05 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 15:58:05 [app.go:96] [I] http server Running on :80
+2015/04/27 15:59:31 [log.go:108] [D] Admin/Index Info:0,  1 
+2015/04/27 15:59:31 [log.go:108] [D] Admin/index Info:zh-CN 
+2015/04/27 15:59:31 [router.go:845] [D] | GET        | /admin/index                             | 54.0031ms        | match      | /admin/index/*                           | 
+2015/04/27 15:59:41 [log.go:108] [D] Basic/Index Info:0,  1 
+2015/04/27 15:59:41 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 15:59:41 [router.go:876] [C] the request url is  /basic/index/0 
+2015/04/27 15:59:41 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:basic/index.tpl 
+2015/04/27 15:59:41 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/27 15:59:41 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/04/27 15:59:41 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/27 15:59:41 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/27 15:59:41 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/27 15:59:41 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/27 15:59:41 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/27 16:00:49 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 16:00:49 [app.go:96] [I] http server Running on :80
+2015/04/27 16:01:01 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 16:01:01 [router.go:876] [C] the request url is  /basic/index/1 
+2015/04/27 16:01:01 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:basic/index.tpl 
+2015/04/27 16:01:01 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/27 16:01:01 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/04/27 16:01:01 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/27 16:01:01 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/27 16:01:01 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/27 16:01:01 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/27 16:01:01 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/27 16:02:07 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 16:02:07 [app.go:96] [I] http server Running on :80
+2015/04/27 16:03:08 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 16:03:08 [router.go:876] [C] the request url is  /basic/index/1 
+2015/04/27 16:03:08 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:basic/index.tpl 
+2015/04/27 16:03:08 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/27 16:03:08 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/04/27 16:03:08 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/27 16:03:08 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/27 16:03:08 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/27 16:03:08 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/27 16:03:08 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/27 16:03:20 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 16:03:20 [router.go:876] [C] the request url is  /basic/index/1 
+2015/04/27 16:03:20 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:basic/index.tpl 
+2015/04/27 16:03:20 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/27 16:03:20 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/04/27 16:03:20 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/27 16:03:20 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/27 16:03:20 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/27 16:03:20 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/27 16:03:20 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/27 16:03:25 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 16:03:25 [router.go:876] [C] the request url is  /basic/index/0 
+2015/04/27 16:03:25 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:basic/index.tpl 
+2015/04/27 16:03:25 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/27 16:03:25 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/04/27 16:03:25 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/27 16:03:25 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/27 16:03:25 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/27 16:03:25 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/27 16:03:25 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/27 16:04:03 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 16:04:03 [app.go:96] [I] http server Running on :80
+2015/04/27 16:04:07 [log.go:108] [D] Basic/Index Info:1 
+2015/04/27 16:04:07 [router.go:876] [C] the request url is  /basic/index/1 
+2015/04/27 16:04:07 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:basic/index.tpl 
+2015/04/27 16:04:07 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/27 16:04:07 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/04/27 16:04:07 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/27 16:04:07 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/27 16:04:07 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/27 16:04:07 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/27 16:04:07 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/27 16:04:13 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 16:04:13 [router.go:876] [C] the request url is  /basic/index/0 
+2015/04/27 16:04:13 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:basic/index.tpl 
+2015/04/27 16:04:13 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/27 16:04:13 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/04/27 16:04:13 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/27 16:04:13 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/27 16:04:13 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/27 16:04:13 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/27 16:04:13 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/27 16:15:12 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 16:15:12 [app.go:96] [I] http server Running on :80
+2015/04/27 16:24:18 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:24:18 [router.go:845] [D] | GET        | /basic/index/0                           | 29.0016ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 16:24:55 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:24:55 [router.go:845] [D] | GET        | /basic/index/0                           | 29.0016ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 16:25:26 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:25:26 [router.go:845] [D] | GET        | /basic/index/0                           | 30.0018ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 16:25:44 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:25:44 [router.go:845] [D] | GET        | /basic/index/0                           | 26.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 16:30:04 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:30:04 [router.go:845] [D] | GET        | /basic/index/0                           | 26.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 16:30:14 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:30:14 [router.go:845] [D] | GET        | /basic/index/0                           | 26.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 16:30:25 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:30:25 [router.go:845] [D] | GET        | /basic/index/0                           | 29.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 16:32:37 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:32:37 [router.go:845] [D] | GET        | /basic/index/0                           | 27.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 16:35:09 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:35:09 [router.go:845] [D] | GET        | /basic/index/0                           | 20.0012ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 16:36:18 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:36:18 [router.go:845] [D] | GET        | /basic/index/0                           | 26.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 16:37:22 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:37:22 [router.go:845] [D] | GET        | /basic/index/0                           | 24.0014ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 16:40:16 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 16:40:16 [router.go:845] [D] | GET        | /basic/index/0                           | 21.0012ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:22:26 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:22:26 [router.go:845] [D] | GET        | /basic/index/0                           | 14.0008ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:22:26 [router.go:845] [D] | GET        | /basic/list/                             | 1.0001ms         | notmatch   | 
+2015/04/27 17:23:05 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:23:05 [router.go:845] [D] | GET        | /basic/index/0                           | 30.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:23:05 [router.go:845] [D] | GET        | /basic/list/                             | 1ms              | notmatch   | 
+2015/04/27 17:23:56 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:23:56 [router.go:845] [D] | GET        | /basic/index/0                           | 27.0016ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:23:57 [router.go:845] [D] | GET        | /basic/list/                             | 0                | notmatch   | 
+2015/04/27 17:24:17 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:24:17 [router.go:845] [D] | GET        | /basic/index/0                           | 30.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:24:17 [router.go:845] [D] | GET        | /basic/list/                             | 1.0001ms         | notmatch   | 
+2015/04/27 17:24:31 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:24:31 [router.go:845] [D] | GET        | /basic/index/0                           | 30.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:24:32 [router.go:845] [D] | GET        | /basic/list/                             | 1ms              | notmatch   | 
+2015/04/27 17:25:08 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:25:08 [router.go:845] [D] | GET        | /basic/index/0                           | 20.0012ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:25:08 [router.go:845] [D] | GET        | /basic/list/                             | 1.0001ms         | notmatch   | 
+2015/04/27 17:25:17 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:25:17 [router.go:845] [D] | GET        | /basic/index/0                           | 27.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:25:17 [router.go:845] [D] | GET        | /basic/list/                             | 1ms              | notmatch   | 
+2015/04/27 17:36:49 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:36:49 [router.go:845] [D] | GET        | /basic/index/0                           | 29.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:36:49 [router.go:845] [D] | GET        | /basic/list/                             | 2.0001ms         | notmatch   | 
+2015/04/27 17:38:13 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:38:13 [router.go:845] [D] | GET        | /basic/index/0                           | 21.0012ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:38:13 [router.go:845] [D] | GET        | /basic/list/                             | 0                | notmatch   | 
+2015/04/27 17:39:17 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:39:17 [router.go:845] [D] | GET        | /basic/index/0                           | 22.0013ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:39:17 [router.go:845] [D] | GET        | /basic/list/                             | 1.0001ms         | notmatch   | 
+2015/04/27 17:41:42 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:41:42 [router.go:845] [D] | GET        | /basic/index/0                           | 29.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:41:42 [router.go:845] [D] | GET        | /basic/list/                             | 1ms              | notmatch   | 
+2015/04/27 17:43:11 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:43:11 [router.go:845] [D] | GET        | /basic/index/0                           | 30.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:43:11 [router.go:845] [D] | GET        | /basic/list/                             | 1ms              | notmatch   | 
+2015/04/27 17:49:08 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 17:49:08 [app.go:96] [I] http server Running on :80
+2015/04/27 17:49:11 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 17:49:11 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:49:11 [router.go:845] [D] | GET        | /basic/index/0                           | 31.0018ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:53:02 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 17:53:02 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:53:02 [router.go:845] [D] | GET        | /basic/index/0                           | 31.0018ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:53:23 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 17:53:23 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:53:23 [router.go:845] [D] | GET        | /basic/index/0                           | 27.0016ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:53:26 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 17:53:26 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:53:26 [router.go:845] [D] | GET        | /basic/index/0                           | 27.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 17:53:35 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 17:53:35 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 17:53:35 [router.go:845] [D] | GET        | /basic/index/0                           | 30.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 18:09:00 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 18:09:00 [app.go:96] [I] http server Running on :80
+2015/04/27 18:09:45 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 18:09:45 [app.go:96] [I] http server Running on :80
+2015/04/27 18:10:11 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 18:10:11 [app.go:96] [I] http server Running on :80
+2015/04/27 18:18:06 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 18:18:06 [app.go:96] [I] http server Running on :80
+2015/04/27 18:19:20 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 18:19:20 [app.go:96] [I] http server Running on :80
+2015/04/27 18:20:13 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 18:20:13 [app.go:96] [I] http server Running on :80
+2015/04/27 18:22:09 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 18:22:09 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 18:22:09 [router.go:845] [D] | GET        | /basic/index/0                           | 26.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 18:22:39 [router.go:876] [C] the request url is  /basic/post 
+2015/04/27 18:22:39 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:basic/post.tpl 
+2015/04/27 18:22:39 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/27 18:22:39 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/04/27 18:22:39 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/27 18:22:39 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/27 18:22:39 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/27 18:22:39 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/27 18:22:39 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/27 18:25:40 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 18:25:40 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 18:25:40 [router.go:845] [D] | GET        | /basic/index/0                           | 26.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 18:25:56 [router.go:876] [C] the request url is  /basic/post 
+2015/04/27 18:25:56 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:basic/post.tpl 
+2015/04/27 18:25:56 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/27 18:25:56 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/04/27 18:25:56 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/04/27 18:25:56 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/04/27 18:25:56 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/27 18:25:56 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/27 18:25:56 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/27 18:27:17 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 18:27:17 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 18:27:17 [router.go:845] [D] | GET        | /basic/index/0                           | 29.0016ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 18:27:30 [router.go:845] [D] | POST       | /basic/save                              | 1ms              | notmatch   | 
+2015/04/27 18:31:05 [router.go:845] [D] | POST       | /basic/save                              | 1.0001ms         | notmatch   | 
+2015/04/27 18:32:32 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 18:32:32 [app.go:96] [I] http server Running on :80
+2015/04/27 18:32:41 [log.go:108] [D] Basic/Save Info:&models.Basic{
+    Id: 0,
+    ParentId: 0,
+    Type: 0,
+    Name: 中国,
+    Value: 0,
+    Status: 0,
+    Deleted: 0,
+    Updator: 1,
+    Updated: 1430130761650,
+    Ip: 127.0.0.1,
+} 
+2015/04/27 18:33:02 [log.go:108] [D] Basic/Save Info:&models.Basic{
+    Id: 0,
+    ParentId: 0,
+    Type: 0,
+    Name: 中国,
+    Value: 0,
+    Status: 0,
+    Deleted: 0,
+    Updator: 1,
+    Updated: 1430130782155,
+    Ip: 127.0.0.1,
+} 
+2015/04/27 18:35:18 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/27 18:35:18 [app.go:96] [I] http server Running on :80
+2015/04/27 18:41:39 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 18:41:39 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 18:41:39 [router.go:845] [D] | GET        | /basic/index/0                           | 25.0014ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 18:41:41 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 18:41:41 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 18:41:41 [router.go:845] [D] | GET        | /basic/index/0                           | 32.0019ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 18:42:21 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 18:42:21 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 18:42:21 [router.go:845] [D] | GET        | /basic/index/0                           | 27.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 18:42:52 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 18:42:52 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 18:42:52 [router.go:845] [D] | GET        | /basic/index/0                           | 31.0018ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 18:44:00 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 18:44:00 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 18:44:00 [router.go:845] [D] | GET        | /basic/index/0                           | 30.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 18:44:50 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 18:44:50 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 18:44:50 [router.go:845] [D] | GET        | /basic/index/0                           | 32.0018ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 18:45:51 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 18:45:51 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 18:45:51 [router.go:845] [D] | GET        | /basic/index/0                           | 33.0019ms        | match      | /basic/index/:typeid                     | 
+2015/04/27 18:46:08 [log.go:108] [D] Basic/Index Info:0 
+2015/04/27 18:46:08 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/27 18:46:08 [router.go:845] [D] | GET        | /basic/index/0                           | 24.0014ms        | match      | /basic/index/:typeid                     | 
