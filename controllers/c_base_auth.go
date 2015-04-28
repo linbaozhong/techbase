@@ -38,6 +38,7 @@ func (this *Auth) Prepare() {
 	}
 
 	this.Data["index"] = ""
+	this.Data["account"] = this.currentUser
 
 	this.Layout = "_adminLayout.tpl"
 	this.LayoutSections = make(map[string]string)
@@ -45,5 +46,5 @@ func (this *Auth) Prepare() {
 }
 
 func (this *Auth) Finish() {
-	this.trace(this.Lang)
+
 }

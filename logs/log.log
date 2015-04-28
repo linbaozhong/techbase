@@ -2353,3 +2353,290 @@
 2015/04/27 22:30:22 [router.go:845] [D] | GET        | /basic/index/0                           | 87.005ms         | match      | /basic/index/:typeid                     | 
 2015/04/27 22:36:08 [log.go:108] [D] Basic/Index Info:zh-CN 
 2015/04/27 22:36:08 [router.go:845] [D] | GET        | /basic/index/2                           | 93.0053ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:06:56 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 10:07:04 [app.go:96] [I] http server Running on :80
+2015/04/28 10:07:05 [router.go:845] [D] | GET        | /                                        | 40.0023ms        | match      | /                                        | 
+2015/04/28 10:07:27 [log.go:108] [D] Accounts/Profile Info:zh-CN 
+2015/04/28 10:07:27 [router.go:845] [D] | GET        | /my/profile                              | 20.0011ms        | match      | /my/profile                              | 
+2015/04/28 10:07:30 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:07:30 [router.go:845] [D] | GET        | /basic/index/0                           | 17.001ms         | match      | /basic/index/:typeid                     | 
+2015/04/28 10:07:34 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:07:34 [router.go:845] [D] | GET        | /basic/index/2                           | 26.0014ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:10:10 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:10:10 [router.go:845] [D] | GET        | /basic/index/2                           | 27.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:10:38 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:10:38 [router.go:845] [D] | GET        | /basic/index/2                           | 26.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:11:35 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:11:35 [router.go:845] [D] | GET        | /basic/index/2                           | 26.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:11:49 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:11:49 [router.go:845] [D] | GET        | /basic/index/0                           | 27.0015ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:11:55 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:11:55 [router.go:845] [D] | GET        | /basic/index/3                           | 31.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:11:58 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:11:58 [router.go:845] [D] | GET        | /basic/index/2                           | 29.0016ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:12:52 [router.go:845] [D] | GET        | /ifr_status/                             | 2.0001ms         | notmatch   | 
+2015/04/28 10:13:25 [log.go:108] [D] template Execute err: template: basic/index.tpl:8:8: executing "basic/index.tpl" at <.typeid>: typeid is not a method but has arguments 
+2015/04/28 10:13:25 [router.go:876] [C] the request url is  /basic/index/2 
+2015/04/28 10:13:25 [router.go:877] [C] Handler crashed with error template: basic/index.tpl:8:8: executing "basic/index.tpl" at <.typeid>: typeid is not a method but has arguments 
+2015/04/28 10:13:25 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/28 10:13:25 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/04/28 10:13:25 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/28 10:13:25 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/28 10:13:25 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/28 10:18:07 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:18:07 [router.go:845] [D] | GET        | /basic/index/2                           | 157.009ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:18:11 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:18:11 [router.go:845] [D] | GET        | /basic/index/0                           | 83.0048ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:18:14 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:18:14 [router.go:845] [D] | GET        | /basic/index/3                           | 31.0018ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:18:17 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:18:17 [router.go:845] [D] | GET        | /basic/index/2                           | 29.0016ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:18:57 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:18:57 [router.go:845] [D] | GET        | /basic/index/2                           | 24.0014ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:18:59 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:18:59 [router.go:845] [D] | GET        | /basic/index/2                           | 23.0013ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:19:48 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:19:48 [router.go:845] [D] | GET        | /basic/index/2                           | 20.0011ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:21:17 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 10:21:17 [app.go:96] [I] http server Running on :80
+2015/04/28 10:24:31 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:24:31 [router.go:845] [D] | GET        | /basic/index/0                           | 28.0016ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:24:54 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:24:54 [router.go:845] [D] | GET        | /basic/index/2                           | 32.0019ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:25:23 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:25:23 [router.go:845] [D] | GET        | /basic/index/2                           | 29.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:25:33 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:25:33 [router.go:845] [D] | GET        | /basic/index/2                           | 31.0018ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:25:54 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:25:54 [router.go:845] [D] | GET        | /basic/index/2                           | 29.0017ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:26:43 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:26:43 [router.go:845] [D] | GET        | /basic/index/2                           | 34.0019ms        | match      | /basic/index/:typeid                     | 
+2015/04/28 10:42:19 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 10:42:20 [app.go:96] [I] http server Running on :80
+2015/04/28 10:42:31 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:42:31 [router.go:845] [D] | GET        | /basic/index/2                           | 34.002ms         | match      | /basic/index/:typeId                     | 
+2015/04/28 10:42:34 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:42:34 [router.go:845] [D] | GET        | /basic/index/2                           | 31.0018ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:42:37 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:42:37 [router.go:845] [D] | GET        | /basic/index/2                           | 31.0018ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:42:52 [router.go:845] [D] | GET        | /ifr_status/                             | 1ms              | notmatch   | 
+2015/04/28 10:43:33 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:43:33 [router.go:845] [D] | GET        | /basic/index/2                           | 28.0016ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:43:34 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:43:34 [router.go:845] [D] | GET        | /basic/index/2                           | 32.0019ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:44:21 [router.go:845] [D] | GET        | /ifr_status/                             | 1.0001ms         | notmatch   | 
+2015/04/28 10:44:30 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 10:44:30 [app.go:96] [I] http server Running on :80
+2015/04/28 10:44:48 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:44:48 [router.go:845] [D] | GET        | /basic/index/2                           | 26.0015ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:44:50 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:44:50 [router.go:845] [D] | GET        | /basic/index/2                           | 33.0019ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:44:52 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:44:52 [router.go:845] [D] | GET        | /basic/index/2                           | 25.0015ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:46:12 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:46:12 [router.go:845] [D] | GET        | /basic/index/2                           | 20.0011ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:46:23 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:46:23 [router.go:845] [D] | GET        | /basic/index/0                           | 32.0019ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:46:26 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:46:26 [router.go:845] [D] | GET        | /basic/index/2                           | 33.0019ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:46:59 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:46:59 [router.go:845] [D] | GET        | /basic/index/2                           | 29.0017ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:47:02 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:47:02 [router.go:845] [D] | GET        | /basic/index/4                           | 32.0018ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:47:36 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:47:36 [router.go:845] [D] | GET        | /basic/index/2                           | 30.0017ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:48:23 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 10:48:23 [app.go:96] [I] http server Running on :80
+2015/04/28 10:48:25 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:48:25 [router.go:845] [D] | GET        | /basic/index/2                           | 36.002ms         | match      | /basic/index/:typeId                     | 
+2015/04/28 10:48:36 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:48:36 [router.go:845] [D] | GET        | /basic/index/3                           | 27.0015ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:48:39 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:48:39 [router.go:845] [D] | GET        | /basic/index/0                           | 32.0018ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:48:42 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:48:42 [router.go:845] [D] | GET        | /basic/index/2                           | 32.0018ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:57:45 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:57:45 [router.go:845] [D] | GET        | /basic/index/2                           | 31.0018ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 10:57:48 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 10:57:48 [router.go:845] [D] | GET        | /basic/index/2                           | 33.0018ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:00:54 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 11:00:54 [router.go:845] [D] | GET        | /basic/index/2                           | 24.0014ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:01:10 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 11:01:10 [router.go:845] [D] | GET        | /basic/index/2                           | 21.0012ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:11:52 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 11:11:52 [router.go:845] [D] | GET        | /basic/index/2                           | 21.0012ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:12:11 [log.go:108] [D] Basic/Index Info:zh-CN 
+2015/04/28 11:12:11 [router.go:845] [D] | GET        | /basic/index/2                           | 35.002ms         | match      | /basic/index/:typeId                     | 
+2015/04/28 11:13:32 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 11:13:33 [app.go:96] [I] http server Running on :80
+2015/04/28 11:14:21 [router.go:845] [D] | GET        | /ifr_status/                             | 2.0001ms         | notmatch   | 
+2015/04/28 11:16:42 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 11:16:42 [app.go:96] [I] http server Running on :80
+2015/04/28 11:16:51 [router.go:845] [D] | GET        | /basic/index/2                           | 30.0017ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:17:02 [log.go:108] [D] Basic/Save Info:1,  invalid 
+2015/04/28 11:18:09 [log.go:108] [D] Basic/Save Info:1,  invalid 
+2015/04/28 11:19:03 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 11:19:03 [app.go:96] [I] http server Running on :80
+2015/04/28 11:19:07 [router.go:845] [D] | GET        | /basic/index/2                           | 38.0022ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:28:14 [router.go:845] [D] | GET        | /basic/index/2                           | 32.0018ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:29:03 [log.go:108] [D] Basic/Save Info:1,  invalid 
+2015/04/28 11:29:12 [log.go:108] [D] Basic/Save Info:1,  invalid 
+2015/04/28 11:29:22 [log.go:108] [D] Basic/Save Info:1,  invalid 
+2015/04/28 11:29:31 [log.go:108] [D] Basic/Save Info:1,  invalid 
+2015/04/28 11:29:42 [router.go:845] [D] | GET        | /basic/index/2                           | 32.0019ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:30:58 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 11:30:58 [app.go:96] [I] http server Running on :80
+2015/04/28 11:31:03 [router.go:845] [D] | GET        | /basic/index/0                           | 37.0021ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:31:09 [router.go:845] [D] | GET        | /basic/index/2                           | 34.0019ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:31:49 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 11:31:49 [app.go:96] [I] http server Running on :80
+2015/04/28 11:33:26 [router.go:845] [D] | GET        | /basic/index/2                           | 37.0021ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:33:36 [log.go:108] [D] Basic/Save Info:1,  invalid 
+2015/04/28 11:35:48 [router.go:845] [D] | GET        | /basic/index/2                           | 36.0021ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:36:04 [router.go:845] [D] | GET        | /basic/index/3                           | 33.0019ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:36:19 [router.go:845] [D] | GET        | /basic/index/2                           | 31.0018ms        | match      | /basic/index/:typeId                     | 
+2015/04/28 11:36:47 [log.go:108] [D] Basic/Save Info:1,  invalid 
+2015/04/28 11:37:49 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 11:37:49 [app.go:96] [I] http server Running on :80
+2015/04/28 11:40:33 [router.go:845] [D] | GET        | /my/profile                              | 30.0017ms        | match      | /my/profile                              | 
+2015/04/28 11:43:25 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 11:43:25 [app.go:96] [I] http server Running on :80
+2015/04/28 11:44:21 [router.go:845] [D] | GET        | /ifr_status/                             | 2.0001ms         | notmatch   | 
+2015/04/28 11:47:37 [router.go:845] [D] | GET        | /my/profile                              | 30.0017ms        | match      | /my/profile                              | 
+2015/04/28 11:48:00 [router.go:845] [D] | GET        | /my/profile                              | 34.0019ms        | match      | /my/profile                              | 
+2015/04/28 11:48:47 [router.go:845] [D] | GET        | /my/profile                              | 31.0018ms        | match      | /my/profile                              | 
+2015/04/28 11:50:22 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 11:50:22 [app.go:96] [I] http server Running on :80
+2015/04/28 11:50:58 [router.go:845] [D] | GET        | /my/profile                              | 28.0016ms        | match      | /my/profile                              | 
+2015/04/28 12:41:42 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 12:41:42 [app.go:96] [I] http server Running on :80
+2015/04/28 12:41:56 [router.go:845] [D] | GET        | /my/company                              | 2.0001ms         | notmatch   | 
+2015/04/28 12:42:01 [router.go:845] [D] | GET        | /my/company                              | 1.0001ms         | notmatch   | 
+2015/04/28 12:43:31 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 12:43:31 [app.go:96] [I] http server Running on :80
+2015/04/28 12:43:44 [router.go:845] [D] | GET        | /my/company                              | 30.0017ms        | match      | /my/company                              | 
+2015/04/28 12:46:56 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 12:46:56 [app.go:96] [I] http server Running on :80
+2015/04/28 12:48:12 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 12:48:12 [app.go:96] [I] http server Running on :80
+2015/04/28 12:52:56 [router.go:845] [D] | GET        | /my/company                              | 25.0014ms        | match      | /my/company                              | 
+2015/04/28 12:53:06 [router.go:845] [D] | GET        | /my/company                              | 30.0017ms        | match      | /my/company                              | 
+2015/04/28 12:53:40 [router.go:845] [D] | GET        | /my/company                              | 25.0014ms        | match      | /my/company                              | 
+2015/04/28 12:54:34 [log.go:108] [D] template Execute err: template: company/index.tpl:8:8: executing "company/index.tpl" at <eq .typeid 2>: error calling eq: invalid type for comparison 
+2015/04/28 12:54:34 [router.go:876] [C] the request url is  /my/company 
+2015/04/28 12:54:34 [router.go:877] [C] Handler crashed with error template: company/index.tpl:8:8: executing "company/index.tpl" at <eq .typeid 2>: error calling eq: invalid type for comparison 
+2015/04/28 12:54:34 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/04/28 12:54:34 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/04/28 12:54:34 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/04/28 12:54:34 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/04/28 12:54:34 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/04/28 12:55:11 [router.go:845] [D] | GET        | /my/company                              | 37.0021ms        | match      | /my/company                              | 
+2015/04/28 12:57:51 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 12:57:51 [app.go:96] [I] http server Running on :80
+2015/04/28 12:57:51 [router.go:845] [D] | GET        | /my/company                              | 37.0021ms        | match      | /my/company                              | 
+2015/04/28 13:00:01 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 13:00:01 [app.go:96] [I] http server Running on :80
+2015/04/28 13:01:58 [router.go:845] [D] | GET        | /my/company                              | 39.0022ms        | match      | /my/company                              | 
+2015/04/28 13:02:34 [router.go:845] [D] | GET        | /my/company                              | 33.0019ms        | match      | /my/company                              | 
+2015/04/28 13:05:42 [router.go:845] [D] | GET        | /my/company                              | 25.0014ms        | match      | /my/company                              | 
+2015/04/28 13:08:43 [router.go:845] [D] | GET        | /my/company                              | 28.0016ms        | match      | /my/company                              | 
+2015/04/28 13:08:57 [router.go:845] [D] | GET        | /my/company                              | 36.002ms         | match      | /my/company                              | 
+2015/04/28 13:10:54 [router.go:845] [D] | GET        | /my/company                              | 32.0018ms        | match      | /my/company                              | 
+2015/04/28 13:11:01 [router.go:845] [D] | GET        | /my/company                              | 37.0021ms        | match      | /my/company                              | 
+2015/04/28 13:11:48 [router.go:845] [D] | GET        | /my/company                              | 26.0015ms        | match      | /my/company                              | 
+2015/04/28 13:11:58 [router.go:845] [D] | GET        | /my/profile                              | 53.003ms         | match      | /my/profile                              | 
+2015/04/28 13:13:10 [router.go:845] [D] | GET        | /my/profile                              | 28.0016ms        | match      | /my/profile                              | 
+2015/04/28 13:13:18 [router.go:845] [D] | GET        | /my/company                              | 33.0018ms        | match      | /my/company                              | 
+2015/04/28 14:42:36 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 14:42:37 [app.go:96] [I] http server Running on :80
+2015/04/28 14:42:37 [router.go:845] [D] | GET        | /my/company                              | 42.0024ms        | match      | /my/company                              | 
+2015/04/28 14:43:25 [router.go:845] [D] | GET        | /my/company                              | 41.0024ms        | match      | /my/company                              | 
+2015/04/28 14:48:33 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 14:48:33 [app.go:96] [I] http server Running on :80
+2015/04/28 14:49:49 [router.go:845] [D] | GET        | /my/company                              | 45.0026ms        | match      | /my/company                              | 
+2015/04/28 14:50:18 [router.go:845] [D] | GET        | /my/company                              | 40.0023ms        | match      | /my/company                              | 
+2015/04/28 14:50:32 [router.go:845] [D] | GET        | /my/company                              | 40.0023ms        | match      | /my/company                              | 
+2015/04/28 14:51:01 [router.go:845] [D] | GET        | /my/company                              | 36.002ms         | match      | /my/company                              | 
+2015/04/28 14:51:05 [router.go:845] [D] | GET        | /my/company/create                       | 1ms              | notmatch   | 
+2015/04/28 14:52:18 [router.go:845] [D] | GET        | /my/company                              | 37.0021ms        | match      | /my/company                              | 
+2015/04/28 14:52:21 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create/*                        | 
+2015/04/28 14:53:09 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 14:53:09 [app.go:96] [I] http server Running on :80
+2015/04/28 14:53:09 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/28 14:59:42 [router.go:845] [D] | GET        | /my/company                              | 38.0022ms        | match      | /my/company                              | 
+2015/04/28 15:00:31 [router.go:845] [D] | GET        | /my/company                              | 37.0021ms        | match      | /my/company                              | 
+2015/04/28 15:02:14 [router.go:845] [D] | GET        | /my/company                              | 36.0021ms        | match      | /my/company                              | 
+2015/04/28 15:03:31 [router.go:845] [D] | GET        | /my/company                              | 41.0023ms        | match      | /my/company                              | 
+2015/04/28 15:08:46 [router.go:845] [D] | GET        | /my/company                              | 32.0018ms        | match      | /my/company                              | 
+2015/04/28 15:08:48 [router.go:845] [D] | GET        | /my/company                              | 40.0023ms        | match      | /my/company                              | 
+2015/04/28 15:11:30 [router.go:845] [D] | GET        | /my/company                              | 37.0021ms        | match      | /my/company                              | 
+2015/04/28 15:13:57 [router.go:845] [D] | GET        | /my/company                              | 25.0014ms        | match      | /my/company                              | 
+2015/04/28 15:14:28 [router.go:845] [D] | GET        | /my/company                              | 32.0019ms        | match      | /my/company                              | 
+2015/04/28 15:15:51 [router.go:845] [D] | GET        | /my/company                              | 35.002ms         | match      | /my/company                              | 
+2015/04/28 15:16:36 [router.go:845] [D] | GET        | /my/company                              | 41.0024ms        | match      | /my/company                              | 
+2015/04/28 15:16:38 [router.go:845] [D] | GET        | /my/company                              | 35.002ms         | match      | /my/company                              | 
+2015/04/28 15:17:28 [router.go:845] [D] | GET        | /my/company                              | 30.0017ms        | match      | /my/company                              | 
+2015/04/28 16:17:53 [router.go:845] [D] | GET        | /my/company                              | 37.0021ms        | match      | /my/company                              | 
+2015/04/28 16:20:23 [router.go:845] [D] | GET        | /                                        | 31.0018ms        | match      | /                                        | 
+2015/04/28 16:20:41 [router.go:845] [D] | GET        | /                                        | 34.002ms         | match      | /                                        | 
+2015/04/28 16:21:03 [router.go:845] [D] | GET        | /my/company                              | 40.0023ms        | match      | /my/company                              | 
+2015/04/28 16:21:05 [router.go:845] [D] | GET        | /                                        | 39.0022ms        | match      | /                                        | 
+2015/04/28 16:21:08 [router.go:845] [D] | GET        | /                                        | 41.0023ms        | match      | /                                        | 
+2015/04/28 16:23:01 [router.go:845] [D] | GET        | /my/company                              | 39.0022ms        | match      | /my/company                              | 
+2015/04/28 16:25:21 [router.go:845] [D] | GET        | /my/company                              | 31.0018ms        | match      | /my/company                              | 
+2015/04/28 16:26:09 [router.go:845] [D] | GET        | /my/company                              | 39.0022ms        | match      | /my/company                              | 
+2015/04/28 16:26:38 [router.go:845] [D] | GET        | /my/company                              | 40.0023ms        | match      | /my/company                              | 
+2015/04/28 16:28:02 [router.go:845] [D] | GET        | /my/company                              | 39.0022ms        | match      | /my/company                              | 
+2015/04/28 16:28:04 [router.go:845] [D] | GET        | /my/company                              | 38.0022ms        | match      | /my/company                              | 
+2015/04/28 16:28:11 [router.go:845] [D] | GET        | /my/company                              | 39.0022ms        | match      | /my/company                              | 
+2015/04/28 16:30:22 [router.go:845] [D] | GET        | /my/company                              | 38.0022ms        | match      | /my/company                              | 
+2015/04/28 16:33:12 [router.go:845] [D] | GET        | /my/company                              | 36.002ms         | match      | /my/company                              | 
+2015/04/28 16:34:25 [router.go:845] [D] | GET        | /my/company                              | 35.002ms         | match      | /my/company                              | 
+2015/04/28 16:34:45 [router.go:845] [D] | GET        | /my/company                              | 40.0023ms        | match      | /my/company                              | 
+2015/04/28 16:35:44 [router.go:845] [D] | GET        | /my/company                              | 39.0023ms        | match      | /my/company                              | 
+2015/04/28 17:10:29 [router.go:845] [D] | GET        | /my/company                              | 39.0022ms        | match      | /my/company                              | 
+2015/04/28 17:11:19 [router.go:845] [D] | GET        | /my/company                              | 40.0022ms        | match      | /my/company                              | 
+2015/04/28 17:14:03 [router.go:845] [D] | GET        | /my/company                              | 40.0023ms        | match      | /my/company                              | 
+2015/04/28 17:14:21 [router.go:845] [D] | GET        | /my/company                              | 38.0022ms        | match      | /my/company                              | 
+2015/04/28 17:16:33 [router.go:845] [D] | GET        | /my/company                              | 21.0012ms        | match      | /my/company                              | 
+2015/04/28 17:16:49 [router.go:845] [D] | GET        | /my/company                              | 40.0023ms        | match      | /my/company                              | 
+2015/04/28 17:17:14 [router.go:845] [D] | GET        | /my/company                              | 36.002ms         | match      | /my/company                              | 
+2015/04/28 17:17:54 [router.go:845] [D] | GET        | /my/company                              | 40.0023ms        | match      | /my/company                              | 
+2015/04/28 17:19:36 [router.go:845] [D] | GET        | /my/company                              | 41.0023ms        | match      | /my/company                              | 
+2015/04/28 17:21:11 [router.go:845] [D] | GET        | /my/company                              | 41.0024ms        | match      | /my/company                              | 
+2015/04/28 17:21:42 [router.go:845] [D] | GET        | /my/company                              | 35.002ms         | match      | /my/company                              | 
+2015/04/28 17:22:25 [router.go:845] [D] | GET        | /company/create                          | 29.0016ms        | match      | /company/create                          | 
+2015/04/28 17:23:48 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 17:23:48 [app.go:96] [I] http server Running on :80
+2015/04/28 17:23:59 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 17:23:59 [app.go:96] [I] http server Running on :80
+2015/04/28 17:27:25 [router.go:845] [D] | GET        | /company/create                          | 56.0032ms        | match      | /company/create                          | 
+2015/04/28 17:28:35 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/28 17:30:22 [router.go:845] [D] | GET        | /company/create                          | 29.0016ms        | match      | /company/create                          | 
+2015/04/28 17:31:00 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/28 17:32:12 [router.go:845] [D] | GET        | /company/create                          | 25.0014ms        | match      | /company/create                          | 
+2015/04/28 17:32:37 [router.go:845] [D] | GET        | /company/create                          | 29.0016ms        | match      | /company/create                          | 
+2015/04/28 17:34:29 [router.go:845] [D] | GET        | /company/create                          | 21.0012ms        | match      | /company/create                          | 
+2015/04/28 17:35:02 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/28 17:38:23 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/28 17:38:36 [router.go:845] [D] | GET        | /company/create                          | 25.0014ms        | match      | /company/create                          | 
+2015/04/28 17:39:12 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/28 17:39:34 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/28 17:39:54 [router.go:845] [D] | GET        | /company/create                          | 29.0016ms        | match      | /company/create                          | 
+2015/04/28 17:41:30 [router.go:845] [D] | GET        | /company/create                          | 31.0018ms        | match      | /company/create                          | 
+2015/04/28 17:43:48 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/28 17:44:07 [router.go:845] [D] | GET        | /company/create                          | 14.0008ms        | match      | /company/create                          | 
+2015/04/28 17:46:22 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/28 17:49:03 [router.go:845] [D] | GET        | /company/create                          | 29.0017ms        | match      | /company/create                          | 
+2015/04/28 17:51:34 [router.go:845] [D] | GET        | /company/create                          | 29.0016ms        | match      | /company/create                          | 
+2015/04/28 17:52:13 [router.go:845] [D] | GET        | /company/create                          | 26.0014ms        | match      | /company/create                          | 
+2015/04/28 17:53:07 [router.go:845] [D] | GET        | /company/create                          | 31.0018ms        | match      | /company/create                          | 
+2015/04/28 17:53:23 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/28 17:54:40 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/28 17:55:00 [router.go:845] [D] | GET        | /company/create                          | 26.0015ms        | match      | /company/create                          | 
+2015/04/28 17:58:00 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/28 17:59:53 [router.go:845] [D] | GET        | /company/create                          | 16.001ms         | match      | /company/create                          | 
+2015/04/28 18:00:06 [router.go:845] [D] | GET        | /company/create                          | 29.0017ms        | match      | /company/create                          | 
+2015/04/28 18:01:02 [router.go:845] [D] | GET        | /company/create                          | 24.0014ms        | match      | /company/create                          | 
+2015/04/28 18:03:25 [router.go:845] [D] | GET        | /company/create                          | 29.0017ms        | match      | /company/create                          | 
+2015/04/28 18:04:03 [router.go:845] [D] | GET        | /company/create                          | 26.0014ms        | match      | /company/create                          | 

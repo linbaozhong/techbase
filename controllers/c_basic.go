@@ -47,10 +47,12 @@ func (this *Basic) Index() {
 
 // 列表
 func (this *Basic) List() {
-	typeid, _ := this.GetInt(":typeid")
+	typeId, _ := this.GetInt("typeId")
+	parentId, _ := this.GetInt64("parentId")
 
 	basic := new(models.Basic)
-	basic.Type = typeid
+	basic.Type = typeId
+	basic.ParentId = parentId
 
 	bs, _ := basic.List()
 
@@ -71,7 +73,7 @@ func (this *Basic) Save() {
 	if _, err := basic.Save(); err == nil {
 		this.renderJson(utils.JsonData(true, "", basic))
 	} else {
-		this.renderJson(utils.JsonData(false, "", err.Error()))
+		this.renderJson(utils.JsonMessage(false, "", err.Error()))
 	}
 
 }
@@ -84,7 +86,7 @@ func (this *Basic) options(typeid int) string {
 
 	//遍历
 	_opts := make([]string, 0)
-	_opts = append(_opts, "<select name=\"parentId\">")
+	_opts = append(_opts, "<select id=\"selectParentId\">")
 	for _, item := range bs {
 		_opts = append(_opts, fmt.Sprintf("<option value=\"%d\">%s</option>", item.Value, item.Name))
 	}

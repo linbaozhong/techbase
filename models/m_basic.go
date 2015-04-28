@@ -20,7 +20,7 @@ type Basic struct {
 func (this *Basic) List() ([]Basic, error) {
 	bs := make([]Basic, 0)
 
-	err := db.Where("type=? and deleted=?", this.Type, Undelete).Find(&bs)
+	err := db.Where("parentid=? and type=? and deleted=?", this.ParentId, this.Type, Undelete).Find(&bs)
 
 	return bs, err
 }
@@ -29,6 +29,6 @@ func (this *Basic) Save() (int64, error) {
 	if this.Id == 0 {
 		return db.Insert(this)
 	} else {
-		return db.Id(this.Id).Cols("parentid", "name").Update(this)
+		return db.Id(this.Id).Update(this)
 	}
 }

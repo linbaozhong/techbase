@@ -54,6 +54,7 @@
 			$.post('/my/save',_form.serialize(),function(json){
 				console.log(json);
 				if(json.ok){
+					$('#avatar .nickname').text(json.data.nickName);
 					_form.children('.alert').removeClass('alert-danger').addClass('alert-success').addClass('visible').text('hi,我已经为你保存好了,不用谢了…… :)');
 				}else{
 					var _errors=[];

@@ -28,13 +28,19 @@ ul{
 /*修正bootstrap*/
 .form-control{
 	font-size: 16px;
+	border-radius:initial;
 }
 .btn{
 	font-size:18px;
+	border-radius:initial;
 }
 table .btn{
 	padding-top:0;
 	padding-bottom: 0;
+}
+.media-heading{
+	font-weight: bold;
+	margin-right:3em;
 }
 /*导航条*/
 

@@ -52,7 +52,10 @@ func (this *Accounts) Post() {
 	// 更新昵称
 	this.extend(account)
 
-	if err, errs := account.Post(); err != nil {
+	if err, errs := account.Post(); err == nil {
+		this.cookie("nickname", utils.UrlEncode(account.NickName))
+		this.currentUser.Name = account.NickName
+	} else {
 		this.renderJson(utils.JsonData(false, "", errs))
 		return
 	}
@@ -61,7 +64,7 @@ func (this *Accounts) Post() {
 
 	err, errs := profile.Post()
 	if err == nil {
-		this.renderJson(utils.JsonData(true, "", ""))
+		this.renderJson(utils.JsonData(true, "", account))
 	} else {
 		this.renderJson(utils.JsonData(false, "", errs))
 	}

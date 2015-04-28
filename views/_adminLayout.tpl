@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-		<title>{{i18n .Lang "app title"}}</title>
+		<title>{{i18n .Lang "app title"}} {{.subTitle}}</title>
 		<meta property="qc:admins" content="6050272677640117256375" />
 		<link rel="stylesheet" href="/static/css/pinghei.css">
 		<link rel="shortcut icon" href="/static/img/favicon.ico" />
@@ -28,13 +28,15 @@
 			<div class="container">
 				<nav style="height:65px;">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="/" target="_blank" style="padding:0;">
+						<a class="navbar-brand" href="/" style="padding:0;">
 							<img src="/static/img/logo001.png" class="img-responsive" alt="logo">
 						</a>
 					</div>
 					<ul class="nav navbar-nav" style="margin-left:40px;">
+						{{if lt .account.Role 2 }}
 						<li class="menu {{if eq .index "index"}} active {{end}}" data-rel = "submenu-1"><a href="/">基础数据</a>
 						</li>
+						{{end}}
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li id="avatar" class="menu snow-profile" data-rel = "submenu-0">
