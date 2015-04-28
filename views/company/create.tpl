@@ -8,17 +8,21 @@
 	
 			<!--数据在这里-->
 			<hr />
-			<form class="form-horizontal">
-				<div class="alert" role="alert">hi</div>
-				<div class="row">
-					<div class="col-md-3">
-						<div class="pull-right" style="width:84px;">
-							<img src="" alt="" style="width:84px;height:84px;" />
-							<br />
-							<button type="submit" class="btn btn-primary col-sm-12">上传</button>
-						</div>
-					</div>	
-					<div class="col-md-9">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-9"></div>
+			</div>
+			<div class="alert" role="alert">hi</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="pull-right" style="width:84px;">
+						<img src="" alt="" style="width:84px;height:84px;" />
+						<br />
+						<button type="submit" class="btn btn-primary col-sm-12">上传</button>
+					</div>
+				</div>	
+				<div class="col-md-9">
+					<form class="form-horizontal">
 						<div class="form-group">
 							<label for="inputNickname" class="col-sm-3 control-label">公司简称</label>
 							<div class="col-sm-9">
@@ -85,10 +89,11 @@
 								<button type="submit" class="btn btn-primary col-sm-12">保存</button>
 							</div>
 						</div>
+					</form>
 						
-					</div>
 				</div>
-			</form>
+			</div>
+
 		</div>
 		<div class="col-md-1">
 

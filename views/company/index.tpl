@@ -4,7 +4,8 @@
 
 		</div>
 		<div class="col-md-10">
-			<h3>{{.subTitle}}</h3><a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-37px;" href="/company/create">创建公司</a>
+			<h3>{{.subTitle}}</h3>
+			<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-20px;" href="/company/create"><i class="fa fa-plus-circle"></i>&nbsp; 创建公司</a>
 	
 			<!--数据在这里-->
 			<div class="" id="snow-list" style="margin-top: 30px;">
