@@ -18,7 +18,7 @@ jQuery弹窗插件 By 哈利蔺特
 				close: 'X',
 				width: self.width(),
 				height: height,
-				speed: 600
+				speed: 200
 			},
 			opts = $.extend(true, defaults, option),
 			// 最外层遮罩

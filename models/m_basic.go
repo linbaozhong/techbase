@@ -32,3 +32,7 @@ func (this *Basic) Save() (int64, error) {
 		return db.Id(this.Id).Update(this)
 	}
 }
+
+func (this *Basic) MaxValue() (bool, error) {
+	return db.Where("type=? and parentid=? and deleted=?", this.Type, this.ParentId, Undelete).Limit(1).Desc("value").Get(this)
+}

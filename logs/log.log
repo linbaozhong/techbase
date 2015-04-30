@@ -2640,3 +2640,1057 @@
 2015/04/28 18:01:02 [router.go:845] [D] | GET        | /company/create                          | 24.0014ms        | match      | /company/create                          | 
 2015/04/28 18:03:25 [router.go:845] [D] | GET        | /company/create                          | 29.0017ms        | match      | /company/create                          | 
 2015/04/28 18:04:03 [router.go:845] [D] | GET        | /company/create                          | 26.0014ms        | match      | /company/create                          | 
+2015/04/29 10:28:21 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 10:28:25 [app.go:96] [I] http server Running on :80
+2015/04/29 10:31:25 [router.go:845] [D] | GET        | /                                        | 23.0013ms        | match      | /                                        | 
+2015/04/29 10:32:25 [router.go:845] [D] | GET        | /my/company                              | 66.0038ms        | match      | /my/company                              | 
+2015/04/29 10:32:27 [router.go:845] [D] | GET        | /company/create                          | 23.0013ms        | match      | /company/create                          | 
+2015/04/29 10:33:26 [router.go:845] [D] | GET        | /company/create                          | 17.001ms         | match      | /company/create                          | 
+2015/04/29 10:33:47 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/29 10:36:54 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/29 10:43:03 [router.go:845] [D] | GET        | /ifr_status/                             | 1.0001ms         | notmatch   | 
+2015/04/29 10:44:34 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/29 10:52:10 [router.go:845] [D] | GET        | /company/create                          | 20.0011ms        | match      | /company/create                          | 
+2015/04/29 10:52:14 [router.go:845] [D] | GET        | /company/create                          | 54.0031ms        | match      | /company/create                          | 
+2015/04/29 10:52:32 [router.go:845] [D] | GET        | /company/create                          | 29.0016ms        | match      | /company/create                          | 
+2015/04/29 10:54:11 [router.go:845] [D] | GET        | /company/create                          | 58.0033ms        | match      | /company/create                          | 
+2015/04/29 10:54:41 [router.go:845] [D] | GET        | /company/create                          | 29.0016ms        | match      | /company/create                          | 
+2015/04/29 10:54:55 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/29 10:55:49 [router.go:845] [D] | GET        | /company/create                          | 50.0029ms        | match      | /company/create                          | 
+2015/04/29 10:56:39 [router.go:845] [D] | GET        | /company/create                          | 31.0018ms        | match      | /company/create                          | 
+2015/04/29 10:56:48 [router.go:845] [D] | GET        | /company/create                          | 29.0016ms        | match      | /company/create                          | 
+2015/04/29 10:56:56 [router.go:845] [D] | GET        | /company/create                          | 16.0009ms        | match      | /company/create                          | 
+2015/04/29 10:57:07 [router.go:845] [D] | GET        | /company/create                          | 27.0016ms        | match      | /company/create                          | 
+2015/04/29 10:57:50 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/29 10:58:59 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/29 10:59:37 [router.go:845] [D] | GET        | /company/create                          | 23.0013ms        | match      | /company/create                          | 
+2015/04/29 11:00:04 [router.go:845] [D] | GET        | /company/create                          | 24.0014ms        | match      | /company/create                          | 
+2015/04/29 11:00:28 [router.go:845] [D] | GET        | /company/create                          | 29.0016ms        | match      | /company/create                          | 
+2015/04/29 11:01:42 [router.go:845] [D] | GET        | /company/create                          | 29.0016ms        | match      | /company/create                          | 
+2015/04/29 11:01:43 [router.go:845] [D] | GET        | /                                        | 42.0024ms        | match      | /                                        | 
+2015/04/29 11:05:12 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/29 11:07:47 [router.go:845] [D] | GET        | /my/profile                              | 58.0033ms        | match      | /my/profile                              | 
+2015/04/29 11:07:54 [router.go:845] [D] | GET        | /basic/index/0                           | 36.0021ms        | match      | /basic/index/:typeId                     | 
+2015/04/29 11:07:57 [router.go:845] [D] | GET        | /basic/index/2                           | 60.0035ms        | match      | /basic/index/:typeId                     | 
+2015/04/29 11:08:00 [router.go:845] [D] | GET        | /basic/index/3                           | 31.0018ms        | match      | /basic/index/:typeId                     | 
+2015/04/29 11:08:08 [router.go:845] [D] | GET        | /my/company                              | 60.0034ms        | match      | /my/company                              | 
+2015/04/29 11:08:30 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/29 11:10:18 [router.go:845] [D] | GET        | /company/create                          | 20.0012ms        | match      | /company/create                          | 
+2015/04/29 11:10:53 [router.go:845] [D] | GET        | /company/create                          | 31.0018ms        | match      | /company/create                          | 
+2015/04/29 11:11:10 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/29 11:11:27 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/29 11:11:38 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/29 11:12:03 [router.go:845] [D] | GET        | /my/company                              | 40.0023ms        | match      | /my/company                              | 
+2015/04/29 11:12:04 [router.go:845] [D] | GET        | /company/create                          | 18.001ms         | match      | /company/create                          | 
+2015/04/29 11:13:03 [router.go:845] [D] | GET        | /ifr_status/                             | 1ms              | notmatch   | 
+2015/04/29 11:14:10 [router.go:845] [D] | GET        | /company/create                          | 18.001ms         | match      | /company/create                          | 
+2015/04/29 11:15:28 [router.go:845] [D] | GET        | /company/create                          | 24.0014ms        | match      | /company/create                          | 
+2015/04/29 11:15:56 [router.go:845] [D] | GET        | /company/create                          | 74.0042ms        | match      | /company/create                          | 
+2015/04/29 11:18:17 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/29 11:19:39 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/29 11:20:36 [router.go:845] [D] | GET        | /company/create                          | 29.0017ms        | match      | /company/create                          | 
+2015/04/29 11:21:22 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/29 11:21:42 [router.go:845] [D] | GET        | /company/create                          | 27.0016ms        | match      | /company/create                          | 
+2015/04/29 11:23:00 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/29 11:26:54 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/29 11:27:00 [router.go:845] [D] | GET        | /company/create                          | 31.0018ms        | match      | /company/create                          | 
+2015/04/29 11:31:39 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/29 11:34:54 [router.go:845] [D] | GET        | /company/create                          | 25.0014ms        | match      | /company/create                          | 
+2015/04/29 11:35:12 [router.go:845] [D] | GET        | /company/create                          | 24.0013ms        | match      | /company/create                          | 
+2015/04/29 11:35:22 [router.go:845] [D] | GET        | /company/create                          | 23.0014ms        | match      | /company/create                          | 
+2015/04/29 11:35:44 [router.go:845] [D] | GET        | /company/create                          | 34.0019ms        | match      | /company/create                          | 
+2015/04/29 11:36:41 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/29 11:39:48 [router.go:845] [D] | GET        | /company/create                          | 30.0018ms        | match      | /company/create                          | 
+2015/04/29 11:40:30 [router.go:845] [D] | GET        | /company/create                          | 31.0018ms        | match      | /company/create                          | 
+2015/04/29 11:43:03 [router.go:845] [D] | GET        | /ifr_status/                             | 1.0001ms         | notmatch   | 
+2015/04/29 11:43:08 [router.go:845] [D] | GET        | /company/create                          | 29.0016ms        | match      | /company/create                          | 
+2015/04/29 11:43:21 [router.go:845] [D] | GET        | /                                        | 36.002ms         | match      | /                                        | 
+2015/04/29 11:44:21 [router.go:845] [D] | GET        | /my/company                              | 41.0024ms        | match      | /my/company                              | 
+2015/04/29 11:44:22 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/29 12:01:28 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 12:01:31 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 12:01:35 [app.go:96] [I] http server Running on :80
+2015/04/29 12:01:43 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 12:01:43 [app.go:96] [I] http server Running on :80
+2015/04/29 12:01:48 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 12:01:48 [app.go:96] [I] http server Running on :80
+2015/04/29 12:10:37 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 12:10:38 [app.go:96] [I] http server Running on :80
+2015/04/29 12:30:00 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 12:30:00 [app.go:96] [I] http server Running on :80
+2015/04/29 12:30:05 [log.go:108] [D] Company/Create Info:map[string]string{ } 
+2015/04/29 12:30:05 [router.go:845] [D] | GET        | /company/create                          | 55.0032ms        | match      | /company/create                          | 
+2015/04/29 12:30:14 [log.go:108] [D] Company/Create Info:map[string]string{ :splat: 23, 0: 23 } 
+2015/04/29 12:30:14 [router.go:845] [D] | GET        | /company/create/23                       | 36.002ms         | match      | /company/create/*                        | 
+2015/04/29 12:30:43 [log.go:108] [D] Company/Create Info:map[string]string{ :splat: 23/24, 0: 23, 1: 24 } 
+2015/04/29 12:30:43 [router.go:845] [D] | GET        | /company/create/23/24                    | 60.0035ms        | match      | /company/create/*                        | 
+2015/04/29 12:31:34 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 12:31:34 [app.go:96] [I] http server Running on :80
+2015/04/29 12:31:34 [log.go:108] [D] Company/Create Info:23 
+2015/04/29 12:31:34 [router.go:845] [D] | GET        | /company/create/23/24                    | 35.002ms         | match      | /company/create/*                        | 
+2015/04/29 12:35:52 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 12:35:52 [app.go:96] [I] http server Running on :80
+2015/04/29 12:35:55 [log.go:108] [D] Company/Create Info:23,  invalid 
+2015/04/29 12:35:55 [router.go:845] [D] | GET        | /company/create/23/24                    | 55.0032ms        | match      | /company/create/*                        | 
+2015/04/29 12:37:34 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 12:37:34 [app.go:96] [I] http server Running on :80
+2015/04/29 15:39:21 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 15:39:21 [app.go:96] [I] http server Running on :80
+2015/04/29 15:39:30 [router.go:845] [D] | GET        | /company/create/23/24                    | 52.003ms         | match      | /company/create/*                        | 
+2015/04/29 15:41:04 [router.go:845] [D] | GET        | /company/create/23/24                    | 31.0018ms        | match      | /company/create/*                        | 
+2015/04/29 15:41:04 [router.go:845] [D] | GET        | /company/company/23                      | 1ms              | notmatch   | 
+2015/04/29 15:41:56 [router.go:845] [D] | GET        | /company/create/23/24                    | 26.0015ms        | match      | /company/create/*                        | 
+2015/04/29 15:41:57 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 14.0008ms        | match      | /company/getcompany/*                    | 
+2015/04/29 15:52:34 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 15:52:34 [app.go:96] [I] http server Running on :80
+2015/04/29 15:54:01 [router.go:845] [D] | GET        | /company/create/23/24                    | 60.0035ms        | match      | /company/create/*                        | 
+2015/04/29 15:54:01 [router.go:845] [D] | GET        | /company/GetContact/23                   | 19.0011ms        | match      | /company/getcontact/*                    | 
+2015/04/29 15:54:01 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 25.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/29 15:54:35 [router.go:845] [D] | GET        | /company/create/23/24                    | 34.0019ms        | match      | /company/create/*                        | 
+2015/04/29 15:54:35 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 15.0008ms        | match      | /company/getcompany/*                    | 
+2015/04/29 15:54:35 [router.go:845] [D] | GET        | /company/GetContact/23                   | 18.001ms         | match      | /company/getcontact/*                    | 
+2015/04/29 15:56:12 [router.go:845] [D] | GET        | /company/create/23/24                    | 25.0015ms        | match      | /company/create/*                        | 
+2015/04/29 15:56:12 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 18.001ms         | match      | /company/getcompany/*                    | 
+2015/04/29 15:56:12 [router.go:845] [D] | GET        | /company/GetContact/23                   | 19.0011ms        | match      | /company/getcontact/*                    | 
+2015/04/29 15:56:16 [router.go:845] [D] | GET        | /company/create/23/24                    | 29.0017ms        | match      | /company/create/*                        | 
+2015/04/29 15:56:16 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 18.0011ms        | match      | /company/getcompany/*                    | 
+2015/04/29 15:56:16 [router.go:845] [D] | GET        | /company/GetContact/23                   | 17.001ms         | match      | /company/getcontact/*                    | 
+2015/04/29 16:14:43 [router.go:845] [D] | GET        | /company/create/23/24                    | 30.0017ms        | match      | /company/create/*                        | 
+2015/04/29 16:14:43 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 17.001ms         | match      | /company/getcompany/*                    | 
+2015/04/29 16:14:43 [router.go:845] [D] | GET        | /company/GetContact/23                   | 20.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/29 16:17:04 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 16:17:04 [app.go:96] [I] http server Running on :80
+2015/04/29 16:19:46 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 16:19:46 [app.go:96] [I] http server Running on :80
+2015/04/29 16:20:33 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 16:20:34 [app.go:96] [I] http server Running on :80
+2015/04/29 16:21:58 [router.go:845] [D] | GET        | /company/create/23/24                    | 36.0021ms        | match      | /company/create/*                        | 
+2015/04/29 16:21:58 [router.go:845] [D] | GET        | /company/GetContact/23                   | 21.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/29 16:21:58 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 29.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/29 16:21:58 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 28.0016ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 16:22:17 [router.go:845] [D] | GET        | /company/create/23/24                    | 35.002ms         | match      | /company/create/*                        | 
+2015/04/29 16:22:17 [router.go:845] [D] | GET        | /company/GetContact/23                   | 16.0009ms        | match      | /company/getcontact/*                    | 
+2015/04/29 16:22:17 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 15.0009ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 16:22:17 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 17.001ms         | match      | /company/getcompany/*                    | 
+2015/04/29 16:23:00 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/29 16:23:00 [app.go:96] [I] http server Running on :80
+2015/04/29 16:23:00 [router.go:845] [D] | GET        | /company/create/23/24                    | 33.0019ms        | match      | /company/create/*                        | 
+2015/04/29 16:23:00 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 17.001ms         | match      | /company/getcompany/*                    | 
+2015/04/29 16:23:00 [router.go:845] [D] | GET        | /company/GetContact/23                   | 18.001ms         | match      | /company/getcontact/*                    | 
+2015/04/29 16:23:00 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 20.0011ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 16:26:28 [router.go:845] [D] | GET        | /company/create/23/24                    | 21.0012ms        | match      | /company/create/*                        | 
+2015/04/29 16:26:28 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 16.0009ms        | match      | /company/getcompany/*                    | 
+2015/04/29 16:26:28 [router.go:845] [D] | GET        | /company/GetContact/23                   | 17.001ms         | match      | /company/getcontact/*                    | 
+2015/04/29 16:26:28 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 25.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 16:27:25 [router.go:845] [D] | GET        | /company/create/23/24                    | 34.002ms         | match      | /company/create/*                        | 
+2015/04/29 16:27:25 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 16.0009ms        | match      | /company/getcompany/*                    | 
+2015/04/29 16:27:25 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 17.001ms         | match      | /company/getintroduce/*                  | 
+2015/04/29 16:27:25 [router.go:845] [D] | GET        | /company/GetContact/23                   | 20.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/29 16:29:12 [router.go:845] [D] | GET        | /company/create/23/24                    | 24.0014ms        | match      | /company/create/*                        | 
+2015/04/29 16:29:12 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 15.0008ms        | match      | /company/getcompany/*                    | 
+2015/04/29 16:29:12 [router.go:845] [D] | GET        | /company/GetContact/23                   | 14.0008ms        | match      | /company/getcontact/*                    | 
+2015/04/29 16:29:12 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 14.0008ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 16:29:36 [router.go:845] [D] | GET        | /company/create/23/24                    | 23.0013ms        | match      | /company/create/*                        | 
+2015/04/29 16:29:36 [router.go:845] [D] | GET        | /company/GetContact/23                   | 17.001ms         | match      | /company/getcontact/*                    | 
+2015/04/29 16:29:36 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 19.0011ms        | match      | /company/getcompany/*                    | 
+2015/04/29 16:29:36 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 18.0011ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 16:29:43 [router.go:845] [D] | GET        | /company/create/23/24                    | 33.0018ms        | match      | /company/create/*                        | 
+2015/04/29 16:29:43 [router.go:845] [D] | GET        | /company/GetContact/23                   | 23.0013ms        | match      | /company/getcontact/*                    | 
+2015/04/29 16:29:43 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 26.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 16:29:43 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 31.0018ms        | match      | /company/getcompany/*                    | 
+2015/04/29 16:32:08 [router.go:845] [D] | GET        | /company/create/23/24                    | 29.0016ms        | match      | /company/create/*                        | 
+2015/04/29 16:32:08 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 15.0009ms        | match      | /company/getcompany/*                    | 
+2015/04/29 16:32:08 [router.go:845] [D] | GET        | /company/GetContact/23                   | 16.0009ms        | match      | /company/getcontact/*                    | 
+2015/04/29 16:32:08 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 16.0009ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 16:32:24 [router.go:845] [D] | GET        | /company/create/23/24                    | 24.0014ms        | match      | /company/create/*                        | 
+2015/04/29 16:32:24 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 26.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/29 16:32:24 [router.go:845] [D] | GET        | /company/GetContact/23                   | 25.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/29 16:32:24 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 32.0018ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 16:33:31 [router.go:845] [D] | GET        | /company/create/23/24                    | 28.0016ms        | match      | /company/create/*                        | 
+2015/04/29 16:33:31 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 18.001ms         | match      | /company/getcompany/*                    | 
+2015/04/29 16:33:31 [router.go:845] [D] | GET        | /company/GetContact/23                   | 21.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/29 16:33:31 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 36.0021ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 17:39:51 [router.go:845] [D] | GET        | /company/create/23/24                    | 31.0018ms        | match      | /company/create/*                        | 
+2015/04/29 17:39:51 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 17.0009ms        | match      | /company/getcompany/*                    | 
+2015/04/29 17:39:51 [router.go:845] [D] | GET        | /company/GetContact/23                   | 18.001ms         | match      | /company/getcontact/*                    | 
+2015/04/29 17:39:51 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 47.0027ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 17:41:52 [router.go:845] [D] | GET        | /company/create/23/24                    | 26.0015ms        | match      | /company/create/*                        | 
+2015/04/29 17:41:52 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 16.0009ms        | match      | /company/getcompany/*                    | 
+2015/04/29 17:41:52 [router.go:845] [D] | GET        | /company/GetContact/23                   | 15.0008ms        | match      | /company/getcontact/*                    | 
+2015/04/29 17:41:52 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 14.0008ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 17:48:09 [router.go:845] [D] | GET        | /company/create/23/24                    | 21.0012ms        | match      | /company/create/*                        | 
+2015/04/29 17:48:09 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 14.0008ms        | match      | /company/getcompany/*                    | 
+2015/04/29 17:48:09 [router.go:845] [D] | GET        | /company/GetContact/23                   | 36.0021ms        | match      | /company/getcontact/*                    | 
+2015/04/29 17:48:09 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 40.0022ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 17:49:00 [router.go:845] [D] | GET        | /company/create/23/24                    | 24.0014ms        | match      | /company/create/*                        | 
+2015/04/29 17:49:00 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 24.0013ms        | match      | /company/getcompany/*                    | 
+2015/04/29 17:49:00 [router.go:845] [D] | GET        | /company/GetContact/23                   | 24.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/29 17:49:00 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 23.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 17:49:38 [router.go:845] [D] | GET        | /company/create/23/24                    | 30.0017ms        | match      | /company/create/*                        | 
+2015/04/29 17:49:38 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 19.0011ms        | match      | /company/getcompany/*                    | 
+2015/04/29 17:49:38 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 15.0008ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 17:49:38 [router.go:845] [D] | GET        | /company/GetContact/23                   | 25.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/29 17:49:55 [router.go:845] [D] | GET        | /company/create/23/24                    | 27.0016ms        | match      | /company/create/*                        | 
+2015/04/29 17:49:56 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 19.0011ms        | match      | /company/getcompany/*                    | 
+2015/04/29 17:49:56 [router.go:845] [D] | GET        | /company/GetContact/23                   | 19.0011ms        | match      | /company/getcontact/*                    | 
+2015/04/29 17:49:56 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 19.001ms         | match      | /company/getintroduce/*                  | 
+2015/04/29 17:51:53 [router.go:845] [D] | GET        | /company/create/23/24                    | 21.0012ms        | match      | /company/create/*                        | 
+2015/04/29 17:51:53 [router.go:845] [D] | GET        | /company/GetContact/23                   | 17.001ms         | match      | /company/getcontact/*                    | 
+2015/04/29 17:51:53 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 24.0013ms        | match      | /company/getcompany/*                    | 
+2015/04/29 17:51:53 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 25.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 17:52:35 [router.go:845] [D] | GET        | /company/create/23/24                    | 20.0011ms        | match      | /company/create/*                        | 
+2015/04/29 17:52:35 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 17.001ms         | match      | /company/getintroduce/*                  | 
+2015/04/29 17:52:35 [router.go:845] [D] | GET        | /company/GetContact/23                   | 31.0017ms        | match      | /company/getcontact/*                    | 
+2015/04/29 17:52:35 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 34.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/29 17:53:03 [router.go:845] [D] | GET        | /company/create/23/24                    | 45.0026ms        | match      | /company/create/*                        | 
+2015/04/29 17:53:03 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 22.0013ms        | match      | /company/getcompany/*                    | 
+2015/04/29 17:53:03 [router.go:845] [D] | GET        | /company/GetContact/23                   | 25.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/29 17:53:03 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 25.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 17:58:53 [router.go:845] [D] | GET        | /company/create/23/24                    | 16.0009ms        | match      | /company/create/*                        | 
+2015/04/29 17:58:53 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 21.0012ms        | match      | /company/getcompany/*                    | 
+2015/04/29 17:58:53 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 32.0018ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 17:58:53 [router.go:845] [D] | GET        | /company/GetContact/23                   | 43.0024ms        | match      | /company/getcontact/*                    | 
+2015/04/29 17:59:13 [router.go:845] [D] | GET        | /company/create/23/24                    | 30.0018ms        | match      | /company/create/*                        | 
+2015/04/29 17:59:13 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 23.0013ms        | match      | /company/getcompany/*                    | 
+2015/04/29 17:59:13 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 24.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 17:59:13 [router.go:845] [D] | GET        | /company/GetContact/23                   | 28.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:00:08 [router.go:845] [D] | GET        | /company/create/23/24                    | 32.0019ms        | match      | /company/create/*                        | 
+2015/04/29 18:00:09 [router.go:845] [D] | GET        | /company/GetContact/23                   | 23.0013ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:00:09 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 31.0018ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:00:09 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 36.0021ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:01:19 [router.go:845] [D] | GET        | /company/create/23/24                    | 22.0012ms        | match      | /company/create/*                        | 
+2015/04/29 18:01:19 [router.go:845] [D] | GET        | /company/GetContact/23                   | 17.001ms         | match      | /company/getcontact/*                    | 
+2015/04/29 18:01:19 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 19.0011ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:01:19 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 20.0012ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:02:05 [router.go:845] [D] | GET        | /company/create/23/24                    | 27.0015ms        | match      | /company/create/*                        | 
+2015/04/29 18:02:05 [router.go:845] [D] | GET        | /company/GetContact/23                   | 16.0009ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:02:05 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 16.0009ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:02:05 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 25.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:05:45 [router.go:845] [D] | GET        | /company/create/23/24                    | 23.0013ms        | match      | /company/create/*                        | 
+2015/04/29 18:05:45 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 70.004ms         | match      | /company/getintroduce/*                  | 
+2015/04/29 18:05:45 [router.go:845] [D] | GET        | /company/GetContact/23                   | 71.0041ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:05:45 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 74.0042ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:07:20 [router.go:845] [D] | GET        | /company/create/23/24                    | 27.0016ms        | match      | /company/create/*                        | 
+2015/04/29 18:07:20 [router.go:845] [D] | GET        | /company/GetContact/23                   | 15.0009ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:07:20 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 33.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:07:20 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 34.0019ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:07:54 [router.go:845] [D] | GET        | /company/create/23/24                    | 25.0014ms        | match      | /company/create/*                        | 
+2015/04/29 18:07:54 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 22.0012ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:07:54 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 26.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:07:54 [router.go:845] [D] | GET        | /company/GetContact/23                   | 45.0026ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:09:42 [router.go:845] [D] | GET        | /company/create/23/24                    | 31.0017ms        | match      | /company/create/*                        | 
+2015/04/29 18:09:43 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 33.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:09:43 [router.go:845] [D] | GET        | /company/GetContact/23                   | 34.0019ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:09:43 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 40.0022ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:10:14 [router.go:845] [D] | GET        | /company/create/23/24                    | 80.0046ms        | match      | /company/create/*                        | 
+2015/04/29 18:10:14 [router.go:845] [D] | GET        | /company/GetContact/23                   | 33.0019ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:10:14 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 40.0023ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:10:14 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 37.0021ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:10:36 [router.go:845] [D] | GET        | /company/create/23/24                    | 24.0014ms        | match      | /company/create/*                        | 
+2015/04/29 18:10:36 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 28.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:10:36 [router.go:845] [D] | GET        | /company/GetContact/23                   | 26.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:10:36 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 31.0018ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:10:44 [router.go:845] [D] | GET        | /company/create/23/24                    | 31.0018ms        | match      | /company/create/*                        | 
+2015/04/29 18:10:44 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 20.0011ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:10:44 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 17.001ms         | match      | /company/getintroduce/*                  | 
+2015/04/29 18:10:44 [router.go:845] [D] | GET        | /company/GetContact/23                   | 19.0011ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:14:18 [router.go:845] [D] | GET        | /company/create/23/24                    | 29.0017ms        | match      | /company/create/*                        | 
+2015/04/29 18:14:18 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 18.0011ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:14:18 [router.go:845] [D] | GET        | /company/GetContact/23                   | 22.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:14:18 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 27.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:16:01 [router.go:845] [D] | GET        | /company/create/23/24                    | 29.0017ms        | match      | /company/create/*                        | 
+2015/04/29 18:16:01 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 29.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:16:01 [router.go:845] [D] | GET        | /company/GetContact/23                   | 27.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:16:01 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 32.0019ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:16:10 [router.go:845] [D] | GET        | /company/create/23/24                    | 27.0016ms        | match      | /company/create/*                        | 
+2015/04/29 18:16:11 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 22.0013ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:16:11 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 27.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:16:11 [router.go:845] [D] | GET        | /company/GetContact/23                   | 34.0019ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:16:43 [router.go:845] [D] | GET        | /company/create/23/24                    | 34.0019ms        | match      | /company/create/*                        | 
+2015/04/29 18:16:43 [router.go:845] [D] | GET        | /company/GetContact/23                   | 25.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:16:43 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 28.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:16:43 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 28.0016ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:17:05 [router.go:845] [D] | GET        | /company/create/23/24                    | 33.0018ms        | match      | /company/create/*                        | 
+2015/04/29 18:17:05 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 15.0009ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:17:05 [router.go:845] [D] | GET        | /company/GetContact/23                   | 23.0013ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:17:05 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 36.0021ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:17:16 [router.go:845] [D] | GET        | /company/create/23/24                    | 42.0024ms        | match      | /company/create/*                        | 
+2015/04/29 18:17:16 [router.go:845] [D] | GET        | /company/GetContact/23                   | 58.0033ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:17:16 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 60.0034ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:17:16 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 64.0036ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:22:34 [router.go:845] [D] | GET        | /company/create/23/24                    | 25.0014ms        | match      | /company/create/*                        | 
+2015/04/29 18:22:34 [router.go:845] [D] | GET        | /company/GetCompany/23                   | 21.0012ms        | match      | /company/getcompany/*                    | 
+2015/04/29 18:22:34 [router.go:845] [D] | GET        | /company/GetContact/23                   | 23.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/29 18:22:34 [router.go:845] [D] | GET        | /company/GetIntroduce/23                 | 24.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/29 18:22:50 [router.go:845] [D] | POST       | /company/create/23/24                    | 96.0055ms        | match      | /company/create/*                        | 
+2015/04/30 11:15:49 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 11:15:54 [app.go:96] [I] http server Running on :80
+2015/04/30 11:20:14 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 11:20:14 [app.go:96] [I] http server Running on :80
+2015/04/30 11:21:54 [router.go:845] [D] | GET        | /ifr_status/                             | 2.0001ms         | notmatch   | 
+2015/04/30 11:30:38 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 11:30:38 [app.go:96] [I] http server Running on :80
+2015/04/30 11:32:05 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 11:32:05 [app.go:96] [I] http server Running on :80
+2015/04/30 11:33:20 [router.go:845] [D] | GET        | /                                        | 41.0024ms        | match      | /                                        | 
+2015/04/30 11:34:25 [router.go:845] [D] | GET        | /                                        | 35.002ms         | match      | /                                        | 
+2015/04/30 11:34:33 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/04/30 11:34:35 [router.go:845] [D] | GET        | /                                        | 46.0027ms        | match      | /                                        | 
+2015/04/30 11:34:44 [router.go:845] [D] | GET        | /my/company                              | 76.0044ms        | match      | /my/company                              | 
+2015/04/30 11:34:53 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 11:34:53 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 19.0011ms        | match      | /company/getcompany/*                    | 
+2015/04/30 11:34:53 [router.go:845] [D] | GET        | /company/GetContact/0                    | 19.0011ms        | match      | /company/getcontact/*                    | 
+2015/04/30 11:34:53 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 19.0011ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 11:34:53 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 21.0012ms        | match      | /company/getlinks/*                      | 
+2015/04/30 11:38:20 [router.go:845] [D] | GET        | /company/create                          | 21.0012ms        | match      | /company/create                          | 
+2015/04/30 11:38:20 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 25.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/30 11:38:20 [router.go:845] [D] | GET        | /company/GetContact/0                    | 28.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 11:38:20 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 29.0016ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 11:38:20 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 30.0017ms        | match      | /company/getlinks/*                      | 
+2015/04/30 11:39:10 [router.go:845] [D] | GET        | /company/create                          | 31.0018ms        | match      | /company/create                          | 
+2015/04/30 11:39:10 [router.go:845] [D] | GET        | /company/GetContact/0                    | 22.0013ms        | match      | /company/getcontact/*                    | 
+2015/04/30 11:39:10 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 27.0016ms        | match      | /company/getlinks/*                      | 
+2015/04/30 11:39:10 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 33.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/30 11:39:10 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 37.0021ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 11:39:28 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 11:39:28 [router.go:845] [D] | GET        | /company/GetContact/0                    | 24.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 11:39:28 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 26.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 11:39:28 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 30.0017ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 11:39:28 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 32.0019ms        | match      | /company/getlinks/*                      | 
+2015/04/30 11:52:16 [router.go:845] [D] | GET        | /ifr_status/                             | 1.0001ms         | notmatch   | 
+2015/04/30 11:52:19 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 11:52:19 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 25.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/30 11:52:19 [router.go:845] [D] | GET        | /company/GetContact/0                    | 25.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/30 11:52:19 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 24.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 11:52:19 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 27.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 11:53:10 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/30 11:53:10 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 19.0011ms        | match      | /company/getlinks/*                      | 
+2015/04/30 11:53:10 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 23.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/30 11:53:10 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 25.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 11:53:10 [router.go:845] [D] | GET        | /company/GetContact/0                    | 31.0018ms        | match      | /company/getcontact/*                    | 
+2015/04/30 11:58:33 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 11:58:33 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 23.0013ms        | match      | /company/getcompany/*                    | 
+2015/04/30 11:58:33 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 21.0012ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 11:58:33 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 23.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 11:58:33 [router.go:845] [D] | GET        | /company/GetContact/0                    | 28.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 12:21:18 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 12:21:18 [app.go:96] [I] http server Running on :80
+2015/04/30 12:22:16 [router.go:845] [D] | GET        | /ifr_status/                             | 2.0001ms         | notmatch   | 
+2015/04/30 12:43:40 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 12:43:40 [app.go:96] [I] http server Running on :80
+2015/04/30 12:44:12 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 12:44:12 [app.go:96] [I] http server Running on :80
+2015/04/30 13:01:18 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 13:01:18 [app.go:96] [I] http server Running on :80
+2015/04/30 13:11:54 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 13:11:54 [app.go:96] [I] http server Running on :80
+2015/04/30 13:12:14 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 13:12:15 [app.go:96] [I] http server Running on :80
+2015/04/30 13:12:51 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 13:12:51 [app.go:96] [I] http server Running on :80
+2015/04/30 13:21:26 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/30 13:21:26 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 17.0009ms        | match      | /company/getcompany/*                    | 
+2015/04/30 13:21:26 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 19.0011ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 13:21:26 [router.go:845] [D] | GET        | /company/GetContact/0                    | 19.0011ms        | match      | /company/getcontact/*                    | 
+2015/04/30 13:21:26 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 20.0012ms        | match      | /company/getlinks/*                      | 
+2015/04/30 13:25:31 [router.go:845] [D] | GET        | /company/create                          | 17.001ms         | match      | /company/create                          | 
+2015/04/30 13:25:31 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 23.0013ms        | match      | /company/getlinks/*                      | 
+2015/04/30 13:25:31 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 28.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 13:25:31 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 26.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 13:25:31 [router.go:845] [D] | GET        | /company/GetContact/0                    | 36.0021ms        | match      | /company/getcontact/*                    | 
+2015/04/30 13:25:42 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 13:25:42 [router.go:845] [D] | GET        | /company/GetContact/0                    | 23.0013ms        | match      | /company/getcontact/*                    | 
+2015/04/30 13:25:42 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 25.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 13:25:42 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 23.0013ms        | match      | /company/getlinks/*                      | 
+2015/04/30 13:25:42 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 26.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 13:30:31 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 13:30:32 [router.go:845] [D] | GET        | /company/GetContact/0                    | 20.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/30 13:30:32 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 25.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 13:30:32 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 26.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 13:30:32 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 27.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 13:31:15 [router.go:845] [D] | GET        | /company/create                          | 26.0015ms        | match      | /company/create                          | 
+2015/04/30 13:31:15 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 23.0013ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 13:31:15 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 25.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/30 13:31:15 [router.go:845] [D] | GET        | /company/GetContact/0                    | 27.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/30 13:31:15 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 28.0016ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:22:16 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 14:22:16 [app.go:96] [I] http server Running on :80
+2015/04/30 14:22:18 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 14:22:18 [app.go:96] [I] http server Running on :80
+2015/04/30 14:33:36 [router.go:845] [D] | GET        | /company/create                          | 38.0022ms        | match      | /company/create                          | 
+2015/04/30 14:33:36 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 28.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 14:33:36 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 26.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 14:33:36 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 26.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:33:36 [router.go:845] [D] | GET        | /company/GetContact/0                    | 30.0018ms        | match      | /company/getcontact/*                    | 
+2015/04/30 14:34:36 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 14:34:36 [app.go:96] [I] http server Running on :80
+2015/04/30 14:42:36 [router.go:845] [D] | GET        | /basic/index/3                           | 31.0018ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 14:43:53 [router.go:845] [D] | GET        | /basic/index/4                           | 36.0021ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 14:45:01 [router.go:845] [D] | GET        | /my/company                              | 46.0027ms        | match      | /my/company                              | 
+2015/04/30 14:45:02 [router.go:845] [D] | GET        | /company/create                          | 31.0018ms        | match      | /company/create                          | 
+2015/04/30 14:45:02 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 21.0012ms        | match      | /company/getcompany/*                    | 
+2015/04/30 14:45:02 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 26.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:45:02 [router.go:845] [D] | GET        | /company/GetContact/0                    | 27.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 14:45:02 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 27.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 14:47:42 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 14:47:42 [router.go:845] [D] | GET        | /company/GetContact/0                    | 24.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 14:47:42 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 24.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:47:42 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 29.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 14:47:42 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 26.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 14:49:28 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/30 14:49:28 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 27.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 14:49:28 [router.go:845] [D] | GET        | /company/GetContact/0                    | 26.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/30 14:49:28 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 27.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:49:28 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 29.0016ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 14:51:34 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/30 14:51:34 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 39.0022ms        | match      | /company/getcompany/*                    | 
+2015/04/30 14:51:34 [router.go:845] [D] | GET        | /company/GetContact/0                    | 39.0022ms        | match      | /company/getcontact/*                    | 
+2015/04/30 14:51:34 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 37.0021ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 14:51:34 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 38.0022ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:53:46 [router.go:845] [D] | GET        | /company/create                          | 34.0019ms        | match      | /company/create                          | 
+2015/04/30 14:53:47 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 43.0025ms        | match      | /company/getcompany/*                    | 
+2015/04/30 14:53:47 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 37.0021ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 14:53:47 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 35.002ms         | match      | /company/getlinks/*                      | 
+2015/04/30 14:53:47 [router.go:845] [D] | GET        | /company/GetContact/0                    | 50.0029ms        | match      | /company/getcontact/*                    | 
+2015/04/30 14:53:56 [router.go:845] [D] | GET        | /company/create                          | 27.0016ms        | match      | /company/create                          | 
+2015/04/30 14:53:56 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 39.0022ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:53:56 [router.go:845] [D] | GET        | /company/GetContact/0                    | 41.0024ms        | match      | /company/getcontact/*                    | 
+2015/04/30 14:53:56 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 41.0023ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 14:53:56 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 49.0028ms        | match      | /company/getcompany/*                    | 
+2015/04/30 14:55:59 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/30 14:55:59 [router.go:845] [D] | GET        | /company/GetContact/0                    | 30.0018ms        | match      | /company/getcontact/*                    | 
+2015/04/30 14:55:59 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 34.0019ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 14:55:59 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 47.0027ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:55:59 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 53.003ms         | match      | /company/getcompany/*                    | 
+2015/04/30 14:58:32 [router.go:845] [D] | GET        | /company/create                          | 18.001ms         | match      | /company/create                          | 
+2015/04/30 14:58:32 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 18.001ms         | match      | /company/getintroduce/*                  | 
+2015/04/30 14:58:32 [router.go:845] [D] | GET        | /company/GetContact/0                    | 55.0032ms        | match      | /company/getcontact/*                    | 
+2015/04/30 14:58:32 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 64.0037ms        | match      | /company/getcompany/*                    | 
+2015/04/30 14:58:32 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 56.0032ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:59:01 [router.go:845] [D] | GET        | /company/create                          | 36.0021ms        | match      | /company/create                          | 
+2015/04/30 14:59:01 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 34.0019ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 14:59:01 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 39.0023ms        | match      | /company/getcompany/*                    | 
+2015/04/30 14:59:01 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 36.0021ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:59:01 [router.go:845] [D] | GET        | /company/GetContact/0                    | 40.0023ms        | match      | /company/getcontact/*                    | 
+2015/04/30 14:59:35 [router.go:845] [D] | GET        | /company/create                          | 34.002ms         | match      | /company/create                          | 
+2015/04/30 14:59:35 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 30.0017ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 14:59:35 [router.go:845] [D] | GET        | /company/GetContact/0                    | 34.002ms         | match      | /company/getcontact/*                    | 
+2015/04/30 14:59:35 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 36.0021ms        | match      | /company/getcompany/*                    | 
+2015/04/30 14:59:35 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 38.0022ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:59:55 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/30 14:59:55 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 32.0018ms        | match      | /company/getcompany/*                    | 
+2015/04/30 14:59:55 [router.go:845] [D] | GET        | /company/GetContact/0                    | 35.002ms         | match      | /company/getcontact/*                    | 
+2015/04/30 14:59:55 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 34.0019ms        | match      | /company/getlinks/*                      | 
+2015/04/30 14:59:55 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 39.0023ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 15:00:06 [router.go:845] [D] | GET        | /company/create                          | 31.0018ms        | match      | /company/create                          | 
+2015/04/30 15:00:06 [router.go:845] [D] | GET        | /company/GetContact/0                    | 27.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 15:00:06 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 30.0018ms        | match      | /company/getcompany/*                    | 
+2015/04/30 15:00:06 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 29.0016ms        | match      | /company/getlinks/*                      | 
+2015/04/30 15:00:06 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 35.002ms         | match      | /company/getintroduce/*                  | 
+2015/04/30 15:00:28 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/30 15:00:28 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 26.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 15:00:28 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 31.0017ms        | match      | /company/getcompany/*                    | 
+2015/04/30 15:00:28 [router.go:845] [D] | GET        | /company/GetContact/0                    | 41.0023ms        | match      | /company/getcontact/*                    | 
+2015/04/30 15:00:28 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 42.0024ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 15:03:04 [router.go:845] [D] | GET        | /company/create                          | 31.0017ms        | match      | /company/create                          | 
+2015/04/30 15:03:05 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 32.0019ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 15:03:05 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 36.0021ms        | match      | /company/getcompany/*                    | 
+2015/04/30 15:03:05 [router.go:845] [D] | GET        | /company/GetContact/0                    | 44.0025ms        | match      | /company/getcontact/*                    | 
+2015/04/30 15:03:05 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 46.0027ms        | match      | /company/getlinks/*                      | 
+2015/04/30 15:05:27 [router.go:845] [D] | GET        | /basic/index/5                           | 38.0021ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 15:30:14 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 15:30:14 [app.go:96] [I] http server Running on :80
+2015/04/30 15:38:29 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 15:38:29 [app.go:96] [I] http server Running on :80
+2015/04/30 15:39:20 [router.go:845] [D] | GET        | /basic/index/5                           | 38.0021ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 15:39:23 [router.go:845] [D] | GET        | /basic/index/4                           | 41.0024ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 15:41:38 [router.go:845] [D] | GET        | /basic/index/4                           | 37.0021ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 15:42:00 [router.go:845] [D] | GET        | /basic/index/4                           | 39.0022ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 15:42:56 [router.go:845] [D] | GET        | /basic/index/4                           | 43.0025ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 15:43:15 [router.go:845] [D] | GET        | /basic/index/0                           | 42.0024ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 15:43:22 [router.go:845] [D] | GET        | /basic/index/4                           | 34.0019ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 15:43:24 [router.go:845] [D] | GET        | /basic/index/5                           | 38.0022ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 15:46:35 [router.go:845] [D] | GET        | /basic/index/5                           | 39.0022ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 15:47:46 [router.go:845] [D] | GET        | /basic/index/5                           | 27.0015ms        | match      | /basic/index/:typeId                     | 
+2015/04/30 15:48:20 [router.go:845] [D] | GET        | /my/company                              | 45.0026ms        | match      | /my/company                              | 
+2015/04/30 15:48:22 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 15:48:22 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 24.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/30 15:48:22 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 24.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 15:48:22 [router.go:845] [D] | GET        | /company/GetContact/0                    | 29.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 15:48:22 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 30.0017ms        | match      | /company/getlinks/*                      | 
+2015/04/30 15:54:01 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 15:54:02 [router.go:845] [D] | GET        | /company/GetContact/0                    | 28.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 15:54:02 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 29.0017ms        | match      | /company/getcompany/*                    | 
+2015/04/30 15:54:02 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 29.0017ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 15:54:02 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 30.0018ms        | match      | /company/getlinks/*                      | 
+2015/04/30 15:55:02 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 15:55:02 [router.go:845] [D] | GET        | /company/GetContact/0                    | 21.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/30 15:55:02 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 28.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 15:55:02 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 30.0017ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 15:55:02 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 29.0016ms        | match      | /company/getlinks/*                      | 
+2015/04/30 15:55:30 [router.go:845] [D] | GET        | /company/create                          | 33.0018ms        | match      | /company/create                          | 
+2015/04/30 15:55:30 [router.go:845] [D] | GET        | /company/GetContact/0                    | 23.0013ms        | match      | /company/getcontact/*                    | 
+2015/04/30 15:55:30 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 26.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 15:55:30 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 24.0013ms        | match      | /company/getlinks/*                      | 
+2015/04/30 15:55:30 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 25.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:00:27 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 16:00:27 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 27.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:00:27 [router.go:845] [D] | GET        | /company/GetContact/0                    | 27.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:00:27 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 32.0019ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:00:27 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 42.0024ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:00:50 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 16:00:50 [router.go:845] [D] | GET        | /company/GetContact/0                    | 24.0013ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:00:50 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 28.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:00:50 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 27.0016ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:00:50 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 31.0018ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:00:54 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/30 16:00:54 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 21.0012ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:00:54 [router.go:845] [D] | GET        | /company/GetContact/0                    | 27.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:00:54 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 40.0023ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:00:54 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 40.0023ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:02:58 [router.go:845] [D] | GET        | /company/create                          | 18.001ms         | match      | /company/create                          | 
+2015/04/30 16:02:58 [router.go:845] [D] | GET        | /company/GetContact/0                    | 25.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:02:58 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 23.0013ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:02:58 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 26.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:02:58 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 26.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:11:45 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 16:11:45 [router.go:845] [D] | GET        | /company/GetContact/0                    | 21.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:11:45 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 24.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:11:45 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 25.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:11:45 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 27.0016ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:12:08 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 16:12:08 [router.go:845] [D] | GET        | /company/GetContact/0                    | 25.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:12:08 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 28.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:12:08 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 25.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:12:08 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 29.0017ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:13:32 [router.go:845] [D] | GET        | /company/create                          | 34.002ms         | match      | /company/create                          | 
+2015/04/30 16:13:32 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 24.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:13:32 [router.go:845] [D] | GET        | /company/GetContact/0                    | 24.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:13:32 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 24.0013ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:13:32 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 26.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:20:28 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/30 16:20:28 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 23.0013ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:20:28 [router.go:845] [D] | GET        | /company/GetContact/0                    | 27.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:20:28 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 29.0017ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:20:28 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 29.0017ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:23:32 [router.go:845] [D] | GET        | /company/create                          | 33.0018ms        | match      | /company/create                          | 
+2015/04/30 16:23:32 [router.go:845] [D] | GET        | /company/GetContact/0                    | 21.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:23:32 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 26.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:23:32 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 27.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:23:32 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 29.0016ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:26:34 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 16:26:34 [router.go:845] [D] | GET        | /company/GetContact/0                    | 22.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:26:34 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 26.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:26:34 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 24.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:26:34 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 26.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:35:08 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 16:35:08 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 26.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:35:08 [router.go:845] [D] | GET        | /company/GetContact/0                    | 25.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:35:08 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 28.0016ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:35:08 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 31.0017ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:35:48 [router.go:845] [D] | GET        | /company/create                          | 26.0015ms        | match      | /company/create                          | 
+2015/04/30 16:35:48 [router.go:845] [D] | GET        | /company/GetContact/0                    | 24.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:35:48 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 24.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:35:48 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 27.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:35:48 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 26.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:37:06 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/30 16:37:06 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 21.0012ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:37:06 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 24.0013ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:37:06 [router.go:845] [D] | GET        | /company/GetContact/0                    | 24.0013ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:37:06 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 27.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:37:41 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 16:37:41 [router.go:845] [D] | GET        | /company/GetContact/0                    | 21.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:37:41 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 22.0012ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:37:41 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 26.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:37:41 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 24.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:37:54 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 16:37:54 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 33.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:37:54 [router.go:845] [D] | GET        | /company/GetContact/0                    | 36.0021ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:37:54 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 32.0018ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:37:54 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 37.0021ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:38:19 [router.go:845] [D] | GET        | /company/create                          | 36.0021ms        | match      | /company/create                          | 
+2015/04/30 16:38:19 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 25.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:38:19 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 24.0013ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:38:19 [router.go:845] [D] | GET        | /company/GetContact/0                    | 26.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:38:19 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 25.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:49:42 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 16:49:42 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 22.0013ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:49:42 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 21.0012ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:49:42 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 26.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:49:42 [router.go:845] [D] | GET        | /company/GetContact/0                    | 33.0019ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:49:42 [router.go:845] [D] | GET        | /company/a.jpg                           | 0                | notmatch   | 
+2015/04/30 16:49:42 [router.go:845] [D] | GET        | /company/b.png                           | 1.0001ms         | notmatch   | 
+2015/04/30 16:50:30 [router.go:845] [D] | GET        | /company/create                          | 17.001ms         | match      | /company/create                          | 
+2015/04/30 16:50:30 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 22.0012ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:50:30 [router.go:845] [D] | GET        | /company/GetContact/0                    | 24.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:50:30 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 28.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:50:30 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 26.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:50:30 [router.go:845] [D] | GET        | /company/b.png                           | 0                | notmatch   | 
+2015/04/30 16:50:30 [router.go:845] [D] | GET        | /company/a.jpg                           | 2.0001ms         | notmatch   | 
+2015/04/30 16:50:30 [router.go:845] [D] | GET        | /company/c.jog                           | 1.0001ms         | notmatch   | 
+2015/04/30 16:50:30 [router.go:845] [D] | GET        | /company/d.jpg                           | 0                | notmatch   | 
+2015/04/30 16:50:30 [router.go:845] [D] | GET        | /company/e.jpg                           | 0                | notmatch   | 
+2015/04/30 16:52:58 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 16:52:58 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 27.0016ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:52:58 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 30.0017ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:52:58 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 25.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:52:58 [router.go:845] [D] | GET        | /company/GetContact/0                    | 31.0018ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:52:58 [router.go:845] [D] | GET        | /company/a.jpg                           | 1ms              | notmatch   | 
+2015/04/30 16:52:58 [router.go:845] [D] | GET        | /company/b.png                           | 1.0001ms         | notmatch   | 
+2015/04/30 16:52:58 [router.go:845] [D] | GET        | /company/d.jpg                           | 0                | notmatch   | 
+2015/04/30 16:52:58 [router.go:845] [D] | GET        | /company/c.jog                           | 2.0001ms         | notmatch   | 
+2015/04/30 16:52:58 [router.go:845] [D] | GET        | /company/e.jpg                           | 0                | notmatch   | 
+2015/04/30 16:53:21 [router.go:845] [D] | GET        | /company/create                          | 35.002ms         | match      | /company/create                          | 
+2015/04/30 16:53:21 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 22.0013ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:53:21 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 25.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:53:21 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 23.0013ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:53:21 [router.go:845] [D] | GET        | /company/GetContact/0                    | 27.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:53:21 [router.go:845] [D] | GET        | /company/a.jpg                           | 0                | notmatch   | 
+2015/04/30 16:53:21 [router.go:845] [D] | GET        | /company/b.png                           | 1.0001ms         | notmatch   | 
+2015/04/30 16:53:21 [router.go:845] [D] | GET        | /company/c.jog                           | 0                | notmatch   | 
+2015/04/30 16:53:21 [router.go:845] [D] | GET        | /company/d.jpg                           | 0                | notmatch   | 
+2015/04/30 16:53:21 [router.go:845] [D] | GET        | /company/e.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 16:56:56 [router.go:845] [D] | GET        | /company/create                          | 35.002ms         | match      | /company/create                          | 
+2015/04/30 16:56:56 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 24.0013ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:56:56 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 23.0013ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:56:56 [router.go:845] [D] | GET        | /company/GetContact/0                    | 28.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:56:56 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 31.0018ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:56:56 [router.go:845] [D] | GET        | /company/a.jpg                           | 0                | notmatch   | 
+2015/04/30 16:56:56 [router.go:845] [D] | GET        | /company/b.png                           | 0                | notmatch   | 
+2015/04/30 16:56:56 [router.go:845] [D] | GET        | /company/c.jog                           | 1ms              | notmatch   | 
+2015/04/30 16:56:56 [router.go:845] [D] | GET        | /company/d.jpg                           | 1ms              | notmatch   | 
+2015/04/30 16:56:56 [router.go:845] [D] | GET        | /company/e.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 16:57:36 [router.go:845] [D] | GET        | /company/create                          | 33.0018ms        | match      | /company/create                          | 
+2015/04/30 16:57:36 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 30.0018ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:57:36 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 45.0026ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:57:36 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 41.0023ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:57:36 [router.go:845] [D] | GET        | /company/GetContact/0                    | 53.003ms         | match      | /company/getcontact/*                    | 
+2015/04/30 16:57:36 [router.go:845] [D] | GET        | /company/a.jpg                           | 0                | notmatch   | 
+2015/04/30 16:57:36 [router.go:845] [D] | GET        | /company/c.jog                           | 2.0001ms         | notmatch   | 
+2015/04/30 16:57:36 [router.go:845] [D] | GET        | /company/b.png                           | 5.0003ms         | notmatch   | 
+2015/04/30 16:57:36 [router.go:845] [D] | GET        | /company/d.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 16:57:36 [router.go:845] [D] | GET        | /company/e.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 16:59:30 [router.go:845] [D] | GET        | /company/create                          | 17.001ms         | match      | /company/create                          | 
+2015/04/30 16:59:30 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 63.0036ms        | match      | /company/getlinks/*                      | 
+2015/04/30 16:59:30 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 72.0041ms        | match      | /company/getcompany/*                    | 
+2015/04/30 16:59:30 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 68.0038ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 16:59:30 [router.go:845] [D] | GET        | /company/GetContact/0                    | 73.0042ms        | match      | /company/getcontact/*                    | 
+2015/04/30 16:59:30 [router.go:845] [D] | GET        | /company/a.jpg                           | 2.0001ms         | notmatch   | 
+2015/04/30 16:59:30 [router.go:845] [D] | GET        | /company/b.png                           | 1.0001ms         | notmatch   | 
+2015/04/30 16:59:30 [router.go:845] [D] | GET        | /company/d.jpg                           | 1ms              | notmatch   | 
+2015/04/30 16:59:30 [router.go:845] [D] | GET        | /company/e.jpg                           | 1ms              | notmatch   | 
+2015/04/30 16:59:30 [router.go:845] [D] | GET        | /company/c.jog                           | 1ms              | notmatch   | 
+2015/04/30 17:03:51 [router.go:845] [D] | GET        | /company/create                          | 27.0015ms        | match      | /company/create                          | 
+2015/04/30 17:03:51 [router.go:845] [D] | GET        | /company/GetContact/0                    | 21.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:03:51 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 33.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:03:51 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 56.0032ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:03:51 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 66.0038ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:03:51 [router.go:845] [D] | GET        | /company/a.jpg                           | 0                | notmatch   | 
+2015/04/30 17:03:51 [router.go:845] [D] | GET        | /company/b.png                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:03:51 [router.go:845] [D] | GET        | /company/c.jog                           | 0                | notmatch   | 
+2015/04/30 17:03:51 [router.go:845] [D] | GET        | /company/d.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:03:51 [router.go:845] [D] | GET        | /company/e.jpg                           | 0                | notmatch   | 
+2015/04/30 17:04:20 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 17:04:20 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 31.0017ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:04:20 [router.go:845] [D] | GET        | /company/GetContact/0                    | 31.0018ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:04:20 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 39.0022ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:04:20 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 47.0027ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:04:20 [router.go:845] [D] | GET        | /company/a.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:04:20 [router.go:845] [D] | GET        | /company/c.jog                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:04:20 [router.go:845] [D] | GET        | /company/b.png                           | 4.0002ms         | notmatch   | 
+2015/04/30 17:04:20 [router.go:845] [D] | GET        | /company/d.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:04:20 [router.go:845] [D] | GET        | /company/e.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:05:29 [router.go:845] [D] | GET        | /company/create                          | 37.0022ms        | match      | /company/create                          | 
+2015/04/30 17:05:29 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 42.0024ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:05:29 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 39.0022ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:05:29 [router.go:845] [D] | GET        | /company/GetContact/0                    | 42.0024ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:05:29 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 49.0028ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:05:29 [router.go:845] [D] | GET        | /company/a.jpg                           | 0                | notmatch   | 
+2015/04/30 17:05:29 [router.go:845] [D] | GET        | /company/b.png                           | 1ms              | notmatch   | 
+2015/04/30 17:05:29 [router.go:845] [D] | GET        | /company/c.jog                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:05:29 [router.go:845] [D] | GET        | /company/d.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:05:29 [router.go:845] [D] | GET        | /company/e.jpg                           | 1ms              | notmatch   | 
+2015/04/30 17:06:02 [router.go:845] [D] | GET        | /company/create                          | 30.0018ms        | match      | /company/create                          | 
+2015/04/30 17:06:02 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 46.0026ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:06:02 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 45.0026ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:06:02 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 52.0029ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:06:02 [router.go:845] [D] | GET        | /company/GetContact/0                    | 54.0031ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:06:02 [router.go:845] [D] | GET        | /company/a.jpg                           | 1ms              | notmatch   | 
+2015/04/30 17:06:02 [router.go:845] [D] | GET        | /company/b.png                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:06:02 [router.go:845] [D] | GET        | /company/c.jog                           | 0                | notmatch   | 
+2015/04/30 17:06:02 [router.go:845] [D] | GET        | /company/e.jpg                           | 1ms              | notmatch   | 
+2015/04/30 17:06:02 [router.go:845] [D] | GET        | /company/d.jpg                           | 29.0017ms        | notmatch   | 
+2015/04/30 17:08:09 [router.go:845] [D] | GET        | /company/create                          | 37.0021ms        | match      | /company/create                          | 
+2015/04/30 17:08:09 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 34.002ms         | match      | /company/getcompany/*                    | 
+2015/04/30 17:08:09 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 39.0022ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:08:09 [router.go:845] [D] | GET        | /company/GetContact/0                    | 44.0026ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:08:09 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 50.0029ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:08:09 [router.go:845] [D] | GET        | /company/a.jpg                           | 1ms              | notmatch   | 
+2015/04/30 17:08:09 [router.go:845] [D] | GET        | /company/b.png                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:08:09 [router.go:845] [D] | GET        | /company/c.jog                           | 1ms              | notmatch   | 
+2015/04/30 17:08:09 [router.go:845] [D] | GET        | /company/d.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:08:09 [router.go:845] [D] | GET        | /company/e.jpg                           | 4.0003ms         | notmatch   | 
+2015/04/30 17:09:26 [router.go:845] [D] | GET        | /company/create                          | 34.002ms         | match      | /company/create                          | 
+2015/04/30 17:09:26 [router.go:845] [D] | GET        | /company/GetContact/0                    | 29.0017ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:09:26 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 41.0023ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:09:26 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 44.0025ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:09:26 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 46.0026ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:09:26 [router.go:845] [D] | GET        | /company/a.jpg                           | 1ms              | notmatch   | 
+2015/04/30 17:09:26 [router.go:845] [D] | GET        | /company/b.png                           | 2.0001ms         | notmatch   | 
+2015/04/30 17:09:26 [router.go:845] [D] | GET        | /company/c.jog                           | 1ms              | notmatch   | 
+2015/04/30 17:09:26 [router.go:845] [D] | GET        | /company/d.jpg                           | 1ms              | notmatch   | 
+2015/04/30 17:09:26 [router.go:845] [D] | GET        | /company/e.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:09:55 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 17:09:55 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 27.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:09:55 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 32.0018ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:09:55 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 43.0025ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:09:55 [router.go:845] [D] | GET        | /company/GetContact/0                    | 53.0031ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:09:55 [router.go:845] [D] | GET        | /company/a.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:09:55 [router.go:845] [D] | GET        | /company/b.png                           | 0                | notmatch   | 
+2015/04/30 17:09:55 [router.go:845] [D] | GET        | /company/c.jog                           | 1ms              | notmatch   | 
+2015/04/30 17:09:55 [router.go:845] [D] | GET        | /company/d.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:09:55 [router.go:845] [D] | GET        | /company/e.jpg                           | 2.0002ms         | notmatch   | 
+2015/04/30 17:11:37 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 17:11:37 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 33.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:11:37 [router.go:845] [D] | GET        | /company/GetContact/0                    | 31.0018ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:11:37 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 45.0026ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:11:37 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 45.0026ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:11:37 [router.go:845] [D] | GET        | /company/a.jpg                           | 0                | notmatch   | 
+2015/04/30 17:11:37 [router.go:845] [D] | GET        | /company/b.png                           | 1ms              | notmatch   | 
+2015/04/30 17:11:37 [router.go:845] [D] | GET        | /company/c.jog                           | 1ms              | notmatch   | 
+2015/04/30 17:11:37 [router.go:845] [D] | GET        | /company/d.jpg                           | 0                | notmatch   | 
+2015/04/30 17:11:37 [router.go:845] [D] | GET        | /company/e.jpg                           | 2.0001ms         | notmatch   | 
+2015/04/30 17:11:45 [router.go:845] [D] | GET        | /company/create                          | 18.0011ms        | match      | /company/create                          | 
+2015/04/30 17:11:45 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 23.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:11:45 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 34.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:11:45 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 33.0019ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:11:45 [router.go:845] [D] | GET        | /company/GetContact/0                    | 163.0093ms       | match      | /company/getcontact/*                    | 
+2015/04/30 17:11:45 [router.go:845] [D] | GET        | /company/a.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:11:45 [router.go:845] [D] | GET        | /company/b.png                           | 1ms              | notmatch   | 
+2015/04/30 17:11:45 [router.go:845] [D] | GET        | /company/c.jog                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:11:45 [router.go:845] [D] | GET        | /company/d.jpg                           | 1ms              | notmatch   | 
+2015/04/30 17:11:45 [router.go:845] [D] | GET        | /company/e.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:16:09 [router.go:845] [D] | GET        | /company/create                          | 30.0017ms        | match      | /company/create                          | 
+2015/04/30 17:16:09 [router.go:845] [D] | GET        | /company/GetContact/0                    | 28.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:16:09 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 28.0016ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:16:09 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 41.0023ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:16:09 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 40.0023ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:16:09 [router.go:845] [D] | GET        | /company/a.jpg                           | 1ms              | notmatch   | 
+2015/04/30 17:16:09 [router.go:845] [D] | GET        | /company/b.png                           | 0                | notmatch   | 
+2015/04/30 17:16:09 [router.go:845] [D] | GET        | /company/c.jog                           | 0                | notmatch   | 
+2015/04/30 17:16:09 [router.go:845] [D] | GET        | /company/d.jpg                           | 0                | notmatch   | 
+2015/04/30 17:16:09 [router.go:845] [D] | GET        | /company/e.jpg                           | 1.0001ms         | notmatch   | 
+2015/04/30 17:18:26 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/30 17:18:26 [router.go:845] [D] | GET        | /company/GetContact/0                    | 27.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:18:26 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 28.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:18:26 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 24.0013ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:18:26 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 31.0018ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:21:20 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 17:21:20 [router.go:845] [D] | GET        | /company/GetContact/0                    | 23.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:21:20 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 23.0013ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:21:20 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 26.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:21:20 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 27.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:22:30 [router.go:845] [D] | GET        | /company/create                          | 30.0018ms        | match      | /company/create                          | 
+2015/04/30 17:22:30 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 36.002ms         | match      | /company/getcompany/*                    | 
+2015/04/30 17:22:30 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 33.0019ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:22:30 [router.go:845] [D] | GET        | /company/GetContact/0                    | 40.0023ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:22:30 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 40.0023ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:23:43 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 17:23:44 [router.go:845] [D] | GET        | /company/GetContact/0                    | 25.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:23:44 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 28.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:23:44 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 25.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:23:44 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 28.0016ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:23:45 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/30 17:23:45 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 25.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:23:45 [router.go:845] [D] | GET        | /company/GetContact/0                    | 26.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:23:45 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 26.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:23:45 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 25.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:24:08 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 17:24:08 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 21.0012ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:24:08 [router.go:845] [D] | GET        | /company/GetContact/0                    | 26.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:24:08 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 28.0016ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:24:08 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 24.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:24:09 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/30 17:24:10 [router.go:845] [D] | GET        | /company/GetContact/0                    | 22.0013ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:24:10 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 23.0013ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:24:10 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 23.0013ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:24:10 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 26.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:24:45 [router.go:845] [D] | GET        | /company/create                          | 36.0021ms        | match      | /company/create                          | 
+2015/04/30 17:24:46 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 28.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:24:46 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 25.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:24:46 [router.go:845] [D] | GET        | /company/GetContact/0                    | 28.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:24:46 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 30.0017ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:25:29 [router.go:845] [D] | GET        | /company/create                          | 36.0021ms        | match      | /company/create                          | 
+2015/04/30 17:25:29 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 25.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:25:29 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 29.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:25:29 [router.go:845] [D] | GET        | /company/GetContact/0                    | 29.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:25:29 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 26.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:26:11 [router.go:845] [D] | GET        | /company/create                          | 36.002ms         | match      | /company/create                          | 
+2015/04/30 17:26:11 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 27.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:26:11 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 25.0015ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:26:11 [router.go:845] [D] | GET        | /company/GetContact/0                    | 29.0016ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:26:11 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 26.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:28:09 [router.go:845] [D] | GET        | /company/create                          | 38.0022ms        | match      | /company/create                          | 
+2015/04/30 17:28:09 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 21.0012ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:28:09 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 21.0012ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:28:09 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 26.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:28:09 [router.go:845] [D] | GET        | /company/GetContact/0                    | 26.0015ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:34:36 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 17:34:36 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 25.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:34:36 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 23.0013ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:34:36 [router.go:845] [D] | GET        | /company/GetContact/0                    | 35.002ms         | match      | /company/getcontact/*                    | 
+2015/04/30 17:34:36 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 23.0013ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:34:36 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 33.0019ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:35:46 [router.go:845] [D] | GET        | /company/create                          | 38.0022ms        | match      | /company/create                          | 
+2015/04/30 17:35:46 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 25.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:35:46 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 33.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:35:46 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 22.0013ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:35:46 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 33.0019ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:35:46 [router.go:845] [D] | GET        | /company/GetContact/0                    | 37.0021ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:41:07 [router.go:845] [D] | GET        | /company/create                          | 26.0015ms        | match      | /company/create                          | 
+2015/04/30 17:41:07 [router.go:845] [D] | GET        | /company/GetContact/0                    | 34.002ms         | match      | /company/getcontact/*                    | 
+2015/04/30 17:41:07 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 33.0019ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:41:07 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 55.0032ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:41:07 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 50.0028ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:41:07 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 62.0035ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:41:56 [router.go:845] [D] | GET        | /company/create                          | 37.0021ms        | match      | /company/create                          | 
+2015/04/30 17:41:57 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 49.0028ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:41:57 [router.go:845] [D] | GET        | /company/GetContact/0                    | 63.0036ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:41:57 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 59.0034ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:41:57 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 69.0039ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:41:57 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 72.0041ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:43:11 [router.go:845] [D] | GET        | /company/create                          | 18.001ms         | match      | /company/create                          | 
+2015/04/30 17:43:11 [router.go:845] [D] | GET        | /company/GetContact/0                    | 23.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:43:11 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 44.0026ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:43:11 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 48.0027ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:43:11 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 46.0027ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:43:11 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 52.003ms         | match      | /company/getlinks/*                      | 
+2015/04/30 17:43:41 [router.go:845] [D] | GET        | /company/create                          | 37.0021ms        | match      | /company/create                          | 
+2015/04/30 17:43:41 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 35.002ms         | match      | /company/getcompany/*                    | 
+2015/04/30 17:43:41 [router.go:845] [D] | GET        | /company/GetContact/0                    | 39.0022ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:43:41 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 44.0025ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:43:41 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 45.0026ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:43:41 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 54.0031ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:48:26 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 17:48:26 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 31.0018ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:48:26 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 50.0029ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:48:26 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 53.0031ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:48:26 [router.go:845] [D] | GET        | /company/GetContact/0                    | 62.0036ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:48:26 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 68.0039ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:49:32 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/30 17:49:32 [router.go:845] [D] | GET        | /company/GetContact/0                    | 31.0018ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:49:32 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 32.0018ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:49:32 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 36.0021ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:49:32 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 44.0025ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:49:32 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 38.0022ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:51:22 [router.go:845] [D] | GET        | /company/create                          | 79.0045ms        | match      | /company/create                          | 
+2015/04/30 17:51:22 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 42.0024ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:51:22 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 48.0028ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:51:22 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 51.0029ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:51:22 [router.go:845] [D] | GET        | /company/GetContact/0                    | 54.0031ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:51:22 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 39.0022ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:51:35 [router.go:845] [D] | GET        | /company/create                          | 37.0021ms        | match      | /company/create                          | 
+2015/04/30 17:51:35 [router.go:845] [D] | GET        | /company/GetContact/0                    | 35.002ms         | match      | /company/getcontact/*                    | 
+2015/04/30 17:51:36 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 41.0024ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:51:36 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 41.0023ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:51:36 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 50.0028ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:51:36 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 37.0021ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:54:37 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 17:54:37 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 45.0026ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:54:37 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 43.0025ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:54:37 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 43.0024ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:54:37 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 48.0028ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:54:37 [router.go:845] [D] | GET        | /company/GetContact/0                    | 53.003ms         | match      | /company/getcontact/*                    | 
+2015/04/30 17:54:54 [router.go:845] [D] | GET        | /company/create                          | 38.0022ms        | match      | /company/create                          | 
+2015/04/30 17:54:54 [router.go:845] [D] | GET        | /company/GetContact/0                    | 25.0014ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:54:54 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 30.0017ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:54:54 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 31.0017ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:54:54 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 44.0025ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:54:54 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 39.0022ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:55:08 [router.go:845] [D] | GET        | /company/create                          | 35.002ms         | match      | /company/create                          | 
+2015/04/30 17:55:08 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 27.0015ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:55:08 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 31.0018ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:55:08 [router.go:845] [D] | GET        | /company/GetContact/0                    | 49.0028ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:55:08 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 51.003ms         | match      | /company/getlinks/*                      | 
+2015/04/30 17:55:08 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 62.0035ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:55:39 [router.go:845] [D] | GET        | /company/create                          | 40.0023ms        | match      | /company/create                          | 
+2015/04/30 17:55:39 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 35.002ms         | match      | /company/getmembers/*                    | 
+2015/04/30 17:55:39 [router.go:845] [D] | GET        | /company/GetContact/0                    | 46.0027ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:55:39 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 46.0026ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:55:39 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 54.0031ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:55:39 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 52.003ms         | match      | /company/getintroduce/*                  | 
+2015/04/30 17:55:51 [router.go:845] [D] | GET        | /company/create                          | 36.0021ms        | match      | /company/create                          | 
+2015/04/30 17:55:51 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 31.0018ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:55:51 [router.go:845] [D] | GET        | /company/GetContact/0                    | 37.0021ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:55:51 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 41.0024ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:55:51 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 49.0028ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:55:51 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 43.0024ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:56:31 [router.go:845] [D] | GET        | /company/create                          | 38.0022ms        | match      | /company/create                          | 
+2015/04/30 17:56:31 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 36.0021ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:56:31 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 39.0023ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:56:31 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 41.0023ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:56:31 [router.go:845] [D] | GET        | /company/GetContact/0                    | 45.0025ms        | match      | /company/getcontact/*                    | 
+2015/04/30 17:56:31 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 30.0017ms        | match      | /company/getmembers/*                    | 
+2015/04/30 17:59:26 [router.go:845] [D] | GET        | /company/create                          | 36.0021ms        | match      | /company/create                          | 
+2015/04/30 17:59:27 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 27.0016ms        | match      | /company/getlinks/*                      | 
+2015/04/30 17:59:27 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 46.0026ms        | match      | /company/getcompany/*                    | 
+2015/04/30 17:59:27 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 43.0025ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 17:59:27 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 35.002ms         | match      | /company/getmembers/*                    | 
+2015/04/30 17:59:27 [router.go:845] [D] | GET        | /company/GetContact/0                    | 46.0026ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:00:09 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/30 18:00:09 [router.go:845] [D] | GET        | /company/GetContact/0                    | 39.0022ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:00:09 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 45.0026ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:00:09 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 59.0034ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:00:09 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 52.003ms         | match      | /company/getlinks/*                      | 
+2015/04/30 18:00:09 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 51.0029ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:01:44 [router.go:845] [D] | GET        | /company/create                          | 38.0022ms        | match      | /company/create                          | 
+2015/04/30 18:01:44 [router.go:845] [D] | GET        | /company/GetContact/0                    | 33.0019ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:01:44 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 29.0017ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:01:44 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 32.0018ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:01:44 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 41.0024ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:01:44 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 49.0028ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:02:17 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 18:02:17 [router.go:845] [D] | GET        | /company/GetContact/0                    | 17.0009ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:02:17 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 26.0015ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:02:17 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 26.0015ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:02:17 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 51.0029ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:02:17 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 54.003ms         | match      | /company/getcompany/*                    | 
+2015/04/30 18:03:12 [router.go:845] [D] | GET        | /company/create                          | 35.002ms         | match      | /company/create                          | 
+2015/04/30 18:03:12 [router.go:845] [D] | GET        | /company/GetContact/0                    | 21.0012ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:03:12 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 34.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:03:12 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 51.0029ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:03:13 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 74.0043ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:03:13 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 73.0041ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:03:47 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/30 18:03:47 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 32.0018ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:03:47 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 30.0017ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:03:47 [router.go:845] [D] | GET        | /company/GetContact/0                    | 35.002ms         | match      | /company/getcontact/*                    | 
+2015/04/30 18:03:47 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 33.0019ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:03:47 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 57.0032ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:04:19 [router.go:845] [D] | GET        | /company/create                          | 36.002ms         | match      | /company/create                          | 
+2015/04/30 18:04:19 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 30.0017ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:04:19 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 38.0022ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:04:19 [router.go:845] [D] | GET        | /company/GetContact/0                    | 65.0037ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:04:19 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 62.0035ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:04:19 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 76.0044ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:05:31 [router.go:845] [D] | GET        | /company/create                          | 35.002ms         | match      | /company/create                          | 
+2015/04/30 18:05:32 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 17.0009ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:05:32 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 36.002ms         | match      | /company/getlinks/*                      | 
+2015/04/30 18:05:32 [router.go:845] [D] | GET        | /company/GetContact/0                    | 46.0027ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:05:32 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 65.0037ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:05:32 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 59.0034ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:05:32 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 69.0039ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:05:49 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 18:05:49 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 45.0026ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:05:49 [router.go:845] [D] | GET        | /company/GetContact/0                    | 49.0028ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:05:49 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 51.0029ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:05:49 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 52.0029ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:05:49 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 53.003ms         | match      | /company/getloops/*                      | 
+2015/04/30 18:05:49 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 71.0041ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:07:51 [router.go:845] [D] | GET        | /company/create                          | 34.002ms         | match      | /company/create                          | 
+2015/04/30 18:07:51 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 25.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:07:51 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 28.0016ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:07:51 [router.go:845] [D] | GET        | /company/GetContact/0                    | 40.0022ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:07:51 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 34.002ms         | match      | /company/getloops/*                      | 
+2015/04/30 18:07:51 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 46.0026ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:07:51 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 42.0024ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:08:37 [router.go:845] [D] | GET        | /company/create                          | 32.0018ms        | match      | /company/create                          | 
+2015/04/30 18:08:37 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 29.0016ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:08:37 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 25.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:08:37 [router.go:845] [D] | GET        | /company/GetContact/0                    | 38.0022ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:08:37 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 40.0022ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:08:37 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 36.002ms         | match      | /company/getloops/*                      | 
+2015/04/30 18:08:37 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 35.002ms         | match      | /company/getmembers/*                    | 
+2015/04/30 18:11:09 [router.go:845] [D] | GET        | /company/create                          | 31.0018ms        | match      | /company/create                          | 
+2015/04/30 18:11:09 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 23.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:11:09 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 29.0017ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:11:09 [router.go:845] [D] | GET        | /company/GetContact/0                    | 37.0021ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:11:09 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 22.0013ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:11:09 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 23.0013ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:11:09 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 35.002ms         | match      | /company/getlinks/*                      | 
+2015/04/30 18:11:37 [router.go:845] [D] | GET        | /company/create                          | 36.002ms         | match      | /company/create                          | 
+2015/04/30 18:11:37 [router.go:845] [D] | GET        | /company/GetContact/0                    | 24.0013ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:11:37 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 32.0018ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:11:37 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 44.0025ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:11:37 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 46.0027ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:11:37 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 38.0022ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:11:37 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 39.0022ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:11:55 [router.go:845] [D] | GET        | /company/create                          | 28.0016ms        | match      | /company/create                          | 
+2015/04/30 18:11:56 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 23.0014ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:11:56 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 29.0017ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:11:56 [router.go:845] [D] | GET        | /company/GetContact/0                    | 30.0017ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:11:56 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 28.0016ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:11:56 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 39.0022ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:11:56 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 37.0022ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:12:48 [router.go:845] [D] | GET        | /company/create                          | 33.0019ms        | match      | /company/create                          | 
+2015/04/30 18:12:49 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 24.0014ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:12:49 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 29.0016ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:12:49 [router.go:845] [D] | GET        | /company/GetContact/0                    | 34.0019ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:12:49 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 41.0024ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:12:49 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 42.0024ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:12:49 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 48.0028ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:14:33 [router.go:845] [D] | GET        | /company/create                          | 30.0018ms        | match      | /company/create                          | 
+2015/04/30 18:14:33 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 24.0013ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:14:33 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 24.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:14:33 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 23.0014ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:14:33 [router.go:845] [D] | GET        | /company/GetContact/0                    | 37.0021ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:14:33 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 33.0019ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:14:33 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 42.0024ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:15:13 [router.go:845] [D] | GET        | /company/create                          | 34.002ms         | match      | /company/create                          | 
+2015/04/30 18:15:13 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 25.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:15:13 [router.go:845] [D] | GET        | /company/GetContact/0                    | 31.0017ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:15:13 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 34.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:15:13 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 32.0018ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:15:13 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 30.0018ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:15:13 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 30.0017ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:16:02 [router.go:845] [D] | GET        | /company/create                          | 37.0021ms        | match      | /company/create                          | 
+2015/04/30 18:16:02 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 21.0012ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:16:02 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 33.0019ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:16:02 [router.go:845] [D] | GET        | /company/GetContact/0                    | 31.0017ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:16:02 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 28.0016ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:16:02 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 39.0022ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:16:02 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 25.0014ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:16:40 [router.go:845] [D] | GET        | /company/create                          | 36.002ms         | match      | /company/create                          | 
+2015/04/30 18:16:40 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 25.0014ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:16:40 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 31.0018ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:16:40 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 34.0019ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:16:40 [router.go:845] [D] | GET        | /company/GetContact/0                    | 41.0023ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:16:40 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 28.0016ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:16:40 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 40.0023ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:17:23 [router.go:845] [D] | GET        | /company/create                          | 38.0022ms        | match      | /company/create                          | 
+2015/04/30 18:17:23 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 28.0016ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:17:23 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 23.0013ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:17:23 [router.go:845] [D] | GET        | /company/GetContact/0                    | 43.0024ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:17:23 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 44.0025ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:17:23 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 32.0018ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:17:23 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 42.0024ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:20:24 [router.go:845] [D] | GET        | /company/create                          | 32.0019ms        | match      | /company/create                          | 
+2015/04/30 18:20:24 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 22.0013ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:20:24 [router.go:845] [D] | GET        | /company/GetContact/0                    | 36.002ms         | match      | /company/getcontact/*                    | 
+2015/04/30 18:20:24 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 37.0021ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:20:24 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 42.0024ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:20:24 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 35.002ms         | match      | /company/getloops/*                      | 
+2015/04/30 18:20:24 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 36.0021ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:21:30 [router.go:845] [D] | GET        | /company/create                          | 36.0021ms        | match      | /company/create                          | 
+2015/04/30 18:21:30 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 22.0013ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:21:30 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 32.0018ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:21:30 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 34.002ms         | match      | /company/getlinks/*                      | 
+2015/04/30 18:21:30 [router.go:845] [D] | GET        | /company/GetContact/0                    | 42.0024ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:21:30 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 31.0018ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:21:30 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 35.002ms         | match      | /company/getmembers/*                    | 
+2015/04/30 18:22:01 [router.go:845] [D] | GET        | /company/create                          | 36.002ms         | match      | /company/create                          | 
+2015/04/30 18:22:02 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 42.0024ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:22:02 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 51.0029ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:22:02 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 55.0031ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:22:02 [router.go:845] [D] | GET        | /company/GetContact/0                    | 60.0034ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:22:02 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 27.0016ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:22:02 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 47.0027ms        | match      | /company/getloops/*                      | 
+2015/04/30 18:25:11 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/30 18:25:11 [app.go:96] [I] http server Running on :80
+2015/04/30 18:26:29 [router.go:845] [D] | GET        | /company/create                          | 63.0036ms        | match      | /company/create                          | 
+2015/04/30 18:26:29 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 24.0014ms        | match      | /company/getintroduce/*                  | 
+2015/04/30 18:26:29 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 44.0025ms        | match      | /company/getcompany/*                    | 
+2015/04/30 18:26:29 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 42.0024ms        | match      | /company/getlinks/*                      | 
+2015/04/30 18:26:29 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 29.0017ms        | match      | /company/getmembers/*                    | 
+2015/04/30 18:26:29 [router.go:845] [D] | GET        | /company/GetContact/0                    | 47.0027ms        | match      | /company/getcontact/*                    | 
+2015/04/30 18:26:29 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 38.0022ms        | match      | /company/getloops/*                      | 

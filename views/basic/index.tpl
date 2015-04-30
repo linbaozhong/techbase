@@ -104,6 +104,7 @@
 			height: 360,
 			close: '<span><i class="fa fa-times"></i></span>'
 		});
+		$('#snow-form form #inputName').focus();
 	}
 	
 	$(function() {
@@ -113,7 +114,18 @@
 		// 新建按钮事件，弹出编辑框
 		$('#snow-list tbody').on('click','.btn-create',function(){
 			// 重置表单
-			$('#snow-form').find('form')[0].reset();
+			var _form = $('#snow-form form');
+			_form[0].reset();
+			
+			// 取当前类型的下一个取值
+			$.getJSON('/basic/maxValue',{
+				typeId:$('#inputType',_form).val(),
+				parentId:$('#inputParentId',_form).val()
+			},function(json){
+				if (json.ok && $('#inputValue',_form).val()==0) {
+					$('#inputValue',_form).val(json.data);
+				}
+			});
 			// 弹窗
 			pop_window();
 		}).on('click','.btn-edit',function(){

@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 		<title>{{i18n .Lang "app title"}}</title>
 		<meta property="qc:admins" content="6050272677640117256375" />
-		<link rel="stylesheet" href="/static/css/pinghei.css">
+		<!--<link rel="stylesheet" href="/static/css/pinghei.css">-->
 		<link rel="shortcut icon" href="/static/img/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
