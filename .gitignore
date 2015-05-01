@@ -44,3 +44,6 @@ Temporary Items
 *.exe
 techbase.exe~
 techbase.exe~
+logs/log.log
+*.log
+*.log

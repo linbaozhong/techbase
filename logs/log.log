@@ -2640,3 +2640,19 @@
 2015/04/28 18:01:02 [router.go:845] [D] | GET        | /company/create                          | 24.0014ms        | match      | /company/create                          | 
 2015/04/28 18:03:25 [router.go:845] [D] | GET        | /company/create                          | 29.0017ms        | match      | /company/create                          | 
 2015/04/28 18:04:03 [router.go:845] [D] | GET        | /company/create                          | 26.0014ms        | match      | /company/create                          | 
+2015/04/28 21:03:36 [log.go:108] [D] Loading language: en-US 
+2015/04/28 21:03:36 [log.go:108] [D] Loading language: zh-CN 
+2015/04/28 21:03:36 [main.go:16] [I] techbase 1.1.14.1105 
+2015/04/28 21:03:36 [app.go:96] [I] http server Running on :80
+2015/04/28 21:03:58 [router.go:845] [D] | GET        | /                                        | 52.0029ms        | match      | /                                        | 
+2015/04/28 21:04:28 [router.go:845] [D] | GET        | /                                        | 103.0059ms       | match      | /                                        | 
+2015/04/28 21:04:31 [router.go:845] [D] | GET        | /                                        | 92.0053ms        | match      | /                                        | 
+2015/04/28 21:04:39 [router.go:845] [D] | GET        | /my/company                              | 107.0062ms       | match      | /my/company                              | 
+2015/04/28 21:12:53 [router.go:845] [D] | GET        | /my/company                              | 110.0063ms       | match      | /my/company                              | 
+2015/04/28 21:16:10 [router.go:845] [D] | GET        | /my/company                              | 126.0072ms       | match      | /my/company                              | 
+2015/04/28 21:17:48 [router.go:845] [D] | GET        | /my/company                              | 68.0039ms        | match      | /my/company                              | 
+2015/04/28 21:18:58 [router.go:845] [D] | GET        | /my/company                              | 78.0044ms        | match      | /my/company                              | 
+2015/04/28 21:19:25 [router.go:845] [D] | GET        | /company/create                          | 81.0047ms        | match      | /company/create                          | 
+2015/04/28 21:41:08 [router.go:845] [D] | GET        | /company/create                          | 77.0044ms        | match      | /company/create                          | 
+2015/04/28 21:51:41 [router.go:845] [D] | GET        | /company/create                          | 98.0056ms        | match      | /company/create                          | 
+2015/04/28 21:56:25 [router.go:845] [D] | GET        | /company/create                          | 76.0043ms        | match      | /company/create                          | 
