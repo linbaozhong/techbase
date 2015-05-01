@@ -5,93 +5,29 @@
 		</div>
 		<div class="col-md-10">
 			<h3>{{.subTitle}}</h3>
-	
-			<!--数据在这里-->
 			<hr />
-			<div class="row">
-				<div class="col-md-3"></div>
-				<div class="col-md-9"></div>
+			<!--创建公司-->
+			<div class="row snow-row-1">
 			</div>
-			<div class="alert" role="alert">hi</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="pull-right" style="width:84px;">
-						<img src="" alt="" style="width:84px;height:84px;" />
-						<br />
-						<button type="submit" class="btn btn-primary col-sm-12">上传</button>
-					</div>
-				</div>	
-				<div class="col-md-9">
-					<form class="form-horizontal">
-						<div class="form-group">
-							<label for="inputNickname" class="col-sm-3 control-label">公司简称</label>
-							<div class="col-sm-9">
-								<input type="text" class="form-control" id="inputNickname" name="nickname" placeholder="公司简称" value="{{.nickName}}">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputTelphone" class="col-sm-3 control-label">公司网址</label>
-							<div class="col-sm-9">
-								<input type="tel" class="form-control" id="inputTelphone" name="telphone" placeholder="公司网址" value="{{.profile.Telphone}}">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputEmail" class="col-sm-3 control-label">公司全称</label>
-							<div class="col-sm-9">
-								<input type="email" class="form-control" id="inputEmail" name="email" placeholder="公司全称" value="{{.profile.Email}}">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputIntro" class="col-sm-3 control-label">一句话简介</label>
-							<div class="col-sm-9">
-								<textarea class="form-control" id="inputIntro" name="intro" rows="" cols="" placeholder="用一句话介绍公司">{{.profile.Intro}}</textarea>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputEmail" class="col-sm-3 control-label">公司所在地</label>
-							<div class="col-sm-2">
-								<select class="form-control" name="">
-									<option value="">中国</option>
-								</select>
-							</div>							
-							<div class="col-sm-2">
-								<select class="form-control" name="">
-									<option value="">北京市</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputEmail" class="col-sm-3 control-label">创办时间</label>
-							<div class="col-sm-4">
-								<input type="date" class="form-control" id="inputEmail" name="email" placeholder="公司全称" value="{{.profile.Email}}">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputIntro" class="col-sm-3 control-label">公司领域</label>
-							<div class="col-sm-9">
-								<input type="checkbox" name="" id="" value=""/><span for="">二次元</span>
-								<input type="checkbox" name="" id="" value=""/><span for="">二次元</span>
-								<input type="checkbox" name="" id="" value=""/><span for="">二次元</span>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputIntro" class="col-sm-3 control-label">运营状态</label>
-							<div class="col-sm-9">
-								<input type="radio" name="state" id="" value=""/><span for="">尚未开始运营</span>
-								<input type="radio" name="state" id="" value=""/><span for="">运营中</span>
-								<input type="radio" name="state" id="" value=""/><span for="">停止运营</span>
-							</div>
-						</div>
 
+			<!--联系公司-->
+			<div class="row snow-row-2">
+			</div>
 
-						<div class="form-group">
-							<div class="col-sm-12">
-								<button type="submit" class="btn btn-primary col-sm-12">保存</button>
-							</div>
-						</div>
-					</form>
-						
-				</div>
+			<!--公司介绍-->
+			<div class="row snow-row-3">
+			</div>
+
+			<!--相关链接-->
+			<div class="row snow-row-4">
+			</div>
+
+			<!--创世团队-->
+			<div class="row snow-row-5">
+			</div>
+
+			<!--融资经历-->
+			<div class="row snow-row-6">
 			</div>
 
 		</div>
@@ -101,3 +37,28 @@
 	</div>
 
 </article>
+<link rel="stylesheet" type="text/css" href="/static/css/upload.css"/>
+<script src="/static/js/core.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/upload.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.snow-row-1').load('/company/GetCompany/{{.companyId}}',function(){
+			$(window).resize();
+		});
+		$('.snow-row-2').load('/company/GetContact/{{.companyId}}',function(){
+			$(window).resize();
+		});
+		$('.snow-row-3').load('/company/GetIntroduce/{{.companyId}}',function(){
+			$(window).resize();
+		});
+		$('.snow-row-4').load('/company/GetLinks/{{.companyId}}',function(){
+			$(window).resize();
+		});
+		$('.snow-row-5').load('/company/GetMembers/{{.companyId}}',function(){
+			$(window).resize();
+		});
+		$('.snow-row-6').load('/company/GetLoops/{{.companyId}}',function(){
+			$(window).resize();
+		});
+	});
+</script>
