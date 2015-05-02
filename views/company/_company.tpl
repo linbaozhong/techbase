@@ -1,9 +1,5 @@
-<div class="alert" role="alert"></div>
-<div class="col-md-3">
+<div class="col-md-3 snow-padding-top-40">
 	<div class="pull-right snow-upload-target" style="width:100px;height:100px;">
-		<!--<img src="" alt="" style="width:100px;" />-->
-		<!--<br />
-						<button type="submit" class="btn btn-primary col-sm-12">上传</button>-->
 	</div>
 </div>
 <div class="col-md-9">
@@ -11,6 +7,14 @@
 
 	</div>
 	<form class="form-horizontal snow-form-1">
+		<div class="form-group">
+			<div class="col-sm-3">
+				
+			</div>
+			<div class="col-sm-9">
+				<div class="alert" role="alert"></div>
+			</div>
+		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>公司简称</label>
 			<div class="col-sm-9">
@@ -148,16 +152,46 @@
 				
 			}
 		});
-		
+
+		// 领域最多可选择3项
+		$('.snow-field').on('click','input[name="field"]',function(e){
+			// 如果选中项=3，其它禁选
+			if ($('.snow-field input[name="field"]:checked').length > 2) {
+				$('.snow-field input[name="field"]:not(:checked)').attr('disabled',true);
+			}else{
+				$('.snow-field input:disabled').attr('disabled',false);
+			}
+		});
+
 		// 提交表单
 		$('.snow-form-1').submit(function(e){
 			e.preventDefault();
-			$('input[name="companyId"]').val(111);
+			var _form = $(this);
+			// 禁用提交按钮
+			submit_disable(_form);
+			$.post('/company/postcompany',_form.serialize(),function(json){
+				// 启用提交按钮
+				submit_enable(_form);
+				if (json.ok) {
+					// 写入表单id域
+					_form.find('input[name="id"]').val(json.data.id);
+					// 写入本页面全部companyid域
+					$('input[name="companyId"]').val(json.data.id);
+					_form.find('.alert').removeClass('alert-danger').addClass('alert-success').addClass('visible').text('hi,我已经为你保存好了,不用谢了…… :)');
+				} else{
+					var _errors=[];
+					for (var i = 0; i < json.data.length; i++) {
+						_errors.push(json.data[i].key +','+ json.data[i].message);
+					}
+					_form.find('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( ,'+_errors.join(';'));
+				}
+			});
 		});
 		
 		$(".snow-upload-target").upload({
 		    label: "<i class=\"fa fa-plus\"></i>",
-		    accept:'.jpg,.jpeg,.gif,.png'
+		    accept:'.jpg,.jpeg,.gif,.png',
+		    action:'/upload'
 		});
 	});
 </script>

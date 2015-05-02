@@ -41,6 +41,12 @@
 <script src="/static/js/core.js" type="text/javascript" charset="utf-8"></script>
 <script src="/static/js/upload.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
+	function submit_disable(obj){
+		$('.btn[type="submit"]',obj).attr('disabled',true).prepend('<i class="fa fa-spinner fa-spin"></i> ');
+	}
+	function submit_enable(obj){
+		$('.btn[type="submit"]',obj).attr('disabled',false).find('i').remove();
+	}
 	$(function(){
 		$('.snow-row-1').load('/company/GetCompany/{{.companyId}}',function(){
 			$(window).resize();

@@ -37,12 +37,18 @@ func (this *Company) Get() (bool, error) {
 }
 
 // 保存
-func (this *Company) Save() (int64, error) {
-	if this.Id == 0 {
-		return db.Insert(this)
-	} else {
-		return db.Id(this.Id).Update(this)
+func (this *Company) Save() (error, []Error) {
+	// 数据有效性检验
+	es, err := dataCheck(this)
+	if err != nil {
+		return err, es
 	}
+	if this.Id == 0 {
+		_, err = db.Insert(this)
+	} else {
+		_, err = db.Id(this.Id).Update(this)
+	}
+	return err, nil
 }
 
 /*
@@ -70,6 +76,21 @@ func (this *Contact) Get() (bool, error) {
 	return db.Where("companyId=?", this.CompanyId).Get(this)
 }
 
+// 保存
+func (this *Contact) Save() (error, []Error) {
+	// 数据有效性检验
+	es, err := dataCheck(this)
+	if err != nil {
+		return err, es
+	}
+	if this.Id == 0 {
+		_, err = db.Insert(this)
+	} else {
+		_, err = db.Id(this.Id).Update(this)
+	}
+	return err, nil
+}
+
 /*
 * 公司介绍
  */
@@ -86,6 +107,21 @@ type Introduce struct {
 // 读取
 func (this *Introduce) Get() (bool, error) {
 	return db.Where("companyId=?", this.CompanyId).Get(this)
+}
+
+// 保存
+func (this *Introduce) Save() (error, []Error) {
+	// 数据有效性检验
+	es, err := dataCheck(this)
+	if err != nil {
+		return err, es
+	}
+	if this.Id == 0 {
+		_, err = db.Insert(this)
+	} else {
+		_, err = db.Id(this.Id).Update(this)
+	}
+	return err, nil
 }
 
 /*
@@ -107,6 +143,21 @@ type Links struct {
 // 读取
 func (this *Links) Get() (bool, error) {
 	return db.Where("companyId=?", this.CompanyId).Get(this)
+}
+
+// 保存
+func (this *Links) Save() (error, []Error) {
+	// 数据有效性检验
+	es, err := dataCheck(this)
+	if err != nil {
+		return err, es
+	}
+	if this.Id == 0 {
+		_, err = db.Insert(this)
+	} else {
+		_, err = db.Id(this.Id).Update(this)
+	}
+	return err, nil
 }
 
 /*
@@ -131,6 +182,21 @@ func (this *Members) List() ([]Members, error) {
 	return ms, err
 }
 
+// 保存
+func (this *Members) Save() (error, []Error) {
+	// 数据有效性检验
+	es, err := dataCheck(this)
+	if err != nil {
+		return err, es
+	}
+	if this.Id == 0 {
+		_, err = db.Insert(this)
+	} else {
+		_, err = db.Id(this.Id).Update(this)
+	}
+	return err, nil
+}
+
 /*
 * 公司融资经历
  */
@@ -139,9 +205,9 @@ type Loops struct {
 	CompanyId   int64   `json:"companyId"`
 	Loop        int     `json:"loop" valid:"Required;"`
 	AmountMoney int     `json:"amountMoney"`
-	Amount      float32 `json:"amount"`
+	Amount      float64 `json:"amount"`
 	ValueMoney  int     `json:"valueMoney"`
-	Value       float32 `json:"value"`
+	Value       float64 `json:"value"`
 	Year        int     `json:"year" valid:"Required;"`
 	Month       int     `json:"month" valid:"Required;"`
 	Investor    string  `json:"investor"`
@@ -155,4 +221,19 @@ func (this *Loops) List() ([]Loops, error) {
 	ls := make([]Loops, 0)
 	err := db.Where("companyId=?", this.CompanyId).Find(&ls)
 	return ls, err
+}
+
+// 保存
+func (this *Loops) Save() (error, []Error) {
+	// 数据有效性检验
+	es, err := dataCheck(this)
+	if err != nil {
+		return err, es
+	}
+	if this.Id == 0 {
+		_, err = db.Insert(this)
+	} else {
+		_, err = db.Id(this.Id).Update(this)
+	}
+	return err, nil
 }

@@ -45,4 +45,8 @@ func init() {
 	beego.Router("/basic/list", basic, "get:List")
 	beego.Router("/basic/save", basic, "Post:Save")
 	beego.AutoRouter(basic)
+	//
+	up := &controllers.Upload{}
+	beego.Router("/upload", up)
+	beego.AutoRouter(up)
 }

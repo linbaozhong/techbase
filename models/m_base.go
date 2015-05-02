@@ -129,7 +129,7 @@ func dataCheck(d interface{}) ([]Error, error) {
 
 		for _, err := range valid.Errors {
 			es = append(es, Error{Key: err.Key, Message: err.Message})
-			beego.Error("无效数据：%s-%s", err.Key, err.Message)
+			beego.Error(fmt.Sprintf("无效数据：%s-%s", err.Key, err.Message))
 		}
 		return es, errors.New("无效数据")
 	}

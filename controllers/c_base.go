@@ -1,12 +1,18 @@
 package controllers
 
 import (
+	"errors"
 	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/validation"
 	"github.com/beego/i18n"
 	"html/template"
+	"io"
+	"mime/multipart"
 	"net/url"
+	"os"
+	"path"
+	"path/filepath"
 	"reflect"
 	"regexp"
 	"strconv"
@@ -516,6 +522,90 @@ func (this *Base) loginIn(id int64, from string) {
 func (this *Base) loginOut() {
 	this.cookie("_snow_token", "")
 	this.cookie("_snow_id", "")
+}
+
+//文件上传
+func (this *Base) upload(key string) (files []*models.UploadFile, err error) {
+	//处理上传文件
+	var header *multipart.FileHeader
+	var file multipart.File
+	var f *os.File
+
+	//根据年月选择文件夹
+	t := time.Now().Format(time.RFC3339)
+	//文件夹是否存在或创建文件夹
+	UploadPath := appconf("UploadPath")
+	folder := utils.MergePath(UploadPath)
+	err = utils.GetDir(folder)
+	if err != nil {
+		return
+	}
+	//文件夹是否存在或创建文件夹
+	UploadPath = path.Join(UploadPath, beego.Substr(t, 0, 7))
+	folder = path.Join(folder, beego.Substr(t, 0, 7))
+	err = utils.GetDir(folder)
+	if err != nil {
+		return
+	}
+
+	fs := this.Ctx.Request.MultipartForm.File[key]
+
+	n := len(fs)
+	if n == 0 {
+		err = errors.New("files not found")
+		return
+	}
+
+	for i := 0; i < n; i++ {
+		header = fs[i]
+		file, err = fs[i].Open()
+
+		if err != nil {
+			return
+		}
+
+		defer file.Close()
+
+		//提取原始文件信息
+		disposition := strings.Split(header.Header.Get("Content-Disposition"), ";")
+
+		var key, value string
+		for _, v := range disposition {
+
+			pos := strings.Index(v, "=")
+			if pos > -1 {
+				key = v[:pos]
+
+				if strings.TrimSpace(key) == "filename" {
+					value = strings.Replace(v[pos+1:], "\"", "", -1)
+					break
+				}
+			}
+		}
+		//
+		filename := filepath.Base(value)
+
+		//新建文件
+		UploadPath = path.Join("/", UploadPath, fmt.Sprintf("%d%s", time.Now().UnixNano(), filepath.Ext(filename)))
+		f, err = os.OpenFile(path.Join(folder, fmt.Sprintf("%d%s", time.Now().UnixNano(), filepath.Ext(filename))), os.O_WRONLY|os.O_CREATE, 0666)
+		if err != nil {
+			return
+		}
+
+		defer f.Close()
+
+		io.Copy(f, file)
+
+		upf := new(models.UploadFile)
+		upf.Name = filename
+		upf.Ext = filepath.Ext(filename)
+		upf.Path = UploadPath
+		fi, _ := f.Stat()
+		upf.Size = fi.Size()
+
+		files = append(files, upf)
+	}
+	return
 }
 
 /*

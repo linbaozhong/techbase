@@ -1,8 +1,7 @@
-<div class="alert" role="alert"></div>
 <div class="col-md-3">
 	
 </div>
-<div class="col-md-9">
+<div class="col-md-9 snow-padding-top-40">
 	<div class="" style="margin-top: 10px;">
 
 	</div>
@@ -10,6 +9,9 @@
 		<div class="form-group">
 			<div class="col-sm-3">
 				<h4 class="snow-underline">公司介绍</h4>
+			</div>
+			<div class="col-sm-9">
+				<div class="alert" role="alert"></div>
 			</div>
 		</div>
 		<div class="form-group">
@@ -34,7 +36,7 @@
 			<input type="hidden" name="companyId" value="{{.introduce.CompanyId}}" />
 			</label>
 			<div class="col-sm-9">
-			<button type="submit" class="btn btn-primary col-sm-12">保存</button>
+			<button type="submit" class="btn btn-primary col-sm-12" {{if not .introduce.CompanyId}}disabled{{end}}>保存</button>
 			</div>
 		</div>
 	</form>
@@ -56,10 +58,34 @@
 			e.preventDefault();
 			$(this).closest('li').remove();
 		});
-		// 提交
+		// 提交表单
 		$('.snow-form-3').submit(function(e){
 			e.preventDefault();
-			
+			var _form = $(this);
+			// 禁用提交按钮
+			submit_disable(_form);
+			$.post('/company/postintroduce',_form.serialize(),function(json){
+				// 启用提交按钮
+				submit_enable(_form);
+				if (json.ok) {
+					// 写入表单id域
+					_form.find('input[name="id"]').val(json.data.id);
+					_form.find('.alert').removeClass('alert-danger').addClass('alert-success').addClass('visible').text('hi,我已经为你保存好了,不用谢了…… :)');
+				} else{
+					var _errors=[];
+					for (var i = 0; i < json.data.length; i++) {
+						_errors.push(json.data[i].key +','+ json.data[i].message);
+					}
+					_form.find('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( ,'+_errors.join(';'));
+				}
+			});
+		}).find('input[name="companyId"]').change(function(){
+			var _form=$(this).closest('form');
+			if($(this).val()>0){
+				$('button:submit',_form).attr('disabled',false);
+			}else{
+				$('button:submit',_form).attr('disabled',true);
+			}
 		});
 		//
 		$(".snow-form-3 .snow-upload-target").upload({
