@@ -30,4 +30,5 @@ const (
 	Type_State    = 4 //运营状态
 	Type_Place    = 5 //职位
 	Type_Loop     = 6 //融资轮次
+	Type_Money    = 7 //货币种类
 )

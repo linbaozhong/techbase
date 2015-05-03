@@ -38,6 +38,8 @@ func (this *Basic) Index() {
 		subTitle = "职位"
 	case typeid == models.Type_State:
 		subTitle = "运营状态"
+	case typeid == models.Type_Money:
+		subTitle = "币种"
 	}
 
 	this.Data["subTitle"] = subTitle
@@ -67,13 +69,14 @@ func (this *Basic) Save() {
 	basic.ParentId, _ = this.GetInt64("parentId")
 	basic.Type, _ = this.GetInt("type")
 	basic.Value, _ = this.GetInt("value")
+	basic.Alias = this.GetString("alias")
 
 	this.extend(basic)
 
-	if _, err := basic.Save(); err == nil {
+	if err, es := basic.Save(); err == nil {
 		this.renderJson(utils.JsonData(true, "", basic))
 	} else {
-		this.renderJson(utils.JsonMessage(false, "", err.Error()))
+		this.renderJson(utils.JsonData(false, "", es))
 	}
 
 }
@@ -121,9 +124,21 @@ func (this *Basic) Field() {
 	this.renderJson(utils.JsonData(true, "", bs))
 }
 
-// 公司领域/行业
+// 公司运营状态
 func (this *Basic) State() {
 	bs := this.getOptions(models.Type_State)
+	this.renderJson(utils.JsonData(true, "", bs))
+}
+
+// 公司融资经历
+func (this *Basic) Loop() {
+	bs := this.getOptions(models.Type_Loop)
+	this.renderJson(utils.JsonData(true, "", bs))
+}
+
+// 货币种类
+func (this *Basic) Money() {
+	bs := this.getOptions(models.Type_Money)
 	this.renderJson(utils.JsonData(true, "", bs))
 }
 

@@ -72,10 +72,10 @@ type SelectItem struct {
 
 //上传文件
 type UploadFile struct {
-	Name string //文件名
-	Ext  string //扩展名（文件类型）
-	Path string //路径
-	Size int64  //文件大小
+	Name string `json:"name"` //文件名
+	Ext  string `json:"ext"`  //扩展名（文件类型）
+	Path string `json:"path"` //路径
+	Size int64  `json:"size"` //文件大小
 }
 
 type ReturnJson struct {

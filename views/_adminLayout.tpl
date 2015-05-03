@@ -77,6 +77,8 @@
 				</li>
 				<li><a href="/basic/index/6">融资轮次</a>
 				</li>
+				<li><a href="/basic/index/7">币种</a>
+				</li>
 			</ul>
 		</div>
 		{{.LayoutContent}}
@@ -133,6 +135,7 @@
 <script type="text/javascript">
 
 	$(function() {
+		//
 		function mouseleave(obj) {
 			setTimeout(function() {
 				if (obj.data('hide')) {

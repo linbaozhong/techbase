@@ -7,8 +7,9 @@ type Basic struct {
 	Id       int64  `json:"id"`
 	ParentId int64  `json:"parentId"`
 	Type     int    `json:"type"`
-	Name     string `json:"name"`
+	Name     string `json:"name" valid:"Required"`
 	Value    int    `json:"value"`
+	Alias    string `json:"alias"`
 	Status   int    `json:"status"`
 	Deleted  int    `json:"deleted"`
 	Updator  int64  `json:"updator"`
@@ -25,12 +26,18 @@ func (this *Basic) List() ([]Basic, error) {
 	return bs, err
 }
 
-func (this *Basic) Save() (int64, error) {
-	if this.Id == 0 {
-		return db.Insert(this)
-	} else {
-		return db.Id(this.Id).Update(this)
+func (this *Basic) Save() (error, []Error) {
+	// 数据有效性检验
+	es, err := dataCheck(this)
+	if err != nil {
+		return err, es
 	}
+	if this.Id == 0 {
+		_, err = db.Insert(this)
+	} else {
+		_, err = db.Id(this.Id).Cols("name", "value", "alias").Update(this)
+	}
+	return err, nil
 }
 
 func (this *Basic) MaxValue() (bool, error) {

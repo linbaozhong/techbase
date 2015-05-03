@@ -34,9 +34,10 @@
 			<label class="col-sm-3 control-label">
 			<input type="hidden" name="id" value="{{.introduce.Id}}" />
 			<input type="hidden" name="companyId" value="{{.introduce.CompanyId}}" />
+			<input type="hidden" name="images" value="{{.introduce.Images}}" />
 			</label>
 			<div class="col-sm-9">
-			<button type="submit" class="btn btn-primary col-sm-12" {{if not .introduce.CompanyId}}disabled{{end}}>保存</button>
+			<button type="submit" class="btn btn-primary col-sm-12" {{if not .company.Id}}disabled{{end}}>保存</button>
 			</div>
 		</div>
 	</form>
@@ -46,24 +47,38 @@
 <script type="text/javascript">
 	$(function(){
 		// 加载图片
+		function load_introduce_image(item){
+			$("form.snow-form-3 .snow-upload-target")
+				.before('<li class="snow-img"><i class="fa fa-lg fa-times-circle-o"></i><img src="'+item+'"></li>');
+		};
 		var _images = '{{.introduce.Images}}';
 		if (_images.length) {
-			var _imageA = _images.split(',');
-			$.each(_imageA, function(index,item) {    
-				$(".snow-form-3 .snow-upload-target").before('<li class="snow-img"><i class="fa fa-lg fa-times-circle-o"></i><img src="'+item+'"></li>');                                                          
+			var _imageA = _images.split(';');
+			$.each(_imageA, function(index,item) { 
+				load_introduce_image(item);
 			});
 		}
 		// 删除图片
-		$('.snow-form-3').on('click','.snow-img i',function(e){
+		$('form.snow-form-3').on('click','.snow-img i',function(e){
 			e.preventDefault();
 			$(this).closest('li').remove();
+			// 
+		  	if ($('form.snow-form-3 .snow-img').length < 5) {
+		  		$(".snow-upload-target").show();
+		  	}
 		});
 		// 提交表单
-		$('.snow-form-3').submit(function(e){
+		$('form.snow-form-3').submit(function(e){
 			e.preventDefault();
-			var _form = $(this);
+			var _form = $(this),_imgs=[];
+			
+			$('form.snow-form-3 .snow-img img').each(function(){
+				_imgs.push($(this).attr('src'));
+			});
+			_form.find('input[name="images"]').val(_imgs.join(';'));
 			// 禁用提交按钮
 			submit_disable(_form);
+			
 			$.post('/company/postintroduce',_form.serialize(),function(json){
 				// 启用提交按钮
 				submit_enable(_form);
@@ -81,16 +96,33 @@
 			});
 		}).find('input[name="companyId"]').change(function(){
 			var _form=$(this).closest('form');
-			if($(this).val()>0){
+			if($(this).val() > 0){
 				$('button:submit',_form).attr('disabled',false);
 			}else{
 				$('button:submit',_form).attr('disabled',true);
 			}
 		});
 		//
-		$(".snow-form-3 .snow-upload-target").upload({
+		$("form.snow-form-3 .snow-upload-target").upload({
 		    label: "<i class=\"fa fa-plus\"></i>",
-		    accept:'.jpg,.jpeg,.gif,.png'
-		});
+		    accept:'.jpg,.jpeg,.gif,.png',
+		    action:'/up'
+		}).on("filestart.upload", function(){})
+		  .on("fileprogress.upload", function(){})
+		  .on("filecomplete.upload", function(e,file,response){
+		  	if (response.ok) {
+		  		console.log(file);
+		  		var _src=response.data[0].path;
+		  		// 写入表单域
+		  		load_introduce_image(_src);
+		  		// 限制5张图
+			  	if (file.index > 3) {
+			  		$(".snow-upload-target").hide();
+			  	}
+		  	} else{
+		  		alert(response.data[0].message);
+		  	}
+		  })
+		  .on("fileerror.upload", function(){});
 	});
 </script>

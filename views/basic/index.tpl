@@ -18,6 +18,7 @@
 				<tr>
 					<th class="text-center">名称</th>
 					<th class="text-center">取值</th>
+					<th class="text-center">别名</th>
 					<th class="text-center">禁用</th>
 					<th class="text-center"><button class="btn btn-primary btn-create">新建</button></th>
 				</tr>
@@ -52,6 +53,12 @@
 			</div>
 		</div>
 		<div class="form-group">
+			<label for="inputAlias" class="col-sm-3 control-label">别名</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" id="inputAlias" name="alias" placeholder="别名" value="">
+			</div>
+		</div>
+		<div class="form-group">
 			<div class="col-sm-12">
 				<button type="submit" class="btn btn-primary col-sm-12">保存</button>
 			</div>
@@ -65,6 +72,7 @@
 		 _html.push('<tr class="data-row row-id-'+item.id+'">');                                                         
 		 _html.push('<td class="text-center">'+item.name+'</td>');                                                         
 		 _html.push('<td class="text-center">'+item.value+'</td>');                                                         
+		 _html.push('<td class="text-center">'+item.alias+'</td>');                                                         
 		 _html.push('<td class="text-center"><i class="fa '+(item.status?'fa-check-square-o':'fa-square-o')+'"></i></td>');                                                         
 		 _html.push('<td class="text-center"><button class="btn btn-primary btn-edit">修改</button></td>');                                                         
 		 _html.push('</tr>'); 
@@ -116,6 +124,7 @@
 			// 重置表单
 			var _form = $('#snow-form form');
 			_form[0].reset();
+			$('input[name="id"]').val(0);
 			
 			// 取当前类型的下一个取值
 			$.getJSON('/basic/maxValue',{
@@ -135,6 +144,7 @@
 			$('#inputId').val(item.id);
 			$('#inputName').val(item.name);
 			$('#inputValue').val(item.value);
+			$('#inputAlias').val(item.alias);
 			// 弹窗
 			pop_window();
 		});
@@ -153,7 +163,11 @@
 					snow.popWindow.close();
 					push_item(json.data);
 				} else{
-					_form.children('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( , '+json.message);
+					var _errors=[];
+					for (var i = 0; i < json.data.length; i++) {
+						_errors.push(json.data[i].key +','+ json.data[i].message);
+					}
+					_form.children('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( , '+_errors.join(';'));
 				}
 			});
 		})

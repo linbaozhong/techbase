@@ -4432,3 +4432,1434 @@
         Size: 1390,
     },
 },  invalid 
+2015/05/03 08:24:21 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 08:24:21 [app.go:96] [I] http server Running on :80
+2015/05/03 08:25:04 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 08:25:04 [app.go:96] [I] http server Running on :80
+2015/05/03 08:25:33 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 08:25:33 [app.go:96] [I] http server Running on :80
+2015/05/03 08:26:21 [router.go:845] [D] | GET        | /                                        | 68.0038ms        | match      | /                                        | 
+2015/05/03 08:26:26 [router.go:845] [D] | GET        | /my/company                              | 74.0043ms        | match      | /my/company                              | 
+2015/05/03 08:26:27 [router.go:845] [D] | GET        | /company/create                          | 111.0064ms       | match      | /company/create                          | 
+2015/05/03 08:26:28 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 161.0092ms       | match      | /company/getcompany/*                    | 
+2015/05/03 08:26:28 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 366.0209ms       | match      | /company/getmembers/*                    | 
+2015/05/03 08:26:28 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 439.0251ms       | match      | /company/getlinks/*                      | 
+2015/05/03 08:26:28 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 507.029ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 08:26:28 [router.go:845] [D] | GET        | /company/GetContact/0                    | 540.0309ms       | match      | /company/getcontact/*                    | 
+2015/05/03 08:26:28 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 646.0369ms       | match      | /company/getloops/*                      | 
+2015/05/03 08:26:33 [log.go:108] [D] Upload/POST Info:[]*models.UploadFile{
+    &models.UploadFile{
+        Name: logo_108.png,
+        Ext: .png,
+        Path: /upload/2015-05/1430612792975025600.png,
+        Size: 1390,
+    },
+},  invalid 
+2015/05/03 08:34:32 [log.go:108] [D] Loading language: en-US 
+2015/05/03 08:34:32 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 08:34:32 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 08:34:32 [app.go:96] [I] http server Running on :80
+2015/05/03 08:34:50 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 08:34:50 [app.go:96] [I] http server Running on :80
+2015/05/03 08:36:34 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 08:36:34 [app.go:96] [I] http server Running on :80
+2015/05/03 08:38:51 [log.go:108] [D] Upload/POST Info:[]*models.UploadFile{
+    &models.UploadFile{
+        Name: logo.png,
+        Ext: .png,
+        Path: /upload/2015-05/1430613531532268600.png,
+        Size: 1426,
+    },
+},  invalid 
+2015/05/03 08:39:49 [log.go:108] [D] Loading language: en-US 
+2015/05/03 08:39:49 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 08:39:49 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 08:39:49 [app.go:96] [I] http server Running on :80
+2015/05/03 08:40:12 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 08:40:12 [app.go:96] [I] http server Running on :80
+2015/05/03 08:41:25 [router.go:845] [D] | GET        | /company/create                          | 149.0085ms       | match      | /company/create                          | 
+2015/05/03 08:41:26 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 307.0175ms       | match      | /company/getcompany/*                    | 
+2015/05/03 08:41:26 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 425.0243ms       | match      | /company/getloops/*                      | 
+2015/05/03 08:41:26 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 514.0294ms       | match      | /company/getmembers/*                    | 
+2015/05/03 08:41:26 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 550.0315ms       | match      | /company/getlinks/*                      | 
+2015/05/03 08:41:27 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 541.031ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 08:41:27 [router.go:845] [D] | GET        | /company/GetContact/0                    | 535.0306ms       | match      | /company/getcontact/*                    | 
+2015/05/03 08:41:31 [log.go:108] [D] Upload/POST Info:[]*models.UploadFile{
+    &models.UploadFile{
+        Name: logo.png,
+        Ext: .png,
+        Path: /upload/2015-05/1430613691426414100.png,
+        Size: 1426,
+    },
+},  invalid 
+2015/05/03 08:52:38 [router.go:845] [D] | GET        | /company/create                          | 89.0051ms        | match      | /company/create                          | 
+2015/05/03 08:52:38 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 284.0162ms       | match      | /company/getcompany/*                    | 
+2015/05/03 08:52:38 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 405.0232ms       | match      | /company/getloops/*                      | 
+2015/05/03 08:52:38 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 440.0251ms       | match      | /company/getmembers/*                    | 
+2015/05/03 08:52:38 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 475.0272ms       | match      | /company/getlinks/*                      | 
+2015/05/03 08:52:39 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 451.0258ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 08:52:39 [router.go:845] [D] | GET        | /company/GetContact/0                    | 519.0297ms       | match      | /company/getcontact/*                    | 
+2015/05/03 08:53:03 [log.go:108] [D] Upload/POST Info:[]*models.UploadFile{
+    &models.UploadFile{
+        Name: banner01.png,
+        Ext: .png,
+        Path: /upload/2015-05/1430614383854018700.png,
+        Size: 331279,
+    },
+},  invalid 
+2015/05/03 08:54:21 [router.go:845] [D] | GET        | /company/create                          | 131.0075ms       | match      | /company/create                          | 
+2015/05/03 08:54:22 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 362.0207ms       | match      | /company/getcompany/*                    | 
+2015/05/03 08:54:22 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 409.0234ms       | match      | /company/getloops/*                      | 
+2015/05/03 08:54:22 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 373.0214ms       | match      | /company/getmembers/*                    | 
+2015/05/03 08:54:22 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 427.0244ms       | match      | /company/getlinks/*                      | 
+2015/05/03 08:54:22 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 419.024ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 08:54:22 [router.go:845] [D] | GET        | /company/GetContact/0                    | 445.0255ms       | match      | /company/getcontact/*                    | 
+2015/05/03 08:54:31 [log.go:108] [D] Upload/POST Info:[]*models.UploadFile{
+    &models.UploadFile{
+        Name: banner01.png,
+        Ext: .png,
+        Path: /upload/2015-05/1430614471633039300.png,
+        Size: 331279,
+    },
+},  invalid 
+2015/05/03 09:10:30 [router.go:845] [D] | GET        | /company/create                          | 115.0066ms       | match      | /company/create                          | 
+2015/05/03 09:10:30 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 237.0135ms       | match      | /company/getcompany/*                    | 
+2015/05/03 09:10:30 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 558.0319ms       | match      | /company/getloops/*                      | 
+2015/05/03 09:10:30 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 582.0333ms       | match      | /company/getmembers/*                    | 
+2015/05/03 09:10:30 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 613.0351ms       | match      | /company/getlinks/*                      | 
+2015/05/03 09:10:31 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 656.0375ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 09:10:31 [router.go:845] [D] | GET        | /company/GetContact/0                    | 681.0389ms       | match      | /company/getcontact/*                    | 
+2015/05/03 09:10:35 [log.go:108] [D] Upload/POST Info:[]*models.UploadFile{
+    &models.UploadFile{
+        Name: banner01.png,
+        Ext: .png,
+        Path: /upload/2015-05/1430615435361161400.png,
+        Size: 331279,
+    },
+},  invalid 
+2015/05/03 09:16:27 [router.go:845] [D] | GET        | /company/create                          | 111.0063ms       | match      | /company/create                          | 
+2015/05/03 09:16:27 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 264.0151ms       | match      | /company/getcompany/*                    | 
+2015/05/03 09:16:27 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 353.0202ms       | match      | /company/getloops/*                      | 
+2015/05/03 09:16:27 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 366.021ms        | match      | /company/getmembers/*                    | 
+2015/05/03 09:16:27 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 400.0229ms       | match      | /company/getlinks/*                      | 
+2015/05/03 09:16:27 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 415.0238ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 09:16:27 [router.go:845] [D] | GET        | /company/GetContact/0                    | 447.0256ms       | match      | /company/getcontact/*                    | 
+2015/05/03 09:16:31 [log.go:108] [D] Upload/POST Info:[]*models.UploadFile{
+    &models.UploadFile{
+        Name: banner01.png,
+        Ext: .png,
+        Path: /upload/2015-05/1430615791363523600.png,
+        Size: 331279,
+    },
+},  invalid 
+2015/05/03 09:16:31 [router.go:845] [D] | GET        | /company/undefined                       | 34.002ms         | notmatch   | 
+2015/05/03 09:18:01 [router.go:845] [D] | GET        | /company/create                          | 134.0077ms       | match      | /company/create                          | 
+2015/05/03 09:18:02 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 355.0203ms       | match      | /company/getcompany/*                    | 
+2015/05/03 09:18:02 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 405.0232ms       | match      | /company/getloops/*                      | 
+2015/05/03 09:18:02 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 301.0172ms       | match      | /company/getmembers/*                    | 
+2015/05/03 09:18:02 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 341.0195ms       | match      | /company/getlinks/*                      | 
+2015/05/03 09:18:02 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 363.0207ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 09:18:02 [router.go:845] [D] | GET        | /company/GetContact/0                    | 393.0225ms       | match      | /company/getcontact/*                    | 
+2015/05/03 09:19:14 [router.go:845] [D] | GET        | /company/create                          | 148.0085ms       | match      | /company/create                          | 
+2015/05/03 09:19:16 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 525.0301ms       | match      | /company/getcompany/*                    | 
+2015/05/03 09:19:16 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 699.04ms         | match      | /company/getloops/*                      | 
+2015/05/03 09:19:16 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 773.0442ms       | match      | /company/getmembers/*                    | 
+2015/05/03 09:19:16 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 870.0498ms       | match      | /company/getlinks/*                      | 
+2015/05/03 09:19:16 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 928.053ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 09:19:16 [router.go:845] [D] | GET        | /company/GetContact/0                    | 973.0557ms       | match      | /company/getcontact/*                    | 
+2015/05/03 09:19:19 [log.go:108] [D] Upload/POST Info:[]*models.UploadFile{
+    &models.UploadFile{
+        Name: banner01.png,
+        Ext: .png,
+        Path: /upload/2015-05/1430615959242125700.png,
+        Size: 331279,
+    },
+},  invalid 
+2015/05/03 09:19:19 [router.go:845] [D] | GET        | /company/undefined                       | 54.003ms         | notmatch   | 
+2015/05/03 09:20:46 [router.go:845] [D] | GET        | /company/create                          | 146.0083ms       | match      | /company/create                          | 
+2015/05/03 09:20:47 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 455.026ms        | match      | /company/getcompany/*                    | 
+2015/05/03 09:20:47 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 383.0219ms       | match      | /company/getloops/*                      | 
+2015/05/03 09:20:47 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 415.0238ms       | match      | /company/getmembers/*                    | 
+2015/05/03 09:20:47 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 463.0265ms       | match      | /company/getlinks/*                      | 
+2015/05/03 09:20:47 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 493.0282ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 09:20:47 [router.go:845] [D] | GET        | /company/GetContact/0                    | 521.0298ms       | match      | /company/getcontact/*                    | 
+2015/05/03 09:20:50 [log.go:108] [D] Upload/POST Info:[]*models.UploadFile{
+    &models.UploadFile{
+        Name: 28.png,
+        Ext: .png,
+        Path: /upload/2015-05/1430616050410340200.png,
+        Size: 980623,
+    },
+},  invalid 
+2015/05/03 09:20:50 [router.go:845] [D] | GET        | /company/undefined                       | 23.0013ms        | notmatch   | 
+2015/05/03 09:22:09 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 09:22:09 [app.go:96] [I] http server Running on :80
+2015/05/03 09:22:14 [router.go:845] [D] | GET        | /company/create                          | 132.0076ms       | match      | /company/create                          | 
+2015/05/03 09:22:15 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 331.0189ms       | match      | /company/getcompany/*                    | 
+2015/05/03 09:22:15 [router.go:845] [D] | GET        | /company/GetContact/0                    | 427.0245ms       | match      | /company/getcontact/*                    | 
+2015/05/03 09:22:15 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 451.0258ms       | match      | /company/getloops/*                      | 
+2015/05/03 09:22:15 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 472.027ms        | match      | /company/getmembers/*                    | 
+2015/05/03 09:22:15 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 682.039ms        | match      | /company/getlinks/*                      | 
+2015/05/03 09:22:15 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 696.0399ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 09:22:17 [log.go:108] [D] Upload/POST Info:[]*models.UploadFile{
+    &models.UploadFile{
+        Name: banner02.png,
+        Ext: .png,
+        Path: /upload/2015-05/1430616137519322600.png,
+        Size: 148745,
+    },
+},  invalid 
+2015/05/03 09:40:20 [router.go:845] [D] | GET        | /company/create                          | 120.0069ms       | match      | /company/create                          | 
+2015/05/03 09:40:21 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 624.0357ms       | match      | /company/getcompany/*                    | 
+2015/05/03 09:40:21 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 388.0222ms       | match      | /company/getloops/*                      | 
+2015/05/03 09:40:21 [router.go:845] [D] | GET        | /company/GetContact/0                    | 444.0254ms       | match      | /company/getcontact/*                    | 
+2015/05/03 09:40:21 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 505.0289ms       | match      | /company/getmembers/*                    | 
+2015/05/03 09:40:22 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 548.0314ms       | match      | /company/getlinks/*                      | 
+2015/05/03 09:40:22 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 580.0331ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 09:40:36 [log.go:108] [D] Upload/POST Info:[]*models.UploadFile{
+    &models.UploadFile{
+        Name: banner01.png,
+        Ext: .png,
+        Path: /upload/2015-05/1430617236269167500.png,
+        Size: 331279,
+    },
+},  invalid 
+2015/05/03 09:48:16 [log.go:108] [D] Loading language: en-US 
+2015/05/03 09:48:16 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 09:48:16 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 09:48:16 [app.go:96] [I] http server Running on :80
+2015/05/03 10:01:32 [router.go:845] [D] | GET        | /company/create                          | 80.0045ms        | match      | /company/create                          | 
+2015/05/03 10:01:33 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 230.0131ms       | match      | /company/getcompany/*                    | 
+2015/05/03 10:01:33 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 509.0291ms       | match      | /company/getloops/*                      | 
+2015/05/03 10:01:33 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 538.0308ms       | match      | /company/getmembers/*                    | 
+2015/05/03 10:01:33 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 559.032ms        | match      | /company/getlinks/*                      | 
+2015/05/03 10:01:33 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 567.0324ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 10:01:33 [router.go:845] [D] | GET        | /company/GetContact/0                    | 562.0321ms       | match      | /company/getcontact/*                    | 
+2015/05/03 10:05:12 [router.go:845] [D] | GET        | /company/create                          | 134.0077ms       | match      | /company/create                          | 
+2015/05/03 10:05:15 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 1.4550833s       | match      | /company/getcompany/*                    | 
+2015/05/03 10:05:15 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 946.0541ms       | match      | /company/getloops/*                      | 
+2015/05/03 10:05:15 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 524.03ms         | match      | /company/getmembers/*                    | 
+2015/05/03 10:05:15 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 641.0367ms       | match      | /company/getlinks/*                      | 
+2015/05/03 10:05:15 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 696.0398ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 10:05:15 [router.go:845] [D] | GET        | /company/GetContact/0                    | 803.0459ms       | match      | /company/getcontact/*                    | 
+2015/05/03 10:05:39 [router.go:845] [D] | GET        | /company/create                          | 112.0065ms       | match      | /company/create                          | 
+2015/05/03 10:05:41 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 655.0375ms       | match      | /company/getcompany/*                    | 
+2015/05/03 10:05:41 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 663.038ms        | match      | /company/getloops/*                      | 
+2015/05/03 10:05:41 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 743.0425ms       | match      | /company/getmembers/*                    | 
+2015/05/03 10:05:41 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 582.0333ms       | match      | /company/getlinks/*                      | 
+2015/05/03 10:05:41 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 593.0339ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 10:05:41 [router.go:845] [D] | GET        | /company/GetContact/0                    | 609.0348ms       | match      | /company/getcontact/*                    | 
+2015/05/03 10:06:21 [router.go:845] [D] | GET        | /company/create                          | 148.0085ms       | match      | /company/create                          | 
+2015/05/03 10:06:22 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 387.0221ms       | match      | /company/getcompany/*                    | 
+2015/05/03 10:06:22 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 455.026ms        | match      | /company/getloops/*                      | 
+2015/05/03 10:06:22 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 489.0279ms       | match      | /company/getmembers/*                    | 
+2015/05/03 10:06:22 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 556.0318ms       | match      | /company/getlinks/*                      | 
+2015/05/03 10:06:22 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 579.0331ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 10:06:22 [router.go:845] [D] | GET        | /company/GetContact/0                    | 639.0366ms       | match      | /company/getcontact/*                    | 
+2015/05/03 10:08:12 [router.go:845] [D] | GET        | /company/create                          | 137.0078ms       | match      | /company/create                          | 
+2015/05/03 10:08:13 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 399.0228ms       | match      | /company/getcompany/*                    | 
+2015/05/03 10:08:13 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 417.0238ms       | match      | /company/getloops/*                      | 
+2015/05/03 10:08:13 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 479.0274ms       | match      | /company/getmembers/*                    | 
+2015/05/03 10:08:13 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 516.0296ms       | match      | /company/getlinks/*                      | 
+2015/05/03 10:08:13 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 550.0315ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 10:08:14 [router.go:845] [D] | GET        | /company/GetContact/0                    | 623.0357ms       | match      | /company/getcontact/*                    | 
+2015/05/03 10:08:46 [router.go:845] [D] | GET        | /company/create                          | 126.0072ms       | match      | /company/create                          | 
+2015/05/03 10:08:47 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 490.028ms        | match      | /company/getcompany/*                    | 
+2015/05/03 10:08:47 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 426.0243ms       | match      | /company/getloops/*                      | 
+2015/05/03 10:08:47 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 486.0278ms       | match      | /company/getmembers/*                    | 
+2015/05/03 10:08:47 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 569.0326ms       | match      | /company/getlinks/*                      | 
+2015/05/03 10:08:47 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 643.0368ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 10:08:47 [router.go:845] [D] | GET        | /company/GetContact/0                    | 702.0402ms       | match      | /company/getcontact/*                    | 
+2015/05/03 10:10:27 [router.go:845] [D] | GET        | /company/create                          | 116.0067ms       | match      | /company/create                          | 
+2015/05/03 10:10:29 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 479.0274ms       | match      | /company/getcompany/*                    | 
+2015/05/03 10:10:29 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 461.0264ms       | match      | /company/getloops/*                      | 
+2015/05/03 10:10:29 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 565.0323ms       | match      | /company/getmembers/*                    | 
+2015/05/03 10:10:29 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 598.0342ms       | match      | /company/getlinks/*                      | 
+2015/05/03 10:10:29 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 651.0372ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 10:10:29 [router.go:845] [D] | GET        | /company/GetContact/0                    | 663.0379ms       | match      | /company/getcontact/*                    | 
+2015/05/03 10:11:34 [router.go:845] [D] | GET        | /company/create                          | 67.0039ms        | match      | /company/create                          | 
+2015/05/03 10:11:35 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 341.0195ms       | match      | /company/getcompany/*                    | 
+2015/05/03 10:11:35 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 283.0162ms       | match      | /company/getloops/*                      | 
+2015/05/03 10:11:35 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 324.0185ms       | match      | /company/getmembers/*                    | 
+2015/05/03 10:11:35 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 338.0193ms       | match      | /company/getlinks/*                      | 
+2015/05/03 10:11:35 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 335.0192ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 10:11:35 [router.go:845] [D] | GET        | /company/GetContact/0                    | 334.0191ms       | match      | /company/getcontact/*                    | 
+2015/05/03 10:15:10 [router.go:845] [D] | GET        | /company/create                          | 66.0038ms        | match      | /company/create                          | 
+2015/05/03 10:15:11 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 461.0264ms       | match      | /company/getcompany/*                    | 
+2015/05/03 10:15:11 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 537.0307ms       | match      | /company/getloops/*                      | 
+2015/05/03 10:15:11 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 571.0327ms       | match      | /company/getmembers/*                    | 
+2015/05/03 10:15:11 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 601.0344ms       | match      | /company/getlinks/*                      | 
+2015/05/03 10:15:11 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 614.0351ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 10:15:11 [router.go:845] [D] | GET        | /company/GetContact/0                    | 636.0364ms       | match      | /company/getcontact/*                    | 
+2015/05/03 10:56:04 [router.go:845] [D] | GET        | /company/create                          | 78.0045ms        | match      | /company/create                          | 
+2015/05/03 10:56:05 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 330.0189ms       | match      | /company/getcompany/*                    | 
+2015/05/03 10:56:05 [staticfile.go:62] [W] GetFileAttributesEx static/img/logo.png: The system cannot find the file specified. 
+2015/05/03 10:56:05 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 523.0299ms       | match      | /company/getloops/*                      | 
+2015/05/03 10:56:05 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 571.0326ms       | match      | /company/getmembers/*                    | 
+2015/05/03 10:56:05 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 606.0346ms       | match      | /company/getlinks/*                      | 
+2015/05/03 10:56:05 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 638.0364ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 10:56:05 [router.go:845] [D] | GET        | /company/GetContact/0                    | 549.0314ms       | match      | /company/getcontact/*                    | 
+2015/05/03 11:02:44 [router.go:845] [D] | GET        | /company/create                          | 78.0044ms        | match      | /company/create                          | 
+2015/05/03 11:02:45 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 251.0143ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:02:45 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 246.0141ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:02:45 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 303.0173ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:02:45 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 374.0214ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:02:45 [router.go:845] [D] | GET        | /company/GetContact/0                    | 412.0236ms       | match      | /company/getcontact/*                    | 
+2015/05/03 11:02:45 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 482.0275ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:03:39 [router.go:845] [D] | GET        | /company/create                          | 109.0063ms       | match      | /company/create                          | 
+2015/05/03 11:03:39 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 197.0113ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:03:39 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 199.0114ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:03:39 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 248.0142ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:03:39 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 283.0162ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:03:39 [router.go:845] [D] | GET        | /company/GetContact/0                    | 280.016ms        | match      | /company/getcontact/*                    | 
+2015/05/03 11:03:39 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 272.0155ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:04:27 [router.go:845] [D] | GET        | /company/create                          | 115.0066ms       | match      | /company/create                          | 
+2015/05/03 11:04:28 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 281.0161ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:04:28 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 314.018ms        | match      | /company/getloops/*                      | 
+2015/05/03 11:04:28 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 330.0189ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:04:28 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 346.0198ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:04:28 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 357.0204ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:04:28 [router.go:845] [D] | GET        | /company/GetContact/0                    | 368.021ms        | match      | /company/getcontact/*                    | 
+2015/05/03 11:05:50 [router.go:845] [D] | GET        | /company/create                          | 109.0062ms       | match      | /company/create                          | 
+2015/05/03 11:05:51 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 352.0201ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:05:51 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 219.0125ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:05:51 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 321.0184ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:05:51 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 339.0194ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:05:51 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 365.0209ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:05:51 [router.go:845] [D] | GET        | /company/GetContact/0                    | 395.0226ms       | match      | /company/getcontact/*                    | 
+2015/05/03 11:06:52 [router.go:845] [D] | GET        | /company/create                          | 104.006ms        | match      | /company/create                          | 
+2015/05/03 11:06:53 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 311.0178ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:06:53 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 286.0164ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:06:53 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 306.0175ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:06:53 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 331.019ms        | match      | /company/getlinks/*                      | 
+2015/05/03 11:06:53 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 358.0205ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:06:53 [router.go:845] [D] | GET        | /company/GetContact/0                    | 386.0221ms       | match      | /company/getcontact/*                    | 
+2015/05/03 11:08:08 [router.go:845] [D] | GET        | /company/create                          | 120.0069ms       | match      | /company/create                          | 
+2015/05/03 11:08:09 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 303.0173ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:08:09 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 299.0171ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:08:09 [staticfile.go:62] [W] GetFileAttributesEx static/img/image.png: The system cannot find the file specified. 
+2015/05/03 11:08:09 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 418.0239ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:08:09 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 436.0249ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:08:09 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 456.0261ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:08:09 [router.go:845] [D] | GET        | /company/GetContact/0                    | 462.0264ms       | match      | /company/getcontact/*                    | 
+2015/05/03 11:09:28 [router.go:845] [D] | GET        | /company/create                          | 107.0061ms       | match      | /company/create                          | 
+2015/05/03 11:09:28 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 353.0201ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:09:29 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 398.0228ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:09:29 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 403.0231ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:09:29 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 407.0233ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:09:29 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 405.0232ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:09:29 [router.go:845] [D] | GET        | /company/GetContact/0                    | 427.0245ms       | match      | /company/getcontact/*                    | 
+2015/05/03 11:23:27 [router.go:845] [D] | GET        | /company/create                          | 120.0069ms       | match      | /company/create                          | 
+2015/05/03 11:23:28 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 280.016ms        | match      | /company/getcompany/*                    | 
+2015/05/03 11:23:28 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 437.025ms        | match      | /company/getmembers/*                    | 
+2015/05/03 11:23:28 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 419.024ms        | match      | /company/getloops/*                      | 
+2015/05/03 11:23:28 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 430.0246ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:23:28 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 448.0256ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:23:28 [router.go:845] [D] | GET        | /company/GetContact/0                    | 484.0277ms       | match      | /company/getcontact/*                    | 
+2015/05/03 11:26:11 [router.go:845] [D] | GET        | /company/create                          | 72.0041ms        | match      | /company/create                          | 
+2015/05/03 11:26:11 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 269.0154ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:26:12 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 324.0185ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:26:12 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 369.0211ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:26:12 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 400.0229ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:26:12 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 437.025ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 11:26:12 [router.go:845] [D] | GET        | /company/GetContact/0                    | 470.0269ms       | match      | /company/getcontact/*                    | 
+2015/05/03 11:30:12 [router.go:845] [D] | GET        | /company/create                          | 228.013ms        | match      | /company/create                          | 
+2015/05/03 11:30:13 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 430.0246ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:30:13 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 328.0187ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:30:13 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 371.0212ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:30:13 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 399.0229ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:30:13 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 439.0251ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:30:13 [router.go:845] [D] | GET        | /company/GetContact/0                    | 472.027ms        | match      | /company/getcontact/*                    | 
+2015/05/03 11:32:30 [router.go:845] [D] | GET        | /company/create                          | 155.0089ms       | match      | /company/create                          | 
+2015/05/03 11:32:31 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 326.0186ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:32:31 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 389.0222ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:32:31 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 469.0269ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:32:31 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 528.0302ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:32:31 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 574.0329ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:32:31 [router.go:845] [D] | GET        | /company/GetContact/0                    | 599.0343ms       | match      | /company/getcontact/*                    | 
+2015/05/03 11:34:19 [router.go:845] [D] | GET        | /company/create                          | 110.0063ms       | match      | /company/create                          | 
+2015/05/03 11:34:19 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 351.0201ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:34:20 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 517.0296ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:34:20 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 505.0289ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:34:20 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 530.0303ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:34:20 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 546.0313ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:34:20 [router.go:845] [D] | GET        | /company/GetContact/0                    | 585.0335ms       | match      | /company/getcontact/*                    | 
+2015/05/03 11:49:05 [router.go:845] [D] | GET        | /company/create                          | 120.0069ms       | match      | /company/create                          | 
+2015/05/03 11:49:06 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 417.0239ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:49:06 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 532.0305ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:49:06 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 585.0335ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:49:06 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 626.0358ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:49:06 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 676.0387ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:49:06 [router.go:845] [D] | GET        | /company/GetContact/0                    | 735.042ms        | match      | /company/getcontact/*                    | 
+2015/05/03 11:58:04 [router.go:845] [D] | GET        | /company/create                          | 129.0074ms       | match      | /company/create                          | 
+2015/05/03 11:58:05 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 581.0332ms       | match      | /company/getcompany/*                    | 
+2015/05/03 11:58:05 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 232.0133ms       | match      | /company/getloops/*                      | 
+2015/05/03 11:58:06 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 533.0304ms       | match      | /company/getmembers/*                    | 
+2015/05/03 11:58:06 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 794.0455ms       | match      | /company/getlinks/*                      | 
+2015/05/03 11:58:06 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 989.0566ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 11:58:06 [router.go:845] [D] | GET        | /company/GetContact/0                    | 1.1390652s       | match      | /company/getcontact/*                    | 
+2015/05/03 12:15:12 [router.go:845] [D] | GET        | /company/create                          | 87.0049ms        | match      | /company/create                          | 
+2015/05/03 12:15:13 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 577.033ms        | match      | /company/getcompany/*                    | 
+2015/05/03 12:15:13 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 640.0366ms       | match      | /company/getmembers/*                    | 
+2015/05/03 12:15:13 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 692.0396ms       | match      | /company/getloops/*                      | 
+2015/05/03 12:15:13 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 608.0348ms       | match      | /company/getlinks/*                      | 
+2015/05/03 12:15:13 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 644.0369ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 12:15:13 [router.go:845] [D] | GET        | /company/GetContact/0                    | 665.0381ms       | match      | /company/getcontact/*                    | 
+2015/05/03 12:18:48 [router.go:845] [D] | GET        | /company/create/1                        | 106.006ms        | match      | /company/create/*                        | 
+2015/05/03 12:18:48 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 12:18:48 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 12:18:49 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 12:18:49 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 12:18:49 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 12:18:49 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 12:18:49 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 12:18:49 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 12:18:49 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 12:18:49 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 12:18:49 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 175.0101ms       | match      | /company/getlinks/*                      | 
+2015/05/03 12:18:49 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 182.0105ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 12:18:49 [router.go:845] [D] | GET        | /company/GetContact/1                    | 188.0107ms       | match      | /company/getcontact/*                    | 
+2015/05/03 12:18:49 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 192.0109ms       | match      | /company/getcompany/*                    | 
+2015/05/03 12:18:49 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 12:18:49 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 12:18:49 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 12:18:49 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 12:18:49 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 12:18:49 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 12:18:49 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 12:18:49 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:50:21 [router.go:845] [D] | GET        | /company/create/1                        | 94.0053ms        | match      | /company/create/*                        | 
+2015/05/03 14:50:21 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 14:50:21 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 14:50:21 [log.go:108] [D] template Execute err: template: company/_company.tpl:128:35: executing "company/_company.tpl" at <.company.field>: field is not a field of struct type interface {} 
+2015/05/03 14:50:21 [router.go:876] [C] the request url is  /company/GetCompany/1 
+2015/05/03 14:50:21 [router.go:877] [C] Handler crashed with error template: company/_company.tpl:128:35: executing "company/_company.tpl" at <.company.field>: field is not a field of struct type interface {} 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:50:21 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:50:21 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:50:21 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 14:50:21 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:50:21 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:50:21 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:50:21 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 14:50:21 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:50:21 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:50:21 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:50:21 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 180.0103ms       | match      | /company/getlinks/*                      | 
+2015/05/03 14:50:21 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 226.013ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 14:50:21 [router.go:845] [D] | GET        | /company/GetContact/1                    | 315.018ms        | match      | /company/getcontact/*                    | 
+2015/05/03 14:50:58 [router.go:845] [D] | GET        | /company/create/1                        | 164.0094ms       | match      | /company/create/*                        | 
+2015/05/03 14:50:58 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 14:50:58 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 14:50:58 [log.go:108] [D] template Execute err: template: company/_company.tpl:128:35: executing "company/_company.tpl" at <.company.field>: field is not a field of struct type interface {} 
+2015/05/03 14:50:58 [router.go:876] [C] the request url is  /company/GetCompany/1 
+2015/05/03 14:50:58 [router.go:877] [C] Handler crashed with error template: company/_company.tpl:128:35: executing "company/_company.tpl" at <.company.field>: field is not a field of struct type interface {} 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:50:58 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:50:58 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:50:58 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 14:50:58 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:50:58 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:50:58 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:50:58 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 14:50:58 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:50:58 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:50:58 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:50:59 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 241.0138ms       | match      | /company/getlinks/*                      | 
+2015/05/03 14:50:59 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 273.0157ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 14:50:59 [router.go:845] [D] | GET        | /company/GetContact/1                    | 301.0172ms       | match      | /company/getcontact/*                    | 
+2015/05/03 14:52:03 [router.go:845] [D] | GET        | /company/create/1                        | 157.009ms        | match      | /company/create/*                        | 
+2015/05/03 14:52:03 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 14:52:03 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 14:52:04 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 345.0198ms       | match      | /company/getcompany/*                    | 
+2015/05/03 14:52:04 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:52:04 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 14:52:04 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:52:04 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:52:04 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:52:04 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:52:04 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:52:04 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:52:04 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:52:04 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 14:52:04 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:52:04 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:52:04 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:52:04 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:52:04 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:52:04 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:52:04 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 453.0259ms       | match      | /company/getlinks/*                      | 
+2015/05/03 14:52:04 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 512.0293ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 14:52:04 [router.go:845] [D] | GET        | /company/GetContact/1                    | 589.0337ms       | match      | /company/getcontact/*                    | 
+2015/05/03 14:53:20 [router.go:845] [D] | GET        | /company/create/1                        | 168.0096ms       | match      | /company/create/*                        | 
+2015/05/03 14:53:21 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 14:53:21 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 14:53:21 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 301.0172ms       | match      | /company/getcompany/*                    | 
+2015/05/03 14:53:21 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:53:21 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 14:53:21 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:53:21 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:53:21 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:53:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:53:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:53:21 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:53:21 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:53:21 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 14:53:21 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:53:21 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:53:21 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:53:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:53:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:53:21 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:53:21 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 493.0282ms       | match      | /company/getlinks/*                      | 
+2015/05/03 14:53:21 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 542.031ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 14:53:22 [router.go:845] [D] | GET        | /company/GetContact/1                    | 630.036ms        | match      | /company/getcontact/*                    | 
+2015/05/03 14:55:04 [router.go:845] [D] | GET        | /company/create/1                        | 99.0057ms        | match      | /company/create/*                        | 
+2015/05/03 14:55:04 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 14:55:04 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 14:55:05 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 382.0218ms       | match      | /company/getcompany/*                    | 
+2015/05/03 14:55:05 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:55:05 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 14:55:05 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:55:05 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:55:05 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:55:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:55:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:55:05 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:55:05 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:55:05 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 14:55:05 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:55:05 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:55:05 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:55:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:55:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:55:05 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:55:05 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 536.0307ms       | match      | /company/getlinks/*                      | 
+2015/05/03 14:55:05 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 557.0319ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 14:55:05 [router.go:845] [D] | GET        | /company/GetContact/1                    | 585.0334ms       | match      | /company/getcontact/*                    | 
+2015/05/03 14:55:48 [router.go:845] [D] | GET        | /company/create/1                        | 120.0068ms       | match      | /company/create/*                        | 
+2015/05/03 14:55:49 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 14:55:49 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 14:55:49 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 346.0198ms       | match      | /company/getcompany/*                    | 
+2015/05/03 14:55:49 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:55:49 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 14:55:49 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:55:49 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:55:49 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:55:49 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:55:49 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:55:49 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:55:49 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:55:49 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 14:55:49 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:55:49 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:55:49 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:55:49 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:55:49 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:55:49 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:55:50 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 598.0342ms       | match      | /company/getlinks/*                      | 
+2015/05/03 14:55:50 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 647.037ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 14:55:50 [router.go:845] [D] | GET        | /company/GetContact/1                    | 731.0418ms       | match      | /company/getcontact/*                    | 
+2015/05/03 14:56:16 [router.go:845] [D] | GET        | /company/create/1                        | 146.0083ms       | match      | /company/create/*                        | 
+2015/05/03 14:56:16 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 14:56:16 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 14:56:17 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 345.0197ms       | match      | /company/getcompany/*                    | 
+2015/05/03 14:56:17 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:56:17 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 14:56:17 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 14:56:17 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:56:17 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:56:17 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:56:17 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:56:17 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:56:17 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:56:17 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 14:56:17 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 14:56:17 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 14:56:17 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 14:56:17 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 14:56:17 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 14:56:17 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 14:56:17 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 436.025ms        | match      | /company/getlinks/*                      | 
+2015/05/03 14:56:17 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 473.0271ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 14:56:17 [router.go:845] [D] | GET        | /company/GetContact/1                    | 507.029ms        | match      | /company/getcontact/*                    | 
+2015/05/03 15:34:16 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 15:34:17 [app.go:96] [I] http server Running on :80
+2015/05/03 15:34:37 [router.go:845] [D] | GET        | /company/create/1                        | 99.0056ms        | match      | /company/create/*                        | 
+2015/05/03 15:34:37 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 15:34:37 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 15:34:38 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 272.0155ms       | match      | /company/getcompany/*                    | 
+2015/05/03 15:34:38 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:34:38 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 15:34:38 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:34:38 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:34:38 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:34:38 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:34:38 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:34:38 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:34:38 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:34:38 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 15:34:38 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:34:38 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:34:38 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:34:38 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:34:38 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:34:38 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:34:38 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 541.0309ms       | match      | /company/getlinks/*                      | 
+2015/05/03 15:34:38 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 566.0324ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 15:34:38 [router.go:845] [D] | GET        | /company/GetContact/1                    | 580.0332ms       | match      | /company/getcontact/*                    | 
+2015/05/03 15:36:42 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 15:36:42 [app.go:96] [I] http server Running on :80
+2015/05/03 15:36:47 [router.go:845] [D] | GET        | /company/create/1                        | 63.0036ms        | match      | /company/create/*                        | 
+2015/05/03 15:36:48 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 15:36:48 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 15:36:48 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 412.0235ms       | match      | /company/getcompany/*                    | 
+2015/05/03 15:36:48 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:36:48 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 15:36:48 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:36:48 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:36:48 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:36:48 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:36:48 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:36:48 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:36:48 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:36:48 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 15:36:48 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:36:48 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:36:48 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:36:48 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:36:49 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:36:49 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:36:49 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 642.0367ms       | match      | /company/getlinks/*                      | 
+2015/05/03 15:36:49 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 655.0375ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 15:36:49 [router.go:845] [D] | GET        | /company/GetContact/1                    | 714.0409ms       | match      | /company/getcontact/*                    | 
+2015/05/03 15:37:04 [log.go:108] [D] Company/PostCompany Info:time.Time{
+    sec: 0,
+    nsec: unknow,
+    loc: nil,
+} 
+2015/05/03 15:42:50 [log.go:108] [D] Loading language: en-US 
+2015/05/03 15:42:50 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 15:42:50 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 15:42:50 [app.go:96] [I] http server Running on :80
+2015/05/03 15:43:07 [router.go:845] [D] | GET        | /company/create/1                        | 128.0074ms       | match      | /company/create/*                        | 
+2015/05/03 15:43:07 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 15:43:07 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 15:43:07 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 226.0129ms       | match      | /company/getcompany/*                    | 
+2015/05/03 15:43:07 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:43:07 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 15:43:07 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:43:07 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:43:07 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:43:07 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:43:07 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:43:07 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:43:07 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:43:07 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 15:43:07 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:43:07 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:43:07 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:43:07 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:43:07 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:43:07 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:43:08 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 477.0273ms       | match      | /company/getlinks/*                      | 
+2015/05/03 15:43:08 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 499.0285ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 15:43:08 [router.go:845] [D] | GET        | /company/GetContact/1                    | 510.0291ms       | match      | /company/getcontact/*                    | 
+2015/05/03 15:44:42 [router.go:845] [D] | GET        | /company/create/1                        | 144.0082ms       | match      | /company/create/*                        | 
+2015/05/03 15:44:42 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 15:44:42 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 15:44:43 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 345.0197ms       | match      | /company/getcompany/*                    | 
+2015/05/03 15:44:43 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:44:43 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 15:44:43 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:44:43 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:44:43 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:44:43 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:44:43 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:44:43 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:44:43 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:44:43 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 15:44:43 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:44:43 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:44:43 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:44:43 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:44:43 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:44:43 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:44:43 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 425.0244ms       | match      | /company/getlinks/*                      | 
+2015/05/03 15:44:43 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 477.0273ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 15:44:43 [router.go:845] [D] | GET        | /company/GetContact/1                    | 510.0291ms       | match      | /company/getcontact/*                    | 
+2015/05/03 15:45:41 [router.go:845] [D] | GET        | /company/create/1                        | 42.0024ms        | match      | /company/create/*                        | 
+2015/05/03 15:45:41 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 15:45:41 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 15:45:41 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 178.0102ms       | match      | /company/getcompany/*                    | 
+2015/05/03 15:45:41 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:45:41 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 15:45:41 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:45:41 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:45:41 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:45:41 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:45:41 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:45:41 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:45:41 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:45:41 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 15:45:41 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:45:41 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:45:41 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:45:41 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:45:41 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:45:41 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:45:42 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 423.0242ms       | match      | /company/getlinks/*                      | 
+2015/05/03 15:45:42 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 489.028ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 15:45:42 [router.go:845] [D] | GET        | /company/GetContact/1                    | 536.0307ms       | match      | /company/getcontact/*                    | 
+2015/05/03 15:47:54 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 15:47:54 [app.go:96] [I] http server Running on :80
+2015/05/03 15:48:15 [router.go:845] [D] | GET        | /company/create/1                        | 45.0026ms        | match      | /company/create/*                        | 
+2015/05/03 15:48:16 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 15:48:16 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 15:48:16 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 294.0169ms       | match      | /company/getcompany/*                    | 
+2015/05/03 15:48:16 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:48:16 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 15:48:16 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:48:16 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:48:16 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:48:16 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:48:16 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:48:16 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:48:16 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:48:16 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 15:48:16 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:48:16 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:48:16 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:48:16 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:48:16 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:48:16 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:48:16 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 351.0201ms       | match      | /company/getlinks/*                      | 
+2015/05/03 15:48:16 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 412.0236ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 15:48:16 [router.go:845] [D] | GET        | /company/GetContact/1                    | 430.0246ms       | match      | /company/getcontact/*                    | 
+2015/05/03 15:48:47 [router.go:845] [D] | GET        | /company/create/1                        | 55.0032ms        | match      | /company/create/*                        | 
+2015/05/03 15:48:47 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 15:48:47 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 15:48:47 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 307.0175ms       | match      | /company/getcompany/*                    | 
+2015/05/03 15:48:47 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:48:47 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 15:48:47 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:48:47 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:48:47 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:48:47 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:48:47 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:48:47 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:48:47 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:48:47 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 15:48:47 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:48:47 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:48:47 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:48:47 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:48:47 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:48:47 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:48:47 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 471.0269ms       | match      | /company/getlinks/*                      | 
+2015/05/03 15:48:48 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 477.0273ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 15:48:48 [router.go:845] [D] | GET        | /company/GetContact/1                    | 515.0294ms       | match      | /company/getcontact/*                    | 
+2015/05/03 15:49:05 [router.go:845] [D] | GET        | /company/create/1                        | 88.005ms         | match      | /company/create/*                        | 
+2015/05/03 15:49:05 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 15:49:05 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 15:49:05 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 392.0224ms       | match      | /company/getcompany/*                    | 
+2015/05/03 15:49:05 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:49:05 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 15:49:05 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 15:49:05 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:49:05 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:49:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:49:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:49:05 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:49:06 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:49:06 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 15:49:06 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 15:49:06 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 15:49:06 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 15:49:06 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 15:49:06 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 15:49:06 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 15:49:06 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 434.0248ms       | match      | /company/getlinks/*                      | 
+2015/05/03 15:49:06 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 461.0264ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 15:49:06 [router.go:845] [D] | GET        | /company/GetContact/1                    | 458.0262ms       | match      | /company/getcontact/*                    | 
+2015/05/03 15:51:52 [m_base.go:132] [E] 无效数据：Place.Required-Can not be empty 
+2015/05/03 16:06:09 [log.go:108] [D] Loading language: en-US 
+2015/05/03 16:06:09 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 16:06:09 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 16:06:09 [app.go:96] [I] http server Running on :80
+2015/05/03 16:06:16 [router.go:845] [D] | GET        | /company/create/1                        | 147.0084ms       | match      | /company/create/*                        | 
+2015/05/03 16:06:16 [log.go:108] [D] Company/GetLoops Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Loops,
+} 
+2015/05/03 16:06:16 [log.go:108] [D] Company/GetMembers Info:sqlite3.Error{
+    Code: 1,
+    ExtendedCode: 1,
+    err: no such table: Members,
+} 
+2015/05/03 16:06:16 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 313.0179ms       | match      | /company/getcompany/*                    | 
+2015/05/03 16:06:16 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 16:06:16 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 16:06:16 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 16:06:16 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:06:16 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:06:16 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:06:16 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:06:16 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:06:16 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:06:16 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 16:06:16 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:06:16 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:06:16 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:06:16 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:06:16 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:06:16 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:06:17 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 498.0285ms       | match      | /company/getlinks/*                      | 
+2015/05/03 16:06:17 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 515.0295ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 16:06:17 [router.go:845] [D] | GET        | /company/GetContact/1                    | 522.0299ms       | match      | /company/getcontact/*                    | 
+2015/05/03 16:06:34 [router.go:845] [D] | GET        | /company/create/0                        | 104.006ms        | match      | /company/create/*                        | 
+2015/05/03 16:06:35 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 190.0109ms       | match      | /company/getloops/*                      | 
+2015/05/03 16:06:35 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 205.0117ms       | match      | /company/getmembers/*                    | 
+2015/05/03 16:06:35 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 275.0157ms       | match      | /company/getlinks/*                      | 
+2015/05/03 16:06:35 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 319.0182ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 16:06:35 [router.go:845] [D] | GET        | /company/GetContact/0                    | 375.0214ms       | match      | /company/getcontact/*                    | 
+2015/05/03 16:06:35 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 443.0253ms       | match      | /company/getcompany/*                    | 
+2015/05/03 16:21:42 [router.go:845] [D] | GET        | /company/create/1                        | 79.0045ms        | match      | /company/create/*                        | 
+2015/05/03 16:21:42 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 16:21:42 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 16:21:42 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 16:21:42 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:21:42 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:21:42 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:21:42 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:21:42 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:21:42 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:21:42 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 16:21:42 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:21:42 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:21:42 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:21:42 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:21:42 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:21:42 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:21:42 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 185.0106ms       | match      | /company/getlinks/*                      | 
+2015/05/03 16:21:42 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 248.0141ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 16:21:42 [router.go:845] [D] | GET        | /company/GetContact/1                    | 327.0187ms       | match      | /company/getcontact/*                    | 
+2015/05/03 16:21:42 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 394.0225ms       | match      | /company/getcompany/*                    | 
+2015/05/03 16:22:13 [router.go:845] [D] | GET        | /company/create/1                        | 96.0055ms        | match      | /company/create/*                        | 
+2015/05/03 16:22:14 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 463.0265ms       | match      | /company/getcompany/*                    | 
+2015/05/03 16:22:14 [router.go:845] [D] | GET        | /company/GetContact/1                    | 406.0232ms       | match      | /company/getcontact/*                    | 
+2015/05/03 16:22:14 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 16:22:14 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 16:22:14 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 16:22:14 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:22:14 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:22:14 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:22:14 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:22:14 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:22:14 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:22:14 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 16:22:14 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:22:14 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:22:14 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:22:14 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:22:14 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:22:14 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:22:14 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 358.0204ms       | match      | /company/getlinks/*                      | 
+2015/05/03 16:22:14 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 345.0198ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 16:25:27 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 16:25:27 [app.go:96] [I] http server Running on :80
+2015/05/03 16:25:30 [router.go:845] [D] | GET        | /company/create/1                        | 171.0098ms       | match      | /company/create/*                        | 
+2015/05/03 16:25:31 [log.go:108] [D] Company/GetLoops Info:[]models.Loops{ } 
+2015/05/03 16:25:31 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 435.0249ms       | match      | /company/getcompany/*                    | 
+2015/05/03 16:25:31 [router.go:845] [D] | GET        | /company/GetContact/1                    | 613.0351ms       | match      | /company/getcontact/*                    | 
+2015/05/03 16:25:31 [log.go:108] [D] template Execute err: template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 16:25:31 [router.go:876] [C] the request url is  /company/GetLoops/1 
+2015/05/03 16:25:31 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:34:75: executing "company/_loops.tpl" at <.loops.Amount>: can't evaluate field Amount in type interface {} 
+2015/05/03 16:25:31 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:25:31 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:25:31 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:25:31 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:25:31 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:25:31 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:25:31 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 16:25:31 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:25:31 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:25:31 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:25:31 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:25:31 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:25:31 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:25:31 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 699.04ms         | match      | /company/getlinks/*                      | 
+2015/05/03 16:25:32 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 722.0413ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 16:28:47 [log.go:108] [D] Loading language: en-US 
+2015/05/03 16:28:47 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 16:28:47 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 16:28:47 [app.go:96] [I] http server Running on :80
+2015/05/03 16:37:03 [router.go:845] [D] | GET        | /company/create/1                        | 164.0094ms       | match      | /company/create/*                        | 
+2015/05/03 16:37:04 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 408.0233ms       | match      | /company/getcompany/*                    | 
+2015/05/03 16:37:04 [router.go:845] [D] | GET        | /company/GetLoops/1                      | 535.0306ms       | match      | /company/getloops/*                      | 
+2015/05/03 16:37:04 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:37:04 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 16:37:04 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:37:04 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:37:04 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:37:04 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:37:04 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:37:04 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:37:04 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 597.0342ms       | match      | /company/getlinks/*                      | 
+2015/05/03 16:37:04 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 655.0375ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 16:37:04 [router.go:845] [D] | GET        | /company/GetContact/1                    | 686.0392ms       | match      | /company/getcontact/*                    | 
+2015/05/03 16:39:27 [router.go:845] [D] | GET        | /company/create/1                        | 212.0121ms       | match      | /company/create/*                        | 
+2015/05/03 16:39:28 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 366.021ms        | match      | /company/getcompany/*                    | 
+2015/05/03 16:39:28 [router.go:845] [D] | GET        | /company/GetLoops/1                      | 371.0213ms       | match      | /company/getloops/*                      | 
+2015/05/03 16:39:28 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:39:28 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 16:39:28 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:39:28 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:39:28 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:39:28 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:39:28 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:39:28 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:39:28 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 412.0235ms       | match      | /company/getlinks/*                      | 
+2015/05/03 16:39:28 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 450.0257ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 16:39:29 [router.go:845] [D] | GET        | /company/GetContact/1                    | 526.0301ms       | match      | /company/getcontact/*                    | 
+2015/05/03 16:41:18 [router.go:845] [D] | GET        | /company/create/1                        | 944.054ms        | match      | /company/create/*                        | 
+2015/05/03 16:41:20 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 501.0286ms       | match      | /company/getcompany/*                    | 
+2015/05/03 16:41:20 [router.go:845] [D] | GET        | /company/GetLoops/1                      | 518.0296ms       | match      | /company/getloops/*                      | 
+2015/05/03 16:41:20 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:41:20 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 16:41:20 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:41:20 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:41:20 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:41:20 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:41:20 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:41:20 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:41:20 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 576.0329ms       | match      | /company/getlinks/*                      | 
+2015/05/03 16:41:20 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 641.0367ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 16:41:20 [router.go:845] [D] | GET        | /company/GetContact/1                    | 763.0437ms       | match      | /company/getcontact/*                    | 
+2015/05/03 16:43:21 [router.go:845] [D] | GET        | /company/create/1                        | 167.0096ms       | match      | /company/create/*                        | 
+2015/05/03 16:43:23 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 525.03ms         | match      | /company/getcompany/*                    | 
+2015/05/03 16:43:23 [router.go:845] [D] | GET        | /company/GetLoops/1                      | 481.0275ms       | match      | /company/getloops/*                      | 
+2015/05/03 16:43:23 [log.go:108] [D] template Execute err: template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:43:23 [router.go:876] [C] the request url is  /company/GetMembers/1 
+2015/05/03 16:43:23 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:30:82: executing "company/_members.tpl" at <.members.Name>: can't evaluate field Name in type interface {} 
+2015/05/03 16:43:23 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/03 16:43:23 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/03 16:43:23 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/03 16:43:23 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/03 16:43:23 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/03 16:43:23 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 566.0323ms       | match      | /company/getlinks/*                      | 
+2015/05/03 16:43:23 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 734.042ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 16:43:23 [router.go:845] [D] | GET        | /company/GetContact/1                    | 953.0545ms       | match      | /company/getcontact/*                    | 
+2015/05/03 16:45:12 [router.go:845] [D] | GET        | /basic/index/6                           | 130.0074ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 16:45:31 [router.go:845] [D] | GET        | /my/company                              | 141.008ms        | match      | /my/company                              | 
+2015/05/03 16:45:32 [router.go:845] [D] | GET        | /company/create                          | 54.0031ms        | match      | /company/create                          | 
+2015/05/03 16:45:33 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 504.0288ms       | match      | /company/getcompany/*                    | 
+2015/05/03 16:45:33 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 475.0272ms       | match      | /company/getloops/*                      | 
+2015/05/03 16:45:33 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 531.0304ms       | match      | /company/getmembers/*                    | 
+2015/05/03 16:45:33 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 568.0325ms       | match      | /company/getlinks/*                      | 
+2015/05/03 16:45:34 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 662.0379ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 16:45:34 [router.go:845] [D] | GET        | /company/GetContact/0                    | 683.039ms        | match      | /company/getcontact/*                    | 
+2015/05/03 16:48:57 [log.go:108] [D] Loading language: en-US 
+2015/05/03 16:48:57 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 16:48:57 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 16:48:57 [app.go:96] [I] http server Running on :80
+2015/05/03 16:52:19 [log.go:108] [D] Loading language: en-US 
+2015/05/03 16:52:19 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 16:52:19 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 16:52:19 [app.go:96] [I] http server Running on :80
+2015/05/03 16:53:12 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 16:53:12 [app.go:96] [I] http server Running on :80
+2015/05/03 16:54:34 [router.go:845] [D] | GET        | /company/create                          | 210.012ms        | match      | /company/create                          | 
+2015/05/03 16:54:34 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 381.0218ms       | match      | /company/getcompany/*                    | 
+2015/05/03 16:54:34 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 360.0206ms       | match      | /company/getloops/*                      | 
+2015/05/03 16:54:35 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 408.0233ms       | match      | /company/getmembers/*                    | 
+2015/05/03 16:54:35 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 454.026ms        | match      | /company/getlinks/*                      | 
+2015/05/03 16:54:35 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 492.0282ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 16:54:35 [router.go:845] [D] | GET        | /company/GetContact/0                    | 541.0309ms       | match      | /company/getcontact/*                    | 
+2015/05/03 16:54:37 [router.go:845] [D] | GET        | /basic/index/7                           | 113.0065ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 16:56:14 [router.go:845] [D] | GET        | /basic/index/5                           | 129.0074ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 16:57:47 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 16:57:47 [app.go:96] [I] http server Running on :80
+2015/05/03 16:59:20 [router.go:845] [D] | GET        | /company/create                          | 182.0104ms       | match      | /company/create                          | 
+2015/05/03 16:59:21 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 404.0231ms       | match      | /company/getcompany/*                    | 
+2015/05/03 16:59:21 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 462.0264ms       | match      | /company/getloops/*                      | 
+2015/05/03 16:59:21 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 506.029ms        | match      | /company/getmembers/*                    | 
+2015/05/03 16:59:21 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 561.0321ms       | match      | /company/getlinks/*                      | 
+2015/05/03 16:59:21 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 558.0319ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 16:59:21 [router.go:845] [D] | GET        | /company/GetContact/0                    | 562.0321ms       | match      | /company/getcontact/*                    | 
+2015/05/03 17:01:24 [log.go:108] [D] Loading language: en-US 
+2015/05/03 17:01:24 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 17:01:24 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 17:01:24 [app.go:96] [I] http server Running on :80
+2015/05/03 17:54:15 [log.go:108] [D] Loading language: en-US 
+2015/05/03 17:54:15 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 17:54:15 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 17:54:15 [app.go:96] [I] http server Running on :80
+2015/05/03 17:55:31 [log.go:108] [D] Loading language: en-US 
+2015/05/03 17:55:31 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 17:55:31 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 17:55:31 [app.go:96] [I] http server Running on :80
+2015/05/03 18:04:42 [router.go:845] [D] | GET        | /company/create                          | 74.0042ms        | match      | /company/create                          | 
+2015/05/03 18:04:43 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 686.0392ms       | match      | /company/getcompany/*                    | 
+2015/05/03 18:04:43 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 594.034ms        | match      | /company/getloops/*                      | 
+2015/05/03 18:04:43 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 680.0389ms       | match      | /company/getmembers/*                    | 
+2015/05/03 18:04:43 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 685.0392ms       | match      | /company/getlinks/*                      | 
+2015/05/03 18:04:43 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 727.0416ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 18:04:43 [router.go:845] [D] | GET        | /company/GetContact/0                    | 693.0397ms       | match      | /company/getcontact/*                    | 
+2015/05/03 18:05:32 [router.go:845] [D] | GET        | /company/create                          | 173.0099ms       | match      | /company/create                          | 
+2015/05/03 18:05:33 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 400.0229ms       | match      | /company/getcompany/*                    | 
+2015/05/03 18:05:33 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 451.0258ms       | match      | /company/getloops/*                      | 
+2015/05/03 18:05:33 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 549.0314ms       | match      | /company/getmembers/*                    | 
+2015/05/03 18:05:33 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 560.032ms        | match      | /company/getlinks/*                      | 
+2015/05/03 18:05:33 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 581.0333ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 18:05:33 [router.go:845] [D] | GET        | /company/GetContact/0                    | 597.0341ms       | match      | /company/getcontact/*                    | 
+2015/05/03 18:06:16 [router.go:845] [D] | GET        | /company/create                          | 99.0056ms        | match      | /company/create                          | 
+2015/05/03 18:06:18 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 331.0189ms       | match      | /company/getcompany/*                    | 
+2015/05/03 18:06:18 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 312.0179ms       | match      | /company/getloops/*                      | 
+2015/05/03 18:06:18 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 513.0294ms       | match      | /company/getmembers/*                    | 
+2015/05/03 18:06:18 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 552.0316ms       | match      | /company/getlinks/*                      | 
+2015/05/03 18:06:18 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 582.0333ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 18:06:18 [router.go:845] [D] | GET        | /company/GetContact/0                    | 603.0345ms       | match      | /company/getcontact/*                    | 
+2015/05/03 18:08:23 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 18:08:23 [app.go:96] [I] http server Running on :80
+2015/05/03 18:09:38 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 18:09:39 [app.go:96] [I] http server Running on :80
+2015/05/03 18:09:47 [router.go:845] [D] | GET        | /company/create                          | 303.0173ms       | match      | /company/create                          | 
+2015/05/03 18:09:48 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 396.0226ms       | match      | /company/getcompany/*                    | 
+2015/05/03 18:09:48 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 389.0223ms       | match      | /company/getloops/*                      | 
+2015/05/03 18:09:48 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 630.036ms        | match      | /company/getmembers/*                    | 
+2015/05/03 18:09:49 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 662.0379ms       | match      | /company/getlinks/*                      | 
+2015/05/03 18:09:49 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 689.0394ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 18:09:49 [router.go:845] [D] | GET        | /company/GetContact/0                    | 726.0416ms       | match      | /company/getcontact/*                    | 
+2015/05/03 18:11:40 [router.go:845] [D] | GET        | /company/create                          | 148.0085ms       | match      | /company/create                          | 
+2015/05/03 18:11:42 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 503.0288ms       | match      | /company/getcompany/*                    | 
+2015/05/03 18:11:42 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 666.0381ms       | match      | /company/getloops/*                      | 
+2015/05/03 18:11:42 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 816.0466ms       | match      | /company/getmembers/*                    | 
+2015/05/03 18:11:42 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 864.0494ms       | match      | /company/getlinks/*                      | 
+2015/05/03 18:11:42 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 864.0494ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 18:11:42 [router.go:845] [D] | GET        | /company/GetContact/0                    | 925.0529ms       | match      | /company/getcontact/*                    | 
+2015/05/03 18:15:32 [router.go:845] [D] | GET        | /company/create                          | 58.0033ms        | match      | /company/create                          | 
+2015/05/03 18:15:33 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 338.0193ms       | match      | /company/getcompany/*                    | 
+2015/05/03 18:15:33 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 424.0242ms       | match      | /company/getloops/*                      | 
+2015/05/03 18:15:33 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 491.028ms        | match      | /company/getmembers/*                    | 
+2015/05/03 18:15:33 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 557.0319ms       | match      | /company/getlinks/*                      | 
+2015/05/03 18:15:33 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 599.0343ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 18:15:33 [router.go:845] [D] | GET        | /company/GetContact/0                    | 638.0365ms       | match      | /company/getcontact/*                    | 
+2015/05/03 18:17:07 [router.go:845] [D] | GET        | /company/create                          | 125.0071ms       | match      | /company/create                          | 
+2015/05/03 18:17:08 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 396.0226ms       | match      | /company/getcompany/*                    | 
+2015/05/03 18:17:08 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 360.0206ms       | match      | /company/getloops/*                      | 
+2015/05/03 18:17:08 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 492.0282ms       | match      | /company/getmembers/*                    | 
+2015/05/03 18:17:08 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 517.0296ms       | match      | /company/getlinks/*                      | 
+2015/05/03 18:17:08 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 548.0314ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 18:17:08 [router.go:845] [D] | GET        | /company/GetContact/0                    | 586.0335ms       | match      | /company/getcontact/*                    | 
+2015/05/03 18:17:33 [router.go:845] [D] | GET        | /company/create                          | 125.0072ms       | match      | /company/create                          | 
+2015/05/03 18:17:33 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 269.0154ms       | match      | /company/getcompany/*                    | 
+2015/05/03 18:17:34 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 375.0214ms       | match      | /company/getloops/*                      | 
+2015/05/03 18:17:34 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 481.0275ms       | match      | /company/getmembers/*                    | 
+2015/05/03 18:17:34 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 530.0303ms       | match      | /company/getlinks/*                      | 
+2015/05/03 18:17:34 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 570.0326ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 18:17:34 [router.go:845] [D] | GET        | /company/GetContact/0                    | 615.0352ms       | match      | /company/getcontact/*                    | 
+2015/05/03 18:18:12 [router.go:845] [D] | GET        | /company/create                          | 147.0084ms       | match      | /company/create                          | 
+2015/05/03 18:18:13 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 530.0303ms       | match      | /company/getcompany/*                    | 
+2015/05/03 18:18:14 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 716.041ms        | match      | /company/getloops/*                      | 
+2015/05/03 18:18:14 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 790.0452ms       | match      | /company/getmembers/*                    | 
+2015/05/03 18:18:14 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 809.0463ms       | match      | /company/getlinks/*                      | 
+2015/05/03 18:18:14 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 842.0481ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 18:18:14 [router.go:845] [D] | GET        | /company/GetContact/0                    | 879.0503ms       | match      | /company/getcontact/*                    | 
+2015/05/03 18:28:00 [router.go:845] [D] | GET        | /company/create                          | 143.0082ms       | match      | /company/create                          | 
+2015/05/03 18:28:01 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 541.0309ms       | match      | /company/getcompany/*                    | 
+2015/05/03 18:28:02 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 459.0263ms       | match      | /company/getloops/*                      | 
+2015/05/03 18:28:02 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 628.036ms        | match      | /company/getmembers/*                    | 
+2015/05/03 18:28:02 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 699.04ms         | match      | /company/getlinks/*                      | 
+2015/05/03 18:28:02 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 840.048ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 18:28:02 [router.go:845] [D] | GET        | /company/GetContact/0                    | 1.415081s        | match      | /company/getcontact/*                    | 
+2015/05/03 18:28:56 [router.go:845] [D] | GET        | /company/create                          | 148.0085ms       | match      | /company/create                          | 
+2015/05/03 18:28:58 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 978.056ms        | match      | /company/getcompany/*                    | 
+2015/05/03 18:28:58 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 438.0251ms       | match      | /company/getlinks/*                      | 
+2015/05/03 18:28:58 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 512.0293ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 18:28:58 [router.go:845] [D] | GET        | /company/GetContact/0                    | 549.0314ms       | match      | /company/getcontact/*                    | 
+2015/05/03 18:28:58 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 619.0355ms       | match      | /company/getloops/*                      | 
+2015/05/03 18:28:58 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 794.0454ms       | match      | /company/getmembers/*                    | 
+2015/05/03 18:32:00 [router.go:845] [D] | GET        | /company/create                          | 49.0028ms        | match      | /company/create                          | 
+2015/05/03 18:32:02 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 453.0259ms       | match      | /company/getcompany/*                    | 
+2015/05/03 18:32:02 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 435.0249ms       | match      | /company/getloops/*                      | 
+2015/05/03 18:32:02 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 602.0344ms       | match      | /company/getmembers/*                    | 
+2015/05/03 18:32:02 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 656.0375ms       | match      | /company/getlinks/*                      | 
+2015/05/03 18:32:02 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 727.0416ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 18:32:02 [router.go:845] [D] | GET        | /company/GetContact/0                    | 797.0456ms       | match      | /company/getcontact/*                    | 
+2015/05/03 18:43:38 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 18:43:38 [app.go:96] [I] http server Running on :80
+2015/05/03 18:48:17 [log.go:108] [D] Loading language: en-US 
+2015/05/03 18:48:17 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 18:48:17 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 18:48:17 [app.go:96] [I] http server Running on :80
+2015/05/03 18:52:22 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 18:52:22 [app.go:96] [I] http server Running on :80
+2015/05/03 18:52:52 [router.go:845] [D] | GET        | /basic/index/7                           | 167.0095ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 18:53:01 [m_base.go:132] [E] 无效数据：Value.Required-Can not be empty 
+2015/05/03 18:53:22 [log.go:108] [D] Loading language: en-US 
+2015/05/03 18:53:22 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 18:53:22 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 18:53:22 [app.go:96] [I] http server Running on :80
+2015/05/03 18:53:56 [router.go:845] [D] | GET        | /basic/index/7                           | 148.0085ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 18:56:00 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 18:56:00 [app.go:96] [I] http server Running on :80
+2015/05/03 18:57:57 [router.go:845] [D] | GET        | /basic/index/7                           | 144.0082ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 19:00:40 [router.go:845] [D] | GET        | /basic/index/7                           | 119.0068ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 19:01:32 [router.go:845] [D] | GET        | /basic/index/7                           | 135.0077ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 19:01:49 [router.go:845] [D] | GET        | /basic/index/7                           | 146.0084ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 19:03:32 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 19:03:32 [app.go:96] [I] http server Running on :80
+2015/05/03 19:04:10 [router.go:845] [D] | GET        | /basic/index/7                           | 194.0111ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 19:04:38 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 19:04:38 [app.go:96] [I] http server Running on :80
+2015/05/03 19:05:08 [router.go:845] [D] | GET        | /basic/index/7                           | 163.0093ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 19:05:43 [router.go:845] [D] | GET        | /basic/index/7                           | 294.0168ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 19:05:47 [router.go:845] [D] | GET        | /basic/index/0                           | 231.0133ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 19:05:50 [router.go:845] [D] | GET        | /basic/index/7                           | 129.0074ms       | match      | /basic/index/:typeId                     | 
+2015/05/03 19:06:46 [log.go:108] [D] Loading language: en-US 
+2015/05/03 19:06:46 [log.go:108] [D] Loading language: zh-CN 
+2015/05/03 19:06:46 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/03 19:06:46 [app.go:96] [I] http server Running on :80
+2015/05/03 19:06:48 [router.go:845] [D] | GET        | /basic/index/7                           | 64.0037ms        | match      | /basic/index/:typeId                     | 
+2015/05/03 19:06:54 [router.go:845] [D] | GET        | /my/company                              | 122.0069ms       | match      | /my/company                              | 
+2015/05/03 19:06:58 [router.go:845] [D] | GET        | /company/create                          | 118.0067ms       | match      | /company/create                          | 
+2015/05/03 19:06:59 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 376.0215ms       | match      | /company/getcompany/*                    | 
+2015/05/03 19:06:59 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 408.0233ms       | match      | /company/getmembers/*                    | 
+2015/05/03 19:06:59 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 510.0291ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:06:59 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 643.0368ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:06:59 [router.go:845] [D] | GET        | /company/GetContact/0                    | 686.0393ms       | match      | /company/getcontact/*                    | 
+2015/05/03 19:06:59 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 760.0435ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:09:02 [router.go:845] [D] | GET        | /company/create                          | 187.0107ms       | match      | /company/create                          | 
+2015/05/03 19:09:03 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 406.0233ms       | match      | /company/getcompany/*                    | 
+2015/05/03 19:09:03 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 446.0255ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:09:04 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 839.048ms        | match      | /company/getmembers/*                    | 
+2015/05/03 19:09:04 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 937.0536ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:09:04 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 1.1710669s       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:09:04 [router.go:845] [D] | GET        | /company/GetContact/0                    | 1.2890737s       | match      | /company/getcontact/*                    | 
+2015/05/03 19:11:58 [router.go:845] [D] | GET        | /company/create                          | 186.0107ms       | match      | /company/create                          | 
+2015/05/03 19:11:59 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 375.0214ms       | match      | /company/getcompany/*                    | 
+2015/05/03 19:11:59 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 527.0301ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:11:59 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 693.0397ms       | match      | /company/getmembers/*                    | 
+2015/05/03 19:11:59 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 765.0438ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:12:00 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 1.1140637s       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:12:00 [router.go:845] [D] | GET        | /company/GetContact/0                    | 1.1760673s       | match      | /company/getcontact/*                    | 
+2015/05/03 19:15:32 [router.go:845] [D] | GET        | /company/create                          | 182.0104ms       | match      | /company/create                          | 
+2015/05/03 19:15:33 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 576.033ms        | match      | /company/getcompany/*                    | 
+2015/05/03 19:15:34 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 422.0241ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:15:34 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 589.0337ms       | match      | /company/getmembers/*                    | 
+2015/05/03 19:15:34 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 896.0513ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:15:34 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 1.2330706s       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:15:34 [router.go:845] [D] | GET        | /company/GetContact/0                    | 1.2440711s       | match      | /company/getcontact/*                    | 
+2015/05/03 19:19:29 [router.go:845] [D] | GET        | /company/create                          | 150.0086ms       | match      | /company/create                          | 
+2015/05/03 19:19:30 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 473.0271ms       | match      | /company/getcompany/*                    | 
+2015/05/03 19:19:30 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 545.0311ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:19:30 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 780.0446ms       | match      | /company/getmembers/*                    | 
+2015/05/03 19:19:30 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 851.0487ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:19:30 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 945.0541ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:19:31 [router.go:845] [D] | GET        | /company/GetContact/0                    | 1.0420596s       | match      | /company/getcontact/*                    | 
+2015/05/03 19:25:06 [router.go:845] [D] | GET        | /company/create                          | 88.005ms         | match      | /company/create                          | 
+2015/05/03 19:25:06 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 279.016ms        | match      | /company/getcompany/*                    | 
+2015/05/03 19:25:06 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 427.0244ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:25:06 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 508.029ms        | match      | /company/getmembers/*                    | 
+2015/05/03 19:25:06 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 552.0316ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:25:06 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 603.0345ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:25:06 [router.go:845] [D] | GET        | /company/GetContact/0                    | 635.0363ms       | match      | /company/getcontact/*                    | 
+2015/05/03 19:26:44 [router.go:845] [D] | GET        | /company/create                          | 114.0065ms       | match      | /company/create                          | 
+2015/05/03 19:26:45 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 278.0159ms       | match      | /company/getcompany/*                    | 
+2015/05/03 19:26:45 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 336.0192ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:26:45 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 477.0273ms       | match      | /company/getmembers/*                    | 
+2015/05/03 19:26:45 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 486.0278ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:26:45 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 520.0297ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:26:45 [router.go:845] [D] | GET        | /company/GetContact/0                    | 544.0311ms       | match      | /company/getcontact/*                    | 
+2015/05/03 19:28:07 [router.go:845] [D] | GET        | /company/create                          | 92.0053ms        | match      | /company/create                          | 
+2015/05/03 19:28:08 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 405.0231ms       | match      | /company/getcompany/*                    | 
+2015/05/03 19:28:08 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 506.0289ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:28:08 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 595.034ms        | match      | /company/getmembers/*                    | 
+2015/05/03 19:28:08 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 645.0369ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:28:08 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 671.0384ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:28:08 [router.go:845] [D] | GET        | /company/GetContact/0                    | 681.039ms        | match      | /company/getcontact/*                    | 
+2015/05/03 19:31:54 [router.go:845] [D] | GET        | /company/create                          | 70.004ms         | match      | /company/create                          | 
+2015/05/03 19:31:55 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 326.0187ms       | match      | /company/getcompany/*                    | 
+2015/05/03 19:31:55 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 303.0173ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:31:55 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 526.0301ms       | match      | /company/getmembers/*                    | 
+2015/05/03 19:31:55 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 564.0323ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:31:55 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 609.0348ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:31:55 [router.go:845] [D] | GET        | /company/GetContact/0                    | 628.036ms        | match      | /company/getcontact/*                    | 
+2015/05/03 19:32:42 [router.go:845] [D] | GET        | /company/create                          | 104.0059ms       | match      | /company/create                          | 
+2015/05/03 19:32:42 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 336.0192ms       | match      | /company/getcompany/*                    | 
+2015/05/03 19:32:42 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 481.0275ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:32:42 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 530.0303ms       | match      | /company/getmembers/*                    | 
+2015/05/03 19:32:42 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 558.0319ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:32:43 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 601.0344ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:32:43 [router.go:845] [D] | GET        | /company/GetContact/0                    | 554.0317ms       | match      | /company/getcontact/*                    | 
+2015/05/03 19:38:52 [router.go:845] [D] | GET        | /company/create                          | 109.0063ms       | match      | /company/create                          | 
+2015/05/03 19:38:53 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 318.0182ms       | match      | /company/getcompany/*                    | 
+2015/05/03 19:38:53 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 426.0244ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:38:53 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 495.0283ms       | match      | /company/getmembers/*                    | 
+2015/05/03 19:38:53 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 517.0296ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:38:53 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 546.0312ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:38:53 [router.go:845] [D] | GET        | /company/GetContact/0                    | 562.0321ms       | match      | /company/getcontact/*                    | 
+2015/05/03 19:39:17 [router.go:845] [D] | GET        | /company/create                          | 93.0053ms        | match      | /company/create                          | 
+2015/05/03 19:39:18 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 385.022ms        | match      | /company/getcompany/*                    | 
+2015/05/03 19:39:18 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 468.0268ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:39:18 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 480.0275ms       | match      | /company/getmembers/*                    | 
+2015/05/03 19:39:18 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 513.0293ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:39:18 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 550.0314ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:39:18 [router.go:845] [D] | GET        | /company/GetContact/0                    | 563.0322ms       | match      | /company/getcontact/*                    | 
+2015/05/03 19:39:41 [router.go:845] [D] | GET        | /company/create                          | 71.0041ms        | match      | /company/create                          | 
+2015/05/03 19:39:41 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 260.0148ms       | match      | /company/getcompany/*                    | 
+2015/05/03 19:39:41 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 431.0247ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:39:41 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 504.0288ms       | match      | /company/getmembers/*                    | 
+2015/05/03 19:39:42 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 541.031ms        | match      | /company/getlinks/*                      | 
+2015/05/03 19:39:42 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 595.034ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 19:39:42 [router.go:845] [D] | GET        | /company/GetContact/0                    | 623.0357ms       | match      | /company/getcontact/*                    | 
+2015/05/03 19:41:10 [router.go:845] [D] | GET        | /company/create                          | 52.003ms         | match      | /company/create                          | 
+2015/05/03 19:41:11 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 302.0173ms       | match      | /company/getcompany/*                    | 
+2015/05/03 19:41:11 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 394.0226ms       | match      | /company/getloops/*                      | 
+2015/05/03 19:41:11 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 457.0262ms       | match      | /company/getmembers/*                    | 
+2015/05/03 19:41:11 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 465.0265ms       | match      | /company/getlinks/*                      | 
+2015/05/03 19:41:11 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 522.0299ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 19:41:11 [router.go:845] [D] | GET        | /company/GetContact/0                    | 552.0316ms       | match      | /company/getcontact/*                    | 
+2015/05/03 20:38:47 [router.go:845] [D] | GET        | /company/create                          | 581.0332ms       | match      | /company/create                          | 
+2015/05/03 20:38:48 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 438.025ms        | match      | /company/getcompany/*                    | 
+2015/05/03 20:38:48 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 522.0298ms       | match      | /company/getloops/*                      | 
+2015/05/03 20:38:48 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 659.0377ms       | match      | /company/getmembers/*                    | 
+2015/05/03 20:38:49 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 986.0564ms       | match      | /company/getlinks/*                      | 
+2015/05/03 20:38:49 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 1.0790617s       | match      | /company/getintroduce/*                  | 
+2015/05/03 20:38:49 [router.go:845] [D] | GET        | /company/GetContact/0                    | 1.2020688s       | match      | /company/getcontact/*                    | 
+2015/05/03 20:40:10 [router.go:845] [D] | GET        | /company/create                          | 135.0077ms       | match      | /company/create                          | 
+2015/05/03 20:40:11 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 482.0276ms       | match      | /company/getcompany/*                    | 
+2015/05/03 20:40:11 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 574.0328ms       | match      | /company/getloops/*                      | 
+2015/05/03 20:40:11 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 699.04ms         | match      | /company/getmembers/*                    | 
+2015/05/03 20:40:11 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 737.0422ms       | match      | /company/getlinks/*                      | 
+2015/05/03 20:40:12 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 823.047ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 20:40:12 [router.go:845] [D] | GET        | /company/GetContact/0                    | 882.0504ms       | match      | /company/getcontact/*                    | 
+2015/05/03 20:45:52 [router.go:845] [D] | GET        | /                                        | 115.0065ms       | match      | /                                        | 
+2015/05/03 20:48:04 [router.go:845] [D] | GET        | /my/company                              | 159.0091ms       | match      | /my/company                              | 
+2015/05/03 20:48:07 [router.go:845] [D] | GET        | /company/create                          | 160.0092ms       | match      | /company/create                          | 
+2015/05/03 20:48:07 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 442.0253ms       | match      | /company/getcompany/*                    | 
+2015/05/03 20:48:08 [router.go:845] [D] | GET        | /company/GetContact/0                    | 402.0229ms       | match      | /company/getcontact/*                    | 
+2015/05/03 20:48:08 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 466.0266ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 20:48:08 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 528.0302ms       | match      | /company/getlinks/*                      | 
+2015/05/03 20:48:08 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 602.0344ms       | match      | /company/getmembers/*                    | 
+2015/05/03 20:48:08 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 685.0392ms       | match      | /company/getloops/*                      | 
+2015/05/03 20:48:50 [router.go:845] [D] | GET        | /company/create                          | 128.0073ms       | match      | /company/create                          | 
+2015/05/03 20:48:51 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 553.0316ms       | match      | /company/getcompany/*                    | 
+2015/05/03 20:48:51 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 467.0268ms       | match      | /company/getloops/*                      | 
+2015/05/03 20:48:51 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 526.0301ms       | match      | /company/getmembers/*                    | 
+2015/05/03 20:48:51 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 537.0307ms       | match      | /company/getlinks/*                      | 
+2015/05/03 20:48:51 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 543.0311ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 20:48:51 [router.go:845] [D] | GET        | /company/GetContact/0                    | 542.031ms        | match      | /company/getcontact/*                    | 
+2015/05/03 20:49:45 [router.go:845] [D] | GET        | /company/create                          | 59.0034ms        | match      | /company/create                          | 
+2015/05/03 20:49:46 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 536.0307ms       | match      | /company/getcompany/*                    | 
+2015/05/03 20:49:46 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 419.024ms        | match      | /company/getloops/*                      | 
+2015/05/03 20:49:46 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 594.034ms        | match      | /company/getmembers/*                    | 
+2015/05/03 20:49:47 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 668.0382ms       | match      | /company/getlinks/*                      | 
+2015/05/03 20:49:47 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 943.054ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 20:49:47 [router.go:845] [D] | GET        | /company/GetContact/0                    | 1.0300589s       | match      | /company/getcontact/*                    | 
+2015/05/03 20:54:02 [router.go:845] [D] | GET        | /company/create                          | 141.0081ms       | match      | /company/create                          | 
+2015/05/03 20:54:03 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 491.0281ms       | match      | /company/getcompany/*                    | 
+2015/05/03 20:54:03 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 407.0233ms       | match      | /company/getloops/*                      | 
+2015/05/03 20:54:03 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 575.0329ms       | match      | /company/getmembers/*                    | 
+2015/05/03 20:54:03 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 635.0363ms       | match      | /company/getlinks/*                      | 
+2015/05/03 20:54:03 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 700.04ms         | match      | /company/getintroduce/*                  | 
+2015/05/03 20:54:03 [router.go:845] [D] | GET        | /company/GetContact/0                    | 746.0427ms       | match      | /company/getcontact/*                    | 
+2015/05/03 20:55:17 [router.go:845] [D] | GET        | /company/create                          | 166.0095ms       | match      | /company/create                          | 
+2015/05/03 20:55:18 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 476.0272ms       | match      | /company/getcompany/*                    | 
+2015/05/03 20:55:18 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 446.0255ms       | match      | /company/getloops/*                      | 
+2015/05/03 20:55:18 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 589.0337ms       | match      | /company/getmembers/*                    | 
+2015/05/03 20:55:18 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 676.0386ms       | match      | /company/getlinks/*                      | 
+2015/05/03 20:55:19 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 720.0412ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 20:55:19 [router.go:845] [D] | GET        | /company/GetContact/0                    | 978.056ms        | match      | /company/getcontact/*                    | 
+2015/05/03 20:58:39 [router.go:845] [D] | GET        | /company/create                          | 76.0044ms        | match      | /company/create                          | 
+2015/05/03 20:58:40 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 335.0192ms       | match      | /company/getcompany/*                    | 
+2015/05/03 20:58:41 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 498.0285ms       | match      | /company/getloops/*                      | 
+2015/05/03 20:58:41 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 621.0355ms       | match      | /company/getmembers/*                    | 
+2015/05/03 20:58:41 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 672.0384ms       | match      | /company/getlinks/*                      | 
+2015/05/03 20:58:41 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 779.0445ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 20:58:41 [router.go:845] [D] | GET        | /company/GetContact/0                    | 852.0488ms       | match      | /company/getcontact/*                    | 
+2015/05/03 21:00:31 [router.go:845] [D] | GET        | /company/create                          | 66.0038ms        | match      | /company/create                          | 
+2015/05/03 21:00:32 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 492.0282ms       | match      | /company/getcompany/*                    | 
+2015/05/03 21:00:32 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 458.0262ms       | match      | /company/getloops/*                      | 
+2015/05/03 21:00:32 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 578.0331ms       | match      | /company/getmembers/*                    | 
+2015/05/03 21:00:32 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 625.0358ms       | match      | /company/getlinks/*                      | 
+2015/05/03 21:00:32 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 664.038ms        | match      | /company/getintroduce/*                  | 
+2015/05/03 21:00:32 [router.go:845] [D] | GET        | /company/GetContact/0                    | 758.0434ms       | match      | /company/getcontact/*                    | 
+2015/05/03 21:02:50 [router.go:845] [D] | GET        | /company/create                          | 71.0041ms        | match      | /company/create                          | 
+2015/05/03 21:02:51 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 492.0281ms       | match      | /company/getcompany/*                    | 
+2015/05/03 21:02:51 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 442.0253ms       | match      | /company/getloops/*                      | 
+2015/05/03 21:02:51 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 552.0315ms       | match      | /company/getmembers/*                    | 
+2015/05/03 21:02:52 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 630.036ms        | match      | /company/getlinks/*                      | 
+2015/05/03 21:02:52 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 700.0401ms       | match      | /company/getintroduce/*                  | 
+2015/05/03 21:02:52 [router.go:845] [D] | GET        | /company/GetContact/0                    | 771.0441ms       | match      | /company/getcontact/*                    | 
+2015/05/03 21:09:06 [router.go:845] [D] | GET        | /company/create                          | 126.0072ms       | match      | /company/create                          | 
+2015/05/03 21:09:07 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 382.0218ms       | match      | /company/getcompany/*                    | 
+2015/05/03 21:09:07 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 489.028ms        | match      | /company/getloops/*                      | 
+2015/05/03 21:09:07 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 648.0371ms       | match      | /company/getmembers/*                    | 
+2015/05/03 21:09:07 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 964.0552ms       | match      | /company/getlinks/*                      | 
+2015/05/03 21:09:07 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 1.0360592s       | match      | /company/getintroduce/*                  | 
+2015/05/03 21:09:08 [router.go:845] [D] | GET        | /company/GetContact/0                    | 1.2610722s       | match      | /company/getcontact/*                    | 
+2015/05/03 21:17:09 [router.go:845] [D] | GET        | /company/create                          | 131.0075ms       | match      | /company/create                          | 
+2015/05/03 21:17:10 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 450.0258ms       | match      | /company/getcompany/*                    | 
+2015/05/03 21:17:10 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 611.035ms        | match      | /company/getloops/*                      | 
+2015/05/03 21:17:10 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 775.0443ms       | match      | /company/getmembers/*                    | 
+2015/05/03 21:17:10 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 818.0468ms       | match      | /company/getlinks/*                      | 
+2015/05/03 21:17:10 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 875.05ms         | match      | /company/getintroduce/*                  | 
+2015/05/03 21:17:10 [router.go:845] [D] | GET        | /company/GetContact/0                    | 1.0260587s       | match      | /company/getcontact/*                    | 
+2015/05/03 21:20:38 [router.go:845] [D] | GET        | /company/create                          | 123.007ms        | match      | /company/create                          | 
+2015/05/03 21:20:39 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 595.0341ms       | match      | /company/getcompany/*                    | 
+2015/05/03 21:20:40 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 532.0304ms       | match      | /company/getloops/*                      | 
+2015/05/03 21:20:40 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 815.0466ms       | match      | /company/getmembers/*                    | 
+2015/05/03 21:20:40 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 1.0250586s       | match      | /company/getlinks/*                      | 
+2015/05/03 21:20:40 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 1.0600607s       | match      | /company/getintroduce/*                  | 
+2015/05/03 21:20:40 [router.go:845] [D] | GET        | /company/GetContact/0                    | 1.1660667s       | match      | /company/getcontact/*                    | 

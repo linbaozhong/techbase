@@ -1,6 +1,8 @@
 <div class="col-md-3 snow-padding-top-40">
 	<div class="pull-right snow-upload-target" style="width:100px;height:100px;">
+		<img src="{{.company.Logo}}"/>
 	</div>
+	<span class="small pull-right" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
 </div>
 <div class="col-md-9">
 	<div class="">
@@ -18,25 +20,25 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>公司简称</label>
 			<div class="col-sm-9">
-				<input class="form-control" name="name" placeholder="公司简称" value="{{.Company.Name}}">
+				<input class="form-control" name="name" placeholder="公司简称" value="{{.company.Name}}">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">公司网址</label>
 			<div class="col-sm-9">
-				<input class="form-control" name="website" placeholder="公司网址" value="{{.Company.Website}}">
+				<input class="form-control" name="website" placeholder="公司网址" value="{{.company.Website}}">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">公司全称</label>
 			<div class="col-sm-9">
-				<input class="form-control" name="fullname" placeholder="公司全称" value="{{.Company.Fullname}}">
+				<input class="form-control" name="fullname" placeholder="公司全称" value="{{.company.Fullname}}">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>一句话简介</label>
 			<div class="col-sm-9">
-				<textarea class="form-control" name="intro" rows="" cols="" placeholder="用一句话介绍公司">{{.Company.Intro}}</textarea>
+				<textarea class="form-control" name="intro" rows="" cols="" placeholder="用一句话介绍公司">{{.company.Intro}}</textarea>
 			</div>
 		</div>
 		<div class="form-group">
@@ -55,7 +57,7 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label">创办时间</label>
 			<div class="col-sm-4">
-				<input type="date" class="form-control" name="starttime" placeholder="公司全称" value="{{.Company.StartTime}}">
+				<input type="date" class="form-control" name="starttime" placeholder="公司全称" value="{{.company.StartTime}}">
 			</div>
 		</div>
 		<div class="form-group">
@@ -74,6 +76,7 @@
 		<div class="form-group">
 			<label for="inputIntro" class="col-sm-3 control-label">
 				<input type="hidden" name="id" value="{{.company.Id}}" />
+				<input type="hidden" name="logo" value="{{.company.Logo}}" />
 			</label>
 			<div class="col-sm-9">
 				<button type="submit" class="btn btn-primary col-sm-12">保存</button>
@@ -122,10 +125,12 @@
 		// 公司领域
 		$.getJSON('/basic/field',function(json){
 			if (json.ok) {
-				var _html=[],_field='{{.company.State}}'.split(',');
+				var _html=[],_field='{{.company.Field}}'.split(',');
+				
 				$.each(json.data, function(index,item) {    
 					_html.push('<label class="checkbox-inline"><input');
-					if ($.inArray(item.value,_field) != -1) {
+					
+					if ($.inArray(item.value.toString(),_field) != -1) {
 						_html.push(' checked');                                                          
 					}
 					_html.push(' type="checkbox" name="field" value="'+item.value+'">'+item.name+"</label>");                                                          
@@ -164,7 +169,7 @@
 		});
 
 		// 提交表单
-		$('.snow-form-1').submit(function(e){
+		$('form.snow-form-1').submit(function(e){
 			e.preventDefault();
 			var _form = $(this);
 			// 禁用提交按钮
@@ -176,7 +181,7 @@
 					// 写入表单id域
 					_form.find('input[name="id"]').val(json.data.id);
 					// 写入本页面全部companyid域
-					$('input[name="companyId"]').val(json.data.id);
+					$('input[name="companyId"]').val(json.data.id).change();
 					_form.find('.alert').removeClass('alert-danger').addClass('alert-success').addClass('visible').text('hi,我已经为你保存好了,不用谢了…… :)');
 				} else{
 					var _errors=[];
@@ -191,7 +196,24 @@
 		$(".snow-upload-target").upload({
 		    label: "<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
-		    action:'/upload'
-		});
+		    action:'/up'
+		}).on("filestart.upload", function(){})
+		  .on("fileprogress.upload", function(){})
+		  .on("filecomplete.upload", function(e,file,response){
+			  	if (response.ok) {
+			  		var _img = $(this).find('img'),_src = response.data[0].path;
+			  		if (_img.length) {
+			  			_img.attr('src',_src);
+			  		} else{
+			  			$(this).prepend('<img src="' + _src + '">');
+			  		}
+			  		// 写入表单logo域
+			  		$('form.snow-form-1 input[name="logo"]').val(_src);
+			  	} else{
+			  		alert(response.data[0].message);
+			  	}
+		  })
+		  .on("fileerror.upload", function(){});
+		
 	});
 </script>

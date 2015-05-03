@@ -10,7 +10,7 @@ type Company struct {
 	Intro     string `json:"intro" valid:"Required;MaxSize(250)"`
 	City      int    `json:"city"`
 	Country   int    `json:"country"`
-	StartTime int64  `json:"startTime"`
+	StartTime string `json:"startTime"`
 	Field     string `json:"field"`
 	State     int    `json:"state" valid:"Required"`
 	Status    int    `json:"status"`
@@ -167,9 +167,10 @@ type Members struct {
 	Id        int64  `json:"id"`
 	CompanyId int64  `json:"companyId"`
 	Name      string `json:"name" valid:"Required;MaxSize(50)"`
-	Place     int    `json:"place" valid:"Required;"`
+	Place     int    `json:"place"`
 	Title     string `json:"title" valid:"MaxSize(50)"`
 	Avatar    string `json:"avatar" valid:"MaxSize(250)"`
+	Deleted   int    `json:"deleted"`
 	Updator   int64  `json:"updator"`
 	Updated   int64  `json:"updated"`
 	Ip        string `json:"ip" valid:"MaxSize(23)"`
@@ -178,7 +179,7 @@ type Members struct {
 // 读取
 func (this *Members) List() ([]Members, error) {
 	ms := make([]Members, 0)
-	err := db.Where("companyId=?", this.CompanyId).Find(&ms)
+	err := db.Where("companyId=? and deleted=?", this.CompanyId, Undelete).Find(&ms)
 	return ms, err
 }
 
@@ -203,14 +204,15 @@ func (this *Members) Save() (error, []Error) {
 type Loops struct {
 	Id          int64   `json:"id"`
 	CompanyId   int64   `json:"companyId"`
-	Loop        int     `json:"loop" valid:"Required;"`
+	Loop        int     `json:"loop"`
 	AmountMoney int     `json:"amountMoney"`
 	Amount      float64 `json:"amount"`
 	ValueMoney  int     `json:"valueMoney"`
 	Value       float64 `json:"value"`
-	Year        int     `json:"year" valid:"Required;"`
-	Month       int     `json:"month" valid:"Required;"`
+	Year        int     `json:"year" valid:"Required"`
+	Month       int     `json:"month" valid:"Required"`
 	Investor    string  `json:"investor"`
+	Deleted     int     `json:"deleted"`
 	Updator     int64   `json:"updator"`
 	Updated     int64   `json:"updated"`
 	Ip          string  `json:"ip" valid:"MaxSize(23)"`
@@ -219,7 +221,7 @@ type Loops struct {
 // 读取
 func (this *Loops) List() ([]Loops, error) {
 	ls := make([]Loops, 0)
-	err := db.Where("companyId=?", this.CompanyId).Find(&ls)
+	err := db.Where("companyId=? and deleted=?", this.CompanyId, Undelete).Find(&ls)
 	return ls, err
 }
 

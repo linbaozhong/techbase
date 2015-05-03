@@ -42,6 +42,12 @@ ul{
 	border: 1px solid #eee;
 	overflow: hidden;
 }
+.snow-uploads li img{
+	width:100%;
+}
+.snow-uploads li.snow-upload-target{
+	border-width:0 ;
+}
 .snow-uploads li.snow-img i{
 	position:absolute;
 	top:2px;
@@ -50,9 +56,23 @@ ul{
 	cursor: pointer;
 }
 .snow-upload-target{
+	position: relative;
 	width:100%;
 	height:100%;
 	line-height: 100px;
+	overflow: hidden;
+}
+.snow-upload-target img{
+	width: 100%;
+}
+.snow-upload-target .fs-upload-target{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: transparent;
+	border-width: 1px;
 }
 /*修正bootstrap*/
 .form-control{
@@ -293,4 +313,41 @@ form .alert.visible{
 	left: 30%;
 	z-index: 101;
 }
-
+/*融资经历*/
+.snow-loop{
+	position: relative;
+	margin:20px 0;
+	padding: 20px;
+	background-color: #eee;
+}
+.snow-loop label{
+	margin-right:20px;
+}
+.snow-loop .lead{
+	margin-bottom: 15px;
+}
+.snow-loop hr{
+	border-color:#ddd;
+	margin: 10px 0 5px;
+}
+.snow-loop .snow-tools{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+.snow-loop .snow-tools a{
+	padding: 4px;
+}
+/*团队成员*/
+.snow-member{
+	position: relative;
+	margin:20px 20px 20px 0;
+	padding:30px 10px;
+	background-color: #eee;
+	text-align: center;
+}
+.snow-member .snow-tools{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}

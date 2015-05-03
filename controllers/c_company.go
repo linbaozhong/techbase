@@ -61,10 +61,12 @@ func (this *Company) PostCompany() {
 	com.Website = this.GetString("website")
 	com.Fullname = this.GetString("fullname")
 	com.Intro = this.GetString("intro")
+	com.Logo = this.GetString("logo")
 	com.Country, _ = this.GetInt("country")
 	com.City, _ = this.GetInt("city")
 	com.Field = strings.Join(this.GetStrings("field"), ",")
 	com.State, _ = this.GetInt("state")
+	com.StartTime = this.GetString("starttime")
 
 	this.extend(com)
 
@@ -229,12 +231,15 @@ func (this *Company) PostMembers() {
 
 // 读取融资经历
 func (this *Company) GetLoops() {
+	var _json []byte
 	// 公司id
 	id, _ := this.getParamsInt64("0")
 
 	if id > 0 {
-		this.getLoopsList(id)
+		_json = this.getLoopsList(id)
 	}
+
+	this.Data["loops"] = _json
 
 	this.Layout = ""
 	this.setTplNames("_loops")
@@ -322,7 +327,7 @@ func (this *Company) getMembersList(id int64) {
 }
 
 // 读取融资经历
-func (this *Company) getLoopsList(id int64) {
+func (this *Company) getLoopsList(id int64) []byte {
 	com := new(models.Loops)
 	com.CompanyId = id
 
@@ -330,5 +335,11 @@ func (this *Company) getLoopsList(id int64) {
 	if err != nil {
 		this.trace(err)
 	}
-	this.Data["loops"] = ls
+	//
+	_json, err := utils.Interface2Json(ls, false, false)
+	if err != nil {
+		this.trace(err)
+	}
+
+	return _json
 }

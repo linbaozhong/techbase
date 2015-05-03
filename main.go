@@ -36,8 +36,8 @@ func initFuncMap() {
 
 // 初始化静态目录
 func initStaticPath() {
-	beego.SetStaticPath("/html", "html")
-
+	//beego.SetStaticPath("/html", "html")
+	beego.SetStaticPath("/upload", "upload")
 }
 
 // 初始化模板后缀

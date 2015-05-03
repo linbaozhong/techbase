@@ -10,6 +10,10 @@ type Upload struct {
 
 func (this *Upload) Post() {
 	fs, err := this.upload("file")
-	this.trace(fs, err)
-	this.renderJson(utils.JsonData(true, "", fs))
+
+	if err == nil {
+		this.renderJson(utils.JsonData(true, "", fs))
+	} else {
+		this.renderJson(utils.JsonData(false, "", err))
+	}
 }
