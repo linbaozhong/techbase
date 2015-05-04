@@ -33,6 +33,7 @@ func init() {
 	// 公司
 	com := &controllers.Company{}
 	beego.Router("/my/company", com, "get:Index")
+	beego.Router("/company/:id", com)
 	beego.Router("/company/create", com, "get:Create")
 	beego.Router("/company/list", com, "get:List")
 	beego.AutoRouter(com)

@@ -20,6 +20,13 @@ func (this *Company) Index() {
 	this.Data["subTitle"] = "我管理的公司"
 }
 
+//
+func (this *Company) Get() {
+	id, _ := this.GetInt64(":id")
+	this.trace(id)
+	this.setTplNames("_detail")
+}
+
 // 创建公司视图
 func (this *Company) Create() {
 	this.Data["subTitle"] = "创建公司"

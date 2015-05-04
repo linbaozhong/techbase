@@ -5,44 +5,11 @@
 		</div>
 		<div class="col-md-10">
 			<h3>{{.subTitle}}</h3>
-			<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-20px;" href="/company/create"><i class="fa fa-plus-circle"></i>&nbsp; 创建公司</a>
+			<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-30px;" href="/company/create"><i class="fa fa-plus-circle"></i>&nbsp; 创建公司</a>
 	
 			<!--数据在这里-->
 			<div class="" id="snow-list" style="margin-top: 30px;">
-				<div class="media row-id-">
-				  <div class="media-left">
-				    <a href="#">
-				      <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==" 
-				      data-holder-rendered="true" style="width: 84px; height: 84px;">
-				    </a>
-				  </div>
-				  <div class="media-body">
-				  	<div>
-				  		<span class="media-heading">环球商贸网</span>
-				  		<span>正在审核中</span> <span title="审核通过后即可快速申请融资"><i class="fa fa-question-circle"></i></span>
-				  
-				  		<span class="pull-right">申请融资</span>
-				  	</div>
-				    
-				    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-				  </div>
-				</div>
-				<div class="media">
-				  <div class="media-left">
-				    <a href="#">
-				      <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0LjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==" 
-				      data-holder-rendered="true" style="width: 84px; height: 84px;">
-				    </a>
-				  </div>
-				  <div class="media-body">
-				    <div><span class="media-heading">环球商贸网</span>
-				  		<span>正在审核</span> <span title="审核通过后即可快速申请融资"><i class="fa fa-question-circle"></i></span>
-				  		
-				  		 <div class="pull-right"><span>申请融资</span> <span title="审核通过后即可快速申请融资"><i class="fa fa-exclamation-circle"></i></span></div>
-				  	</div>
-				    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-				  </div>
-				</div>
+
 			</div>
 		</div>
 		<div class="col-md-1">
@@ -56,7 +23,7 @@
 		var _row = $('#snow-list').find('.row-id-'+item.id),
 			_html = [];
 		 _html.push('<div class="media row-id-'+item.id+'">');                                                         
-		 _html.push('<div class="media-left"><a href="#"><img class="media-object" src="'+item.logo+'" style="width: 84px; height: 84px;"></a></div>');                                                         
+		 _html.push('<div class="media-left"><a href="/company/'+item.id+'"><img class="media-object" src="'+item.logo+'" style="width: 84px; height: 84px;"></a></div>');                                                         
 		 _html.push('<div class="media-body"><div><span class="media-heading">'+item.name+'</span>');
 		 
 		 switch (item.state){
@@ -75,16 +42,16 @@
 		 }
 		 
 		 _html.push('</div>');
-
 		 _html.push(item.intro);                                                         
-		 _html.push('</div>'); 
+		 _html.push('</div>');
+		 
 		 // 检查该行是否已经存在
 		 if (_row.length) {
 		 	// 替换
 		 	_row.replaceWith($(_html.join('')).data('data',item));
 		 } else{
 		 	// 追加
-		 	$('#snow-list tbody').append($(_html.join('')).data('data',item));
+		 	$('#snow-list').append($(_html.join('')).data('data',item));
 		 }
 	}
 	function push_list(list){

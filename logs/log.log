@@ -7264,3 +7264,85 @@
 2015/05/04 18:40:28 [router.go:845] [D] | GET        | /company/GetContact/1                    | 84.0048ms        | match      | /company/getcontact/*                    | 
 2015/05/04 18:40:28 [router.go:845] [D] | GET        | /company/GetLoops/1                      | 93.0053ms        | match      | /company/getloops/*                      | 
 2015/05/04 18:40:28 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 108.0062ms       | match      | /company/getintroduce/*                  | 
+2015/05/04 20:47:41 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/04 20:47:42 [app.go:96] [I] http server Running on :80
+2015/05/04 20:47:58 [router.go:845] [D] | GET        | /                                        | 59.0033ms        | match      | /                                        | 
+2015/05/04 20:47:59 [router.go:845] [D] | GET        | /html/brand/logo_1.png                   | 10.0006ms        | notmatch   | 
+2015/05/04 20:47:59 [router.go:845] [D] | GET        | /html/brand/logo_3.png                   | 1.0001ms         | notmatch   | 
+2015/05/04 20:47:59 [router.go:845] [D] | GET        | /html/brand/logo_2.png                   | 4.0002ms         | notmatch   | 
+2015/05/04 20:47:59 [router.go:845] [D] | GET        | /html/brand/3.png                        | 2.0001ms         | notmatch   | 
+2015/05/04 20:47:59 [router.go:845] [D] | GET        | /html/images/banner01.png                | 8.0004ms         | notmatch   | 
+2015/05/04 20:47:59 [router.go:845] [D] | GET        | /html/images/banner02.png                | 14.0008ms        | notmatch   | 
+2015/05/04 20:47:59 [router.go:845] [D] | GET        | /html/brand/1.png                        | 26.0015ms        | notmatch   | 
+2015/05/04 20:47:59 [router.go:845] [D] | GET        | /html/brand/2.png                        | 1.0001ms         | notmatch   | 
+2015/05/04 20:48:03 [router.go:845] [D] | GET        | /my/company                              | 76.0044ms        | match      | /my/company                              | 
+2015/05/04 20:48:04 [router.go:845] [D] | GET        | /company/create                          | 117.0067ms       | match      | /company/create                          | 
+2015/05/04 20:48:05 [router.go:845] [D] | GET        | /company/GetCompany/0                    | 341.0195ms       | match      | /company/getcompany/*                    | 
+2015/05/04 20:48:05 [log.go:108] [D] template Execute err: template: company/_loops.tpl:91:65: executing "company/_loops.tpl" at <eq .companyId 0>: error calling eq: invalid type for comparison 
+2015/05/04 20:48:05 [router.go:876] [C] the request url is  /company/GetLoops/0 
+2015/05/04 20:48:05 [router.go:877] [C] Handler crashed with error template: company/_loops.tpl:91:65: executing "company/_loops.tpl" at <eq .companyId 0>: error calling eq: invalid type for comparison 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/04 20:48:05 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/04 20:48:05 [log.go:108] [D] template Execute err: template: company/_members.tpl:49:65: executing "company/_members.tpl" at <eq .companyId 0>: error calling eq: invalid type for comparison 
+2015/05/04 20:48:05 [router.go:876] [C] the request url is  /company/GetMembers/0 
+2015/05/04 20:48:05 [router.go:877] [C] Handler crashed with error template: company/_members.tpl:49:65: executing "company/_members.tpl" at <eq .companyId 0>: error calling eq: invalid type for comparison 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/04 20:48:05 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/04 20:48:05 [log.go:108] [D] template Execute err: template: company/_links.tpl:53:65: executing "company/_links.tpl" at <eq .links.CompanyId ...>: error calling eq: invalid type for comparison 
+2015/05/04 20:48:05 [router.go:876] [C] the request url is  /company/GetLinks/0 
+2015/05/04 20:48:05 [router.go:877] [C] Handler crashed with error template: company/_links.tpl:53:65: executing "company/_links.tpl" at <eq .links.CompanyId ...>: error calling eq: invalid type for comparison 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/04 20:48:05 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/04 20:48:05 [log.go:108] [D] template Execute err: template: company/_introduce.tpl:40:64: executing "company/_introduce.tpl" at <eq .introduce.Compan...>: error calling eq: invalid type for comparison 
+2015/05/04 20:48:05 [router.go:876] [C] the request url is  /company/GetIntroduce/0 
+2015/05/04 20:48:05 [router.go:877] [C] Handler crashed with error template: company/_introduce.tpl:40:64: executing "company/_introduce.tpl" at <eq .introduce.Compan...>: error calling eq: invalid type for comparison 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/04 20:48:05 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/04 20:48:05 [log.go:108] [D] template Execute err: template: company/_contact.tpl:91:65: executing "company/_contact.tpl" at <eq .contact.CompanyI...>: error calling eq: invalid type for comparison 
+2015/05/04 20:48:05 [router.go:876] [C] the request url is  /company/GetContact/0 
+2015/05/04 20:48:05 [router.go:877] [C] Handler crashed with error template: company/_contact.tpl:91:65: executing "company/_contact.tpl" at <eq .contact.CompanyI...>: error calling eq: invalid type for comparison 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/04 20:48:05 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:802 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/04 20:48:05 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/04 20:48:11 [router.go:845] [D] | GET        | /company/create/1                        | 94.0054ms        | match      | /company/create/*                        | 
+2015/05/04 20:48:12 [router.go:845] [D] | GET        | /company/GetLoops/1                      | 210.012ms        | match      | /company/getloops/*                      | 
+2015/05/04 20:48:12 [router.go:845] [D] | GET        | /company/GetMembers/1                    | 317.0181ms       | match      | /company/getmembers/*                    | 
+2015/05/04 20:48:12 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 401.023ms        | match      | /company/getlinks/*                      | 
+2015/05/04 20:48:12 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 423.0242ms       | match      | /company/getintroduce/*                  | 
+2015/05/04 20:48:12 [router.go:845] [D] | GET        | /company/GetContact/1                    | 418.0239ms       | match      | /company/getcontact/*                    | 
+2015/05/04 20:48:12 [router.go:845] [D] | GET        | /company/GetCompany/1                    | 421.024ms        | match      | /company/getcompany/*                    | 
+2015/05/04 21:26:52 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/04 21:26:52 [app.go:96] [I] http server Running on :80
+2015/05/04 21:29:30 [router.go:845] [D] | GET        | /my/company                              | 85.0049ms        | match      | /my/company                              | 
+2015/05/04 21:31:17 [router.go:845] [D] | GET        | /my/company                              | 191.0109ms       | match      | /my/company                              | 
+2015/05/04 21:36:08 [router.go:845] [D] | GET        | /my/company                              | 110.0063ms       | match      | /my/company                              | 
+2015/05/04 21:36:10 [router.go:845] [D] | GET        | /my/company                              | 98.0056ms        | match      | /my/company                              | 
+2015/05/04 21:37:34 [router.go:845] [D] | GET        | /my/company                              | 87.005ms         | match      | /my/company                              | 
+2015/05/04 21:37:52 [router.go:845] [D] | GET        | /my/company                              | 75.0043ms        | match      | /my/company                              | 
+2015/05/04 21:39:08 [router.go:845] [D] | GET        | /my/company                              | 142.0081ms       | match      | /my/company                              | 
+2015/05/04 21:50:54 [router.go:845] [D] | GET        | /my/company                              | 124.0071ms       | match      | /my/company                              | 
+2015/05/04 22:00:50 [router.go:845] [D] | GET        | /my/company                              | 83.0047ms        | match      | /my/company                              | 
+2015/05/04 22:07:07 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/04 22:07:07 [app.go:96] [I] http server Running on :80
+2015/05/04 22:08:06 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/04 22:08:06 [app.go:96] [I] http server Running on :80
+2015/05/04 22:15:27 [log.go:108] [D] Loading language: zh-CN 
+2015/05/04 22:15:27 [main.go:16] [I] techbase 1.1.14.1105 
+2015/05/04 22:15:27 [app.go:96] [I] http server Running on :80
+2015/05/04 22:16:37 [router.go:845] [D] | GET        | /my/company                              | 84.0048ms        | match      | /my/company                              | 
+2015/05/04 22:16:41 [log.go:108] [D] Company/GET Info:1 
+2015/05/04 22:16:41 [router.go:845] [D] | GET        | /company/1                               | 134.0076ms       | match      | /company/:id                             | 
