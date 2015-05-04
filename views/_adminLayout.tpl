@@ -133,6 +133,9 @@
 
 </html>
 <script type="text/javascript">
+	snow.confirm = function(msg){
+		return confirm(msg);
+	};
 
 	$(function() {
 		//

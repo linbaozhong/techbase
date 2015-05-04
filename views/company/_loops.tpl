@@ -7,11 +7,12 @@
 			<h4 class="snow-underline">融资经历</h4>
 		</div>
 		<div class="col-sm-9">
-			<a class="pull-right snow-add-6" href="javascript:;" title="增加"><i class="fa fa-plus-circle fa-lg" style="padding-top: 20px;"></i></a>
-			<div class="alert" role="alert"></div>
+			<a class="abs-right-bottom snow-add-6" href="javascript:;" title="增加"><i class="fa fa-plus-circle fa-lg"></i></a>
+			<div class="alert snow-alert-6" role="alert"></div>
 		</div>
 	</div>
-	<form class="form-horizontal snow-form-6" style="display: none;">
+	<!--这里是融资经历编辑器-->
+	<form class="form-horizontal snow-form-6"{{if .loops}} style="display: none;"{{end}}>
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>轮次</label>
 			<div class="col-sm-3">
@@ -28,7 +29,7 @@
 				</select>
 			</div>
 			<div class="col-sm-3">
-				<input class="form-control" name="title" placeholder="" value="">
+				<input class="form-control" name="amount" placeholder="" value="">
 			</div>
 			<div class="col-sm-3">
 				<label class="control-label">万</label>
@@ -42,7 +43,7 @@
 				</select>
 			</div>
 			<div class="col-sm-3">
-				<input class="form-control" name="title" placeholder="" value="">
+				<input class="form-control" name="value" placeholder="" value="">
 			</div>
 			<div class="col-sm-3">
 				<label class="control-label">万</label>
@@ -77,71 +78,91 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label">投资主体</label>
 			<div class="col-sm-9">
-				<input class="form-control" name="name" placeholder="如：经纬中国" value="">
+				<input class="form-control" name="investor" placeholder="如：经纬中国" value="">
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label for="inputIntro" class="col-sm-3 control-label">
 				<input type="hidden" name="id" value="" />
-				<input type="hidden" name="companyId" value="" />
+				<input type="hidden" name="companyId" value="{{.companyId}}" />
 			</label>
 			<div class="col-sm-9">
-				<button type="submit" class="btn btn-primary col-sm-12" {{if not .company.Id}}disabled{{end}}>保存</button>
+				<button type="submit" class="btn btn-primary col-sm-12" {{if eq .companyId 0}}disabled{{end}}>保存</button>
 			</div>
 		</div>
 	</form>
-		
+	<!--这里是融资经历时间线-->	
 	<div class="form-horizontal">
 		<div class="form-group">
 			<label class="col-sm-3 control-label"></label>
-			<div class="col-sm-9 snow-list">
-				<div class="snow-loop">
+			<div class="col-sm-9 snow-list-6">
+				<!--融资经历个体-->
+				{{range .loops}}
+				<div class="snow-loop snow-loops-{{.Id}}">
 					<div class="snow-tools">
-						<a href="#"><i class="fa fa-pencil"></i></a> 
-						<a href="#"><i class="fa fa-times"></i></a>
+						<a class="snow-edit" href="#" data-id="{{.Id}}"><i class="fa fa-pencil"></i></a> 
+						<a class="snow-del" href="#" data-id="{{.Id}}"><i class="fa fa-times"></i></a>
 					</div>
 					<div>
-						<label class="control-label lead">天使轮</label><span>2014.12</span>
+						<label class="control-label lead snow-loop-{{.Loop}}">天使轮</label><span>{{.Year}}.{{.Month}}</span>
 					</div>
 					<div class="clearfix">
-						<div class="pull-left"><label class="control-label">融资金额:</label><span><i class="fa fa-cny"></i> 300</span><span>万</span></div>
-						<div class="pull-right"><label class="control-label">融资估值:</label><span><i class="fa fa-cny"></i> 1500</span><span>万</span></div>
+						<div class="pull-left"><label class="control-label">融资金额:</label><span><i class="fa snow-money-{{.AmountMoney}}"></i> {{.Amount}}</span><span>万</span></div>
+						<div class="pull-right"><label class="control-label">融资估值:</label><span><i class="fa snow-money-{{.ValueMoney}}"></i> {{.Value}}</span><span>万</span></div>
 					</div>
 					<hr />
 					<div>
-						<label class="control-label">经纬中国</label>
+						<label class="control-label">{{.Investor}}</label>
 					</div>
 				</div>
+				{{end}}
 			</div>
 		</div>
 	</div>
 </div>
 <script type="text/javascript">
+
 	snow.getLoop = function(v){
-		_money='A轮';
+		_loop = 'A轮';
 		$.each(snow.loop, function(index,item) {    
 			if (v == item.value) {
-				_money = item.name;
+				_loop = item.name;
 				return false;
-			}                                                          
+			}
 		});
+		return _loop;
 	};
 	snow.getMoney = function(v){
 		_money='人民币';
-		$.each(snow.loop, function(index,item) {    
+		$.each(snow.money, function(index,item) {    
 			if (v == item.value) {
-				_money = item.name;
+				_money = item.alias;
 				return false;
-			}                                                          
+			}
 		});
+		return _money;
 	};
 	
 	$(function(){
-		snow.loops = JSON.parse('{{.loops}}');
-		$.each(snow.loops, function(index,item) {    
-			                                                          
-		});
+		var _template = 
+			'<div class="snow-loop snow-loops-<%.id%>">'
+				+'<div class="snow-tools">'
+					+'<a class="snow-edit" href="#" data-id="<%.id%>"><i class="fa fa-pencil"></i></a>&nbsp;'
+					+'<a class="snow-del" href="#" data-id="<%.id%>"><i class="fa fa-times"></i></a>'
+				+'</div>'
+				+'<div>'
+					+'<label class="control-label lead"><%.loop%></label><span><%.year%>.<%.month%></span>'
+				+'</div>'
+				+'<div class="clearfix">'
+					+'<div class="pull-left"><label class="control-label">融资金额:</label><span><i class="fa fa-<%.aalias%>"></i> <%.amount%></span><span>万</span></div>'
+					+'<div class="pull-right"><label class="control-label">融资估值:</label><span><i class="fa fa-<%.valias%>"></i> <%.value%></span><span>万</span></div>'
+				+'</div>'
+				+'<hr />'
+				+'<div>'
+					+'<label class="control-label"><%.investor%></label>'
+				+'</div>'
+			+'</div>';
 		// 读取融资轮次
 		$.getJSON('/basic/loop',function(json){
 			if (json.ok) {
@@ -151,7 +172,9 @@
 				
 				$.each(json.data, function(index,item) {    
 					_html.push('<option');
-					_html.push(' value="'+item.value+'">'+item.name+'</option>');                                                          
+					_html.push(' value="'+item.value+'">'+item.name+'</option>');    
+					// 修复融资经历时间线
+					$('.snow-list-6 .snow-loop-'+item.value).text(item.name);
 				});
 				$('.snow-form-6 select[name="loop"]').empty().html(_html.join(''));
 			} else{
@@ -167,7 +190,9 @@
 				
 				$.each(json.data, function(index,item) {    
 					_html.push('<option');
-					_html.push(' value="'+item.value+'">'+item.name+'</option>');                                                          
+					_html.push(' value="'+item.value+'">'+item.name+'</option>');
+					// 修复融资经历时间线
+					$('.snow-list-6 .snow-money-'+item.value).addClass('fa-'+item.alias);
 				});
 				$('.snow-form-6 select[name="amountMoney"]').empty().html(_html.join(''));
 				$('.snow-form-6 select[name="valueMoney"]').empty().html(_html.join(''));
@@ -175,13 +200,49 @@
 				
 			}
 		});
-		
+		// 编辑 删除
+		$('.snow-list-6').on('click','.snow-edit',function(e){
+			e.preventDefault();
+			// 读取实体
+			var _this=$(this);
+			$.getJSON('/company/getloop',{id:_this.data('id')},function(json){
+				console.log(json);
+				if (json.ok) {
+					var _form = $('form.snow-form-6').show();
+					_form.find('input[name="id"]').val(json.data.id);
+					_form.find('input[name="companyId"]').val(json.data.companyId);
+					_form.find('input[name="amount"]').val(json.data.amount);
+					_form.find('input[name="value"]').val(json.data.value);
+					_form.find('input[name="investor"]').val(json.data.investor);
+					_form.find('select[name="loop"]').val(json.data.loop);
+					_form.find('select[name="amountMoney"]').val(json.data.amountMoney);
+					_form.find('select[name="valueMoney"]').val(json.data.valueMoney);
+					_form.find('select[name="year"]').val(json.data.year);
+					_form.find('select[name="month"]').val(json.data.month);
+				} else{
+					showMessage($('.snow-alert-6'),json.message,false);
+				}
+			});
+		}).on('click','.snow-del',function(e){
+			e.preventDefault();
+			
+			if (snow.confirm('你确定要删除吗?')) {
+				var _this=$(this);
+				$.getJSON('/company/deleteloops',{id:_this.data('id')},function(json){
+					if (json.ok) {
+						_this.closest('.snow-loop').remove();
+					} else{
+						showMessage($('.snow-alert-6'),json.message,false);
+					}
+				})
+			}
+		});
 		// 增加按钮事件
 		$('a.snow-add-6').click(function(){
 			$('form.snow-form-6').show();
 		});
 		// 提交表单
-		$('.snow-form-6').submit(function(e){
+		$('form.snow-form-6').submit(function(e){
 			e.preventDefault();
 			var _form = $(this);
 			// 禁用提交按钮
@@ -190,15 +251,36 @@
 				// 启用提交按钮
 				submit_enable(_form);
 				if (json.ok) {
-					// 写入表单id域
-					_form.find('input[name="id"]').val(json.data.id);
-					_form.find('.alert').removeClass('alert-danger').addClass('alert-success').addClass('visible').text('hi,我已经为你保存好了,不用谢了…… :)');
+					showMessage($('.snow-alert-6'),'hi,我已经为你保存好了,不用谢了……',true);
+					// 写入融资经历时间线
+					var _html = _template
+							.replace(/<%.id%>/ig,json.data.id)
+							.replace(/<%.loop%>/ig,snow.getLoop(json.data.loop))
+							.replace(/<%.year%>/ig,json.data.year)
+							.replace(/<%.month%>/ig,json.data.month)
+							.replace(/<%.aalias%>/ig,snow.getMoney(json.data.amountMoney))
+							.replace(/<%.valias%>/ig,snow.getMoney(json.data.valueMoney))
+							.replace(/<%.amount%>/ig,json.data.amount)
+							.replace(/<%.value%>/ig,json.data.value)
+							.replace(/<%.investor%>/ig,json.data.investor);
+					// 实体是否存在
+					var _obj = $('.snow-list-6 .snow-loops-'+json.data.id);
+					if(_obj.length){
+						// 替换
+						_obj.replaceWith(_html);
+					}else{
+						// 追加
+						$('.snow-list-6').append(_html);
+					}
+					// 初始化表单
+					_form.find('input[name="id"]').val('');
+					_form.hide()[0].reset();
 				} else{
 					var _errors=[];
 					for (var i = 0; i < json.data.length; i++) {
 						_errors.push(json.data[i].key +','+ json.data[i].message);
 					}
-					_form.find('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( ,'+_errors.join(';'));
+					showMessage($('.snow-alert-6'),_errors.join(';'),false);
 				}
 			});
 		}).find('input[name="companyId"]').change(function(){

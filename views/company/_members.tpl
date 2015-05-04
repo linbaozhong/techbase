@@ -7,11 +7,11 @@
 			<h4 class="snow-underline">创始团队</h4>
 		</div>
 		<div class="col-sm-9">
-			<a class="pull-right snow-add-5" href="javascript:;" title="增加"><i class="fa fa-plus-circle fa-lg" style="padding-top: 20px;"></i></a>
-			<div class="alert" role="alert"></div>
+			<a class="abs-right-bottom snow-add-5" href="javascript:;" title="增加"><i class="fa fa-plus-circle fa-lg"></i></a>
+			<div class="alert snow-alert-5" role="alert"></div>
 		</div>
 	</div>
-	<form class="form-horizontal snow-form-5" style="display: none;">
+	<form class="form-horizontal snow-form-5"{{if .members}} style="display: none;"{{end}}>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">头像</label>
 			<div class="col-sm-9">
@@ -24,7 +24,7 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>姓名</label>
 			<div class="col-sm-9">
-				<input class="form-control" name="name" placeholder="姓名" value="{{.members.Name}}">
+				<input class="form-control" name="name" placeholder="姓名" value="">
 			</div>
 		</div>
 		<div class="form-group">
@@ -35,18 +35,18 @@
 				</select>
 			</div>
 			<div class="col-sm-3">
-				<input class="form-control" name="title" placeholder="如: CEO/COO" value="{{.members.Title}}">
+				<input class="form-control" name="title" placeholder="如: CEO/COO" value="">
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label for="inputIntro" class="col-sm-3 control-label">
-				<input type="hidden" name="id" value="{{.members.Id}}" />
-				<input type="hidden" name="companyId" value="{{.members.CompanyId}}" />
-				<input type="hidden" name="avatar" value="{{.members.Avatar}}" />
+				<input type="hidden" name="id" value="" />
+				<input type="hidden" name="companyId" value="{{.companyId}}" />
+				<input type="hidden" name="avatar" value="" />
 			</label>
 			<div class="col-sm-9">
-				<button type="submit" class="btn btn-primary col-sm-12" {{if not .company.Id}}disabled{{end}}>保存</button>
+				<button type="submit" class="btn btn-primary col-sm-12" {{if eq .companyId 0}}disabled{{end}}>保存</button>
 			</div>
 		</div>
 	</form>
@@ -54,44 +54,117 @@
 	<div class="form-horizontal">
 		<div class="form-group">
 			<label class="col-sm-3 control-label"></label>
-			<div class="col-sm-9 snow-list">
-				<div class="snow-member col-sm-5">
+			<div class="col-sm-9 snow-list-5">
+				{{range .members}}
+				<div class="snow-member col-sm-5 snow-members-{{.Id}}">
 					<div class="snow-tools">
-						<a href="#"><i class="fa fa-pencil"></i></a> 
-						<a href="#"><i class="fa fa-times"></i></a>
+						<a class="snow-edit" href="#" data-id="{{.Id}}"><i class="fa fa-pencil"></i></a> 
+						<a class="snow-del" href="#" data-id="{{.Id}}"><i class="fa fa-times"></i></a>
+					</div>
+					<div class="snow-avatar img-circle">
+						<img src="{{.Avatar}}" />
 					</div>
 					<div>
-						<img src="" style="width:100px;height:100px"/>
+						<label class="control-label">{{.Name}}</label>
 					</div>
 					<div>
-						<label class="control-label">王成武</label>
-					</div>
-					<div>
-						<span>创始人</span> <span>CEO</span>
+						<span class="snow-member-{{.Place}}">创始人</span> <span>{{.Title}}</span>
 					</div>
 				</div>
-				<div class="snow-member col-sm-5">
-					<div class="snow-tools">
-						<a href="#"><i class="fa fa-pencil"></i></a> 
-						<a href="#"><i class="fa fa-times"></i></a>
-					</div>
-					<div>
-						<img src="" style="width:100px;height:100px"/>
-					</div>
-					<div>
-						<label class="control-label">王成武</label>
-					</div>
-					<div>
-						<span>创始人</span> <span>CEO</span>
-					</div>
-				</div>
+				{{end}}
 			</div>
 		</div>
 	</div>
 
 </div>
 <script type="text/javascript">
+	snow.getPlace = function(v){
+		_place = '创始人';
+		$.each(snow.place, function(index,item) {    
+			if (v == item.value) {
+				_loop = item.name;
+				return false;
+			}
+		});
+		return _place;
+	};
+	// 职位下拉选项
+	function memberPlaceOptions(){
+		var _html=[];
+		$.each(snow.place, function(index,item) {    
+			_html.push('<option');
+			_html.push(' value="'+item.value+'">'+item.name+'</option>');                                                          
+			// 修复创始成员
+			$('.snow-list-5 .snow-member-'+item.value).text(item.name);
+		});
+		$('form.snow-form-5 select[name="place"]').empty().html(_html.join(''));
+	}
+	
 	$(function(){
+		var _template = '<div class="snow-member col-sm-5 snow-members-<%.id%>">'
+					+'<div class="snow-tools">'
+						+'<a class="snow-edit" href="#" data-id="<%.id%>"><i class="fa fa-pencil"></i></a>&nbsp;'
+						+'<a class="snow-del" href="#" data-id="<%.id%>"><i class="fa fa-times"></i></a>'
+					+'</div>'
+					+'<div class="snow-avatar">'
+						+'<img class="img-circle img-circle" src="<%.avatar%>" />'
+					+'</div>'
+					+'<div>'
+						+'<label class="control-label"><%.name%></label>'
+					+'</div>'
+					+'<div>'
+						+'<span class=""><%.place%></span> <span><%.title%></span>'
+					+'</div>'
+				+'</div>';
+		// 读取职位选项
+		if(snow.place){
+			memberPlaceOptions();
+		}else{
+			$.getJSON('/basic/place',function(json){
+				if (json.ok) {
+					snow.place = json.data;
+					memberPlaceOptions();
+				} else{
+					
+				}
+			});
+		}
+
+		// 编辑 删除
+		$('.snow-list-5').on('click','.snow-edit',function(e){
+			e.preventDefault();
+			// 读取实体
+			var _this=$(this);
+			$.getJSON('/company/getmember',{id:_this.data('id')},function(json){
+				console.log(json);
+				if (json.ok) {
+					var _form = $('form.snow-form-5').show();
+					_form.find('input[name="id"]').val(json.data.id);
+					_form.find('input[name="companyId"]').val(json.data.companyId);
+					_form.find('input[name="avatar"]').val(json.data.avatar);
+					_form.find('input[name="name"]').val(json.data.name);
+					_form.find('input[name="title"]').val(json.data.title);
+					_form.find('select[name="place"]').val(json.data.place);
+					_form.find('.snow-upload-target img').attr('src',json.data.avatar);
+				} else{
+					showMessage($('.snow-alert-5'),json.message,false);
+				}
+			});
+		}).on('click','.snow-del',function(e){
+			e.preventDefault();
+			
+			if (snow.confirm('你确定要删除吗?')) {
+				var _this=$(this);
+				$.getJSON('/company/deletemember',{id:_this.data('id')},function(json){
+					if (json.ok) {
+						_this.closest('.snow-member').remove();
+					} else{
+						showMessage($('.snow-alert-5'),json.message,false);
+					}
+				})
+			}
+		});
+		
 		// 增加按钮事件
 		$('a.snow-add-5').click(function(){
 			$('form.snow-form-5').show();
@@ -105,16 +178,36 @@
 			$.post('/company/postmembers',_form.serialize(),function(json){
 				// 启用提交按钮
 				submit_enable(_form);
+				
+				console.log(json);
+				
 				if (json.ok) {
-					// 写入表单id域
-					_form.find('input[name="id"]').val(json.data.id);
-					_form.find('.alert').removeClass('alert-danger').addClass('alert-success').addClass('visible').text('hi,我已经为你保存好了,不用谢了…… :)');
+					showMessage($('.snow-alert-5'),'hi,我已经为你保存好了,不用谢了……',true);
+					// 写入融资经历时间线
+					var _html = _template
+							.replace(/<%.id%>/ig,json.data.id)
+							.replace(/<%.avatar%>/ig,json.data.avatar)
+							.replace(/<%.name%>/ig,json.data.name)
+							.replace(/<%.title%>/ig,json.data.title)
+							.replace(/<%.place%>/ig,snow.getPlace(json.data.place));
+					// 实体是否存在
+					var _obj = $('.snow-list-5 .snow-members-'+json.data.id);
+					if(_obj.length){
+						// 替换
+						_obj.replaceWith(_html);
+					}else{
+						// 追加
+						$('.snow-list-5').append(_html);
+					}
+					// 初始化表单
+					_form.find('input[name="id"]').val('');
+					_form.hide()[0].reset();
 				} else{
 					var _errors=[];
 					for (var i = 0; i < json.data.length; i++) {
 						_errors.push(json.data[i].key +','+ json.data[i].message);
 					}
-					_form.find('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( ,'+_errors.join(';'));
+					showMessage($('.snow-alert-5'),_errors.join(';'),false);
 				}
 			});
 		}).find('input[name="companyId"]').change(function(){
@@ -129,7 +222,7 @@
 		$("form.snow-form-5 .snow-upload-target").upload({
 		    label: "<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
-		    action:'/up'
+		    action:'/up/avatar'
 		}).on("filestart.upload", function(){})
 		  .on("fileprogress.upload", function(){})
 		  .on("filecomplete.upload", function(e,file,response){

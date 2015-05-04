@@ -88,7 +88,7 @@
 <script type="text/javascript">
 	$(function(){
 		// 国家发生变化
-		$('.snow-form-1 select[name="country"]').change(function(){
+		$('form.snow-form-1 select[name="country"]').change(function(){
 			// 读取城市选项
 			$.getJSON('/basic/city',{parentId:$(this).val()},function(json){
 				if (json.ok) {
@@ -196,7 +196,7 @@
 		$(".snow-upload-target").upload({
 		    label: "<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
-		    action:'/up'
+		    action:'/up/avatar'
 		}).on("filestart.upload", function(){})
 		  .on("fileprogress.upload", function(){})
 		  .on("filecomplete.upload", function(e,file,response){

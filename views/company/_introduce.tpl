@@ -37,7 +37,7 @@
 			<input type="hidden" name="images" value="{{.introduce.Images}}" />
 			</label>
 			<div class="col-sm-9">
-			<button type="submit" class="btn btn-primary col-sm-12" {{if not .company.Id}}disabled{{end}}>保存</button>
+			<button type="submit" class="btn btn-primary col-sm-12" {{if eq .introduce.CompanyId 0}}disabled{{end}}>保存</button>
 			</div>
 		</div>
 	</form>

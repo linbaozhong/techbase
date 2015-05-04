@@ -74,6 +74,22 @@ ul{
 	background-color: transparent;
 	border-width: 1px;
 }
+/*头像*/
+.snow-avatar{
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	line-height: 100px;
+	/*border: 1px solid #ddd;*/
+	background-color: #fff;
+	overflow: hidden;
+}
+/*定位*/
+.abs-right-bottom{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
 /*修正bootstrap*/
 .form-control{
 	border-radius:initial;
@@ -336,7 +352,7 @@ form .alert.visible{
 	right: 5px;
 }
 .snow-loop .snow-tools a{
-	padding: 4px;
+	/*padding: 4px;*/
 }
 /*团队成员*/
 .snow-member{

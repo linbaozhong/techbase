@@ -50,7 +50,7 @@
 				<input type="hidden" name="companyId" value="{{.links.CompanyId}}" />
 			</label>
 			<div class="col-sm-9">
-				<button type="submit" class="btn btn-primary col-sm-12" {{if not .company.Id}}disabled{{end}}>保存</button>
+				<button type="submit" class="btn btn-primary col-sm-12" {{if eq .links.CompanyId 0}}disabled{{end}}>保存</button>
 			</div>
 		</div>
 	</form>

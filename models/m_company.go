@@ -1,5 +1,9 @@
 package models
 
+import (
+//"fmt"
+)
+
 type Company struct {
 	Id        int64  `json:"id"`
 	AccountId int64  `json:"accountId"`
@@ -58,7 +62,7 @@ type Contact struct {
 	Id        int64  `json:"id"`
 	CompanyId int64  `json:"companyId"`
 	Name      string `json:"name" valid:"Required;MaxSize(50)"`
-	Place     int    `json:"place" valid:"Required"`
+	Place     int    `json:"place"`
 	Title     string `json:"title" valid:"MaxSize(50)"`
 	Year      int    `json:"year" valid:"Required;"`
 	Month     int    `json:"month" valid:"Required;"`
@@ -198,6 +202,17 @@ func (this *Members) Save() (error, []Error) {
 	return err, nil
 }
 
+// 读取
+func (this *Members) Get() (bool, error) {
+	return db.Id(this.Id).Get(this)
+}
+
+// 删除
+func (this *Members) Delete() error {
+	_, err := db.Id(this.Id).Cols("deleted").Update(this)
+	return err
+}
+
 /*
 * 公司融资经历
  */
@@ -238,4 +253,15 @@ func (this *Loops) Save() (error, []Error) {
 		_, err = db.Id(this.Id).Update(this)
 	}
 	return err, nil
+}
+
+// 读取
+func (this *Loops) Get() (bool, error) {
+	return db.Id(this.Id).Get(this)
+}
+
+// 删除
+func (this *Loops) Delete() error {
+	_, err := db.Id(this.Id).Cols("deleted").Update(this)
+	return err
 }

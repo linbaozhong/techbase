@@ -41,6 +41,13 @@
 <script src="/static/js/core.js" type="text/javascript" charset="utf-8"></script>
 <script src="/static/js/upload.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
+	function showMessage(obj,msg,success){
+		if (success) {
+			obj.removeClass('alert-danger').addClass('alert-success').addClass('visible').text(':) ,'+msg);
+		} else{
+			obj.removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( ,'+msg);
+		}
+	}
 	function submit_disable(obj){
 		$('.btn[type="submit"]',obj).attr('disabled',true).prepend('<i class="fa fa-spinner fa-spin"></i> ');
 	}

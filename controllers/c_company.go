@@ -205,6 +205,29 @@ func (this *Company) GetMembers() {
 	this.setTplNames("_members")
 }
 
+// 读取一个创始团队成员
+func (this *Company) GetMember() {
+	id, err := this.GetInt64("id")
+	if err != nil || id == 0 {
+		this.renderJson(utils.JsonData(false, "", errors.New("缺乏相应的参数")))
+		return
+	}
+	com := new(models.Members)
+	com.Id = id
+
+	if has, err := com.Get(); err == nil {
+		this.trace(has, err)
+		if has {
+			this.renderJson(utils.JsonData(true, "", com))
+		} else {
+			this.renderJson(utils.JsonMessage(false, "", "没有找到符合条件的数据"))
+		}
+	} else {
+		this.trace(err)
+		this.renderJson(utils.JsonMessage(false, "", err.Error()))
+	}
+}
+
 //写创始团队
 func (this *Company) PostMembers() {
 	companyId, err := this.GetInt64("companyId")
@@ -225,21 +248,39 @@ func (this *Company) PostMembers() {
 	if err, es := com.Save(); err == nil {
 		this.renderJson(utils.JsonData(true, "", com))
 	} else {
+		this.trace(err, es)
+		es = append(es, models.Error{Message: err.Error()})
 		this.renderJson(utils.JsonData(false, "", es))
+	}
+}
+
+// 删除团队成员
+func (this *Company) DeleteMember() {
+	id, err := this.GetInt64("id")
+	if err != nil || id == 0 {
+		this.renderJson(utils.JsonData(false, "", errors.New("缺乏相应的参数")))
+		return
+	}
+
+	com := new(models.Members)
+	com.Id = id
+	com.Deleted = models.Deleted
+
+	if err := com.Delete(); err == nil {
+		this.renderJson(utils.JsonMessage(true, "", ""))
+	} else {
+		this.renderJson(utils.JsonMessage(false, "", err.Error()))
 	}
 }
 
 // 读取融资经历
 func (this *Company) GetLoops() {
-	var _json []byte
 	// 公司id
 	id, _ := this.getParamsInt64("0")
 
 	if id > 0 {
-		_json = this.getLoopsList(id)
+		this.getLoopsList(id)
 	}
-
-	this.Data["loops"] = _json
 
 	this.Layout = ""
 	this.setTplNames("_loops")
@@ -269,7 +310,51 @@ func (this *Company) PostLoops() {
 	if err, es := com.Save(); err == nil {
 		this.renderJson(utils.JsonData(true, "", com))
 	} else {
+		this.trace(err, es)
+		es = append(es, models.Error{Message: err.Error()})
 		this.renderJson(utils.JsonData(false, "", es))
+	}
+}
+
+// 读取一个融资经历实体
+func (this *Company) GetLoop() {
+	id, err := this.GetInt64("id")
+	if err != nil || id == 0 {
+		this.renderJson(utils.JsonData(false, "", errors.New("缺乏相应的参数")))
+		return
+	}
+	com := new(models.Loops)
+	com.Id = id
+
+	if has, err := com.Get(); err == nil {
+		this.trace(has, err)
+		if has {
+			this.renderJson(utils.JsonData(true, "", com))
+		} else {
+			this.renderJson(utils.JsonMessage(false, "", "没有找到符合条件的数据"))
+		}
+	} else {
+		this.trace(err)
+		this.renderJson(utils.JsonMessage(false, "", err.Error()))
+	}
+}
+
+// 删除融资经历
+func (this *Company) DeleteLoops() {
+	id, err := this.GetInt64("id")
+	if err != nil || id == 0 {
+		this.renderJson(utils.JsonData(false, "", errors.New("缺乏相应的参数")))
+		return
+	}
+
+	com := new(models.Loops)
+	com.Id = id
+	com.Deleted = models.Deleted
+
+	if err := com.Delete(); err == nil {
+		this.renderJson(utils.JsonMessage(true, "", ""))
+	} else {
+		this.renderJson(utils.JsonMessage(false, "", err.Error()))
 	}
 }
 
@@ -279,9 +364,10 @@ func (this *Company) getCompanyInfo(id int64) {
 	com := new(models.Company)
 	com.Id = id
 
-	if ok, _ := com.Get(); ok {
-		this.Data["company"] = com
+	if _, err := com.Get(); err != nil {
+		this.trace(err)
 	}
+	this.Data["company"] = com
 }
 
 // 读取联系信息
@@ -289,7 +375,8 @@ func (this *Company) getContactInfo(id int64) {
 	com := new(models.Contact)
 	com.CompanyId = id
 
-	if ok, _ := com.Get(); ok {
+	if _, err := com.Get(); err != nil {
+		this.trace(err)
 	}
 	this.Data["contact"] = com
 }
@@ -299,7 +386,8 @@ func (this *Company) getIntroduceInfo(id int64) {
 	com := new(models.Introduce)
 	com.CompanyId = id
 
-	if ok, _ := com.Get(); ok {
+	if _, err := com.Get(); err != nil {
+		this.trace(err)
 	}
 	this.Data["introduce"] = com
 }
@@ -309,7 +397,8 @@ func (this *Company) getLinksInfo(id int64) {
 	com := new(models.Links)
 	com.CompanyId = id
 
-	if ok, _ := com.Get(); ok {
+	if _, err := com.Get(); err != nil {
+		this.trace(err)
 	}
 	this.Data["links"] = com
 }
@@ -323,11 +412,12 @@ func (this *Company) getMembersList(id int64) {
 	if err != nil {
 		this.trace(err)
 	}
+	this.Data["companyId"] = id
 	this.Data["members"] = ms
 }
 
 // 读取融资经历
-func (this *Company) getLoopsList(id int64) []byte {
+func (this *Company) getLoopsList(id int64) {
 	com := new(models.Loops)
 	com.CompanyId = id
 
@@ -335,11 +425,13 @@ func (this *Company) getLoopsList(id int64) []byte {
 	if err != nil {
 		this.trace(err)
 	}
-	//
-	_json, err := utils.Interface2Json(ls, false, false)
-	if err != nil {
-		this.trace(err)
-	}
+	this.Data["companyId"] = id
+	this.Data["loops"] = ls
+	////
+	//_json, err := utils.Interface2Json(ls, false, false)
+	//if err != nil {
+	//	this.trace(err)
+	//}
 
-	return _json
+	//return _json
 }

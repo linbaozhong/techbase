@@ -124,6 +124,12 @@ func (this *Basic) Field() {
 	this.renderJson(utils.JsonData(true, "", bs))
 }
 
+// 公司职位
+func (this *Basic) Place() {
+	bs := this.getOptions(models.Type_Place)
+	this.renderJson(utils.JsonData(true, "", bs))
+}
+
 // 公司运营状态
 func (this *Basic) State() {
 	bs := this.getOptions(models.Type_State)

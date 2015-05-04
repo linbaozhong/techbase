@@ -88,17 +88,40 @@
 				<input type="hidden" name="companyId" value="{{.contact.CompanyId}}" />
 			</label>
 			<div class="col-sm-9">
-				<button type="submit" class="btn btn-primary col-sm-12" {{if not .company.Id}}disabled{{end}}>保存</button>
+				<button type="submit" class="btn btn-primary col-sm-12" {{if eq .contact.CompanyId 0}}disabled{{end}}>保存</button>
 			</div>
 		</div>
 	</form>
 
 </div>
 <script type="text/javascript">
+	// 职位下拉选项
+	function contactPlaceOptions(){
+		var _html=[];
+		$.each(snow.place, function(index,item) {    
+			_html.push('<option');
+			_html.push(' value="'+item.value+'">'+item.name+'</option>');                                                          
+		});
+		$('form.snow-form-2 select[name="place"]').empty().html(_html.join(''));
+	}
+	
 	$(function(){
-		$('.snow-form-2 select[name="year"]').val('{{.contact.Year}}');
-		$('.snow-form-2 select[name="month"]').val('{{.contact.Month}}');
+		$('form.snow-form-2 select[name="year"]').val('{{.contact.Year}}');
+		$('form.snow-form-2 select[name="month"]').val('{{.contact.Month}}');
 
+		// 读取职位选项
+		if(snow.place){
+			contactPlaceOptions();
+		}else{
+			$.getJSON('/basic/place',function(json){
+				if (json.ok) {
+					snow.place = json.data;
+					contactPlaceOptions();
+				} else{
+					
+				}
+			});
+		}
 		// 提交表单
 		$('.snow-form-2').submit(function(e){
 			e.preventDefault();
