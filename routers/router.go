@@ -33,9 +33,9 @@ func init() {
 	// 公司
 	com := &controllers.Company{}
 	beego.Router("/my/company", com, "get:Index")
+	beego.Router("/my/apply/:id", com, "get:Apply")
 	beego.Router("/company/:id", com)
-	beego.Router("/company/create", com, "get:Create")
-	beego.Router("/company/list", com, "get:List")
+	//beego.Router("/company/list", com, "get:List")
 	beego.AutoRouter(com)
 	// 后台管理
 	admin := &controllers.Admin{}

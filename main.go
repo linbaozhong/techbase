@@ -4,6 +4,7 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/beego/i18n"
 	"os"
+	"strings"
 	_ "techbase/routers"
 	"time"
 )
@@ -32,11 +33,12 @@ func init() {
 func initFuncMap() {
 	beego.AddFuncMap("i18n", i18n.Tr)
 	beego.AddFuncMap("loadtimes", loadtimes)
+	beego.AddFuncMap("split", strings.Split)
 }
 
 // 初始化静态目录
 func initStaticPath() {
-	//beego.SetStaticPath("/html", "html")
+	beego.SetStaticPath("/html", "html")
 	beego.SetStaticPath("/upload", "upload")
 }
 

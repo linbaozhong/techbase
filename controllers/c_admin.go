@@ -37,3 +37,13 @@ func (this *Admin) Prepare() {
 func (this *Admin) Index() {
 	this.setTplNames("index")
 }
+
+// 审核公司
+func (this *Admin) Review() {
+	com := new(models.Company)
+	com.Status, _ = this.GetInt("status")
+
+	cs, _ := com.AllList()
+
+	this.Data["companys"] = cs
+}

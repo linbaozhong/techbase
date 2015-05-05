@@ -35,9 +35,18 @@ func (this *Company) List() ([]Company, error) {
 	return cs, err
 }
 
+// 全部未删除公司列表
+func (this *Company) AllList() ([]Company, error) {
+	cs := make([]Company, 0)
+
+	err := db.Where("status=? and deleted=?", this.Status, Undelete).Find(&cs)
+
+	return cs, err
+}
+
 // 读取
 func (this *Company) Get() (bool, error) {
-	return db.Id(this.Id).Get(this)
+	return db.Where("id=? and accountId=?", this.Id, this.AccountId).Get(this)
 }
 
 // 保存
@@ -50,9 +59,19 @@ func (this *Company) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Id(this.Id).Update(this)
+		_, err = db.Where("id=? and accountId=?", this.Id, this.AccountId).Omit("deleted", "status", "creator", "created").Update(this)
 	}
 	return err, nil
+}
+
+//
+func (this *Company) Exists() bool {
+	n, err := db.Where("id=? and accountId=?", this.Id, this.AccountId).Count(this)
+	if err == nil {
+		return n > 0
+	} else {
+		return false
+	}
 }
 
 /*
@@ -90,7 +109,7 @@ func (this *Contact) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Id(this.Id).Update(this)
+		_, err = db.Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
 	}
 	return err, nil
 }
@@ -123,7 +142,7 @@ func (this *Introduce) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Id(this.Id).Update(this)
+		_, err = db.Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
 	}
 	return err, nil
 }
@@ -159,7 +178,7 @@ func (this *Links) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Id(this.Id).Update(this)
+		_, err = db.Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
 	}
 	return err, nil
 }
@@ -197,7 +216,7 @@ func (this *Members) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Id(this.Id).Update(this)
+		_, err = db.Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
 	}
 	return err, nil
 }
@@ -250,7 +269,7 @@ func (this *Loops) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Id(this.Id).Update(this)
+		_, err = db.Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
 	}
 	return err, nil
 }

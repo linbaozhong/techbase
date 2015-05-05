@@ -33,8 +33,14 @@
 						</a>
 					</div>
 					<ul class="nav navbar-nav" style="margin-left:40px;">
+						{{if lt .account.Role 3 }}
+						<li class="{{if eq .index "index"}} active {{end}}"><a href="/admin/review">公司审核</a>
+						</li>
+						<li class="{{if eq .index "index"}} active {{end}}"><a href="/">账户管理</a>
+						</li>
+						{{end}}
 						{{if lt .account.Role 2 }}
-						<li class="menu {{if eq .index "index"}} active {{end}}" data-rel = "submenu-1"><a href="/">基础数据</a>
+						<li class="menu {{if eq .index "index"}} active {{end}}" data-rel = "submenu-1"><a href="javascript:;">基础数据</a>
 						</li>
 						{{end}}
 					</ul>

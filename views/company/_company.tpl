@@ -1,5 +1,5 @@
 <div class="col-md-3 snow-padding-top-40">
-	<div class="pull-right snow-upload-target" style="width:100px;height:100px;">
+	<div class="pull-right snow-upload-target" title="点我上传图片" style="width:100px;height:100px;overflow: hidden;">
 		<img src="{{.company.Logo}}"/>
 	</div>
 	<span class="small pull-right" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
@@ -87,6 +87,7 @@
 </div>
 <script type="text/javascript">
 	$(function(){
+		snow.companyStatus = '{{.company.Status}}';
 		// 国家发生变化
 		$('form.snow-form-1 select[name="country"]').change(function(){
 			// 读取城市选项

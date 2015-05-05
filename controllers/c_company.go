@@ -6,6 +6,7 @@ package controllers
 
 import (
 	"errors"
+	"fmt"
 	"strings"
 	"techbase/models"
 	"zouzhe/utils"
@@ -20,19 +21,41 @@ func (this *Company) Index() {
 	this.Data["subTitle"] = "我管理的公司"
 }
 
-//
-func (this *Company) Get() {
-	id, _ := this.GetInt64(":id")
-	this.trace(id)
-	this.setTplNames("_detail")
-}
-
 // 创建公司视图
-func (this *Company) Create() {
+func (this *Company) Edit() {
 	this.Data["subTitle"] = "创建公司"
 
 	id, _ := this.getParamsInt64("0")
+
+	com := this.getCompanyInfo(id)
+
+	// 如果已经提交审核，禁止编辑，跳转至公司信息页
+	if com.Status > 0 {
+		this.Redirect(fmt.Sprintf("/company/info/%d", id), 302)
+		this.end()
+	}
+
 	this.Data["companyId"] = id
+}
+
+// 公司详情
+func (this *Company) Info() {
+	id, _ := this.GetInt64("0")
+
+	this.getCompanyInfo(id)
+	this.getIntroduceInfo(id)
+	this.getLinksInfo(id)
+	this.getMembersList(id)
+	this.getLoopsList(id)
+
+	this.setTplNames("info")
+}
+
+// 申请融资
+func (this *Company) Apply() {
+	id, _ := this.GetInt64(":id")
+	this.trace(id)
+	this.setTplNames("apply")
 }
 
 // 我的公司列表
@@ -51,9 +74,7 @@ func (this *Company) GetCompany() {
 	// 公司id
 	id, _ := this.getParamsInt64("0")
 
-	if id > 0 {
-		this.getCompanyInfo(id)
-	}
+	this.getCompanyInfo(id)
 
 	this.Layout = ""
 	this.setTplNames("_company")
@@ -89,9 +110,7 @@ func (this *Company) GetContact() {
 	// 公司id
 	id, _ := this.getParamsInt64("0")
 
-	if id > 0 {
-		this.getContactInfo(id)
-	}
+	this.getContactInfo(id)
 
 	this.Layout = ""
 	this.setTplNames("_contact")
@@ -117,11 +136,19 @@ func (this *Company) PostContact() {
 	com.Year, _ = this.GetInt("year")
 	com.Month, _ = this.GetInt("month")
 
+	// 检查要提交数据的公司是否存在，防止第三方恶意写入
+	if !this.exists(companyId) {
+		this.renderJson(utils.JsonData(false, "", []models.Error{models.Error{Key: "", Message: "公司主体错误或不存在"}}))
+		return
+	}
+
 	this.extend(com)
 
 	if err, es := com.Save(); err == nil {
 		this.renderJson(utils.JsonData(true, "", com))
 	} else {
+		this.trace(err, es)
+		es = append(es, models.Error{Message: err.Error()})
 		this.renderJson(utils.JsonData(false, "", es))
 	}
 }
@@ -131,9 +158,7 @@ func (this *Company) GetIntroduce() {
 	// 公司id
 	id, _ := this.getParamsInt64("0")
 
-	if id > 0 {
-		this.getIntroduceInfo(id)
-	}
+	this.getIntroduceInfo(id)
 
 	this.Layout = ""
 	this.setTplNames("_introduce")
@@ -152,11 +177,19 @@ func (this *Company) PostIntroduce() {
 	com.Images = this.GetString("images")
 	com.Content = this.GetString("content")
 
+	// 检查要提交数据的公司是否存在，防止第三方恶意写入
+	if !this.exists(companyId) {
+		this.renderJson(utils.JsonData(false, "", []models.Error{models.Error{Key: "", Message: "公司主体错误或不存在"}}))
+		return
+	}
+
 	this.extend(com)
 
 	if err, es := com.Save(); err == nil {
 		this.renderJson(utils.JsonData(true, "", com))
 	} else {
+		this.trace(err, es)
+		es = append(es, models.Error{Message: err.Error()})
 		this.renderJson(utils.JsonData(false, "", es))
 	}
 }
@@ -166,9 +199,7 @@ func (this *Company) GetLinks() {
 	// 公司id
 	id, _ := this.getParamsInt64("0")
 
-	if id > 0 {
-		this.getLinksInfo(id)
-	}
+	this.getLinksInfo(id)
 
 	this.Layout = ""
 	this.setTplNames("_links")
@@ -190,11 +221,19 @@ func (this *Company) PostLinks() {
 	com.Windows = this.GetString("windows")
 	com.Web = this.GetString("web")
 
+	// 检查要提交数据的公司是否存在，防止第三方恶意写入
+	if !this.exists(companyId) {
+		this.renderJson(utils.JsonData(false, "", []models.Error{models.Error{Key: "", Message: "公司主体错误或不存在"}}))
+		return
+	}
+
 	this.extend(com)
 
 	if err, es := com.Save(); err == nil {
 		this.renderJson(utils.JsonData(true, "", com))
 	} else {
+		this.trace(err, es)
+		es = append(es, models.Error{Message: err.Error()})
 		this.renderJson(utils.JsonData(false, "", es))
 	}
 }
@@ -204,9 +243,7 @@ func (this *Company) GetMembers() {
 	// 公司id
 	id, _ := this.getParamsInt64("0")
 
-	if id > 0 {
-		this.getMembersList(id)
-	}
+	this.getMembersList(id)
 
 	this.Layout = ""
 	this.setTplNames("_members")
@@ -250,6 +287,12 @@ func (this *Company) PostMembers() {
 	com.Title = this.GetString("title")
 	com.Avatar = this.GetString("avatar")
 
+	// 检查要提交数据的公司是否存在，防止第三方恶意写入
+	if !this.exists(companyId) {
+		this.renderJson(utils.JsonData(false, "", []models.Error{models.Error{Key: "", Message: "公司主体错误或不存在"}}))
+		return
+	}
+
 	this.extend(com)
 
 	if err, es := com.Save(); err == nil {
@@ -285,9 +328,7 @@ func (this *Company) GetLoops() {
 	// 公司id
 	id, _ := this.getParamsInt64("0")
 
-	if id > 0 {
-		this.getLoopsList(id)
-	}
+	this.getLoopsList(id)
 
 	this.Layout = ""
 	this.setTplNames("_loops")
@@ -311,6 +352,12 @@ func (this *Company) PostLoops() {
 	com.Year, _ = this.GetInt("year")
 	com.Month, _ = this.GetInt("month")
 	com.Investor = this.GetString("investor")
+
+	// 检查要提交数据的公司是否存在，防止第三方恶意写入
+	if !this.exists(companyId) {
+		this.renderJson(utils.JsonData(false, "", []models.Error{models.Error{Key: "", Message: "公司主体错误或不存在"}}))
+		return
+	}
 
 	this.extend(com)
 
@@ -367,14 +414,19 @@ func (this *Company) DeleteLoops() {
 
 //////////////////////////////////////////
 // 读取公司信息
-func (this *Company) getCompanyInfo(id int64) {
+func (this *Company) getCompanyInfo(id int64) *models.Company {
 	com := new(models.Company)
 	com.Id = id
+	com.AccountId = this.currentUser.Id
 
-	if _, err := com.Get(); err != nil {
-		this.trace(err)
+	if id > 0 {
+		if _, err := com.Get(); err != nil {
+			this.trace(err)
+		}
 	}
 	this.Data["company"] = com
+
+	return com
 }
 
 // 读取联系信息
@@ -382,8 +434,10 @@ func (this *Company) getContactInfo(id int64) {
 	com := new(models.Contact)
 	com.CompanyId = id
 
-	if _, err := com.Get(); err != nil {
-		this.trace(err)
+	if id > 0 {
+		if _, err := com.Get(); err != nil {
+			this.trace(err)
+		}
 	}
 	this.Data["contact"] = com
 }
@@ -393,8 +447,10 @@ func (this *Company) getIntroduceInfo(id int64) {
 	com := new(models.Introduce)
 	com.CompanyId = id
 
-	if _, err := com.Get(); err != nil {
-		this.trace(err)
+	if id > 0 {
+		if _, err := com.Get(); err != nil {
+			this.trace(err)
+		}
 	}
 	this.Data["introduce"] = com
 }
@@ -404,8 +460,10 @@ func (this *Company) getLinksInfo(id int64) {
 	com := new(models.Links)
 	com.CompanyId = id
 
-	if _, err := com.Get(); err != nil {
-		this.trace(err)
+	if id > 0 {
+		if _, err := com.Get(); err != nil {
+			this.trace(err)
+		}
 	}
 	this.Data["links"] = com
 }
@@ -415,9 +473,14 @@ func (this *Company) getMembersList(id int64) {
 	com := new(models.Members)
 	com.CompanyId = id
 
-	ms, err := com.List()
-	if err != nil {
-		this.trace(err)
+	var ms []models.Members
+	var err error
+
+	if id > 0 {
+		ms, err = com.List()
+		if err != nil {
+			this.trace(err)
+		}
 	}
 	this.Data["companyId"] = id
 	this.Data["members"] = ms
@@ -428,9 +491,14 @@ func (this *Company) getLoopsList(id int64) {
 	com := new(models.Loops)
 	com.CompanyId = id
 
-	ls, err := com.List()
-	if err != nil {
-		this.trace(err)
+	var ls []models.Loops
+	var err error
+
+	if id > 0 {
+		ls, err = com.List()
+		if err != nil {
+			this.trace(err)
+		}
 	}
 	this.Data["companyId"] = id
 	this.Data["loops"] = ls
@@ -441,4 +509,16 @@ func (this *Company) getLoopsList(id int64) {
 	//}
 
 	//return _json
+}
+
+/////////////////////////////////////
+/*
+* 检查用户提交的数据是否自己公司的数据
+ */
+func (this *Company) exists(id int64) bool {
+	com := new(models.Company)
+	com.Id = id
+	com.AccountId = this.currentUser.Id
+
+	return com.Exists()
 }

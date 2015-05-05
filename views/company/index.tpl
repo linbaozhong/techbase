@@ -5,7 +5,7 @@
 		</div>
 		<div class="col-md-10">
 			<h3>{{.subTitle}}</h3>
-			<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-30px;" href="/company/create"><i class="fa fa-plus-circle"></i>&nbsp; 创建公司</a>
+			<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-30px;" href="/company/edit"><i class="fa fa-plus-circle"></i>&nbsp; 创建公司</a>
 	
 			<!--数据在这里-->
 			<div class="" id="snow-list" style="margin-top: 30px;">
@@ -23,15 +23,19 @@
 		var _row = $('#snow-list').find('.row-id-'+item.id),
 			_html = [];
 		 _html.push('<div class="media row-id-'+item.id+'">');                                                         
-		 _html.push('<div class="media-left"><a href="/company/'+item.id+'"><img class="media-object" src="'+item.logo+'" style="width: 84px; height: 84px;"></a></div>');                                                         
-		 _html.push('<div class="media-body"><div><span class="media-heading">'+item.name+'</span>');
+		 _html.push('<div class="media-left"><a href="/company/info/'+item.id+'"><img class="media-object" src="'+item.logo+'" style="width: 84px; height: 84px;"></a></div>');                                                         
+		 _html.push('<div class="media-body"><div><span class="media-heading" style="font-size:1.15em;">'+item.name+'</span>');
 		 
-		 switch (item.state){
+		 switch (item.status){
 		 	case 0:
-		 		_html.push('<span>正在审核中</span> <span title="您的融资申请正在审核中，审核通过后，她本营的工作人员会与您取得进一步联系"><i class="fa fa-question-circle"></i></span>');
+		 		_html.push('<span>未提交审核</span> <span title="您的公司仍未提交审核，请尽快完善公司注册内容并提交审核，审核通过后，她本营的工作人员会与您取得进一步联系"><i class="fa fa-question-circle"></i></span>');
 		 		_html.push('<div class="pull-right"><span>申请融资</span> <span title="审核通过后即可快速申请融资"><i class="fa fa-question-circle"></i></span></div>');
 		 		break;
 		 	case 1:
+		 		_html.push('<span>正在审核中</span> <span title="您的公司正在审核中，审核通过后，她本营的工作人员会与您取得进一步联系"><i class="fa fa-question-circle"></i></span>');
+		 		_html.push('<div class="pull-right"><span>申请融资</span> <span title="审核通过后即可快速申请融资"><i class="fa fa-question-circle"></i></span></div>');
+		 		break;
+		 	case 2:
 		 		_html.push('<span>审核通过</span>');
 		 		_html.push('<div class="pull-right"><a href="#">申请融资</a></div>');
 		 		break;
@@ -41,9 +45,9 @@
 		 		break;
 		 }
 		 
-		 _html.push('</div>');
+		 _html.push('</div><p>');
 		 _html.push(item.intro);                                                         
-		 _html.push('</div>');
+		 _html.push('</p></div>');
 		 
 		 // 检查该行是否已经存在
 		 if (_row.length) {
