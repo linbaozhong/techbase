@@ -109,9 +109,13 @@
 		</div>
 	</section>
 </div>
+<script src="http://cdn.bootcss.com/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
 <script type="text/javascript">
 	$(window).resize(function() {
-		$('section.sec div').css('height', $(window).height());
+		$('section.sec div').css({
+			height: $(window).height(),
+			marginTop:'25%'
+			});
 	});
 	var _sections = $('#container').children('section');
 	var _sec_down = $('span.sec-down').click(function() {
@@ -123,7 +127,7 @@
 		
 		$('html,body').stop().animate({
 			scrollTop: _top
-		}, 300);
+		}, 600);
 	});
 	var _sec_up = $('span.sec-up').click(function() {
 		var _this = $(this),
@@ -132,7 +136,7 @@
 
 		$('html,body').stop().animate({
 			scrollTop: _top
-		}, 300,function(){
+		}, 600,function(){
 			// 显示上一个向下按钮
 			_this.parent().prev().find('span.sec-down').show();
 		});
