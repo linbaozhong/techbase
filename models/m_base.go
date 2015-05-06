@@ -34,6 +34,7 @@ type Current struct {
 	Avatar string `json:"avatar"`
 	From   string `json:"from"`
 	Role   int    `json:"role"`
+	Status int    `json:status`
 }
 
 //公共字段

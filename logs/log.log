@@ -8053,3 +8053,428 @@
 2015/05/05 18:24:05 [router.go:845] [D] | GET        | /company/GetMembers/1                    | 88.005ms         | match      | /company/getmembers/*                    | 
 2015/05/05 18:24:05 [router.go:845] [D] | GET        | /company/GetLoops/1                      | 100.0057ms       | match      | /company/getloops/*                      | 
 2015/05/05 18:24:33 [router.go:845] [D] | GET        | /my/company                              | 59.0033ms        | match      | /my/company                              | 
+2015/05/06 10:36:08 [main.go:17] [I] techbase 1.1.14.1105 
+2015/05/06 10:36:10 [app.go:96] [I] http server Running on :80
+2015/05/06 10:36:13 [router.go:845] [D] | GET        | /                                        | 69.004ms         | match      | /                                        | 
+2015/05/06 10:39:26 [router.go:845] [D] | GET        | /ifr_status/                             | 1.0001ms         | notmatch   | 
+2015/05/06 10:41:06 [router.go:845] [D] | GET        | /connect/wx_callback                     | 716.041ms        | match      | /connect/wx_callback/*                   | 
+2015/05/06 10:41:06 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 10:41:06 [router.go:845] [D] | GET        | /home/error                              | 48.0028ms        | match      | /home/error/*                            | 
+2015/05/06 10:41:49 [router.go:845] [D] | GET        | /                                        | 28.0016ms        | match      | /                                        | 
+2015/05/06 10:42:49 [main.go:17] [I] techbase 1.1.14.1105 
+2015/05/06 10:42:49 [app.go:96] [I] http server Running on :80
+2015/05/06 10:46:22 [main.go:17] [I] techbase 1.1.14.1105 
+2015/05/06 10:46:22 [app.go:96] [I] http server Running on :80
+2015/05/06 10:47:42 [main.go:17] [I] techbase 1.1.14.1105 
+2015/05/06 10:47:42 [app.go:96] [I] http server Running on :80
+2015/05/06 10:47:55 [router.go:845] [D] | GET        | /                                        | 57.0032ms        | match      | /                                        | 
+2015/05/06 10:48:08 [log.go:108] [D] Connect/Wx_Callback Info:invalid,  {"errcode":40029,"errmsg":"invalid code"} 
+2015/05/06 10:48:08 [router.go:845] [D] | GET        | /connect/wx_callback                     | 974.0557ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 10:48:08 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 10:48:08 [router.go:845] [D] | GET        | /home/error                              | 53.003ms         | match      | /home/error/*                            | 
+2015/05/06 10:51:19 [router.go:845] [D] | GET        | /                                        | 49.0028ms        | match      | /                                        | 
+2015/05/06 10:51:52 [log.go:108] [D] Connect/Wx_Callback Info:invalid,  {"errcode":40029,"errmsg":"invalid code"} 
+2015/05/06 10:51:52 [router.go:845] [D] | GET        | /connect/wx_callback                     | 329.0188ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 10:51:52 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 10:51:52 [router.go:845] [D] | GET        | /home/error                              | 41.0024ms        | match      | /home/error/*                            | 
+2015/05/06 10:52:50 [router.go:845] [D] | GET        | /                                        | 55.0032ms        | match      | /                                        | 
+2015/05/06 10:53:06 [log.go:108] [D] Connect/Wx_Callback Info:invalid,  {"errcode":40029,"errmsg":"invalid code"} 
+2015/05/06 10:53:07 [router.go:845] [D] | GET        | /connect/wx_callback                     | 308.0176ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 10:53:07 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 10:53:07 [router.go:845] [D] | GET        | /home/error                              | 51.0029ms        | match      | /home/error/*                            | 
+2015/05/06 10:53:44 [main.go:17] [I] techbase 1.1.14.1105 
+2015/05/06 10:53:44 [app.go:96] [I] http server Running on :80
+2015/05/06 10:54:23 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/05/06 10:54:45 [log.go:108] [D] Connect/Wx_Callback Info:invalid,  {"errcode":40029,"errmsg":"invalid code"} 
+2015/05/06 10:54:45 [router.go:845] [D] | GET        | /connect/wx_callback                     | 739.0423ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 10:54:45 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 10:54:45 [router.go:845] [D] | GET        | /home/error/invalid code                 | 45.0026ms        | match      | /home/error/:msg                         | 
+2015/05/06 10:55:24 [main.go:17] [I] techbase 1.1.14.1105 
+2015/05/06 10:55:24 [app.go:96] [I] http server Running on :80
+2015/05/06 10:57:53 [main.go:17] [I] techbase 1.1.14.1105 
+2015/05/06 10:57:53 [app.go:96] [I] http server Running on :80
+2015/05/06 10:58:05 [router.go:845] [D] | GET        | /                                        | 55.0031ms        | match      | /                                        | 
+2015/05/06 10:58:48 [router.go:845] [D] | GET        | /connect/wx_callback                     | 707.0405ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 10:58:48 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 10:58:48 [router.go:845] [D] | GET        | /home/error/invalid code                 | 33.0019ms        | match      | /home/error/:msg                         | 
+2015/05/06 11:04:31 [main.go:17] [I] techbase 1.1.14.1105 
+2015/05/06 11:04:31 [app.go:96] [I] http server Running on :80
+2015/05/06 11:04:56 [main.go:17] [I] techbase 1.1.14.1105 
+2015/05/06 11:04:56 [app.go:96] [I] http server Running on :80
+2015/05/06 11:07:35 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:07:36 [app.go:96] [I] http server Running on :80
+2015/05/06 11:07:42 [router.go:845] [D] | GET        | /                                        | 54.0031ms        | match      | /                                        | 
+2015/05/06 11:07:59 [log.go:108] [D] Connect/Wx_Callback Info:1 
+2015/05/06 11:07:59 [log.go:108] [D] Connect/Wx_Callback Info:2 
+2015/05/06 11:07:59 [log.go:108] [D] Connect/Wx_Callback Info:4 
+2015/05/06 11:08:00 [router.go:845] [D] | GET        | /connect/wx_callback                     | 722.0413ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 11:08:00 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 11:08:00 [router.go:845] [D] | GET        | /home/error/invalid code                 | 41.0023ms        | match      | /home/error/:msg                         | 
+2015/05/06 11:09:26 [router.go:845] [D] | GET        | /ifr_status/                             | 1ms              | notmatch   | 
+2015/05/06 11:09:59 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:09:59 [app.go:96] [I] http server Running on :80
+2015/05/06 11:10:13 [router.go:845] [D] | GET        | /connect/wx_callback                     | 723.0413ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 11:10:13 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 11:10:13 [router.go:845] [D] | GET        | /home/error                              | 35.002ms         | match      | /home/error/*                            | 
+2015/05/06 11:11:53 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:11:53 [app.go:96] [I] http server Running on :80
+2015/05/06 11:12:17 [router.go:845] [D] | GET        | /connect/wx_callback                     | 733.0419ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 11:12:17 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 11:12:17 [router.go:845] [D] | GET        | /home/error/invalid code                 | 38.0022ms        | match      | /home/error/:msg                         | 
+2015/05/06 11:18:08 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:18:08 [app.go:96] [I] http server Running on :80
+2015/05/06 11:18:11 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:18:11 [app.go:96] [I] http server Running on :80
+2015/05/06 11:19:22 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:19:22 [app.go:96] [I] http server Running on :80
+2015/05/06 11:19:35 [router.go:845] [D] | GET        | /connect/wx_callback                     | 563.0322ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 11:19:35 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 11:19:35 [router.go:845] [D] | GET        | /home/error                              | 29.0017ms        | match      | /home/error/*                            | 
+2015/05/06 11:25:13 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 11:25:13 [router.go:845] [D] | GET        | /home/error                              | 52.003ms         | match      | /home/error/*                            | 
+2015/05/06 11:25:15 [router.go:845] [D] | GET        | /                                        | 32.0019ms        | match      | /                                        | 
+2015/05/06 11:25:17 [router.go:845] [D] | GET        | /                                        | 59.0034ms        | match      | /                                        | 
+2015/05/06 11:27:11 [router.go:845] [D] | GET        | /                                        | 42.0024ms        | match      | /                                        | 
+2015/05/06 11:27:33 [router.go:845] [D] | GET        | /connect/wx_callback                     | 158.009ms        | match      | /connect/wx_callback/*                   | 
+2015/05/06 11:27:33 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 11:27:33 [router.go:845] [D] | GET        | /home/error                              | 52.003ms         | match      | /home/error/*                            | 
+2015/05/06 11:28:25 [log.go:108] [D] Home/Error Info:invalid code 
+2015/05/06 11:28:25 [router.go:845] [D] | GET        | /home/error                              | 55.0032ms        | match      | /home/error/*                            | 
+2015/05/06 11:28:27 [router.go:845] [D] | GET        | /                                        | 46.0026ms        | match      | /                                        | 
+2015/05/06 11:28:30 [router.go:845] [D] | GET        | /                                        | 54.0031ms        | match      | /                                        | 
+2015/05/06 11:28:33 [router.go:845] [D] | GET        | /                                        | 57.0032ms        | match      | /                                        | 
+2015/05/06 11:31:29 [router.go:845] [D] | GET        | /                                        | 55.0032ms        | match      | /                                        | 
+2015/05/06 11:31:31 [router.go:845] [D] | GET        | /                                        | 57.0033ms        | match      | /                                        | 
+2015/05/06 11:31:31 [router.go:845] [D] | GET        | /                                        | 50.0029ms        | match      | /                                        | 
+2015/05/06 11:31:33 [router.go:845] [D] | GET        | /                                        | 57.0032ms        | match      | /                                        | 
+2015/05/06 11:38:03 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:38:03 [app.go:96] [I] http server Running on :80
+2015/05/06 11:38:40 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:38:40 [app.go:96] [I] http server Running on :80
+2015/05/06 11:38:54 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:38:54 [app.go:96] [I] http server Running on :80
+2015/05/06 11:39:39 [router.go:845] [D] | GET        | /ifr_status/                             | 1.0001ms         | notmatch   | 
+2015/05/06 11:41:04 [router.go:845] [D] | GET        | /                                        | 57.0032ms        | match      | /                                        | 
+2015/05/06 11:41:05 [router.go:845] [D] | GET        | /                                        | 54.0031ms        | match      | /                                        | 
+2015/05/06 11:41:07 [router.go:845] [D] | GET        | /connect/weixin                          | 30.0017ms        | match      | /connect/weixin/*                        | 
+2015/05/06 11:41:50 [router.go:845] [D] | GET        | /connect/wx_callback                     | 803.0459ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 11:41:50 [log.go:108] [D] Connect/SignTrace Info:创建新的账户 
+2015/05/06 11:41:50 [router.go:845] [D] | GET        | /                                        | 47.0027ms        | match      | /                                        | 
+2015/05/06 11:43:32 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:43:32 [app.go:96] [I] http server Running on :80
+2015/05/06 11:43:33 [router.go:845] [D] | GET        | /                                        | 31.0018ms        | match      | /                                        | 
+2015/05/06 11:43:38 [router.go:845] [D] | GET        | /                                        | 51.0029ms        | match      | /                                        | 
+2015/05/06 11:43:41 [router.go:845] [D] | GET        | /connect/weixin                          | 19.0011ms        | match      | /connect/weixin/*                        | 
+2015/05/06 11:45:05 [router.go:845] [D] | GET        | /                                        | 38.0021ms        | match      | /                                        | 
+2015/05/06 11:45:06 [router.go:845] [D] | GET        | /                                        | 50.0029ms        | match      | /                                        | 
+2015/05/06 11:45:08 [router.go:845] [D] | GET        | /                                        | 58.0034ms        | match      | /                                        | 
+2015/05/06 11:45:09 [router.go:845] [D] | GET        | /                                        | 51.0029ms        | match      | /                                        | 
+2015/05/06 11:45:10 [router.go:845] [D] | GET        | /                                        | 56.0032ms        | match      | /                                        | 
+2015/05/06 11:45:10 [router.go:845] [D] | GET        | /                                        | 58.0034ms        | match      | /                                        | 
+2015/05/06 11:45:13 [router.go:845] [D] | GET        | /connect/weixin                          | 37.0021ms        | match      | /connect/weixin/*                        | 
+2015/05/06 11:45:30 [router.go:845] [D] | GET        | /connect/wx_callback                     | 789.0451ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 11:45:30 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/05/06 11:45:30 [router.go:845] [D] | GET        | /                                        | 45.0026ms        | match      | /                                        | 
+2015/05/06 11:45:40 [router.go:845] [D] | GET        | /my/profile                              | 45.0026ms        | match      | /my/profile                              | 
+2015/05/06 11:48:03 [router.go:845] [D] | GET        | /my/company                              | 53.003ms         | match      | /my/company                              | 
+2015/05/06 11:50:01 [router.go:845] [D] | GET        | /basic/index/0                           | 52.0029ms        | match      | /basic/index/:typeId                     | 
+2015/05/06 11:50:04 [router.go:845] [D] | GET        | /                                        | 54.0031ms        | match      | /                                        | 
+2015/05/06 11:50:08 [router.go:845] [D] | GET        | /admin/review                            | 42.0024ms        | match      | /admin/review/*                          | 
+2015/05/06 11:53:54 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:53:54 [app.go:96] [I] http server Running on :80
+2015/05/06 11:54:23 [router.go:845] [D] | GET        | /                                        | 58.0033ms        | match      | /                                        | 
+2015/05/06 11:54:35 [router.go:845] [D] | GET        | /connect/weixin                          | 33.0019ms        | match      | /connect/weixin/*                        | 
+2015/05/06 11:54:59 [router.go:845] [D] | GET        | /connect/wx_callback                     | 1.3800789s       | match      | /connect/wx_callback/*                   | 
+2015/05/06 11:54:59 [log.go:108] [D] Connect/SignTrace Info:创建新的账户 
+2015/05/06 11:54:59 [router.go:845] [D] | GET        | /                                        | 56.0032ms        | match      | /                                        | 
+2015/05/06 11:55:12 [router.go:845] [D] | GET        | /my/company                              | 61.0035ms        | match      | /my/company                              | 
+2015/05/06 11:55:16 [router.go:845] [D] | GET        | /my/profile                              | 46.0026ms        | match      | /my/profile                              | 
+2015/05/06 11:55:38 [router.go:845] [D] | GET        | /my/company                              | 50.0028ms        | match      | /my/company                              | 
+2015/05/06 11:56:23 [router.go:845] [D] | GET        | /                                        | 57.0032ms        | match      | /                                        | 
+2015/05/06 11:56:39 [router.go:845] [D] | GET        | /connect/weixin                          | 42.0024ms        | match      | /connect/weixin/*                        | 
+2015/05/06 11:56:58 [router.go:845] [D] | GET        | /connect/wx_callback                     | 377.0215ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 11:56:58 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/05/06 11:56:58 [router.go:845] [D] | GET        | /                                        | 51.0029ms        | match      | /                                        | 
+2015/05/06 11:57:23 [router.go:845] [D] | GET        | /my/company                              | 42.0024ms        | match      | /my/company                              | 
+2015/05/06 11:57:32 [router.go:845] [D] | GET        | /my/company                              | 47.0027ms        | match      | /my/company                              | 
+2015/05/06 11:57:40 [router.go:845] [D] | GET        | /my/profile                              | 50.0029ms        | match      | /my/profile                              | 
+2015/05/06 11:57:44 [router.go:845] [D] | GET        | /my/company                              | 59.0034ms        | match      | /my/company                              | 
+2015/05/06 11:57:59 [router.go:845] [D] | GET        | /my/company                              | 55.0032ms        | match      | /my/company                              | 
+2015/05/06 11:58:02 [router.go:845] [D] | GET        | /my/company                              | 60.0035ms        | match      | /my/company                              | 
+2015/05/06 11:59:48 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 11:59:48 [app.go:96] [I] http server Running on :80
+2015/05/06 11:59:53 [log.go:108] [D] Company/Index Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+} 
+2015/05/06 11:59:53 [router.go:845] [D] | GET        | /my/company                              | 70.004ms         | match      | /my/company                              | 
+2015/05/06 12:00:36 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:00:36 [app.go:96] [I] http server Running on :80
+2015/05/06 12:00:52 [router.go:845] [D] | GET        | /my/company                              | 46.0026ms        | match      | /my/company                              | 
+2015/05/06 12:02:29 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:02:29 [app.go:96] [I] http server Running on :80
+2015/05/06 12:04:07 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:04:07 [app.go:96] [I] http server Running on :80
+2015/05/06 12:04:15 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:04:15 [app.go:96] [I] http server Running on :80
+2015/05/06 12:04:22 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:04:22 [app.go:96] [I] http server Running on :80
+2015/05/06 12:05:26 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:05:26 [app.go:96] [I] http server Running on :80
+2015/05/06 12:07:08 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:07:08 [app.go:96] [I] http server Running on :80
+2015/05/06 12:07:23 [router.go:845] [D] | GET        | /                                        | 44.0025ms        | match      | /                                        | 
+2015/05/06 12:07:26 [router.go:845] [D] | GET        | /connect/weixin                          | 38.0021ms        | match      | /connect/weixin/*                        | 
+2015/05/06 12:07:44 [router.go:845] [D] | GET        | /connect/wx_callback                     | 772.0442ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 12:07:45 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/05/06 12:07:45 [router.go:845] [D] | GET        | /                                        | 45.0026ms        | match      | /                                        | 
+2015/05/06 12:08:02 [router.go:845] [D] | GET        | /my/company                              | 58.0033ms        | match      | /my/company                              | 
+2015/05/06 12:08:27 [router.go:845] [D] | GET        | /                                        | 54.0031ms        | match      | /                                        | 
+2015/05/06 12:09:39 [router.go:845] [D] | GET        | /ifr_status/                             | 1.0001ms         | notmatch   | 
+2015/05/06 12:09:52 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:09:52 [app.go:96] [I] http server Running on :80
+2015/05/06 12:15:29 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:15:29 [app.go:96] [I] http server Running on :80
+2015/05/06 12:33:25 [router.go:845] [D] | GET        | /my/profile                              | 51.0029ms        | match      | /my/profile                              | 
+2015/05/06 12:37:31 [router.go:845] [D] | GET        | /admin/account                           | 38.0022ms        | match      | /admin/account/*                         | 
+2015/05/06 12:39:29 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:39:29 [app.go:96] [I] http server Running on :80
+2015/05/06 12:39:32 [log.go:108] [D] template Execute err: template: admin/account.tpl:17:43: executing "admin/account.tpl" at <$account.Nickname>: Nickname is not a field of struct type models.Accounts 
+2015/05/06 12:39:32 [router.go:876] [C] the request url is  /admin/account 
+2015/05/06 12:39:32 [router.go:877] [C] Handler crashed with error template: admin/account.tpl:17:43: executing "admin/account.tpl" at <$account.Nickname>: Nickname is not a field of struct type models.Accounts 
+2015/05/06 12:39:32 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/06 12:39:32 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/06 12:39:32 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/06 12:39:32 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/06 12:39:32 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/06 12:39:50 [log.go:108] [D] template Execute err: template: admin/account.tpl:17:73: executing "admin/account.tpl" at <$account.Tel>: Tel is not a field of struct type models.Accounts 
+2015/05/06 12:39:50 [router.go:876] [C] the request url is  /admin/account 
+2015/05/06 12:39:50 [router.go:877] [C] Handler crashed with error template: admin/account.tpl:17:73: executing "admin/account.tpl" at <$account.Tel>: Tel is not a field of struct type models.Accounts 
+2015/05/06 12:39:50 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/06 12:39:50 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/06 12:39:50 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/06 12:39:50 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/06 12:39:50 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/06 12:43:01 [router.go:845] [D] | GET        | /my/profile                              | 30.0018ms        | match      | /my/profile                              | 
+2015/05/06 12:44:41 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:44:41 [app.go:96] [I] http server Running on :80
+2015/05/06 12:54:08 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:54:08 [app.go:96] [I] http server Running on :80
+2015/05/06 12:54:11 [log.go:108] [D] template Execute err: template: admin/account.tpl:17:73: executing "admin/account.tpl" at <$account.Tel>: Tel is not a field of struct type models.AccountProfile 
+2015/05/06 12:54:11 [router.go:876] [C] the request url is  /admin/account 
+2015/05/06 12:54:11 [router.go:877] [C] Handler crashed with error template: admin/account.tpl:17:73: executing "admin/account.tpl" at <$account.Tel>: Tel is not a field of struct type models.AccountProfile 
+2015/05/06 12:54:11 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/06 12:54:11 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/06 12:54:11 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/06 12:54:11 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/06 12:54:11 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/06 12:54:28 [router.go:845] [D] | GET        | /admin/account                           | 32.0018ms        | match      | /admin/account/*                         | 
+2015/05/06 12:55:06 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:55:06 [app.go:96] [I] http server Running on :80
+2015/05/06 12:55:08 [router.go:845] [D] | GET        | /admin/account                           | 41.0024ms        | match      | /admin/account/*                         | 
+2015/05/06 12:57:07 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:57:07 [app.go:96] [I] http server Running on :80
+2015/05/06 12:57:14 [router.go:845] [D] | GET        | /admin/account                           | 46.0027ms        | match      | /admin/account/*                         | 
+2015/05/06 12:57:32 [router.go:845] [D] | GET        | /admin/account                           | 51.0029ms        | match      | /admin/account/*                         | 
+2015/05/06 12:58:22 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 12:58:22 [app.go:96] [I] http server Running on :80
+2015/05/06 12:58:24 [router.go:845] [D] | GET        | /admin/account                           | 39.0023ms        | match      | /admin/account/*                         | 
+2015/05/06 13:00:30 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 13:00:30 [app.go:96] [I] http server Running on :80
+2015/05/06 13:00:32 [router.go:845] [D] | GET        | /admin/account                           | 56.0032ms        | match      | /admin/account/*                         | 
+2015/05/06 13:01:07 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 13:01:07 [app.go:96] [I] http server Running on :80
+2015/05/06 13:02:07 [log.go:108] [D] parse template err: admin/account.tpl template: admin/account.tpl:25: unexpected bad character U+002B '+' in parenthesized pipeline 
+2015/05/06 13:02:07 [router.go:845] [D] | GET        | /admin/account                           | 40.0023ms        | match      | /admin/account/*                         | 
+2015/05/06 13:02:08 [log.go:108] [D] parse template err: admin/account.tpl template: admin/account.tpl:25: unexpected bad character U+002B '+' in parenthesized pipeline 
+2015/05/06 13:02:08 [router.go:845] [D] | GET        | /admin/account                           | 45.0025ms        | match      | /admin/account/*                         | 
+2015/05/06 13:02:22 [log.go:108] [D] parse template err: admin/account.tpl template: admin/account.tpl:25: unexpected bad character U+002B '+' in parenthesized pipeline 
+2015/05/06 13:02:22 [router.go:845] [D] | GET        | /admin/account                           | 46.0027ms        | match      | /admin/account/*                         | 
+2015/05/06 13:02:43 [main.go:17] [I] tabenying 1.1.14.1105 
+2015/05/06 13:02:43 [log.go:108] [D] parse template err: admin/account.tpl template: admin/account.tpl:25: unexpected bad character U+002B '+' in parenthesized pipeline 
+2015/05/06 13:02:43 [app.go:96] [I] http server Running on :80
+2015/05/06 13:03:38 [router.go:845] [D] | GET        | /admin/account                           | 47.0027ms        | match      | /admin/account/*                         | 
+2015/05/06 13:06:07 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/06 13:06:07 [app.go:96] [I] http server Running on :80
+2015/05/06 13:07:53 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/06 13:07:53 [app.go:96] [I] http server Running on :80
+2015/05/06 13:09:54 [log.go:108] [D] parse template err: admin/account.tpl template: admin/account.tpl:30: function "data" not defined 
+2015/05/06 13:09:54 [router.go:845] [D] | GET        | /admin/account                           | 46.0026ms        | match      | /admin/account/*                         | 
+2015/05/06 13:10:04 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/06 13:10:04 [log.go:108] [D] parse template err: admin/account.tpl template: admin/account.tpl:30: function "data" not defined 
+2015/05/06 13:10:04 [app.go:96] [I] http server Running on :80
+2015/05/06 13:10:15 [log.go:108] [D] template Execute err: template: admin/account.tpl:30:41: executing "admin/account.tpl" at <date>: wrong number of args for date: want 2 got 2 
+2015/05/06 13:10:15 [router.go:876] [C] the request url is  /admin/account 
+2015/05/06 13:10:15 [router.go:877] [C] Handler crashed with error template: admin/account.tpl:30:41: executing "admin/account.tpl" at <date>: wrong number of args for date: want 2 got 2 
+2015/05/06 13:10:15 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/06 13:10:15 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/06 13:10:15 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/06 13:10:15 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/06 13:10:15 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/06 13:11:34 [router.go:845] [D] | GET        | /admin/account                           | 43.0025ms        | match      | /admin/account/*                         | 
+2015/05/06 13:13:46 [router.go:845] [D] | GET        | /admin/account                           | 48.0027ms        | match      | /admin/account/*                         | 
+2015/05/06 13:18:17 [log.go:108] [D] template Execute err: template: admin/account.tpl:32:78: executing "admin/account.tpl" at <$account.Status>: Status is not a field of struct type models.AccountProfile 
+2015/05/06 13:18:17 [router.go:876] [C] the request url is  /admin/account 
+2015/05/06 13:18:17 [router.go:877] [C] Handler crashed with error template: admin/account.tpl:32:78: executing "admin/account.tpl" at <$account.Status>: Status is not a field of struct type models.AccountProfile 
+2015/05/06 13:18:17 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/06 13:18:17 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/06 13:18:17 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/06 13:18:17 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/06 13:18:17 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/06 13:18:47 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/06 13:18:47 [app.go:96] [I] http server Running on :80
+2015/05/06 13:18:47 [log.go:108] [D] template Execute err: template: admin/account.tpl:32:78: executing "admin/account.tpl" at <$account.Status>: Status is not a field of struct type models.AccountProfile 
+2015/05/06 13:18:47 [router.go:876] [C] the request url is  /admin/account 
+2015/05/06 13:18:47 [router.go:877] [C] Handler crashed with error template: admin/account.tpl:32:78: executing "admin/account.tpl" at <$account.Status>: Status is not a field of struct type models.AccountProfile 
+2015/05/06 13:18:47 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/06 13:18:47 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/06 13:18:47 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/06 13:18:47 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/06 13:18:47 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/06 13:18:48 [log.go:108] [D] template Execute err: template: admin/account.tpl:32:78: executing "admin/account.tpl" at <$account.Status>: Status is not a field of struct type models.AccountProfile 
+2015/05/06 13:18:48 [router.go:876] [C] the request url is  /admin/account 
+2015/05/06 13:18:48 [router.go:877] [C] Handler crashed with error template: admin/account.tpl:32:78: executing "admin/account.tpl" at <$account.Status>: Status is not a field of struct type models.AccountProfile 
+2015/05/06 13:18:48 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/06 13:18:48 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/06 13:18:48 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/06 13:18:48 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/06 13:18:48 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/06 13:19:04 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/06 13:19:05 [app.go:96] [I] http server Running on :80
+2015/05/06 13:19:24 [router.go:845] [D] | GET        | /admin/account                           | 31.0018ms        | match      | /admin/account/*                         | 
+2015/05/06 13:19:25 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/06 13:19:25 [app.go:96] [I] http server Running on :80
+2015/05/06 13:21:18 [router.go:845] [D] | GET        | /                                        | 43.0024ms        | match      | /                                        | 
+2015/05/06 13:25:41 [router.go:845] [D] | GET        | /                                        | 29.0017ms        | match      | /                                        | 
+2015/05/06 13:27:33 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/06 13:27:33 [app.go:96] [I] http server Running on :80
+2015/05/06 13:37:25 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/06 13:37:25 [app.go:96] [I] http server Running on :80
+2015/05/06 13:40:05 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/06 13:40:05 [app.go:96] [I] http server Running on :80
+2015/05/06 13:44:19 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/06 13:44:19 [app.go:96] [I] http server Running on :80
+2015/05/06 13:45:51 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/06 13:45:52 [app.go:96] [I] http server Running on :80
+2015/05/06 13:45:58 [router.go:845] [D] | GET        | /                                        | 51.0029ms        | match      | /                                        | 
+2015/05/06 13:46:54 [router.go:845] [D] | GET        | /                                        | 38.0021ms        | match      | /                                        | 
+2015/05/06 13:47:12 [router.go:845] [D] | GET        | /my/company                              | 7.0004ms         | match      | /my/company                              | 
+2015/05/06 13:47:12 [log.go:108] [D] Home/Error Info:你的账户已经被禁用，请联系网站管理员…… 
+2015/05/06 13:47:12 [router.go:845] [D] | GET        | /home/error                              | 57.0033ms        | match      | /home/error/*                            | 
+2015/05/06 13:47:30 [router.go:845] [D] | GET        | /                                        | 49.0028ms        | match      | /                                        | 
+2015/05/06 13:47:41 [log.go:108] [D] Home/Error Info:你正在访问未经许可的内容，请登录后重试…… 
+2015/05/06 13:47:41 [router.go:845] [D] | GET        | /home/error                              | 38.0022ms        | match      | /home/error/*                            | 
+2015/05/06 13:49:00 [router.go:845] [D] | GET        | /media                                   | 50.0029ms        | match      | /media                                   | 
+2015/05/06 13:49:05 [router.go:845] [D] | GET        | /home                                    | 51.0029ms        | match      | /home                                    | 
+2015/05/06 13:49:22 [router.go:845] [D] | GET        | /connect/weixin                          | 44.0025ms        | match      | /connect/weixin/*                        | 
+2015/05/06 13:49:37 [router.go:845] [D] | GET        | /connect/wx_callback                     | 809.0463ms       | match      | /connect/wx_callback/*                   | 
+2015/05/06 13:49:37 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/05/06 13:49:37 [router.go:845] [D] | GET        | /home                                    | 42.0024ms        | match      | /home                                    | 
+2015/05/06 15:10:02 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/05/06 15:10:05 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 15:10:37 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 15:12:20 [router.go:845] [D] | GET        | /home                                    | 31.0017ms        | match      | /home                                    | 
+2015/05/06 15:16:08 [router.go:845] [D] | GET        | /home                                    | 30.0017ms        | match      | /home                                    | 
+2015/05/06 15:16:13 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 15:29:40 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 15:29:57 [router.go:845] [D] | GET        | /home                                    | 31.0018ms        | match      | /home                                    | 
+2015/05/06 15:34:42 [router.go:845] [D] | GET        | /home                                    | 30.0017ms        | match      | /home                                    | 
+2015/05/06 16:03:44 [router.go:845] [D] | GET        | /home                                    | 65.0037ms        | match      | /home                                    | 
+2015/05/06 16:06:00 [router.go:845] [D] | GET        | /home                                    | 30.0018ms        | match      | /home                                    | 
+2015/05/06 16:06:49 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 16:17:49 [router.go:845] [D] | GET        | /home                                    | 47.0027ms        | match      | /home                                    | 
+2015/05/06 16:19:00 [router.go:845] [D] | GET        | /home                                    | 31.0017ms        | match      | /home                                    | 
+2015/05/06 16:20:08 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 16:20:14 [router.go:845] [D] | GET        | /home                                    | 41.0023ms        | match      | /home                                    | 
+2015/05/06 16:21:47 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 16:23:03 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 16:23:51 [router.go:845] [D] | GET        | /home                                    | 32.0019ms        | match      | /home                                    | 
+2015/05/06 16:28:09 [router.go:845] [D] | GET        | /home                                    | 30.0017ms        | match      | /home                                    | 
+2015/05/06 16:36:13 [router.go:845] [D] | GET        | /home                                    | 65.0038ms        | match      | /home                                    | 
+2015/05/06 16:36:31 [router.go:845] [D] | GET        | /home                                    | 62.0036ms        | match      | /home                                    | 
+2015/05/06 16:37:17 [router.go:845] [D] | GET        | /home                                    | 34.002ms         | match      | /home                                    | 
+2015/05/06 16:37:23 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 16:44:42 [router.go:845] [D] | GET        | /home                                    | 31.0018ms        | match      | /home                                    | 
+2015/05/06 16:46:14 [router.go:845] [D] | GET        | /home                                    | 30.0017ms        | match      | /home                                    | 
+2015/05/06 16:48:58 [router.go:845] [D] | GET        | /home                                    | 50.0029ms        | match      | /home                                    | 
+2015/05/06 16:49:50 [router.go:845] [D] | GET        | /home                                    | 32.0019ms        | match      | /home                                    | 
+2015/05/06 16:50:24 [router.go:845] [D] | GET        | /home                                    | 56.0032ms        | match      | /home                                    | 
+2015/05/06 16:50:47 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 16:52:11 [router.go:845] [D] | GET        | /home                                    | 34.0019ms        | match      | /home                                    | 
+2015/05/06 16:52:30 [router.go:845] [D] | GET        | /home                                    | 34.0019ms        | match      | /home                                    | 
+2015/05/06 16:53:13 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 16:53:30 [router.go:845] [D] | GET        | /home                                    | 34.002ms         | match      | /home                                    | 
+2015/05/06 16:53:45 [router.go:845] [D] | GET        | /home                                    | 69.0039ms        | match      | /home                                    | 
+2015/05/06 16:54:09 [router.go:845] [D] | GET        | /home                                    | 32.0019ms        | match      | /home                                    | 
+2015/05/06 16:55:09 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 16:55:36 [router.go:845] [D] | GET        | /home                                    | 34.002ms         | match      | /home                                    | 
+2015/05/06 16:57:47 [router.go:845] [D] | GET        | /home                                    | 35.002ms         | match      | /home                                    | 
+2015/05/06 17:02:27 [router.go:845] [D] | GET        | /home                                    | 29.0017ms        | match      | /home                                    | 
+2015/05/06 17:03:24 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:04:55 [router.go:845] [D] | GET        | /home                                    | 33.0018ms        | match      | /home                                    | 
+2015/05/06 17:05:29 [router.go:845] [D] | GET        | /home                                    | 53.0031ms        | match      | /home                                    | 
+2015/05/06 17:05:47 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:07:13 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 17:07:29 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 17:10:08 [router.go:845] [D] | GET        | /home                                    | 30.0017ms        | match      | /home                                    | 
+2015/05/06 17:11:15 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 17:11:27 [router.go:845] [D] | GET        | /home                                    | 58.0033ms        | match      | /home                                    | 
+2015/05/06 17:11:49 [router.go:845] [D] | GET        | /home                                    | 52.003ms         | match      | /home                                    | 
+2015/05/06 17:12:17 [router.go:845] [D] | GET        | /home                                    | 51.0029ms        | match      | /home                                    | 
+2015/05/06 17:12:23 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 17:12:24 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 17:17:30 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:20:22 [router.go:845] [D] | GET        | /home                                    | 28.0016ms        | match      | /home                                    | 
+2015/05/06 17:22:56 [router.go:845] [D] | GET        | /home                                    | 29.0016ms        | match      | /home                                    | 
+2015/05/06 17:24:13 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 17:25:24 [router.go:845] [D] | GET        | /home                                    | 41.0024ms        | match      | /home                                    | 
+2015/05/06 17:27:35 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:31:26 [router.go:845] [D] | GET        | /home                                    | 68.0039ms        | match      | /home                                    | 
+2015/05/06 17:32:03 [router.go:845] [D] | GET        | /home                                    | 30.0017ms        | match      | /home                                    | 
+2015/05/06 17:33:06 [router.go:845] [D] | GET        | /home                                    | 33.0018ms        | match      | /home                                    | 
+2015/05/06 17:33:35 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 17:33:47 [router.go:845] [D] | GET        | /home                                    | 32.0019ms        | match      | /home                                    | 
+2015/05/06 17:34:11 [router.go:845] [D] | GET        | /home                                    | 34.002ms         | match      | /home                                    | 
+2015/05/06 17:34:37 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:36:35 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 17:37:08 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:37:25 [router.go:845] [D] | GET        | /home                                    | 34.0019ms        | match      | /home                                    | 
+2015/05/06 17:37:55 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:38:30 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 17:38:44 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:39:17 [router.go:845] [D] | GET        | /home                                    | 31.0018ms        | match      | /home                                    | 
+2015/05/06 17:41:19 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:42:28 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:43:59 [router.go:845] [D] | GET        | /home                                    | 30.0017ms        | match      | /home                                    | 
+2015/05/06 17:44:19 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:44:30 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:44:39 [router.go:845] [D] | GET        | /home                                    | 31.0018ms        | match      | /home                                    | 
+2015/05/06 17:45:06 [router.go:845] [D] | GET        | /home                                    | 30.0018ms        | match      | /home                                    | 
+2015/05/06 17:52:54 [router.go:845] [D] | GET        | /home                                    | 31.0018ms        | match      | /home                                    | 
+2015/05/06 17:53:03 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:53:19 [router.go:845] [D] | GET        | /home                                    | 32.0019ms        | match      | /home                                    | 
+2015/05/06 17:54:38 [router.go:845] [D] | GET        | /home                                    | 33.0018ms        | match      | /home                                    | 
+2015/05/06 17:55:10 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:55:24 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 17:55:58 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 17:56:19 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 17:59:32 [router.go:845] [D] | GET        | /home                                    | 30.0018ms        | match      | /home                                    | 
+2015/05/06 17:59:46 [router.go:845] [D] | GET        | /home                                    | 32.0019ms        | match      | /home                                    | 
+2015/05/06 18:00:49 [router.go:845] [D] | GET        | /home                                    | 32.0019ms        | match      | /home                                    | 
+2015/05/06 18:07:03 [router.go:845] [D] | GET        | /home                                    | 31.0018ms        | match      | /home                                    | 
+2015/05/06 18:11:22 [router.go:845] [D] | GET        | /home                                    | 31.0018ms        | match      | /home                                    | 
+2015/05/06 18:17:01 [router.go:845] [D] | GET        | /home                                    | 31.0018ms        | match      | /home                                    | 
+2015/05/06 18:17:51 [router.go:845] [D] | GET        | /home                                    | 41.0023ms        | match      | /home                                    | 
+2015/05/06 18:19:22 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 18:19:47 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 18:21:35 [router.go:845] [D] | GET        | /home                                    | 32.0018ms        | match      | /home                                    | 
+2015/05/06 18:23:25 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 18:24:00 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/06 18:24:50 [router.go:845] [D] | GET        | /home                                    | 34.0019ms        | match      | /home                                    | 
+2015/05/06 18:26:31 [router.go:845] [D] | GET        | /home                                    | 33.0018ms        | match      | /home                                    | 
+2015/05/06 18:27:31 [router.go:845] [D] | GET        | /home                                    | 36.0021ms        | match      | /home                                    | 
+2015/05/06 18:29:15 [router.go:845] [D] | GET        | /home                                    | 33.0018ms        | match      | /home                                    | 
+2015/05/06 18:29:31 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 

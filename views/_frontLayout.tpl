@@ -219,7 +219,7 @@
 			if ($('#signin').length) {
 				signin();
 			}else{
-				$('.x-data').load('/static/inc/weixin.html',function(){
+				$('.x-data').load('/connect/weixin',function(){
 					signin();
 				});
 			}

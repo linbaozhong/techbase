@@ -1,7 +1,7 @@
 package models
 
 import (
-	"fmt"
+	//"fmt"
 	// "errors"
 	//"fmt"
 	"github.com/astaxie/beego/validation"
@@ -27,6 +27,26 @@ type Accounts struct {
 	Updator      int64  `json:"updator"`
 	Updated      int64  `json:"updated"`
 	Ip           string `json:"ip" valid:"MaxSize(23)"`
+}
+
+// 账户简介
+type AccountProfile struct {
+	Id       int64  `json:"accoundId"`
+	NickName string `json:"nickName"`
+	Telphone string `json:"telphone"`
+	Email    string `json:"email"`
+	Intro    string `json:"intro"`
+	Status   int    `json:"status"`
+	Updated  int64  `json:"updated"`
+}
+
+// 全部账户列表
+func (this *Accounts) AllList() ([]AccountProfile, error) {
+	as := make([]AccountProfile, 0)
+
+	sql := "select accounts.id, accounts.nickname, accounts.status,accounts.updated,profile.telphone,profile.email,profile.intro from accounts left join profile on accounts.id=profile.id where accounts.id!=? and accounts.role>? and accounts.status=? and accounts.deleted=?"
+	err := db.Sql(sql, this.Id, this.Role, Unlock, Undelete).Find(&as)
+	return as, err
 }
 
 // 账号是否存在
@@ -64,13 +84,16 @@ func (this *Accounts) Post() (error, []Error) {
 }
 
 // 读取用户角色
-func (this *Accounts) GetRole() (int, error) {
-	if ok, err := db.Get(this); ok {
-		return this.Role, nil
+func (this *Accounts) GetRole() (role int, status int, err error) {
+	ok, err := db.Get(this)
+	if ok {
+		role = this.Role
+		status = this.Status
 	} else {
-		fmt.Println(err)
-		return -1, err
+		role = -1
+		status = Locked
 	}
+	return
 }
 
 // 更新第三方登录的refreshToken

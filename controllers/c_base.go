@@ -520,6 +520,9 @@ func (this *Base) loginIn(id int64, from string) {
 
 // 签出
 func (this *Base) loginOut() {
+	// 结束会话
+	this.DestroySession()
+	// 清除cookie
 	this.cookie("_snow_token", "")
 	this.cookie("_snow_id", "")
 }

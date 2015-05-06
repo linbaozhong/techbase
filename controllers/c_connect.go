@@ -5,6 +5,7 @@ package controllers
 
 import (
 	"errors"
+	"fmt"
 	"strconv"
 	"strings"
 	"techbase/models"
@@ -31,6 +32,12 @@ type OpenSign struct {
 	Avatar_2 string //100*100的qq头像
 }
 
+// 微信登陆框
+func (this *Connect) Weixin() {
+	this.Data["appid"] = appconf("weixin::appid")
+	this.Data["callback"] = appconf("weixin::callback")
+}
+
 /*
 * 微信登录
  */
@@ -42,7 +49,7 @@ func (this *Connect) Wx_Login() {
 	//---登录的url
 	url := appconf("weixin::auth") + "?response_type=code&appid=" + appconf("weixin::appid") + "&redirect_uri=" + appconf("weixin::callback") + "&state=" + state + "&scope=" + appconf("weixin::scope") + "#wechat_redirect"
 
-	//fmt.Println(url)
+	fmt.Println(url)
 	//---
 	this.Redirect(url, 302)
 }
@@ -77,13 +84,16 @@ func (this *Connect) Wx_Callback() {
 	req.Param("secret", appconf("weixin::appkey"))
 	req.Param("code", this.GetString("code"))
 
+	fmt.Println(this.GetString("code"), state)
 	//---读取返回的内容
 	rep, err := req.String()
 
 	if err == nil {
+
 		jmap := utils.JsonString2map(rep)
 
 		if len(jmap) > 0 && jmap["errcode"] == nil {
+			fmt.Println(1)
 			//--- access_token
 			_account.Token = utils.Interface2str(jmap["access_token"])
 			//--- refresh_token
@@ -91,19 +101,22 @@ func (this *Connect) Wx_Callback() {
 			_account.OpenId = utils.Interface2str(jmap["openid"])
 
 		} else if jmap["errcode"] != nil {
+			fmt.Println(2)
 			err = errors.New(utils.Interface2str(jmap["errmsg"]))
 		} else {
+			fmt.Println(3)
 			err = errors.New("return value is empty")
 		}
 
 	} else {
+
 		//---跳转至错误页
 		this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
 		return
 	}
-
+	fmt.Println(_account)
 	//---创建读取userinfo的请求
-	if wx_userinfo(_account) != nil {
+	if err != nil || wx_userinfo(_account) != nil {
 		//---跳转至错误页
 		this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
 		return
@@ -275,6 +288,8 @@ func (this *Connect) QQ_Callback() {
 		this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
 		return
 	}
+	// 清空旧的用户信息
+	this.loginOut()
 
 	// 写入cookie
 	this.cookie("openid", _account.OpenId)
@@ -284,8 +299,6 @@ func (this *Connect) QQ_Callback() {
 
 	//
 	this.Data["sign"] = _account
-	// 清空旧的用户信息
-	this.loginOut()
 
 	this.setTplNames("callback")
 
@@ -488,6 +501,8 @@ func (this *Connect) SignTrace() {
 		_m_account.RefreshToken = _account.Refresh
 		_m_account.Avatar_1 = _account.Avatar_1
 		_m_account.Avatar_2 = _account.Avatar_2
+		// 缺省角色
+		_m_account.Role = models.Role_Author
 
 		this.extend(_m_account)
 		// errs:记录返回的数据校验错误

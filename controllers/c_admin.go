@@ -39,11 +39,22 @@ func (this *Admin) Index() {
 }
 
 // 审核公司
-func (this *Admin) Review() {
+func (this *Admin) company() {
 	com := new(models.Company)
 	com.Status, _ = this.GetInt("status")
 
 	cs, _ := com.AllList()
 
 	this.Data["companys"] = cs
+}
+
+// 审核账户
+func (this *Admin) Account() {
+	act := new(models.Accounts)
+	act.Id = this.currentUser.Id
+	act.Role = this.currentUser.Role
+
+	as, _ := act.AllList()
+
+	this.Data["accounts"] = as
 }

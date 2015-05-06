@@ -37,9 +37,9 @@
 
 	var obj = new WxLogin({
 		id: "signin-weixin",
-		appid: "wx96186b5d075ff2be",
+		appid: "{{.appid}}",
 		scope: "snsapi_login",
-		redirect_uri: "http://tabenying.com/connect/wx_callback",
+		redirect_uri: "{{.callback}}",
 		state: escape(window.location.href),
 		style: "",
 		href: ""

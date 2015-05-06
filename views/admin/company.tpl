@@ -6,7 +6,7 @@
 		<div class="col-md-10">
 			<h3>公司审核</h3>
 			<div class="text-right">
-				
+
 			</div>
 			<hr />
 			<!--创建公司-->
@@ -19,8 +19,7 @@
 						</a>
 					</div>
 					<div class="media-body">
-						<div><span class="media-heading lead">{{$company.Name}}</span> 
-							{{if eq $company.Status 0}}
+						<div><span class="media-heading lead">{{$company.Name}}</span> {{if eq $company.Status 0}}
 							<span>未提交审核</span>
 							<div class="pull-right">
 							</div>
@@ -41,8 +40,8 @@
 						</div>
 					</div>
 				</div>
+				{{end}}
 			</div>
-			{{end}}
 		</div>
 		<div class="col-md-1">
 
@@ -51,7 +50,5 @@
 
 </article>
 <script type="text/javascript">
-	$(function() {
-
-	});
+	$(function() {});
 </script>

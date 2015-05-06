@@ -7,6 +7,7 @@ import (
 	"strings"
 	_ "techbase/routers"
 	"time"
+	"zouzhe/utils"
 )
 
 const (
@@ -34,6 +35,7 @@ func initFuncMap() {
 	beego.AddFuncMap("i18n", i18n.Tr)
 	beego.AddFuncMap("loadtimes", loadtimes)
 	beego.AddFuncMap("split", strings.Split)
+	beego.AddFuncMap("m2t", utils.Msec2Time)
 }
 
 // 初始化静态目录
