@@ -13,8 +13,8 @@
 			{{end}}
 			
 			<!--数据在这里-->
-			<table class="table table-bordered table-condensed table-hover" id="snow-list">
-				<tbody>
+			<table class="table table-condensed table-hover" id="snow-list">
+				<thead>
 				<tr>
 					<th class="text-center">名称</th>
 					<th class="text-center">取值</th>
@@ -22,6 +22,8 @@
 					<th class="text-center">禁用</th>
 					<th class="text-center"><button class="btn btn-primary btn-create">新建</button></th>
 				</tr>
+				</thead>
+				<tbody>
 				</tbody>
 			</table>
 		</div>
@@ -47,15 +49,15 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="inputValue" class="col-sm-3 control-label">取值</label>
-			<div class="col-sm-9">
-				<input type="number" class="form-control" id="inputValue" name="value" placeholder="取值" value="0">
-			</div>
-		</div>
-		<div class="form-group">
 			<label for="inputAlias" class="col-sm-3 control-label">别名</label>
 			<div class="col-sm-9">
 				<input type="text" class="form-control" id="inputAlias" name="alias" placeholder="别名" value="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputValue" class="col-sm-3 control-label">取值</label>
+			<div class="col-sm-9">
+				<input type="number" readonly class="form-control" id="inputValue" name="value" placeholder="取值" value="0">
 			</div>
 		</div>
 		<div class="form-group">
@@ -120,7 +122,7 @@
 		load_data();
 		
 		// 新建按钮事件，弹出编辑框
-		$('#snow-list tbody').on('click','.btn-create',function(){
+		$('#snow-list thead').on('click','.btn-create',function(){
 			// 重置表单
 			var _form = $('#snow-form form');
 			_form[0].reset();

@@ -182,8 +182,9 @@
 		}, function(e) {
 			mouseleave($(this).data('hide',true));
 		});
+		
 		// 页脚自适应沉底，页眉自适应浮动
-		$(window).resize(function() {
+		function footerBottom(){
 			// 页脚
 			var _footer_0 = $('#footer_0'),
 				_footer = $('#footer');
@@ -191,6 +192,11 @@
 			if (_footer_0.offset().top > _footer.offset().top) {
 				_footer.removeClass('fixfooter');
 			}
+		};
+		setTimeout(footerBottom,200);
+		
+		$(window).resize(function() {
+			footerBottom();
 		}).scroll(function() {
 			if ($(document).scrollTop() > 50) {
 				$('header.navbar-fixed-top').addClass('header_shadow');

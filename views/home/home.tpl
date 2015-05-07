@@ -37,6 +37,9 @@
 		body {
 			overflow: hidden;
 		}
+		section{
+			position: relative;
+		}
 		/*@-webkit-keyframes name{
 			0%{margin-top: 0px;}
 			100%{margin-top: 25px;}
@@ -47,7 +50,8 @@
 	}
 </style>
 <div id="container" style="margin-top:0;">
-	<section class="container sec" id="sec01">
+	<section class=" sec" id="sec01">
+		<article class="container">
 		<div class="col-md-6 col-xs-12 text-side">
 			<h3>她本营</h3>
 			<h5>打造属于女性科技创业群体自己的大本营</h5>
@@ -56,11 +60,12 @@
 		</div>
 		<div class="col-md-6 col-xs-12 img-side">
 			<img src="/html/brand/1.png" class="img-responsive">
-		</div>
+		</div></article>
 		<span class="sec-down"><i class="fa fa-angle-double-down"></i></span>
 	</section>
-	<section class="container sec" id="sec02">
+	<section class="sec" id="sec02">
 		<span class="sec-up"><i class="fa fa-angle-double-up"></i></span>
+		<article class="container">
 		<div class="col-md-6 col-xs-12 img-side">
 			<img src="/html/brand/2.png" class="img-responsive">
 		</div>
@@ -75,11 +80,12 @@
 				<dt>情怀</dt>
 				<dd>通过专业平台打破性别壁垒</dd>
 			</dl>
-		</div>
+		</div></article>
 		<span class="sec-down"><i class="fa fa-angle-double-down"></i></span>
 	</section>
-	<section class="container sec" id="sec03">
+	<section class="sec" id="sec03">
 		<span class="sec-up"><i class="fa fa-angle-double-up"></i></span>
+		<article class="container">
 		<div class="col-md-6 col-xs-12 text-side">
 			<h3>我们可以做什么</h3>
 			<h5>只专注于一件事情，帮助女性创业者</h5>
@@ -95,18 +101,19 @@
 		</div>
 		<div class="col-md-6 col-xs-12 img-side">
 			<img src="/html/brand/3.png" class="img-responsive">
-		</div>
+		</div></article>
 		<span class="sec-down"><i class="fa fa-angle-double-down"></i></span>
 	</section>
-	<section class="container" id="sec04" style="position: relative;">
+	<section id="sec04" style="position: relative;">
 		<span class="sec-up"><i class="fa fa-angle-double-up"></i></span>
+		<article class="container">
 		<div class="col-md-12 col-xs-12 img-side">
 			<img src="/html/brand/4.png" class="img-responsive" style="width:100%;">
 		</div>
 		<div class="col-md-12 col-xs-12">
 			<h3>5月，一场女性创意的角逐 <a class="link" target="_blank" href="/herstart">了解更多 <span class="fa fa-angle-right"></span></a></h3>
 			<p>TechBase她本营将携手Lean In Beijing及科技互联网行业内多家知名投资孵化机构和媒体， 共同打造首个世界级的女性科技互联网创业大赛Her Startup，为女性创业者提供展示创意与实力的舞台。</p>
-		</div>
+		</div></article>
 	</section>
 </div>
 <script src="http://cdn.bootcss.com/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
@@ -114,7 +121,7 @@
 	$(window).resize(function() {
 		$('section.sec div').css({
 			height: $(window).height(),
-			marginTop:'25%'
+			paddingTop:'25%'
 			});
 	});
 	var _sections = $('#container').children('section');
@@ -124,7 +131,7 @@
 			_top = $('#container').children('section').eq(_index + 1).position().top;
 		// 显示下一个向下按钮
 		_this.parent().next().find('span.sec-down').show();
-		
+		console.log(_this.parent());
 		$('html,body').stop().animate({
 			scrollTop: _top
 		}, 600);

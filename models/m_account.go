@@ -36,6 +36,7 @@ type AccountProfile struct {
 	Telphone string `json:"telphone"`
 	Email    string `json:"email"`
 	Intro    string `json:"intro"`
+	Role     int    `json:role`
 	Status   int    `json:"status"`
 	Updated  int64  `json:"updated"`
 }
@@ -44,8 +45,10 @@ type AccountProfile struct {
 func (this *Accounts) AllList() ([]AccountProfile, error) {
 	as := make([]AccountProfile, 0)
 
-	sql := "select accounts.id, accounts.nickname, accounts.status,accounts.updated,profile.telphone,profile.email,profile.intro from accounts left join profile on accounts.id=profile.id where accounts.id!=? and accounts.role>? and accounts.status=? and accounts.deleted=?"
-	err := db.Sql(sql, this.Id, this.Role, Unlock, Undelete).Find(&as)
+	//sql := "select accounts.id, accounts.nickname,accounts.role, accounts.status,accounts.updated,profile.telphone,profile.email,profile.intro from accounts left join profile on accounts.id=profile.id where accounts.id!=? and accounts.role>? and accounts.status=? and accounts.deleted=?"
+	//err := db.Sql(sql, this.Id, this.Role, Unlock, Undelete).Find(&as)
+	sql := "select accounts.id, accounts.nickname,accounts.role, accounts.status,accounts.updated,profile.telphone,profile.email,profile.intro from accounts left join profile on accounts.id=profile.id where accounts.id!=? and accounts.role>? and accounts.deleted=?"
+	err := db.Sql(sql, this.Id, this.Role, Undelete).Find(&as)
 	return as, err
 }
 
@@ -94,6 +97,18 @@ func (this *Accounts) GetRole() (role int, status int, err error) {
 		status = Locked
 	}
 	return
+}
+
+// 更改用户角色
+func (this *Accounts) UpdateRole() error {
+	_, err := db.Id(this.Id).Cols("role", "updator", "updated", "ip").Update(this)
+	return err
+}
+
+// 禁用或启用账户
+func (this *Accounts) UpdateStatus() error {
+	_, err := db.Id(this.Id).Cols("status", "updator", "updated", "ip").Update(this)
+	return err
 }
 
 // 更新第三方登录的refreshToken

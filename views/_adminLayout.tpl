@@ -34,7 +34,7 @@
 					</div>
 					<ul class="nav navbar-nav" style="margin-left:40px;">
 						{{if lt .account.Role 3 }}
-						<li class="{{if eq .index "index"}} active {{end}}"><a href="/admin/comapny">公司审核</a>
+						<li class="{{if eq .index "index"}} active {{end}}"><a href="/admin/company">公司审核</a>
 						</li>
 						<li class="{{if eq .index "index"}} active {{end}}"><a href="/admin/account">账户管理</a>
 						</li>
@@ -182,7 +182,7 @@
 		});
 
 		// 页脚自适应沉底，页眉自适应浮动
-		$(window).resize(function() {
+		function footerBottom(){
 			// 页脚
 			var _footer_0 = $('#footer_0'),
 				_footer = $('#footer');
@@ -190,6 +190,11 @@
 			if (_footer_0.offset().top > _footer.offset().top) {
 				_footer.removeClass('fixfooter');
 			}
+		};
+		setTimeout(footerBottom,100);
+		
+		$(window).resize(function() {
+			footerBottom();
 		}).scroll(function() {
 			if ($(document).scrollTop() > 50) {
 				$('header.navbar-fixed-top').addClass('header_shadow');
@@ -198,7 +203,7 @@
 				$('header.navbar-fixed-top').removeClass('header_shadow');
 				$('#go-top').addClass('hidden');
 			}
-		}).resize();
+		});
 //
 		$('#go-top').click(function() {
 			$('html,body').animate({

@@ -8,6 +8,7 @@ import (
 func init() {
 	// 屏蔽路由大小写敏感
 	beego.RouterCaseSensitive = false
+
 	// 前段
 	home := &controllers.Home{}
 	beego.Router("/", home, "get:Get")
@@ -22,14 +23,17 @@ func init() {
 	beego.Router("/herstart", home, "get:HerStart")
 	beego.Router("/brand/:id", home, "get:Brand")
 	beego.AutoRouter(home)
+
 	// 社交帐户登录
 	conn := &controllers.Connect{}
 	beego.AutoRouter(conn)
+
 	// 帐户信息管理
 	act := &controllers.Accounts{}
 	beego.Router("/my/profile", act, "get:Profile")
 	beego.Router("/my/save", act, "post:Post")
 	beego.AutoRouter(act)
+
 	// 公司
 	com := &controllers.Company{}
 	beego.Router("/my/company", com, "get:Index")
@@ -37,9 +41,12 @@ func init() {
 	beego.Router("/company/:id", com)
 	//beego.Router("/company/list", com, "get:List")
 	beego.AutoRouter(com)
+
 	// 后台管理
 	admin := &controllers.Admin{}
+
 	beego.AutoRouter(admin)
+
 	// 基础数据管理
 	basic := &controllers.Basic{}
 	beego.Router("/basic/index/:typeId", basic, "get:Index")

@@ -2,8 +2,8 @@ package models
 
 const (
 	Role_System        = 0 //超级管理员
-	Role_Administrator = 1 //管理员
-	Role_Auditor       = 2 //审核人
+	Role_Administrator = 1 //网站管理员
+	Role_Auditor       = 2 //内容审核人
 	Role_Author        = 3 //作者
 	Role_Reader        = 4 //读者
 	Role_Guest         = 5 //游客
