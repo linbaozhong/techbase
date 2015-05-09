@@ -7,20 +7,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 		<title>{{i18n .Lang "app title"}}</title>
-		<meta property="qc:admins" content="6050272677640117256375" />
-		<!--<link rel="stylesheet" href="/static/css/pinghei.css">-->
-		<link rel="shortcut icon" href="/static/img/favicon.ico" />
-		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<!--<link rel="stylesheet" href="/static/css/default.css">-->
-		<script type="text/javascript">
-			var snow = {};
-		</script>
-		<link rel="stylesheet" href="/static/css/reset.css">
-		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
-		<script src="/static/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
-		<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script type="text/javascript" src="/static/js/jquery.mousewheel.js"></script>-->
+		{{.Head}}
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+		<style type="text/css">
+			html.mobile{
+				
+			}
+			html.mobile .navbar-fixed-top,html.mobile .fixfooter{
+				position: relative !important;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -93,50 +89,8 @@
 			</div>
 		</div>
 		{{.LayoutContent}}
+		{{.Footer}}
 		<!--END container-->
-		<div id="footer_0" style="margin-top:35px;">
-		</div>
-		<footer class="row" id="footer">
-			<div class="col-md-2 col-sm-2 row"></div>
-			<div class="col-md-8 col-sm-8">
-				<div class="row">
-					<div class="col-md-4 col-sm-12">
-						<p class="qr">
-							<img class="img-responsive" src="/static/img/weixin-qr.png">
-						</p>
-						<p class="wx">微信公众号：TechBase她本营</p>
-					</div>
-					<div class="col-md-5 col-sm-12">
-						<h4>公司信息</h4>
-						<p>公司：她本营网络科技有限公司</p>
-						<p>地址：北京市朝阳区方恒国际中心D座2317室</p>
-						<p>邮件：techbase@tabenying.com</p>
-					</div>
-					<div class="col-md-3 col-sm-12">
-						<h4>友情链接</h4>
-						<p><a href="http://leanin.org/">Lean In</a>
-						</p>
-						<p><a href="http://www.sycapital.cn/">松源资本</a>
-						</p>
-						<p><a href="http://www.36kr.com/">36Kr</a>
-						</p>
-						<p><a href="http://itjuzi.com/">IT桔子</a>
-						</p>
-					</div>
-				</div>
-				<div class="row copyright-div">
-					<p class="copyright">
-						Copyright © TechBase. All Rights Reserved.
-						<br>她本营TechBase 版权所有
-					</p>
-				</div>
-			</div>
-			<div class="col-md-2 col-sm-2 row text-right">
-				<a class="hidden" id="go-top" href="javascript:;">
-					<i class="fa fa-angle-up"></i>
-				</a>
-			</div>
-		</footer>
 		<div class="x-data">
 			
 		</div>
@@ -146,72 +100,6 @@
 <script type="text/javascript">
 
 	$(function() {
-		// 他创投
-		function mouseleave(obj) {
-			setTimeout(function() {
-				if (obj.data('hide')) {
-					obj.stop().slideUp('fast');
-				}
-			}, 100);
-		};
-
-		$(".menu").hover(
-			function(e) {
-				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',false);
-				
-				if ($(window).width() - _this.offset().left >= _target.outerWidth() + 10) {
-					_target.css({
-						'left': _this.offset().left-((_target.outerWidth()-_this.outerWidth())/2),
-						'right': 'inherit'
-					}).slideDown('fast');
-				} else {
-					_target.css({
-						'right': 10,
-						'left': 'inherit'
-					}).slideDown('fast');
-				}
-			}, 
-			function() {
-				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',true);
-				mouseleave(_target);
-			}
-		);
-
-		$(".submenu").hover(function(e) {
-			$(this).data('hide',false)
-		}, function(e) {
-			mouseleave($(this).data('hide',true));
-		});
-		
-		// 页脚自适应沉底，页眉自适应浮动
-		function footerBottom(){
-			// 页脚
-			var _footer_0 = $('#footer_0'),
-				_footer = $('#footer');
-			_footer.addClass('fixfooter');
-			if (_footer_0.offset().top > _footer.offset().top) {
-				_footer.removeClass('fixfooter');
-			}
-		};
-		setTimeout(footerBottom,200);
-		
-		$(window).resize(function() {
-			footerBottom();
-		}).scroll(function() {
-			if ($(document).scrollTop() > 50) {
-				$('header.navbar-fixed-top').addClass('header_shadow');
-				$('#go-top').removeClass('hidden');
-			} else {
-				$('header.navbar-fixed-top').removeClass('header_shadow');
-				$('#go-top').addClass('hidden');
-			}
-		}).resize();
-		// 
-		$('#go-top').click(function() {
-			$('html,body').animate({
-				scrollTop: 0
-			});
-		});
 		// 登录
 		function signin(){
 			$('#signin').popWindow({
@@ -229,15 +117,6 @@
 					signin();
 				});
 			}
-		});
-		// 签出
-		$('#logout').click(function(){
-			$.post('/signout',function(json){
-				if (json.ok) {
-					//snow.checkin(false);
-					window.location = "/";
-				}
-			});
 		});
 		// 检查是否已经登录
 		snow.checkin = function(state){
@@ -269,4 +148,4 @@
 		snow.checkin(true);
 	});
 </script>
-<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+

@@ -31,7 +31,7 @@ jQuery弹窗插件 By 哈利蔺特
 			marginX = (width - opts.width) / 2,
 			marginY = (height - opts.height) / 2,
 			//
-			closeSelf = function(){
+			closeSelf = function() {
 				var _obj = model.children().eq(0);
 				container.fadeOut();
 				closeBtn.fadeOut();
@@ -58,7 +58,7 @@ jQuery弹窗插件 By 哈利蔺特
 			// 考虑滚动条的宽度
 			if (self.outerHeight() > opts.height) {
 				closeBtn.css({
-					right: marginX ,//+ 20,
+					right: marginX, //+ 20,
 					top: marginY
 				});
 			} else {
@@ -83,15 +83,15 @@ jQuery弹窗插件 By 哈利蔺特
 			}).hover(
 				function() {
 					$(this).css({
-						background:'rgba(204,51,51,1)',
-						color:'#fff'
-						});
+						background: 'rgba(204,51,51,1)',
+						color: '#fff'
+					});
 				},
 				function() {
 					$(this).css({
-						color:'#999',
-						background:'rgba(204,51,51,0)'
-						});
+						color: '#999',
+						background: 'rgba(204,51,51,0)'
+					});
 				}
 			);
 		}
@@ -125,9 +125,95 @@ jQuery弹窗插件 By 哈利蔺特
 			container.fadeIn(opts.speed);
 		}
 		//
-		this.close = function(){
+		this.close = function() {
 			closeSelf();
 		};
 		return this;
 	};
 })(jQuery);
+
+$(function() {
+	// 他创投
+	function mouseleave(obj) {
+		setTimeout(function() {
+			if (obj.data('hide')) {
+				obj.stop().slideUp('fast');
+			}
+		}, 100);
+	};
+
+	$(".menu").hover(
+		function(e) {
+			var _this = $(this),
+				_target = $('.' + _this.data('rel')).data('hide', false);
+
+			if ($(window).width() - _this.offset().left >= _target.outerWidth() + 10) {
+				_target.css({
+					'left': _this.offset().left - ((_target.outerWidth() - _this.outerWidth()) / 2),
+					'right': 'inherit'
+				}).slideDown('fast');
+			} else {
+				_target.css({
+					'right': 10,
+					'left': 'inherit'
+				}).slideDown('fast');
+			}
+		},
+		function() {
+			var _this = $(this),
+				_target = $('.' + _this.data('rel')).data('hide', true);
+			mouseleave(_target);
+		}
+	);
+
+	$(".submenu").hover(function(e) {
+		$(this).data('hide', false)
+	}, function(e) {
+		mouseleave($(this).data('hide', true));
+	});
+
+	// 页脚自适应沉底，页眉自适应浮动
+	function footerBottom() {
+		// 页脚
+		var _footer_0 = $('#footer_0'),
+			_footer = $('#footer');
+		_footer.addClass('fixfooter');
+		if (_footer_0.offset().top > _footer.offset().top) {
+			_footer.removeClass('fixfooter');
+		}
+	};
+	setTimeout(footerBottom, 200);
+
+	$(window).resize(function() {
+		footerBottom();
+	}).scroll(function() {
+		if ($(document).scrollTop() > 50) {
+			$('header.navbar-fixed-top').addClass('header_shadow');
+			$('#go-top').removeClass('hidden');
+		} else {
+			$('header.navbar-fixed-top').removeClass('header_shadow');
+			$('#go-top').addClass('hidden');
+		}
+	}).resize();
+	// 
+	$('#go-top').click(function() {
+		$('html,body').animate({
+			scrollTop: 0
+		});
+	});
+
+	// 签出
+	$('#logout').click(function() {
+		$.post('/signout', function(json) {
+			if (json.ok) {
+				window.location = "/";
+			}
+		});
+	});
+
+});
+
+
+snow.confirm = function(msg) {
+	return confirm(msg);
+};

@@ -8478,3 +8478,91 @@
 2015/05/06 18:27:31 [router.go:845] [D] | GET        | /home                                    | 36.0021ms        | match      | /home                                    | 
 2015/05/06 18:29:15 [router.go:845] [D] | GET        | /home                                    | 33.0018ms        | match      | /home                                    | 
 2015/05/06 18:29:31 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/09 08:24:43 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 08:24:43 [app.go:96] [I] http server Running on :80
+2015/05/09 08:29:32 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 08:29:32 [app.go:96] [I] http server Running on :80
+2015/05/09 08:29:40 [router.go:845] [D] | GET        | /                                        | 57.0032ms        | match      | /                                        | 
+2015/05/09 08:45:21 [router.go:845] [D] | GET        | /                                        | 98.0056ms        | match      | /                                        | 
+2015/05/09 08:45:24 [router.go:845] [D] | GET        | /connect/weixin                          | 41.0023ms        | match      | /connect/weixin/*                        | 
+2015/05/09 08:45:56 [router.go:845] [D] | GET        | /                                        | 79.0045ms        | match      | /                                        | 
+2015/05/09 08:45:58 [router.go:845] [D] | GET        | /connect/weixin                          | 52.003ms         | match      | /connect/weixin/*                        | 
+2015/05/09 08:50:16 [log.go:108] [D] Loading language: en-US 
+2015/05/09 08:50:16 [log.go:108] [D] Loading language: zh-CN 
+2015/05/09 08:50:16 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 08:50:17 [app.go:96] [I] http server Running on :8080
+2015/05/09 08:50:23 [log.go:108] [D] Loading language: en-US 
+2015/05/09 08:50:23 [log.go:108] [D] Loading language: zh-CN 
+2015/05/09 08:50:23 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 08:50:23 [app.go:96] [I] http server Running on :8080
+2015/05/09 08:52:06 [router.go:876] [C] the request url is  / 
+2015/05/09 08:52:06 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/05/09 08:52:06 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/09 08:52:06 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/05/09 08:52:06 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/05/09 08:52:06 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:94 
+2015/05/09 08:52:06 [router.go:883] [C] c:/go/src/pkg/html/template/template.go:83 
+2015/05/09 08:52:06 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:226 
+2015/05/09 08:52:06 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/controller.go:179 
+2015/05/09 08:52:06 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:801 
+2015/05/09 08:52:06 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/09 08:52:06 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/09 08:52:06 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/09 08:52:50 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 08:52:50 [app.go:96] [I] http server Running on :8080
+2015/05/09 08:52:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 08:52:57 [app.go:96] [I] http server Running on :8080
+2015/05/09 08:52:57 [router.go:845] [D] | GET        | /                                        | 62.0036ms        | match      | /                                        | 
+2015/05/09 08:53:05 [router.go:845] [D] | GET        | /                                        | 97.0056ms        | match      | /                                        | 
+2015/05/09 09:02:20 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 09:02:21 [app.go:96] [I] http server Running on :8080
+2015/05/09 09:03:09 [router.go:845] [D] | GET        | /                                        | 100.0057ms       | match      | /                                        | 
+2015/05/09 09:07:44 [router.go:845] [D] | GET        | /                                        | 159.0091ms       | match      | /                                        | 
+2015/05/09 09:07:47 [router.go:845] [D] | GET        | /connect/weixin                          | 33.0019ms        | match      | /connect/weixin/*                        | 
+2015/05/09 09:08:32 [router.go:845] [D] | GET        | /                                        | 162.0093ms       | match      | /                                        | 
+2015/05/09 09:08:43 [router.go:845] [D] | GET        | /                                        | 153.0088ms       | match      | /                                        | 
+2015/05/09 09:14:38 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 09:14:38 [app.go:96] [I] http server Running on :8080
+2015/05/09 09:14:53 [log.go:108] [D] Loading language: en-US 
+2015/05/09 09:14:53 [log.go:108] [D] Loading language: zh-CN 
+2015/05/09 09:14:53 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 09:14:53 [app.go:96] [I] http server Running on :8080
+2015/05/09 09:15:31 [router.go:845] [D] | GET        | /                                        | 154.0088ms       | match      | /                                        | 
+2015/05/09 09:19:08 [router.go:845] [D] | GET        | /                                        | 223.0127ms       | match      | /                                        | 
+2015/05/09 09:19:14 [router.go:845] [D] | GET        | /connect/weixin                          | 36.002ms         | match      | /connect/weixin/*                        | 
+2015/05/09 09:19:38 [log.go:108] [D] Loading language: en-US 
+2015/05/09 09:19:38 [log.go:108] [D] Loading language: zh-CN 
+2015/05/09 09:19:38 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 09:19:38 [app.go:96] [I] http server Running on :8080
+2015/05/09 09:20:10 [router.go:845] [D] | GET        | /                                        | 116.0066ms       | match      | /                                        | 
+2015/05/09 09:20:12 [router.go:845] [D] | GET        | /connect/weixin                          | 39.0023ms        | match      | /connect/weixin/*                        | 
+2015/05/09 09:39:51 [router.go:845] [D] | GET        | /                                        | 99.0057ms        | match      | /                                        | 
+2015/05/09 09:55:15 [router.go:845] [D] | GET        | /                                        | 224.0128ms       | match      | /                                        | 
+2015/05/09 09:58:45 [router.go:845] [D] | GET        | /                                        | 164.0094ms       | match      | /                                        | 
+2015/05/09 09:59:03 [router.go:845] [D] | GET        | /                                        | 158.0091ms       | match      | /                                        | 
+2015/05/09 10:00:07 [router.go:845] [D] | GET        | /                                        | 173.0099ms       | match      | /                                        | 
+2015/05/09 10:00:52 [router.go:845] [D] | GET        | /                                        | 166.0094ms       | match      | /                                        | 
+2015/05/09 10:07:26 [router.go:845] [D] | GET        | /                                        | 168.0096ms       | match      | /                                        | 
+2015/05/09 10:09:13 [router.go:845] [D] | GET        | /                                        | 153.0088ms       | match      | /                                        | 
+2015/05/09 10:10:51 [router.go:845] [D] | GET        | /                                        | 152.0087ms       | match      | /                                        | 
+2015/05/09 10:14:20 [router.go:845] [D] | GET        | /                                        | 146.0083ms       | match      | /                                        | 
+2015/05/09 15:47:00 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 15:47:00 [app.go:96] [I] http server Running on :8080
+2015/05/09 15:53:44 [router.go:845] [D] | GET        | /                                        | 127.0072ms       | match      | /                                        | 
+2015/05/09 15:55:13 [router.go:845] [D] | GET        | /community                               | 99.0057ms        | match      | /community                               | 
+2015/05/09 15:56:44 [router.go:845] [D] | GET        | /community                               | 77.0044ms        | match      | /community                               | 
+2015/05/09 15:56:49 [router.go:845] [D] | GET        | /media                                   | 98.0056ms        | match      | /media                                   | 
+2015/05/09 15:56:51 [router.go:845] [D] | GET        | /community                               | 97.0055ms        | match      | /community                               | 
+2015/05/09 15:59:01 [router.go:845] [D] | GET        | /community                               | 157.009ms        | match      | /community                               | 
+2015/05/09 15:59:05 [router.go:845] [D] | GET        | /community                               | 83.0047ms        | match      | /community                               | 
+2015/05/09 15:59:54 [router.go:845] [D] | GET        | /community                               | 164.0094ms       | match      | /community                               | 
+2015/05/09 16:00:02 [router.go:845] [D] | GET        | /community                               | 160.0091ms       | match      | /community                               | 
+2015/05/09 16:00:31 [router.go:845] [D] | GET        | /community                               | 161.0092ms       | match      | /community                               | 
+2015/05/09 16:00:34 [router.go:845] [D] | GET        | /community                               | 159.0091ms       | match      | /community                               | 
+2015/05/09 16:01:57 [router.go:845] [D] | GET        | /community                               | 109.0062ms       | match      | /community                               | 
+2015/05/09 16:01:59 [router.go:845] [D] | GET        | /community                               | 145.0083ms       | match      | /community                               | 
+2015/05/09 16:02:18 [router.go:845] [D] | GET        | /community                               | 145.0083ms       | match      | /community                               | 
+2015/05/09 17:01:42 [log.go:108] [D] Loading language: en-US 
+2015/05/09 17:01:42 [log.go:108] [D] Loading language: zh-CN 
+2015/05/09 17:01:42 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/09 17:01:42 [app.go:96] [I] http server Running on :8080
