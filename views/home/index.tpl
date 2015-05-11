@@ -144,7 +144,7 @@
 				<div style="background:rgba(255,255,255,0.8);height:100%;">
 					<div class="logo-img">
 						<a href="/brand/6">
-							<img src="/html/brand/logo_2.png" class="img-circle img-responsive" alt="图片呢"> </a>
+							<img src="/html/brand/logo_2.jpg" class="img-circle img-responsive" alt="图片呢"> </a>
 					</div>
 					<div class="brand-footer">
 						<h4 class="brand-name"><a href="/brand/6" class="edit-text" data-edit="name" data-name="品牌名">LingoX</a></h4>

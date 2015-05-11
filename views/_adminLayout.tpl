@@ -7,21 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">-->
 		<title>{{i18n .Lang "app title"}} {{.subTitle}}</title>
-		<meta property="qc:admins" content="6050272677640117256375" />
-		<!--<link rel="stylesheet" href="/static/css/pinghei.css">-->
-		<link rel="shortcut icon" href="/static/img/favicon.ico" />
-		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="/static/css/non-responsive.min.css"/>
-		<!--<link rel="stylesheet" href="/static/css/default.css">-->
-		<script type="text/javascript">
-			var snow = {};
-		</script>
-		<link rel="stylesheet" href="/static/css/reset.css">
-		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
-		<script src="/static/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
-		<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script type="text/javascript" src="/static/js/jquery.mousewheel.js"></script>-->
+		{{.Head}}
 	</head>
 
 	<body>
@@ -29,8 +15,8 @@
 			<div class="container">
 				<nav style="height:65px;">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="/" style="padding:0;">
-							<img src="/static/img/logo001.png" class="img-responsive" alt="logo">
+						<a class="navbar-brand" href="/">
+							<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
 						</a>
 					</div>
 					<ul class="nav navbar-nav" style="margin-left:40px;">
