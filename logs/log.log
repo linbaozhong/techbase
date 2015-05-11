@@ -8478,3 +8478,95 @@
 2015/05/06 18:27:31 [router.go:845] [D] | GET        | /home                                    | 36.0021ms        | match      | /home                                    | 
 2015/05/06 18:29:15 [router.go:845] [D] | GET        | /home                                    | 33.0018ms        | match      | /home                                    | 
 2015/05/06 18:29:31 [router.go:845] [D] | GET        | /home                                    | 33.0019ms        | match      | /home                                    | 
+2015/05/08 10:37:37 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/08 10:37:37 [app.go:96] [I] http server Running on :8080
+2015/05/08 10:38:39 [router.go:845] [D] | GET        | /                                        | 45.0026ms        | match      | /                                        | 
+2015/05/08 10:38:55 [router.go:845] [D] | GET        | /home                                    | 42.0024ms        | match      | /home                                    | 
+2015/05/08 10:39:18 [router.go:845] [D] | GET        | /media                                   | 31.0017ms        | match      | /media                                   | 
+2015/05/08 10:39:22 [router.go:845] [D] | GET        | /community                               | 47.0027ms        | match      | /community                               | 
+2015/05/08 10:39:40 [router.go:845] [D] | GET        | /                                        | 60.0035ms        | match      | /                                        | 
+2015/05/08 10:40:24 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/08 10:40:24 [app.go:96] [I] http server Running on :8080
+2015/05/08 10:40:30 [router.go:845] [D] | GET        | /                                        | 60.0035ms        | match      | /                                        | 
+2015/05/08 10:41:11 [router.go:845] [D] | GET        | /connect/weixin                          | 42.0024ms        | match      | /connect/weixin/*                        | 
+2015/05/08 10:43:23 [router.go:845] [D] | GET        | /connect/wx_callback                     | 807.0462ms       | match      | /connect/wx_callback/*                   | 
+2015/05/08 10:43:24 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/05/08 10:43:27 [router.go:845] [D] | GET        | /                                        | 46.0027ms        | match      | /                                        | 
+2015/05/08 10:43:42 [router.go:845] [D] | GET        | /brandshow                               | 51.0029ms        | match      | /brandshow                               | 
+2015/05/08 10:44:05 [router.go:845] [D] | GET        | /home                                    | 57.0033ms        | match      | /home                                    | 
+2015/05/08 10:53:37 [router.go:845] [D] | GET        | /my/company                              | 45.0026ms        | match      | /my/company                              | 
+2015/05/08 10:53:39 [router.go:845] [D] | GET        | /admin/account                           | 51.003ms         | match      | /admin/account/*                         | 
+2015/05/08 10:53:45 [router.go:845] [D] | GET        | /admin/company                           | 49.0028ms        | match      | /admin/company/*                         | 
+2015/05/08 10:53:47 [router.go:845] [D] | GET        | /admin/account                           | 44.0025ms        | match      | /admin/account/*                         | 
+2015/05/08 11:50:52 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/08 11:50:53 [app.go:96] [I] http server Running on :8080
+2015/05/08 11:51:06 [router.go:845] [D] | GET        | /                                        | 32.0018ms        | match      | /                                        | 
+2015/05/08 11:53:59 [router.go:845] [D] | GET        | /                                        | 29.0017ms        | match      | /                                        | 
+2015/05/08 11:57:44 [router.go:845] [D] | GET        | /                                        | 58.0033ms        | match      | /                                        | 
+2015/05/08 11:57:58 [router.go:845] [D] | GET        | /                                        | 38.0021ms        | match      | /                                        | 
+2015/05/08 11:58:05 [router.go:845] [D] | GET        | /                                        | 59.0034ms        | match      | /                                        | 
+2015/05/08 12:07:50 [router.go:845] [D] | GET        | /                                        | 38.0022ms        | match      | /                                        | 
+2015/05/08 12:13:12 [router.go:845] [D] | GET        | /                                        | 40.0023ms        | match      | /                                        | 
+2015/05/08 12:16:43 [router.go:845] [D] | GET        | /                                        | 42.0024ms        | match      | /                                        | 
+2015/05/08 12:16:44 [router.go:845] [D] | GET        | /                                        | 60.0034ms        | match      | /                                        | 
+2015/05/08 12:19:34 [router.go:845] [D] | GET        | /                                        | 40.0022ms        | match      | /                                        | 
+2015/05/08 12:19:59 [router.go:845] [D] | GET        | /                                        | 39.0022ms        | match      | /                                        | 
+2015/05/08 12:21:59 [router.go:845] [D] | GET        | /                                        | 42.0024ms        | match      | /                                        | 
+2015/05/08 12:22:29 [router.go:845] [D] | GET        | /                                        | 41.0024ms        | match      | /                                        | 
+2015/05/08 12:23:23 [router.go:845] [D] | GET        | /                                        | 60.0034ms        | match      | /                                        | 
+2015/05/08 12:24:58 [router.go:845] [D] | GET        | /                                        | 61.0035ms        | match      | /                                        | 
+2015/05/08 12:26:08 [router.go:845] [D] | GET        | /                                        | 37.0022ms        | match      | /                                        | 
+2015/05/08 12:39:46 [router.go:845] [D] | GET        | /                                        | 57.0033ms        | match      | /                                        | 
+2015/05/08 12:39:56 [router.go:845] [D] | GET        | /                                        | 49.0028ms        | match      | /                                        | 
+2015/05/08 12:42:51 [router.go:845] [D] | GET        | /                                        | 44.0026ms        | match      | /                                        | 
+2015/05/08 12:43:43 [router.go:845] [D] | GET        | /media                                   | 49.0028ms        | match      | /media                                   | 
+2015/05/08 12:43:45 [router.go:845] [D] | GET        | /community                               | 30.0017ms        | match      | /community                               | 
+2015/05/08 12:43:46 [router.go:845] [D] | GET        | /home                                    | 60.0034ms        | match      | /home                                    | 
+2015/05/08 12:43:57 [router.go:845] [D] | GET        | /                                        | 43.0024ms        | match      | /                                        | 
+2015/05/08 12:43:59 [router.go:845] [D] | GET        | /brand/6                                 | 45.0026ms        | match      | /brand/:id                               | 
+2015/05/08 12:44:02 [router.go:845] [D] | GET        | /                                        | 59.0034ms        | match      | /                                        | 
+2015/05/08 12:44:04 [router.go:845] [D] | GET        | /brandshow                               | 57.0032ms        | match      | /brandshow                               | 
+2015/05/08 12:44:24 [router.go:845] [D] | GET        | /my/company                              | 64.0037ms        | match      | /my/company                              | 
+2015/05/08 12:50:26 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/08 12:50:26 [app.go:96] [I] http server Running on :8080
+2015/05/08 12:50:58 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/08 12:50:58 [app.go:96] [I] http server Running on :8080
+2015/05/08 12:50:58 [router.go:845] [D] | GET        | /                                        | 35.002ms         | match      | /                                        | 
+2015/05/08 12:51:52 [router.go:845] [D] | GET        | /my/company                              | 47.0027ms        | match      | /my/company                              | 
+2015/05/08 12:52:02 [router.go:845] [D] | GET        | /my/company                              | 46.0027ms        | match      | /my/company                              | 
+2015/05/08 12:52:12 [router.go:845] [D] | GET        | /basic/index/0                           | 46.0026ms        | match      | /basic/index/:typeId                     | 
+2015/05/08 12:52:22 [router.go:845] [D] | GET        | /basic/index/2                           | 54.0031ms        | match      | /basic/index/:typeId                     | 
+2015/05/08 14:55:31 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/08 14:55:31 [app.go:96] [I] http server Running on :8080
+2015/05/08 14:55:47 [router.go:845] [D] | GET        | /                                        | 33.0018ms        | match      | /                                        | 
+2015/05/08 16:08:29 [router.go:845] [D] | GET        | /                                        | 32.0018ms        | match      | /                                        | 
+2015/05/08 16:08:59 [router.go:845] [D] | GET        | /                                        | 44.0025ms        | match      | /                                        | 
+2015/05/08 16:09:18 [router.go:845] [D] | GET        | /                                        | 43.0024ms        | match      | /                                        | 
+2015/05/08 16:10:45 [router.go:845] [D] | GET        | /                                        | 40.0023ms        | match      | /                                        | 
+2015/05/08 16:28:40 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/05/08 16:39:05 [router.go:845] [D] | GET        | /                                        | 41.0023ms        | match      | /                                        | 
+2015/05/08 16:43:44 [router.go:845] [D] | GET        | /                                        | 37.0021ms        | match      | /                                        | 
+2015/05/08 16:47:31 [router.go:845] [D] | GET        | /                                        | 48.0028ms        | match      | /                                        | 
+2015/05/08 16:47:51 [router.go:845] [D] | GET        | /                                        | 61.0034ms        | match      | /                                        | 
+2015/05/08 17:02:35 [router.go:845] [D] | GET        | /                                        | 53.003ms         | match      | /                                        | 
+2015/05/08 17:04:59 [router.go:845] [D] | GET        | /                                        | 57.0032ms        | match      | /                                        | 
+2015/05/08 17:06:52 [router.go:845] [D] | GET        | /                                        | 49.0028ms        | match      | /                                        | 
+2015/05/08 17:07:38 [router.go:845] [D] | GET        | /                                        | 46.0026ms        | match      | /                                        | 
+2015/05/08 17:09:05 [router.go:845] [D] | GET        | /                                        | 42.0024ms        | match      | /                                        | 
+2015/05/08 17:11:04 [router.go:845] [D] | GET        | /                                        | 61.0034ms        | match      | /                                        | 
+2015/05/08 17:16:57 [router.go:845] [D] | GET        | /                                        | 37.0022ms        | match      | /                                        | 
+2015/05/08 17:17:43 [router.go:845] [D] | GET        | /                                        | 56.0032ms        | match      | /                                        | 
+2015/05/08 17:18:02 [router.go:845] [D] | GET        | /                                        | 53.003ms         | match      | /                                        | 
+2015/05/08 17:18:41 [router.go:845] [D] | GET        | /                                        | 60.0034ms        | match      | /                                        | 
+2015/05/08 17:29:16 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/05/08 17:47:11 [router.go:845] [D] | GET        | /                                        | 32.0018ms        | match      | /                                        | 
+2015/05/08 17:48:04 [router.go:845] [D] | GET        | /                                        | 56.0032ms        | match      | /                                        | 
+2015/05/08 17:56:26 [router.go:845] [D] | GET        | /                                        | 56.0032ms        | match      | /                                        | 
+2015/05/08 18:06:38 [router.go:845] [D] | GET        | /                                        | 47.0027ms        | match      | /                                        | 
+2015/05/08 18:07:10 [router.go:845] [D] | GET        | /                                        | 32.0018ms        | match      | /                                        | 
+2015/05/08 18:07:28 [router.go:845] [D] | GET        | /                                        | 59.0034ms        | match      | /                                        | 
+2015/05/08 18:07:55 [router.go:845] [D] | GET        | /                                        | 81.0046ms        | match      | /                                        | 
+2015/05/08 18:10:34 [router.go:845] [D] | GET        | /                                        | 60.0034ms        | match      | /                                        | 
+2015/05/08 18:10:52 [router.go:845] [D] | GET        | /home                                    | 59.0034ms        | match      | /home                                    | 
+2015/05/08 18:28:23 [router.go:845] [D] | GET        | /                                        | 30.0017ms        | match      | /                                        | 
+2015/05/08 18:29:56 [router.go:845] [D] | GET        | /                                        | 60.0035ms        | match      | /                                        | 

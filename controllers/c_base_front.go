@@ -14,7 +14,7 @@ func (this *Front) Prepare() {
 	// this.LayoutSections["Head"] = "_head.html"
 	// this.LayoutSections["Header"] = "_indexHeader.html"
 	// this.LayoutSections["Login"] = "_login.html"
-	// this.LayoutSections["Footer"] = "_footer.html"
+	this.LayoutSections["Footer"] = "_footer.tpl"
 	// this.LayoutSections["Scripts"] = "_scripts.html"
 }
 

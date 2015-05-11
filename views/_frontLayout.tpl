@@ -5,13 +5,14 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>{{i18n .Lang "app title"}}</title>
 		<meta property="qc:admins" content="6050272677640117256375" />
 		<!--<link rel="stylesheet" href="/static/css/pinghei.css">-->
 		<link rel="shortcut icon" href="/static/img/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<!--<link rel="stylesheet" type="text/css" href="/static/css/non-responsive.min.css"/>-->
 		<!--<link rel="stylesheet" href="/static/css/default.css">-->
 		<script type="text/javascript">
 			var snow = {};
@@ -28,11 +29,13 @@
 			<div class="container">
 				<nav style="height:65px;">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="/" style="padding:0;">
-							<img src="/static/img/logo001.png" class="img-responsive" alt="logo">
+						<button class="navbar-toggle" data-target="xs-nav"><i class="fa fa-bars"></i></button>
+						<a class="navbar-brand" href="/">
+							<span class="visible-xs-block">TECHBASE</span>
+							<img src="/static/img/logo001.png" class="img-responsive hidden-xs" alt="logo" style="margin-top: -12px;">
 						</a>
 					</div>
-					<ul class="nav navbar-nav" style="margin-left:40px;">
+					<ul class="nav navbar-nav hidden-xs" style="margin-left:40px;">
 						<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
 						</li>
 						<li class="menu {{if eq .index " brandshow "}}active {{end}}" data-rel = "submenu-1"><a href="javascript:;">她创投</a>
@@ -43,9 +46,8 @@
 						</li>
 						<li {{if eq .index "home"}} class="active" {{end}}><a href="/home">她本营</a>
 						</li>
-
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right hidden-xs">
 						<li class="login"><a href="javascript:;">登录</a>
 						</li>
 						<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
@@ -59,7 +61,6 @@
 					</ul>
 				</nav>
 			</div>
-
 		</header>
 		<div class="submenu submenu-0">
 			<i class="fa fa-caret-up"></i>
@@ -92,54 +93,23 @@
 				<p>邮件 techbase@tabenying.com</p>
 			</div>
 		</div>
+		<div id="xs-nav" class="hidden-md hidden-lg" style="margin-top: 65px;margin-bottom: -60px;display: none;">
+			<ul class="" style="margin-left:40px;">
+				<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
+				</li>
+				<li class="menu {{if eq .index " brandshow "}}active {{end}}" data-rel = "submenu-1"><a href="javascript:;">她创投</a>
+				</li>
+				<li class="{{if eq .index " media "}} active {{end}}"><a href="/media">她媒体</a>
+				</li>
+				<li class="{{if eq .index " community "}} active {{end}}"><a href="/community">她社区</a>
+				</li>
+				<li {{if eq .index "home"}} class="active" {{end}}><a href="/home">她本营</a>
+				</li>
+			</ul>
+		</div>
 		{{.LayoutContent}}
 		<!--END container-->
-		<div id="footer_0" style="margin-top:35px;">
-		</div>
-		<footer class="row" id="footer">
-			<div class="col-md-2 col-sm-2 row"></div>
-			<div class="col-md-8 col-sm-8">
-				<div class="row">
-					<div class="col-md-4 col-sm-12">
-						<p class="qr">
-							<img class="img-responsive" src="/static/img/weixin-qr.png">
-						</p>
-						<p class="wx">微信公众号：TechBase她本营</p>
-					</div>
-					<div class="col-md-5 col-sm-12">
-						<h4>公司信息</h4>
-						<p>公司：她本营网络科技有限公司</p>
-						<p>地址：北京市朝阳区方恒国际中心D座2317室</p>
-						<p>邮件：techbase@tabenying.com</p>
-					</div>
-					<div class="col-md-3 col-sm-12">
-						<h4>友情链接</h4>
-						<p><a href="http://leanin.org/">Lean In</a>
-						</p>
-						<p><a href="http://www.sycapital.cn/">松源资本</a>
-						</p>
-						<p><a href="http://www.36kr.com/">36Kr</a>
-						</p>
-						<p><a href="http://itjuzi.com/">IT桔子</a>
-						</p>
-					</div>
-				</div>
-				<div class="row copyright-div">
-					<p class="copyright">
-						Copyright © TechBase. All Rights Reserved.
-						<br>她本营TechBase 版权所有
-					</p>
-				</div>
-			</div>
-			<div class="col-md-2 col-sm-2 row text-right">
-				<a class="hidden" id="go-top" href="javascript:;">
-					<i class="fa fa-angle-up"></i>
-				</a>
-			</div>
-		</footer>
-		<div class="x-data">
-			
-		</div>
+		{{.Footer}}
 	</body>
 
 </html>
@@ -154,7 +124,18 @@
 				}
 			}, 100);
 		};
-
+		
+		$('button.navbar-toggle').click(function(){
+			var _self=$(this);
+			if (_self.data('expanded')) {
+				$('#xs-nav').hide();
+				_self.data('expanded',false)
+			} else{
+				$('#xs-nav').show();
+				_self.data('expanded',true)
+			}
+		});
+		
 		$(".menu").hover(
 			function(e) {
 				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',false);

@@ -1,6 +1,7 @@
 <style type="text/css">
 	.banner {
 		position: relative;
+		margin-top: 65px;
 		margin-bottom: 30px;
 	}
 	.banner .small {
@@ -44,7 +45,7 @@
 		padding: 0;
 		margin: 0;
 		position: relative;
-		height: 420px;
+		height: 325px;
 		width: 100%;
 		overflow: hidden;
 		color: #333;
