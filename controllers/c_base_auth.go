@@ -53,6 +53,7 @@ func (this *Auth) Prepare() {
 
 	this.Layout = "_adminLayout.tpl"
 	this.LayoutSections = make(map[string]string)
+	this.LayoutSections["Head"] = "_head.tpl"
 	this.LayoutSections["Footer"] = "_footer.tpl"
 }
 
