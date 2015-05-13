@@ -8604,3 +8604,166 @@
 2015/05/11 12:02:11 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 77.0045ms        | match      | /company/getlinks/*                      | 
 2015/05/11 12:02:11 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 103.0059ms       | match      | /company/getloops/*                      | 
 2015/05/11 12:02:11 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 118.0067ms       | match      | /company/getmembers/*                    | 
+2015/05/11 13:00:57 [router.go:845] [D] | GET        | /company/edit                            | 80.0046ms        | match      | /company/edit/*                          | 
+2015/05/11 13:00:57 [router.go:845] [D] | GET        | /company/GetContact/0                    | 71.004ms         | match      | /company/getcontact/*                    | 
+2015/05/11 13:00:57 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 87.005ms         | match      | /company/getintroduce/*                  | 
+2015/05/11 13:00:57 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 106.0061ms       | match      | /company/getlinks/*                      | 
+2015/05/11 13:00:57 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 151.0086ms       | match      | /company/getmembers/*                    | 
+2015/05/11 13:00:57 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 160.0091ms       | match      | /company/getloops/*                      | 
+2015/05/11 13:02:38 [router.go:845] [D] | GET        | /company/edit                            | 50.0028ms        | match      | /company/edit/*                          | 
+2015/05/11 13:02:38 [router.go:845] [D] | GET        | /company/GetContact/0                    | 101.0058ms       | match      | /company/getcontact/*                    | 
+2015/05/11 13:02:38 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 109.0062ms       | match      | /company/getintroduce/*                  | 
+2015/05/11 13:02:38 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 134.0076ms       | match      | /company/getlinks/*                      | 
+2015/05/11 13:02:38 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 139.0079ms       | match      | /company/getmembers/*                    | 
+2015/05/11 13:02:38 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 144.0082ms       | match      | /company/getloops/*                      | 
+2015/05/11 13:08:21 [router.go:845] [D] | GET        | /company/edit                            | 43.0025ms        | match      | /company/edit/*                          | 
+2015/05/11 13:08:21 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 50.0029ms        | match      | /company/getintroduce/*                  | 
+2015/05/11 13:08:21 [router.go:845] [D] | GET        | /company/GetContact/0                    | 107.0061ms       | match      | /company/getcontact/*                    | 
+2015/05/11 13:08:21 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 127.0072ms       | match      | /company/getmembers/*                    | 
+2015/05/11 13:08:21 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 127.0073ms       | match      | /company/getloops/*                      | 
+2015/05/11 13:08:21 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 152.0087ms       | match      | /company/getlinks/*                      | 
+2015/05/11 13:44:06 [router.go:845] [D] | GET        | /                                        | 62.0036ms        | match      | /                                        | 
+2015/05/11 15:08:43 [router.go:845] [D] | GET        | /home                                    | 86.0049ms        | match      | /home                                    | 
+2015/05/11 17:28:09 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/11 17:28:11 [app.go:96] [I] http server Running on :8080
+2015/05/11 17:29:57 [router.go:845] [D] | GET        | /home                                    | 34.0019ms        | match      | /home                                    | 
+2015/05/11 17:31:34 [router.go:845] [D] | GET        | /home                                    | 36.0021ms        | match      | /home                                    | 
+2015/05/11 17:38:21 [router.go:845] [D] | GET        | /community                               | 31.0018ms        | match      | /community                               | 
+2015/05/11 17:38:41 [router.go:845] [D] | GET        | /media                                   | 57.0033ms        | match      | /media                                   | 
+2015/05/11 17:38:45 [router.go:845] [D] | GET        | /media                                   | 33.0019ms        | match      | /media                                   | 
+2015/05/11 17:39:47 [router.go:845] [D] | GET        | /media                                   | 43.0025ms        | match      | /media                                   | 
+2015/05/11 17:40:08 [router.go:845] [D] | GET        | /community                               | 85.0049ms        | match      | /community                               | 
+2015/05/11 17:41:02 [router.go:845] [D] | GET        | /my/company                              | 203.0116ms       | match      | /my/company                              | 
+2015/05/11 17:41:06 [router.go:845] [D] | GET        | /company/edit                            | 45.0026ms        | match      | /company/edit/*                          | 
+2015/05/11 17:41:06 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 63.0037ms        | match      | /company/getlinks/*                      | 
+2015/05/11 17:41:06 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 74.0043ms        | match      | /company/getintroduce/*                  | 
+2015/05/11 17:41:06 [router.go:845] [D] | GET        | /company/GetContact/0                    | 96.0055ms        | match      | /company/getcontact/*                    | 
+2015/05/11 17:41:06 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 88.005ms         | match      | /company/getmembers/*                    | 
+2015/05/11 17:41:06 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 145.0083ms       | match      | /company/getloops/*                      | 
+2015/05/12 12:30:17 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/12 12:30:17 [app.go:96] [I] http server Running on :8080
+2015/05/12 12:32:00 [router.go:845] [D] | GET        | /                                        | 67.0038ms        | match      | /                                        | 
+2015/05/12 12:32:10 [router.go:845] [D] | GET        | /connect/weixin                          | 43.0025ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:36:25 [router.go:845] [D] | GET        | /                                        | 40.0023ms        | match      | /                                        | 
+2015/05/12 12:36:27 [router.go:845] [D] | GET        | /connect/weixin                          | 40.0023ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:37:02 [router.go:845] [D] | GET        | /                                        | 49.0028ms        | match      | /                                        | 
+2015/05/12 12:37:04 [router.go:845] [D] | GET        | /connect/weixin                          | 43.0025ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:37:38 [router.go:845] [D] | GET        | /                                        | 60.0034ms        | match      | /                                        | 
+2015/05/12 12:37:40 [router.go:845] [D] | GET        | /connect/weixin                          | 38.0021ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:38:47 [router.go:845] [D] | GET        | /                                        | 43.0025ms        | match      | /                                        | 
+2015/05/12 12:38:49 [router.go:845] [D] | GET        | /connect/weixin                          | 39.0022ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:41:18 [router.go:845] [D] | GET        | /                                        | 44.0025ms        | match      | /                                        | 
+2015/05/12 12:41:21 [router.go:845] [D] | GET        | /connect/weixin                          | 42.0024ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:42:23 [router.go:845] [D] | GET        | /                                        | 50.0029ms        | match      | /                                        | 
+2015/05/12 12:42:25 [router.go:845] [D] | GET        | /connect/weixin                          | 39.0022ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:44:27 [router.go:845] [D] | GET        | /                                        | 49.0028ms        | match      | /                                        | 
+2015/05/12 12:44:29 [router.go:845] [D] | GET        | /connect/weixin                          | 24.0014ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:45:52 [router.go:845] [D] | GET        | /                                        | 38.0022ms        | match      | /                                        | 
+2015/05/12 12:45:53 [router.go:845] [D] | GET        | /connect/weixin                          | 41.0024ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:48:04 [router.go:845] [D] | GET        | /                                        | 52.0029ms        | match      | /                                        | 
+2015/05/12 12:48:06 [router.go:845] [D] | GET        | /connect/weixin                          | 43.0025ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:53:49 [router.go:845] [D] | GET        | /                                        | 46.0027ms        | match      | /                                        | 
+2015/05/12 12:53:51 [router.go:845] [D] | GET        | /connect/weixin                          | 33.0018ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:54:15 [router.go:845] [D] | GET        | /                                        | 37.0021ms        | match      | /                                        | 
+2015/05/12 12:54:16 [router.go:845] [D] | GET        | /connect/weixin                          | 39.0022ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:55:37 [router.go:845] [D] | GET        | /                                        | 50.0028ms        | match      | /                                        | 
+2015/05/12 12:55:38 [router.go:845] [D] | GET        | /connect/weixin                          | 43.0025ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:56:04 [router.go:845] [D] | GET        | /                                        | 41.0024ms        | match      | /                                        | 
+2015/05/12 12:56:05 [router.go:845] [D] | GET        | /connect/weixin                          | 39.0023ms        | match      | /connect/weixin/*                        | 
+2015/05/12 12:59:10 [router.go:845] [D] | GET        | /                                        | 39.0022ms        | match      | /                                        | 
+2015/05/12 12:59:12 [router.go:845] [D] | GET        | /connect/weixin                          | 42.0024ms        | match      | /connect/weixin/*                        | 
+2015/05/12 13:03:35 [router.go:845] [D] | GET        | /                                        | 51.0029ms        | match      | /                                        | 
+2015/05/12 13:03:37 [router.go:845] [D] | GET        | /connect/weixin                          | 40.0023ms        | match      | /connect/weixin/*                        | 
+2015/05/12 13:05:21 [router.go:845] [D] | GET        | /                                        | 58.0033ms        | match      | /                                        | 
+2015/05/12 13:05:22 [router.go:845] [D] | GET        | /connect/weixin                          | 40.0023ms        | match      | /connect/weixin/*                        | 
+2015/05/12 13:06:26 [router.go:845] [D] | GET        | /                                        | 42.0024ms        | match      | /                                        | 
+2015/05/12 13:06:28 [router.go:845] [D] | GET        | /connect/weixin                          | 44.0025ms        | match      | /connect/weixin/*                        | 
+2015/05/12 13:07:59 [router.go:845] [D] | GET        | /                                        | 44.0025ms        | match      | /                                        | 
+2015/05/12 13:08:00 [router.go:845] [D] | GET        | /connect/weixin                          | 40.0022ms        | match      | /connect/weixin/*                        | 
+2015/05/12 13:08:41 [router.go:845] [D] | GET        | /                                        | 61.0035ms        | match      | /                                        | 
+2015/05/12 13:08:45 [router.go:845] [D] | GET        | /connect/weixin                          | 44.0025ms        | match      | /connect/weixin/*                        | 
+2015/05/12 13:09:23 [router.go:845] [D] | GET        | /                                        | 46.0026ms        | match      | /                                        | 
+2015/05/12 13:09:25 [router.go:845] [D] | GET        | /connect/weixin                          | 39.0023ms        | match      | /connect/weixin/*                        | 
+2015/05/12 13:11:45 [router.go:845] [D] | GET        | /                                        | 50.0029ms        | match      | /                                        | 
+2015/05/12 13:11:47 [router.go:845] [D] | GET        | /connect/weixin                          | 42.0024ms        | match      | /connect/weixin/*                        | 
+2015/05/12 13:12:03 [router.go:845] [D] | GET        | /                                        | 49.0028ms        | match      | /                                        | 
+2015/05/12 13:12:04 [router.go:845] [D] | GET        | /connect/weixin                          | 35.002ms         | match      | /connect/weixin/*                        | 
+2015/05/12 13:12:21 [router.go:845] [D] | GET        | /                                        | 59.0034ms        | match      | /                                        | 
+2015/05/12 13:12:23 [router.go:845] [D] | GET        | /connect/weixin                          | 39.0022ms        | match      | /connect/weixin/*                        | 
+2015/05/12 13:16:06 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/05/12 13:16:07 [router.go:845] [D] | GET        | /connect/weixin                          | 34.0019ms        | match      | /connect/weixin/*                        | 
+2015/05/13 10:42:27 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 10:42:29 [app.go:96] [I] http server Running on :8080
+2015/05/13 10:42:58 [router.go:845] [D] | GET        | /                                        | 34.0019ms        | match      | /                                        | 
+2015/05/13 10:43:06 [router.go:845] [D] | GET        | /                                        | 60.0035ms        | match      | /                                        | 
+2015/05/13 10:43:09 [router.go:845] [D] | GET        | /connect/weixin                          | 39.0022ms        | match      | /connect/weixin/*                        | 
+2015/05/13 10:50:11 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 10:50:11 [app.go:96] [I] http server Running on :8080
+2015/05/13 10:56:25 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 10:56:25 [app.go:96] [I] http server Running on :8080
+2015/05/13 10:59:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 10:59:57 [app.go:96] [I] http server Running on :8080
+2015/05/13 10:59:59 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/05/13 11:00:03 [router.go:845] [D] | GET        | /connect/weixin                          | 40.0023ms        | match      | /connect/weixin/*                        | 
+2015/05/13 11:03:45 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 11:03:45 [app.go:96] [I] http server Running on :8080
+2015/05/13 11:03:48 [router.go:845] [D] | GET        | /                                        | 51.0029ms        | match      | /                                        | 
+2015/05/13 11:03:51 [router.go:845] [D] | GET        | /connect/weixin                          | 46.0026ms        | match      | /connect/weixin/*                        | 
+2015/05/13 11:05:06 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 11:05:06 [app.go:96] [I] http server Running on :8080
+2015/05/13 11:05:07 [router.go:845] [D] | GET        | /                                        | 43.0025ms        | match      | /                                        | 
+2015/05/13 11:05:09 [router.go:845] [D] | GET        | /connect/weixin                          | 36.002ms         | match      | /connect/weixin/*                        | 
+2015/05/13 11:08:38 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 11:08:38 [app.go:96] [I] http server Running on :8080
+2015/05/13 11:08:39 [router.go:845] [D] | GET        | /                                        | 45.0025ms        | match      | /                                        | 
+2015/05/13 11:08:43 [router.go:845] [D] | GET        | /connect/weixin                          | 44.0025ms        | match      | /connect/weixin/*                        | 
+2015/05/13 11:11:22 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 11:11:22 [app.go:96] [I] http server Running on :8080
+2015/05/13 11:11:25 [router.go:845] [D] | GET        | /                                        | 36.002ms         | match      | /                                        | 
+2015/05/13 11:11:28 [router.go:845] [D] | GET        | /connect/weixin                          | 45.0025ms        | match      | /connect/weixin/*                        | 
+2015/05/13 11:12:32 [router.go:845] [D] | GET        | /                                        | 63.0036ms        | match      | /                                        | 
+2015/05/13 11:12:47 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 11:12:47 [app.go:96] [I] http server Running on :8080
+2015/05/13 11:13:08 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 11:13:08 [app.go:96] [I] http server Running on :8080
+2015/05/13 11:13:46 [router.go:845] [D] | GET        | /                                        | 49.0028ms        | match      | /                                        | 
+2015/05/13 11:13:50 [router.go:845] [D] | GET        | /connect/weixin                          | 44.0025ms        | match      | /connect/weixin/*                        | 
+2015/05/13 11:14:06 [router.go:845] [D] | GET        | /connect/wx_callback                     | 885.0506ms       | match      | /connect/wx_callback/*                   | 
+2015/05/13 11:14:06 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/05/13 11:14:07 [router.go:845] [D] | GET        | /                                        | 56.0032ms        | match      | /                                        | 
+2015/05/13 11:15:53 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 11:15:53 [app.go:96] [I] http server Running on :8080
+2015/05/13 11:34:52 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 11:34:52 [app.go:96] [I] http server Running on :8080
+2015/05/13 11:34:54 [router.go:845] [D] | GET        | /                                        | 64.0036ms        | match      | /                                        | 
+2015/05/13 11:34:56 [router.go:845] [D] | GET        | /connect/weixin                          | 43.0025ms        | match      | /connect/weixin/*                        | 
+2015/05/13 11:54:03 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 11:54:03 [app.go:96] [I] http server Running on :8080
+2015/05/13 17:50:32 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 17:50:32 [app.go:96] [I] http server Running on :8080
+2015/05/13 17:52:07 [router.go:845] [D] | GET        | /                                        | 33.0019ms        | match      | /                                        | 
+2015/05/13 17:52:12 [router.go:845] [D] | GET        | /my/company                              | 100.0058ms       | match      | /my/company                              | 
+2015/05/13 17:52:14 [router.go:845] [D] | GET        | /admin/account                           | 62.0035ms        | match      | /admin/account/*                         | 
+2015/05/13 17:52:18 [router.go:845] [D] | GET        | /basic/index/0                           | 52.0029ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 17:53:01 [router.go:845] [D] | GET        | /basic/index/2                           | 62.0035ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 17:58:19 [router.go:845] [D] | GET        | /basic/index/2                           | 30.0017ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 17:58:33 [router.go:845] [D] | GET        | /basic/index/2                           | 49.0028ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 17:58:41 [router.go:845] [D] | GET        | /basic/index/2                           | 62.0035ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 17:58:43 [router.go:845] [D] | GET        | /basic/index/3                           | 59.0034ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 17:59:37 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 17:59:37 [app.go:96] [I] http server Running on :8080
+2015/05/13 17:59:40 [router.go:845] [D] | GET        | /basic/index/3                           | 50.0028ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 18:00:44 [router.go:845] [D] | GET        | /basic/index/3                           | 58.0033ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 18:15:14 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 18:15:14 [app.go:96] [I] http server Running on :8080
+2015/05/13 18:16:37 [router.go:845] [D] | GET        | /basic/index/3                           | 49.0028ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 18:16:47 [router.go:845] [D] | GET        | /basic/index/3                           | 43.0024ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 18:17:28 [router.go:845] [D] | GET        | /basic/index/3                           | 57.0033ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 18:18:01 [router.go:845] [D] | GET        | /basic/index/3                           | 62.0035ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 18:21:29 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 18:21:29 [app.go:96] [I] http server Running on :8080
+2015/05/13 18:21:32 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/13 18:21:32 [app.go:96] [I] http server Running on :8080
+2015/05/13 18:25:02 [router.go:845] [D] | GET        | /basic/index/3                           | 47.0027ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 18:25:08 [router.go:845] [D] | GET        | /basic/index/3                           | 48.0027ms        | match      | /basic/index/:typeId                     | 
+2015/05/13 18:25:12 [router.go:845] [D] | GET        | /basic/index/3                           | 60.0035ms        | match      | /basic/index/:typeId                     | 

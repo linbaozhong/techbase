@@ -34,7 +34,6 @@
 	<footer></footer>
 </div>
 <script type="text/javascript">
-
 	var obj = new WxLogin({
 		id: "signin-weixin",
 		appid: "{{.appid}}",

@@ -35,11 +35,18 @@ func (this *Basic) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Id(this.Id).Cols("name", "value", "alias").Update(this)
+		_, err = db.Id(this.Id).Cols("name", "value", "alias", "updator", "updated", "ip").Update(this)
 	}
 	return err, nil
 }
 
+//
+func (this *Basic) SetStatus() error {
+	_, err := db.Id(this.Id).Cols("status", "updator", "updated", "ip").Update(this)
+	return err
+}
+
+//
 func (this *Basic) MaxValue() (bool, error) {
 	return db.Where("type=? and parentid=? and deleted=?", this.Type, this.ParentId, Undelete).Limit(1).Desc("value").Get(this)
 }

@@ -249,15 +249,14 @@ form .alert.visible{
 }
 #go-top {
 	position: fixed;
+	margin-left: 45px;
 	z-index: 999;
 	bottom: 225px;
 	display: inline-block;
-	width: 32px;
-	font-size: 14px;
-	background: #2476CE;
-	padding: 10px 6px;
+	font-size: 24px;
+	background: #333;
+	padding: 4px 10px 5px 11px;
 	opacity: 0.3;
-	text-align: center;
 }
 #go-top * {
 	color: #fff;

@@ -1,5 +1,15 @@
 <style type="text/css">
 	@media screen and (min-width: 768px) {
+		.sec article{
+			height: 270px;
+			overflow: auto;
+			margin: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
 		.sec .text-side ul {
 			padding-left: 18px;
 		}
@@ -52,13 +62,13 @@
 <div id="container" style="margin-top:0;">
 	<section class=" sec" id="sec01">
 		<article class="container">
-		<div class="col-md-6 col-xs-12 text-side">
+		<div class="col-md-6 col-xs-6 text-side">
 			<h3>她本营</h3>
 			<h5>打造属于女性科技创业群体自己的大本营</h5>
 			<p>以零星之火，造燎原之势；以女性之姿，搏时代之巅。正是受到女性创业者们不甘沉默、满腔热情、坚韧不屈的创业故事的感染， 秉承“大胆想，勇敢做”的理念，我们萌生了创建女性科技互联网社区和孵化平台的想法——这便是TechBase她本营诞生的原因。
 			</p>
 		</div>
-		<div class="col-md-6 col-xs-12 img-side">
+		<div class="col-md-6 col-xs-6 img-side">
 			<img src="/html/brand/1.png" class="img-responsive">
 		</div></article>
 		<span class="sec-down"><i class="fa fa-angle-double-down"></i></span>
@@ -66,10 +76,10 @@
 	<section class="sec" id="sec02">
 		<span class="sec-up"><i class="fa fa-angle-double-up"></i></span>
 		<article class="container">
-		<div class="col-md-6 col-xs-12 img-side">
+		<div class="col-md-6 col-xs-6 img-side">
 			<img src="/html/brand/2.png" class="img-responsive">
 		</div>
-		<div class="col-md-6 col-xs-12 text-side" style="text-align:center;">
+		<div class="col-md-6 col-xs-6 text-side" style="text-align:center;">
 			<h3>为什么我们这么做</h3>
 			<h5>来自女性在时代与科技领域进步的发声</h5>
 			<dl>
@@ -86,7 +96,7 @@
 	<section class="sec" id="sec03">
 		<span class="sec-up"><i class="fa fa-angle-double-up"></i></span>
 		<article class="container">
-		<div class="col-md-6 col-xs-12 text-side">
+		<div class="col-md-6 col-xs-6 text-side">
 			<h3>我们可以做什么</h3>
 			<h5>只专注于一件事情，帮助女性创业者</h5>
 			<ul>
@@ -99,7 +109,7 @@
 				<li>线下培训与社交活动</li>
 			</ul>
 		</div>
-		<div class="col-md-6 col-xs-12 img-side">
+		<div class="col-md-6 col-xs-6 img-side">
 			<img src="/html/brand/3.png" class="img-responsive">
 		</div></article>
 		<span class="sec-down"><i class="fa fa-angle-double-down"></i></span>
@@ -119,9 +129,8 @@
 <script src="http://cdn.bootcss.com/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
 <script type="text/javascript">
 	$(window).resize(function() {
-		$('section.sec div').css({
-			height: $(window).height(),
-			paddingTop:'25%'
+		$('section.sec').css({
+			height: $(window).height()
 			});
 	});
 	var _sections = $('#container').children('section');

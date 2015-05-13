@@ -81,6 +81,28 @@ func (this *Basic) Save() {
 
 }
 
+// 状态
+func (this *Basic) Status() {
+	basic := new(models.Basic)
+	basic.Id, _ = this.GetInt64("id")
+	basic.Status, _ = this.GetInt("status")
+
+	if basic.Status == models.Locked {
+		basic.Status = models.Unlock
+	} else {
+		basic.Status = models.Locked
+	}
+
+	this.extend(basic)
+
+	if err := basic.SetStatus(); err == nil {
+		this.renderJson(utils.JsonData(true, "", basic))
+	} else {
+		this.renderJson(utils.JsonData(false, "", err))
+	}
+
+}
+
 // 取当前类型的最大取值
 func (this *Basic) MaxValue() {
 	basic := new(models.Basic)

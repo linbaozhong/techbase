@@ -75,7 +75,7 @@
 		 _html.push('<td class="text-center">'+item.name+'</td>');                                                         
 		 _html.push('<td class="text-center">'+item.value+'</td>');                                                         
 		 _html.push('<td class="text-center">'+item.alias+'</td>');                                                         
-		 _html.push('<td class="text-center"><i class="fa '+(item.status?'fa-check-square-o':'fa-square-o')+'"></i></td>');                                                         
+		 _html.push('<td class="text-center"><i class="fa '+(item.status?'fa-check-square-o':'fa-square-o')+' snow-check"></i></td>');                                                         
 		 _html.push('<td class="text-center"><button class="btn btn-primary btn-edit">修改</button></td>');                                                         
 		 _html.push('</tr>'); 
 		 // 检查该行是否已经存在
@@ -139,7 +139,9 @@
 			});
 			// 弹窗
 			pop_window();
-		}).on('click','.btn-edit',function(){
+		});
+		// 编辑按钮事件
+		$('#snow-list tbody').on('click','.btn-edit',function(){
 			var item = $(this).closest('tr').data('data');
 			// 重置表单
 			$('#snow-form').find('form')[0].reset();
@@ -149,6 +151,19 @@
 			$('#inputAlias').val(item.alias);
 			// 弹窗
 			pop_window();
+		}).on('click','.snow-check',function(){
+			var item = $(this).closest('tr').data('data');
+			$.getJSON('/basic/status',{
+				id:item.id,
+				status:item.status
+			},function(json){
+				if (json.ok ) {
+					var item=json.data,_row = $('#snow-list tbody').find('tr.row-id-'+item.id);
+					_row.find('i').replaceWith('<i class="fa '+(item.status?'fa-check-square-o':'fa-square-o')+' snow-check"></i>');
+				}else{
+					
+				}
+			});
 		});
 		// 选项改变
 		$('#selectParentId').change(function(){

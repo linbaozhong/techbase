@@ -35,7 +35,7 @@ type OpenSign struct {
 // 微信登陆框
 func (this *Connect) Weixin() {
 	this.Data["appid"] = appconf("weixin::appid")
-	this.Data["callback"] = appconf("weixin::callback")
+	this.Data["callback"] = this.root() + appconf("weixin::callback")
 }
 
 /*
@@ -47,7 +47,7 @@ func (this *Connect) Wx_Login() {
 	//---将随机串存入Session
 	this.SetSession("state", state)
 	//---登录的url
-	url := appconf("weixin::auth") + "?response_type=code&appid=" + appconf("weixin::appid") + "&redirect_uri=" + appconf("weixin::callback") + "&state=" + state + "&scope=" + appconf("weixin::scope") + "#wechat_redirect"
+	url := appconf("weixin::auth") + "?response_type=code&appid=" + appconf("weixin::appid") + "&redirect_uri=" + this.root() + appconf("weixin::callback") + "&state=" + state + "&scope=" + appconf("weixin::scope") + "#wechat_redirect"
 
 	fmt.Println(url)
 	//---
@@ -212,7 +212,7 @@ func (this *Connect) QQ_Login() {
 	//---将随机串存入Session
 	this.SetSession("state", state)
 	//---登录的url
-	url := appconf("qq::auth") + "?response_type=code&client_id=" + appconf("qq::appid") + "&redirect_uri=" + appconf("qq::callback") + "&state=" + state + "&scope=" + appconf("qq::scope")
+	url := appconf("qq::auth") + "?response_type=code&client_id=" + appconf("qq::appid") + "&redirect_uri=" + this.root() + appconf("qq::callback") + "&state=" + state + "&scope=" + appconf("qq::scope")
 
 	//fmt.Println(url)
 	//---
@@ -247,7 +247,7 @@ func (this *Connect) QQ_Callback() {
 	req.Param("grant_type", "authorization_code")
 	req.Param("client_id", appconf("qq::appid"))
 	req.Param("client_secret", appconf("qq::appkey"))
-	req.Param("redirect_uri", appconf("qq::callback"))
+	req.Param("redirect_uri", this.root()+appconf("qq::callback"))
 	req.Param("code", this.GetString("code"))
 	req.Param("state", this.GetString("state"))
 
