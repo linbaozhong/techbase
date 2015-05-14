@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
 		<title>{{i18n .Lang "app title"}}</title>
 		{{.Head}}
 	</head>
@@ -15,13 +15,13 @@
 			<div class="container">
 				<nav style="height:65px;">
 					<div class="navbar-header">
-						<button class="navbar-toggle" data-target="xs-nav"><i class="fa fa-bars"></i></button>
+						<!--<button class="navbar-toggle" data-target="xs-nav"><i class="fa fa-bars"></i></button>-->
 						<a class="navbar-brand" href="/">
-							<span class="visible-xs-block">TECHBASE</span>
-							<img src="/static/img/logo001.png" class="img-responsive hidden-xs" alt="logo" style="margin-top: -12px;height: 60px;">
+							<!--<span class="visible-xs-block">TECHBASE</span>-->
+							<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
 						</a>
 					</div>
-					<ul class="nav navbar-nav hidden-xs" style="margin-left:40px;">
+					<ul class="nav navbar-nav" style="margin-left:40px;">
 						<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
 						</li>
 						<li class="menu {{if eq .index " brandshow "}}active {{end}}" data-rel = "submenu-1"><a href="javascript:;">她创投</a>
@@ -33,7 +33,7 @@
 						<li {{if eq .index "home"}} class="active" {{end}}><a href="/home">她本营</a>
 						</li>
 					</ul>
-					<ul class="nav navbar-nav navbar-right hidden-xs">
+					<ul class="nav navbar-nav navbar-right">
 						<li class="login"><a href="javascript:;">登录</a>
 						</li>
 						<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
@@ -79,7 +79,7 @@
 				<p>邮件 techbase@tabenying.com</p>
 			</div>
 		</div>
-		<div id="xs-nav" class="hidden-md hidden-lg" style="margin-top: 65px;margin-bottom: -60px;display: none;">
+		<!--<div id="xs-nav" class="hidden-md hidden-lg" style="margin-top: 65px;margin-bottom: -60px;display: none;">
 			<ul class="" style="margin-left:40px;">
 				<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
 				</li>
@@ -92,7 +92,7 @@
 				<li {{if eq .index "home"}} class="active" {{end}}><a href="/home">她本营</a>
 				</li>
 			</ul>
-		</div>
+		</div>-->
 		{{.LayoutContent}}
 		<!--END container-->
 		{{.Footer}}
@@ -111,16 +111,16 @@
 			}, 100);
 		};
 		
-		$('button.navbar-toggle').click(function(){
-			var _self=$(this);
-			if (_self.data('expanded')) {
-				$('#xs-nav').hide();
-				_self.data('expanded',false)
-			} else{
-				$('#xs-nav').show();
-				_self.data('expanded',true)
-			}
-		});
+//		$('button.navbar-toggle').click(function(){
+//			var _self=$(this);
+//			if (_self.data('expanded')) {
+//				$('#xs-nav').hide();
+//				_self.data('expanded',false)
+//			} else{
+//				$('#xs-nav').show();
+//				_self.data('expanded',true)
+//			}
+//		});
 		
 		$(".menu").hover(
 			function(e) {
@@ -155,12 +155,12 @@
 			// 页脚
 			var _footer_0 = $('#footer_0'),
 				_footer = $('#footer');
-			_footer.addClass('fixfooter');
+			_footer.addClass('navbar-fixed-bottom');
 			if (_footer_0.offset().top > _footer.offset().top) {
-				_footer.removeClass('fixfooter');
+				_footer.removeClass('navbar-fixed-bottom');
 			}
 		};
-		setTimeout(footerBottom,200);
+		setTimeout(footerBottom,400);
 		
 		$(window).resize(function() {
 			footerBottom();

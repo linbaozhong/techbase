@@ -1,9 +1,4 @@
 <style type="text/css">
-	.banner {
-		position: relative;
-		margin-top: 65px;
-		margin-bottom: 30px;
-	}
 	.banner .small {
 		font-size: 0.7em;
 		font-weight: initial;
@@ -123,7 +118,7 @@
 	<div class="brand-zone row">
 		<p class="more-brand"><a class="link" href="/brandshow">更多品牌 <span class="fa fa-angle-right"></span></a>
 		</p>
-		<div class="col-md-4 col-sm-4 brand-card-container">
+		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
 			<div class="brand-card" style="background-image: url(/html/brand/1.png);">
 				<div style="background:rgba(255,255,255,0.8);height:100%;">
 					<div class="logo-img">
@@ -139,7 +134,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4 col-sm-4 brand-card-container">
+		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
 			<div class="brand-card" style="background-image: url(/html/brand/2.png);">
 				<div style="background:rgba(255,255,255,0.8);height:100%;">
 					<div class="logo-img">
@@ -155,7 +150,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4 col-sm-4 brand-card-container">
+		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
 			<div class="brand-card" style="background-image: url(/html/brand/3.png);">
 				<div style="background:rgba(255,255,255,0.8);height:100%;">
 					<div class="logo-img">

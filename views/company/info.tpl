@@ -5,7 +5,7 @@
 		</div>
 		<div class="col-md-10 snow-padding-top-40">
 			<div class="text-right">
-				{{if eq .company.Status 0}}
+				{{if and (eq .company.Status 0) (eq .company.Creator .account.Id)}}
 				<a href="/company/edit/{{.company.Id}}"><i class="fa fa-pencil"></i>&nbsp;编辑</a>&nbsp;&nbsp;&nbsp;
 				{{end}}
 				<a href="/my/company"><i class="fa fa-th-list"></i>&nbsp;返回我的公司</a>
@@ -15,8 +15,8 @@
 			<div class="row snow-row-1">
 				<div class="media">
 					<div class="media-left">
-						<a href="/company/{{.company.Id}}">
-							<img class="media-object" src="{{.company.Logo}}" style="width: 84px; height: 84px;">
+						<a href="/company/info/{{.company.Id}}">
+							<img class="media-object" src="{{.company.Logo}}" style="width: 100px;">
 						</a>
 					</div>
 					<div class="media-body">
@@ -170,8 +170,7 @@
 					{{range .loops}}
 					<div class="snow-loop snow-loops-{{.Id}}">
 						<div class="snow-tools">
-							<a class="snow-edit" href="#" data-id="{{.Id}}"><i class="fa fa-pencil"></i></a>
-							<a class="snow-del" href="#" data-id="{{.Id}}"><i class="fa fa-times"></i></a>
+							
 						</div>
 						<div>
 							<label class="control-label lead snow-loop-{{.Loop}}">天使轮</label><span>{{.Year}}.{{.Month}}</span>

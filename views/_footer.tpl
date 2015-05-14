@@ -1,6 +1,6 @@
 <div id="footer_0" style="margin-top:35px;">
 </div>
-<footer class="hidden-xs" id="footer">
+<footer class="" id="footer">
 	<div class="container">
 		
 	<div class="col-xs-8 col-md-8 col-sm-8 col-xs-offset-2">

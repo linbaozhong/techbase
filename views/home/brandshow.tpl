@@ -1,14 +1,11 @@
 <style type="text/css">
 	@media screen and (min-width: 768px) {
 		#xuangao {
-			position: relative;
-			top: 65px;
 			min-height: 330px;
 			background: url("/static/img/brand-banner.png") center center;
 			background-size: cover;
 			margin-bottom: 20px;
 			color: #fff;
-			margin: 0;
 		}
 		#xuangao h4 {
 			margin-top: 290px;
@@ -16,7 +13,7 @@
 		}
 	}
 </style>
-<div class="row" id="xuangao">
+<div class="row banner" id="xuangao">
 	<h4>为每一个创业团队提供品牌展示窗口，用户体验的中心，测试市场评价反馈的平台</h4>
 </div>
 <div class="container" style="margin-top: 130px;">

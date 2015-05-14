@@ -30,7 +30,7 @@ func (this *Company) Edit() {
 	com := this.getCompanyInfo(id)
 
 	// 如果已经提交审核，禁止编辑，跳转至公司信息页
-	if com.Status > 0 {
+	if com.Creator != this.currentUser.Id || com.Status > 0 {
 		this.Redirect(fmt.Sprintf("/company/info/%d", id), 302)
 		this.end()
 	}
@@ -42,7 +42,7 @@ func (this *Company) Edit() {
 func (this *Company) Info() {
 	id, _ := this.GetInt64("0")
 
-	this.getCompanyInfo(id)
+	this.getCompanyInfo(id, true)
 	this.getIntroduceInfo(id)
 	this.getLinksInfo(id)
 	this.getMembersList(id)
@@ -414,10 +414,13 @@ func (this *Company) DeleteLoops() {
 
 //////////////////////////////////////////
 // 读取公司信息
-func (this *Company) getCompanyInfo(id int64) *models.Company {
+func (this *Company) getCompanyInfo(id int64, all ...bool) *models.Company {
 	com := new(models.Company)
 	com.Id = id
-	com.AccountId = this.currentUser.Id
+
+	if len(all) == 0 {
+		com.AccountId = this.currentUser.Id
+	}
 
 	if id > 0 {
 		if _, err := com.Get(); err != nil {

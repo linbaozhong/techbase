@@ -15,7 +15,7 @@
 				<div class="media">
 					<div class="media-left">
 						<a href="/company/info/{{$company.Id}}" target="_blank">
-							<img class="media-object" src="{{$company.Logo}}" style="width: 84px; height: 84px;">
+							<img class="media-object" src="{{$company.Logo}}" style="width: 100px;">
 						</a>
 					</div>
 					<div class="media-body">

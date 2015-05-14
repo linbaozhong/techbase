@@ -40,7 +40,8 @@ func (this *Admin) Index() {
 // 审核公司
 func (this *Admin) Company() {
 	com := new(models.Company)
-	com.Status, _ = this.GetInt("status")
+	//com.Status, _ = this.GetInt("status")
+	com.Status = 1 //已提交审核的公司
 
 	cs, _ := com.AllList()
 

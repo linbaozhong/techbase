@@ -128,12 +128,12 @@
 			// 页脚
 			var _footer_0 = $('#footer_0'),
 				_footer = $('#footer');
-			_footer.addClass('fixfooter');
+			_footer.addClass('navbar-fixed-bottom');
 			if (_footer_0.offset().top > _footer.offset().top) {
-				_footer.removeClass('fixfooter');
+				_footer.removeClass('navbar-fixed-bottom');
 			}
 		};
-		setTimeout(footerBottom,100);
+		setTimeout(footerBottom,400);
 		
 		$(window).resize(function() {
 			footerBottom();

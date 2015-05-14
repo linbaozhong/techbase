@@ -23,7 +23,7 @@
 		var _row = $('#snow-list').find('.row-id-'+item.id),
 			_html = [];
 		 _html.push('<div class="media row-id-'+item.id+'">');                                                         
-		 _html.push('<div class="media-left"><a href="/company/info/'+item.id+'"><img class="media-object" src="'+item.logo+'" style="width: 84px; height: 84px;"></a></div>');                                                         
+		 _html.push('<div class="media-left"><a href="/company/info/'+item.id+'"><img class="media-object" src="'+item.logo+'" style="width: 100px;"></a></div>');                                                         
 		 _html.push('<div class="media-body"><div><span class="media-heading" style="font-size:1.15em;">'+item.name+'</span>');
 		 
 		 switch (item.status){

@@ -1,9 +1,9 @@
 	@media screen and (min-width: 768px) {
-		.sec aside {
-			position: fixed;
-			bottom: 200px;
-			top: 100px;
-			width: 290px;
+		.sec{
+			position: relative;
+		}
+		.sec .text-side,.sec .img-side {
+			display: table-cell;
 		}
 		.brand-card {
 			position: relative;

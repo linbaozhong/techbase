@@ -183,6 +183,11 @@ table .btn{
 	display: block;
 }
 /*中间内容*/
+.banner {
+	position: relative;
+	margin-top: 67px;
+	margin-bottom: 30px;
+}
 article.container{
 	margin-top:80px;
 }
@@ -201,11 +206,8 @@ form .alert.visible{
 /*页脚*/
 
 #footer {
-	position: relative;
-	top: 60px;
 	padding: 20px;
 	background-color: #333;
-	margin: 0;
 	line-height: initial;
 	font-size: 12px;
 }
@@ -219,13 +221,13 @@ form .alert.visible{
 	font-weight: bold;
 	font-size: inherit;
 }
-#footer.fixfooter {
+/*#footer.fixfooter {
 	position: fixed;
 	bottom: 0 !important;
 	left: 0 !important;
 	right: 0 !important;
 	top: auto !important;
-}
+}*/
 #footer .copyright-div {
 	border-top: 1px solid #444;
 	margin-top: 10px;
@@ -361,7 +363,7 @@ form .alert.visible{
 .snow-member{
 	position: relative;
 	margin:20px 20px 20px 0;
-	padding:30px 10px;
+	padding:20px 10px;
 	background-color: #eee;
 	text-align: center;
 }
@@ -369,4 +371,17 @@ form .alert.visible{
 	position: absolute;
 	top: 5px;
 	right: 5px;
+}
+.article-member p{
+	text-align: center;
+}
+/* 移动终端 */
+.mobile .navbar-fixed-top{
+	position:relative !important;
+}
+.mobile .banner{
+	margin-top:1px !important;
+}
+.mobile .navbar-fixed-bottom{
+	position: relative !important;
 }

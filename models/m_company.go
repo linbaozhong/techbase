@@ -46,7 +46,11 @@ func (this *Company) AllList() ([]Company, error) {
 
 // 读取
 func (this *Company) Get() (bool, error) {
-	return db.Where("id=? and accountId=?", this.Id, this.AccountId).Get(this)
+	if this.AccountId == 0 {
+		return db.Id(this.Id).Get(this)
+	} else {
+		return db.Where("id=? and accountId=?", this.Id, this.AccountId).Get(this)
+	}
 }
 
 // 保存
