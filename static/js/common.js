@@ -9,7 +9,7 @@ jQuery弹窗插件 By 哈利蔺特
  * */
 (function($) {
 	$.fn.popWindow = function(option) {
-		var self = this.eq(0),
+		var self = $(this[0]),
 			selfHidden = self.is(':hidden'),
 			wd = $(window),
 			width = wd.width(),
@@ -48,7 +48,7 @@ jQuery弹窗插件 By 哈利蔺特
 		}
 		// 弹窗
 		if (!model.length) {
-			model = $('<div class="pop-model" style="position:absolute;top:0;right:0;bottom:0;left:0;width:0;height:0;background:#ffffff;z-index:90001;overflow:hidden;margin:auto;display:none;"></div>').appendTo($('body'));
+			model = $('<div class="pop-model" style="position:fixed;top:0;right:0;bottom:0;left:0;width:0;height:0;background:#ffffff;z-index:90001;overflow:hidden;margin:auto;display:none;"><div class="pop-body"></div></div>').appendTo($('body'));
 		} else if (model.is(':hidden')) {
 			model.css({
 				height: 0,
@@ -57,7 +57,7 @@ jQuery弹窗插件 By 哈利蔺特
 		}
 		// 关闭按钮
 		if (opts.close && !closeBtn.length) {
-			closeBtn = $('<div class="pop-close" title="关闭" style="position:absolute;right:0;width:25px;height:25px;line-height:25px;text-align:center;z-index:99000;cursor:pointer;"></div>').appendTo(model);
+			closeBtn = $('<div class="pop-close" title="关闭" style="position:absolute;top:0;right:0;width:25px;height:25px;line-height:25px;text-align:center;z-index:99000;cursor:pointer;"></div>').appendTo(model);
 			closeBtn.html(opts.close).click(function() {
 				closeSelf();
 			}).hover(
@@ -79,10 +79,10 @@ jQuery弹窗插件 By 哈利蔺特
 		var _tagName = self[0].tagName.toLowerCase();
 		self.before('<' + _tagName + ' class="pop-self-position" style="display:none;"></' + _tagName + '>')
 		// 写入内容，并中心向外展开
-		model.append(self.show()).show().animate({
+		model.show().animate({
 			height: opts.height,
 			width: opts.width
-		}, opts.speed);
+		}, opts.speed).children('.pop-body').empty().append(self.show());
 		
 		if (container.is(':hidden')) {
 			container.fadeIn(opts.speed);
