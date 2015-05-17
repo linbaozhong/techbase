@@ -1,49 +1,145 @@
-<div class="col-md-3">
-	
-</div>
-<div class="col-md-9 snow-padding-top-40">
-	<div class="" style="margin-top: 10px;">
-
+<div class="banner">
+	<div class="slideshow">
+		<ol class="slides">
+			<li class="current banner-1">
+				<div class="description" style="margin: 0 auto;width: 900px;">
+				</div>
+			</li>
+		</ol>
 	</div>
-	<form class="form-horizontal snow-form-3">
-		<div class="form-group">
-			<div class="col-sm-3">
-				<h4 class="snow-underline">公司介绍</h4>
-			</div>
-			<div class="col-sm-9">
-				<div class="alert" role="alert"></div>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-3 control-label">图片介绍</label>
-			<div class="col-sm-9">
-				<span class="small"> ( 最多可以上传 5 张，仅支持JPG、GIF、PNG格式，文件小于5M )</span>
-				<ul class="snow-uploads" style="margin-top: 10px;">
-					<li class="snow-upload-target"></li>
-				</ul>
-			</div>
-		</div>
-		<div class="form-group clearfix">
-			<label class="col-sm-3 control-label">文字介绍</label>
-			<div class="col-sm-9">
-			<textarea class="form-control" name="content" rows="6" cols="" placeholder="">{{.introduce.Content}}</textarea>
-			</div>
-		</div>
-
-		<div class="form-group">
-			<label class="col-sm-3 control-label">
-			<input type="hidden" name="id" value="{{.introduce.Id}}" />
-			<input type="hidden" name="companyId" value="{{.introduce.CompanyId}}" />
-			<input type="hidden" name="images" value="{{.introduce.Images}}" />
-			</label>
-			<div class="col-sm-9">
-			<button type="submit" class="btn btn-primary col-sm-12" {{if eq .introduce.CompanyId 0}}disabled{{end}}>保存</button>
-			</div>
-		</div>
-	</form>
-
 </div>
-
+<article class="container">
+	<div class="snow-row snow-row-2">
+		<div class="row" style="margin-bottom: 40px;">
+			<div class="col-md-8 col-md-offset-2 snow-item-line">
+				<div class="col-md-3 snow-color-red">
+					<i class="fa fa-circle"></i>
+					<hr />
+					项目简介
+				</div>
+				<div class="col-md-3 snow-color-red">
+					<i class="fa fa-circle"></i>
+					<hr />
+					产品详情
+				</div>
+				<div class="col-md-3">
+					<i class="fa fa-circle"></i>
+					<hr />
+					创始团队
+				</div>
+				<div class="col-md-3">
+					<i class="fa fa-circle"></i>
+					<hr />
+					融资经历
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h3>{{.subTitle}}</h3>
+				<div class="pull-right">
+					{{if and (lt .company.Id 0) (eq .company.Status 0)}}
+					<a class="submit-review" href=""><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
+					{{end}}
+					<a href="/my/company"><i class="fa fa-th-list"></i>&nbsp;返回我的项目</a>
+				</div>
+				<hr />
+			</div>
+		</div>
+		<!--公司详情-->
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<form class="form-horizontal snow-form-3">
+					<div class="form-group">
+						<div class="col-sm-3">
+						</div>
+						<div class="col-sm-9">
+							<div class="alert" role="alert"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">图片介绍</label>
+						<div class="col-sm-9">
+							<span class="small"> ( 最多可以上传 5 张，仅支持JPG、GIF、PNG格式，文件小于5M )</span>
+							<ul class="snow-uploads" style="margin-top: 10px;">
+								<li class="snow-upload-target"></li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group clearfix">
+						<label class="col-sm-3 control-label">文字介绍</label>
+						<div class="col-sm-9">
+						<textarea class="form-control" name="content" rows="6" cols="" placeholder="">{{.introduce.Content}}</textarea>
+						</div>
+					</div>
+			
+					<div class="form-group">
+						<label class="col-sm-3 control-label">
+						<input type="hidden" name="id" value="{{.introduce.Id}}" />
+						<input type="hidden" name="companyId" value="{{.introduce.CompanyId}}" />
+						<input type="hidden" name="images" value="{{.introduce.Images}}" />
+						</label>
+						<div class="col-sm-9">
+						<button type="submit" class="btn btn-primary col-sm-12" {{if eq .introduce.CompanyId 0}}disabled{{end}}>保存</button>
+						</div>
+					</div>
+				</form>
+				<form class="form-horizontal snow-form-4">
+					<!--<div class="form-group">
+						<div class="col-sm-3">
+							<h4 class="snow-underline">相关链接</h4>
+						</div>
+						<div class="col-sm-9">
+							<div class="alert" role="alert"></div>
+						</div>
+					</div>-->
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Web端链接</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="web" placeholder="Web端链接" value="{{.links.Web}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">iPhone下载链接</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="iphone" placeholder="iPhone下载链接" value="{{.links.Iphone}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">PC下载端链接</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="windows" placeholder="PC下载端链接" value="{{.links.Windows}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Android下载链接</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="android" placeholder="Android下载链接" value="{{.links.Android}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">iPad下载链接</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="ipad" placeholder="iPad下载链接" value="{{.links.Ipad}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">
+							<input type="hidden" name="id" value="{{.links.Id}}" />
+							<input type="hidden" name="companyId" value="{{.links.CompanyId}}" />
+						</label>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-primary col-sm-12" {{if eq .links.CompanyId 0}}disabled{{end}}>保存</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</article>
+<link rel="stylesheet" type="text/css" href="/static/css/upload.css"/>
+<script src="/static/js/core.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/upload.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 	$(function(){
 		// 加载图片

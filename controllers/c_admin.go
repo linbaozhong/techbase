@@ -22,7 +22,7 @@ func (this *Admin) Prepare() {
 
 	} else {
 		if this.IsAjax() {
-			this.renderJson(utils.JsonMessage(false, "", "拒绝访问未授权的功能，请联系系统管理员……"))
+			this.renderJson(utils.JsonResult(false, "", "拒绝访问未授权的功能，请联系系统管理员……"))
 			return
 		} else {
 			// 跳转到错误页
@@ -80,13 +80,13 @@ func (this *Admin) UpdateRole() {
 
 	// 校验输入参数,而且角色只能比当前用户的角色低
 	if act.Id <= 0 || this.currentUser.Role > act.Role {
-		this.renderJson(utils.JsonMessage(false, "", "输入数据有误,请修正后重试……"))
+		this.renderJson(utils.JsonResult(false, "", "输入数据有误,请修正后重试……"))
 	}
 	// 提交更改
 	if err := act.UpdateRole(); err == nil {
-		this.renderJson(utils.JsonMessage(true, "", ""))
+		this.renderJson(utils.JsonResult(true, "", ""))
 	} else {
-		this.renderJson(utils.JsonMessage(false, "", err.Error()))
+		this.renderJson(utils.JsonResult(false, "", err.Error()))
 	}
 }
 
@@ -99,12 +99,12 @@ func (this *Admin) UpdateStatus() {
 
 	// 校验输入参数,而且角色只能比当前用户的角色低
 	if act.Id <= 0 {
-		this.renderJson(utils.JsonMessage(false, "", "输入数据有误,请修正后重试……"))
+		this.renderJson(utils.JsonResult(false, "", "输入数据有误,请修正后重试……"))
 	}
 	// 提交更改
 	if err := act.UpdateStatus(); err == nil {
-		this.renderJson(utils.JsonMessage(true, "", ""))
+		this.renderJson(utils.JsonResult(true, "", ""))
 	} else {
-		this.renderJson(utils.JsonMessage(false, "", err.Error()))
+		this.renderJson(utils.JsonResult(false, "", err.Error()))
 	}
 }

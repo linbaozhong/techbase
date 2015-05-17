@@ -243,9 +243,9 @@ func (this *Base) fillModel(bean interface{}) {
  */
 func (this *Base) outputJson(data interface{}, err error) {
 	if err == nil {
-		this.renderJson(utils.JsonData(true, "", data))
+		this.renderJson(utils.JsonResult(true, "", data))
 	} else {
-		this.renderJson(utils.JsonMessage(false, "", err.Error()))
+		this.renderJson(utils.JsonResult(false, "", err.Error()))
 	}
 }
 
@@ -279,7 +279,7 @@ func (this *Base) serveString(arg string) {
 
 //响应签名丢失错误
 func (this *Base) renderLoseToken() {
-	data := utils.JsonMessage(false, "invalidFormToken", "invalidFormToken")
+	data := utils.JsonResult(false, "invalidFormToken", "invalidFormToken")
 	this.renderJson(data)
 }
 

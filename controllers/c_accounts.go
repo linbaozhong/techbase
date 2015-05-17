@@ -46,7 +46,7 @@ func (this *Accounts) Post() {
 		for _, err := range valid.Errors {
 			errs = append(errs, models.Error{Key: err.Key, Message: err.Message})
 		}
-		this.renderJson(utils.JsonData(false, "", errs))
+		this.renderJson(utils.JsonResult(false, "", errs))
 		return
 	}
 	// 更新昵称
@@ -56,7 +56,7 @@ func (this *Accounts) Post() {
 		this.cookie("nickname", utils.UrlEncode(account.NickName))
 		this.currentUser.Name = account.NickName
 	} else {
-		this.renderJson(utils.JsonData(false, "", errs))
+		this.renderJson(utils.JsonResult(false, "", errs))
 		return
 	}
 	// 更新简介
@@ -64,8 +64,8 @@ func (this *Accounts) Post() {
 
 	err, errs := profile.Post()
 	if err == nil {
-		this.renderJson(utils.JsonData(true, "", account))
+		this.renderJson(utils.JsonResult(true, "", account))
 	} else {
-		this.renderJson(utils.JsonData(false, "", errs))
+		this.renderJson(utils.JsonResult(false, "", errs))
 	}
 }

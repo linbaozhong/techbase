@@ -11,9 +11,9 @@
 	</head>
 
 	<body>
-		<header class="navbar-fixed-top">
+		<header class="abs-top">
 			<div class="container">
-				<nav style="height:65px;">
+				<nav style="height:65px;margin-top: 20px;">
 					<div class="navbar-header">
 						<a class="navbar-brand" href="/">
 							<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
@@ -21,7 +21,7 @@
 					</div>
 					<ul class="nav navbar-nav" style="margin-left:40px;">
 						{{if lt .account.Role 3 }}
-						<li class="{{if eq .index "index"}} active {{end}}"><a href="/admin/company">公司审核</a>
+						<li class="{{if eq .index "index"}} active {{end}}"><a href="/admin/company">项目审核</a>
 						</li>
 						<li class="{{if eq .index "index"}} active {{end}}"><a href="/admin/account">账户管理</a>
 						</li>
@@ -33,7 +33,7 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li id="avatar" class="menu snow-profile" data-rel = "submenu-0">
-							<a href="javascript:;"><img src="" style="width:19px;height:19px;" />
+							<a href="javascript:;"><img class="img-circle" src="" />
 							<span class="nickname">
 							</span></a>
 						</li>
@@ -47,7 +47,7 @@
 			<ul class="">
 				<li><a href="/my/profile">我的帐号</a>
 				</li>
-				<li><a href="/my/company">我的公司</a>
+				<li><a href="/my/company">我的项目</a>
 				</li>
 				<li><a href="/my/touzi">我的投资</a>
 				</li>
@@ -123,26 +123,26 @@
 			mouseleave($(this).data('hide',true));
 		});
 
-		// 页脚自适应沉底，页眉自适应浮动
-		function footerBottom(){
-			// 页脚
-			var _footer_0 = $('#footer_0'),
-				_footer = $('#footer');
-			_footer.addClass('navbar-fixed-bottom');
-			if (_footer_0.offset().top > _footer.offset().top) {
-				_footer.removeClass('navbar-fixed-bottom');
-			}
-		};
-		setTimeout(footerBottom,400);
+//		// 页脚自适应沉底，页眉自适应浮动
+//		function footerBottom(){
+//			// 页脚
+//			var _footer_0 = $('#footer_0'),
+//				_footer = $('#footer');
+//			_footer.addClass('navbar-fixed-bottom');
+//			if (_footer_0.offset().top > _footer.offset().top) {
+//				_footer.removeClass('navbar-fixed-bottom');
+//			}
+//		};
+//		setTimeout(footerBottom,400);
 		
 		$(window).resize(function() {
-			footerBottom();
+//			footerBottom();
 		}).scroll(function() {
 			if ($(document).scrollTop() > 50) {
-				$('header.navbar-fixed-top').addClass('header_shadow');
+//				$('header.navbar-fixed-top').addClass('header_shadow');
 				$('#go-top').removeClass('hidden');
 			} else {
-				$('header.navbar-fixed-top').removeClass('header_shadow');
+//				$('header.navbar-fixed-top').removeClass('header_shadow');
 				$('#go-top').addClass('hidden');
 			}
 		});

@@ -1,136 +1,257 @@
+<div class="banner">
+	<div class="slideshow">
+		<ol class="slides">
+			<li class="current banner-1">
+				<div class="description" style="margin: 0 auto;width: 900px;">
+				</div>
+			</li>
+		</ol>
+	</div>
+</div>
 <article class="container">
-	<div class="row">
-		<div class="col-md-1">
-
+	<div class="snow-row snow-row-1">
+		<div class="row" style="margin-bottom: 40px;">
+			<div class="col-md-8 col-md-offset-2 snow-item-line">
+				<div class="col-md-3 snow-color-red">
+					<i class="fa fa-circle"></i>
+					<hr />
+					项目简介
+				</div>
+				<div class="col-md-3">
+					<i class="fa fa-circle"></i>
+					<hr />
+					产品详情
+				</div>
+				<div class="col-md-3">
+					<i class="fa fa-circle"></i>
+					<hr />
+					创始团队
+				</div>
+				<div class="col-md-3">
+					<i class="fa fa-circle"></i>
+					<hr />
+					融资经历
+				</div>
+			</div>
 		</div>
-		<div class="col-md-10">
-			<div class="">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
 				<h3>{{.subTitle}}</h3>
 				<div class="pull-right">
-					{{if eq .company.Status 0}}
+					{{if and (lt .company.Id 0) (eq .company.Status 0)}}
 					<a class="submit-review" href=""><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
 					{{end}}
-					<a href="/my/company"><i class="fa fa-th-list"></i>&nbsp;返回我的公司</a>
+					<a href="/my/company"><i class="fa fa-th-list"></i>&nbsp;返回我的项目</a>
 				</div>
+				<hr />
 			</div>
-			<hr />
-			<!--创建公司-->
-			<div class="row snow-row-1">
-				<div class="col-md-3 snow-padding-top-40">
-					<div class="pull-right snow-upload-target" title="点我上传图片" style="width:100px;height:100px;overflow: hidden;">
+		</div>
+		<!--项目简介-->
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="text-center snow-padding-top-40">
+					<div class="snow-upload-target" title="点我上传图片" style="width:100px;height:100px;overflow: hidden;margin: 0 auto;">
 						<img src="{{.company.Logo}}"/>
 					</div>
-					<span class="small pull-right" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
+					<span class="small" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
 				</div>
-				<div class="col-md-9">
-					<div class="">
-				
+	
+				<form class="form-horizontal snow-form-1">
+					<div class="form-group">
+						<div class="col-sm-3">
+							<input type="hidden" name="id" value="{{.company.Id}}" />
+							<input type="hidden" name="logo" value="{{.company.Logo}}" />
+						</div>
+						<div class="col-sm-9">
+							<div class="alert" role="alert"></div>
+						</div>
 					</div>
-					<form class="form-horizontal snow-form-1">
-						<div class="form-group">
-							<div class="col-sm-3">
-								
-							</div>
-							<div class="col-sm-9">
-								<div class="alert" role="alert"></div>
-							</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label"><span class="snow-required">*</span>项目名称</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="name" placeholder="项目名称" value="{{.company.Name}}">
 						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label"><span class="snow-required">*</span>公司简称</label>
-							<div class="col-sm-9">
-								<input class="form-control" name="name" placeholder="公司简称" value="{{.company.Name}}">
-							</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label"><span class="snow-required">*</span>一句话简介</label>
+						<div class="col-sm-9">
+							<textarea class="form-control" name="intro" rows="" cols="" placeholder="用一句话介绍项目">{{.company.Intro}}</textarea>
 						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label">公司网址</label>
-							<div class="col-sm-9">
-								<input class="form-control" name="website" placeholder="公司网址" value="{{.company.Website}}">
-							</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">行业领域</label>
+						<div class="col-sm-9 snow-field">
+							<label class="checkbox-inline"><input type="checkbox" name="field" value="" />二次元</label>
 						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label">公司全称</label>
-							<div class="col-sm-9">
-								<input class="form-control" name="fullname" placeholder="公司全称" value="{{.company.Fullname}}">
-							</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label"><span class="snow-required">*</span>运营状态</label>
+						<div class="col-sm-9 snow-state">
+							<label class="radio-inline"><input type="radio" name="state" value="" />运营中</label>
 						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label"><span class="snow-required">*</span>一句话简介</label>
-							<div class="col-sm-9">
-								<textarea class="form-control" name="intro" rows="" cols="" placeholder="用一句话介绍公司">{{.company.Intro}}</textarea>
-							</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">所在地</label>
+						<div class="col-sm-3">
+							<select class="form-control" name="country">
+								<option value="">中国</option>
+							</select>
 						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label">公司所在地</label>
-							<div class="col-sm-3">
-								<select class="form-control" name="country">
-									<option value="">中国</option>
-								</select>
-							</div>
-							<div class="col-sm-3">
-								<select class="form-control" name="city">
-									<option value="">北京市</option>
-								</select>
-							</div>
+						<div class="col-sm-3">
+							<select class="form-control" name="city">
+								<option value="">北京市</option>
+							</select>
 						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label">创办时间</label>
-							<div class="col-sm-4">
-								<input type="date" class="form-control" name="starttime" placeholder="公司全称" value="{{.company.StartTime}}">
-							</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label"><span class="snow-required">*</span>公司简称</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="name" placeholder="公司简称" value="{{.company.Name}}">
 						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label">公司领域</label>
-							<div class="col-sm-9 snow-field">
-								<label class="checkbox-inline"><input type="checkbox" name="field" value="" />二次元</label>
-							</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">公司网址</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="website" placeholder="公司网址" value="{{.company.Website}}">
 						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label"><span class="snow-required">*</span>运营状态</label>
-							<div class="col-sm-9 snow-state">
-								<label class="radio-inline"><input type="radio" name="state" value="" />运营中</label>
-							</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">公司全称</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="fullname" placeholder="公司全称" value="{{.company.Fullname}}">
 						</div>
-				
-						<div class="form-group">
-							<label for="inputIntro" class="col-sm-3 control-label">
-								<input type="hidden" name="id" value="{{.company.Id}}" />
-								<input type="hidden" name="logo" value="{{.company.Logo}}" />
-							</label>
-							<div class="col-sm-9">
-								<button type="submit" class="btn btn-primary col-sm-12">保存</button>
-							</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">创办时间</label>
+						<div class="col-sm-4">
+							<input type="date" class="form-control" name="starttime" placeholder="公司全称" value="{{.company.StartTime}}">
 						</div>
-					</form>
-				
-				</div>				
-			</div>
+					</div>
+			
+					<!--<div class="form-group">
+						<label for="inputIntro" class="col-sm-3 control-label">
+						</label>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-primary col-sm-12">下一步</button>
+						</div>
+					</div>-->
+				</form>
+				<form class="form-horizontal snow-form-2">
+					<!--<div class="form-group">
+						<div class="col-sm-3">
+							<h4 class="snow-underline">联系方式</h4>
+						</div>
+						<div class="col-sm-9">
+							<div class="alert" role="alert"></div>
+						</div>
+					</div>-->
+					<div class="form-group">
+						<label class="col-sm-3 control-label"><span class="snow-required">*</span>联系人姓名</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="name" placeholder="联系人姓名" value="{{.contact.Name}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label"><span class="snow-required">*</span>职位</label>
+						<div class="col-sm-3">
+							<select class="form-control" name="place">
+								<option value="">创始人</option>
+							</select>
+						</div>
+						<div class="col-sm-3">
+							<input class="form-control" name="title" placeholder="如: CEO/COO" value="{{.contact.Title}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label"><span class="snow-required">*</span>任职时间</label>
+						<div class="col-sm-3">
+							<select class="form-control" name="year">
+								<option value="2014">2014 年</option>
+								<option value="2015">2015 年</option>
+								<option value="2016">2016 年</option>
+							</select>
+						</div>	
+						<div class="col-sm-3">
+							<select class="form-control" name="month">
+								<option value="1">1 月</option>
+								<option value="2">2 月</option>
+								<option value="3">3 月</option>
+								<option value="4">4 月</option>
+								<option value="5">5 月</option>
+								<option value="6">6 月</option>
+								<option value="7">7 月</option>
+								<option value="8">8 月</option>
+								<option value="9">9 月</option>
+								<option value="10">10 月</option>
+								<option value="11">11 月</option>
+								<option value="12">12 月</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label"><span class="snow-required">*</span>联系方式</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="weixin" placeholder="手机号/微信号" value="{{.contact.Weixin}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">E_Mail</label>
+						<div class="col-sm-9">
+							<input type="email" class="form-control" name="email" placeholder="E_Mail" value="{{.contact.Email}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Linkedin</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="linkedin" placeholder="Linkedin" value="{{.contact.Linkedin}}">
+						</div>
+					</div>
+			
+					<div class="form-group">
+						<label for="inputIntro" class="col-sm-3 control-label">
+							<input type="hidden" name="id" value="{{.contact.Id}}" />
+							<input type="hidden" name="companyId" value="{{.contact.CompanyId}}" />
+						</label>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-primary col-sm-12" {{if eq .contact.CompanyId 0}}disabled{{end}}>下一步</button>
+						</div>
+					</div>
+				</form>
 
-			<!--联系公司-->
-			<div class="row snow-row-2">
 			</div>
-
-			<!--公司介绍-->
-			<div class="row snow-row-3">
-			</div>
-
-			<!--相关链接-->
-			<div class="row snow-row-4">
-			</div>
-
-			<!--创世团队-->
-			<div class="row snow-row-5">
-			</div>
-
-			<!--融资经历-->
-			<div class="row snow-row-6">
-			</div>
-
 		</div>
-		<div class="col-md-1">
-
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-10 col-md-offset-2">
+				<h4>提示：</h4>
+				<p class="small">1. 请尽量完善项目信息，以便投资人及潜在的合作伙伴更充分地了解您。</p>
+				<p class="small">2. 项目的图文介绍、融资经历、团队信息都很重要。</p>
+				<p class="small">3. 完成时，可点击“提交审核”。审核提交后，所有信息将无法再进行编辑。</p>
+				<p class="small">4. 审核通过后，即可展示在“她项目”页面中，并且在“我的项目”页面中可以为项目快速申请融资。</p>
+			</div>
+			</div>
 		</div>
 	</div>
+	
+	<!--联系公司-->
+	<div class="snow-row snow-row-2">
+	</div>
 
+	<!--公司介绍-->
+	<div class="snow-row snow-row-3">
+	</div>
+
+	<!--相关链接-->
+	<div class="snow-row snow-row-4">
+	</div>
+
+	<!--创世团队-->
+	<div class="snow-row snow-row-5">
+	</div>
+
+	<!--融资经历-->
+	<div class="snow-row snow-row-6">
+	</div>
 </article>
 <link rel="stylesheet" type="text/css" href="/static/css/upload.css"/>
 <script src="/static/js/core.js" type="text/javascript" charset="utf-8"></script>
@@ -153,9 +274,9 @@
 //		$('.snow-row-1').load('/company/GetCompany/{{.companyId}}',function(){
 //			$(window).resize();
 //		});
-		$('.snow-row-2').load('/company/GetContact/{{.companyId}}',function(){
-			$(window).resize();
-		});
+//		$('.snow-row-2').load('/company/GetContact/{{.companyId}}',function(){
+//			$(window).resize();
+//		});
 		$('.snow-row-3').load('/company/GetIntroduce/{{.companyId}}',function(){
 			$(window).resize();
 		});

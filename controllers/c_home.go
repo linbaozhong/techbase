@@ -69,7 +69,7 @@ func (this *Home) Help() {
 // 签出
 func (this *Home) SignOut() {
 	this.loginOut()
-	this.renderJson(utils.JsonMessage(true, "", ""))
+	this.renderJson(utils.JsonResult(true, "", ""))
 }
 
 /*

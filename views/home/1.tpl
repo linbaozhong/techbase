@@ -1,3 +1,108 @@
+<style type="text/css">
+	.banner .small {
+		font-size: 0.7em;
+		font-weight: initial;
+		line-height: normal;
+	}
+	.slideshow {
+		overflow: hidden;
+		font-weight: bold;
+		line-height: 1.5;
+		position: relative;
+	}
+	.slideshow * {
+		color: #fff;
+	}
+	.slideshow > .banner-nav {
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		bottom: 10px;
+	}
+	.slideshow > .banner-nav span {
+		display: inline-block;
+		cursor: pointer;
+		margin: 0 3px;
+		-webkit-transition: background-color 0.2s;
+		transition: background-color 0.2s;
+	}
+	.slideshow > .banner-nav span:before {
+		font: normal normal normal 14px/1 FontAwesome;
+		width: 32px;
+		font-size: 14px;
+		content: "\f10c";
+	}
+	.slideshow > .banner-nav span.current:before {
+		content: "\f111";
+	}
+	.slides {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		height: 425px;
+		width: 100%;
+		overflow: hidden;
+		color: #333;
+	}
+	.slides > li {
+		-webkit-perspective: 1600px;
+		perspective: 1600px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: none;
+		height: 100%;
+		padding: 180px 80px 60px;
+		background-size: cover;
+		background-position-x: center;
+		background-position-y: center;
+	}
+	.slides > li.banner-1 {
+		background-image: url(/html/images/banner02.png);
+	}
+	.slides > li.banner-2 {
+		background-image: url(/html/images/banner01.png);
+	}
+	.slides .description {
+		width: 100%;
+		height: 100%;
+		font-size: 1.5em;
+		position: relative;
+		z-index: 1000;
+		letter-spacing: .2em;
+	}
+	.slides .description h2 {
+		font-size: 200%;
+	}
+	.slides > li.current,
+	.slides > li.show {
+		display: block;
+	}
+	.more-brand {
+		text-align: right;
+	}
+</style>
+<div class="banner">
+	<div class="slideshow">
+		<ol class="slides">
+			<li class="current banner-1">
+				<div class="text-center">
+						<div class="logo-img">
+							<a href="/brand/1">
+								<img src="/html/brand/1/logo.png" class="img-circle" alt="图片呢" style="width: 100px;"> </a>
+						</div>
+						<div class="brand-footer">
+							<h2 class="brand-name"><a href="#" class="edit-text">衣+</a></h2>
+							<h5>最时尚的图像识别搜索引擎—以图搜衣应用</h5>
+							<p>A轮 北京电子商务 移动互联网</p>
+						</div>
+				</div>
+			</li>
+		</ol>
+	</div>
+</div>
 <link rel="stylesheet" type="text/css" href="/static/css/brand.css" />
 <div id="container" style="margin-top:100px;">
 	<div class="container sec">

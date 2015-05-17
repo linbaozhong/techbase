@@ -12,9 +12,9 @@ func (this *Upload) Post() {
 	fs, err := this.upload("file")
 
 	if err == nil {
-		this.renderJson(utils.JsonData(true, "", fs))
+		this.renderJson(utils.JsonResult(true, "", fs))
 	} else {
-		this.renderJson(utils.JsonData(false, "", err))
+		this.renderJson(utils.JsonResult(false, "", err))
 	}
 }
 
@@ -31,8 +31,8 @@ func (this *Upload) Avatar() {
 		}
 	}
 	if err == nil {
-		this.renderJson(utils.JsonData(true, "", fs))
+		this.renderJson(utils.JsonResult(true, "", fs))
 	} else {
-		this.renderJson(utils.JsonData(false, "", err))
+		this.renderJson(utils.JsonResult(false, "", err))
 	}
 }

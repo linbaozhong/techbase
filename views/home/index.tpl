@@ -40,7 +40,7 @@
 		padding: 0;
 		margin: 0;
 		position: relative;
-		height: 325px;
+		height: 425px;
 		width: 100%;
 		overflow: hidden;
 		color: #333;
@@ -52,6 +52,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
+		padding: 180px 80px 60px;
 		display: none;
 		height: 100%;
 		background-size: cover;
@@ -71,8 +72,6 @@
 		position: relative;
 		z-index: 1000;
 		letter-spacing: .2em;
-		padding-top: 120px;
-		padding-left: 80px;
 	}
 	.slides .description h2 {
 		font-size: 200%;
@@ -116,7 +115,7 @@
 </div>
 <div class="container">
 	<div class="brand-zone row">
-		<p class="more-brand"><a class="link" href="/brandshow">更多品牌 <span class="fa fa-angle-right"></span></a>
+		<p class="more-brand"><a class="link" href="/brandshow">更多 <span class="fa fa-angle-right"></span></a>
 		</p>
 		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
 			<div class="brand-card" style="background-image: url(/html/brand/1.png);">

@@ -58,7 +58,7 @@ func (this *Basic) List() {
 
 	bs, _ := basic.List()
 
-	this.renderJson(utils.JsonData(true, "", bs))
+	this.renderJson(utils.JsonResult(true, "", bs))
 }
 
 //
@@ -74,9 +74,9 @@ func (this *Basic) Save() {
 	this.extend(basic)
 
 	if err, es := basic.Save(); err == nil {
-		this.renderJson(utils.JsonData(true, "", basic))
+		this.renderJson(utils.JsonResult(true, "", basic))
 	} else {
-		this.renderJson(utils.JsonData(false, "", es))
+		this.renderJson(utils.JsonResult(false, "", es))
 	}
 
 }
@@ -96,9 +96,9 @@ func (this *Basic) Status() {
 	this.extend(basic)
 
 	if err := basic.SetStatus(); err == nil {
-		this.renderJson(utils.JsonData(true, "", basic))
+		this.renderJson(utils.JsonResult(true, "", basic))
 	} else {
-		this.renderJson(utils.JsonData(false, "", err))
+		this.renderJson(utils.JsonResult(false, "", err))
 	}
 
 }
@@ -112,13 +112,13 @@ func (this *Basic) MaxValue() {
 	has, err := basic.MaxValue()
 	if err == nil {
 		if has {
-			this.renderJson(utils.JsonData(true, "", (basic.Value + 1)))
+			this.renderJson(utils.JsonResult(true, "", (basic.Value + 1)))
 		} else {
-			this.renderJson(utils.JsonMessage(false, "", "0"))
+			this.renderJson(utils.JsonResult(false, "", "0"))
 		}
 	} else {
 		this.trace(err)
-		this.renderJson(utils.JsonMessage(false, "", err.Error()))
+		this.renderJson(utils.JsonResult(false, "", err.Error()))
 	}
 }
 
@@ -127,7 +127,7 @@ func (this *Basic) MaxValue() {
 // 国家
 func (this *Basic) Country() {
 	bs := this.getOptions(models.Type_Country)
-	this.renderJson(utils.JsonData(true, "", bs))
+	this.renderJson(utils.JsonResult(true, "", bs))
 }
 
 // 城市
@@ -137,37 +137,37 @@ func (this *Basic) City() {
 	// 读取选项
 	bs := this.getOptions(models.Type_City, parentId)
 
-	this.renderJson(utils.JsonData(true, "", bs))
+	this.renderJson(utils.JsonResult(true, "", bs))
 }
 
 // 公司领域/行业
 func (this *Basic) Field() {
 	bs := this.getOptions(models.Type_Field)
-	this.renderJson(utils.JsonData(true, "", bs))
+	this.renderJson(utils.JsonResult(true, "", bs))
 }
 
 // 公司职位
 func (this *Basic) Place() {
 	bs := this.getOptions(models.Type_Place)
-	this.renderJson(utils.JsonData(true, "", bs))
+	this.renderJson(utils.JsonResult(true, "", bs))
 }
 
 // 公司运营状态
 func (this *Basic) State() {
 	bs := this.getOptions(models.Type_State)
-	this.renderJson(utils.JsonData(true, "", bs))
+	this.renderJson(utils.JsonResult(true, "", bs))
 }
 
 // 公司融资经历
 func (this *Basic) Loop() {
 	bs := this.getOptions(models.Type_Loop)
-	this.renderJson(utils.JsonData(true, "", bs))
+	this.renderJson(utils.JsonResult(true, "", bs))
 }
 
 // 货币种类
 func (this *Basic) Money() {
 	bs := this.getOptions(models.Type_Money)
-	this.renderJson(utils.JsonData(true, "", bs))
+	this.renderJson(utils.JsonResult(true, "", bs))
 }
 
 // 城市select选项

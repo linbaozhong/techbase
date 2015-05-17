@@ -8,7 +8,7 @@
 	<form class="form-horizontal snow-form-2">
 		<div class="form-group">
 			<div class="col-sm-3">
-				<h4 class="snow-underline">联系公司</h4>
+				<h4 class="snow-underline">联系方式</h4>
 			</div>
 			<div class="col-sm-9">
 				<div class="alert" role="alert"></div>

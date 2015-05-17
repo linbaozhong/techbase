@@ -11,9 +11,9 @@
 	</head>
 
 	<body>
-		<header class="navbar-fixed-top">
+		<header class="abs-top">
 			<div class="container">
-				<nav style="height:65px;">
+				<nav style="height:65px;margin-top: 20px;">
 					<div class="navbar-header">
 						<!--<button class="navbar-toggle" data-target="xs-nav"><i class="fa fa-bars"></i></button>-->
 						<a class="navbar-brand" href="/">
@@ -21,7 +21,7 @@
 							<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
 						</a>
 					</div>
-					<ul class="nav navbar-nav" style="margin-left:40px;">
+					<ul class="nav navbar-nav" style="margin-left:80px;">
 						<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
 						</li>
 						<li class="menu {{if eq .index " brandshow "}}active {{end}}" data-rel = "submenu-1"><a href="javascript:;">她创投</a>
@@ -37,13 +37,13 @@
 						<li class="login"><a href="javascript:;">登录</a>
 						</li>
 						<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
-							<a href="javascript:;"><img src="" style="width:19px;height:19px;" />
+							<a href="javascript:;"><img class="img-circle" src="" />
 							<span class="nickname">
 							</span></a>
 						</li>
-						<li class="menu" data-rel = "submenu-2">
+						<!--<li class="menu" data-rel = "submenu-2">
 							<a href="javascript:;">关注我们</a>
-						</li>
+						</li>-->
 					</ul>
 				</nav>
 			</div>
@@ -53,7 +53,7 @@
 			<ul class="">
 				<li><a href="/my/profile">我的帐号</a>
 				</li>
-				<li><a href="/my/company">我的公司</a>
+				<li><a href="/my/company">我的项目</a>
 				</li>
 				<li><a href="/my/touzi">我的投资</a>
 				</li>
@@ -70,7 +70,15 @@
 				</li>
 			</ul>
 		</div>
-		<div class="submenu submenu-2">
+		<div class="text-center" style="position: fixed;top: 200px;right: 0;background: #fff;padding: 10px;font-size: 12px;border: 1px solid #eee;z-index: 1000;">
+			<img src="/static/img/weixin-qr.png" style="width: 140px;">
+			<div class="co-card">
+				<p>用微信扫描</p>
+				<p>关注 TechBase她本营</p>
+				<a href="mailto://techbase@tabenying.com">给我们发邮件 </a>
+			</div>
+		</div>
+		<!--<div class="submenu submenu-2">
 			<i class="fa fa-caret-up"></i>
 			<img src="/static/img/weixin-qr.png">
 			<div class="co-card">
@@ -79,7 +87,7 @@
 				<p>邮件 techbase@tabenying.com</p>
 			</div>
 		</div>
-		<!--<div id="xs-nav" class="hidden-md hidden-lg" style="margin-top: 65px;margin-bottom: -60px;display: none;">
+		<div id="xs-nav" class="hidden-md hidden-lg" style="margin-top: 65px;margin-bottom: -60px;display: none;">
 			<ul class="" style="margin-left:40px;">
 				<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
 				</li>
@@ -150,29 +158,29 @@
 			mouseleave($(this).data('hide',true));
 		});
 		
-		// 页脚自适应沉底，页眉自适应浮动
-		function footerBottom(){
-			// 页脚
-			var _footer_0 = $('#footer_0'),
-				_footer = $('#footer');
-			_footer.addClass('navbar-fixed-bottom');
-			if (_footer_0.offset().top > _footer.offset().top) {
-				_footer.removeClass('navbar-fixed-bottom');
-			}
-		};
-		setTimeout(footerBottom,400);
+//		// 页脚自适应沉底，页眉自适应浮动
+//		function footerBottom(){
+//			// 页脚
+//			var _footer_0 = $('#footer_0'),
+//				_footer = $('#footer');
+//			_footer.addClass('navbar-fixed-bottom');
+//			if (_footer_0.offset().top > _footer.offset().top) {
+//				_footer.removeClass('navbar-fixed-bottom');
+//			}
+//		};
+//		setTimeout(footerBottom,400);
 		
 		$(window).resize(function() {
-			footerBottom();
+			//footerBottom();
 		}).scroll(function() {
 			if ($(document).scrollTop() > 50) {
-				$('header.navbar-fixed-top').addClass('header_shadow');
+				//$('header.navbar-fixed-top').addClass('header_shadow');
 				$('#go-top').removeClass('hidden');
 			} else {
-				$('header.navbar-fixed-top').removeClass('header_shadow');
+				//$('header.navbar-fixed-top').removeClass('header_shadow');
 				$('#go-top').addClass('hidden');
 			}
-		}).resize();
+		});
 		// 
 		$('#go-top').click(function() {
 			$('html,body').animate({

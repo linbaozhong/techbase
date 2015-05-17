@@ -16,7 +16,7 @@ func (this *Auth) Prepare() {
 	if !this.allowRequest() {
 		//
 		if this.IsAjax() {
-			this.renderJson(utils.JsonMessage(false, "", utils.UrlEncode("无效用户,请登录……")))
+			this.renderJson(utils.JsonResult(false, "", utils.UrlEncode("无效用户,请登录……")))
 			return
 		} else {
 			// 跳转到错误页
