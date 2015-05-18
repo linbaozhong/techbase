@@ -1,122 +1,130 @@
-<div class="col-md-3">
-	
-</div>
-<div class="col-md-9 snow-padding-top-40">
-	<div class="form-group">
-		<div class="col-sm-3">
-			<h4 class="snow-underline">融资经历</h4>
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<h4>{{.subTitle}}</h4>
+		<div class="pull-right">
+			<a href="/my/company"><i class="fa fa-th-list"></i>&nbsp;返回我的项目</a>
 		</div>
-		<div class="col-sm-9">
-			<a class="abs-right-bottom snow-add-6" href="javascript:;" title="增加"><i class="fa fa-plus-circle fa-lg"></i></a>
-			<div class="alert snow-alert-6" role="alert"></div>
-		</div>
+		<hr />
 	</div>
-	<!--这里是融资经历编辑器-->
-	<form class="form-horizontal snow-form-6"{{if .loops}} style="display: none;"{{end}}>
-		<div class="form-group">
-			<label class="col-sm-3 control-label"><span class="snow-required">*</span>轮次</label>
-			<div class="col-sm-3">
-				<select class="form-control" name="loop">
-					<option value=""></option>
-				</select>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-3 control-label">融资金额</label>
-			<div class="col-sm-3">
-				<select class="form-control" name="amountMoney">
-					<option value="">美元</option>
-				</select>
-			</div>
-			<div class="col-sm-3">
-				<input class="form-control" name="amount" placeholder="" value="">
-			</div>
-			<div class="col-sm-3">
-				<label class="control-label">万</label>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-3 control-label">估值</label>
-			<div class="col-sm-3">
-				<select class="form-control" name="valueMoney">
-					<option value="">美元</option>
-				</select>
-			</div>
-			<div class="col-sm-3">
-				<input class="form-control" name="value" placeholder="" value="">
-			</div>
-			<div class="col-sm-3">
-				<label class="control-label">万</label>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-3 control-label"><span class="snow-required">*</span>融资时间</label>
-			<div class="col-sm-3">
-				<select class="form-control" name="year">
-					<option value="2014">2014 年</option>
-					<option value="2015">2015 年</option>
-					<option value="2016">2016 年</option>
-				</select>
-			</div>	
-			<div class="col-sm-3">
-				<select class="form-control" name="month">
-					<option value="1">1 月</option>
-					<option value="2">2 月</option>
-					<option value="3">3 月</option>
-					<option value="4">4 月</option>
-					<option value="5">5 月</option>
-					<option value="6">6 月</option>
-					<option value="7">7 月</option>
-					<option value="8">8 月</option>
-					<option value="9">9 月</option>
-					<option value="10">10 月</option>
-					<option value="11">11 月</option>
-					<option value="12">12 月</option>
-				</select>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-3 control-label">投资主体</label>
-			<div class="col-sm-9">
-				<input class="form-control" name="investor" placeholder="如：经纬中国" value="">
-			</div>
-		</div>
+</div>
 
-		<div class="form-group">
-			<label for="inputIntro" class="col-sm-3 control-label">
-				<input type="hidden" name="id" value="" />
-				<input type="hidden" name="companyId" value="{{.companyId}}" />
-			</label>
-			<div class="col-sm-9">
-				<button type="submit" class="btn btn-primary col-sm-12" {{if eq .companyId 0}}disabled{{end}}>保存</button>
-			</div>
-		</div>
-	</form>
-	<!--这里是融资经历时间线-->	
-	<div class="form-horizontal">
-		<div class="form-group">
-			<label class="col-sm-3 control-label"></label>
-			<div class="col-sm-9 snow-list-6">
-				<!--融资经历个体-->
-				{{range .loops}}
-				<div class="snow-loop snow-loops-{{.Id}}">
-					<div class="snow-tools">
-						<a class="snow-edit" href="#" data-id="{{.Id}}"><i class="fa fa-pencil"></i></a> 
-						<a class="snow-del" href="#" data-id="{{.Id}}"><i class="fa fa-times"></i></a>
-					</div>
-					<div>
-						<label class="control-label lead snow-loop-{{.Loop}}">天使轮</label><span>{{.Year}}.{{.Month}}</span>
-					</div>
-					<div class="clearfix">
-						<div class="pull-left"><label class="control-label">融资金额:</label><span><i class="fa snow-money-{{.AmountMoney}}"></i> {{.Amount}}</span><span>万</span></div>
-						<div class="pull-right"><label class="control-label">融资估值:</label><span><i class="fa snow-money-{{.ValueMoney}}"></i> {{.Value}}</span><span>万</span></div>
-					</div>
-					<hr />
-					<div>
-						<label class="control-label">{{.Investor}}</label>
-					</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<!--这里是融资经历编辑器-->
+		<form class="form-horizontal snow-form-6"{{if .loops}} style="display: none;"{{end}}>
+			<div class="form-group">
+				<div class="col-sm-3">
 				</div>
-				{{end}}
+				<div class="col-sm-9">
+					<div class="alert snow-alert-6" role="alert"></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label"><span class="snow-required">*</span>轮次</label>
+				<div class="col-sm-3">
+					<select class="form-control" name="loop">
+						<option value=""></option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">融资金额</label>
+				<div class="col-sm-3">
+					<select class="form-control" name="amountMoney">
+						<option value="">美元</option>
+					</select>
+				</div>
+				<div class="col-sm-3">
+					<input class="form-control" name="amount" placeholder="" value="">
+				</div>
+				<div class="col-sm-3">
+					<label class="control-label">万</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">估值</label>
+				<div class="col-sm-3">
+					<select class="form-control" name="valueMoney">
+						<option value="">美元</option>
+					</select>
+				</div>
+				<div class="col-sm-3">
+					<input class="form-control" name="value" placeholder="" value="">
+				</div>
+				<div class="col-sm-3">
+					<label class="control-label">万</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label"><span class="snow-required">*</span>融资时间</label>
+				<div class="col-sm-3">
+					<select class="form-control" name="year">
+						<option value="2014">2014 年</option>
+						<option value="2015">2015 年</option>
+						<option value="2016">2016 年</option>
+					</select>
+				</div>	
+				<div class="col-sm-3">
+					<select class="form-control" name="month">
+						<option value="1">1 月</option>
+						<option value="2">2 月</option>
+						<option value="3">3 月</option>
+						<option value="4">4 月</option>
+						<option value="5">5 月</option>
+						<option value="6">6 月</option>
+						<option value="7">7 月</option>
+						<option value="8">8 月</option>
+						<option value="9">9 月</option>
+						<option value="10">10 月</option>
+						<option value="11">11 月</option>
+						<option value="12">12 月</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">投资主体</label>
+				<div class="col-sm-9">
+					<input class="form-control" name="investor" placeholder="如：经纬中国" value="">
+				</div>
+			</div>
+	
+			<div class="form-group">
+				<label for="inputIntro" class="col-sm-3 control-label">
+					<input type="hidden" name="id" value="" />
+					<input type="hidden" name="companyId" value="{{.companyId}}" />
+				</label>
+				<div class="col-sm-9">
+					<button type="submit" class="btn btn-primary col-sm-5 pull-left" {{if eq .companyId 0}}disabled{{end}}>保存</button>
+					<button type="submit" class="btn btn-primary col-sm-5 pull-right snow-add-6">重置</button>
+				</div>
+			</div>
+		</form>
+		<!--这里是融资经历时间线-->	
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-3 control-label"></label>
+				<div class="col-sm-9 snow-list-6">
+					<!--融资经历个体-->
+					{{range .loops}}
+					<div class="snow-loop snow-loops-{{.Id}}">
+						<div class="snow-tools">
+							<a class="snow-edit" href="#" data-id="{{.Id}}"><i class="fa fa-pencil"></i></a> 
+							<a class="snow-del" href="#" data-id="{{.Id}}"><i class="fa fa-times"></i></a>
+						</div>
+						<div>
+							<label class="control-label lead snow-loop-{{.Loop}}">天使轮</label><span>{{.Year}}.{{.Month}}</span>
+						</div>
+						<div class="clearfix">
+							<div class="pull-left"><label class="control-label">融资金额:</label><span><i class="fa snow-money-{{.AmountMoney}}"></i> {{.Amount}}</span><span>万</span></div>
+							<div class="pull-right"><label class="control-label">融资估值:</label><span><i class="fa snow-money-{{.ValueMoney}}"></i> {{.Value}}</span><span>万</span></div>
+						</div>
+						<hr />
+						<div>
+							<label class="control-label">{{.Investor}}</label>
+						</div>
+					</div>
+					{{end}}
+				</div>
 			</div>
 		</div>
 	</div>
@@ -238,7 +246,7 @@
 			}
 		});
 		// 增加按钮事件
-		$('a.snow-add-6').click(function(){
+		$('button.snow-add-6').click(function(){
 			$('form.snow-form-6').show();
 		});
 		// 提交表单

@@ -5,7 +5,7 @@
 		</div>
 		<div class="col-md-10">
 			<h3>{{.subTitle}}</h3>
-			<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-30px;" href="/company/edit"><i class="fa fa-plus-circle"></i>&nbsp; 创建公司</a>
+			<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-30px;" href="/company/edit"><i class="fa fa-plus-circle"></i>&nbsp; 创建项目</a>
 	
 			<!--数据在这里-->
 			<div class="" id="snow-list" style="margin-top: 30px;">
@@ -20,10 +20,18 @@
 </article>
 <script type="text/javascript">
 	function push_item(item){
+		console.log(item);
+		
 		var _row = $('#snow-list').find('.row-id-'+item.id),
-			_html = [];
+			_html = [],_url='';
+			
+		if(item.creator=={{.account.Id}} && item.status < 1){
+			_url = '/company/edit/'+item.id
+		}else{
+			_url = '/company/info/'+item.id
+		}
 		 _html.push('<div class="media row-id-'+item.id+'">');                                                         
-		 _html.push('<div class="media-left"><a href="/company/info/'+item.id+'"><img class="media-object" src="'+item.logo+'" style="width: 100px;"></a></div>');                                                         
+		 _html.push('<div class="media-left"><a href="'+_url+'"><img class="media-object" src="'+item.logo+'" style="width: 100px;"></a></div>');                                                         
 		 _html.push('<div class="media-body"><div><span class="media-heading" style="font-size:1.15em;">'+item.name+'</span>');
 		 
 		 switch (item.status){

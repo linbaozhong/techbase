@@ -5,25 +5,26 @@ import (
 )
 
 type Company struct {
-	Id        int64  `json:"id"`
-	AccountId int64  `json:"accountId"`
-	Name      string `json:"name" valid:"Required;MaxSize(50)"`
-	Fullname  string `json:"fullname" valid:"MaxSize(250)"`
-	Website   string `json:"website" valid:"MaxSize(250)"`
-	Logo      string `json:"logo" valid:"MaxSize(250)"`
-	Intro     string `json:"intro" valid:"Required;MaxSize(250)"`
-	City      int    `json:"city"`
-	Country   int    `json:"country"`
-	StartTime string `json:"startTime"`
-	Field     string `json:"field"`
-	State     int    `json:"state" valid:"Required"`
-	Status    int    `json:"status"`
-	Deleted   int    `json:"deleted"`
-	Creator   int64  `json:"creator"`
-	Created   int64  `json:"created"`
-	Updator   int64  `json:"updator"`
-	Updated   int64  `json:"updated"`
-	Ip        string `json:"ip" valid:"MaxSize(23)"`
+	Id          int64  `json:"id"`
+	AccountId   int64  `json:"accountId"`
+	Name        string `json:"name" valid:"Required;MaxSize(50)"`
+	CompanyName string `json:"comapnyName" valid:"Required;MaxSize(50)"`
+	Fullname    string `json:"fullname" valid:"MaxSize(250)"`
+	Website     string `json:"website" valid:"MaxSize(250)"`
+	Logo        string `json:"logo" valid:"MaxSize(250)"`
+	Intro       string `json:"intro" valid:"Required;MaxSize(250)"`
+	City        int    `json:"city"`
+	Country     int    `json:"country"`
+	StartTime   string `json:"startTime"`
+	Field       string `json:"field"`
+	State       int    `json:"state"`
+	Status      int    `json:"status"`
+	Deleted     int    `json:"deleted"`
+	Creator     int64  `json:"creator"`
+	Created     int64  `json:"created"`
+	Updator     int64  `json:"updator"`
+	Updated     int64  `json:"updated"`
+	Ip          string `json:"ip" valid:"MaxSize(23)"`
 }
 
 // 列表
@@ -76,6 +77,12 @@ func (this *Company) Exists() bool {
 	} else {
 		return false
 	}
+}
+
+// 更改审核状态
+func (this *Company) SetStatus() error {
+	_, err := db.Id(this.Id).Cols("status", "updator", "updated", "ip").Update(this)
+	return err
 }
 
 /*
@@ -157,6 +164,7 @@ func (this *Introduce) Save() (error, []Error) {
 type Links struct {
 	Id        int64  `json:"id"`
 	CompanyId int64  `json:"companyId"`
+	Qrcode    string `json:"qrcode" valid:"MaxSize(250)"`
 	Web       string `json:"web" valid:"MaxSize(250)"`
 	Iphone    string `json:"iphone" valid:"MaxSize(250)"`
 	Ipad      string `json:"ipad" valid:"MaxSize(250)"`
@@ -232,7 +240,7 @@ func (this *Members) Get() (bool, error) {
 
 // 删除
 func (this *Members) Delete() error {
-	_, err := db.Id(this.Id).Cols("deleted").Update(this)
+	_, err := db.Id(this.Id).Cols("deleted", "updator", "updated", "ip").Update(this)
 	return err
 }
 
@@ -285,6 +293,6 @@ func (this *Loops) Get() (bool, error) {
 
 // 删除
 func (this *Loops) Delete() error {
-	_, err := db.Id(this.Id).Cols("deleted").Update(this)
+	_, err := db.Id(this.Id).Cols("deleted", "updator", "updated", "ip").Update(this)
 	return err
 }

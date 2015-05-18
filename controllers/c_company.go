@@ -83,13 +83,14 @@ func (this *Company) GetCompany() {
 	this.setTplNames("_company")
 }
 
-//写项目信息
+// 写项目信息
 func (this *Company) PostCompany() {
 	com := new(models.Company)
 	com.Id, _ = this.GetInt64("id")
 	com.AccountId = this.currentUser.Id
 	com.Name = this.GetString("name")
 	com.Website = this.GetString("website")
+	com.CompanyName = this.GetString("companyName")
 	com.Fullname = this.GetString("fullname")
 	com.Intro = this.GetString("intro")
 	com.Logo = this.GetString("logo")
@@ -99,12 +100,33 @@ func (this *Company) PostCompany() {
 	com.State, _ = this.GetInt("state")
 	com.StartTime = this.GetString("starttime")
 
-	this.extend(com)
+	this.extendEx(com)
 
 	if err, es := com.Save(); err == nil {
 		this.renderJson(utils.JsonResult(true, "", com))
 	} else {
 		this.renderJson(utils.JsonResult(false, "", es))
+	}
+}
+
+// 提交项目审核状态
+func (this *Company) SubmitAudit() {
+	com := new(models.Company)
+	com.Id, _ = this.GetInt64("id")
+	com.Status = models.Audit_Ing
+
+	// 检查要提交数据的项目是否存在，防止第三方恶意写入
+	if !this.exists(com.Id) {
+		this.renderJson(utils.JsonResult(false, "", models.Error{Key: "", Message: "项目主体错误或不存在"}))
+		return
+	}
+
+	this.extend(com)
+
+	if err := com.SetStatus(); err == nil {
+		this.renderJson(utils.JsonResult(true, "", com))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", models.Error{Key: "", Message: err.Error()}))
 	}
 }
 
@@ -114,6 +136,7 @@ func (this *Company) GetContact() {
 	id, _ := this.getParamsInt64("0")
 
 	this.getContactInfo(id)
+	this.Data["subTitle"] = "联系方式"
 
 	this.Layout = ""
 	this.setTplNames("_contact")
@@ -160,19 +183,11 @@ func (this *Company) PostContact() {
 func (this *Company) GetIntroduce() {
 	// 项目id
 	id, _ := this.getParamsInt64("0")
-	com := this.getCompanyInfo(id)
-
-	// 如果已经提交审核，禁止编辑，跳转至项目信息页
-	if id > 0 && (com.Creator != this.currentUser.Id || com.Status > 0) {
-		this.Redirect(fmt.Sprintf("/company/info/%d", id), 302)
-		this.end()
-	}
 
 	this.getIntroduceInfo(id)
-	this.getLinksInfo(id)
 
 	this.Data["subTitle"] = "项目详情"
-	//this.Layout = ""
+	this.Layout = ""
 	this.setTplNames("_introduce")
 }
 
@@ -213,6 +228,7 @@ func (this *Company) GetLinks() {
 
 	this.getLinksInfo(id)
 
+	this.Data["subTitle"] = "相关链接"
 	this.Layout = ""
 	this.setTplNames("_links")
 }
@@ -227,6 +243,7 @@ func (this *Company) PostLinks() {
 	com := new(models.Links)
 	com.Id, _ = this.GetInt64("id")
 	com.CompanyId = companyId
+	com.Qrcode = this.GetString("qrcode")
 	com.Iphone = this.GetString("iphone")
 	com.Ipad = this.GetString("ipad")
 	com.Android = this.GetString("android")
@@ -254,9 +271,19 @@ func (this *Company) PostLinks() {
 func (this *Company) GetMembers() {
 	// 项目id
 	id, _ := this.getParamsInt64("0")
+	//
+	com := this.getCompanyInfo(id)
+
+	// 如果已经提交审核，禁止编辑，跳转至项目信息页
+	if id > 0 && (com.Creator != this.currentUser.Id || com.Status > 0) {
+		this.Redirect(fmt.Sprintf("/company/info/%d", id), 302)
+		this.end()
+	}
 
 	this.getMembersList(id)
 
+	this.Data["companyId"] = id
+	this.Data["subTitle"] = "创始团队"
 	this.Layout = ""
 	this.setTplNames("_members")
 }
@@ -328,6 +355,8 @@ func (this *Company) DeleteMember() {
 	com.Id = id
 	com.Deleted = models.Deleted
 
+	this.extend(com)
+
 	if err := com.Delete(); err == nil {
 		this.renderJson(utils.JsonResult(true, "", ""))
 	} else {
@@ -342,6 +371,8 @@ func (this *Company) GetLoops() {
 
 	this.getLoopsList(id)
 
+	this.Data["companyId"] = id
+	this.Data["subTitle"] = "融资经历"
 	this.Layout = ""
 	this.setTplNames("_loops")
 }
@@ -416,6 +447,8 @@ func (this *Company) DeleteLoops() {
 	com := new(models.Loops)
 	com.Id = id
 	com.Deleted = models.Deleted
+
+	this.extend(com)
 
 	if err := com.Delete(); err == nil {
 		this.renderJson(utils.JsonResult(true, "", ""))

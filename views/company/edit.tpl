@@ -1,8 +1,18 @@
 <div class="banner">
 	<div class="slideshow">
 		<ol class="slides">
-			<li class="current banner-1">
-				<div class="description" style="margin: 0 auto;width: 900px;">
+			<li class="current banner-1 text-center">
+				<div class="">
+					<div class="snow-upload-target" title="点我上传图片" style="width:100px;height:100px;overflow: hidden;margin: 0 auto;">
+						<img src="{{.company.Logo}}"/>
+					</div>
+					<span class="small" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
+				</div>
+				<div style="padding-top:15px;">
+					<span class="snow-required">*</span><input class="small snow-rel-field" style="padding: 5px;width: 200px;color:initial;" data-rel="snow-form-1" data-field="name" placeholder="项目名称" value="{{.company.Name}}" />
+				</div>
+				<div style="padding-top:15px;">
+					<span class="snow-required">*</span><input class="small snow-rel-field" style="padding: 5px;width: 300px;color:initial;" data-rel="snow-form-1" data-field="intro" placeholder="用一句话介绍项目" value="{{.company.Intro}}" />
 				</div>
 			</li>
 		</ol>
@@ -10,37 +20,11 @@
 </div>
 <article class="container">
 	<div class="snow-row snow-row-1">
-		<div class="row" style="margin-bottom: 40px;">
-			<div class="col-md-8 col-md-offset-2 snow-item-line">
-				<div class="col-md-3 snow-color-red">
-					<i class="fa fa-circle"></i>
-					<hr />
-					项目简介
-				</div>
-				<div class="col-md-3">
-					<i class="fa fa-circle"></i>
-					<hr />
-					产品详情
-				</div>
-				<div class="col-md-3">
-					<i class="fa fa-circle"></i>
-					<hr />
-					创始团队
-				</div>
-				<div class="col-md-3">
-					<i class="fa fa-circle"></i>
-					<hr />
-					融资经历
-				</div>
-			</div>
-		</div>
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				<h3>{{.subTitle}}</h3>
+				<h4>{{.subTitle}}</h4>
 				<div class="pull-right">
-					{{if and (lt .company.Id 0) (eq .company.Status 0)}}
-					<a class="submit-review" href=""><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
-					{{end}}
+					<a class="submit-review" href="#"><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
 					<a href="/my/company"><i class="fa fa-th-list"></i>&nbsp;返回我的项目</a>
 				</div>
 				<hr />
@@ -49,33 +33,17 @@
 		<!--项目简介-->
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<div class="text-center snow-padding-top-40">
-					<div class="snow-upload-target" title="点我上传图片" style="width:100px;height:100px;overflow: hidden;margin: 0 auto;">
-						<img src="{{.company.Logo}}"/>
-					</div>
-					<span class="small" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
-				</div>
 	
 				<form class="form-horizontal snow-form-1">
 					<div class="form-group">
 						<div class="col-sm-3">
 							<input type="hidden" name="id" value="{{.company.Id}}" />
 							<input type="hidden" name="logo" value="{{.company.Logo}}" />
+							<input type="hidden" required name="name" value="{{.company.Name}}" />
+							<input type="hidden" required name="intro"  value="{{.company.Intro}}" />
 						</div>
 						<div class="col-sm-9">
-							<div class="alert" role="alert"></div>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label"><span class="snow-required">*</span>项目名称</label>
-						<div class="col-sm-9">
-							<input class="form-control" name="name" placeholder="项目名称" value="{{.company.Name}}">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label"><span class="snow-required">*</span>一句话简介</label>
-						<div class="col-sm-9">
-							<textarea class="form-control" name="intro" rows="" cols="" placeholder="用一句话介绍项目">{{.company.Intro}}</textarea>
+							<div class="alert snow-alert-1" role="alert"></div>
 						</div>
 					</div>
 					<div class="form-group">
@@ -106,7 +74,7 @@
 					<div class="form-group">
 						<label class="col-sm-3 control-label"><span class="snow-required">*</span>公司简称</label>
 						<div class="col-sm-9">
-							<input class="form-control" name="name" placeholder="公司简称" value="{{.company.Name}}">
+							<input class="form-control" required name="companyName" placeholder="公司简称" value="{{.company.CompanyName}}">
 						</div>
 					</div>
 					<div class="form-group">
@@ -128,98 +96,39 @@
 						</div>
 					</div>
 			
-					<!--<div class="form-group">
+					<div class="form-group">
 						<label for="inputIntro" class="col-sm-3 control-label">
 						</label>
 						<div class="col-sm-9">
-							<button type="submit" class="btn btn-primary col-sm-12">下一步</button>
-						</div>
-					</div>-->
-				</form>
-				<form class="form-horizontal snow-form-2">
-					<!--<div class="form-group">
-						<div class="col-sm-3">
-							<h4 class="snow-underline">联系方式</h4>
-						</div>
-						<div class="col-sm-9">
-							<div class="alert" role="alert"></div>
-						</div>
-					</div>-->
-					<div class="form-group">
-						<label class="col-sm-3 control-label"><span class="snow-required">*</span>联系人姓名</label>
-						<div class="col-sm-9">
-							<input class="form-control" name="name" placeholder="联系人姓名" value="{{.contact.Name}}">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label"><span class="snow-required">*</span>职位</label>
-						<div class="col-sm-3">
-							<select class="form-control" name="place">
-								<option value="">创始人</option>
-							</select>
-						</div>
-						<div class="col-sm-3">
-							<input class="form-control" name="title" placeholder="如: CEO/COO" value="{{.contact.Title}}">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label"><span class="snow-required">*</span>任职时间</label>
-						<div class="col-sm-3">
-							<select class="form-control" name="year">
-								<option value="2014">2014 年</option>
-								<option value="2015">2015 年</option>
-								<option value="2016">2016 年</option>
-							</select>
-						</div>	
-						<div class="col-sm-3">
-							<select class="form-control" name="month">
-								<option value="1">1 月</option>
-								<option value="2">2 月</option>
-								<option value="3">3 月</option>
-								<option value="4">4 月</option>
-								<option value="5">5 月</option>
-								<option value="6">6 月</option>
-								<option value="7">7 月</option>
-								<option value="8">8 月</option>
-								<option value="9">9 月</option>
-								<option value="10">10 月</option>
-								<option value="11">11 月</option>
-								<option value="12">12 月</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label"><span class="snow-required">*</span>联系方式</label>
-						<div class="col-sm-9">
-							<input class="form-control" name="weixin" placeholder="手机号/微信号" value="{{.contact.Weixin}}">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label">E_Mail</label>
-						<div class="col-sm-9">
-							<input type="email" class="form-control" name="email" placeholder="E_Mail" value="{{.contact.Email}}">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label">Linkedin</label>
-						<div class="col-sm-9">
-							<input class="form-control" name="linkedin" placeholder="Linkedin" value="{{.contact.Linkedin}}">
-						</div>
-					</div>
-			
-					<div class="form-group">
-						<label for="inputIntro" class="col-sm-3 control-label">
-							<input type="hidden" name="id" value="{{.contact.Id}}" />
-							<input type="hidden" name="companyId" value="{{.contact.CompanyId}}" />
-						</label>
-						<div class="col-sm-9">
-							<button type="submit" class="btn btn-primary col-sm-12" {{if eq .contact.CompanyId 0}}disabled{{end}}>下一步</button>
+							<button type="submit" class="btn btn-primary col-sm-12">保存</button>
 						</div>
 					</div>
 				</form>
-
 			</div>
 		</div>
+	</div>
+	
+	<!--联系公司-->
+	<div class="snow-row snow-row-2" style="display: none;">
+	</div>
+
+	<!--公司介绍-->
+	<div class="snow-row snow-row-3" style="display: none;">
+	</div>
+
+	<!--相关链接-->
+	<div class="snow-row snow-row-4" style="display: none;">
+	</div>
+
+	<!--创世团队-->
+	<div class="snow-row snow-row-5" style="display: none;">
+	</div>
+
+	<!--融资经历-->
+	<div class="snow-row snow-row-6" style="display: none;">
+	</div>
+	
+	<div class="snow-row snow-row-7" style="display: none;">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 			<div class="col-md-10 col-md-offset-2">
@@ -228,29 +137,10 @@
 				<p class="small">2. 项目的图文介绍、融资经历、团队信息都很重要。</p>
 				<p class="small">3. 完成时，可点击“提交审核”。审核提交后，所有信息将无法再进行编辑。</p>
 				<p class="small">4. 审核通过后，即可展示在“她项目”页面中，并且在“我的项目”页面中可以为项目快速申请融资。</p>
+				<button type="button" class="btn btn-primary col-sm-12 submit-review">提交审核</button>
 			</div>
 			</div>
 		</div>
-	</div>
-	
-	<!--联系公司-->
-	<div class="snow-row snow-row-2">
-	</div>
-
-	<!--公司介绍-->
-	<div class="snow-row snow-row-3">
-	</div>
-
-	<!--相关链接-->
-	<div class="snow-row snow-row-4">
-	</div>
-
-	<!--创世团队-->
-	<div class="snow-row snow-row-5">
-	</div>
-
-	<!--融资经历-->
-	<div class="snow-row snow-row-6">
 	</div>
 </article>
 <link rel="stylesheet" type="text/css" href="/static/css/upload.css"/>
@@ -259,10 +149,13 @@
 <script type="text/javascript">
 	function showMessage(obj,msg,success){
 		if (success) {
-			obj.removeClass('alert-danger').addClass('alert-success').addClass('visible').text(':) ,'+msg);
+			obj.removeClass('alert-danger').addClass('alert-success').slideDown().text(':) ,'+msg);
 		} else{
-			obj.removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( ,'+msg);
+			obj.removeClass('alert-success').addClass('alert-danger').slideDown().text(':( ,'+msg);
 		}
+		setTimeout(function(){
+			obj.slideUp(600);
+		},5000)
 	}
 	function submit_disable(obj){
 		$('.btn[type="submit"]',obj).attr('disabled',true).prepend('<i class="fa fa-spinner fa-spin"></i> ');
@@ -270,13 +163,11 @@
 	function submit_enable(obj){
 		$('.btn[type="submit"]',obj).attr('disabled',false).find('i').remove();
 	}
+	
 	$(function(){
-//		$('.snow-row-1').load('/company/GetCompany/{{.companyId}}',function(){
-//			$(window).resize();
-//		});
-//		$('.snow-row-2').load('/company/GetContact/{{.companyId}}',function(){
-//			$(window).resize();
-//		});
+		$('.snow-row-2').load('/company/GetContact/{{.companyId}}',function(){
+			$(window).resize();
+		});
 		$('.snow-row-3').load('/company/GetIntroduce/{{.companyId}}',function(){
 			$(window).resize();
 		});
@@ -289,7 +180,36 @@
 		$('.snow-row-6').load('/company/GetLoops/{{.companyId}}',function(){
 			$(window).resize();
 		});
-		
+		//
+		if (parseInt('{{.companyId}}') > 0) {
+			$('article .snow-row').show();
+		}
+		// 提交审核 事件
+		$('.submit-review').click(function(e){
+			e.preventDefault();
+			if('{{.company.Status}}'=='0' && $('form.snow-form-1 input[name="id"]').val() > 0
+				&& $('form.snow-form-2 input[name="id"]').val() > 0
+				&& $('form.snow-form-3 input[name="id"]').val() > 0
+				&& $('.snow-loop').length > 0 && $('.snow-member').length > 0
+				){
+				// 提交审核
+				$.getJSON('/company/submitaudit',{id:$('form.snow-form-1 input[name="id"]').val()},function(json){
+					if (json.ok) {
+						snow.alert('你的项目已提交审核，请等待……');
+					} else{
+						snow.alert(json.data.message);
+					}
+				});
+			}else{
+				snow.alert('项目信息缺失，请尽量完善项目信息……');
+			}
+			return false;	
+		});
+		// 关联输入字段
+		$('.snow-rel-field').change(function(){
+			var _this=$(this);
+			$('form.'+_this.data('rel')+' input[name="'+_this.data('field')+'"]').val(_this.val());
+		});
 		// 国家发生变化
 		$('form.snow-form-1 select[name="country"]').change(function(){
 			// 读取城市选项
@@ -378,28 +298,33 @@
 			// 禁用提交按钮
 			submit_disable(_form);
 			$.post('/company/postcompany',_form.serialize(),function(json){
+				console.log(json);
 				// 启用提交按钮
 				submit_enable(_form);
 				if (json.ok) {
+					// 启用全部表单
+					$('article .snow-row').show();
 					// 写入表单id域
 					_form.find('input[name="id"]').val(json.data.id);
 					// 写入本页面全部companyid域
 					$('input[name="companyId"]').val(json.data.id).change();
-					_form.find('.alert').removeClass('alert-danger').addClass('alert-success').addClass('visible').text('hi,我已经为你保存好了,不用谢了…… :)');
+					
+					showMessage($('.snow-alert-1'),'hi,我已经为你保存好了,不用谢了……',true);
 				} else{
 					var _errors=[];
 					for (var i = 0; i < json.data.length; i++) {
 						_errors.push(json.data[i].key +','+ json.data[i].message);
 					}
-					_form.find('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( ,'+_errors.join(';'));
+					showMessage($('.snow-alert-1'),_errors.join(';'),false);
 				}
 			});
 		});
 		
-		$(".snow-upload-target").upload({
+		$(".slides .snow-upload-target").upload({
 		    label: "<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
-		    action:'/up/avatar'
+		    action:'/up/avatar',
+		    postData:{width:100,height:100}
 		}).on("filestart.upload", function(){})
 		  .on("fileprogress.upload", function(){})
 		  .on("filecomplete.upload", function(e,file,response){

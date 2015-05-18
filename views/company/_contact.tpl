@@ -1,23 +1,28 @@
-<div class="col-md-3">
-	
-</div>
-<div class="col-md-9 snow-padding-top-40">
-	<div class="">
-
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<h4>{{.subTitle}}</h4>
+		<div class="pull-right">
+			<a href="/my/company"><i class="fa fa-th-list"></i>&nbsp;返回我的项目</a>
+		</div>
+		<hr />
 	</div>
-	<form class="form-horizontal snow-form-2">
+</div>
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<form class="form-horizontal snow-form-2">
 		<div class="form-group">
 			<div class="col-sm-3">
-				<h4 class="snow-underline">联系方式</h4>
+				
 			</div>
 			<div class="col-sm-9">
-				<div class="alert" role="alert"></div>
+				<div class="alert snow-alert-2" role="alert"></div>
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>联系人姓名</label>
 			<div class="col-sm-9">
-				<input class="form-control" name="name" placeholder="联系人姓名" value="{{.contact.Name}}">
+				<input class="form-control" required name="name" placeholder="联系人姓名" value="{{.contact.Name}}">
 			</div>
 		</div>
 		<div class="form-group">
@@ -34,14 +39,16 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>任职时间</label>
 			<div class="col-sm-3">
-				<select class="form-control" name="year">
+				<select class="form-control" required name="year">
+					<option value="2014">2012 年</option>
+					<option value="2014">2013 年</option>
 					<option value="2014">2014 年</option>
 					<option value="2015">2015 年</option>
 					<option value="2016">2016 年</option>
 				</select>
 			</div>	
 			<div class="col-sm-3">
-				<select class="form-control" name="month">
+				<select class="form-control" required name="month">
 					<option value="1">1 月</option>
 					<option value="2">2 月</option>
 					<option value="3">3 月</option>
@@ -60,7 +67,7 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>联系方式</label>
 			<div class="col-sm-9">
-				<input class="form-control" name="weixin" placeholder="手机号/微信号" value="{{.contact.Weixin}}">
+				<input class="form-control" required name="weixin" placeholder="手机号/微信号" value="{{.contact.Weixin}}">
 			</div>
 		</div>
 		<div class="form-group">
@@ -69,12 +76,6 @@
 				<input type="email" class="form-control" name="email" placeholder="E_Mail" value="{{.contact.Email}}">
 			</div>
 		</div>
-		<!--<div class="form-group">
-			<label class="col-sm-3 control-label">微信</label>
-			<div class="col-sm-9">
-				<input class="form-control" name="weixin" placeholder="微信" value="{{.contact.Weixin}}">
-			</div>
-		</div>-->
 		<div class="form-group">
 			<label class="col-sm-3 control-label">Linkedin</label>
 			<div class="col-sm-9">
@@ -92,7 +93,7 @@
 			</div>
 		</div>
 	</form>
-
+	</div>
 </div>
 <script type="text/javascript">
 	// 职位下拉选项
@@ -129,18 +130,20 @@
 			// 禁用提交按钮
 			submit_disable(_form);
 			$.post('/company/postcontact',_form.serialize(),function(json){
+				console.log(json);
 				// 启用提交按钮
 				submit_enable(_form);
 				if (json.ok) {
 					// 写入表单id域
 					_form.find('input[name="id"]').val(json.data.id);
-					_form.find('.alert').removeClass('alert-danger').addClass('alert-success').addClass('visible').text('hi,我已经为你保存好了,不用谢了…… :)');
+					
+					showMessage($('.snow-alert-2'),'hi,我已经为你保存好了,不用谢了……',true);
 				} else{
 					var _errors=[];
 					for (var i = 0; i < json.data.length; i++) {
 						_errors.push(json.data[i].key +','+ json.data[i].message);
 					}
-					_form.find('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( ,'+_errors.join(';'));
+					showMessage($('.snow-alert-2'),_errors.join(';'),false);
 				}
 			});
 		}).find('input[name="companyId"]').change(function(){

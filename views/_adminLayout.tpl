@@ -123,20 +123,23 @@
 			mouseleave($(this).data('hide',true));
 		});
 
-//		// 页脚自适应沉底，页眉自适应浮动
-//		function footerBottom(){
-//			// 页脚
-//			var _footer_0 = $('#footer_0'),
-//				_footer = $('#footer');
-//			_footer.addClass('navbar-fixed-bottom');
-//			if (_footer_0.offset().top > _footer.offset().top) {
-//				_footer.removeClass('navbar-fixed-bottom');
-//			}
-//		};
-//		setTimeout(footerBottom,400);
+		// 页脚自适应沉底，页眉自适应浮动
+		function footerBottom(){
+			// 页脚
+			var _footer_0 = $('#footer_0'),
+				_footer = $('#footer');
+			_footer.addClass('navbar-fixed-bottom');
+			if (_footer_0.offset().top > _footer.offset().top) {
+				_footer.removeClass('navbar-fixed-bottom');
+			}
+		};
+		// 全部图片加载完成后，重置页脚
+		$('img').load(function(){
+			footerBottom();
+		});
 		
 		$(window).resize(function() {
-//			footerBottom();
+			footerBottom();
 		}).scroll(function() {
 			if ($(document).scrollTop() > 50) {
 //				$('header.navbar-fixed-top').addClass('header_shadow');

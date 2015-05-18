@@ -1,82 +1,96 @@
-<div class="col-md-3">
+
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<h4>{{.subTitle}}</h4>
+		<div class="pull-right">
+			{{if and (lt .company.Id 0) (eq .company.Status 0)}}
+			<a class="submit-review" href=""><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
+			{{end}}
+			<a href="/my/company"><i class="fa fa-th-list"></i>&nbsp;返回我的项目</a>
+		</div>
+		<hr />
+	</div>
+</div>
+<!--创始成员-->
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<form class="form-horizontal snow-form-5"{{if .members}} style="display: none;"{{end}}>
+			<div class="form-group">
+				<div class="col-sm-3">
+				</div>
+				<div class="col-sm-9">
+					<!--<a class="abs-right-bottom snow-add-5" href="javascript:;" title="增加"><i class="fa fa-plus-circle fa-lg"></i></a>-->
+					<div class="alert snow-alert-5" role="alert"></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">头像</label>
+				<div class="col-sm-9">
+					<span class="small"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
+					<div class="snow-upload-target" style="width:100px;height:100px;">
+						<img src="{{.Company.Avatar}}"/>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label"><span class="snow-required">*</span>姓名</label>
+				<div class="col-sm-9">
+					<input class="form-control" name="name" placeholder="姓名" value="">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label"><span class="snow-required">*</span>职位</label>
+				<div class="col-sm-3">
+					<select class="form-control" name="place">
+						<option value="">创始人</option>
+					</select>
+				</div>
+				<div class="col-sm-3">
+					<input class="form-control" name="title" placeholder="如: CEO/COO" value="">
+				</div>
+			</div>
 	
-</div>
-<div class="col-md-9 snow-padding-top-40">
-	<div class="form-group">
-		<div class="col-sm-3">
-			<h4 class="snow-underline">创始团队</h4>
-		</div>
-		<div class="col-sm-9">
-			<a class="abs-right-bottom snow-add-5" href="javascript:;" title="增加"><i class="fa fa-plus-circle fa-lg"></i></a>
-			<div class="alert snow-alert-5" role="alert"></div>
-		</div>
-	</div>
-	<form class="form-horizontal snow-form-5"{{if .members}} style="display: none;"{{end}}>
-		<div class="form-group">
-			<label class="col-sm-3 control-label">头像</label>
-			<div class="col-sm-9">
-				<span class="small"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
-				<div class="snow-upload-target" style="width:100px;height:100px;">
-					<img src="{{.Company.Avatar}}"/>
+			<div class="form-group">
+				<label for="inputIntro" class="col-sm-3 control-label">
+					<input type="hidden" name="id" value="" />
+					<input type="hidden" name="companyId" value="{{.companyId}}" />
+					<input type="hidden" name="avatar" value="" />
+				</label>
+				<div class="col-sm-9">
+					<button type="submit" class="btn btn-primary col-sm-5 pull-left" {{if eq .companyId 0}}disabled{{end}}>保存</button>
+					<button type="button" class="btn btn-primary col-sm-5 pull-right snow-add-5">重置</button>
+				</div>
+			</div>
+		</form>
+	
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-3 control-label"></label>
+				<div class="col-sm-9 snow-list-5">
+					{{range .members}}
+					<div class="snow-member col-sm-5 snow-members-{{.Id}}">
+						<div class="snow-tools">
+							<a class="snow-edit" href="#" data-id="{{.Id}}"><i class="fa fa-pencil"></i></a> 
+							<a class="snow-del" href="#" data-id="{{.Id}}"><i class="fa fa-times"></i></a>
+						</div>
+						<div class="snow-avatar img-circle">
+							<img src="{{.Avatar}}" />
+						</div>
+						<div>
+							<label class="control-label">{{.Name}}</label>
+						</div>
+						<div>
+							<span class="snow-member-{{.Place}}">创始人</span> <span>{{.Title}}</span>
+						</div>
+					</div>
+					{{end}}
 				</div>
 			</div>
 		</div>
-		<div class="form-group">
-			<label class="col-sm-3 control-label"><span class="snow-required">*</span>姓名</label>
-			<div class="col-sm-9">
-				<input class="form-control" name="name" placeholder="姓名" value="">
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-3 control-label"><span class="snow-required">*</span>职位</label>
-			<div class="col-sm-3">
-				<select class="form-control" name="place">
-					<option value="">创始人</option>
-				</select>
-			</div>
-			<div class="col-sm-3">
-				<input class="form-control" name="title" placeholder="如: CEO/COO" value="">
-			</div>
-		</div>
-
-		<div class="form-group">
-			<label for="inputIntro" class="col-sm-3 control-label">
-				<input type="hidden" name="id" value="" />
-				<input type="hidden" name="companyId" value="{{.companyId}}" />
-				<input type="hidden" name="avatar" value="" />
-			</label>
-			<div class="col-sm-9">
-				<button type="submit" class="btn btn-primary col-sm-12" {{if eq .companyId 0}}disabled{{end}}>保存</button>
-			</div>
-		</div>
-	</form>
-
-	<div class="form-horizontal">
-		<div class="form-group">
-			<label class="col-sm-3 control-label"></label>
-			<div class="col-sm-9 snow-list-5">
-				{{range .members}}
-				<div class="snow-member col-sm-5 snow-members-{{.Id}}">
-					<div class="snow-tools">
-						<a class="snow-edit" href="#" data-id="{{.Id}}"><i class="fa fa-pencil"></i></a> 
-						<a class="snow-del" href="#" data-id="{{.Id}}"><i class="fa fa-times"></i></a>
-					</div>
-					<div class="snow-avatar img-circle">
-						<img src="{{.Avatar}}" />
-					</div>
-					<div>
-						<label class="control-label">{{.Name}}</label>
-					</div>
-					<div>
-						<span class="snow-member-{{.Place}}">创始人</span> <span>{{.Title}}</span>
-					</div>
-				</div>
-				{{end}}
-			</div>
-		</div>
+	
 	</div>
-
 </div>
+
 <script type="text/javascript">
 	snow.getPlace = function(v){
 		_place = '创始人';
@@ -166,7 +180,7 @@
 		});
 		
 		// 增加按钮事件
-		$('a.snow-add-5').click(function(){
+		$('button.snow-add-5').click(function(){
 			$('form.snow-form-5').show();
 		});
 		// 提交表单
@@ -222,7 +236,8 @@
 		$("form.snow-form-5 .snow-upload-target").upload({
 		    label: "<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
-		    action:'/up/avatar'
+		    action:'/up/avatar',
+		    postData:{width:100,height:100}
 		}).on("filestart.upload", function(){})
 		  .on("fileprogress.upload", function(){})
 		  .on("filecomplete.upload", function(e,file,response){

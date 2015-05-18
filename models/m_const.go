@@ -31,4 +31,9 @@ const (
 	Type_Place    = 5 //职位
 	Type_Loop     = 6 //融资轮次
 	Type_Money    = 7 //货币种类
+
+	Audit_Normal = 0  //未审核
+	Audit_No     = -1 //未通过
+	Audit_Ing    = 1  //审核中
+	Audit_Yes    = 2  //通过
 )

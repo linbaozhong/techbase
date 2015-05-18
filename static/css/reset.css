@@ -26,7 +26,10 @@ textarea{
 	resize: vertical;
 }
 .snow-required{
-	color:orangered;
+	margin-right: 5px;
+	font-size: 1.2em;
+	color:orangered !important;
+	vertical-align: top;
 }
 .snow-underline{
 	border-bottom: 2px solid #999;
@@ -310,7 +313,8 @@ article p{
 }
 /*表单*/
 form .alert{
-	visibility:hidden;
+	/*visibility:hidden;*/
+	display: none;
 	font-size: .9em;
 }
 form .alert.visible{
