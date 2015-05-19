@@ -60,20 +60,3 @@ func (this *Auth) Prepare() {
 func (this *Auth) Finish() {
 
 }
-
-// 错误页
-func (this *Auth) error_page(args ...string) {
-	switch len(args) {
-	case 1:
-		// 跳转到错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", args[0]), 302)
-	case 2:
-		// 跳转到错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", args[0], ":url", args[1]), 302)
-	default:
-		// 跳转到错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", "未知错误"), 302)
-	}
-
-	this.end()
-}

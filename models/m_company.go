@@ -17,8 +17,12 @@ type Company struct {
 	Country     int    `json:"country"`
 	StartTime   string `json:"startTime"`
 	Field       string `json:"field"`
-	State       int    `json:"state"`
-	Status      int    `json:"status"`
+	State       int    `json:"state"`   //运营状态
+	Status      int    `json:"status"`  //审核状态
+	Reason      string `json:"reason"`  //审核未通过的原因
+	Readed      int    `json:"readed"`  //阅读次数
+	Apply       int    `json:"apply"`   //融资状态
+	ApplyId     int64  `json:"applyId"` //对应的融资协议
 	Deleted     int    `json:"deleted"`
 	Creator     int64  `json:"creator"`
 	Created     int64  `json:"created"`
@@ -83,6 +87,12 @@ func (this *Company) Exists() bool {
 func (this *Company) SetStatus() error {
 	_, err := db.Id(this.Id).Cols("status", "updator", "updated", "ip").Update(this)
 	return err
+}
+
+// 阅读次数
+func (this *Company) SetReaded() {
+	this.Readed = this.Readed + 1
+	db.Id(this.Id).Cols("readed").Update(this)
 }
 
 /*
@@ -228,7 +238,7 @@ func (this *Members) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		_, err = db.Cols("name", "place", "title", "avatar").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
 	}
 	return err, nil
 }

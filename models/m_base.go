@@ -155,6 +155,17 @@ func getPageCount(rows int64, page *Pagination) {
 	page.Count = int(math.Ceil(float64(rows) / float64(page.Size)))
 }
 
+// 错误
+func Err(s string, k ...string) Error {
+	e := new(Error)
+	e.Message = s
+
+	if len(k) > 0 {
+		e.Key = k[0]
+	}
+	return *e
+}
+
 // ---------- 数据库 DAL 层 -------------------
 
 // Select 语句

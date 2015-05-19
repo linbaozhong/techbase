@@ -64,7 +64,7 @@
 					<input type="hidden" name="qrcode" value="{{.links.Qrcode}}" />
 				</label>
 				<div class="col-sm-9">
-					<button type="submit" class="btn btn-primary col-sm-12" {{if eq .links.CompanyId 0}}disabled{{end}}>保存</button>
+					<button type="submit" class="btn btn-primary col-sm-12">保存</button>
 				</div>
 			</div>
 		</form>
@@ -76,6 +76,12 @@
 		$('.snow-form-4').submit(function(e){
 			e.preventDefault();
 			var _form = $(this);
+			// 检查项目主体是否已经存在
+			if (_form.find('input[name="companyId"]').val() <= 0) {
+				showMessage($('.snow-alert-4'),'项目不存在，请创建项目后重试',false);
+				return false;
+			}
+			
 			// 禁用提交按钮
 			submit_disable(_form);
 			$.post('/company/postlinks',_form.serialize(),function(json){

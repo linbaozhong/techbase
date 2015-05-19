@@ -14,7 +14,7 @@
 <!--创始成员-->
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
-		<form class="form-horizontal snow-form-5"{{if .members}} style="display: none;"{{end}}>
+		<form class="form-horizontal snow-form-5">
 			<div class="form-group">
 				<div class="col-sm-3">
 				</div>
@@ -35,13 +35,13 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label"><span class="snow-required">*</span>姓名</label>
 				<div class="col-sm-9">
-					<input class="form-control" name="name" placeholder="姓名" value="">
+					<input class="form-control" required name="name" placeholder="姓名" value="">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label"><span class="snow-required">*</span>职位</label>
 				<div class="col-sm-3">
-					<select class="form-control" name="place">
+					<select class="form-control" required name="place">
 						<option value="">创始人</option>
 					</select>
 				</div>
@@ -57,8 +57,8 @@
 					<input type="hidden" name="avatar" value="" />
 				</label>
 				<div class="col-sm-9">
-					<button type="submit" class="btn btn-primary col-sm-5 pull-left" {{if eq .companyId 0}}disabled{{end}}>保存</button>
-					<button type="button" class="btn btn-primary col-sm-5 pull-right snow-add-5">重置</button>
+					<button type="submit" class="btn btn-primary col-sm-5 pull-left">保存</button>
+					<button type="reset" class="btn btn-primary col-sm-5 pull-right">重置</button>
 				</div>
 			</div>
 		</form>
@@ -68,7 +68,7 @@
 				<label class="col-sm-3 control-label"></label>
 				<div class="col-sm-9 snow-list-5">
 					{{range .members}}
-					<div class="snow-member col-sm-5 snow-members-{{.Id}}">
+					<div class="snow-member col-sm-4 snow-members-{{.Id}}">
 						<div class="snow-tools">
 							<a class="snow-edit" href="#" data-id="{{.Id}}"><i class="fa fa-pencil"></i></a> 
 							<a class="snow-del" href="#" data-id="{{.Id}}"><i class="fa fa-times"></i></a>
@@ -94,9 +94,10 @@
 <script type="text/javascript">
 	snow.getPlace = function(v){
 		_place = '创始人';
-		$.each(snow.place, function(index,item) {    
+		$.each(snow.place, function(index,item) {  
+			console.log(v,item.value);
 			if (v == item.value) {
-				_loop = item.name;
+				_place = item.name;
 				return false;
 			}
 		});
@@ -115,13 +116,13 @@
 	}
 	
 	$(function(){
-		var _template = '<div class="snow-member col-sm-5 snow-members-<%.id%>">'
+		var _template = '<div class="snow-member col-sm-4 snow-members-<%.id%>">'
 					+'<div class="snow-tools">'
 						+'<a class="snow-edit" href="#" data-id="<%.id%>"><i class="fa fa-pencil"></i></a>&nbsp;'
 						+'<a class="snow-del" href="#" data-id="<%.id%>"><i class="fa fa-times"></i></a>'
 					+'</div>'
-					+'<div class="snow-avatar">'
-						+'<img class="img-circle img-circle" src="<%.avatar%>" />'
+					+'<div class="snow-avatar img-circle">'
+						+'<img src="<%.avatar%>" />'
 					+'</div>'
 					+'<div>'
 						+'<label class="control-label"><%.name%></label>'
@@ -179,14 +180,20 @@
 			}
 		});
 		
-		// 增加按钮事件
-		$('button.snow-add-5').click(function(){
-			$('form.snow-form-5').show();
-		});
+//		// 增加按钮事件
+//		$('button.snow-add-5').click(function(){
+//			$('form.snow-form-5').show();
+//		});
 		// 提交表单
 		$('form.snow-form-5').submit(function(e){
 			e.preventDefault();
 			var _form = $(this);
+			// 检查项目主体是否已经存在
+			if (_form.find('input[name="companyId"]').val() <= 0) {
+				showMessage($('.snow-alert-5'),'项目不存在，请创建项目后重试',false);
+				return false;
+			}
+			
 			// 禁用提交按钮
 			submit_disable(_form);
 			$.post('/company/postmembers',_form.serialize(),function(json){
@@ -215,7 +222,8 @@
 					}
 					// 初始化表单
 					_form.find('input[name="id"]').val('');
-					_form.hide()[0].reset();
+					_form.find('img').attr('src','');
+					_form[0].reset();
 				} else{
 					var _errors=[];
 					for (var i = 0; i < json.data.length; i++) {
@@ -224,13 +232,10 @@
 					showMessage($('.snow-alert-5'),_errors.join(';'),false);
 				}
 			});
-		}).find('input[name="companyId"]').change(function(){
-			var _form=$(this).closest('form');
-			if($(this).val()>0){
-				$('button:submit',_form).attr('disabled',false);
-			}else{
-				$('button:submit',_form).attr('disabled',true);
-			}
+		}).find('button[type="reset"]').click(function(){
+			var _form = $(this).closest('form');
+			_form.find('input[name="id"]').val('0');
+			_form.find('img').attr('src','');
 		});
 		//
 		$("form.snow-form-5 .snow-upload-target").upload({

@@ -22,6 +22,7 @@ func init() {
 	beego.Router("/community", home, "get:Community")
 	beego.Router("/herstart", home, "get:HerStart")
 	beego.Router("/brand/:id", home, "get:Brand")
+	beego.Router("/home/info", home, "get:Info")
 	beego.AutoRouter(home)
 
 	// 社交帐户登录

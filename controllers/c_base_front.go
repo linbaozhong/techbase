@@ -10,6 +10,7 @@ func (this *Front) Prepare() {
 	this.allowRequest()
 
 	this.Data["index"] = ""
+	this.Data["account"] = this.currentUser
 
 	this.Layout = "_frontLayout.tpl"
 	this.LayoutSections = make(map[string]string)

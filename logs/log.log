@@ -8846,3 +8846,3030 @@
 2015/05/14 15:54:07 [main.go:18] [I] tabenying 1.1.14.1105 
 2015/05/14 15:54:07 [app.go:96] [I] http server Running on :8080
 2015/05/14 15:54:15 [router.go:845] [D] | GET        | /admin/company                           | 39.0022ms        | match      | /admin/company/*                         | 
+2015/05/19 10:45:16 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 10:45:16 [app.go:96] [I] http server Running on :8080
+2015/05/19 11:01:26 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 11:01:27 [app.go:96] [I] http server Running on :8080
+2015/05/19 11:07:21 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 11:07:21 [app.go:96] [I] http server Running on :8080
+2015/05/19 11:16:13 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 11:16:13 [app.go:96] [I] http server Running on :8080
+2015/05/19 11:17:59 [router.go:845] [D] | GET        | /                                        | 58.0033ms        | match      | /                                        | 
+2015/05/19 11:18:07 [router.go:845] [D] | GET        | /my/company                              | 98.0056ms        | match      | /my/company                              | 
+2015/05/19 11:18:09 [router.go:845] [D] | GET        | /company/edit/2                          | 70.004ms         | match      | /company/edit/*                          | 
+2015/05/19 11:18:09 [router.go:845] [D] | GET        | /company/GetContact/2                    | 32.0018ms        | match      | /company/getcontact/*                    | 
+2015/05/19 11:18:10 [log.go:108] [D] Company/GetLinks Info:1 
+2015/05/19 11:18:10 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 45.0026ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 11:18:10 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 44.0025ms        | match      | /company/getlinks/*                      | 
+2015/05/19 11:18:10 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 57.0033ms        | match      | /company/getmembers/*                    | 
+2015/05/19 11:18:10 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 62.0036ms        | match      | /company/getloops/*                      | 
+2015/05/19 11:24:25 [router.go:845] [D] | GET        | /company/edit/2                          | 44.0025ms        | match      | /company/edit/*                          | 
+2015/05/19 11:24:25 [log.go:108] [D] Company/GetLinks Info:1 
+2015/05/19 11:24:25 [router.go:845] [D] | GET        | /company/GetContact/2                    | 78.0045ms        | match      | /company/getcontact/*                    | 
+2015/05/19 11:24:25 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 91.0052ms        | match      | /company/getlinks/*                      | 
+2015/05/19 11:24:25 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 99.0057ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 11:24:25 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 114.0066ms       | match      | /company/getmembers/*                    | 
+2015/05/19 11:24:25 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 115.0066ms       | match      | /company/getloops/*                      | 
+2015/05/19 11:25:41 [router.go:845] [D] | GET        | /company/edit/2                          | 49.0028ms        | match      | /company/edit/*                          | 
+2015/05/19 11:25:41 [log.go:108] [D] Company/GetLinks Info:1 
+2015/05/19 11:25:41 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 60.0034ms        | match      | /company/getlinks/*                      | 
+2015/05/19 11:25:41 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 125.0071ms       | match      | /company/getloops/*                      | 
+2015/05/19 11:25:41 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 148.0084ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 11:25:41 [router.go:845] [D] | GET        | /company/GetContact/2                    | 197.0113ms       | match      | /company/getcontact/*                    | 
+2015/05/19 11:25:41 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 232.0133ms       | match      | /company/getmembers/*                    | 
+2015/05/19 11:31:01 [router.go:845] [D] | GET        | /my/company                              | 65.0037ms        | match      | /my/company                              | 
+2015/05/19 11:33:33 [router.go:845] [D] | GET        | /my/company                              | 42.0024ms        | match      | /my/company                              | 
+2015/05/19 11:39:20 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 11:39:20 [app.go:96] [I] http server Running on :8080
+2015/05/19 11:58:31 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 11:58:31 [app.go:96] [I] http server Running on :8080
+2015/05/19 11:58:45 [router.go:845] [D] | GET        | /company/edit/2                          | 64.0037ms        | match      | /company/edit/*                          | 
+2015/05/19 11:58:45 [log.go:108] [D] Company/GetLinks Info:1 
+2015/05/19 11:58:45 [router.go:845] [D] | GET        | /company/GetContact/2                    | 39.0022ms        | match      | /company/getcontact/*                    | 
+2015/05/19 11:58:45 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 60.0034ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 11:58:45 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 77.0044ms        | match      | /company/getlinks/*                      | 
+2015/05/19 11:58:45 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 99.0057ms        | match      | /company/getmembers/*                    | 
+2015/05/19 11:58:45 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 88.005ms         | match      | /company/getloops/*                      | 
+2015/05/19 11:59:01 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 11:59:01 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 11:59:02 [router.go:845] [D] | GET        | /company/info/2                          | 333.019ms        | match      | /company/info/*                          | 
+2015/05/19 12:01:02 [router.go:845] [D] | GET        | /my/company                              | 62.0036ms        | match      | /my/company                              | 
+2015/05/19 12:06:27 [router.go:845] [D] | GET        | /my/company                              | 56.0032ms        | match      | /my/company                              | 
+2015/05/19 12:09:28 [router.go:845] [D] | GET        | /my/company                              | 51.0029ms        | match      | /my/company                              | 
+2015/05/19 12:11:57 [router.go:845] [D] | GET        | /my/company                              | 48.0027ms        | match      | /my/company                              | 
+2015/05/19 12:12:42 [router.go:845] [D] | GET        | /my/company                              | 53.003ms         | match      | /my/company                              | 
+2015/05/19 12:18:17 [router.go:845] [D] | GET        | /my/company                              | 61.0035ms        | match      | /my/company                              | 
+2015/05/19 12:24:07 [router.go:845] [D] | GET        | /my/company                              | 42.0024ms        | match      | /my/company                              | 
+2015/05/19 12:25:10 [router.go:845] [D] | GET        | /company/edit/2                          | 69.004ms         | match      | /company/edit/*                          | 
+2015/05/19 12:25:10 [log.go:108] [D] Company/GetLinks Info:1 
+2015/05/19 12:25:10 [router.go:845] [D] | GET        | /company/GetContact/2                    | 73.0042ms        | match      | /company/getcontact/*                    | 
+2015/05/19 12:25:10 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 75.0043ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 12:25:10 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 90.0052ms        | match      | /company/getlinks/*                      | 
+2015/05/19 12:25:10 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 126.0072ms       | match      | /company/getmembers/*                    | 
+2015/05/19 12:25:10 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 138.0079ms       | match      | /company/getloops/*                      | 
+2015/05/19 12:25:17 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 1,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 12:25:17 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 12:25:18 [router.go:845] [D] | GET        | /company/info/2                          | 269.0154ms       | match      | /company/info/*                          | 
+2015/05/19 12:29:32 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 2,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 12:29:32 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 12:29:32 [router.go:845] [D] | GET        | /company/info/2                          | 163.0093ms       | match      | /company/info/*                          | 
+2015/05/19 12:30:21 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 3,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 12:30:21 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 12:30:21 [router.go:845] [D] | GET        | /company/info/2                          | 134.0076ms       | match      | /company/info/*                          | 
+2015/05/19 12:30:34 [router.go:845] [D] | GET        | /                                        | 67.0038ms        | match      | /                                        | 
+2015/05/19 12:32:15 [router.go:845] [D] | GET        | /                                        | 61.0035ms        | match      | /                                        | 
+2015/05/19 12:32:21 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 4,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 12:32:21 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 12:32:22 [router.go:845] [D] | GET        | /company/info/2                          | 151.0086ms       | match      | /company/info/*                          | 
+2015/05/19 12:34:24 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 5,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 12:34:24 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 12:34:24 [router.go:845] [D] | GET        | /company/info/2                          | 163.0093ms       | match      | /company/info/*                          | 
+2015/05/19 12:41:04 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 6,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 12:41:04 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 12:41:04 [router.go:845] [D] | GET        | /company/info/2                          | 147.0084ms       | match      | /company/info/*                          | 
+2015/05/19 12:44:24 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 7,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 12:44:24 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 12:44:24 [router.go:845] [D] | GET        | /company/info/2                          | 133.0076ms       | match      | /company/info/*                          | 
+2015/05/19 12:47:30 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 8,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 12:47:30 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 12:47:30 [router.go:845] [D] | GET        | /company/info/2                          | 165.0094ms       | match      | /company/info/*                          | 
+2015/05/19 12:51:32 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 9,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 12:51:32 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 12:51:32 [router.go:845] [D] | GET        | /company/info/2                          | 183.0104ms       | match      | /company/info/*                          | 
+2015/05/19 12:53:17 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 10,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 12:53:17 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 12:53:18 [router.go:845] [D] | GET        | /company/info/2                          | 146.0083ms       | match      | /company/info/*                          | 
+2015/05/19 12:56:27 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 11,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 12:56:27 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 12:56:27 [router.go:845] [D] | GET        | /company/info/2                          | 142.0081ms       | match      | /company/info/*                          | 
+2015/05/19 13:03:25 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 12,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 13:03:25 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 13:03:25 [router.go:845] [D] | GET        | /company/info/2                          | 144.0083ms       | match      | /company/info/*                          | 
+2015/05/19 13:11:05 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 13,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 13:11:05 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 13:11:05 [router.go:845] [D] | GET        | /company/info/2                          | 132.0076ms       | match      | /company/info/*                          | 
+2015/05/19 13:18:09 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 14,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 13:18:09 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 13:18:09 [router.go:845] [D] | GET        | /company/info/2                          | 139.008ms        | match      | /company/info/*                          | 
+2015/05/19 13:23:27 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 15,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 13:23:27 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 13:23:28 [router.go:845] [D] | GET        | /company/info/2                          | 167.0096ms       | match      | /company/info/*                          | 
+2015/05/19 13:23:39 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 16,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 13:23:39 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 13:23:39 [router.go:845] [D] | GET        | /company/info/2                          | 147.0084ms       | match      | /company/info/*                          | 
+2015/05/19 13:33:28 [router.go:845] [D] | GET        | /basic/index/6                           | 49.0028ms        | match      | /basic/index/:typeId                     | 
+2015/05/19 13:36:50 [router.go:845] [D] | GET        | /admin/company                           | 55.0031ms        | match      | /admin/company/*                         | 
+2015/05/19 13:36:57 [router.go:845] [D] | GET        | /my/company                              | 70.004ms         | match      | /my/company                              | 
+2015/05/19 13:37:00 [router.go:845] [D] | GET        | /company/edit/2                          | 56.0032ms        | match      | /company/edit/*                          | 
+2015/05/19 13:37:00 [log.go:108] [D] Company/GetLinks Info:1 
+2015/05/19 13:37:00 [router.go:845] [D] | GET        | /company/GetContact/2                    | 46.0027ms        | match      | /company/getcontact/*                    | 
+2015/05/19 13:37:00 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 111.0063ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 13:37:00 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 109.0062ms       | match      | /company/getlinks/*                      | 
+2015/05/19 13:37:00 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 115.0066ms       | match      | /company/getmembers/*                    | 
+2015/05/19 13:37:00 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 106.0061ms       | match      | /company/getloops/*                      | 
+2015/05/19 14:17:02 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 17,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 14:17:02 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 14:17:03 [router.go:845] [D] | GET        | /company/info/2                          | 246.0141ms       | match      | /company/info/*                          | 
+2015/05/19 14:24:44 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 18,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 14:24:44 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 14:24:44 [router.go:845] [D] | GET        | /company/info/2                          | 161.0092ms       | match      | /company/info/*                          | 
+2015/05/19 14:42:58 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 14:42:59 [app.go:96] [I] http server Running on :8080
+2015/05/19 15:06:26 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 15:06:26 [app.go:96] [I] http server Running on :8080
+2015/05/19 15:06:48 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 15:06:48 [app.go:96] [I] http server Running on :8080
+2015/05/19 15:11:19 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 15:11:19 [app.go:96] [I] http server Running on :8080
+2015/05/19 15:11:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 15:11:40 [app.go:96] [I] http server Running on :8080
+2015/05/19 15:21:06 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:21:06 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 0,
+    Name: ,
+    CompanyName: ,
+    Fullname: ,
+    Website: ,
+    Logo: ,
+    Intro: ,
+    City: 0,
+    Country: 0,
+    StartTime: ,
+    Field: ,
+    State: 0,
+    Status: 0,
+    Reason: ,
+    Readed: 0,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/19 15:21:06 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:21:06 [router.go:845] [D] | GET        | /company/info/2                          | 193.011ms        | match      | /company/info/*                          | 
+2015/05/19 15:21:31 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:21:31 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 0,
+    Name: ,
+    CompanyName: ,
+    Fullname: ,
+    Website: ,
+    Logo: ,
+    Intro: ,
+    City: 0,
+    Country: 0,
+    StartTime: ,
+    Field: ,
+    State: 0,
+    Status: 0,
+    Reason: ,
+    Readed: 0,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/19 15:21:31 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:21:31 [router.go:845] [D] | GET        | /company/info/2                          | 140.008ms        | match      | /company/info/*                          | 
+2015/05/19 15:21:43 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:21:43 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 0,
+    Name: ,
+    CompanyName: ,
+    Fullname: ,
+    Website: ,
+    Logo: ,
+    Intro: ,
+    City: 0,
+    Country: 0,
+    StartTime: ,
+    Field: ,
+    State: 0,
+    Status: 0,
+    Reason: ,
+    Readed: 0,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/19 15:21:43 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:21:43 [router.go:845] [D] | GET        | /company/info/2                          | 151.0086ms       | match      | /company/info/*                          | 
+2015/05/19 15:23:21 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:23:21 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 0,
+    Name: ,
+    CompanyName: ,
+    Fullname: ,
+    Website: ,
+    Logo: ,
+    Intro: ,
+    City: 0,
+    Country: 0,
+    StartTime: ,
+    Field: ,
+    State: 0,
+    Status: 0,
+    Reason: ,
+    Readed: 0,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/19 15:23:21 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:23:21 [router.go:845] [D] | GET        | /company/info/2                          | 153.0088ms       | match      | /company/info/*                          | 
+2015/05/19 15:23:23 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:23:23 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 0,
+    Name: ,
+    CompanyName: ,
+    Fullname: ,
+    Website: ,
+    Logo: ,
+    Intro: ,
+    City: 0,
+    Country: 0,
+    StartTime: ,
+    Field: ,
+    State: 0,
+    Status: 0,
+    Reason: ,
+    Readed: 0,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/19 15:23:23 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:23:23 [router.go:845] [D] | GET        | /company/info/2                          | 142.0081ms       | match      | /company/info/*                          | 
+2015/05/19 15:24:53 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:24:53 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 0,
+    Name: ,
+    CompanyName: ,
+    Fullname: ,
+    Website: ,
+    Logo: ,
+    Intro: ,
+    City: 0,
+    Country: 0,
+    StartTime: ,
+    Field: ,
+    State: 0,
+    Status: 0,
+    Reason: ,
+    Readed: 0,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/19 15:24:53 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:24:53 [router.go:845] [D] | GET        | /company/info/2                          | 142.0081ms       | match      | /company/info/*                          | 
+2015/05/19 15:25:30 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:25:30 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 0,
+    Name: ,
+    CompanyName: ,
+    Fullname: ,
+    Website: ,
+    Logo: ,
+    Intro: ,
+    City: 0,
+    Country: 0,
+    StartTime: ,
+    Field: ,
+    State: 0,
+    Status: 0,
+    Reason: ,
+    Readed: 0,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/19 15:25:30 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:25:30 [router.go:845] [D] | GET        | /company/info/2                          | 146.0083ms       | match      | /company/info/*                          | 
+2015/05/19 15:25:46 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:25:46 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 0,
+    Name: ,
+    CompanyName: ,
+    Fullname: ,
+    Website: ,
+    Logo: ,
+    Intro: ,
+    City: 0,
+    Country: 0,
+    StartTime: ,
+    Field: ,
+    State: 0,
+    Status: 0,
+    Reason: ,
+    Readed: 0,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/19 15:25:46 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:25:46 [router.go:845] [D] | GET        | /company/info/2                          | 134.0076ms       | match      | /company/info/*                          | 
+2015/05/19 15:27:34 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:27:34 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 0,
+    Name: ,
+    CompanyName: ,
+    Fullname: ,
+    Website: ,
+    Logo: ,
+    Intro: ,
+    City: 0,
+    Country: 0,
+    StartTime: ,
+    Field: ,
+    State: 0,
+    Status: 0,
+    Reason: ,
+    Readed: 0,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/19 15:27:34 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:27:34 [router.go:845] [D] | GET        | /company/info/2                          | 158.009ms        | match      | /company/info/*                          | 
+2015/05/19 15:29:16 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 1,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 15:29:16 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:29:16 [router.go:845] [D] | GET        | /company/info/2                          | 156.0089ms       | match      | /company/info/*                          | 
+2015/05/19 15:35:55 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 2,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 15:35:55 [log.go:108] [D] Company/Info Info:1 
+2015/05/19 15:35:55 [router.go:845] [D] | GET        | /company/info/2                          | 165.0095ms       | match      | /company/info/*                          | 
+2015/05/19 15:37:37 [log.go:108] [D] Company/PostLinks Info:1,  []models.Error{ } 
+2015/05/19 15:39:11 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: ,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 3,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1431946882484,
+    Updator: 2,
+    Updated: 1431946882484,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 15:39:12 [router.go:845] [D] | GET        | /company/info/2                          | 163.0093ms       | match      | /company/info/*                          | 
+2015/05/19 15:40:59 [router.go:845] [D] | GET        | /company/edit/2                          | 72.0041ms        | match      | /company/edit/*                          | 
+2015/05/19 15:40:59 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 45.0026ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 15:40:59 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 67.0039ms        | match      | /company/getlinks/*                      | 
+2015/05/19 15:40:59 [router.go:845] [D] | GET        | /company/GetContact/2                    | 79.0045ms        | match      | /company/getcontact/*                    | 
+2015/05/19 15:40:59 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 81.0047ms        | match      | /company/getloops/*                      | 
+2015/05/19 15:40:59 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 98.0056ms        | match      | /company/getmembers/*                    | 
+2015/05/19 15:41:14 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 4,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 15:41:14 [router.go:845] [D] | GET        | /company/info/2                          | 173.0099ms       | match      | /company/info/*                          | 
+2015/05/19 15:44:17 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 5,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 15:44:18 [router.go:845] [D] | GET        | /company/info/2                          | 161.0092ms       | match      | /company/info/*                          | 
+2015/05/19 15:47:24 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 6,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 15:47:24 [router.go:845] [D] | GET        | /company/info/2                          | 171.0098ms       | match      | /company/info/*                          | 
+2015/05/19 15:50:27 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 7,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 15:50:27 [router.go:845] [D] | GET        | /company/info/2                          | 163.0094ms       | match      | /company/info/*                          | 
+2015/05/19 15:50:46 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 8,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 15:50:46 [router.go:845] [D] | GET        | /company/info/2                          | 128.0074ms       | match      | /company/info/*                          | 
+2015/05/19 15:54:01 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 9,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 15:54:01 [router.go:845] [D] | GET        | /company/info/2                          | 155.0089ms       | match      | /company/info/*                          | 
+2015/05/19 15:56:54 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 10,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 15:56:54 [router.go:845] [D] | GET        | /company/info/2                          | 203.0116ms       | match      | /company/info/*                          | 
+2015/05/19 15:58:20 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 11,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 15:58:20 [router.go:845] [D] | GET        | /company/info/2                          | 179.0102ms       | match      | /company/info/*                          | 
+2015/05/19 16:02:18 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 12,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:02:18 [router.go:845] [D] | GET        | /company/info/2                          | 139.008ms        | match      | /company/info/*                          | 
+2015/05/19 16:08:32 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 13,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:08:32 [router.go:845] [D] | GET        | /company/info/2                          | 133.0076ms       | match      | /company/info/*                          | 
+2015/05/19 16:09:25 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 14,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:09:25 [router.go:845] [D] | GET        | /company/info/2                          | 142.0081ms       | match      | /company/info/*                          | 
+2015/05/19 16:09:39 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 15,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:09:39 [router.go:845] [D] | GET        | /company/info/2                          | 145.0083ms       | match      | /company/info/*                          | 
+2015/05/19 16:10:03 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 16,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:10:03 [router.go:845] [D] | GET        | /company/info/2                          | 149.0085ms       | match      | /company/info/*                          | 
+2015/05/19 16:10:13 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 17,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:10:13 [router.go:845] [D] | GET        | /company/info/2                          | 125.0072ms       | match      | /company/info/*                          | 
+2015/05/19 16:10:33 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 18,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:10:33 [router.go:845] [D] | GET        | /company/info/2                          | 138.0079ms       | match      | /company/info/*                          | 
+2015/05/19 16:10:58 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 19,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:10:58 [router.go:845] [D] | GET        | /company/info/2                          | 159.0091ms       | match      | /company/info/*                          | 
+2015/05/19 16:12:38 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 20,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:12:39 [router.go:845] [D] | GET        | /company/info/2                          | 139.0079ms       | match      | /company/info/*                          | 
+2015/05/19 16:17:02 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 21,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:17:02 [router.go:845] [D] | GET        | /company/info/2                          | 162.0092ms       | match      | /company/info/*                          | 
+2015/05/19 16:19:45 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 22,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:19:45 [router.go:845] [D] | GET        | /company/info/2                          | 149.0085ms       | match      | /company/info/*                          | 
+2015/05/19 16:24:10 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 23,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:24:10 [router.go:845] [D] | GET        | /company/info/2                          | 153.0087ms       | match      | /company/info/*                          | 
+2015/05/19 16:24:23 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 24,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:24:23 [router.go:845] [D] | GET        | /company/info/2                          | 156.0089ms       | match      | /company/info/*                          | 
+2015/05/19 16:28:43 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 25,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:28:43 [router.go:845] [D] | GET        | /company/info/2                          | 142.0081ms       | match      | /company/info/*                          | 
+2015/05/19 16:37:51 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 26,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:37:51 [router.go:845] [D] | GET        | /company/info/2                          | 160.0092ms       | match      | /company/info/*                          | 
+2015/05/19 16:38:28 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 27,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:38:28 [router.go:845] [D] | GET        | /company/info/2                          | 277.0158ms       | match      | /company/info/*                          | 
+2015/05/19 16:39:12 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 28,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:39:12 [router.go:845] [D] | GET        | /company/info/2                          | 139.0079ms       | match      | /company/info/*                          | 
+2015/05/19 16:39:19 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 29,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:39:19 [router.go:845] [D] | GET        | /company/info/2                          | 141.0081ms       | match      | /company/info/*                          | 
+2015/05/19 16:40:44 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 30,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:40:44 [router.go:845] [D] | GET        | /company/info/2                          | 212.0121ms       | match      | /company/info/*                          | 
+2015/05/19 16:40:45 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 31,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:40:45 [router.go:845] [D] | GET        | /company/info/2                          | 146.0084ms       | match      | /company/info/*                          | 
+2015/05/19 16:41:13 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 32,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:41:13 [router.go:845] [D] | GET        | /company/info/2                          | 155.0089ms       | match      | /company/info/*                          | 
+2015/05/19 16:44:52 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 33,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:44:53 [router.go:845] [D] | GET        | /company/info/2                          | 130.0075ms       | match      | /company/info/*                          | 
+2015/05/19 16:45:43 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 34,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:45:43 [router.go:845] [D] | GET        | /company/info/2                          | 151.0086ms       | match      | /company/info/*                          | 
+2015/05/19 16:46:41 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 35,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:46:42 [router.go:845] [D] | GET        | /company/info/2                          | 151.0086ms       | match      | /company/info/*                          | 
+2015/05/19 16:47:07 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 36,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:47:07 [router.go:845] [D] | GET        | /company/info/2                          | 149.0085ms       | match      | /company/info/*                          | 
+2015/05/19 16:49:46 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 37,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:49:46 [router.go:845] [D] | GET        | /company/info/2                          | 137.0078ms       | match      | /company/info/*                          | 
+2015/05/19 16:55:28 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 38,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:55:28 [router.go:845] [D] | GET        | /company/info/2                          | 154.0088ms       | match      | /company/info/*                          | 
+2015/05/19 16:56:47 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 39,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:56:47 [router.go:845] [D] | GET        | /company/info/2                          | 144.0083ms       | match      | /company/info/*                          | 
+2015/05/19 16:57:37 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 40,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 16:57:37 [router.go:845] [D] | GET        | /company/info/2                          | 132.0075ms       | match      | /company/info/*                          | 
+2015/05/19 16:58:31 [router.go:845] [D] | GET        | /company/edit/2                          | 43.0024ms        | match      | /company/edit/*                          | 
+2015/05/19 16:58:31 [router.go:845] [D] | GET        | /company/GetContact/2                    | 63.0037ms        | match      | /company/getcontact/*                    | 
+2015/05/19 16:58:31 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 102.0058ms       | match      | /company/getloops/*                      | 
+2015/05/19 16:58:31 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 105.0061ms       | match      | /company/getmembers/*                    | 
+2015/05/19 16:58:31 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 129.0073ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 16:58:31 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 126.0072ms       | match      | /company/getlinks/*                      | 
+2015/05/19 17:02:36 [router.go:845] [D] | GET        | /company/edit/2                          | 40.0023ms        | match      | /company/edit/*                          | 
+2015/05/19 17:02:36 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 63.0036ms        | match      | /company/getlinks/*                      | 
+2015/05/19 17:02:36 [router.go:845] [D] | GET        | /company/GetContact/2                    | 85.0048ms        | match      | /company/getcontact/*                    | 
+2015/05/19 17:02:36 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 96.0055ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 17:02:36 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 105.006ms        | match      | /company/getloops/*                      | 
+2015/05/19 17:02:36 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 109.0062ms       | match      | /company/getmembers/*                    | 
+2015/05/19 17:04:06 [router.go:845] [D] | GET        | /company/edit/2                          | 68.0039ms        | match      | /company/edit/*                          | 
+2015/05/19 17:04:06 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 60.0034ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 17:04:06 [router.go:845] [D] | GET        | /company/GetContact/2                    | 81.0046ms        | match      | /company/getcontact/*                    | 
+2015/05/19 17:04:07 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 101.0058ms       | match      | /company/getmembers/*                    | 
+2015/05/19 17:04:07 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 112.0064ms       | match      | /company/getlinks/*                      | 
+2015/05/19 17:04:07 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 156.009ms        | match      | /company/getloops/*                      | 
+2015/05/19 17:05:13 [router.go:845] [D] | GET        | /company/edit/2                          | 57.0032ms        | match      | /company/edit/*                          | 
+2015/05/19 17:05:13 [router.go:845] [D] | GET        | /company/GetContact/2                    | 44.0026ms        | match      | /company/getcontact/*                    | 
+2015/05/19 17:05:13 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 102.0058ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 17:05:13 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 110.0063ms       | match      | /company/getlinks/*                      | 
+2015/05/19 17:05:13 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 125.0071ms       | match      | /company/getloops/*                      | 
+2015/05/19 17:05:13 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 163.0093ms       | match      | /company/getmembers/*                    | 
+2015/05/19 17:09:51 [router.go:845] [D] | GET        | /company/edit/2                          | 48.0028ms        | match      | /company/edit/*                          | 
+2015/05/19 17:09:51 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 70.004ms         | match      | /company/getlinks/*                      | 
+2015/05/19 17:09:51 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 76.0043ms        | match      | /company/getmembers/*                    | 
+2015/05/19 17:09:51 [router.go:845] [D] | GET        | /company/GetContact/2                    | 131.0075ms       | match      | /company/getcontact/*                    | 
+2015/05/19 17:09:51 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 161.0092ms       | match      | /company/getloops/*                      | 
+2015/05/19 17:09:51 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 185.0106ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 17:12:11 [router.go:845] [D] | GET        | /company/edit/2                          | 45.0026ms        | match      | /company/edit/*                          | 
+2015/05/19 17:12:12 [router.go:845] [D] | GET        | /company/GetContact/2                    | 60.0034ms        | match      | /company/getcontact/*                    | 
+2015/05/19 17:12:12 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 117.0067ms       | match      | /company/getloops/*                      | 
+2015/05/19 17:12:12 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 150.0085ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 17:12:12 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 166.0095ms       | match      | /company/getmembers/*                    | 
+2015/05/19 17:12:12 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 178.0102ms       | match      | /company/getlinks/*                      | 
+2015/05/19 17:12:32 [log.go:108] [D] Company/GetMember Info:true,  invalid 
+2015/05/19 17:12:48 [log.go:108] [D] Company/GetMember Info:true,  invalid 
+2015/05/19 17:13:08 [log.go:108] [D] Company/GetMember Info:true,  invalid 
+2015/05/19 17:13:23 [router.go:845] [D] | GET        | /company/edit/2                          | 70.004ms         | match      | /company/edit/*                          | 
+2015/05/19 17:13:23 [router.go:845] [D] | GET        | /company/GetContact/2                    | 53.0031ms        | match      | /company/getcontact/*                    | 
+2015/05/19 17:13:23 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 73.0042ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 17:13:23 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 125.0072ms       | match      | /company/getlinks/*                      | 
+2015/05/19 17:13:23 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 126.0072ms       | match      | /company/getmembers/*                    | 
+2015/05/19 17:13:23 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 154.0088ms       | match      | /company/getloops/*                      | 
+2015/05/19 17:15:22 [log.go:108] [D] Company/GetMember Info:true,  invalid 
+2015/05/19 17:17:17 [router.go:845] [D] | GET        | /company/edit/2                          | 67.0039ms        | match      | /company/edit/*                          | 
+2015/05/19 17:17:17 [router.go:845] [D] | GET        | /company/GetContact/2                    | 61.0035ms        | match      | /company/getcontact/*                    | 
+2015/05/19 17:17:17 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 75.0043ms        | match      | /company/getlinks/*                      | 
+2015/05/19 17:17:17 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 94.0054ms        | match      | /company/getmembers/*                    | 
+2015/05/19 17:17:17 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 103.0059ms       | match      | /company/getloops/*                      | 
+2015/05/19 17:17:17 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 115.0065ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 17:17:29 [log.go:108] [D] Company/GetMember Info:true,  invalid 
+2015/05/19 17:18:01 [log.go:108] [D] Company/GetMember Info:true,  invalid 
+2015/05/19 17:18:21 [router.go:845] [D] | GET        | /company/edit/2                          | 53.0031ms        | match      | /company/edit/*                          | 
+2015/05/19 17:18:21 [router.go:845] [D] | GET        | /company/GetContact/2                    | 40.0023ms        | match      | /company/getcontact/*                    | 
+2015/05/19 17:18:21 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 75.0043ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 17:18:21 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 120.0068ms       | match      | /company/getlinks/*                      | 
+2015/05/19 17:18:21 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 118.0067ms       | match      | /company/getloops/*                      | 
+2015/05/19 17:18:21 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 129.0074ms       | match      | /company/getmembers/*                    | 
+2015/05/19 17:18:27 [log.go:108] [D] Company/GetMember Info:true,  invalid 
+2015/05/19 17:22:25 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 17:22:25 [app.go:96] [I] http server Running on :8080
+2015/05/19 17:22:32 [router.go:845] [D] | GET        | /company/edit/2                          | 46.0027ms        | match      | /company/edit/*                          | 
+2015/05/19 17:22:33 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 44.0026ms        | match      | /company/getlinks/*                      | 
+2015/05/19 17:22:33 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 55.0032ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 17:22:33 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 70.004ms         | match      | /company/getmembers/*                    | 
+2015/05/19 17:22:33 [router.go:845] [D] | GET        | /company/GetContact/2                    | 84.0048ms        | match      | /company/getcontact/*                    | 
+2015/05/19 17:22:33 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 95.0054ms        | match      | /company/getloops/*                      | 
+2015/05/19 17:22:35 [log.go:108] [D] Company/GetMember Info:true,  invalid 
+2015/05/19 17:23:18 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 41,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 17:23:18 [router.go:845] [D] | GET        | /company/info/2                          | 242.0138ms       | match      | /company/info/*                          | 
+2015/05/19 17:32:12 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 42,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 17:32:12 [router.go:845] [D] | GET        | /company/info/2                          | 158.009ms        | match      | /company/info/*                          | 
+2015/05/19 17:34:09 [router.go:845] [D] | GET        | /company/edit/2                          | 50.0028ms        | match      | /company/edit/*                          | 
+2015/05/19 17:34:09 [router.go:845] [D] | GET        | /company/GetContact/2                    | 54.0031ms        | match      | /company/getcontact/*                    | 
+2015/05/19 17:34:09 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 107.0061ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 17:34:09 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 133.0076ms       | match      | /company/getmembers/*                    | 
+2015/05/19 17:34:09 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 141.0081ms       | match      | /company/getloops/*                      | 
+2015/05/19 17:34:09 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 153.0087ms       | match      | /company/getlinks/*                      | 
+2015/05/19 17:39:00 [router.go:845] [D] | GET        | /company/edit/2                          | 48.0027ms        | match      | /company/edit/*                          | 
+2015/05/19 17:39:00 [router.go:845] [D] | GET        | /company/GetContact/2                    | 78.0045ms        | match      | /company/getcontact/*                    | 
+2015/05/19 17:39:00 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 106.0061ms       | match      | /company/getmembers/*                    | 
+2015/05/19 17:39:00 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 144.0082ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 17:39:00 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 187.0107ms       | match      | /company/getloops/*                      | 
+2015/05/19 17:39:00 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 193.011ms        | match      | /company/getlinks/*                      | 
+2015/05/19 17:39:10 [log.go:108] [D] Company/GetLoop Info:true,  invalid 
+2015/05/19 17:41:51 [log.go:108] [D] Company/GetLoop Info:true,  invalid 
+2015/05/19 17:44:55 [router.go:845] [D] | GET        | /company/edit/2                          | 58.0033ms        | match      | /company/edit/*                          | 
+2015/05/19 17:44:55 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 76.0044ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 17:44:55 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 95.0055ms        | match      | /company/getmembers/*                    | 
+2015/05/19 17:44:55 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 113.0065ms       | match      | /company/getlinks/*                      | 
+2015/05/19 17:44:56 [router.go:845] [D] | GET        | /company/GetContact/2                    | 129.0074ms       | match      | /company/getcontact/*                    | 
+2015/05/19 17:44:56 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 165.0094ms       | match      | /company/getloops/*                      | 
+2015/05/19 17:45:07 [log.go:108] [D] Company/GetLoop Info:true,  invalid 
+2015/05/19 17:45:58 [log.go:108] [D] Company/GetMember Info:true,  invalid 
+2015/05/19 17:47:03 [router.go:845] [D] | GET        | /company/edit/2                          | 38.0022ms        | match      | /company/edit/*                          | 
+2015/05/19 17:47:03 [router.go:845] [D] | GET        | /company/GetContact/2                    | 58.0033ms        | match      | /company/getcontact/*                    | 
+2015/05/19 17:47:03 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 82.0047ms        | match      | /company/getlinks/*                      | 
+2015/05/19 17:47:03 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 111.0063ms       | match      | /company/getmembers/*                    | 
+2015/05/19 17:47:03 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 138.0079ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 17:47:03 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 126.0072ms       | match      | /company/getloops/*                      | 
+2015/05/19 17:47:05 [log.go:108] [D] Company/GetMember Info:true,  invalid 
+2015/05/19 17:47:38 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 43,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 17:47:38 [router.go:845] [D] | GET        | /company/info/2                          | 259.0148ms       | match      | /company/info/*                          | 
+2015/05/19 17:49:43 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 44,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 17:49:43 [router.go:845] [D] | GET        | /company/info/2                          | 144.0082ms       | match      | /company/info/*                          | 
+2015/05/19 17:50:10 [router.go:845] [D] | GET        | /company/edit/2                          | 71.004ms         | match      | /company/edit/*                          | 
+2015/05/19 17:50:10 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 45.0025ms        | match      | /company/getintroduce/*                  | 
+2015/05/19 17:50:10 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 116.0066ms       | match      | /company/getlinks/*                      | 
+2015/05/19 17:50:10 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 135.0077ms       | match      | /company/getmembers/*                    | 
+2015/05/19 17:50:10 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 133.0076ms       | match      | /company/getloops/*                      | 
+2015/05/19 17:50:10 [router.go:845] [D] | GET        | /company/GetContact/2                    | 147.0084ms       | match      | /company/getcontact/*                    | 
+2015/05/19 17:50:19 [log.go:108] [D] Company/GetLoop Info:true,  invalid 
+2015/05/19 17:51:25 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 45,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 17:51:26 [router.go:845] [D] | GET        | /company/info/2                          | 148.0085ms       | match      | /company/info/*                          | 
+2015/05/19 17:55:47 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 46,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 17:55:47 [router.go:845] [D] | GET        | /company/info/2                          | 272.0156ms       | match      | /company/info/*                          | 
+2015/05/19 17:56:12 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 47,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 17:56:12 [router.go:845] [D] | GET        | /company/info/2                          | 148.0084ms       | match      | /company/info/*                          | 
+2015/05/19 17:57:09 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 48,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 17:57:09 [router.go:845] [D] | GET        | /company/info/2                          | 141.008ms        | match      | /company/info/*                          | 
+2015/05/19 17:59:30 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 49,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 17:59:30 [router.go:845] [D] | GET        | /company/info/2                          | 154.0088ms       | match      | /company/info/*                          | 
+2015/05/19 17:59:41 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 50,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 17:59:41 [router.go:845] [D] | GET        | /company/info/2                          | 145.0083ms       | match      | /company/info/*                          | 
+2015/05/19 17:59:59 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 51,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 17:59:59 [router.go:845] [D] | GET        | /company/info/2                          | 210.012ms        | match      | /company/info/*                          | 
+2015/05/19 18:00:25 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 52,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:00:25 [router.go:845] [D] | GET        | /company/info/2                          | 143.0081ms       | match      | /company/info/*                          | 
+2015/05/19 18:10:44 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 53,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:10:44 [router.go:845] [D] | GET        | /company/info/2                          | 147.0084ms       | match      | /company/info/*                          | 
+2015/05/19 18:11:24 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 54,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:11:24 [router.go:845] [D] | GET        | /company/info/2                          | 140.0081ms       | match      | /company/info/*                          | 
+2015/05/19 18:12:04 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 55,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:12:05 [router.go:845] [D] | GET        | /company/info/2                          | 155.0089ms       | match      | /company/info/*                          | 
+2015/05/19 18:12:21 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 56,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:12:21 [router.go:845] [D] | GET        | /company/info/2                          | 152.0087ms       | match      | /company/info/*                          | 
+2015/05/19 18:16:11 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 57,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:16:12 [router.go:845] [D] | GET        | /company/info/2                          | 147.0084ms       | match      | /company/info/*                          | 
+2015/05/19 18:16:47 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 58,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:16:48 [router.go:845] [D] | GET        | /company/info/2                          | 134.0076ms       | match      | /company/info/*                          | 
+2015/05/19 18:18:59 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 59,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:18:59 [router.go:845] [D] | GET        | /company/info/2                          | 165.0094ms       | match      | /company/info/*                          | 
+2015/05/19 18:22:34 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 60,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:22:34 [router.go:845] [D] | GET        | /company/info/2                          | 227.013ms        | match      | /company/info/*                          | 
+2015/05/19 18:24:26 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 61,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:24:27 [router.go:845] [D] | GET        | /company/info/2                          | 155.0089ms       | match      | /company/info/*                          | 
+2015/05/19 18:24:31 [router.go:845] [D] | GET        | /                                        | 60.0034ms        | match      | /                                        | 
+2015/05/19 18:24:41 [log.go:108] [D] Home/Error Info:你正在访问未经许可的内容，请登录后重试…… 
+2015/05/19 18:24:41 [router.go:845] [D] | GET        | /home/error                              | 144.0083ms       | match      | /home/error/*                            | 
+2015/05/19 18:33:41 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:33:41 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:33:55 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:33:55 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:34:18 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:34:18 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:34:30 [router.go:845] [D] | GET        | /connect/weixin                          | 42.0024ms        | match      | /connect/weixin/*                        | 
+2015/05/19 18:34:53 [router.go:845] [D] | GET        | /connect/wx_callback                     | 1.154066s        | match      | /connect/wx_callback/*                   | 
+2015/05/19 18:34:53 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/05/19 18:34:54 [log.go:108] [D] Home/Error Info:你正在访问未经许可的内容，请登录后重试…… 
+2015/05/19 18:34:54 [router.go:845] [D] | GET        | /home/error                              | 60.0035ms        | match      | /home/error/*                            | 
+2015/05/19 18:34:57 [router.go:845] [D] | GET        | /my/company                              | 58.0033ms        | match      | /my/company                              | 
+2015/05/19 18:35:01 [router.go:845] [D] | GET        | /company/edit/2                          | 70.004ms         | match      | /company/edit/*                          | 
+2015/05/19 18:35:01 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 113.0065ms       | match      | /company/getmembers/*                    | 
+2015/05/19 18:35:01 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 128.0073ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 18:35:01 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 137.0078ms       | match      | /company/getlinks/*                      | 
+2015/05/19 18:35:01 [router.go:845] [D] | GET        | /company/GetContact/2                    | 153.0088ms       | match      | /company/getcontact/*                    | 
+2015/05/19 18:35:01 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 142.0081ms       | match      | /company/getloops/*                      | 
+2015/05/19 18:35:38 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 62,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:35:38 [router.go:845] [D] | GET        | /company/info/2                          | 272.0156ms       | match      | /company/info/*                          | 
+2015/05/19 18:36:07 [router.go:845] [D] | GET        | /company/edit/2                          | 64.0037ms        | match      | /company/edit/*                          | 
+2015/05/19 18:36:08 [router.go:845] [D] | GET        | /company/GetContact/2                    | 130.0074ms       | match      | /company/getcontact/*                    | 
+2015/05/19 18:36:08 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 150.0085ms       | match      | /company/getlinks/*                      | 
+2015/05/19 18:36:08 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 167.0095ms       | match      | /company/getloops/*                      | 
+2015/05/19 18:36:08 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 187.0106ms       | match      | /company/getmembers/*                    | 
+2015/05/19 18:36:08 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 194.0111ms       | match      | /company/getintroduce/*                  | 
+2015/05/19 18:36:15 [log.go:108] [D] Company/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 63,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:36:15 [router.go:845] [D] | GET        | /company/info/2                          | 153.0087ms       | match      | /company/info/*                          | 
+2015/05/19 18:37:38 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:37:38 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:38:06 [router.go:845] [D] | GET        | /home/info/2                             | 2.0001ms         | notmatch   | 
+2015/05/19 18:39:48 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:39:48 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:39:52 [log.go:108] [D] Home/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 64,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:39:52 [router.go:876] [C] the request url is  /home/info/2 
+2015/05/19 18:39:52 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:home/info.tpl 
+2015/05/19 18:39:52 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/19 18:39:52 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/19 18:39:52 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/19 18:39:52 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/19 18:39:52 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/19 18:39:52 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/19 18:39:52 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/19 18:40:48 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:40:48 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:42:54 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:42:54 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:42:58 [log.go:108] [D] Home/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 65,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:42:58 [router.go:876] [C] the request url is  /home/info/2 
+2015/05/19 18:42:58 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:home/info.tpl 
+2015/05/19 18:42:58 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/19 18:42:58 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/19 18:42:58 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/19 18:42:58 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/19 18:42:58 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/19 18:42:58 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/19 18:42:58 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/19 18:43:38 [log.go:108] [D] Home/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 66,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:43:38 [router.go:876] [C] the request url is  /home/info/2 
+2015/05/19 18:43:38 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:home/info.tpl 
+2015/05/19 18:43:38 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/19 18:43:38 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/19 18:43:38 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/19 18:43:38 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/19 18:43:38 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/19 18:43:38 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/19 18:43:38 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/19 18:43:44 [router.go:845] [D] | GET        | /info/2                                  | 2.0001ms         | notmatch   | 
+2015/05/19 18:44:44 [router.go:845] [D] | GET        | /info/2                                  | 2.0001ms         | notmatch   | 
+2015/05/19 18:44:47 [router.go:845] [D] | GET        | /info/2                                  | 2.0002ms         | notmatch   | 
+2015/05/19 18:45:31 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:45:31 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:45:40 [router.go:845] [D] | GET        | //home/info/2                            | 2.0001ms         | notmatch   | 
+2015/05/19 18:45:59 [log.go:108] [D] Home/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 67,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:45:59 [log.go:108] [D] template Execute err: template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:45:59 [router.go:876] [C] the request url is  /home/info/2 
+2015/05/19 18:45:59 [router.go:877] [C] Handler crashed with error template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:45:59 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/19 18:45:59 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/19 18:45:59 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/19 18:45:59 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/19 18:45:59 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/19 18:46:50 [router.go:845] [D] | GET        | /company/info/2                          | 1ms              | notmatch   | 
+2015/05/19 18:47:39 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:47:39 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:47:41 [router.go:845] [D] | GET        | /company/info/2                          | 3.0002ms         | notmatch   | 
+2015/05/19 18:48:39 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:48:39 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:48:52 [log.go:108] [D] Home/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 68,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:48:52 [log.go:108] [D] Home/Info Info:&models.Introduce{
+    Id: 2,
+    CompanyId: 2,
+    Images: /upload/2015-05/1431946476427131900.png;/upload/2015-05/1431946482802496500.png;/upload/2015-05/1431946492960077500.jpg;/upload/2015-05/1431946497007309000.png;/upload/2015-05/1431946502225607500.png,
+    Content: 公司详情,
+    Updator: 2,
+    Updated: 1432021036014,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:48:52 [log.go:108] [D] template Execute err: template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:48:52 [router.go:876] [C] the request url is  /home/info/2 
+2015/05/19 18:48:52 [router.go:877] [C] Handler crashed with error template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:48:52 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/19 18:48:52 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/19 18:48:52 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/19 18:48:52 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/19 18:48:52 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/19 18:50:01 [log.go:108] [D] Home/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 69,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:50:01 [log.go:108] [D] Home/Info Info:&models.Introduce{
+    Id: 2,
+    CompanyId: 2,
+    Images: /upload/2015-05/1431946476427131900.png;/upload/2015-05/1431946482802496500.png;/upload/2015-05/1431946492960077500.jpg;/upload/2015-05/1431946497007309000.png;/upload/2015-05/1431946502225607500.png,
+    Content: 公司详情,
+    Updator: 2,
+    Updated: 1432021036014,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:50:02 [log.go:108] [D] template Execute err: template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:50:02 [router.go:876] [C] the request url is  /home/info/2 
+2015/05/19 18:50:02 [router.go:877] [C] Handler crashed with error template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:50:02 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/19 18:50:02 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/19 18:50:02 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/19 18:50:02 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/19 18:50:02 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/19 18:50:42 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:50:42 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:51:52 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:51:52 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:51:56 [log.go:108] [D] Home/Info Info:&models.Company{
+    Id: 2,
+    AccountId: 2,
+    Name: 她本营,
+    CompanyName: 北京她本营有限公司,
+    Fullname: ,
+    Website: www.tabenying.com,
+    Logo: /upload/1/1431943139632278100.png,
+    Intro: 关注女性创业,
+    City: 2,
+    Country: 0,
+    StartTime: 2015-05-01,
+    Field: 1,2,
+    State: 1,
+    Status: 0,
+    Reason: ,
+    Readed: 70,
+    Apply: 0,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432021215046,
+    Updator: 2,
+    Updated: 1432021215046,
+    Ip: 127.0.0.1,
+} 
+2015/05/19 18:51:56 [log.go:108] [D] template Execute err: template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:51:56 [router.go:876] [C] the request url is  /home/info/2 
+2015/05/19 18:51:56 [router.go:877] [C] Handler crashed with error template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:51:56 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/19 18:51:56 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/19 18:51:56 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/19 18:51:56 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/19 18:51:56 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/19 18:52:12 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:52:12 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:52:17 [log.go:108] [D] template Execute err: template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:52:17 [router.go:876] [C] the request url is  /home/info/2 
+2015/05/19 18:52:17 [router.go:877] [C] Handler crashed with error template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:52:17 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/19 18:52:17 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/19 18:52:17 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/19 18:52:17 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/19 18:52:17 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/19 18:53:28 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:53:28 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:53:29 [log.go:108] [D] Home/Info Info:invalid 
+2015/05/19 18:53:30 [log.go:108] [D] template Execute err: template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:53:30 [router.go:876] [C] the request url is  /home/info/2 
+2015/05/19 18:53:30 [router.go:877] [C] Handler crashed with error template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:53:30 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/19 18:53:30 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/19 18:53:30 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/19 18:53:30 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/19 18:53:30 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/19 18:53:47 [log.go:108] [D] Home/Info Info:invalid 
+2015/05/19 18:53:47 [log.go:108] [D] template Execute err: template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:53:47 [router.go:876] [C] the request url is  /home/info/2 
+2015/05/19 18:53:47 [router.go:877] [C] Handler crashed with error template: home/info.tpl:8:11: executing "home/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/19 18:53:47 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/19 18:53:47 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/19 18:53:47 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/19 18:53:47 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/19 18:53:47 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/19 18:54:03 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:54:03 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:54:55 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:54:55 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:54:59 [router.go:845] [D] | GET        | /home/info/2                             | 170.0097ms       | match      | /home/info/*                             | 
+2015/05/19 18:55:30 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/19 18:55:30 [app.go:96] [I] http server Running on :8080
+2015/05/19 18:55:31 [log.go:108] [D] Home/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/19 18:55:31 [router.go:845] [D] | GET        | /home/info/2                             | 164.0094ms       | match      | /home/info/*                             | 
+2015/05/19 18:55:37 [router.go:845] [D] | GET        | /                                        | 44.0026ms        | match      | /                                        | 
+2015/05/19 18:55:45 [log.go:108] [D] Home/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/19 18:55:45 [router.go:845] [D] | GET        | /home/info/2                             | 272.0156ms       | match      | /home/info/*                             | 
+2015/05/19 18:57:44 [log.go:108] [D] Home/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/19 18:57:44 [router.go:845] [D] | GET        | /home/info/2                             | 160.0091ms       | match      | /home/info/*                             | 

@@ -116,6 +116,10 @@ table .btn{
 	padding-top:0;
 	padding-bottom: 0;
 }
+.media{
+	padding: 10px 20px;
+	border: 1px solid #eee;
+}
 .media p{
 	padding-top:10px;
 }
@@ -211,7 +215,7 @@ header.abs-top .nav>li.active a{
 	margin-bottom: 30px;
 }
 	.banner .small {
-		font-size: 0.7em;
+		font-size: 12px;
 		font-weight: initial;
 		line-height: normal;
 	}
@@ -455,7 +459,7 @@ form .alert.visible{
 /*融资经历*/
 .snow-loop{
 	position: relative;
-	margin:20px 0;
+	margin:20px 20px 20px 0;
 	padding: 20px;
 	background-color: #eee;
 }

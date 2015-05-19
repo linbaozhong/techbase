@@ -11,7 +11,7 @@
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<!--这里是融资经历编辑器-->
-		<form class="form-horizontal snow-form-6"{{if .loops}} style="display: none;"{{end}}>
+		<form class="form-horizontal snow-form-6">
 			<div class="form-group">
 				<div class="col-sm-3">
 				</div>
@@ -22,7 +22,7 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label"><span class="snow-required">*</span>轮次</label>
 				<div class="col-sm-3">
-					<select class="form-control" name="loop">
+					<select class="form-control" required name="loop">
 						<option value=""></option>
 					</select>
 				</div>
@@ -58,14 +58,14 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label"><span class="snow-required">*</span>融资时间</label>
 				<div class="col-sm-3">
-					<select class="form-control" name="year">
+					<select class="form-control" required name="year">
 						<option value="2014">2014 年</option>
 						<option value="2015">2015 年</option>
 						<option value="2016">2016 年</option>
 					</select>
 				</div>	
 				<div class="col-sm-3">
-					<select class="form-control" name="month">
+					<select class="form-control" required name="month">
 						<option value="1">1 月</option>
 						<option value="2">2 月</option>
 						<option value="3">3 月</option>
@@ -94,8 +94,8 @@
 					<input type="hidden" name="companyId" value="{{.companyId}}" />
 				</label>
 				<div class="col-sm-9">
-					<button type="submit" class="btn btn-primary col-sm-5 pull-left" {{if eq .companyId 0}}disabled{{end}}>保存</button>
-					<button type="submit" class="btn btn-primary col-sm-5 pull-right snow-add-6">重置</button>
+					<button type="submit" class="btn btn-primary col-sm-5 pull-left">保存</button>
+					<button type="reset" class="btn btn-primary col-sm-5 pull-right">重置</button>
 				</div>
 			</div>
 		</form>
@@ -245,14 +245,20 @@
 				})
 			}
 		});
-		// 增加按钮事件
-		$('button.snow-add-6').click(function(){
-			$('form.snow-form-6').show();
-		});
+//		// 增加按钮事件
+//		$('button.snow-add-6').click(function(){
+//			$('form.snow-form-6').show();
+//		});
 		// 提交表单
 		$('form.snow-form-6').submit(function(e){
 			e.preventDefault();
 			var _form = $(this);
+			// 检查项目主体是否已经存在
+			if (_form.find('input[name="companyId"]').val() <= 0) {
+				showMessage($('.snow-alert-6'),'项目不存在，请创建项目后重试',false);
+				return false;
+			}
+			
 			// 禁用提交按钮
 			submit_disable(_form);
 			$.post('/company/postloops',_form.serialize(),function(json){
@@ -282,7 +288,7 @@
 					}
 					// 初始化表单
 					_form.find('input[name="id"]').val('');
-					_form.hide()[0].reset();
+					_form[0].reset();
 				} else{
 					var _errors=[];
 					for (var i = 0; i < json.data.length; i++) {
@@ -291,13 +297,8 @@
 					showMessage($('.snow-alert-6'),_errors.join(';'),false);
 				}
 			});
-		}).find('input[name="companyId"]').change(function(){
-			var _form=$(this).closest('form');
-			if($(this).val()>0){
-				$('button:submit',_form).attr('disabled',false);
-			}else{
-				$('button:submit',_form).attr('disabled',true);
-			}
+		}).find('button[type="reset"]').click(function(){
+			$(this).closest('form').find('input[name="id"]').val('0');
 		});
 	});
 </script>

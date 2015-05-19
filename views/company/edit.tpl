@@ -109,26 +109,26 @@
 	</div>
 	
 	<!--联系公司-->
-	<div class="snow-row snow-row-2" style="display: none;">
+	<div class="snow-row snow-row-2">
 	</div>
 
 	<!--公司介绍-->
-	<div class="snow-row snow-row-3" style="display: none;">
+	<div class="snow-row snow-row-3">
 	</div>
 
 	<!--相关链接-->
-	<div class="snow-row snow-row-4" style="display: none;">
+	<div class="snow-row snow-row-4">
 	</div>
 
 	<!--创世团队-->
-	<div class="snow-row snow-row-5" style="display: none;">
+	<div class="snow-row snow-row-5">
 	</div>
 
 	<!--融资经历-->
-	<div class="snow-row snow-row-6" style="display: none;">
+	<div class="snow-row snow-row-6">
 	</div>
 	
-	<div class="snow-row snow-row-7" style="display: none;">
+	<div class="snow-row snow-row-7">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 			<div class="col-md-10 col-md-offset-2">
@@ -149,9 +149,9 @@
 <script type="text/javascript">
 	function showMessage(obj,msg,success){
 		if (success) {
-			obj.removeClass('alert-danger').addClass('alert-success').slideDown().text(':) ,'+msg);
+			obj.removeClass('alert-danger').addClass('alert-success').slideDown().html('<i class="fa fa-smile-o"></i> ,'+msg);
 		} else{
-			obj.removeClass('alert-success').addClass('alert-danger').slideDown().text(':( ,'+msg);
+			obj.removeClass('alert-success').addClass('alert-danger').slideDown().html('<i class="fa fa-frown-o"></i> ,'+msg);
 		}
 		setTimeout(function(){
 			obj.slideUp(600);
@@ -181,9 +181,9 @@
 			$(window).resize();
 		});
 		//
-		if (parseInt('{{.companyId}}') > 0) {
-			$('article .snow-row').show();
-		}
+//		if (parseInt('{{.companyId}}') > 0) {
+//			$('article .snow-row').show();
+//		}
 		// 提交审核 事件
 		$('.submit-review').click(function(e){
 			e.preventDefault();
@@ -201,7 +201,7 @@
 					}
 				});
 			}else{
-				snow.alert('项目信息缺失，请尽量完善项目信息……');
+				snow.alert('你的项目信息不完善，请尽量完善项目信息……');
 			}
 			return false;	
 		});

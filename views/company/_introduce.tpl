@@ -40,7 +40,7 @@
 				<input type="hidden" name="images" value="{{.introduce.Images}}" />
 				</label>
 				<div class="col-sm-9">
-				<button type="submit" class="btn btn-primary col-sm-12" {{if eq .introduce.CompanyId 0}}disabled{{end}}>保存</button>
+				<button type="submit" class="btn btn-primary col-sm-12">保存</button>
 				</div>
 			</div>
 		</form>
@@ -75,6 +75,12 @@
 		$('form.snow-form-3').submit(function(e){
 			e.preventDefault();
 			var _form = $(this),_imgs=[];
+			// 检查项目主体是否已经存在
+			if (_form.find('input[name="companyId"]').val() <= 0) {
+				showMessage($('.snow-alert-3'),'项目不存在，请创建项目后重试',false);
+				return false;
+			}
+			
 			
 			$('form.snow-form-3 .snow-img img').each(function(){
 				_imgs.push($(this).attr('src'));
