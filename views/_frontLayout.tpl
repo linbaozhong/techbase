@@ -15,22 +15,20 @@
 			<div class="container">
 				<nav style="height:65px;margin-top: 20px;">
 					<div class="navbar-header">
-						<!--<button class="navbar-toggle" data-target="xs-nav"><i class="fa fa-bars"></i></button>-->
 						<a class="navbar-brand" href="/">
-							<!--<span class="visible-xs-block">TECHBASE</span>-->
 							<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
 						</a>
 					</div>
 					<ul class="nav navbar-nav" style="margin-left:80px;">
 						<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
 						</li>
-						<li class="menu {{if eq .index " brandshow "}}active {{end}}" data-rel = "submenu-1"><a href="javascript:;">她创投</a>
+						<li class="menu {{if eq .index "brandshow "}}active {{end}}"><a href="javascript:;">她项目</a>
+						</li>
+						<li {{if eq .index "home"}} class="active" {{end}}><a href="/home">她ＶＣ</a>
 						</li>
 						<li class="{{if eq .index " media "}} active {{end}}"><a href="/media">她媒体</a>
 						</li>
 						<li class="{{if eq .index " community "}} active {{end}}"><a href="/community">她社区</a>
-						</li>
-						<li {{if eq .index "home"}} class="active" {{end}}><a href="/home">她本营</a>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -61,7 +59,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="submenu submenu-1">
+		<!--<div class="submenu submenu-1">
 			<i class="fa fa-caret-up"></i>
 			<ul class="">
 				<li><a href="/xiangmu">项目</a>
@@ -69,7 +67,7 @@
 				<li><a href="/touziren">投资人</a>
 				</li>
 			</ul>
-		</div>
+		</div>-->
 		<div class="text-center" style="position: fixed;top: 200px;right: 0;background: #fff;padding: 10px;font-size: 12px;border: 1px solid #eee;z-index: 1000;">
 			<img src="/static/img/weixin-qr.png" style="width: 140px;">
 			<div class="co-card">
@@ -172,6 +170,7 @@
 		$('img').load(function(){
 			footerBottom();
 		});
+		setTimeout(footerBottom,500);
 		
 		$(window).resize(function() {
 			footerBottom();

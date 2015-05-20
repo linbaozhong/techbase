@@ -78,12 +78,12 @@ jQuery弹窗插件 By 哈利蔺特
 		// 记录占位
 		var _tagName = self[0].tagName.toLowerCase();
 		self.before('<' + _tagName + ' class="pop-self-position" style="display:none;"></' + _tagName + '>')
-		// 写入内容，并中心向外展开
+			// 写入内容，并中心向外展开
 		model.show().animate({
 			height: opts.height,
 			width: opts.width
 		}, opts.speed).children('.pop-body').empty().append(self.show());
-		
+
 		if (container.is(':hidden')) {
 			container.fadeIn(opts.speed);
 		}
@@ -95,10 +95,31 @@ jQuery弹窗插件 By 哈利蔺特
 	};
 })(jQuery);
 
-snow.confirm = function(msg) {
-	return confirm(msg);
-};
 
-snow.alert = function(msg){
-	alert(msg);
-}
+	snow.confirm = function(msg) {
+		return confirm(msg);
+	};
+
+	snow.alert = function(msg) {
+		alert(msg);
+	}
+
+	function submit_disable(obj) {
+		$('.btn[type="submit"]', obj).attr('disabled', true).prepend('<i class="fa fa-spinner fa-spin"></i> ');
+	}
+
+	function submit_enable(obj) {
+		$('.btn[type="submit"]', obj).attr('disabled', false).find('i').remove();
+	}
+
+	function showMessage(obj, msg, success) {
+		if (success) {
+			obj.removeClass('alert-danger').addClass('alert-success').slideDown().html('<i class="fa fa-smile-o"></i> ,' + msg);
+		} else {
+			obj.removeClass('alert-success').addClass('alert-danger').slideDown().html('<i class="fa fa-frown-o"></i> ,' + msg);
+		}
+		setTimeout(function() {
+			obj.slideUp(600);
+		}, 5000)
+	}
+

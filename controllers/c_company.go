@@ -136,6 +136,12 @@ func (this *Company) PostContact() {
 		this.renderJson(utils.JsonResult(false, "", models.Err("缺乏相应的项目信息")))
 		return
 	}
+	// 检查要提交数据的项目是否存在，防止第三方恶意写入
+	if !this.exists(companyId) {
+		this.renderJson(utils.JsonResult(false, "", []models.Error{models.Err("项目主体错误或不存在")}))
+		return
+	}
+
 	com := new(models.Contact)
 	com.Id, _ = this.GetInt64("id")
 	com.CompanyId = companyId
@@ -148,12 +154,6 @@ func (this *Company) PostContact() {
 	com.Linkedin = this.GetString("linkedin")
 	com.Year, _ = this.GetInt("year")
 	com.Month, _ = this.GetInt("month")
-
-	// 检查要提交数据的项目是否存在，防止第三方恶意写入
-	if !this.exists(companyId) {
-		this.renderJson(utils.JsonResult(false, "", []models.Error{models.Err("项目主体错误或不存在")}))
-		return
-	}
 
 	this.extend(com)
 
@@ -445,15 +445,3 @@ func (this *Company) DeleteLoops() {
 }
 
 //////////////////////////////////////////
-
-/////////////////////////////////////
-/*
-* 检查用户提交的数据是否自己项目的数据
- */
-func (this *Company) exists(id int64) bool {
-	com := new(models.Company)
-	com.Id = id
-	com.AccountId = this.currentUser.Id
-
-	return com.Exists()
-}

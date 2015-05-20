@@ -11873,3 +11873,938 @@
     Status: 0,
 } 
 2015/05/19 18:57:44 [router.go:845] [D] | GET        | /home/info/2                             | 160.0091ms       | match      | /home/info/*                             | 
+2015/05/20 10:44:34 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 10:44:37 [app.go:96] [I] http server Running on :8080
+2015/05/20 10:45:06 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 10:45:06 [app.go:96] [I] http server Running on :8080
+2015/05/20 10:47:51 [router.go:845] [D] | GET        | /                                        | 64.0037ms        | match      | /                                        | 
+2015/05/20 10:51:21 [router.go:845] [D] | GET        | /                                        | 72.0041ms        | match      | /                                        | 
+2015/05/20 10:51:42 [router.go:845] [D] | GET        | /connect/weixin                          | 45.0026ms        | match      | /connect/weixin/*                        | 
+2015/05/20 10:51:59 [router.go:845] [D] | GET        | /connect/wx_callback                     | 819.0469ms       | match      | /connect/wx_callback/*                   | 
+2015/05/20 10:51:59 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/05/20 10:51:59 [router.go:845] [D] | GET        | /                                        | 65.0037ms        | match      | /                                        | 
+2015/05/20 10:52:04 [router.go:845] [D] | GET        | /my/company                              | 60.0034ms        | match      | /my/company                              | 
+2015/05/20 10:52:14 [router.go:845] [D] | GET        | /company/edit/2                          | 72.0041ms        | match      | /company/edit/*                          | 
+2015/05/20 10:52:14 [router.go:845] [D] | GET        | /company/GetContact/2                    | 34.0019ms        | match      | /company/getcontact/*                    | 
+2015/05/20 10:52:15 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 57.0033ms        | match      | /company/getmembers/*                    | 
+2015/05/20 10:52:15 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 66.0037ms        | match      | /company/getloops/*                      | 
+2015/05/20 10:52:15 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 72.0042ms        | match      | /company/getlinks/*                      | 
+2015/05/20 10:52:15 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 76.0043ms        | match      | /company/getintroduce/*                  | 
+2015/05/20 10:52:29 [router.go:845] [D] | GET        | /company/edit/2                          | 54.003ms         | match      | /company/edit/*                          | 
+2015/05/20 10:52:29 [router.go:845] [D] | GET        | /company/GetLinks/2                      | 60.0034ms        | match      | /company/getlinks/*                      | 
+2015/05/20 10:52:29 [router.go:845] [D] | GET        | /company/GetContact/2                    | 70.004ms         | match      | /company/getcontact/*                    | 
+2015/05/20 10:52:29 [router.go:845] [D] | GET        | /company/GetIntroduce/2                  | 73.0042ms        | match      | /company/getintroduce/*                  | 
+2015/05/20 10:52:29 [router.go:845] [D] | GET        | /company/GetMembers/2                    | 94.0053ms        | match      | /company/getmembers/*                    | 
+2015/05/20 10:52:29 [router.go:845] [D] | GET        | /company/GetLoops/2                      | 106.0061ms       | match      | /company/getloops/*                      | 
+2015/05/20 10:53:39 [router.go:845] [D] | GET        | /company/info/2                          | 0                | notmatch   | 
+2015/05/20 10:55:01 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 10:55:01 [app.go:96] [I] http server Running on :8080
+2015/05/20 10:55:06 [log.go:108] [D] Company/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 10:55:06 [router.go:876] [C] the request url is  /company/info/2 
+2015/05/20 10:55:06 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:company/info.tpl 
+2015/05/20 10:55:06 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 10:55:06 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/20 10:55:06 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 10:55:06 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 10:55:06 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 10:55:06 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 10:55:06 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 10:55:35 [log.go:108] [D] Company/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 10:55:35 [router.go:845] [D] | GET        | /company/info/2                          | 135.0077ms       | match      | /company/info/*                          | 
+2015/05/20 10:55:50 [router.go:845] [D] | GET        | /                                        | 54.003ms         | match      | /                                        | 
+2015/05/20 10:55:56 [log.go:108] [D] Home/Error Info:你正在访问未经许可的内容，请登录后重试…… 
+2015/05/20 10:55:56 [router.go:845] [D] | GET        | /home/error                              | 104.006ms        | match      | /home/error/*                            | 
+2015/05/20 10:56:08 [log.go:108] [D] Home/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 10:56:08 [router.go:845] [D] | GET        | /home/info/2                             | 258.0148ms       | match      | /home/info/*                             | 
+2015/05/20 10:58:56 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 10:58:56 [app.go:96] [I] http server Running on :8080
+2015/05/20 10:59:31 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 10:59:31 [app.go:96] [I] http server Running on :8080
+2015/05/20 11:02:36 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 11:02:36 [app.go:96] [I] http server Running on :8080
+2015/05/20 11:02:37 [log.go:108] [D] Item/Info Info:invalid 
+2015/05/20 11:02:37 [router.go:876] [C] the request url is  /item/info/2 
+2015/05/20 11:02:37 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:item/info.tpl 
+2015/05/20 11:02:37 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 11:02:37 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:253 
+2015/05/20 11:02:37 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 11:02:37 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 11:02:37 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 11:02:37 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 11:02:37 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 11:03:19 [log.go:108] [D] Item/Info Info:invalid 
+2015/05/20 11:03:19 [log.go:108] [D] template Execute err: template: item/info.tpl:8:11: executing "item/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/20 11:03:19 [router.go:876] [C] the request url is  /item/info/2 
+2015/05/20 11:03:19 [router.go:877] [C] Handler crashed with error template: item/info.tpl:8:11: executing "item/info.tpl" at <eq .company.Creator ...>: error calling eq: invalid type for comparison 
+2015/05/20 11:03:19 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 11:03:19 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/20 11:03:19 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 11:03:19 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 11:03:19 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 11:04:54 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 11:04:54 [app.go:96] [I] http server Running on :8080
+2015/05/20 11:04:55 [log.go:108] [D] Item/Info Info:invalid 
+2015/05/20 11:04:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 11:04:57 [app.go:96] [I] http server Running on :8080
+2015/05/20 11:04:59 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:04:59 [router.go:845] [D] | GET        | /item/info/2                             | 180.0103ms       | match      | /item/info/*                             | 
+2015/05/20 11:06:01 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:06:01 [router.go:845] [D] | GET        | /item/info/2                             | 210.012ms        | match      | /item/info/*                             | 
+2015/05/20 11:07:33 [log.go:108] [D] Home/Error Info:你正在访问未经许可的内容，请登录后重试…… 
+2015/05/20 11:07:33 [router.go:845] [D] | GET        | /home/error                              | 37.0021ms        | match      | /home/error/*                            | 
+2015/05/20 11:10:13 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 11:10:13 [app.go:96] [I] http server Running on :8080
+2015/05/20 11:11:04 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 11:11:04 [app.go:96] [I] http server Running on :8080
+2015/05/20 11:11:17 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:11:17 [router.go:845] [D] | GET        | /item/info/2                             | 167.0095ms       | match      | /item/info/*                             | 
+2015/05/20 11:14:38 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:14:38 [router.go:845] [D] | GET        | /item/info/2                             | 151.0087ms       | match      | /item/info/*                             | 
+2015/05/20 11:15:24 [log.go:108] [D] Home/Error Info:你正在访问未经许可的内容，请登录后重试…… 
+2015/05/20 11:15:24 [router.go:845] [D] | GET        | /home/error                              | 47.0027ms        | match      | /home/error/*                            | 
+2015/05/20 11:17:39 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:17:40 [router.go:845] [D] | GET        | /item/info/2                             | 158.009ms        | match      | /item/info/*                             | 
+2015/05/20 11:17:46 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:17:46 [router.go:845] [D] | GET        | /item/info/2                             | 154.0088ms       | match      | /item/info/*                             | 
+2015/05/20 11:18:12 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:18:12 [router.go:845] [D] | GET        | /item/info/2                             | 155.0089ms       | match      | /item/info/*                             | 
+2015/05/20 11:21:23 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:21:23 [router.go:845] [D] | GET        | /item/info/2                             | 175.01ms         | match      | /item/info/*                             | 
+2015/05/20 11:21:35 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:21:35 [router.go:845] [D] | GET        | /item/info/2                             | 172.0098ms       | match      | /item/info/*                             | 
+2015/05/20 11:24:46 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:24:46 [router.go:845] [D] | GET        | /item/info/2                             | 144.0083ms       | match      | /item/info/*                             | 
+2015/05/20 11:25:29 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:25:29 [router.go:845] [D] | GET        | /item/info/2                             | 161.0092ms       | match      | /item/info/*                             | 
+2015/05/20 11:28:58 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:28:58 [router.go:845] [D] | GET        | /item/info/2                             | 161.0092ms       | match      | /item/info/*                             | 
+2015/05/20 11:29:28 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:29:29 [router.go:845] [D] | GET        | /item/info/2                             | 147.0085ms       | match      | /item/info/*                             | 
+2015/05/20 11:33:49 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:33:50 [router.go:845] [D] | GET        | /item/info/2                             | 130.0074ms       | match      | /item/info/*                             | 
+2015/05/20 11:40:42 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:40:42 [router.go:845] [D] | GET        | /item/info/2                             | 226.013ms        | match      | /item/info/*                             | 
+2015/05/20 11:48:45 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:48:45 [router.go:845] [D] | GET        | /item/info/2                             | 151.0086ms       | match      | /item/info/*                             | 
+2015/05/20 11:49:27 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:49:27 [router.go:845] [D] | GET        | /item/info/2                             | 147.0085ms       | match      | /item/info/*                             | 
+2015/05/20 11:53:07 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:53:07 [router.go:845] [D] | GET        | /item/info/2                             | 152.0087ms       | match      | /item/info/*                             | 
+2015/05/20 11:53:42 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:53:42 [router.go:845] [D] | GET        | /item/info/2                             | 159.0091ms       | match      | /item/info/*                             | 
+2015/05/20 11:58:35 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 11:58:35 [router.go:845] [D] | GET        | /item/info/2                             | 136.0078ms       | match      | /item/info/*                             | 
+2015/05/20 12:00:33 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:00:33 [router.go:845] [D] | GET        | /item/info/2                             | 161.0092ms       | match      | /item/info/*                             | 
+2015/05/20 12:02:01 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:02:01 [router.go:845] [D] | GET        | /item/info/2                             | 168.0096ms       | match      | /item/info/*                             | 
+2015/05/20 12:03:58 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:03:58 [router.go:845] [D] | GET        | /item/info/2                             | 214.0122ms       | match      | /item/info/*                             | 
+2015/05/20 12:05:09 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:05:10 [router.go:845] [D] | GET        | /item/info/2                             | 150.0086ms       | match      | /item/info/*                             | 
+2015/05/20 12:07:45 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:07:46 [router.go:845] [D] | GET        | /item/info/2                             | 141.0081ms       | match      | /item/info/*                             | 
+2015/05/20 12:08:34 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:08:34 [router.go:845] [D] | GET        | /item/info/2                             | 147.0084ms       | match      | /item/info/*                             | 
+2015/05/20 12:11:34 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:11:34 [router.go:845] [D] | GET        | /item/info/2                             | 149.0086ms       | match      | /item/info/*                             | 
+2015/05/20 12:12:16 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:12:16 [router.go:845] [D] | GET        | /item/info/2                             | 156.0089ms       | match      | /item/info/*                             | 
+2015/05/20 12:12:41 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:12:41 [router.go:845] [D] | GET        | /item/info/2                             | 146.0083ms       | match      | /item/info/*                             | 
+2015/05/20 12:13:42 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:13:42 [router.go:845] [D] | GET        | /item/info/2                             | 154.0088ms       | match      | /item/info/*                             | 
+2015/05/20 12:14:46 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:14:46 [router.go:845] [D] | GET        | /item/info/2                             | 141.0081ms       | match      | /item/info/*                             | 
+2015/05/20 12:15:39 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:15:39 [router.go:845] [D] | GET        | /item/info/2                             | 143.0082ms       | match      | /item/info/*                             | 
+2015/05/20 12:16:28 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:16:28 [router.go:845] [D] | GET        | /item/info/2                             | 139.008ms        | match      | /item/info/*                             | 
+2015/05/20 12:20:01 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:20:01 [router.go:845] [D] | GET        | /item/info/2                             | 144.0082ms       | match      | /item/info/*                             | 
+2015/05/20 12:22:25 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:22:25 [router.go:845] [D] | GET        | /item/info/2                             | 151.0087ms       | match      | /item/info/*                             | 
+2015/05/20 12:23:33 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:23:33 [router.go:845] [D] | GET        | /item/info/2                             | 396.0226ms       | match      | /item/info/*                             | 
+2015/05/20 12:24:05 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:24:05 [router.go:845] [D] | GET        | /item/info/2                             | 149.0085ms       | match      | /item/info/*                             | 
+2015/05/20 12:28:15 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:28:15 [router.go:845] [D] | GET        | /item/info/2                             | 136.0077ms       | match      | /item/info/*                             | 
+2015/05/20 12:28:35 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:28:35 [router.go:845] [D] | GET        | /item/info/2                             | 139.008ms        | match      | /item/info/*                             | 
+2015/05/20 12:29:20 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:29:20 [router.go:845] [D] | GET        | /item/info/2                             | 155.0089ms       | match      | /item/info/*                             | 
+2015/05/20 12:31:55 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:31:55 [router.go:845] [D] | GET        | /item/info/2                             | 143.0082ms       | match      | /item/info/*                             | 
+2015/05/20 12:32:05 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:32:05 [router.go:845] [D] | GET        | /item/info/2                             | 327.0187ms       | match      | /item/info/*                             | 
+2015/05/20 12:33:28 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:33:28 [router.go:845] [D] | GET        | /item/info/2                             | 171.0098ms       | match      | /item/info/*                             | 
+2015/05/20 12:36:07 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:36:07 [router.go:845] [D] | GET        | /item/info/2                             | 135.0077ms       | match      | /item/info/*                             | 
+2015/05/20 12:36:50 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:36:50 [router.go:845] [D] | GET        | /item/info/2                             | 222.0127ms       | match      | /item/info/*                             | 
+2015/05/20 12:37:18 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:37:18 [router.go:845] [D] | GET        | /item/info/2                             | 131.0075ms       | match      | /item/info/*                             | 
+2015/05/20 12:44:34 [router.go:845] [D] | GET        | /connect/weixin                          | 46.0026ms        | match      | /connect/weixin/*                        | 
+2015/05/20 12:44:54 [router.go:845] [D] | GET        | /connect/wx_callback                     | 1.1480657s       | match      | /connect/wx_callback/*                   | 
+2015/05/20 12:44:54 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/05/20 12:44:55 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:44:55 [router.go:845] [D] | GET        | /item/info/2                             | 155.0089ms       | match      | /item/info/*                             | 
+2015/05/20 12:45:00 [router.go:845] [D] | GET        | /my/company                              | 73.0042ms        | match      | /my/company                              | 
+2015/05/20 12:45:20 [router.go:845] [D] | GET        | /my/company                              | 59.0034ms        | match      | /my/company                              | 
+2015/05/20 12:45:22 [router.go:845] [D] | GET        | /my/company                              | 71.004ms         | match      | /my/company                              | 
+2015/05/20 12:45:33 [router.go:845] [D] | GET        | /                                        | 34.002ms         | match      | /                                        | 
+2015/05/20 12:45:38 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:45:39 [router.go:845] [D] | GET        | /item/info/2                             | 140.008ms        | match      | /item/info/*                             | 
+2015/05/20 12:45:44 [router.go:845] [D] | GET        | /my/company                              | 59.0034ms        | match      | /my/company                              | 
+2015/05/20 12:45:48 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:45:48 [router.go:845] [D] | GET        | /item/info/2                             | 140.008ms        | match      | /item/info/*                             | 
+2015/05/20 12:45:49 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:45:49 [router.go:845] [D] | GET        | /item/info/2                             | 304.0174ms       | match      | /item/info/*                             | 
+2015/05/20 12:45:52 [router.go:845] [D] | GET        | /my/company                              | 59.0033ms        | match      | /my/company                              | 
+2015/05/20 12:47:43 [router.go:845] [D] | GET        | /company/edit                            | 68.0039ms        | match      | /company/edit/*                          | 
+2015/05/20 12:47:43 [router.go:845] [D] | GET        | /company/GetContact/0                    | 36.002ms         | match      | /company/getcontact/*                    | 
+2015/05/20 12:47:43 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 31.0018ms        | match      | /company/getintroduce/*                  | 
+2015/05/20 12:47:43 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 30.0017ms        | match      | /company/getlinks/*                      | 
+2015/05/20 12:47:43 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 45.0025ms        | match      | /company/getmembers/*                    | 
+2015/05/20 12:47:43 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 48.0028ms        | match      | /company/getloops/*                      | 
+2015/05/20 12:48:21 [m_base.go:133] [E] 无效数据：CompanyName.MaxSize-Maximum size is 50 
+2015/05/20 12:50:01 [router.go:845] [D] | GET        | /my/company                              | 60.0034ms        | match      | /my/company                              | 
+2015/05/20 12:50:05 [router.go:845] [D] | GET        | /company/edit/3                          | 71.004ms         | match      | /company/edit/*                          | 
+2015/05/20 12:50:05 [router.go:845] [D] | GET        | /company/GetIntroduce/3                  | 45.0026ms        | match      | /company/getintroduce/*                  | 
+2015/05/20 12:50:05 [router.go:845] [D] | GET        | /company/GetContact/3                    | 61.0035ms        | match      | /company/getcontact/*                    | 
+2015/05/20 12:50:05 [router.go:845] [D] | GET        | /company/GetMembers/3                    | 89.0051ms        | match      | /company/getmembers/*                    | 
+2015/05/20 12:50:06 [router.go:845] [D] | GET        | /company/GetLoops/3                      | 106.0061ms       | match      | /company/getloops/*                      | 
+2015/05/20 12:50:06 [router.go:845] [D] | GET        | /company/GetLinks/3                      | 120.0069ms       | match      | /company/getlinks/*                      | 
+2015/05/20 12:50:12 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:50:12 [router.go:845] [D] | GET        | /item/info/3                             | 270.0154ms       | match      | /item/info/*                             | 
+2015/05/20 12:51:53 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:51:53 [router.go:845] [D] | GET        | /item/info/3                             | 152.0087ms       | match      | /item/info/*                             | 
+2015/05/20 12:53:26 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:53:27 [router.go:845] [D] | GET        | /item/info/3                             | 141.0081ms       | match      | /item/info/*                             | 
+2015/05/20 12:57:10 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 12:57:10 [router.go:845] [D] | GET        | /item/info/3                             | 135.0077ms       | match      | /item/info/*                             | 
+2015/05/20 13:03:06 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 13:03:06 [router.go:845] [D] | GET        | /item/info/3                             | 164.0093ms       | match      | /item/info/*                             | 
+2015/05/20 13:05:09 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 13:05:09 [router.go:845] [D] | GET        | /item/info/3                             | 147.0084ms       | match      | /item/info/*                             | 
+2015/05/20 13:29:20 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 13:29:20 [log.go:108] [D] parse template err: item/info.tpl template: item/info.tpl:180: unexpected "eq" in else 
+2015/05/20 13:29:20 [router.go:845] [D] | GET        | /item/info/3                             | 129.0074ms       | match      | /item/info/*                             | 
+2015/05/20 13:30:28 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 2,
+    Name: ,
+    Avatar: ,
+    From: weixin,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 13:30:28 [router.go:845] [D] | GET        | /item/info/3                             | 158.0091ms       | match      | /item/info/*                             | 
+2015/05/20 13:31:28 [router.go:845] [D] | GET        | /                                        | 62.0035ms        | match      | /                                        | 
+2015/05/20 13:31:35 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 13:31:36 [router.go:845] [D] | GET        | /item/info/3                             | 139.008ms        | match      | /item/info/*                             | 
+2015/05/20 14:35:39 [log.go:108] [D] Item/Info Info:&models.Current{
+    Id: 0,
+    Name: ,
+    Avatar: ,
+    From: ,
+    Role: 0,
+    Status: 0,
+} 
+2015/05/20 14:35:39 [router.go:845] [D] | GET        | /item/info/3                             | 172.0098ms       | match      | /item/info/*                             | 
+2015/05/20 14:56:15 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 14:56:16 [app.go:96] [I] http server Running on :8080
+2015/05/20 14:56:34 [log.go:108] [D] Home/Error Info:你正在访问未经许可的内容，请登录后重试…… 
+2015/05/20 14:56:34 [router.go:845] [D] | GET        | /home/error                              | 41.0023ms        | match      | /home/error/*                            | 
+2015/05/20 14:58:47 [log.go:108] [D] Home/Error Info:你正在访问未经许可的内容，请登录后重试…… 
+2015/05/20 14:58:47 [router.go:845] [D] | GET        | /home/error                              | 68.0038ms        | match      | /home/error/*                            | 
+2015/05/20 14:59:21 [log.go:108] [D] Home/Error Info:你正在访问未经许可的内容，请登录后重试…… 
+2015/05/20 14:59:21 [router.go:845] [D] | GET        | /home/error                              | 52.003ms         | match      | /home/error/*                            | 
+2015/05/20 14:59:34 [router.go:845] [D] | GET        | /connect/weixin                          | 54.0031ms        | match      | /connect/weixin/*                        | 
+2015/05/20 14:59:57 [router.go:845] [D] | GET        | /connect/wx_callback                     | 835.0478ms       | match      | /connect/wx_callback/*                   | 
+2015/05/20 14:59:57 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/05/20 14:59:58 [log.go:108] [D] Home/Error Info:你正在访问未经许可的内容，请登录后重试…… 
+2015/05/20 14:59:58 [router.go:845] [D] | GET        | /home/error                              | 73.0042ms        | match      | /home/error/*                            | 
+2015/05/20 15:00:18 [router.go:845] [D] | GET        | /apply/index                             | 51.0029ms        | match      | /apply/index/*                           | 
+2015/05/20 15:02:39 [router.go:845] [D] | GET        | /apply/index                             | 51.0029ms        | match      | /apply/index/*                           | 
+2015/05/20 15:04:12 [router.go:845] [D] | GET        | /apply/index                             | 42.0024ms        | match      | /apply/index/*                           | 
+2015/05/20 15:04:32 [router.go:845] [D] | GET        | /apply/index                             | 60.0034ms        | match      | /apply/index/*                           | 
+2015/05/20 15:12:50 [router.go:845] [D] | GET        | /apply/index                             | 62.0036ms        | match      | /apply/index/*                           | 
+2015/05/20 15:13:10 [router.go:845] [D] | GET        | /apply/index                             | 47.0027ms        | match      | /apply/index/*                           | 
+2015/05/20 15:14:14 [router.go:845] [D] | GET        | /apply/index                             | 68.0039ms        | match      | /apply/index/*                           | 
+2015/05/20 15:22:42 [router.go:845] [D] | GET        | /apply/index                             | 63.0036ms        | match      | /apply/index/*                           | 
+2015/05/20 15:24:20 [router.go:845] [D] | GET        | /apply/index                             | 35.002ms         | match      | /apply/index/*                           | 
+2015/05/20 15:27:39 [router.go:845] [D] | GET        | /apply/index                             | 62.0036ms        | match      | /apply/index/*                           | 
+2015/05/20 15:29:22 [router.go:845] [D] | GET        | /apply/index                             | 62.0035ms        | match      | /apply/index/*                           | 
+2015/05/20 15:29:42 [router.go:845] [D] | GET        | /apply/index                             | 49.0029ms        | match      | /apply/index/*                           | 
+2015/05/20 15:33:31 [router.go:845] [D] | GET        | /apply/index                             | 41.0023ms        | match      | /apply/index/*                           | 
+2015/05/20 15:33:42 [router.go:845] [D] | GET        | /apply/index                             | 48.0027ms        | match      | /apply/index/*                           | 
+2015/05/20 15:33:59 [router.go:845] [D] | GET        | /apply/index                             | 67.0038ms        | match      | /apply/index/*                           | 
+2015/05/20 15:34:21 [router.go:845] [D] | GET        | /apply/index                             | 62.0035ms        | match      | /apply/index/*                           | 
+2015/05/20 15:34:53 [router.go:845] [D] | GET        | /apply/index                             | 45.0026ms        | match      | /apply/index/*                           | 
+2015/05/20 15:35:39 [router.go:845] [D] | GET        | /apply/index                             | 54.0031ms        | match      | /apply/index/*                           | 
+2015/05/20 15:43:28 [router.go:845] [D] | GET        | /apply/index                             | 40.0023ms        | match      | /apply/index/*                           | 
+2015/05/20 15:43:57 [router.go:845] [D] | GET        | /apply/index                             | 47.0027ms        | match      | /apply/index/*                           | 
+2015/05/20 15:45:50 [router.go:845] [D] | GET        | /apply/index                             | 61.0035ms        | match      | /apply/index/*                           | 
+2015/05/20 15:46:35 [router.go:845] [D] | GET        | /apply/index                             | 62.0035ms        | match      | /apply/index/*                           | 
+2015/05/20 15:46:55 [router.go:845] [D] | GET        | /apply/index                             | 56.0032ms        | match      | /apply/index/*                           | 
+2015/05/20 15:47:28 [router.go:845] [D] | GET        | /apply/index                             | 52.003ms         | match      | /apply/index/*                           | 
+2015/05/20 15:47:36 [router.go:845] [D] | GET        | /apply/index                             | 49.0028ms        | match      | /apply/index/*                           | 
+2015/05/20 15:47:59 [router.go:845] [D] | GET        | /apply/index                             | 52.003ms         | match      | /apply/index/*                           | 
+2015/05/20 15:49:31 [router.go:845] [D] | GET        | /apply/index                             | 42.0024ms        | match      | /apply/index/*                           | 
+2015/05/20 15:49:55 [router.go:845] [D] | GET        | /apply/index                             | 52.0029ms        | match      | /apply/index/*                           | 
+2015/05/20 15:52:46 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 15:52:46 [app.go:96] [I] http server Running on :8080
+2015/05/20 15:55:56 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 15:55:56 [app.go:96] [I] http server Running on :8080
+2015/05/20 15:56:23 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 15:56:23 [app.go:96] [I] http server Running on :8080
+2015/05/20 15:58:50 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 15:58:50 [app.go:96] [I] http server Running on :8080
+2015/05/20 16:02:53 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 16:02:53 [app.go:96] [I] http server Running on :8080
+2015/05/20 16:02:57 [log.go:108] [D] Home/Error Info:项目还没有通过审核 
+2015/05/20 16:02:57 [router.go:845] [D] | GET        | /home/error                              | 180.0103ms       | match      | /home/error/*                            | 
+2015/05/20 16:03:04 [log.go:108] [D] Home/Error Info:项目还没有通过审核 
+2015/05/20 16:03:04 [router.go:845] [D] | GET        | /home/error                              | 46.0027ms        | match      | /home/error/*                            | 
+2015/05/20 16:12:01 [log.go:108] [D] Home/Error Info:项目不存在 
+2015/05/20 16:12:01 [router.go:845] [D] | GET        | /home/error                              | 87.005ms         | match      | /home/error/*                            | 
+2015/05/20 16:13:10 [router.go:845] [D] | GET        | /my/company                              | 75.0043ms        | match      | /my/company                              | 
+2015/05/20 16:13:11 [router.go:845] [D] | GET        | /admin/company                           | 68.0039ms        | match      | /admin/company/*                         | 
+2015/05/20 16:14:16 [router.go:845] [D] | GET        | /admin/company                           | 44.0025ms        | match      | /admin/company/*                         | 
+2015/05/20 17:21:15 [router.go:845] [D] | GET        | /company/info/1                          | 1.0001ms         | notmatch   | 
+2015/05/20 17:22:30 [log.go:108] [D] Connect/SignTrace Info:记录登录日志 
+2015/05/20 17:23:07 [log.go:108] [D] Home/Error Info:项目还没有通过审核 
+2015/05/20 17:23:07 [router.go:845] [D] | GET        | /home/error                              | 51.0029ms        | match      | /home/error/*                            | 
+2015/05/20 18:05:31 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 18:05:34 [app.go:96] [I] http server Running on :8080
+2015/05/20 18:12:56 [router.go:845] [D] | GET        | /my/company                              | 67.0038ms        | match      | /my/company                              | 
+2015/05/20 18:14:21 [router.go:845] [D] | GET        | /my/company                              | 119.0068ms       | match      | /my/company                              | 
+2015/05/20 18:14:26 [router.go:845] [D] | GET        | /apply/index/2                           | 49.0028ms        | match      | /apply/index/*                           | 
+2015/05/20 18:15:22 [router.go:845] [D] | GET        | /item/info/2                             | 1.4030802s       | match      | /item/info/*                             | 
+2015/05/20 18:22:15 [router.go:845] [D] | GET        | /item/info/2                             | 1.1350649s       | match      | /item/info/*                             | 
+2015/05/20 18:22:22 [router.go:845] [D] | GET        | /apply/index/2                           | 385.022ms        | match      | /apply/index/*                           | 
+2015/05/20 18:36:56 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 18:36:56 [app.go:96] [I] http server Running on :8080
+2015/05/20 18:44:57 [router.go:845] [D] | GET        | /apply/index/2                           | 60.0034ms        | match      | /apply/index/*                           | 
+2015/05/20 18:50:47 [router.go:845] [D] | GET        | /apply/index/2                           | 68.0039ms        | match      | /apply/index/*                           | 
+2015/05/20 18:51:44 [router.go:845] [D] | GET        | /apply/index/2                           | 64.0037ms        | match      | /apply/index/*                           | 
+2015/05/20 18:52:54 [router.go:845] [D] | GET        | /apply/index/2                           | 49.0028ms        | match      | /apply/index/*                           | 
+2015/05/20 18:58:32 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 18:58:32 [app.go:96] [I] http server Running on :8080
+2015/05/20 18:59:14 [router.go:845] [D] | GET        | /apply/index/2                           | 72.0041ms        | match      | /apply/index/*                           | 
+2015/05/20 18:59:20 [log.go:108] [D] Apply/PostApply Info:&models.Apply{
+    Id: 0,
+    CompanyId: 2,
+    Bpath: ,
+    Agree: 0,
+    Accept: 0,
+    State: 0,
+    Status: 0,
+    Deleted: 0,
+    Updator: 2,
+    Updated: 1432119560283,
+    Ip: 127.0.0.1,
+} 
+2015/05/20 18:59:20 [router.go:876] [C] the request url is  /apply/postapply 
+2015/05/20 18:59:20 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:apply/postapply.tpl 
+2015/05/20 18:59:20 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 18:59:20 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/20 18:59:20 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 18:59:20 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 18:59:20 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 18:59:20 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 18:59:20 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 18:59:29 [log.go:108] [D] Apply/PostApply Info:&models.Apply{
+    Id: 0,
+    CompanyId: 2,
+    Bpath: ,
+    Agree: 0,
+    Accept: 0,
+    State: 0,
+    Status: 0,
+    Deleted: 0,
+    Updator: 2,
+    Updated: 1432119569263,
+    Ip: 127.0.0.1,
+} 
+2015/05/20 18:59:29 [router.go:876] [C] the request url is  /apply/postapply 
+2015/05/20 18:59:29 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:apply/postapply.tpl 
+2015/05/20 18:59:29 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 18:59:29 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/20 18:59:29 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 18:59:29 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 18:59:29 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 18:59:29 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 18:59:29 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 18:59:53 [log.go:108] [D] Apply/PostApply Info:&models.Apply{
+    Id: 0,
+    CompanyId: 2,
+    Bpath: ,
+    Agree: 0,
+    Accept: 0,
+    State: 0,
+    Status: 0,
+    Deleted: 0,
+    Updator: 2,
+    Updated: 1432119593535,
+    Ip: 127.0.0.1,
+} 
+2015/05/20 18:59:53 [router.go:876] [C] the request url is  /apply/postapply 
+2015/05/20 18:59:53 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:apply/postapply.tpl 
+2015/05/20 18:59:53 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 18:59:53 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/20 18:59:53 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 18:59:53 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 18:59:53 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 18:59:53 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 18:59:53 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 19:00:04 [log.go:108] [D] Apply/PostApply Info:&models.Apply{
+    Id: 0,
+    CompanyId: 2,
+    Bpath: /upload/2015-05/1432119602825843300.pdf,
+    Agree: 0,
+    Accept: 0,
+    State: 0,
+    Status: 0,
+    Deleted: 0,
+    Updator: 2,
+    Updated: 1432119604437,
+    Ip: 127.0.0.1,
+} 
+2015/05/20 19:00:04 [router.go:876] [C] the request url is  /apply/postapply 
+2015/05/20 19:00:04 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:apply/postapply.tpl 
+2015/05/20 19:00:04 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 19:00:04 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/20 19:00:04 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 19:00:04 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 19:00:04 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 19:00:04 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 19:00:04 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 19:00:42 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 19:00:43 [app.go:96] [I] http server Running on :8080
+2015/05/20 19:01:04 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 19:01:04 [app.go:96] [I] http server Running on :8080
+2015/05/20 19:01:13 [log.go:108] [D] Apply/PostApply Info:false,   
+2015/05/20 19:01:13 [router.go:876] [C] the request url is  /apply/postapply 
+2015/05/20 19:01:13 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:apply/postapply.tpl 
+2015/05/20 19:01:13 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 19:01:13 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/20 19:01:13 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 19:01:13 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 19:01:13 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 19:01:13 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 19:01:13 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 19:01:23 [log.go:108] [D] Apply/PostApply Info:false,   
+2015/05/20 19:01:23 [router.go:876] [C] the request url is  /apply/postapply 
+2015/05/20 19:01:23 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:apply/postapply.tpl 
+2015/05/20 19:01:23 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 19:01:23 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/20 19:01:23 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 19:01:23 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 19:01:23 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 19:01:23 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 19:01:23 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 19:02:02 [router.go:845] [D] | GET        | /apply/index/2                           | 51.0029ms        | match      | /apply/index/*                           | 
+2015/05/20 19:02:07 [log.go:108] [D] Apply/PostApply Info:true,  on 
+2015/05/20 19:02:07 [router.go:876] [C] the request url is  /apply/postapply 
+2015/05/20 19:02:07 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:apply/postapply.tpl 
+2015/05/20 19:02:07 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 19:02:07 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/20 19:02:07 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 19:02:07 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 19:02:07 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 19:02:07 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 19:02:07 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 19:02:26 [log.go:108] [D] Apply/PostApply Info:true,  on 
+2015/05/20 19:02:26 [router.go:876] [C] the request url is  /apply/postapply 
+2015/05/20 19:02:26 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:apply/postapply.tpl 
+2015/05/20 19:02:26 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 19:02:26 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/20 19:02:26 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 19:02:26 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 19:02:26 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 19:02:26 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 19:02:26 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 19:04:50 [router.go:845] [D] | GET        | /apply/index/2                           | 55.0032ms        | match      | /apply/index/*                           | 
+2015/05/20 19:10:58 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 19:10:58 [app.go:96] [I] http server Running on :8080
+2015/05/20 19:11:07 [router.go:845] [D] | GET        | /apply/index/2                           | 61.0035ms        | match      | /apply/index/*                           | 
+2015/05/20 19:11:08 [router.go:845] [D] | GET        | /apply/index/2                           | 66.0037ms        | match      | /apply/index/*                           | 
+2015/05/20 19:11:23 [log.go:108] [D] Apply/PostApply Info:&models.Apply{
+    Id: 0,
+    CompanyId: 2,
+    Bpath: /upload/2015-05/1432120275376311000.PDF,
+    Agree: 1,
+    Accept: 1,
+    State: 0,
+    Status: 0,
+    Deleted: 0,
+    Updator: 2,
+    Updated: 1432120283780,
+    Ip: 127.0.0.1,
+} 
+2015/05/20 19:11:23 [router.go:876] [C] the request url is  /apply/postapply 
+2015/05/20 19:11:23 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:apply/postapply.tpl 
+2015/05/20 19:11:23 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 19:11:23 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/20 19:11:23 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 19:11:23 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 19:11:23 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 19:11:23 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 19:11:23 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 19:11:28 [log.go:108] [D] Apply/PostApply Info:&models.Apply{
+    Id: 0,
+    CompanyId: 2,
+    Bpath: /upload/2015-05/1432120275376311000.PDF,
+    Agree: 1,
+    Accept: 0,
+    State: 0,
+    Status: 0,
+    Deleted: 0,
+    Updator: 2,
+    Updated: 1432120288165,
+    Ip: 127.0.0.1,
+} 
+2015/05/20 19:11:28 [router.go:876] [C] the request url is  /apply/postapply 
+2015/05/20 19:11:28 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:apply/postapply.tpl 
+2015/05/20 19:11:28 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/20 19:11:28 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/05/20 19:11:28 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/05/20 19:11:28 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/05/20 19:11:28 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/20 19:11:28 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/20 19:11:28 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/20 19:12:17 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/20 19:12:17 [app.go:96] [I] http server Running on :8080
+2015/05/20 19:15:38 [router.go:845] [D] | GET        | /apply/index/2                           | 45.0025ms        | match      | /apply/index/*                           | 
+2015/05/20 19:17:18 [router.go:845] [D] | GET        | /apply/index/2                           | 46.0026ms        | match      | /apply/index/*                           | 
+2015/05/20 19:18:13 [router.go:845] [D] | GET        | /apply/index/2                           | 73.0041ms        | match      | /apply/index/*                           | 

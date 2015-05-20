@@ -121,3 +121,5 @@ func (this *Base) error_page(args ...string) {
 
 	this.end()
 }
+
+/////////////////////////

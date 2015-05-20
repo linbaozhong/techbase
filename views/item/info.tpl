@@ -1,3 +1,18 @@
+<style type="text/css">
+	#snow-img-list{
+		position: absolute;
+		margin-top: 10px;
+		width: 1350px;
+		height: 500px;
+	}
+	#snow-img-list li{
+		display: inline-block;
+		margin-right: 15px;
+		width: 300px;
+		height: 500px;
+		overflow: hidden;
+	}
+</style>
 <div class="banner">
 	<div class="slideshow">
 		<ol class="slides">
@@ -20,8 +35,8 @@
 						{{end}}
 					</div>
 					<h3>{{.company.Name}}</h3>
-					<p class="small">{{.company.Intro}}</p>
-
+					<h5>{{.company.Intro}}</h5>
+					<p class="small"><span class="company-field"></span>&nbsp;<span class="company-loop"></span></p>
 				</div>
 			</li>
 		</ol>
@@ -29,7 +44,7 @@
 </div>
 <article class="container">
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
+		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 			<h4>项目简介</h4>
 			<div class="pull-right">
 				{{if eq .company.Creator .account.Id}}
@@ -43,18 +58,18 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
+		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 			<div class="row">
-				<div class="col-md-8">
-					<div style="height: 100px;">{{.introduce.Content}}</div>
+				<div class="col-md-8 col-xs-8">
+					<div style="height: 110px;overflow: hidden;">{{.introduce.Content}}</div>
 					<ul>
 						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-map-marker"></i> <span id="company-city">
 							北京
 						</span></li>
-						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-tags"></i> <span id="company-field">
+						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-tags"></i> <span class="company-field">
 							
 						</span></li>
-						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-money"></i> <span id="company-loop">
+						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-money"></i> <span class="company-loop">
 							
 						</span></li>
 						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-tree"></i> <span id="company-state">
@@ -62,20 +77,22 @@
 						</span></li>
 						{{if eq .company.Status 2 }}
 							{{if eq .company.Creator .account.Id}}
-								<li class="pull-left"><i class="fa fa-tree"></i> <span>
+								<li style="display: inline-block;margin-right:15px;"><i class="fa fa-money"></i> <span>
 									{{if eq .company.Apply 0}}
 										尚未申请融资
 									{{else if eq .company.Apply 1}}
 										正在融资中
 									{{else if eq .company.Apply 2}}
-										融资完成
+										正在融资中
 									{{else if eq .company.Apply 3}}
+										融资完成
+									{{else if eq .company.Apply 4}}
 										融资未成功
 									{{end}}
 								</span></li>
-							{{else if or (eq .company.Apply 1) (eq .company.Apply 2)}}
-								<li class="pull-left"><i class="fa fa-tree"></i> <span>
-									{{if eq .company.Apply 1}}
+							{{else if or (eq .company.Apply 2) (eq .company.Apply 3)}}
+								<li style="display: inline-block;margin-right:15px;"><i class="fa fa-money"></i> <span>
+									{{if eq .company.Apply 2}}
 										正在融资中
 									{{else}}
 										融资完成
@@ -88,7 +105,7 @@
 						<i class="fa fa-home"></i> {{.company.Website}}
 					</div>
 				</div>
-				<div class="col-md-3 col-md-offset-1">
+				<div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1">
 					<a href="#">
 						<img class="" src="{{.links.Qrcode}}" style="width: 150px;">
 					</a>
@@ -98,32 +115,34 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1" style="overflow: hidden;height: 510px;padding: 0;">
-			{{$imgs := (split .introduce.Images ";")}}
-			<ul id="snow-img-list" class="" style="position:absolute;margin-top: 10px;width: 1325px;height: 500px;">
-				{{range $i,$img := $imgs}}
-				<li style="display: inline-block;margin-right:15px;">
-					<img src="{{$img}}" style="width: 250px;">
-				</li>
-				{{end}}
-			</ul>
-			<div style="position:absolute;top: 225px;width: 100%;padding: 10px;">
-				<a href="#" id="snow-to-left"><i class="fa fa-5x fa-angle-left"></i></a>
-				<a href="#" id="snow-to-right" class="pull-right"><i class="fa fa-5x fa-angle-right"></i></a>
+		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1" style="overflow: hidden;height: 510px;">
+			<div style="position:relative;width: 100%;height: 100%;overflow: hidden;">
+				{{$imgs := (split .introduce.Images ";")}}
+				<ul id="snow-img-list">
+					{{range $i,$img := $imgs}}
+					<li>
+						<img src="{{$img}}" >
+					</li>
+					{{end}}
+				</ul>
+				<div style="position:absolute;top: 220px;width: 100%;padding: 10px;">
+					<a href="#" id="snow-to-left"><i class="fa fa-5x fa-angle-left"></i></a>
+					<a href="#" id="snow-to-right" class="pull-right"><i class="fa fa-5x fa-angle-right"></i></a>
+				</div>
 			</div>
 		</div>
 	</div>
 			<!--创始团队-->
-	<div class="row">
+	<div class="row snow-padding-top-40">
 		<div class="col-md-10 col-md-offset-1">
 			<h4>创始团队</h4>
 			<hr />
 		</div>
 	</div>
 	<div class="row">
-		<div class="form-horizontal col-md-10 col-md-offset-1">
+		<div class="form-horizontal col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 			{{range .members}}
-			<div class="snow-member col-md-3 snow-members-{{.Id}}">
+			<div class="snow-member col-md-3 col-xs-3 snow-members-{{.Id}}">
 				<div class="snow-avatar img-circle">
 					<img src="{{.Avatar}}" />
 				</div>
@@ -139,19 +158,48 @@
 		<div class="col-sm-1"></div>
 	</div>
 
-			<!--融资经历-->
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
+	<!--融资经历-->
+	<div class="row snow-padding-top-40">
+		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 			<h4>融资经历</h4>
+			<div class="pull-right">
+				{{if eq .company.Creator .account.Id}}
+					<i class="fa fa-money"></i> 
+						{{if eq .company.Status 2 }}
+							{{if eq .company.Apply 0}}
+								<a href="/apply/index/{{.company.Id}}">申请融资</a>
+							{{else if eq .company.Apply 1}}
+								<span>正在融资中</span>
+							{{else if eq .company.Apply 2}}
+								<span>正在融资中</span>
+							{{else if eq .company.Apply 3}}
+								<a href="/apply/index/{{.company.Id}}">融资完成,再次申请</a>
+							{{else if eq .company.Apply 4}}
+								<a href="/apply/index/{{.company.Id}}">融资未成功,再次申请</a>
+							{{end}}
+						{{else if eq .company.Status 1}}
+							<span title="审核通过后即可快速申请融资">申请融资</span>
+						{{else}}
+							<span>申请融资</span>
+						{{end}}
+				{{else if or (eq .company.Apply 1) (eq .company.Apply 2)}}
+					<i class="fa fa-money"></i>
+						{{if eq .account.Role 2}}
+							<a href="#">查看融资进度</a>
+						{{else}}
+							<a href="#">申请成为投资人,查看融资进度</a>
+						{{end}}
+				{{end}}
+			</div>
 			<hr />
 		</div>
 	</div>
 	<div class="row">
-		<div class="form-horizontal col-md-10 col-md-offset-1">
+		<div class="form-horizontal col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 
 			<!--融资经历个体-->
 			{{range .loops}}
-			<div class="col-md-5 snow-loop snow-loops-{{.Id}}">
+			<div class="col-md-5 col-xs-5 snow-loop snow-loops-{{.Id}}">
 				<div>
 					<label class="control-label lead snow-loop-{{.Loop}}"></label><span>{{.Year}}.{{.Month}}</span>
 				</div>
@@ -174,23 +222,33 @@
 	</div>
 </article>
 <script type="text/javascript">
-//	snow.getPlace = function(v){
-//		_place = '创始人';
-//		$.each(snow.place, function(index,item) {  
-//			console.log(v,item.value);
-//			if (v == item.value) {
-//				_place = item.name;
-//				return false;
-//			}
-//		});
-//		return _place;
-//	};
-//	
+
 	$(function(){
+		$('#snow-img-list').css({
+			width:($('#snow-img-list li:eq(0)').outerWidth() 
+				+ parseInt($('#snow-img-list li:eq(0)').css('marginLeft')) 
+				+ parseInt($('#snow-img-list li:eq(0)').css('marginRight')) 
+				+ 5) * $('#snow-img-list li').length
+		});
+		
+		$('#snow-img-list img').load(function(){
+			var _this=$(this),_img=_this.attr('src');
+			console.log(_img,_this.width(),_this.height());
+			if(_this.width() > _this.height()){
+				_this.css({height:500,width:'initial'});
+			}else{
+				_this.css({width:_this.parent().width(),height:'initial'});
+			}
+		});
 		// 图片左右滚动
 		$('#snow-to-left').click(function(e){
 			e.preventDefault();
 			var _obj = $('#snow-img-list');
+			// 宽度小，无需移动
+			if(_obj.width()<=_obj.parent().width()){
+				return;
+			}
+			// 计算移动的距离
 			var _left = _obj.position().left+300;
 			_left = _left > 0 ? 0:_left;
 			
@@ -201,9 +259,14 @@
 		$('#snow-to-right').click(function(e){
 			e.preventDefault();
 			var _obj = $('#snow-img-list');
+			// 宽度小，无需移动
+			if(_obj.width()<=_obj.parent().width()){
+				return;
+			}
+			// 计算移动的距离
 			var _left = _obj.position().left-300;
 			
-			_left = _left <= _obj.parent().width()-_obj.width() ? _obj.position().left : _left;
+			_left = _left <= _obj.parent().width()-_obj.width() ? _obj.parent().width()-_obj.width() : _left;
 			
 			_obj.animate({
 				left:_left
@@ -211,8 +274,8 @@
 		});
 		
 		
-		$.getJSON('/basic/place', function(json) {
-			console.log(json);
+		$.getJSON('/item/place', function(json) {
+			//console.log(json);
 			if (json.ok) {
 				$.each(json.data, function(index, item) {
 					//snow.place = json.data;
@@ -222,8 +285,8 @@
 			} else {}
 		});
 		// 读取城市选项
-		$.getJSON('/basic/city',{parentId:'{{.company.Country}}'},function(json){
-			console.log(json);
+		$.getJSON('/item/city',{parentId:'{{.company.Country}}'},function(json){
+			//console.log(json);
 			if (json.ok) {
 				$.each(json.data, function(index,item) {    
 					if (item.value == '{{.company.City}}') {
@@ -236,8 +299,8 @@
 			}
 		})
 		// 公司领域
-		$.getJSON('/basic/field',function(json){
-			console.log('{{.company.Field}}',json);
+		$.getJSON('/item/field',function(json){
+			//console.log('{{.company.Field}}',json);
 			if (json.ok) {
 				var _html=[],_field='{{.company.Field}}'.split(',');
 				
@@ -246,14 +309,14 @@
 						_html.push(item.name);                                                          
 					}
 				});
-				$('#company-field').text(_html.join(','));
+				$('.company-field').text(_html.join(' '));
 			} else{
 				
 			}
 		});
 		// 运营状态
-		$.getJSON('/basic/state',function(json){
-			console.log(json);
+		$.getJSON('/item/state',function(json){
+			//console.log(json);
 			if (json.ok) {
 				$.each(json.data, function(index,item) {    
 					if (item.value == '{{.company.State}}') {
@@ -266,20 +329,22 @@
 			}
 		});
 		// 读取融资轮次
-		$.getJSON('/basic/loop',function(json){
+		$.getJSON('/item/loop',function(json){
+			var _loop=''
 			if (json.ok) {
 				$.each(json.data, function(index,item) {    
 					// 修复融资经历时间线
 					$('.snow-loop-'+item.value).text(item.name);
-					$('#company-loop').text(item.name);
+					_loop = item.name;
 				});
 			} else{
 				
 			}
+			$('.company-loop').text(_loop);
 		});
 		
 		// 读取币种
-		$.getJSON('/basic/money',function(json){
+		$.getJSON('/item/money',function(json){
 			if (json.ok) {
 				$.each(json.data, function(index,item) {    
 					// 修复融资经历时间线

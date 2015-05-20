@@ -65,9 +65,15 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-3 control-label"><span class="snow-required">*</span>联系方式</label>
+			<label class="col-sm-3 control-label"><span class="snow-required">*</span>手机号码</label>
 			<div class="col-sm-9">
-				<input class="form-control" required name="weixin" placeholder="手机号/微信号" value="{{.contact.Weixin}}">
+				<input class="form-control" required name="tel" placeholder="手机号码" value="{{.contact.Tel}}">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label"><span class="snow-required">*</span>微信号</label>
+			<div class="col-sm-9">
+				<input class="form-control" required name="weixin" placeholder="微信号" value="{{.contact.Weixin}}">
 			</div>
 		</div>
 		<div class="form-group">
@@ -114,7 +120,7 @@
 		if(snow.place){
 			contactPlaceOptions();
 		}else{
-			$.getJSON('/basic/place',function(json){
+			$.getJSON('/item/place',function(json){
 				if (json.ok) {
 					snow.place = json.data;
 					contactPlaceOptions();

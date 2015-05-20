@@ -172,7 +172,7 @@
 				+'</div>'
 			+'</div>';
 		// 读取融资轮次
-		$.getJSON('/basic/loop',function(json){
+		$.getJSON('/item/loop',function(json){
 			if (json.ok) {
 				var _html=[];
 				// 前端使用
@@ -190,7 +190,7 @@
 			}
 		});
 		// 读取币种
-		$.getJSON('/basic/money',function(json){
+		$.getJSON('/item/money',function(json){
 			if (json.ok) {
 				var _html=[];
 				// 前端使用

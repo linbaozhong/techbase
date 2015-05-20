@@ -10,21 +10,18 @@ type Home struct {
 }
 
 func (this *Home) Get() {
-	this.Data["account"] = this.currentUser
 	this.Data["index"] = "index"
 	this.setTplNames("index")
 }
 
 //
 func (this *Home) Show() {
-	this.Data["account"] = this.currentUser
 	this.Data["index"] = "brandshow"
 	this.setTplNames("brandshow")
 }
 
 //
 func (this *Home) Home() {
-	this.Data["account"] = this.currentUser
 	this.Data["index"] = "home"
 	this.setTplNames("home")
 }
@@ -59,32 +56,6 @@ func (this *Home) Brand() {
 		this.Data["index"] = "brandshow"
 		this.setTplNames(id)
 	}
-}
-
-// 项目详情
-func (this *Home) Info() {
-	id, _ := this.GetInt64("0")
-
-	if id <= 0 {
-		this.error_page("项目不存在")
-		return
-	}
-
-	com := this.getCompanyInfo(id, true)
-	if com.Id <= 0 {
-		this.error_page("项目不存在")
-		return
-	}
-	this.trace(this.Data["account"])
-
-	this.getIntroduceInfo(id)
-	this.getLinksInfo(id)
-	this.getMembersList(id)
-	this.getLoopsList(id)
-
-	this.setTplNames("info")
-	// 记录阅读次数
-	com.SetReaded()
 }
 
 // 帮助

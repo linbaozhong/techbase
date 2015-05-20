@@ -124,52 +124,6 @@ func (this *Basic) MaxValue() {
 
 /////////////////////////
 
-// 国家
-func (this *Basic) Country() {
-	bs := this.getOptions(models.Type_Country)
-	this.renderJson(utils.JsonResult(true, "", bs))
-}
-
-// 城市
-func (this *Basic) City() {
-	// 国家id
-	parentId, _ := this.GetInt64("parentId")
-	// 读取选项
-	bs := this.getOptions(models.Type_City, parentId)
-
-	this.renderJson(utils.JsonResult(true, "", bs))
-}
-
-// 公司领域/行业
-func (this *Basic) Field() {
-	bs := this.getOptions(models.Type_Field)
-	this.renderJson(utils.JsonResult(true, "", bs))
-}
-
-// 公司职位
-func (this *Basic) Place() {
-	bs := this.getOptions(models.Type_Place)
-	this.renderJson(utils.JsonResult(true, "", bs))
-}
-
-// 公司运营状态
-func (this *Basic) State() {
-	bs := this.getOptions(models.Type_State)
-	this.renderJson(utils.JsonResult(true, "", bs))
-}
-
-// 公司融资经历
-func (this *Basic) Loop() {
-	bs := this.getOptions(models.Type_Loop)
-	this.renderJson(utils.JsonResult(true, "", bs))
-}
-
-// 货币种类
-func (this *Basic) Money() {
-	bs := this.getOptions(models.Type_Money)
-	this.renderJson(utils.JsonResult(true, "", bs))
-}
-
 // 城市select选项
 func (this *Basic) CityOptions(typeid int) string {
 	basic := new(models.Basic)
@@ -186,23 +140,4 @@ func (this *Basic) CityOptions(typeid int) string {
 	_opts = append(_opts, "</select>")
 
 	return strings.Join(_opts, "")
-}
-
-// 读取选项
-func (this *Basic) getOptions(args ...int64) []models.Basic {
-	basic := new(models.Basic)
-
-	if len(args) > 0 {
-		basic.Type = int(args[0])
-		if len(args) > 1 {
-			basic.ParentId = args[1]
-		}
-	}
-
-	bs, err := basic.List()
-
-	if err != nil {
-		this.trace(err)
-	}
-	return bs
 }

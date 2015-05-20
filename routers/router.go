@@ -22,7 +22,6 @@ func init() {
 	beego.Router("/community", home, "get:Community")
 	beego.Router("/herstart", home, "get:HerStart")
 	beego.Router("/brand/:id", home, "get:Brand")
-	beego.Router("/home/info", home, "get:Info")
 	beego.AutoRouter(home)
 
 	// 社交帐户登录
@@ -35,13 +34,21 @@ func init() {
 	beego.Router("/my/save", act, "post:Post")
 	beego.AutoRouter(act)
 
-	// 公司
+	// 项目管理
 	com := &controllers.Company{}
 	beego.Router("/my/company", com, "get:Index")
 	beego.Router("/my/apply/:id", com, "get:Apply")
 	beego.Router("/company/:id", com)
 	//beego.Router("/company/list", com, "get:List")
 	beego.AutoRouter(com)
+
+	// 项目展示
+	item := &controllers.Item{}
+	beego.AutoRouter(item)
+
+	// 融资服务
+	apply := &controllers.Apply{}
+	beego.AutoRouter(apply)
 
 	// 后台管理
 	admin := &controllers.Admin{}

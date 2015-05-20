@@ -21,7 +21,7 @@
 <article class="container">
 	<div class="snow-row snow-row-1">
 		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 				<h4>{{.subTitle}}</h4>
 				<div class="pull-right">
 					<a class="submit-review" href="#"><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
@@ -32,7 +32,7 @@
 		</div>
 		<!--项目简介-->
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
 	
 				<form class="form-horizontal snow-form-1">
 					<div class="form-group">
@@ -130,8 +130,8 @@
 	
 	<div class="snow-row snow-row-7">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-			<div class="col-md-10 col-md-offset-2">
+			<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
+			<div class="col-md-10 col-xs-10 col-md-offset-2 col-xs-offset-2">
 				<h4>提示：</h4>
 				<p class="small">1. 请尽量完善项目信息，以便投资人及潜在的合作伙伴更充分地了解您。</p>
 				<p class="small">2. 项目的图文介绍、融资经历、团队信息都很重要。</p>
@@ -147,22 +147,7 @@
 <script src="/static/js/core.js" type="text/javascript" charset="utf-8"></script>
 <script src="/static/js/upload.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-	function showMessage(obj,msg,success){
-		if (success) {
-			obj.removeClass('alert-danger').addClass('alert-success').slideDown().html('<i class="fa fa-smile-o"></i> ,'+msg);
-		} else{
-			obj.removeClass('alert-success').addClass('alert-danger').slideDown().html('<i class="fa fa-frown-o"></i> ,'+msg);
-		}
-		setTimeout(function(){
-			obj.slideUp(600);
-		},5000)
-	}
-	function submit_disable(obj){
-		$('.btn[type="submit"]',obj).attr('disabled',true).prepend('<i class="fa fa-spinner fa-spin"></i> ');
-	}
-	function submit_enable(obj){
-		$('.btn[type="submit"]',obj).attr('disabled',false).find('i').remove();
-	}
+
 	
 	$(function(){
 		$('.snow-row-2').load('/company/GetContact/{{.companyId}}',function(){
@@ -213,7 +198,7 @@
 		// 国家发生变化
 		$('form.snow-form-1 select[name="country"]').change(function(){
 			// 读取城市选项
-			$.getJSON('/basic/city',{parentId:$(this).val()},function(json){
+			$.getJSON('/item/city',{parentId:$(this).val()},function(json){
 				if (json.ok) {
 					var _html=[];
 					$.each(json.data, function(index,item) {    
@@ -230,7 +215,7 @@
 			})
 		});
 		// 读取国家选项
-		$.getJSON('/basic/country',function(json){
+		$.getJSON('/item/country',function(json){
 			if (json.ok) {
 				var _html=[];
 				$.each(json.data, function(index,item) {    
@@ -246,7 +231,7 @@
 			}
 		});
 		// 公司领域
-		$.getJSON('/basic/field',function(json){
+		$.getJSON('/item/field',function(json){
 			if (json.ok) {
 				var _html=[],_field='{{.company.Field}}'.split(',');
 				
@@ -265,7 +250,7 @@
 		});
 		
 		// 运营状态
-		$.getJSON('/basic/state',function(json){
+		$.getJSON('/item/state',function(json){
 			if (json.ok) {
 				var _html=[];
 				$.each(json.data, function(index,item) {    

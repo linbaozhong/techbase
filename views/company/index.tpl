@@ -1,9 +1,6 @@
 <article class="container">
 	<div class="row">
-		<div class="col-md-1">
-
-		</div>
-		<div class="col-md-10">
+		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 			<h3>{{.subTitle}}</h3>
 			<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-30px;" href="/company/edit"><i class="fa fa-plus-circle"></i>&nbsp; 创建项目</a>
 	
@@ -11,9 +8,6 @@
 			<div class="" id="snow-list" style="margin-top: 30px;">
 
 			</div>
-		</div>
-		<div class="col-md-1">
-
 		</div>
 	</div>
 
@@ -28,7 +22,7 @@
 		if(item.creator=={{.account.Id}} && item.status < 1){
 			_url = '/company/edit/'+item.id
 		}else{
-			_url = '/company/info/'+item.id
+			_url = '/item/info/'+item.id
 		}
 		 _html.push('<div class="media row-id-'+item.id+'">');                                                         
 		 _html.push('<div class="media-left"><a href="'+_url+'"><img class="media-object" src="'+item.logo+'" style="width: 100px;"></a></div>');                                                         
@@ -45,7 +39,7 @@
 		 		break;
 		 	case 2:
 		 		_html.push('<span>审核通过</span>');
-		 		_rongzi = '<div class="pull-right"><a href="#">申请融资</a></div>';
+		 		_rongzi = '<div class="pull-right"><a href="/apply/index/'+item.id+'">申请融资</a></div>';
 		 		break;
 		 	default:
 		 		_html.push('<span>审核未通过</span> <span title="'+item.reason+'"><i class="fa fa-exclamation-circle"></i></span>');
@@ -53,7 +47,7 @@
 		 		break;
 		 }
 		 
-		 _html.push('<div class="pull-right"><i class="fa fa-eye"></i>&nbsp;'+item.readed+'</div>');
+		 _html.push('<div class="pull-right small"><i class="fa fa-eye"></i>&nbsp;'+item.readed+'</div>');
 		 _html.push('</div><p>');
 		 _html.push(item.intro);                                                         
 		 _html.push('</p>');

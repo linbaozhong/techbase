@@ -215,6 +215,7 @@ type Members struct {
 	Place     int    `json:"place"`
 	Title     string `json:"title" valid:"MaxSize(50)"`
 	Avatar    string `json:"avatar" valid:"MaxSize(250)"`
+	Intro     string `json:"intro" valid:"MaxSize(250)"`
 	Deleted   int    `json:"deleted"`
 	Updator   int64  `json:"updator"`
 	Updated   int64  `json:"updated"`

@@ -60,3 +60,15 @@ func (this *Auth) Prepare() {
 func (this *Auth) Finish() {
 
 }
+
+/////////////////////////////////////
+/*
+* 检查用户提交的数据是否自己项目的数据
+ */
+func (this *Auth) exists(id int64) bool {
+	com := new(models.Company)
+	com.Id = id
+	com.AccountId = this.currentUser.Id
+
+	return com.Exists()
+}

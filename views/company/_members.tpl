@@ -49,6 +49,12 @@
 					<input class="form-control" name="title" placeholder="如: CEO/COO" value="">
 				</div>
 			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">简介</label>
+				<div class="col-sm-9">
+					<textarea class="form-control" name="intro" placeholder="简介"></textarea>
+				</div>
+			</div>
 	
 			<div class="form-group">
 				<label for="inputIntro" class="col-sm-3 control-label">
@@ -135,7 +141,7 @@
 		if(snow.place){
 			memberPlaceOptions();
 		}else{
-			$.getJSON('/basic/place',function(json){
+			$.getJSON('/item/place',function(json){
 				if (json.ok) {
 					snow.place = json.data;
 					memberPlaceOptions();
@@ -160,6 +166,7 @@
 					_form.find('input[name="name"]').val(json.data.name);
 					_form.find('input[name="title"]').val(json.data.title);
 					_form.find('select[name="place"]').val(json.data.place);
+					_form.find('textarea[name="intro"]').text(json.data.intro);
 					_form.find('.snow-upload-target img').attr('src',json.data.avatar);
 				} else{
 					showMessage($('.snow-alert-5'),json.message,false);
