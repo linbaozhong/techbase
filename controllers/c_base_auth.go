@@ -65,10 +65,14 @@ func (this *Auth) Finish() {
 /*
 * 检查用户提交的数据是否自己项目的数据
  */
-func (this *Auth) exists(id int64) bool {
+func (this *Auth) exists(id int64, any ...bool) bool {
 	com := new(models.Company)
 	com.Id = id
-	com.AccountId = this.currentUser.Id
 
-	return com.Exists()
+	if len(any) > 0 && any[0] {
+		return com.Exists()
+	} else {
+		com.AccountId = this.currentUser.Id
+		return com.Exists()
+	}
 }

@@ -39,7 +39,7 @@ func (this *Admin) Index() {
 	this.setTplNames("index")
 }
 
-// 审核公司
+// 项目审核
 func (this *Admin) Company() {
 	com := new(models.Company)
 	//com.Status, _ = this.GetInt("status")
@@ -48,6 +48,35 @@ func (this *Admin) Company() {
 	cs, _ := com.AllList()
 
 	this.Data["companys"] = cs
+}
+
+// 提交审核
+func (this *Admin) SubmitAudit() {
+	id, err := this.GetInt64("id")
+
+	if err != nil || id <= 0 {
+		this.renderJson(utils.JsonResult(false, "", models.Err("缺乏相应的参数")))
+		return
+	}
+
+	com := new(models.Company)
+	com.Id = id
+	com.Status, _ = this.GetInt("status")
+	com.Reason = this.GetString("reason")
+
+	// 检查要提交数据的项目是否存在，防止第三方恶意写入
+	if !this.exists(id, true) {
+		this.renderJson(utils.JsonResult(false, "", models.Err("项目主体错误或不存在")))
+		return
+	}
+
+	this.extend(com)
+
+	if err := com.SetStatus(); err == nil {
+		this.renderJson(utils.JsonResult(true, "", com))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
 }
 
 // 账户管理

@@ -95,6 +95,7 @@ jQuery弹窗插件 By 哈利蔺特
 	};
 })(jQuery);
 
+snow = snow || {};
 
 	snow.confirm = function(msg) {
 		return confirm(msg);
@@ -123,3 +124,6 @@ jQuery弹窗插件 By 哈利蔺特
 		}, 5000)
 	}
 
+snow.refresh = function(){
+	window.location = window.location;
+}

@@ -1,8 +1,6 @@
 package models
 
-import (
-//"fmt"
-)
+import ()
 
 type Company struct {
 	Id          int64  `json:"id"`
@@ -75,7 +73,15 @@ func (this *Company) Save() (error, []Error) {
 
 //
 func (this *Company) Exists() bool {
-	n, err := db.Where("id=? and accountId=?", this.Id, this.AccountId).Count(this)
+	var n int64
+	var err error
+
+	//if len(any) > 0 && any[0] {
+	//	n, err = db.Where("id=?", this.Id).Count(this)
+	//} else {
+	//	n, err = db.Where("id=? and accountId=?", this.Id, this.AccountId).Count(this)
+	//}
+	n, err = db.Count(this)
 	if err == nil {
 		return n > 0
 	} else {
@@ -85,7 +91,7 @@ func (this *Company) Exists() bool {
 
 // 更改审核状态
 func (this *Company) SetStatus() error {
-	_, err := db.Id(this.Id).Cols("status", "updator", "updated", "ip").Update(this)
+	_, err := db.Id(this.Id).Cols("status", "reason", "updator", "updated", "ip").Update(this)
 	return err
 }
 
