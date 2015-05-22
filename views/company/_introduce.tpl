@@ -118,7 +118,7 @@
 		}
 		
 		$("form.snow-form-3 .snow-upload-target").upload({
-		    label: "<i class=\"fa fa-plus\"></i>",
+		    label: '上传图片',//"<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
 		    action:'/up'
 		}).on("filestart.upload", function(){})

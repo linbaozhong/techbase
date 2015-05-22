@@ -30,7 +30,7 @@ func (this *Company) Edit() {
 
 	// 如果已经提交审核，禁止编辑，跳转至项目信息页
 	if id > 0 && (com.Creator != this.currentUser.Id || com.Status > 0) {
-		this.Redirect(fmt.Sprintf("/company/info/%d", id), 302)
+		this.Redirect(fmt.Sprintf("/item/info/%d", id), 302)
 		this.end()
 	}
 

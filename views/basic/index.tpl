@@ -92,6 +92,8 @@
 		$.each(list, function(index,item) {   
 			push_item(item);
 		});
+		
+		snow.footerBottom();
 	}
 		
 	// 读取数据列表

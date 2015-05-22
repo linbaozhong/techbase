@@ -18,7 +18,7 @@ func (this *Admin) Prepare() {
 	this.Auth.Prepare()
 
 	// 要求管理员以上级别访问权限
-	if this.currentUser.Role == models.Role_Administrator || this.currentUser.Role == models.Role_System {
+	if this.currentUser.Role == models.Role_Auditor || this.currentUser.Role == models.Role_Administrator || this.currentUser.Role == models.Role_System {
 
 	} else {
 		if this.IsAjax() {

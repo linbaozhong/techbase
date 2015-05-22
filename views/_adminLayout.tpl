@@ -30,6 +30,8 @@
 						<li class="menu {{if eq .index "index"}} active {{end}}" data-rel = "submenu-1"><a href="javascript:;">基础数据</a>
 						</li>
 						{{end}}
+						<li class="{{if eq .index "item"}} active {{end}}"><a href="javascript:;">创业项目</a></li>
+						<li class="{{if eq .index "apply"}} active {{end}}"><a href="javascript:;">投资机构/人</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li id="avatar" class="menu snow-profile" data-rel = "submenu-0">
@@ -124,7 +126,7 @@
 		});
 
 		// 页脚自适应沉底，页眉自适应浮动
-		function footerBottom(){
+		snow.footerBottom = function(){
 			// 页脚
 			var _footer_0 = $('#footer_0'),
 				_footer = $('#footer');
@@ -135,11 +137,11 @@
 		};
 		// 全部图片加载完成后，重置页脚
 		$('img').load(function(){
-			footerBottom();
+			snow.footerBottom();
 		});
 		
 		$(window).resize(function() {
-			footerBottom();
+			snow.footerBottom();
 		}).scroll(function() {
 			if ($(document).scrollTop() > 50) {
 //				$('header.navbar-fixed-top').addClass('header_shadow');

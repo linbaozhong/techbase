@@ -109,7 +109,7 @@
 		});
 		
 		$("form.snow-form-4 .snow-upload-target").upload({
-		    label: "<i class=\"fa fa-plus\"></i>",
+		    label: '<span style="display:block;font-size:1.3em;margin-top:-8px;">上传</span><span>微信二维码</span>',//"<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
 		    action:'/up',
 		    postData:{}

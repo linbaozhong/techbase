@@ -246,7 +246,7 @@
 		});
 		//
 		$("form.snow-form-5 .snow-upload-target").upload({
-		    label: "<i class=\"fa fa-plus\"></i>",
+		    label: '<span style="display:block;font-size:1.3em;margin-top:-8px;">上传头像</span><span>点击选择照片</span>',//"<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
 		    action:'/up/avatar',
 		    postData:{width:100,height:100}

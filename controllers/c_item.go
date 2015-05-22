@@ -9,6 +9,17 @@ type Item struct {
 	Front
 }
 
+// 塔项目列表
+func (this *Item) Index() {
+	com := new(models.Company)
+	com.Status = 2 //已审核通过的公司
+
+	cs, _ := com.AllList()
+
+	this.Data["companys"] = cs
+	this.Data["index"] = "items"
+}
+
 // 项目详情
 func (this *Item) Info() {
 	id, _ := this.GetInt64("0")

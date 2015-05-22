@@ -42,7 +42,7 @@ func (this *Company) List() ([]Company, error) {
 func (this *Company) AllList() ([]Company, error) {
 	cs := make([]Company, 0)
 
-	err := db.Where("status=? and deleted=?", this.Status, Undelete).Find(&cs)
+	err := db.Where("status = ? and deleted = ?", this.Status, Undelete).Find(&cs)
 
 	return cs, err
 }
@@ -112,9 +112,9 @@ type Contact struct {
 	Title     string `json:"title" valid:"MaxSize(50)"`
 	Year      int    `json:"year" valid:"Required;"`
 	Month     int    `json:"month" valid:"Required;"`
-	Tel       string `json:"tel" valid:"MaxSize(50)"`
-	Weixin    string `json:"weixin" valid:"MaxSize(50)"`
-	Email     string `json:"email" valid:"MaxSize(250)"`
+	Tel       string `json:"tel" valid:"Required;MaxSize(50)"`
+	Weixin    string `json:"weixin" valid:"Required;MaxSize(50)"`
+	Email     string `json:"email" valid:"Required;MaxSize(250)"`
 	Linkedin  string `json:"linkedin" valid:"MaxSize(250)"`
 	Updator   int64  `json:"updator"`
 	Updated   int64  `json:"updated"`

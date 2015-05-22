@@ -306,7 +306,7 @@
 		});
 		
 		$(".slides .snow-upload-target").upload({
-		    label: "<i class=\"fa fa-plus\"></i>",
+		    label: '上传项目<br>Logo',//"<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
 		    action:'/up/avatar',
 		    postData:{width:100,height:100}

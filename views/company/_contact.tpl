@@ -67,7 +67,7 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>手机号码</label>
 			<div class="col-sm-9">
-				<input class="form-control" required name="tel" placeholder="手机号码" value="{{.contact.Tel}}">
+				<input type="tel" class="form-control" required name="tel" placeholder="手机号码" value="{{.contact.Tel}}">
 			</div>
 		</div>
 		<div class="form-group">
@@ -77,9 +77,9 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-3 control-label">E_Mail</label>
+			<label class="col-sm-3 control-label"><span class="snow-required">*</span>E_Mail</label>
 			<div class="col-sm-9">
-				<input type="email" class="form-control" name="email" placeholder="E_Mail" value="{{.contact.Email}}">
+				<input type="email" class="form-control" required name="email" placeholder="E_Mail" value="{{.contact.Email}}">
 			</div>
 		</div>
 		<div class="form-group">
