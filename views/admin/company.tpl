@@ -17,24 +17,23 @@
 					</div>
 					<div class="media-body">
 						<div><span class="media-heading lead">{{$company.Name}}</span> 
+							<div class="pull-right" style="display: inline-flex;margin-left: 20px;">
+								<input class="" type="checkbox" name="startup" value="{{$company.Id}}" {{if eq $company.Startup 1}}checked{{end}} />
+								大赛项目
+							</div>	
 							{{if eq $company.Status 0}}
 							<span>未提交审核</span>
-							<div class="pull-right">
-							</div>
 							{{else if eq $company.Status 1}}
 							<span>正在审核中</span>
 							<div class="pull-right">
-								<a id="snow-btn-valid" href="javascript:;" data-id="{{$company.Id}}">审核</a>
+								<a class="snow-btn-valid" href="javascript:;" data-id="{{$company.Id}}">审核</a>
 							</div>
 							{{else if eq $company.Status 2}}
 							<span>审核通过</span>
-							<div class="pull-right">
-							</div>
 							{{else}}
 							<span>审核未通过</span>
-							<div class="pull-right">
-							</div>
 							{{end}}
+						
 							<p>{{$company.Intro}}</p>
 						</div>
 					</div>
@@ -50,14 +49,20 @@
 			<input type="hidden" name="id" id="id" value="0" />
 			<div class="form-group text-center">
 				<label class="control-label">
-					<input class="" required type="radio" name="status" id="" value="2" />
+					<input class="" required type="radio" name="status" value="2" />
 					审核通过
 				</label>
 				<label class="control-label">
-					<input class="" required type="radio" name="status" id="" value="-1" />
+					<input class="" required type="radio" name="status" value="-1" />
 					审核未通过
 				</label>
 			</div>
+			<!--<div class="form-group text-center">
+				<label class="control-label">
+					<input class="" required type="checkbox" name="startup" value="1" />
+					参加大赛项目
+				</label>
+			</div>-->
 			<div class="form-group">
 				<label class="control-label">审核未通过的原因:</label>
 				<textarea class="form-control" name="reason" rows="" cols=""></textarea>
@@ -71,7 +76,7 @@
 <script type="text/javascript">
 	$(function() {
 
-		$('#snow-btn-valid').click(function(e){
+		$('.snow-btn-valid').click(function(e){
 			$('form.snow-form-1 input[name="id"]').val($(this).data('id'));
 			
 			$('#snow-wrap-valid').popWindow({
@@ -80,7 +85,20 @@
 				close: '<span><i class="fa fa-times"></i></span>'
 			});
 		});
-		// 
+		// 设置大赛项目
+		$('input[name="startup"]').click(function(){
+			var _this = $(this),
+				_id = _this.val(),
+				_startup = _this.is(':checked') ? 1 : 0;
+				
+			$.getJSON('/admin/startup',{id:_id,startup:_startup},function(json){
+				if(json.ok){
+					
+				}else{
+					
+				}
+			});
+		});
 		
 		// 提交审核
 		$('form.snow-form-1').submit(function(e){

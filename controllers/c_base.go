@@ -267,7 +267,7 @@ func (this *Base) renderJson(data interface{}) {
 
 //返回jsonp响应
 func (this *Base) renderJsonp(data interface{}) {
-	this.setJsonData(data)
+	this.Data["jsonp"] = data
 	this.ServeJsonp()
 	this.end()
 }

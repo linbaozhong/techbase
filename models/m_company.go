@@ -1,6 +1,8 @@
 package models
 
-import ()
+import (
+//"strings"
+)
 
 type Company struct {
 	Id          int64  `json:"id"`
@@ -18,8 +20,9 @@ type Company struct {
 	State       int    `json:"state"`   //运营状态
 	Status      int    `json:"status"`  //审核状态
 	Reason      string `json:"reason"`  //审核未通过的原因
+	Startup     int    `json"startup"`  //是否大赛项目
 	Readed      int    `json:"readed"`  //阅读次数
-	Apply       int    `json:"apply"`   //融资状态
+	Apply       int    `json:"apply"`   //融资状态 0-未申请，1-已申请，2-融资中，3-融资成功，4-融资失败
 	ApplyId     int64  `json:"applyId"` //对应的融资协议
 	Deleted     int    `json:"deleted"`
 	Creator     int64  `json:"creator"`
@@ -29,7 +32,7 @@ type Company struct {
 	Ip          string `json:"ip" valid:"MaxSize(23)"`
 }
 
-// 列表
+// 当前用户的项目列表
 func (this *Company) List() ([]Company, error) {
 	cs := make([]Company, 0)
 
@@ -43,6 +46,31 @@ func (this *Company) AllList() ([]Company, error) {
 	cs := make([]Company, 0)
 
 	err := db.Where("status = ? and deleted = ?", this.Status, Undelete).Find(&cs)
+
+	return cs, err
+}
+
+// 全部融资状态公司列表
+func (this *Company) ApplyList(top int) ([]Company, error) {
+	cs := make([]Company, 0)
+
+	if top > 0 {
+		db.Limit(top)
+	}
+
+	err := db.Where("apply = ? and status = ? and deleted = ?", this.Apply, Audit_Yes, Undelete).Desc("updated").Find(&cs)
+
+	return cs, err
+}
+
+// 参加大赛的公司列表
+func (this *Company) StartupList(top int) ([]Company, error) {
+	cs := make([]Company, 0)
+
+	if top > 0 {
+		db.Limit(top)
+	}
+	err := db.Where("startup = ? and status = ? and deleted = ?", this.Startup, Audit_Yes, Undelete).Desc("updated").Find(&cs)
 
 	return cs, err
 }
@@ -87,6 +115,12 @@ func (this *Company) Exists() bool {
 	} else {
 		return false
 	}
+}
+
+// 设置为大赛项目
+func (this *Company) SetStartup() error {
+	_, err := db.Id(this.Id).Cols("startup", "updator", "updated", "ip").Update(this)
+	return err
 }
 
 // 更改审核状态
@@ -285,6 +319,14 @@ type Loops struct {
 func (this *Loops) List() ([]Loops, error) {
 	ls := make([]Loops, 0)
 	err := db.Where("companyId=? and deleted=?", this.CompanyId, Undelete).Find(&ls)
+	return ls, err
+}
+
+// 最新一轮融资
+func (this *Loops) ListByCompany(ids string) ([]Loops, error) {
+	ls := make([]Loops, 0)
+	err := db.Sql("select max(loop) as loop,amountmoney,amount,investor,companyid from loops where companyid in ("+ids+") and deleted=? group by companyid", Undelete).Find(&ls)
+	//err := db.Where("companyId=? and deleted=?", this.CompanyId, Undelete).Find(&ls)
 	return ls, err
 }
 

@@ -9,7 +9,7 @@ type Item struct {
 	Front
 }
 
-// 塔项目列表
+// 全部审核通过的项目列表
 func (this *Item) Index() {
 	com := new(models.Company)
 	com.Status = 2 //已审核通过的公司
@@ -89,6 +89,23 @@ func (this *Item) Loop() {
 func (this *Item) Money() {
 	bs := this.getOptions(models.Type_Money)
 	this.renderJson(utils.JsonResult(true, "", bs))
+}
+
+// 全部基础数据
+func (this *Item) Basic() {
+	basic := new(models.Basic)
+	bs, err := basic.All()
+
+	if err == nil {
+		if callback := this.GetString("callback"); callback != "" {
+			this.renderJsonp(bs)
+		} else {
+			this.renderJson(utils.JsonResult(true, "", bs))
+		}
+	} else {
+		this.trace(err)
+		this.renderJson(utils.JsonResult(false, "", models.Error(models.Err(err.Error()))))
+	}
 }
 
 // 读取选项

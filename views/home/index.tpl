@@ -1,89 +1,3 @@
-<style type="text/css">
-	.banner .small {
-		font-size: 0.7em;
-		font-weight: initial;
-		line-height: normal;
-	}
-	.slideshow {
-		overflow: hidden;
-		font-weight: bold;
-		line-height: 1.5;
-		position: relative;
-	}
-	.slideshow * {
-		color: #fff;
-	}
-	.slideshow > .banner-nav {
-		text-align: center;
-		position: absolute;
-		width: 100%;
-		bottom: 10px;
-	}
-	.slideshow > .banner-nav span {
-		display: inline-block;
-		cursor: pointer;
-		margin: 0 3px;
-		-webkit-transition: background-color 0.2s;
-		transition: background-color 0.2s;
-	}
-	.slideshow > .banner-nav span:before {
-		font: normal normal normal 14px/1 FontAwesome;
-		width: 32px;
-		font-size: 14px;
-		content: "\f10c";
-	}
-	.slideshow > .banner-nav span.current:before {
-		content: "\f111";
-	}
-	.slides {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		position: relative;
-		height: 425px;
-		width: 100%;
-		overflow: hidden;
-		color: #333;
-	}
-	.slides > li {
-		-webkit-perspective: 1600px;
-		perspective: 1600px;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		padding: 180px 80px 60px;
-		display: none;
-		height: 100%;
-		background-size: cover;
-		background-position-x: center;
-		background-position-y: center;
-	}
-	.slides > li.banner-1 {
-		background-image: url(/html/images/banner02.png);
-	}
-	.slides > li.banner-2 {
-		background-image: url(/html/images/banner01.png);
-	}
-	.slides .description {
-		width: 100%;
-		height: 100%;
-		font-size: 1.5em;
-		position: relative;
-		z-index: 1000;
-		letter-spacing: .2em;
-	}
-	.slides .description h2 {
-		font-size: 200%;
-	}
-	.slides > li.current,
-	.slides > li.show {
-		display: block;
-	}
-	.more-brand {
-		text-align: right;
-	}
-</style>
 <div class="banner">
 	<div class="slideshow">
 		<ol class="slides">
@@ -114,58 +28,116 @@
 	</div>
 </div>
 <div class="container">
+	{{if gt (len .startup) 0}}
 	<div class="brand-zone row">
-		<p class="more-brand"><a class="link" href="/brandshow">更多 <span class="fa fa-angle-right"></span></a>
-		</p>
+		<div>
+			<p class="pull-right"><a class="link" href="/item/index">更多 <span class="fa fa-angle-right"></span></a>
+			</p>
+			<h5>Her Startup女性创业大赛</h5>
+		</div>
+		{{$loops := .startupLoop}}
+		{{range $index,$company := .startup}}
 		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
-			<div class="brand-card" style="background-image: url(/html/brand/1.png);">
-				<div style="background:rgba(255,255,255,0.8);height:100%;">
-					<div class="logo-img">
-						<a href="/brand/3">
-							<img src="/html/brand/logo_1.png" class="img-circle img-responsive" alt="图片呢"> </a>
-					</div>
-					<div class="brand-footer">
-						<h4 class="brand-name"><a href="/brand/3" class="edit-text" data-edit="name" data-name="品牌名">么么搭</a></h4>
-						<h5 class="brand-financ edit-text" data-edit="industry" data-name="行业">消费生活</h5> </div>
-					<div class="row brand-info">
-						<p>通过聚合主流国内外时尚站点的物品，通过增强的搜索系统和过滤系统为用户推荐混搭套装</p>
-					</div>
+			<div class="brand-card">
+				<div class="pull-right small" style="padding: 5px;">
+					<span>
+						{{if eq $company.Apply 0}}
+							尚未申请融资
+						{{else if eq $company.Apply 1}}
+							正在融资中
+						{{else if eq $company.Apply 2}}
+							正在融资中
+						{{else if eq $company.Apply 3}}
+							融资完成
+						{{else if eq $company.Apply 4}}
+							融资未成功
+						{{end}}
+					</span>&nbsp;&nbsp;
+					<i class="fa fa-eye"></i>&nbsp;{{$company.Readed}}
 				</div>
+				<div class="logo-img">
+					<a href="/item/info/{{$company.Id}}">
+						<img src="{{$company.Logo}}" class="img-circle" alt=""> </a>
+				</div>
+				<div class="brand-footer">
+					<h4 class="brand-name"><a href="/item/info/{{$company.Id}}">{{$company.Name}}</a></h4>
+					<p>{{$company.Intro}}</p> 
+				</div>
+				{{range $i,$loop := $loops}}
+					{{if eq $loop.CompanyId $company.Id}}
+					<div class="brand-info">
+						<div class="col-md-5 brand-loop" data-value="{{$loop.Loop}}">&nbsp;</div>
+						<div class="col-md-5 col-md-offset-2">{{$loop.Investor}}</div>
+					</div>
+					<div class="brand-info">
+						<div class="col-md-5">
+							<span class="brand-money" data-value="{{$loop.AmountMoney}}"></span>
+							{{$loop.Amount}}万
+						</div>
+					</div>
+					{{end}}
+				{{end}}
 			</div>
 		</div>
-		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
-			<div class="brand-card" style="background-image: url(/html/brand/2.png);">
-				<div style="background:rgba(255,255,255,0.8);height:100%;">
-					<div class="logo-img">
-						<a href="/brand/6">
-							<img src="/html/brand/logo_2.jpg" class="img-circle img-responsive" alt="图片呢"> </a>
-					</div>
-					<div class="brand-footer">
-						<h4 class="brand-name"><a href="/brand/6" class="edit-text" data-edit="name" data-name="品牌名">LingoX</a></h4>
-						<h5 class="brand-financ edit-text" data-edit="industry" data-name="行业">旅游|社交</h5> </div>
-					<div class="row brand-info">
-						<p>提供搜索与活动发布功能，帮助喜爱自由行、喜欢文化探索及喜欢交友的年轻人，特别是外国旅行者找到当地人并结交朋友</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
-			<div class="brand-card" style="background-image: url(/html/brand/3.png);">
-				<div style="background:rgba(255,255,255,0.8);height:100%;">
-					<div class="logo-img">
-						<a href="/brand/7">
-							<img src="/html/brand/logo_3.png" class="img-circle img-responsive" alt="图片呢"> </a>
-					</div>
-					<div class="brand-footer">
-						<h4 class="brand-name"><a href="/brand/7" class="edit-text" data-edit="name" data-name="品牌名">暖丘</a></h4>
-						<h5 class="brand-financ edit-text" data-edit="industry" data-name="行业">医疗健康</h5> </div>
-					<div class="row brand-info">
-						<p>一个心理关怀服务的社区，为普通人提供和心理咨询师对接和互动的创新渠道；面向关怀师（心理咨询师）提供自助合作接入的平台，面向用户提供随时随地解决情绪问题的求助资源</p>
-					</div>
-				</div>
-			</div>
-		</div>
+		{{end}}
 	</div>
+	{{end}}
+
+	{{if gt (len .apply) 0}}
+	<div class="brand-zone row snow-padding-top-40">
+		<div>
+			<p class="pull-right"><a class="link" href="/item/index">更多 <span class="fa fa-angle-right"></span></a>
+			</p>
+			<h5>正在融资</h5>
+		</div>
+		{{$loops := .applyLoop}}
+		{{range $index,$company := .apply}}
+		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
+			<div class="brand-card">
+				<div class="pull-right small" style="padding: 5px;">
+					<span>
+						{{if eq $company.Apply 0}}
+							尚未申请融资
+						{{else if eq $company.Apply 1}}
+							正在融资中
+						{{else if eq $company.Apply 2}}
+							正在融资中
+						{{else if eq $company.Apply 3}}
+							融资完成
+						{{else if eq $company.Apply 4}}
+							融资未成功
+						{{end}}
+					</span>&nbsp;&nbsp;
+					<i class="fa fa-eye"></i>&nbsp;{{$company.Readed}}
+				</div>
+				<div class="logo-img">
+					<a href="/item/info/{{$company.Id}}">
+						<img src="{{$company.Logo}}" class="img-circle" alt=""> </a>
+				</div>
+				<div class="brand-footer">
+					<h4 class="brand-name"><a href="/item/info/{{$company.Id}}">{{$company.Name}}</a></h4>
+					<p>{{$company.Intro}}</p> 
+				</div>
+				{{range $i,$loop := $loops}}
+					{{if eq $loop.CompanyId $company.Id}}
+					<div class="brand-info">
+						<div class="col-md-5 brand-loop" data-value="{{$loop.Loop}}">&nbsp;</div>
+						<div class="col-md-5 col-md-offset-2">{{$loop.Investor}}</div>
+					</div>
+					<div class="brand-info">
+						<div class="col-md-5">
+							<span class="brand-money" data-value="{{$loop.AmountMoney}}"></span>
+							{{$loop.Amount}}万
+						</div>
+					</div>
+					{{end}}
+				{{end}}
+			</div>
+		</div>
+		{{end}}
+	</div>
+	{{end}}
+
 </div>
 <script type="text/javascript">
 	(function($) {
@@ -197,5 +169,44 @@
 			start($(this).index());
 		});
 		slideshow();
-	})(jQuery)
+	})(jQuery);
+	
+	$(function(){
+		function getBasicName(type,value){
+			var _name='';
+			$.each(snow.basic,function(i,item){
+				if(item.type==type && item.value==value){
+					_name = item.name;
+					return false;
+				}
+			});
+			return _name;
+		}
+		function setBasic(){
+			// 融资
+			$('.brand-loop').each(function(i,item){
+				var _this = $(item),_loop = _this.data('value');
+				_this.text(getBasicName(6,_loop));
+			});
+			// 币种
+			$('.brand-money').each(function(i,item){
+				var _this = $(item),_money = _this.data('value');
+				_this.text(getBasicName(7,_money));
+			});
+		}
+		
+		// 基础数据
+		if(snow.basic){
+			setBasic();
+		}else{
+			$.getJSON('/item/basic',function(json){
+				if(json.ok){
+					snow.basic = json.data;
+					setBasic();
+				}else{
+					
+				}
+			});
+		}
+	});
 </script>

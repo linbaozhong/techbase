@@ -28,7 +28,7 @@
 				<div class="col-sm-9">
 					<span class="small"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
 					<div class="snow-upload-target" style="width:100px;height:100px;">
-						<img src="{{.Company.Avatar}}"/>
+						<img src="/static/img/avatar.png"/>
 					</div>
 				</div>
 			</div>
@@ -246,7 +246,7 @@
 		});
 		//
 		$("form.snow-form-5 .snow-upload-target").upload({
-		    label: '<span style="display:block;font-size:1.3em;margin-top:-8px;">上传头像</span><span>点击选择照片</span>',//"<i class=\"fa fa-plus\"></i>",
+		    label: '',//'<span style="display:block;font-size:1.3em;margin-top:-8px;">上传头像</span><span>点击选择照片</span>',
 		    accept:'.jpg,.jpeg,.gif,.png',
 		    action:'/up/avatar',
 		    postData:{width:100,height:100}

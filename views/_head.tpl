@@ -8,6 +8,10 @@
 		<!--<link rel="stylesheet" href="/static/css/default.css">-->
 		<script type="text/javascript">
 			var snow = snow || {};
+			function basicJsonp(json){
+				snow.basic = json;
+				console.log(snow.basic);
+			}
 			snow.writeJs = function(jsurl){
 				var _script = document.createElement('script');
 				_script.setAttribute('src',jsurl);
@@ -22,6 +26,6 @@
 //				snow.writeJs('http://cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.min.js');
 //			}
 		</script>
-		
+		<script src="/item/basic/?callback=basicJsonp" type="text/javascript" charset="UTF-8"></script>
 		<script src="/static/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>

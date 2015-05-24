@@ -238,9 +238,11 @@
 //						console.log('Login failed');
 //					}
 //				});
+				return true;
 			} else {
 				$('.snow-profile').hide();
 				$('.login').show();
+				return false;
 			}
 		};
 		snow.checkin(true);

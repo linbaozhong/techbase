@@ -97,33 +97,37 @@ jQuery弹窗插件 By 哈利蔺特
 
 snow = snow || {};
 
-	snow.confirm = function(msg) {
-		return confirm(msg);
-	};
+snow.confirm = function(msg) {
+	return confirm(msg);
+};
 
-	snow.alert = function(msg) {
-		alert(msg);
-	}
-
-	function submit_disable(obj) {
-		$('.btn[type="submit"]', obj).attr('disabled', true).prepend('<i class="fa fa-spinner fa-spin"></i> ');
-	}
-
-	function submit_enable(obj) {
-		$('.btn[type="submit"]', obj).attr('disabled', false).find('i').remove();
-	}
-
-	function showMessage(obj, msg, success) {
-		if (success) {
-			obj.removeClass('alert-danger').addClass('alert-success').slideDown().html('<i class="fa fa-smile-o"></i> ,' + msg);
-		} else {
-			obj.removeClass('alert-success').addClass('alert-danger').slideDown().html('<i class="fa fa-frown-o"></i> ,' + msg);
-		}
-		setTimeout(function() {
-			obj.slideUp(600);
-		}, 5000)
-	}
+snow.alert = function(msg) {
+	alert(msg);
+}
 
 snow.refresh = function(){
 	window.location = window.location;
+}
+
+snow.go = function(u){
+	window.location = u;
+}
+
+function submit_disable(obj) {
+	$('.btn[type="submit"]', obj).attr('disabled', true).prepend('<i class="fa fa-spinner fa-spin"></i> ');
+}
+
+function submit_enable(obj) {
+	$('.btn[type="submit"]', obj).attr('disabled', false).find('i').remove();
+}
+
+function showMessage(obj, msg, success) {
+	if (success) {
+		obj.removeClass('alert-danger').addClass('alert-success').slideDown().html('<i class="fa fa-smile-o"></i> ,' + msg);
+	} else {
+		obj.removeClass('alert-success').addClass('alert-danger').slideDown().html('<i class="fa fa-frown-o"></i> ,' + msg);
+	}
+	setTimeout(function() {
+		obj.slideUp(600);
+	}, 5000)
 }

@@ -249,7 +249,7 @@
 				return;
 			}
 			// 计算移动的距离
-			var _left = _obj.position().left+300;
+			var _left = _obj.position().left + 400;
 			_left = _left > 0 ? 0:_left;
 			
 			_obj.animate({
@@ -264,7 +264,7 @@
 				return;
 			}
 			// 计算移动的距离
-			var _left = _obj.position().left-300;
+			var _left = _obj.position().left - 400;
 			
 			_left = _left <= _obj.parent().width()-_obj.width() ? _obj.parent().width()-_obj.width() : _left;
 			
@@ -273,87 +273,139 @@
 			});
 		});
 		
+		function setBasic(){
+			var _loop='',
+				_field_opts=[],
+				_field='{{.company.Field}}'.split(',');
+				
+			$.each(snow.basic,function(i,item){
+				switch (item.type){
+					case 2://城市
+						if (item.value == '{{.company.City}}') {
+							$('#company-city').text(item.name);
+						}
+						break;
+					case 3://行业
+						if ($.inArray(item.value.toString(),_field) != -1) {
+							_field_opts.push(item.name);                                                          
+						}
+						break;
+					case 4://运营状态
+						if (item.value == '{{.company.State}}') {
+							$('#company-state').text(item.name);
+						}
+						break;
+					case 5:// 修复创始成员
+						$('.snow-member-' + item.value).text(item.name);
+						break;
+					case 6://融资轮次
+						$('.snow-loop-'+item.value).text(item.name);
+						_loop = item.name;
+						break;
+					case 7://币种
+						$('.snow-money-'+item.value).addClass('fa-'+item.alias);
+						break;
+					default:
+						break;
+				}
+				$('.company-field').text(_field_opts.join(' '));
+				$('.company-loop').text(_loop);
+			});
+		}
+		// 基础数据
+		if(snow.basic){
+			setBasic();
+		}else{
+			$.getJSON('/item/basic',function(json){
+				if(json.ok){
+					snow.basic = json.data;
+					setBasic();
+				}else{
+					
+				}
+			});
+		}
 		
-		$.getJSON('/item/place', function(json) {
-			//console.log(json);
-			if (json.ok) {
-				$.each(json.data, function(index, item) {
-					//snow.place = json.data;
-					// 修复创始成员
-					$('.snow-member-' + item.value).text(item.name);
-				});
-			} else {}
-		});
-		// 读取城市选项
-		$.getJSON('/item/city',{parentId:'{{.company.Country}}'},function(json){
-			//console.log(json);
-			if (json.ok) {
-				$.each(json.data, function(index,item) {    
-					if (item.value == '{{.company.City}}') {
-						$('#company-city').text(item.name);
-						return false;
-					}
-				});
-			} else{
-				
-			}
-		})
-		// 公司领域
-		$.getJSON('/item/field',function(json){
-			//console.log('{{.company.Field}}',json);
-			if (json.ok) {
-				var _html=[],_field='{{.company.Field}}'.split(',');
-				
-				$.each(json.data, function(index,item) {    
-					if ($.inArray(item.value.toString(),_field) != -1) {
-						_html.push(item.name);                                                          
-					}
-				});
-				$('.company-field').text(_html.join(' '));
-			} else{
-				
-			}
-		});
-		// 运营状态
-		$.getJSON('/item/state',function(json){
-			//console.log(json);
-			if (json.ok) {
-				$.each(json.data, function(index,item) {    
-					if (item.value == '{{.company.State}}') {
-						$('#company-state').text(item.name);
-						return false;
-					}
-				});
-			} else{
-				
-			}
-		});
-		// 读取融资轮次
-		$.getJSON('/item/loop',function(json){
-			var _loop=''
-			if (json.ok) {
-				$.each(json.data, function(index,item) {    
-					// 修复融资经历时间线
-					$('.snow-loop-'+item.value).text(item.name);
-					_loop = item.name;
-				});
-			} else{
-				
-			}
-			$('.company-loop').text(_loop);
-		});
+//		$.getJSON('/item/place', function(json) {
+//			//console.log(json);
+//			if (json.ok) {
+//				$.each(json.data, function(index, item) {
+//					//snow.place = json.data;
+//					// 修复创始成员
+//					$('.snow-member-' + item.value).text(item.name);
+//				});
+//			} else {}
+//		});
+//		// 读取城市选项
+//		$.getJSON('/item/city',{parentId:'{{.company.Country}}'},function(json){
+//			//console.log(json);
+//			if (json.ok) {
+//				$.each(json.data, function(index,item) {    
+//					if (item.value == '{{.company.City}}') {
+//						$('#company-city').text(item.name);
+//						return false;
+//					}
+//				});
+//			} else{
+//				
+//			}
+//		})
+//		// 公司领域
+//		$.getJSON('/item/field',function(json){
+//			//console.log('{{.company.Field}}',json);
+//			if (json.ok) {
+//				var _html=[],_field='{{.company.Field}}'.split(',');
+//				
+//				$.each(json.data, function(index,item) {    
+//					if ($.inArray(item.value.toString(),_field) != -1) {
+//						_html.push(item.name);                                                          
+//					}
+//				});
+//				$('.company-field').text(_html.join(' '));
+//			} else{
+//				
+//			}
+//		});
+//		// 运营状态
+//		$.getJSON('/item/state',function(json){
+//			//console.log(json);
+//			if (json.ok) {
+//				$.each(json.data, function(index,item) {    
+//					if (item.value == '{{.company.State}}') {
+//						$('#company-state').text(item.name);
+//						return false;
+//					}
+//				});
+//			} else{
+//				
+//			}
+//		});
+//		// 读取融资轮次
+//		$.getJSON('/item/loop',function(json){
+//			var _loop='';
+//			if (json.ok) {
+//				$.each(json.data, function(index,item) {    
+//					// 修复融资经历时间线
+//					$('.snow-loop-'+item.value).text(item.name);
+//					_loop = item.name;
+//				});
+//			} else{
+//				
+//			}
+//			$('.company-loop').text(_loop);
+//		});
 		
-		// 读取币种
-		$.getJSON('/item/money',function(json){
-			if (json.ok) {
-				$.each(json.data, function(index,item) {    
-					// 修复融资经历时间线
-					$('.snow-money-'+item.value).addClass('fa-'+item.alias);
-				});
-			} else{
-				
-			}
-		});
+//		// 读取币种
+//		$.getJSON('/item/money',function(json){
+//			if (json.ok) {
+//				$.each(json.data, function(index,item) {    
+//					// 修复融资经历时间线
+//					$('.snow-money-'+item.value).addClass('fa-'+item.alias);
+//				});
+//			} else{
+//				
+//			}
+//		});
 		
 		
 	});

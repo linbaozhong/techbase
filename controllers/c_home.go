@@ -1,7 +1,8 @@
 package controllers
 
 import (
-	//"techbase/models"
+	"strings"
+	"techbase/models"
 	"zouzhe/utils"
 )
 
@@ -9,8 +10,46 @@ type Home struct {
 	Front
 }
 
+// 首页
 func (this *Home) Get() {
 	this.Data["index"] = "index"
+	com := new(models.Company)
+	//大赛的项目
+	com.Startup = 1
+	cs, _ := com.StartupList(3)
+	this.Data["startup"] = cs
+	//融资情况
+	ids := make([]string, len(cs))
+	for i, c := range cs {
+		ids[i] = utils.Int642str(c.Id)
+	}
+
+	if len(ids) > 0 {
+		loop := new(models.Loops)
+		ls, _ := loop.ListByCompany(strings.Join(ids, ","))
+		this.Data["startupLoop"] = ls
+	} else {
+		this.Data["startupLoop"] = make([]models.Loops, 0)
+	}
+
+	//融资完成的项目
+	com.Apply = 3
+	cs, _ = com.ApplyList(3)
+	this.Data["apply"] = cs
+	//融资情况
+	ids = make([]string, len(cs))
+	for i, c := range cs {
+		ids[i] = utils.Int642str(c.Id)
+	}
+
+	if len(ids) > 0 {
+		loop := new(models.Loops)
+		ls, _ := loop.ListByCompany(strings.Join(ids, ","))
+		this.Data["applyLoop"] = ls
+	} else {
+		this.Data["applyLoop"] = make([]models.Loops, 0)
+	}
+
 	this.setTplNames("index")
 }
 

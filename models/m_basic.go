@@ -17,8 +17,26 @@ type Basic struct {
 	Ip       string `json:"ip"`
 }
 
+// 全部列表
+func (this *Basic) All() ([]Basic, error) {
+	bs := make([]Basic, 0)
+
+	err := db.Cols("id", "parentid", "type", "name", "value", "alias").Where("status=? and deleted=?", Unlock, Undelete).Find(&bs)
+
+	return bs, err
+}
+
 // 列表
 func (this *Basic) List() ([]Basic, error) {
+	bs := make([]Basic, 0)
+
+	err := db.Where("parentid=? and type=? and status=? and deleted=?", this.ParentId, this.Type, Unlock, Undelete).Find(&bs)
+
+	return bs, err
+}
+
+// 列表
+func (this *Basic) ListEx() ([]Basic, error) {
 	bs := make([]Basic, 0)
 
 	err := db.Where("parentid=? and type=? and deleted=?", this.ParentId, this.Type, Undelete).Find(&bs)

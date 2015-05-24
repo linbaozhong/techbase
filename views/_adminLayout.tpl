@@ -21,9 +21,11 @@
 					</div>
 					<ul class="nav navbar-nav" style="margin-left:40px;">
 						{{if lt .account.Role 3 }}
-						<li class="{{if eq .index "index"}} active {{end}}"><a href="/admin/company">项目审核</a>
+						<li class="{{if eq .index "article"}} active {{end}}"><a href="/admin/media">媒体管理</a>
 						</li>
-						<li class="{{if eq .index "index"}} active {{end}}"><a href="/admin/account">账户管理</a>
+						<li class="{{if eq .index "company"}} active {{end}}"><a href="/admin/company">项目审核</a>
+						</li>
+						<li class="{{if eq .index "account"}} active {{end}}"><a href="/admin/account">账户管理</a>
 						</li>
 						{{end}}
 						{{if lt .account.Role 2 }}
@@ -60,6 +62,9 @@
 		<div class="submenu submenu-1">
 			<i class="fa fa-caret-up"></i>
 			<ul class="">
+				<li><a href="/basic/index/8">媒体分类</a>
+				</li>
+				<li><hr /></li>
 				<li><a href="/basic/index/0">国家</a>
 				</li>
 				<li><a href="/basic/index/2">城市</a>
@@ -83,9 +88,6 @@
 
 </html>
 <script type="text/javascript">
-	snow.confirm = function(msg){
-		return confirm(msg);
-	};
 
 	$(function() {
 		//

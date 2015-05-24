@@ -40,6 +40,8 @@ func (this *Basic) Index() {
 		subTitle = "运营状态"
 	case typeid == models.Type_Money:
 		subTitle = "币种"
+	case typeid == models.Type_Media:
+		subTitle = "媒体分类标签"
 	}
 
 	this.Data["subTitle"] = subTitle
@@ -56,7 +58,7 @@ func (this *Basic) List() {
 	basic.Type = typeId
 	basic.ParentId = parentId
 
-	bs, _ := basic.List()
+	bs, _ := basic.ListEx()
 
 	this.renderJson(utils.JsonResult(true, "", bs))
 }

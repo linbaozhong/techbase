@@ -50,9 +50,11 @@ func init() {
 	apply := &controllers.Apply{}
 	beego.AutoRouter(apply)
 
+	// 媒体管理
+	article := &controllers.Article{}
+	beego.AutoRouter(article)
 	// 后台管理
 	admin := &controllers.Admin{}
-
 	beego.AutoRouter(admin)
 
 	// 基础数据管理

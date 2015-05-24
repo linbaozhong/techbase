@@ -34,9 +34,23 @@ func (this *Admin) Prepare() {
 	}
 }
 
-//
-func (this *Admin) Index() {
-	this.setTplNames("index")
+// 媒体管理
+func (this *Admin) Media() {
+	// 读取分页规则
+	p := new(models.Pagination)
+
+	if size, err := this.GetInt("size"); err != nil || size == 0 {
+		p.Size = 20
+	}
+	p.Index, _ = this.GetInt("index")
+
+	art := new(models.Articles)
+
+	// 读取全部文章
+	as, _ := art.ListEx(p, "")
+
+	this.Data["index"] = "article"
+	this.Data["articles"] = as
 }
 
 // 项目审核
@@ -47,7 +61,36 @@ func (this *Admin) Company() {
 
 	cs, _ := com.AllList()
 
+	this.Data["index"] = "company"
 	this.Data["companys"] = cs
+}
+
+// 指定为大赛项目
+func (this *Admin) Startup() {
+	id, err := this.GetInt64("id")
+
+	if err != nil || id <= 0 {
+		this.renderJson(utils.JsonResult(false, "", models.Err("缺乏相应的参数")))
+		return
+	}
+
+	com := new(models.Company)
+	com.Id = id
+	com.Startup, _ = this.GetInt("startup")
+
+	// 检查要提交数据的项目是否存在，防止第三方恶意写入
+	if !this.exists(id, true) {
+		this.renderJson(utils.JsonResult(false, "", models.Err("项目主体错误或不存在")))
+		return
+	}
+
+	this.extend(com)
+
+	if err := com.SetStartup(); err == nil {
+		this.renderJson(utils.JsonResult(true, "", com))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
 }
 
 // 提交审核
@@ -63,6 +106,7 @@ func (this *Admin) SubmitAudit() {
 	com.Id = id
 	com.Status, _ = this.GetInt("status")
 	com.Reason = this.GetString("reason")
+	com.Startup, _ = this.GetInt("startup")
 
 	// 检查要提交数据的项目是否存在，防止第三方恶意写入
 	if !this.exists(id, true) {
@@ -88,6 +132,7 @@ func (this *Admin) Account() {
 	// 读取低于当前用户角色的可用账户列表
 	as, _ := act.AllList()
 
+	this.Data["index"] = "account"
 	this.Data["accounts"] = as
 
 	// 角色选择框
@@ -139,3 +184,5 @@ func (this *Admin) UpdateStatus() {
 		this.renderJson(utils.JsonResult(false, "", err.Error()))
 	}
 }
+
+//////////////////////////////////////
