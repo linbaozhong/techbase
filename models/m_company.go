@@ -2,6 +2,7 @@ package models
 
 import (
 	"fmt"
+	"github.com/go-xorm/xorm"
 	"strings"
 	"zouzhe/utils"
 )
@@ -428,10 +429,18 @@ func (this *Loops) Delete() error {
 	return err
 }
 
-// 读取指定融资轮的公司id
-func (this *Loops) GetCompany(loop int) (ids []int64) {
+// 读取指定融资轮次的公司id
+func (this *Loops) GetCompany(loop int, companyIds []int64) (ids []int64) {
+	//rows, err := db.Distinct("companyId").Where("max(loop)=?", loop).Rows(this)
+	var rows *xorm.Rows
+	var err error
 
-	rows, err := db.Distinct("companyId").Where("loop=?", loop).Rows(this)
+	if ids == nil || len(ids) == 0 {
+		rows, err = db.Sql("select distinct companyid from (select companyid, max(loop) as loop from loops group by companyid) where loop = ?", loop).Rows(this)
+	} else {
+		rows, err = db.Sql("select distinct companyid from (select companyid, max(loop) as loop from loops group by companyid) where companyId in (?) and loop = ?", utils.Int64s2Strings(companyIds), loop).Rows(this)
+	}
+
 	if err != nil {
 		return
 	}
