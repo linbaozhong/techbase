@@ -108,7 +108,7 @@ func (this *Basic) Status() {
 // 取当前类型的最大取值
 func (this *Basic) MaxValue() {
 	basic := new(models.Basic)
-	basic.ParentId, _ = this.GetInt64("parentId")
+	//basic.ParentId, _ = this.GetInt64("parentId")
 	basic.Type, _ = this.GetInt("typeId")
 
 	has, err := basic.MaxValue()

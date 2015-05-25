@@ -59,7 +59,7 @@ func (this *Admin) Company() {
 	//com.Status, _ = this.GetInt("status")
 	com.Status = 1 //已提交审核的公司
 
-	cs, _ := com.AllList()
+	cs, _ := com.AllList(nil)
 
 	this.Data["index"] = "company"
 	this.Data["companys"] = cs

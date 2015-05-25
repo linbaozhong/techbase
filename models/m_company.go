@@ -1,7 +1,9 @@
 package models
 
 import (
-//"strings"
+	"fmt"
+	"strings"
+	"zouzhe/utils"
 )
 
 type Company struct {
@@ -42,12 +44,30 @@ func (this *Company) List() ([]Company, error) {
 }
 
 // 全部未删除公司列表
-func (this *Company) AllList() ([]Company, error) {
-	cs := make([]Company, 0)
+func (this *Company) AllList(ids []int64) (cs []Company, err error) {
 
-	err := db.Where("status = ? and deleted = ?", this.Status, Undelete).Find(&cs)
+	session := db.Where("status=? and deleted=?", this.Status, Undelete)
+	// ids=nil 没有id条件
+	if ids != nil {
+		// ids条件为空，没有符合条件的记录，直接返回
+		if len(ids) == 0 {
+			return
+		} else {
+			session.In("id", ids)
+		}
+	}
+	if this.Apply != -1 {
+		session.And("apply=?", this.Apply)
+	}
+	if this.City != -1 {
+		session.And("city=?", this.City)
+	}
+	if this.Startup != -1 {
+		session.And("Startup=?", this.Startup)
+	}
+	err = session.Find(&cs)
 
-	return cs, err
+	return
 }
 
 // 全部融资状态公司列表
@@ -91,11 +111,56 @@ func (this *Company) Save() (error, []Error) {
 	if err != nil {
 		return err, es
 	}
-	if this.Id == 0 {
-		_, err = db.Insert(this)
-	} else {
-		_, err = db.Where("id=? and accountId=?", this.Id, this.AccountId).Omit("deleted", "status", "creator", "created").Update(this)
+
+	session := db.NewSession()
+	defer session.Close()
+	// 事务开始
+	err = session.Begin()
+
+	if err != nil {
+		session.Rollback()
+		return err, nil
 	}
+
+	// 保存项目
+	if this.Id == 0 {
+		_, err = session.Insert(this)
+	} else {
+		_, err = session.Where("id=? and accountId=?", this.Id, this.AccountId).Cols("Name", "CompanyName", "Fullname", "Website", "Logo", "Intro", "City", "Country", "StartTime", "Field", "State", "Updator", "Updated", "Ip").Update(this)
+	}
+
+	if err != nil {
+		session.Rollback()
+		return err, nil
+	}
+
+	// 修改公司所属行业映射关系
+	// 首先删除旧的关系
+	_, err = session.Exec("delete from fieldCompany where companyId = ?", this.Id)
+	fmt.Println(err)
+	if err != nil {
+		session.Rollback()
+		return err, nil
+	}
+	// 批量插入新的数据
+	if _fields := strings.Split(this.Field, ","); len(_fields) > 0 {
+
+		fcs := make([]FieldCompany, len(_fields))
+		for i, f := range _fields {
+			fcs[i].CompanyId = this.Id
+			fcs[i].FieldId = utils.Str2int64(f)
+		}
+
+		_, err = session.Insert(&fcs)
+		if err != nil {
+			session.Rollback()
+			return err, nil
+		}
+	}
+
+	// 提交事务
+	err = session.Commit()
+
 	return err, nil
 }
 
@@ -323,10 +388,17 @@ func (this *Loops) List() ([]Loops, error) {
 }
 
 // 最新一轮融资
-func (this *Loops) ListByCompany(ids string) ([]Loops, error) {
+func (this *Loops) ListByCompany(ids []int64) ([]Loops, error) {
 	ls := make([]Loops, 0)
-	err := db.Sql("select max(loop) as loop,amountmoney,amount,investor,companyid from loops where companyid in ("+ids+") and deleted=? group by companyid", Undelete).Find(&ls)
-	//err := db.Where("companyId=? and deleted=?", this.CompanyId, Undelete).Find(&ls)
+
+	_ids := make([]string, len(ids))
+	for i, id := range ids {
+		_ids[i] = utils.Int642str(id)
+	}
+
+	err := db.Sql("select max(loop) as loop,amountmoney,amount,investor,companyid from loops where companyid in ("+strings.Join(_ids, ",")+") and deleted=? group by companyid", Undelete).Find(&ls)
+
+	fmt.Println(ls)
 	return ls, err
 }
 
@@ -354,4 +426,22 @@ func (this *Loops) Get() (bool, error) {
 func (this *Loops) Delete() error {
 	_, err := db.Id(this.Id).Cols("deleted", "updator", "updated", "ip").Update(this)
 	return err
+}
+
+// 读取指定融资轮的公司id
+func (this *Loops) GetCompany(loop int) (ids []int64) {
+
+	rows, err := db.Distinct("companyId").Where("loop=?", loop).Rows(this)
+	if err != nil {
+		return
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		if rows.Scan(this) == nil {
+			ids = append(ids, this.CompanyId)
+		}
+	}
+	fmt.Println("---", ids)
+	return
 }

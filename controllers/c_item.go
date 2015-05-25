@@ -12,9 +12,71 @@ type Item struct {
 // 全部审核通过的项目列表
 func (this *Item) Index() {
 	com := new(models.Company)
+	ids := make([]int64, 0)
+	// 融资状态
+	if apply, err := this.GetInt("apply"); err == nil && (apply == 2 || apply == 3) {
+		this.Data["apply"] = apply
+		com.Apply = apply
+	} else {
+		this.Data["apply"] = -1
+		com.Apply = -1
+	}
+	// 行业
+	if field, err := this.GetInt("field"); err == nil && field >= 0 {
+		this.Data["field"] = field
+		ids = new(models.FieldCompany).GetCompanyId(utils.Int2str(field))
+	} else {
+		this.Data["field"] = -1
+		ids = nil
+	}
+	// 城市
+	if city, err := this.GetInt("city"); err == nil && city >= 0 {
+		this.Data["city"] = city
+		com.City = city
+	} else {
+		this.Data["city"] = -1
+		com.City = -1
+	}
+	// 是否大赛项目
+	if source, err := this.GetInt("source"); err == nil {
+		this.Data["source"] = source
+		com.Startup = source
+	} else {
+		this.Data["source"] = -1
+		com.Startup = -1
+	}
+	// 融资轮次
+	if loop, err := this.GetInt("loop"); err == nil {
+		this.Data["loop"] = loop
+		// 读取已融资的项目
+		loopIds := new(models.Loops).GetCompany(loop)
+		this.trace(ids, loopIds)
+		if len(ids) == 0 {
+			ids = loopIds
+		} else if len(loopIds) > 0 {
+			// 取交集
+			for _, i := range ids {
+				if has, _ := utils.Int64sContains(loopIds, i); !has {
+					ids = utils.RemoveInt64Slice(ids, i)
+				}
+			}
+		}
+	} else {
+		this.Data["loop"] = -1
+	}
+
 	com.Status = 2 //已审核通过的公司
 
-	cs, _ := com.AllList()
+	cs, _ := com.AllList(ids)
+
+	//项目融资情况
+	if len(ids) > 0 {
+		loop := new(models.Loops)
+		ls, _ := loop.ListByCompany(ids)
+		this.Data["applyLoop"] = ls
+	} else {
+		this.Data["applyLoop"] = make([]models.Loops, 0)
+	}
 
 	this.Data["companys"] = cs
 	this.Data["index"] = "items"

@@ -10,7 +10,7 @@
 			var snow = snow || {};
 			function basicJsonp(json){
 				snow.basic = json;
-				console.log(snow.basic);
+				//console.log(snow.basic);
 			}
 			snow.writeJs = function(jsurl){
 				var _script = document.createElement('script');

@@ -622,7 +622,7 @@ func (this *Base) upload(key string) (files []*models.UploadFile, err error) {
 * 跟踪
  */
 func (this *Base) trace(v ...interface{}) {
-	beego.Trace(fmt.Sprintf("%s/%s ", this.controllerName, this.actionName) + fmt.Sprintf("Info:%s", utils.Interface2str(v...)))
+	beego.Trace(fmt.Sprintf(" --------------- %s/%s ", this.controllerName, this.actionName) + fmt.Sprintf("Info:%s", utils.Interface2str(v...)))
 }
 
 /*

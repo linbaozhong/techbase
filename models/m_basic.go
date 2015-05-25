@@ -66,5 +66,5 @@ func (this *Basic) SetStatus() error {
 
 //
 func (this *Basic) MaxValue() (bool, error) {
-	return db.Where("type=? and parentid=? and deleted=?", this.Type, this.ParentId, Undelete).Limit(1).Desc("value").Get(this)
+	return db.Where("type=?", this.Type).Limit(1).Desc("value").Get(this)
 }

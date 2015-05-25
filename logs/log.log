@@ -13918,3 +13918,626 @@
 2015/05/24 19:24:40 [main.go:18] [I] tabenying 1.1.14.1105 
 2015/05/24 19:24:40 [app.go:96] [I] http server Running on :8080
 2015/05/24 19:24:43 [router.go:845] [D] | GET        | /                                        | 90.0052ms        | match      | /                                        | 
+2015/05/25 10:48:56 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 10:48:58 [app.go:96] [I] http server Running on :8080
+2015/05/25 10:50:08 [router.go:845] [D] | GET        | /                                        | 68.0039ms        | match      | /                                        | 
+2015/05/25 10:50:57 [router.go:845] [D] | GET        | /item/index                              | 80.0046ms        | match      | /item/index/*                            | 
+2015/05/25 11:02:50 [router.go:845] [D] | GET        | /item/index                              | 82.0047ms        | match      | /item/index/*                            | 
+2015/05/25 11:03:35 [router.go:845] [D] | GET        | /item/index                              | 42.0024ms        | match      | /item/index/*                            | 
+2015/05/25 11:06:50 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/25 11:08:34 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/25 11:20:11 [router.go:845] [D] | GET        | /item/index                              | 64.0036ms        | match      | /item/index/*                            | 
+2015/05/25 11:22:56 [router.go:845] [D] | GET        | /item/index                              | 57.0032ms        | match      | /item/index/*                            | 
+2015/05/25 11:25:53 [router.go:845] [D] | GET        | /item/index                              | 42.0024ms        | match      | /item/index/*                            | 
+2015/05/25 11:25:55 [router.go:845] [D] | GET        | /item/index                              | 62.0036ms        | match      | /item/index/*                            | 
+2015/05/25 11:25:58 [router.go:845] [D] | GET        | /item/index                              | 69.0039ms        | match      | /item/index/*                            | 
+2015/05/25 11:26:05 [router.go:845] [D] | GET        | /item/index                              | 54.0031ms        | match      | /item/index/*                            | 
+2015/05/25 11:26:14 [router.go:845] [D] | GET        | /item/index                              | 60.0034ms        | match      | /item/index/*                            | 
+2015/05/25 11:28:21 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 11:28:23 [router.go:845] [D] | GET        | /item/index                              | 54.0031ms        | match      | /item/index/*                            | 
+2015/05/25 11:28:26 [router.go:845] [D] | GET        | /item/index                              | 71.0041ms        | match      | /item/index/*                            | 
+2015/05/25 11:28:33 [router.go:845] [D] | GET        | /item/index                              | 45.0025ms        | match      | /item/index/*                            | 
+2015/05/25 11:28:35 [router.go:845] [D] | GET        | /item/index                              | 87.005ms         | match      | /item/index/*                            | 
+2015/05/25 11:28:41 [router.go:845] [D] | GET        | /item/index                              | 50.0029ms        | match      | /item/index/*                            | 
+2015/05/25 11:28:42 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 11:28:43 [router.go:845] [D] | GET        | /item/index                              | 70.004ms         | match      | /item/index/*                            | 
+2015/05/25 11:28:44 [router.go:845] [D] | GET        | /item/index                              | 46.0027ms        | match      | /item/index/*                            | 
+2015/05/25 11:28:44 [router.go:845] [D] | GET        | /item/index                              | 85.0049ms        | match      | /item/index/*                            | 
+2015/05/25 11:37:43 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 11:37:44 [app.go:96] [I] http server Running on :8080
+2015/05/25 11:40:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 11:40:58 [app.go:96] [I] http server Running on :8080
+2015/05/25 11:43:28 [router.go:845] [D] | GET        | /item/index                              | 87.005ms         | match      | /item/index/*                            | 
+2015/05/25 11:43:35 [router.go:845] [D] | GET        | /item/index                              | 66.0038ms        | match      | /item/index/*                            | 
+2015/05/25 11:44:48 [router.go:845] [D] | GET        | /item/index                              | 81.0047ms        | match      | /item/index/*                            | 
+2015/05/25 11:44:50 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/25 11:45:06 [router.go:845] [D] | GET        | /item/index                              | 68.0039ms        | match      | /item/index/*                            | 
+2015/05/25 11:45:12 [router.go:845] [D] | GET        | /item/index                              | 85.0049ms        | match      | /item/index/*                            | 
+2015/05/25 11:46:51 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 11:46:51 [app.go:96] [I] http server Running on :8080
+2015/05/25 11:46:53 [log.go:108] [D] Item/Index Info:apply,  3 
+2015/05/25 11:46:54 [router.go:845] [D] | GET        | /item/index                              | 75.0042ms        | match      | /item/index/*                            | 
+2015/05/25 11:47:47 [log.go:108] [D] Item/Index Info:apply,  3 
+2015/05/25 11:47:47 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/25 11:47:52 [log.go:108] [D] Item/Index Info:apply,  2 
+2015/05/25 11:47:52 [router.go:845] [D] | GET        | /item/index                              | 55.0032ms        | match      | /item/index/*                            | 
+2015/05/25 11:47:54 [log.go:108] [D] Item/Index Info:apply,  2 
+2015/05/25 11:47:54 [router.go:845] [D] | GET        | /item/index                              | 55.0031ms        | match      | /item/index/*                            | 
+2015/05/25 11:47:56 [log.go:108] [D] Item/Index Info:apply,  2 
+2015/05/25 11:47:56 [router.go:845] [D] | GET        | /item/index                              | 80.0045ms        | match      | /item/index/*                            | 
+2015/05/25 11:53:51 [log.go:108] [D] Item/Index Info:apply,  2 
+2015/05/25 11:53:51 [router.go:845] [D] | GET        | /item/index                              | 43.0024ms        | match      | /item/index/*                            | 
+2015/05/25 11:53:53 [log.go:108] [D] Item/Index Info:apply,  2 
+2015/05/25 11:53:53 [router.go:845] [D] | GET        | /item/index                              | 51.0029ms        | match      | /item/index/*                            | 
+2015/05/25 11:53:55 [log.go:108] [D] Item/Index Info:apply,  2 
+2015/05/25 11:53:55 [router.go:845] [D] | GET        | /item/index                              | 76.0044ms        | match      | /item/index/*                            | 
+2015/05/25 11:55:29 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 11:55:29 [app.go:96] [I] http server Running on :8080
+2015/05/25 13:54:05 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 13:54:09 [app.go:96] [I] http server Running on :8080
+2015/05/25 13:54:27 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 13:54:27 [app.go:96] [I] http server Running on :8080
+2015/05/25 13:56:16 [router.go:876] [C] the request url is  /item/index 
+2015/05/25 13:56:16 [router.go:877] [C] Handler crashed with error runtime error: index out of range 
+2015/05/25 13:56:16 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/25 13:56:16 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:552 
+2015/05/25 13:56:16 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:466 
+2015/05/25 13:56:16 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/models/m_fieldCompany.go:17 
+2015/05/25 13:56:16 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/controllers/c_item.go:26 
+2015/05/25 13:56:16 [router.go:883] [C] E:/Go/src/pkg/runtime/asm_386.s:383 
+2015/05/25 13:56:16 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:563 
+2015/05/25 13:56:16 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:411 
+2015/05/25 13:56:16 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:794 
+2015/05/25 13:56:16 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/25 13:56:16 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/25 13:56:16 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/25 13:57:18 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 13:57:18 [app.go:96] [I] http server Running on :8080
+2015/05/25 13:57:34 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 13:57:34 [app.go:96] [I] http server Running on :8080
+2015/05/25 13:57:37 [log.go:108] [D] Item/Index Info:[]int64{ } 
+2015/05/25 13:57:37 [router.go:845] [D] | GET        | /item/index                              | 62.0036ms        | match      | /item/index/*                            | 
+2015/05/25 13:59:28 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 13:59:28 [app.go:96] [I] http server Running on :8080
+2015/05/25 13:59:34 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 13:59:34 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:06:42 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:06:42 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:06:51 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:06:51 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:06:54 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 14:08:46 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:08:46 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:09:17 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:09:17 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:09:39 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:09:39 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:09:42 [log.go:108] [D]  --------------- Item/Index Info: 
+2015/05/25 14:09:42 [router.go:845] [D] | GET        | /item/index                              | 48.0027ms        | match      | /item/index/*                            | 
+2015/05/25 14:10:15 [log.go:108] [D]  --------------- Item/Index Info: 
+2015/05/25 14:10:15 [router.go:845] [D] | GET        | /item/index                              | 42.0024ms        | match      | /item/index/*                            | 
+2015/05/25 14:11:16 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:11:16 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:11:17 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:11:17 [router.go:876] [C] the request url is  /item/index 
+2015/05/25 14:11:17 [router.go:877] [C] Handler crashed with error runtime error: index out of range 
+2015/05/25 14:11:17 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/25 14:11:17 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:552 
+2015/05/25 14:11:17 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:466 
+2015/05/25 14:11:17 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/models/m_fieldCompany.go:30 
+2015/05/25 14:11:17 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/controllers/c_item.go:28 
+2015/05/25 14:11:17 [router.go:883] [C] E:/Go/src/pkg/runtime/asm_386.s:383 
+2015/05/25 14:11:17 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:563 
+2015/05/25 14:11:17 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:411 
+2015/05/25 14:11:17 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:794 
+2015/05/25 14:11:17 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/25 14:11:17 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/25 14:11:17 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/25 14:16:04 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:16:04 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:16:07 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:16:07 [router.go:845] [D] | GET        | /item/index                              | 93.0054ms        | match      | /item/index/*                            | 
+2015/05/25 14:17:15 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:17:15 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:17:17 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:17:17 [router.go:845] [D] | GET        | /item/index                              | 77.0044ms        | match      | /item/index/*                            | 
+2015/05/25 14:17:41 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:17:41 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:17:42 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:17:43 [router.go:845] [D] | GET        | /item/index                              | 86.0049ms        | match      | /item/index/*                            | 
+2015/05/25 14:19:10 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:19:10 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:19:21 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:19:21 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/25 14:20:24 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:20:24 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:21:10 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:21:10 [router.go:845] [D] | GET        | /item/index                              | 59.0033ms        | match      | /item/index/*                            | 
+2015/05/25 14:25:19 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:25:19 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:25:19 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:25:19 [router.go:845] [D] | GET        | /item/index                              | 75.0043ms        | match      | /item/index/*                            | 
+2015/05/25 14:26:15 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:26:15 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:26:19 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:26:19 [router.go:845] [D] | GET        | /item/index                              | 88.005ms         | match      | /item/index/*                            | 
+2015/05/25 14:34:38 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:34:38 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:34:43 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:34:43 [router.go:845] [D] | GET        | /item/index                              | 74.0043ms        | match      | /item/index/*                            | 
+2015/05/25 14:35:38 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:35:38 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:35:39 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:35:39 [router.go:845] [D] | GET        | /item/index                              | 77.0044ms        | match      | /item/index/*                            | 
+2015/05/25 14:37:15 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:37:15 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:37:16 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:37:17 [router.go:845] [D] | GET        | /item/index                              | 60.0034ms        | match      | /item/index/*                            | 
+2015/05/25 14:37:58 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:37:58 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:38:10 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:38:10 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/25 14:38:21 [log.go:108] [D]  --------------- Item/Index Info:0 
+2015/05/25 14:38:22 [router.go:845] [D] | GET        | /item/index                              | 54.0031ms        | match      | /item/index/*                            | 
+2015/05/25 14:38:24 [log.go:108] [D]  --------------- Item/Index Info:1 
+2015/05/25 14:38:24 [router.go:845] [D] | GET        | /item/index                              | 53.003ms         | match      | /item/index/*                            | 
+2015/05/25 14:38:26 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:38:26 [router.go:845] [D] | GET        | /item/index                              | 67.0038ms        | match      | /item/index/*                            | 
+2015/05/25 14:38:28 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:38:28 [router.go:845] [D] | GET        | /item/index                              | 84.0048ms        | match      | /item/index/*                            | 
+2015/05/25 14:42:34 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:42:34 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/25 14:42:39 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:42:39 [router.go:845] [D] | GET        | /item/index                              | 52.003ms         | match      | /item/index/*                            | 
+2015/05/25 14:42:41 [log.go:108] [D]  --------------- Item/Index Info:2 
+2015/05/25 14:42:41 [router.go:845] [D] | GET        | /item/index                              | 71.0041ms        | match      | /item/index/*                            | 
+2015/05/25 14:45:50 [router.go:845] [D] | GET        | /my/company                              | 42.0024ms        | match      | /my/company                              | 
+2015/05/25 14:45:55 [router.go:845] [D] | GET        | /basic/index/0                           | 68.0039ms        | match      | /basic/index/:typeId                     | 
+2015/05/25 14:46:54 [router.go:845] [D] | GET        | /basic/index/2                           | 83.0047ms        | match      | /basic/index/:typeId                     | 
+2015/05/25 14:50:03 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:50:03 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:50:13 [router.go:845] [D] | GET        | /basic/index/2                           | 85.0048ms        | match      | /basic/index/:typeId                     | 
+2015/05/25 14:52:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:52:40 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:52:43 [router.go:845] [D] | GET        | /basic/index/2                           | 70.004ms         | match      | /basic/index/:typeId                     | 
+2015/05/25 14:53:27 [router.go:845] [D] | GET        | /                                        | 50.0028ms        | match      | /                                        | 
+2015/05/25 14:53:29 [router.go:845] [D] | GET        | /item/index                              | 74.0042ms        | match      | /item/index/*                            | 
+2015/05/25 14:53:31 [router.go:845] [D] | GET        | /item/index                              | 73.0042ms        | match      | /item/index/*                            | 
+2015/05/25 14:53:33 [router.go:845] [D] | GET        | /item/index                              | 45.0025ms        | match      | /item/index/*                            | 
+2015/05/25 14:53:34 [router.go:845] [D] | GET        | /item/index                              | 70.004ms         | match      | /item/index/*                            | 
+2015/05/25 14:53:35 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/25 14:53:36 [router.go:845] [D] | GET        | /item/index                              | 82.0047ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:25 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:55:25 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:55:44 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:55:44 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:55:46 [router.go:845] [D] | GET        | /item/index                              | 57.0032ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:48 [router.go:845] [D] | GET        | /item/index                              | 55.0031ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:49 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:51 [router.go:845] [D] | GET        | /item/index                              | 44.0025ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:52 [router.go:845] [D] | GET        | /item/index                              | 86.0049ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:53 [router.go:845] [D] | GET        | /item/index                              | 72.0042ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:55 [router.go:845] [D] | GET        | /item/index                              | 45.0025ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:55 [router.go:845] [D] | GET        | /item/index                              | 51.0029ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:56 [router.go:845] [D] | GET        | /item/index                              | 64.0037ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:57 [router.go:845] [D] | GET        | /item/index                              | 48.0028ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:58 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 14:55:59 [router.go:845] [D] | GET        | /item/index                              | 51.0029ms        | match      | /item/index/*                            | 
+2015/05/25 14:56:53 [router.go:845] [D] | GET        | /item/index                              | 87.0049ms        | match      | /item/index/*                            | 
+2015/05/25 14:56:55 [router.go:845] [D] | GET        | /item/index                              | 43.0025ms        | match      | /item/index/*                            | 
+2015/05/25 14:56:56 [router.go:845] [D] | GET        | /item/index                              | 50.0029ms        | match      | /item/index/*                            | 
+2015/05/25 14:57:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:57:40 [app.go:96] [I] http server Running on :8080
+2015/05/25 14:57:42 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/25 14:59:39 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 14:59:39 [app.go:96] [I] http server Running on :8080
+2015/05/25 15:00:02 [router.go:845] [D] | GET        | /item/index                              | 53.003ms         | match      | /item/index/*                            | 
+2015/05/25 15:00:05 [router.go:845] [D] | GET        | /item/index                              | 60.0035ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:07 [router.go:845] [D] | GET        | /item/index                              | 88.005ms         | match      | /item/index/*                            | 
+2015/05/25 15:00:09 [router.go:845] [D] | GET        | /item/index                              | 59.0033ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:10 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:11 [router.go:845] [D] | GET        | /item/index                              | 55.0031ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:12 [router.go:845] [D] | GET        | /item/index                              | 86.0049ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:14 [router.go:845] [D] | GET        | /item/index                              | 71.0041ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:16 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:17 [router.go:845] [D] | GET        | /item/index                              | 52.0029ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:18 [router.go:845] [D] | GET        | /item/index                              | 84.0048ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:18 [router.go:845] [D] | GET        | /item/index                              | 50.0029ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:20 [router.go:845] [D] | GET        | /item/index                              | 78.0045ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:21 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:22 [router.go:845] [D] | GET        | /item/index                              | 55.0031ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:23 [router.go:845] [D] | GET        | /item/index                              | 77.0044ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:24 [router.go:845] [D] | GET        | /item/index                              | 55.0032ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:25 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:26 [router.go:845] [D] | GET        | /item/index                              | 86.0049ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:29 [router.go:845] [D] | GET        | /item/index                              | 57.0032ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:30 [router.go:845] [D] | GET        | /item/index                              | 55.0031ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:31 [router.go:845] [D] | GET        | /item/index                              | 54.0031ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:32 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:33 [router.go:845] [D] | GET        | /item/index                              | 57.0032ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:35 [router.go:845] [D] | GET        | /item/index                              | 84.0048ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:36 [router.go:845] [D] | GET        | /item/index                              | 65.0037ms        | match      | /item/index/*                            | 
+2015/05/25 15:00:37 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 15:02:09 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 15:03:28 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 15:03:28 [app.go:96] [I] http server Running on :8080
+2015/05/25 15:03:31 [router.go:845] [D] | GET        | /item/index                              | 55.0032ms        | match      | /item/index/*                            | 
+2015/05/25 15:03:45 [router.go:845] [D] | GET        | /item/index                              | 49.0028ms        | match      | /item/index/*                            | 
+2015/05/25 15:03:47 [router.go:845] [D] | GET        | /item/index                              | 64.0037ms        | match      | /item/index/*                            | 
+2015/05/25 15:03:49 [router.go:845] [D] | GET        | /item/index                              | 64.0037ms        | match      | /item/index/*                            | 
+2015/05/25 15:03:50 [router.go:845] [D] | GET        | /item/index                              | 75.0043ms        | match      | /item/index/*                            | 
+2015/05/25 15:04:01 [router.go:845] [D] | GET        | /item/index                              | 67.0039ms        | match      | /item/index/*                            | 
+2015/05/25 15:04:02 [router.go:845] [D] | GET        | /item/index                              | 52.0029ms        | match      | /item/index/*                            | 
+2015/05/25 15:04:04 [router.go:845] [D] | GET        | /item/index                              | 82.0047ms        | match      | /item/index/*                            | 
+2015/05/25 15:04:05 [router.go:845] [D] | GET        | /item/index                              | 60.0034ms        | match      | /item/index/*                            | 
+2015/05/25 15:04:05 [router.go:845] [D] | GET        | /item/index                              | 64.0037ms        | match      | /item/index/*                            | 
+2015/05/25 15:04:07 [router.go:845] [D] | GET        | /item/index                              | 88.0051ms        | match      | /item/index/*                            | 
+2015/05/25 15:04:08 [router.go:845] [D] | GET        | /item/index                              | 81.0046ms        | match      | /item/index/*                            | 
+2015/05/25 15:04:11 [router.go:845] [D] | GET        | /item/index                              | 73.0042ms        | match      | /item/index/*                            | 
+2015/05/25 15:04:12 [router.go:845] [D] | GET        | /item/index                              | 89.0051ms        | match      | /item/index/*                            | 
+2015/05/25 15:05:30 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 15:05:30 [app.go:96] [I] http server Running on :8080
+2015/05/25 15:11:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 15:11:40 [app.go:96] [I] http server Running on :8080
+2015/05/25 15:13:14 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 15:13:14 [app.go:96] [I] http server Running on :8080
+2015/05/25 15:17:48 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 15:17:48 [app.go:96] [I] http server Running on :8080
+2015/05/25 15:28:21 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 15:28:21 [app.go:96] [I] http server Running on :8080
+2015/05/25 15:28:47 [router.go:845] [D] | GET        | /item/index                              | 90.0051ms        | match      | /item/index/*                            | 
+2015/05/25 15:29:26 [router.go:845] [D] | GET        | /item/index                              | 81.0046ms        | match      | /item/index/*                            | 
+2015/05/25 15:29:35 [router.go:845] [D] | GET        | /item/index                              | 55.0032ms        | match      | /item/index/*                            | 
+2015/05/25 15:30:38 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 15:30:38 [app.go:96] [I] http server Running on :8080
+2015/05/25 15:30:50 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 15:30:50 [app.go:96] [I] http server Running on :8080
+2015/05/25 15:30:52 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 15:31:29 [router.go:845] [D] | GET        | /item/index                              | 55.0031ms        | match      | /item/index/*                            | 
+2015/05/25 15:31:39 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 15:31:44 [router.go:845] [D] | GET        | /item/index                              | 82.0047ms        | match      | /item/index/*                            | 
+2015/05/25 15:31:50 [router.go:845] [D] | GET        | /item/index                              | 66.0038ms        | match      | /item/index/*                            | 
+2015/05/25 15:32:58 [router.go:845] [D] | GET        | /                                        | 92.0053ms        | match      | /                                        | 
+2015/05/25 15:46:13 [router.go:845] [D] | GET        | /                                        | 52.003ms         | match      | /                                        | 
+2015/05/25 15:51:21 [router.go:845] [D] | GET        | /                                        | 86.0049ms        | match      | /                                        | 
+2015/05/25 15:52:55 [router.go:845] [D] | GET        | /                                        | 55.0031ms        | match      | /                                        | 
+2015/05/25 15:59:12 [router.go:845] [D] | GET        | /                                        | 83.0047ms        | match      | /                                        | 
+2015/05/25 15:59:28 [router.go:845] [D] | GET        | /                                        | 60.0035ms        | match      | /                                        | 
+2015/05/25 16:01:17 [router.go:845] [D] | GET        | /                                        | 67.0038ms        | match      | /                                        | 
+2015/05/25 16:02:36 [router.go:845] [D] | GET        | /                                        | 67.0038ms        | match      | /                                        | 
+2015/05/25 16:03:53 [router.go:845] [D] | GET        | /                                        | 60.0035ms        | match      | /                                        | 
+2015/05/25 16:04:00 [router.go:845] [D] | GET        | /item/index                              | 72.0042ms        | match      | /item/index/*                            | 
+2015/05/25 16:48:58 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 16:48:58 [app.go:96] [I] http server Running on :8080
+2015/05/25 16:49:15 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 16:49:15 [app.go:96] [I] http server Running on :8080
+2015/05/25 16:51:17 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 16:51:17 [app.go:96] [I] http server Running on :8080
+2015/05/25 16:51:49 [router.go:845] [D] | GET        | /item/index                              | 89.0051ms        | match      | /item/index/*                            | 
+2015/05/25 16:52:22 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 16:53:34 [router.go:845] [D] | GET        | /item/index                              | 57.0033ms        | match      | /item/index/*                            | 
+2015/05/25 16:53:51 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 16:53:54 [router.go:845] [D] | GET        | /item/index                              | 59.0033ms        | match      | /item/index/*                            | 
+2015/05/25 16:53:56 [router.go:845] [D] | GET        | /item/index                              | 87.0049ms        | match      | /item/index/*                            | 
+2015/05/25 16:53:57 [router.go:845] [D] | GET        | /item/index                              | 46.0027ms        | match      | /item/index/*                            | 
+2015/05/25 16:55:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 16:55:58 [app.go:96] [I] http server Running on :8080
+2015/05/25 16:56:20 [router.go:845] [D] | GET        | /item/index                              | 87.005ms         | match      | /item/index/*                            | 
+2015/05/25 16:56:22 [router.go:845] [D] | GET        | /item/index                              | 52.003ms         | match      | /item/index/*                            | 
+2015/05/25 16:56:26 [router.go:845] [D] | GET        | /item/index                              | 64.0037ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:27 [router.go:845] [D] | GET        | /item/index                              | 72.0041ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:28 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:33 [router.go:845] [D] | GET        | /item/index                              | 57.0032ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:34 [router.go:845] [D] | GET        | /item/index                              | 57.0032ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:35 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:42 [router.go:845] [D] | GET        | /item/index                              | 65.0037ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:44 [router.go:845] [D] | GET        | /item/index                              | 72.0041ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:45 [router.go:845] [D] | GET        | /item/index                              | 59.0033ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:46 [router.go:845] [D] | GET        | /item/index                              | 71.0041ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:48 [router.go:845] [D] | GET        | /item/index                              | 57.0033ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:49 [router.go:845] [D] | GET        | /item/index                              | 83.0047ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:50 [router.go:845] [D] | GET        | /item/index                              | 52.0029ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:52 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:55 [router.go:845] [D] | GET        | /item/index                              | 67.0038ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:56 [router.go:845] [D] | GET        | /item/index                              | 66.0037ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:57 [router.go:845] [D] | GET        | /item/index                              | 48.0028ms        | match      | /item/index/*                            | 
+2015/05/25 16:56:59 [router.go:845] [D] | GET        | /item/index                              | 60.0035ms        | match      | /item/index/*                            | 
+2015/05/25 16:57:00 [router.go:845] [D] | GET        | /item/index                              | 80.0046ms        | match      | /item/index/*                            | 
+2015/05/25 16:57:01 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 16:57:02 [router.go:845] [D] | GET        | /item/index                              | 71.004ms         | match      | /item/index/*                            | 
+2015/05/25 16:57:03 [router.go:845] [D] | GET        | /item/index                              | 51.0029ms        | match      | /item/index/*                            | 
+2015/05/25 16:57:05 [router.go:845] [D] | GET        | /item/index                              | 66.0037ms        | match      | /item/index/*                            | 
+2015/05/25 16:57:06 [router.go:845] [D] | GET        | /item/index                              | 46.0027ms        | match      | /item/index/*                            | 
+2015/05/25 16:57:07 [router.go:845] [D] | GET        | /item/index                              | 55.0031ms        | match      | /item/index/*                            | 
+2015/05/25 16:57:08 [router.go:845] [D] | GET        | /item/index                              | 69.004ms         | match      | /item/index/*                            | 
+2015/05/25 16:59:08 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 16:59:08 [app.go:96] [I] http server Running on :8080
+2015/05/25 16:59:11 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:12 [router.go:845] [D] | GET        | /item/index                              | 44.0025ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:13 [router.go:845] [D] | GET        | /item/index                              | 47.0027ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:16 [router.go:845] [D] | GET        | /item/index                              | 64.0037ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:17 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:21 [router.go:845] [D] | GET        | /item/index                              | 60.0035ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:21 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:22 [router.go:845] [D] | GET        | /item/index                              | 50.0028ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:24 [router.go:845] [D] | GET        | /item/index                              | 88.005ms         | match      | /item/index/*                            | 
+2015/05/25 16:59:25 [router.go:845] [D] | GET        | /item/index                              | 81.0046ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:26 [router.go:845] [D] | GET        | /item/index                              | 74.0043ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:26 [router.go:845] [D] | GET        | /item/index                              | 69.004ms         | match      | /item/index/*                            | 
+2015/05/25 16:59:27 [router.go:845] [D] | GET        | /item/index                              | 83.0048ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:29 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:29 [router.go:845] [D] | GET        | /item/index                              | 47.0027ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:33 [router.go:845] [D] | GET        | /item/index                              | 55.0032ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:34 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:45 [router.go:845] [D] | GET        | /item/index                              | 64.0036ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:46 [router.go:845] [D] | GET        | /item/index                              | 43.0024ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:47 [router.go:845] [D] | GET        | /item/index                              | 47.0027ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:48 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 16:59:48 [router.go:845] [D] | GET        | /item/index                              | 66.0038ms        | match      | /item/index/*                            | 
+2015/05/25 17:00:04 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/25 17:01:46 [router.go:845] [D] | GET        | /item/index                              | 86.0049ms        | match      | /item/index/*                            | 
+2015/05/25 17:01:47 [router.go:845] [D] | GET        | /item/index                              | 87.005ms         | match      | /item/index/*                            | 
+2015/05/25 17:01:52 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/25 17:01:55 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/25 17:01:56 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/25 17:01:57 [router.go:845] [D] | GET        | /item/index                              | 88.0051ms        | match      | /item/index/*                            | 
+2015/05/25 17:02:00 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/25 17:02:01 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 17:03:46 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:03:46 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:03:48 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:03:48 [router.go:845] [D] | GET        | /item/index                              | 52.003ms         | match      | /item/index/*                            | 
+2015/05/25 17:04:35 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1 } 
+2015/05/25 17:04:35 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/25 17:04:42 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:04:42 [router.go:845] [D] | GET        | /item/index                              | 62.0036ms        | match      | /item/index/*                            | 
+2015/05/25 17:04:47 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ 1, 2 } 
+2015/05/25 17:04:47 [router.go:845] [D] | GET        | /item/index                              | 90.0051ms        | match      | /item/index/*                            | 
+2015/05/25 17:09:32 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:09:32 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:11:42 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:11:42 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:11:49 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ 1, 2 } 
+2015/05/25 17:11:49 [router.go:845] [D] | GET        | /item/index                              | 54.0031ms        | match      | /item/index/*                            | 
+2015/05/25 17:11:50 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ 1 } 
+2015/05/25 17:11:50 [router.go:845] [D] | GET        | /item/index                              | 53.003ms         | match      | /item/index/*                            | 
+2015/05/25 17:11:52 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ } 
+2015/05/25 17:11:52 [router.go:845] [D] | GET        | /item/index                              | 62.0035ms        | match      | /item/index/*                            | 
+2015/05/25 17:11:53 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ } 
+2015/05/25 17:11:54 [router.go:845] [D] | GET        | /item/index                              | 53.003ms         | match      | /item/index/*                            | 
+2015/05/25 17:11:55 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ 1 } 
+2015/05/25 17:11:55 [router.go:845] [D] | GET        | /item/index                              | 53.003ms         | match      | /item/index/*                            | 
+2015/05/25 17:11:57 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ 1, 2 } 
+2015/05/25 17:11:57 [router.go:845] [D] | GET        | /item/index                              | 90.0052ms        | match      | /item/index/*                            | 
+2015/05/25 17:12:53 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ 1, 2 } 
+2015/05/25 17:12:53 [router.go:845] [D] | GET        | /item/index                              | 58.0034ms        | match      | /item/index/*                            | 
+2015/05/25 17:12:58 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ 1 } 
+2015/05/25 17:12:58 [router.go:845] [D] | GET        | /item/index                              | 73.0042ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:00 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ 1 } 
+2015/05/25 17:13:00 [router.go:845] [D] | GET        | /item/index                              | 65.0037ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:01 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ 1 } 
+2015/05/25 17:13:01 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:02 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ 1 } 
+2015/05/25 17:13:02 [router.go:845] [D] | GET        | /item/index                              | 65.0037ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:03 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ 1 } 
+2015/05/25 17:13:03 [router.go:845] [D] | GET        | /item/index                              | 62.0035ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:04 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ 1 } 
+2015/05/25 17:13:04 [router.go:845] [D] | GET        | /item/index                              | 83.0047ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:05 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ 1 } 
+2015/05/25 17:13:05 [router.go:845] [D] | GET        | /item/index                              | 79.0045ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:06 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ 1 } 
+2015/05/25 17:13:06 [router.go:845] [D] | GET        | /item/index                              | 74.0042ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:07 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ 1 } 
+2015/05/25 17:13:07 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:08 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ 1 } 
+2015/05/25 17:13:08 [router.go:845] [D] | GET        | /item/index                              | 49.0029ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:08 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ 1 } 
+2015/05/25 17:13:09 [router.go:845] [D] | GET        | /item/index                              | 87.005ms         | match      | /item/index/*                            | 
+2015/05/25 17:13:10 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ 1 } 
+2015/05/25 17:13:10 [router.go:845] [D] | GET        | /item/index                              | 62.0035ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:13 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ 1, 2 } 
+2015/05/25 17:13:13 [router.go:845] [D] | GET        | /item/index                              | 77.0044ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:14 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ } 
+2015/05/25 17:13:14 [router.go:845] [D] | GET        | /item/index                              | 51.0029ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:15 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ } 
+2015/05/25 17:13:15 [router.go:845] [D] | GET        | /item/index                              | 57.0032ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:17 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ } 
+2015/05/25 17:13:17 [router.go:845] [D] | GET        | /item/index                              | 70.004ms         | match      | /item/index/*                            | 
+2015/05/25 17:13:18 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:18 [router.go:845] [D] | GET        | /item/index                              | 81.0046ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:20 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:20 [router.go:845] [D] | GET        | /item/index                              | 55.0031ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:22 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:22 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:23 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:23 [router.go:845] [D] | GET        | /item/index                              | 51.0029ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:24 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:25 [router.go:845] [D] | GET        | /item/index                              | 46.0026ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:26 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:26 [router.go:845] [D] | GET        | /item/index                              | 54.0031ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:27 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:27 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:29 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:29 [router.go:845] [D] | GET        | /item/index                              | 48.0027ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:30 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:30 [router.go:845] [D] | GET        | /item/index                              | 48.0028ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:31 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:31 [router.go:845] [D] | GET        | /item/index                              | 47.0027ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:32 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:32 [router.go:845] [D] | GET        | /item/index                              | 47.0027ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:39 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:39 [router.go:845] [D] | GET        | /item/index                              | 60.0034ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:41 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:41 [router.go:845] [D] | GET        | /item/index                              | 80.0046ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:41 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:41 [router.go:845] [D] | GET        | /item/index                              | 72.0042ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:42 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:42 [router.go:845] [D] | GET        | /item/index                              | 48.0028ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:44 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:44 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:48 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:48 [router.go:845] [D] | GET        | /item/index                              | 82.0047ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:49 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:49 [router.go:845] [D] | GET        | /item/index                              | 53.003ms         | match      | /item/index/*                            | 
+2015/05/25 17:13:50 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:50 [router.go:845] [D] | GET        | /item/index                              | 48.0027ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:51 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:52 [router.go:845] [D] | GET        | /item/index                              | 55.0031ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:55 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:55 [router.go:845] [D] | GET        | /item/index                              | 88.005ms         | match      | /item/index/*                            | 
+2015/05/25 17:13:57 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:57 [router.go:845] [D] | GET        | /item/index                              | 53.003ms         | match      | /item/index/*                            | 
+2015/05/25 17:13:58 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:58 [router.go:845] [D] | GET        | /item/index                              | 79.0045ms        | match      | /item/index/*                            | 
+2015/05/25 17:13:59 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:13:59 [router.go:845] [D] | GET        | /item/index                              | 69.0039ms        | match      | /item/index/*                            | 
+2015/05/25 17:14:00 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:14:00 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/25 17:14:01 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:14:01 [router.go:845] [D] | GET        | /item/index                              | 60.0035ms        | match      | /item/index/*                            | 
+2015/05/25 17:14:03 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:14:03 [router.go:845] [D] | GET        | /item/index                              | 49.0028ms        | match      | /item/index/*                            | 
+2015/05/25 17:14:05 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 3 },  []int64{ } 
+2015/05/25 17:14:05 [router.go:845] [D] | GET        | /item/index                              | 77.0044ms        | match      | /item/index/*                            | 
+2015/05/25 17:14:06 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ } 
+2015/05/25 17:14:06 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/25 17:14:07 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ } 
+2015/05/25 17:14:07 [router.go:845] [D] | GET        | /item/index                              | 85.0049ms        | match      | /item/index/*                            | 
+2015/05/25 17:14:09 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ } 
+2015/05/25 17:14:09 [router.go:845] [D] | GET        | /item/index                              | 78.0044ms        | match      | /item/index/*                            | 
+2015/05/25 17:14:15 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ 1 } 
+2015/05/25 17:14:15 [router.go:845] [D] | GET        | /item/index                              | 67.0038ms        | match      | /item/index/*                            | 
+2015/05/25 17:14:16 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ 1, 2 } 
+2015/05/25 17:14:16 [router.go:845] [D] | GET        | /item/index                              | 52.0029ms        | match      | /item/index/*                            | 
+2015/05/25 17:14:18 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ 1, 2, 3 },  []int64{ } 
+2015/05/25 17:14:18 [router.go:845] [D] | GET        | /item/index                              | 62.0036ms        | match      | /item/index/*                            | 
+2015/05/25 17:24:43 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:24:43 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:24:52 [router.go:845] [D] | GET        | /                                        | 65.0037ms        | match      | /                                        | 
+2015/05/25 17:26:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:26:40 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:26:41 [router.go:845] [D] | GET        | /                                        | 73.0042ms        | match      | /                                        | 
+2015/05/25 17:26:43 [router.go:845] [D] | GET        | /                                        | 65.0037ms        | match      | /                                        | 
+2015/05/25 17:27:35 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:27:35 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:27:44 [router.go:845] [D] | GET        | /                                        | 70.004ms         | match      | /                                        | 
+2015/05/25 17:30:23 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:30:23 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:30:24 [router.go:845] [D] | GET        | /                                        | 60.0034ms        | match      | /                                        | 
+2015/05/25 17:30:28 [router.go:845] [D] | GET        | /                                        | 61.0035ms        | match      | /                                        | 
+2015/05/25 17:31:30 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:31:30 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:31:33 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:31:33 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:31:34 [router.go:845] [D] | GET        | /                                        | 50.0029ms        | match      | /                                        | 
+2015/05/25 17:34:36 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:34:36 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:34:38 [router.go:845] [D] | GET        | /                                        | 74.0043ms        | match      | /                                        | 
+2015/05/25 17:35:41 [router.go:845] [D] | GET        | /                                        | 48.0027ms        | match      | /                                        | 
+2015/05/25 17:35:42 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:35:42 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:35:45 [router.go:845] [D] | GET        | /                                        | 85.0049ms        | match      | /                                        | 
+2015/05/25 17:36:34 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:36:34 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:36:35 [router.go:845] [D] | GET        | /                                        | 52.0029ms        | match      | /                                        | 
+2015/05/25 17:47:42 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:47:42 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:47:45 [router.go:845] [D] | GET        | /                                        | 90.0052ms        | match      | /                                        | 
+2015/05/25 17:48:58 [router.go:845] [D] | GET        | /item/index                              | 77.0044ms        | match      | /item/index/*                            | 
+2015/05/25 17:49:05 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:49:05 [router.go:845] [D] | GET        | /item/index                              | 54.0031ms        | match      | /item/index/*                            | 
+2015/05/25 17:49:21 [router.go:845] [D] | GET        | /item/index                              | 67.0038ms        | match      | /item/index/*                            | 
+2015/05/25 17:49:48 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:49:48 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:50:15 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:50:15 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:50:19 [router.go:845] [D] | GET        | /item/index                              | 57.0033ms        | match      | /item/index/*                            | 
+2015/05/25 17:51:13 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:51:14 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:51:18 [router.go:845] [D] | GET        | /item/index                              | 65.0037ms        | match      | /item/index/*                            | 
+2015/05/25 17:51:41 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1 } 
+2015/05/25 17:51:41 [router.go:845] [D] | GET        | /item/index                              | 83.0047ms        | match      | /item/index/*                            | 
+2015/05/25 17:51:43 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1 } 
+2015/05/25 17:51:43 [router.go:845] [D] | GET        | /item/index                              | 88.005ms         | match      | /item/index/*                            | 
+2015/05/25 17:51:45 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1 } 
+2015/05/25 17:51:45 [router.go:845] [D] | GET        | /item/index                              | 75.0043ms        | match      | /item/index/*                            | 
+2015/05/25 17:51:46 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:51:46 [router.go:845] [D] | GET        | /item/index                              | 77.0045ms        | match      | /item/index/*                            | 
+2015/05/25 17:51:50 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1 } 
+2015/05/25 17:51:50 [router.go:845] [D] | GET        | /item/index                              | 57.0032ms        | match      | /item/index/*                            | 
+2015/05/25 17:51:51 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:51:51 [router.go:845] [D] | GET        | /item/index                              | 87.005ms         | match      | /item/index/*                            | 
+2015/05/25 17:51:53 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:51:53 [router.go:845] [D] | GET        | /item/index                              | 84.0048ms        | match      | /item/index/*                            | 
+2015/05/25 17:51:59 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:51:59 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/25 17:52:01 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:52:01 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/25 17:52:05 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:52:05 [router.go:845] [D] | GET        | /item/index                              | 60.0034ms        | match      | /item/index/*                            | 
+2015/05/25 17:52:06 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:52:06 [router.go:845] [D] | GET        | /item/index                              | 85.0048ms        | match      | /item/index/*                            | 
+2015/05/25 17:52:07 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:52:07 [router.go:845] [D] | GET        | /item/index                              | 87.005ms         | match      | /item/index/*                            | 
+2015/05/25 17:52:08 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1 } 
+2015/05/25 17:52:08 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/25 17:52:09 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:52:09 [router.go:845] [D] | GET        | /item/index                              | 60.0034ms        | match      | /item/index/*                            | 
+2015/05/25 17:52:11 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:52:12 [router.go:845] [D] | GET        | /item/index                              | 52.003ms         | match      | /item/index/*                            | 
+2015/05/25 17:52:13 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1 } 
+2015/05/25 17:52:13 [router.go:845] [D] | GET        | /item/index                              | 77.0044ms        | match      | /item/index/*                            | 
+2015/05/25 17:52:14 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:52:14 [router.go:845] [D] | GET        | /item/index                              | 68.0039ms        | match      | /item/index/*                            | 
+2015/05/25 17:53:08 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 17:53:08 [app.go:96] [I] http server Running on :8080
+2015/05/25 17:56:11 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ } 
+2015/05/25 17:56:11 [router.go:845] [D] | GET        | /item/index                              | 47.0026ms        | match      | /item/index/*                            | 
+2015/05/25 17:56:25 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1 } 
+2015/05/25 17:56:25 [router.go:845] [D] | GET        | /item/index                              | 57.0032ms        | match      | /item/index/*                            | 
+2015/05/25 17:56:26 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:56:26 [router.go:845] [D] | GET        | /item/index                              | 76.0044ms        | match      | /item/index/*                            | 
+2015/05/25 17:56:39 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:56:39 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/25 17:58:04 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:58:04 [router.go:845] [D] | GET        | /item/index                              | 89.0051ms        | match      | /item/index/*                            | 
+2015/05/25 17:58:14 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 17:58:14 [router.go:845] [D] | GET        | /item/index                              | 54.0031ms        | match      | /item/index/*                            | 
+2015/05/25 18:03:08 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 18:03:08 [router.go:845] [D] | GET        | /item/index                              | 81.0046ms        | match      | /item/index/*                            | 
+2015/05/25 18:03:33 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 18:03:33 [router.go:845] [D] | GET        | /item/index                              | 67.0038ms        | match      | /item/index/*                            | 
+2015/05/25 18:04:36 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 18:04:36 [router.go:845] [D] | GET        | /item/index                              | 64.0036ms        | match      | /item/index/*                            | 
+2015/05/25 18:09:24 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 18:09:24 [router.go:845] [D] | GET        | /item/index                              | 65.0037ms        | match      | /item/index/*                            | 
+2015/05/25 18:21:16 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 18:21:16 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/25 18:25:09 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 18:25:09 [router.go:845] [D] | GET        | /item/index                              | 79.0046ms        | match      | /item/index/*                            | 
+2015/05/25 18:26:53 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 18:26:53 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/25 18:29:25 [log.go:108] [D]  --------------- Item/Index Info:[]int64{ },  []int64{ 1, 2 } 
+2015/05/25 18:29:25 [router.go:845] [D] | GET        | /item/index                              | 64.0036ms        | match      | /item/index/*                            | 
+2015/05/25 18:30:22 [router.go:845] [D] | GET        | /my/company                              | 70.004ms         | match      | /my/company                              | 
+2015/05/25 18:30:26 [router.go:845] [D] | GET        | /item/info/1                             | 258.0147ms       | match      | /item/info/*                             | 
+2015/05/25 18:30:57 [router.go:845] [D] | GET        | /my/company                              | 53.003ms         | match      | /my/company                              | 
+2015/05/25 18:31:02 [router.go:845] [D] | GET        | /company/edit/1                          | 86.0049ms        | match      | /company/edit/*                          | 
+2015/05/25 18:31:03 [router.go:845] [D] | GET        | /company/GetLinks/1                      | 50.0029ms        | match      | /company/getlinks/*                      | 
+2015/05/25 18:31:03 [router.go:845] [D] | GET        | /company/GetIntroduce/1                  | 53.0031ms        | match      | /company/getintroduce/*                  | 
+2015/05/25 18:31:03 [router.go:845] [D] | GET        | /company/GetContact/1                    | 61.0035ms        | match      | /company/getcontact/*                    | 
+2015/05/25 18:31:03 [router.go:845] [D] | GET        | /company/GetMembers/1                    | 68.0038ms        | match      | /company/getmembers/*                    | 
+2015/05/25 18:31:03 [router.go:845] [D] | GET        | /company/GetLoops/1                      | 56.0032ms        | match      | /company/getloops/*                      | 
+2015/05/25 18:35:50 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 18:35:50 [app.go:96] [I] http server Running on :8080
+2015/05/25 18:44:19 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 18:44:19 [app.go:96] [I] http server Running on :8080
+2015/05/25 18:45:34 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 18:45:34 [app.go:96] [I] http server Running on :8080
+2015/05/25 18:45:59 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/25 18:45:59 [app.go:96] [I] http server Running on :8080
+2015/05/25 18:46:50 [router.go:845] [D] | GET        | /                                        | 64.0037ms        | match      | /                                        | 
+2015/05/25 18:46:53 [router.go:845] [D] | GET        | /item/index                              | 64.0036ms        | match      | /item/index/*                            | 
+2015/05/25 18:46:55 [router.go:845] [D] | GET        | /                                        | 58.0033ms        | match      | /                                        | 
+2015/05/25 18:47:25 [router.go:845] [D] | GET        | /                                        | 58.0034ms        | match      | /                                        | 
+2015/05/25 18:47:33 [router.go:845] [D] | GET        | /                                        | 63.0036ms        | match      | /                                        | 

@@ -39,7 +39,7 @@
 		{{range $index,$company := .startup}}
 		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
 			<div class="brand-card">
-				<div class="pull-right small" style="padding: 5px;">
+				<div class="small abs-top" style="padding: 5px;right: 0;">
 					<span>
 						{{if eq $company.Apply 0}}
 							尚未申请融资
@@ -55,13 +55,15 @@
 					</span>&nbsp;&nbsp;
 					<i class="fa fa-eye"></i>&nbsp;{{$company.Readed}}
 				</div>
-				<div class="logo-img">
-					<a href="/item/info/{{$company.Id}}">
-						<img src="{{$company.Logo}}" class="img-circle" alt=""> </a>
-				</div>
-				<div class="brand-footer">
-					<h4 class="brand-name"><a href="/item/info/{{$company.Id}}">{{$company.Name}}</a></h4>
-					<p>{{$company.Intro}}</p> 
+				<div class="brand-body">
+					<div class="logo-img">
+						<a href="/item/info/{{$company.Id}}">
+							<img src="{{$company.Logo}}" class="img-circle" alt=""> </a>
+					</div>
+					<div class="brand-footer">
+						<h4 class="brand-name"><a href="/item/info/{{$company.Id}}">{{$company.Name}}</a></h4>
+						<p>{{$company.Intro}}</p> 
+					</div>
 				</div>
 				{{range $i,$loop := $loops}}
 					{{if eq $loop.CompanyId $company.Id}}
@@ -94,7 +96,7 @@
 		{{range $index,$company := .apply}}
 		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
 			<div class="brand-card">
-				<div class="pull-right small" style="padding: 5px;">
+				<div class="abs-top small" style="padding: 5px;right: 0;">
 					<span>
 						{{if eq $company.Apply 0}}
 							尚未申请融资
@@ -110,13 +112,15 @@
 					</span>&nbsp;&nbsp;
 					<i class="fa fa-eye"></i>&nbsp;{{$company.Readed}}
 				</div>
-				<div class="logo-img">
-					<a href="/item/info/{{$company.Id}}">
-						<img src="{{$company.Logo}}" class="img-circle" alt=""> </a>
-				</div>
-				<div class="brand-footer">
-					<h4 class="brand-name"><a href="/item/info/{{$company.Id}}">{{$company.Name}}</a></h4>
-					<p>{{$company.Intro}}</p> 
+				<div class="brand-body">
+					<div class="logo-img">
+						<a href="/item/info/{{$company.Id}}">
+							<img src="{{$company.Logo}}" class="img-circle" alt=""> </a>
+					</div>
+					<div class="brand-footer">
+						<h4 class="brand-name"><a href="/item/info/{{$company.Id}}">{{$company.Name}}</a></h4>
+						<p>{{$company.Intro}}</p> 
+					</div>
 				</div>
 				{{range $i,$loop := $loops}}
 					{{if eq $loop.CompanyId $company.Id}}
