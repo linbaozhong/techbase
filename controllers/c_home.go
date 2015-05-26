@@ -3,7 +3,7 @@ package controllers
 import (
 	//"strings"
 	"techbase/models"
-	"zouzhe/utils"
+	"techbase/utils"
 )
 
 type Home struct {

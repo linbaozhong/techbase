@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"techbase/models"
-	"zouzhe/utils"
+	"techbase/utils"
 )
 
 type Item struct {
@@ -24,6 +24,7 @@ func (this *Item) Index() {
 	// 行业
 	if field, err := this.GetInt("field"); err == nil && field >= 0 {
 		this.Data["field"] = field
+		// 按指定行业读取项目id
 		ids = new(models.FieldCompany).GetCompanyId(utils.Int2str(field))
 	} else {
 		this.Data["field"] = -1
@@ -46,30 +47,25 @@ func (this *Item) Index() {
 		com.Startup = -1
 	}
 	// 融资轮次
-	if loop, err := this.GetInt("loop"); err == nil {
+	loop, err := this.GetInt("loop")
+	if err == nil {
 		this.Data["loop"] = loop
-		// 读取已融资的项目
-		loopIds := new(models.Loops).GetCompany(loop)
-		this.trace(ids, loopIds)
-		if len(ids) == 0 {
-			ids = loopIds
-		} else if len(loopIds) > 0 {
-			// 取交集
-			for _, i := range ids {
-				if has, _ := utils.Int64sContains(loopIds, i); !has {
-					ids = utils.RemoveInt64Slice(ids, i)
-				}
-			}
-		}
 	} else {
 		this.Data["loop"] = -1
+		loop = -1
 	}
+
+	this.trace(loop, ids)
+
+	// 按指定融资轮次读取项目id
+	ids = new(models.Loops).GetCompany(loop, ids)
 
 	com.Status = 2 //已审核通过的公司
 
-	cs, _ := com.AllList(ids)
+	// 按综合条件读取项目
+	this.Data["companys"], _ = com.AllList(ids)
 
-	//项目融资情况
+	// 按综合条件项目融资情况
 	if len(ids) > 0 {
 		loop := new(models.Loops)
 		ls, _ := loop.ListByCompany(ids)
@@ -78,7 +74,6 @@ func (this *Item) Index() {
 		this.Data["applyLoop"] = make([]models.Loops, 0)
 	}
 
-	this.Data["companys"] = cs
 	this.Data["index"] = "items"
 }
 

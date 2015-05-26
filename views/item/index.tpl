@@ -52,6 +52,17 @@
 				{{$loops := .applyLoop}}
 				{{range $index,$company := .companys}}
 				<div class="snow-media col-xs-4">
+					<span class="abs top5 right5 small">
+						{{if eq $company.Status 0}}
+						未提交审核
+						{{else if eq $company.Status 1}}
+						等待审核中
+						{{else if eq $company.Status 2}}
+						审核通过
+						{{else}}
+						审核未通过
+						{{end}}
+					</span>
 					<div class="media-left">
 						<a href="/item/info/{{$company.Id}}" target="_blank">
 							<img class="media-object" src="{{$company.Logo}}" style="width: 100px;">
@@ -59,15 +70,6 @@
 					</div>
 					<div class="media-body">
 						<p><span class="media-heading lead">{{$company.Name}}</span> 
-							{{if eq $company.Status 0}}
-							<span class="pull-right small">未提交审核</span>
-							{{else if eq $company.Status 1}}
-							<span class="pull-right small">等待审核中</span>
-							{{else if eq $company.Status 2}}
-							<span class="pull-right small">审核通过</span>
-							{{else}}
-							<span class="pull-right small">审核未通过</span>
-							{{end}}
 						</p>
 						<div style="height: 60px;overflow: hidden;">{{$company.Intro}}</div>
 					</div>

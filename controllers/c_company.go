@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"strings"
 	"techbase/models"
-	"zouzhe/utils"
+	"techbase/utils"
 )
 
 type Company struct {
@@ -33,8 +33,6 @@ func (this *Company) Edit() {
 		this.Redirect(fmt.Sprintf("/item/info/%d", id), 302)
 		this.end()
 	}
-
-	this.getContactInfo(id)
 
 	this.Data["subTitle"] = "项目简介"
 
@@ -87,7 +85,11 @@ func (this *Company) PostCompany() {
 	com.State, _ = this.GetInt("state")
 	com.StartTime = this.GetString("starttime")
 
-	this.extendEx(com)
+	if com.Id == 0 {
+		this.extendEx(com)
+	} else {
+		this.extend(com)
+	}
 
 	if err, es := com.Save(); err == nil {
 		this.renderJson(utils.JsonResult(true, "", com))

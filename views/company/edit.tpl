@@ -1,3 +1,14 @@
+<script src="http://cdn.bootcss.com/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery-validate/1.13.1/additional-methods.min.js"></script>
+<script src="/static/js/messages_zh.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	// 手机号码验证
+	$.validator.addMethod('isMobile', function(value, element) {
+		var length = value.length,mobile = /^1[3-8]+\d{9}/;
+		console.log(length,mobile.test(value));
+		return this.optional(element) || (length == 11 && mobile.test(value));
+	}, '请正确填写您的手机号码');
+</script>
 <div class="banner">
 	<div class="slideshow">
 		<ol class="slides">
@@ -7,12 +18,6 @@
 						<img src="{{.company.Logo}}"/>
 					</div>
 					<span class="small" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
-				</div>
-				<div style="padding-top:15px;">
-					<span class="snow-required">*</span><input class="small snow-rel-field" style="padding: 5px;width: 200px;color:initial;" data-rel="snow-form-1" data-field="name" placeholder="项目名称" value="{{.company.Name}}" />
-				</div>
-				<div style="padding-top:15px;">
-					<span class="snow-required">*</span><input class="small snow-rel-field" style="padding: 5px;width: 300px;color:initial;" data-rel="snow-form-1" data-field="intro" placeholder="用一句话介绍项目" value="{{.company.Intro}}" />
 				</div>
 			</li>
 		</ol>
@@ -35,12 +40,18 @@
 			<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
 	
 				<form class="form-horizontal snow-form-1">
+					<div class="abs text-center quirks" style="top: -229px;width:100%;">
+						<div style="padding-top:15px;">
+							<span class="snow-required">*</span><input required name="name" class="small" style="padding: 5px;width: 200px;color:initial;" placeholder="项目名称" value="{{.company.Name}}" />
+						</div>
+						<div style="padding-top:15px;">
+							<span class="snow-required">*</span><input required name="intro" class="small" style="padding: 5px;width: 300px;color:initial;" placeholder="用一句话介绍项目" value="{{.company.Intro}}" />
+						</div>
+					</div>
 					<div class="form-group">
 						<div class="col-sm-3">
 							<input type="hidden" name="id" value="{{.company.Id}}" />
 							<input type="hidden" name="logo" value="{{.company.Logo}}" />
-							<input type="hidden" required name="name" value="{{.company.Name}}" />
-							<input type="hidden" required name="intro"  value="{{.company.Intro}}" />
 						</div>
 						<div class="col-sm-9">
 							<div class="alert snow-alert-1" role="alert"></div>
@@ -190,11 +201,7 @@
 			}
 			return false;	
 		});
-		// 关联输入字段
-		$('.snow-rel-field').change(function(){
-			var _this=$(this);
-			$('form.'+_this.data('rel')+' input[name="'+_this.data('field')+'"]').val(_this.val());
-		});
+
 		// 国家发生变化
 		$('form.snow-form-1 select[name="country"]').change(function(){
 			// 读取城市选项
@@ -275,10 +282,17 @@
 				$('.snow-field input:disabled').attr('disabled',false);
 			}
 		});
-
+		// 验证表单
+		var validator_form_1 = $('form.snow-form-1').validate();
+	
 		// 提交表单
 		$('form.snow-form-1').submit(function(e){
 			e.preventDefault();
+			//
+			if(!validator_form_1.valid()){
+				return false;
+			}
+			
 			var _form = $(this);
 			// 禁用提交按钮
 			submit_disable(_form);

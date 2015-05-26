@@ -1,3 +1,14 @@
+<div class="banner" style="height: 90px;overflow: hidden;">
+	<div class="slideshow">
+		<ol class="slides">
+			<li class="current banner-1 text-center">
+				<div class="description">
+					
+				</div>
+			</li>
+		</ol>
+	</div>
+</div>
 <article class="container snow-padding-top-40">
 	<div class="row">
 		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1 text-center">

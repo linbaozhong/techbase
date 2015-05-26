@@ -72,9 +72,15 @@
 </div>
 <script type="text/javascript">
 	$(function(){
+		// 验证表单
+		var validator_form_4 = $('form.snow-form-4').validate();
 		// 提交表单
-		$('.snow-form-4').submit(function(e){
+		$('form.snow-form-4').submit(function(e){
 			e.preventDefault();
+			//
+			if(!validator_form_4.valid()){
+				return false;
+			}
 			var _form = $(this);
 			// 检查项目主体是否已经存在
 			if (_form.find('input[name="companyId"]').val() <= 0) {

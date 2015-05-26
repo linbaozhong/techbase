@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 	"techbase/models"
-	"zouzhe/utils"
+	"techbase/utils"
 )
 
 type Basic struct {

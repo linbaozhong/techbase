@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/go-xorm/xorm"
 	"strings"
-	"zouzhe/utils"
+	"techbase/utils"
 )
 
 type Company struct {
@@ -47,15 +47,17 @@ func (this *Company) List() ([]Company, error) {
 // 全部未删除公司列表
 func (this *Company) AllList(ids []int64) (cs []Company, err error) {
 
-	session := db.Where("status=? and deleted=?", this.Status, Undelete)
+	session := db.NewSession()
+	defer session.Close()
+
+	fmt.Println("条件为空，直接返回", ids != nil)
+
 	// ids=nil 没有id条件
-	if ids != nil {
-		// ids条件为空，没有符合条件的记录，直接返回
-		if len(ids) == 0 {
-			return
-		} else {
-			session.In("id", ids)
-		}
+	if ids == nil || len(ids) == 0 {
+		return
+	} else {
+		session.In("id", ids)
+
 	}
 	if this.Apply != -1 {
 		session.And("apply=?", this.Apply)
@@ -66,6 +68,9 @@ func (this *Company) AllList(ids []int64) (cs []Company, err error) {
 	if this.Startup != -1 {
 		session.And("Startup=?", this.Startup)
 	}
+
+	session.And("status=? and deleted=?", this.Status, Undelete)
+
 	err = session.Find(&cs)
 
 	return
@@ -126,24 +131,29 @@ func (this *Company) Save() (error, []Error) {
 	// 保存项目
 	if this.Id == 0 {
 		_, err = session.Insert(this)
+
+		if err != nil {
+			session.Rollback()
+			return err, nil
+		}
 	} else {
 		_, err = session.Where("id=? and accountId=?", this.Id, this.AccountId).Cols("Name", "CompanyName", "Fullname", "Website", "Logo", "Intro", "City", "Country", "StartTime", "Field", "State", "Updator", "Updated", "Ip").Update(this)
+
+		if err != nil {
+			session.Rollback()
+			return err, nil
+		}
+		// 修改公司所属行业映射关系
+		// 首先删除旧的关系
+		_, err = session.Exec("delete from fieldCompany where companyId = ?", this.Id)
+
+		if err != nil {
+			session.Rollback()
+			return err, nil
+		}
 	}
 
-	if err != nil {
-		session.Rollback()
-		return err, nil
-	}
-
-	// 修改公司所属行业映射关系
-	// 首先删除旧的关系
-	_, err = session.Exec("delete from fieldCompany where companyId = ?", this.Id)
-	fmt.Println(err)
-	if err != nil {
-		session.Rollback()
-		return err, nil
-	}
-	// 批量插入新的数据
+	// 批量插入新的映射
 	if _fields := strings.Split(this.Field, ","); len(_fields) > 0 {
 
 		fcs := make([]FieldCompany, len(_fields))
@@ -431,14 +441,22 @@ func (this *Loops) Delete() error {
 
 // 读取指定融资轮次的公司id
 func (this *Loops) GetCompany(loop int, companyIds []int64) (ids []int64) {
-	//rows, err := db.Distinct("companyId").Where("max(loop)=?", loop).Rows(this)
 	var rows *xorm.Rows
 	var err error
 
-	if ids == nil || len(ids) == 0 {
-		rows, err = db.Sql("select distinct companyid from (select companyid, max(loop) as loop from loops group by companyid) where loop = ?", loop).Rows(this)
+	// loop=-1表示不限融资轮次
+	if loop == -1 {
+		if companyIds == nil || len(companyIds) == 0 {
+			rows, err = db.Sql("select distinct companyid from (select companyid, max(loop) as loop from loops group by companyid)").Rows(this)
+		} else {
+			rows, err = db.Sql("select distinct companyid from (select companyid, max(loop) as loop from loops group by companyid) where companyId in (" + strings.Join(utils.Int64s2Strings(companyIds), ",") + ")").Rows(this)
+		}
 	} else {
-		rows, err = db.Sql("select distinct companyid from (select companyid, max(loop) as loop from loops group by companyid) where companyId in (?) and loop = ?", utils.Int64s2Strings(companyIds), loop).Rows(this)
+		if companyIds == nil || len(companyIds) == 0 {
+			rows, err = db.Sql("select distinct companyid from (select companyid, max(loop) as loop from loops group by companyid) where loop = ?", loop).Rows(this)
+		} else {
+			rows, err = db.Sql("select distinct companyid from (select companyid, max(loop) as loop from loops group by companyid) where companyId in ("+strings.Join(utils.Int64s2Strings(companyIds), ",")+") and loop = ?", loop).Rows(this)
+		}
 	}
 
 	if err != nil {
@@ -451,6 +469,6 @@ func (this *Loops) GetCompany(loop int, companyIds []int64) (ids []int64) {
 			ids = append(ids, this.CompanyId)
 		}
 	}
-	fmt.Println("---", ids)
+
 	return
 }

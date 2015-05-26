@@ -67,7 +67,7 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>手机号码</label>
 			<div class="col-sm-9">
-				<input type="tel" class="form-control" required name="tel" placeholder="手机号码" value="{{.contact.Tel}}">
+				<input type="text" class="form-control isMobile" required name="tel" placeholder="手机号码" value="{{.contact.Tel}}">
 			</div>
 		</div>
 		<div class="form-group">
@@ -129,10 +129,15 @@
 				}
 			});
 		}
+		// 验证表单
+		var validator_form_2 = $('form.snow-form-2').validate();
 		// 提交表单
-		$('.snow-form-2').submit(function(e){
+		$('form.snow-form-2').submit(function(e){
 			e.preventDefault();
-			var _form = $(this);
+			//
+			if(!validator_form_2.valid()){
+				return false;
+			}			var _form = $(this);
 			// 检查项目主体是否已经存在
 			if (_form.find('input[name="companyId"]').val() <= 0) {
 				showMessage($('.snow-alert-2'),'项目不存在，请创建项目后重试',false);

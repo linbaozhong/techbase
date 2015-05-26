@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"techbase/models"
-	"zouzhe/utils"
+	"techbase/utils"
 )
 
 type Auth struct {

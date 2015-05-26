@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 	"techbase/models"
-	"zouzhe/utils"
+	"techbase/utils"
 
 	"github.com/astaxie/beego/httplib"
 )

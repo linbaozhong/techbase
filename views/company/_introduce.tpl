@@ -71,9 +71,16 @@
 		  		$("form.snow-form-3 .snow-upload-target").show();
 		  	}
 		});
+		// 验证表单
+		var validator_form_3 = $('form.snow-form-3').validate();
 		// 提交表单
 		$('form.snow-form-3').submit(function(e){
 			e.preventDefault();
+			//
+			if(!validator_form_3.valid()){
+				return false;
+			}
+			
 			var _form = $(this),_imgs=[];
 			// 检查项目主体是否已经存在
 			if (_form.find('input[name="companyId"]').val() <= 0) {

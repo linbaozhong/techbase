@@ -5,26 +5,33 @@ import (
 	"fmt"
 	"github.com/astaxie/beego/validation"
 	"strings"
-	//"zouzhe/utils"
+	"techbase/utils"
 )
 
 // article表
 type Articles struct {
-	Id       int64  `json:"articleId"`
-	Title    string `json:"title" valid:"Required;MaxSize(250)"` //标题
-	SubTitle string `json:"subTitle" valid:"MaxSize(250)"`       //副标题
-	Content  string `json:"content" valid:"Required"`            //内容
-	Auther   int64  `json:"auther"`                              //作者
-	Tags     string `json:"tags" valid:"MaxSize(50)"`            //标签
-	Resource string `json"resource"`                             //来源
-	Position int    `json:"position"`                            //位置
-	Status   int    `json:"status" valid:"Range(-1,2)"`          //0-草稿，1-审核中，2-审核通过发布，-1-审核未通过
-	Deleted  int    `json:"deleted" valid:"Range(0,1)"`
-	Creator  int64  `json:"creator"`
-	Created  int64  `json:"created"`
-	Updator  int64  `json:"updator"`
-	Updated  int64  `json:"updated"`
-	Ip       string `json:"ip" valid:"MaxSize(23)"`
+	Id          int64  `json:"articleId"`
+	Topic       string `json:"topic"`                               //主题图
+	Title       string `json:"title" valid:"Required;MaxSize(250)"` //标题
+	SubTitle    string `json:"subTitle" valid:"MaxSize(250)"`       //副标题
+	Intro       string `json:"intro" valid:"MaxSize(250)"`          //内容
+	Content     string `json:"content" valid:"Required"`            //内容
+	PublicDate  string `json:"publicDate"`                          //发布日期
+	Tags        string `json:"tags" valid:"MaxSize(50)"`            //标签
+	Original    string `json"original"`                             //是否原创
+	Author      int64  `json:"author"`                              //作者
+	Resource    string `json"resource"`                             //来源单位
+	ResourceUrl string `json"resourceUrl"`                          //来源链接
+	Recommend   int    `json"recommend"`                            //推荐的
+	IsTop       int    `json:"isTop"`                               //置顶的
+	Position    int    `json:"position"`                            //位置
+	Status      int    `json:"status" valid:"Range(-1,2)"`          //0-草稿，1-审核中，2-审核通过发布，-1-审核未通过
+	Deleted     int    `json:"deleted" valid:"Range(0,1)"`
+	Creator     int64  `json:"creator"`
+	Created     int64  `json:"created"`
+	Updator     int64  `json:"updator"`
+	Updated     int64  `json:"updated"`
+	Ip          string `json:"ip" valid:"MaxSize(23)"`
 }
 
 // 文章是否存在
@@ -38,7 +45,7 @@ func (this *Articles) Valid(v *validation.Validation) {
 }
 
 // 新文章
-func (this *Articles) Update() (error, []Error) {
+func (this *Articles) Save() (error, []Error) {
 	//数据有效性检验
 	if d, err := dataCheck(this); err != nil {
 		return err, d
@@ -52,6 +59,46 @@ func (this *Articles) Update() (error, []Error) {
 	if err != nil {
 		session.Rollback()
 		return err, nil
+	}
+
+	// 写入数据库
+	if this.Id == 0 {
+		_, err = session.Insert(this)
+		if err != nil {
+			session.Rollback()
+			return err, nil
+		}
+	} else {
+		_, err = session.Id(this.Id).Cols("Topic", "Title", "SubTitle", "Intro", "Content", "Tags", "Original", "Auther", "Resource", "ResourceUrl", "Updator", "Updated", "Ip").Update(this)
+		if err != nil {
+			session.Rollback()
+			return err, nil
+		}
+
+		// 变更关联映射,首先删除旧的关系
+		_, err = session.Exec("delete from tagarticle where articleId = ?", this.Id)
+
+		if err != nil {
+			session.Rollback()
+			return err, nil
+		}
+
+	}
+
+	// 批量插入新的映射
+	if _tags := strings.Split(this.Tags, ","); len(_tags) > 0 {
+
+		tas := make([]TagArticle, len(_tags))
+		for i, f := range _tags {
+			tas[i].ArticleId = this.Id
+			tas[i].TagId = utils.Str2int64(f)
+		}
+
+		_, err = session.Insert(&tas)
+		if err != nil {
+			session.Rollback()
+			return err, nil
+		}
 	}
 
 	// 提交事务

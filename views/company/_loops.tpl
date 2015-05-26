@@ -249,9 +249,15 @@
 //		$('button.snow-add-6').click(function(){
 //			$('form.snow-form-6').show();
 //		});
+		// 验证表单
+		var validator_form_6 = $('form.snow-form-6').validate();
 		// 提交表单
 		$('form.snow-form-6').submit(function(e){
 			e.preventDefault();
+			//
+			if(!validator_form_6.valid()){
+				return false;
+			}
 			var _form = $(this);
 			// 检查项目主体是否已经存在
 			if (_form.find('input[name="companyId"]').val() <= 0) {

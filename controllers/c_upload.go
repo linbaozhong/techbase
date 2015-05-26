@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"zouzhe/utils"
+	"techbase/utils"
 )
 
 type Upload struct {

@@ -3,7 +3,7 @@ package controllers
 import (
 	"github.com/astaxie/beego/validation"
 	"techbase/models"
-	"zouzhe/utils"
+	"techbase/utils"
 )
 
 type Accounts struct {

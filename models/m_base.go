@@ -12,7 +12,7 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 	"math"
 	"strings"
-	"zouzhe/utils"
+	"techbase/utils"
 )
 
 //页面公共信息

@@ -11,7 +11,7 @@
 	</head>
 
 	<body>
-		<header class="abs-top">
+		<header class="abs-top abs-center">
 			<div class="container">
 				<nav style="height:65px;margin-top: 20px;">
 					<div class="navbar-header">
@@ -53,8 +53,9 @@
 				</li>
 				<li><a href="/my/company">我的项目</a>
 				</li>
-				<li><a href="/my/touzi">我的投资</a>
-				</li>
+				<!--<li><a href="/my/touzi">我的投资</a>
+				</li>-->
+				<li><hr style="margin: 5px 0;" /></li>
 				<li id="logout"><a href="javascript:;">退出</a>
 				</li>
 			</ul>
@@ -64,7 +65,7 @@
 			<ul class="">
 				<li><a href="/basic/index/8">媒体分类</a>
 				</li>
-				<li><hr /></li>
+				<li><hr style="margin: 5px 0;" /></li>
 				<li><a href="/basic/index/0">国家</a>
 				</li>
 				<li><a href="/basic/index/2">城市</a>

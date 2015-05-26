@@ -2,7 +2,7 @@ package models
 
 import (
 	"strings"
-	"zouzhe/utils"
+	"techbase/utils"
 )
 
 type FieldCompany struct {

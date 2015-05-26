@@ -14541,3 +14541,533 @@
 2015/05/25 18:46:55 [router.go:845] [D] | GET        | /                                        | 58.0033ms        | match      | /                                        | 
 2015/05/25 18:47:25 [router.go:845] [D] | GET        | /                                        | 58.0034ms        | match      | /                                        | 
 2015/05/25 18:47:33 [router.go:845] [D] | GET        | /                                        | 63.0036ms        | match      | /                                        | 
+2015/05/26 10:54:59 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 10:55:04 [app.go:96] [I] http server Running on :8080
+2015/05/26 10:55:21 [router.go:845] [D] | GET        | /                                        | 112.0064ms       | match      | /                                        | 
+2015/05/26 10:55:31 [router.go:845] [D] | GET        | /                                        | 67.0038ms        | match      | /                                        | 
+2015/05/26 11:00:49 [router.go:845] [D] | GET        | /                                        | 95.0054ms        | match      | /                                        | 
+2015/05/26 11:00:53 [router.go:845] [D] | GET        | /my/company                              | 88.005ms         | match      | /my/company                              | 
+2015/05/26 11:00:56 [router.go:845] [D] | GET        | /                                        | 93.0053ms        | match      | /                                        | 
+2015/05/26 11:00:58 [router.go:845] [D] | GET        | /item/index                              | 72.0041ms        | match      | /item/index/*                            | 
+2015/05/26 11:01:04 [router.go:845] [D] | GET        | /item/index                              | 68.0038ms        | match      | /item/index/*                            | 
+2015/05/26 11:01:07 [router.go:845] [D] | GET        | /item/index                              | 51.003ms         | match      | /item/index/*                            | 
+2015/05/26 11:01:13 [router.go:845] [D] | GET        | /item/index                              | 67.0039ms        | match      | /item/index/*                            | 
+2015/05/26 11:01:17 [router.go:845] [D] | GET        | /item/index                              | 81.0047ms        | match      | /item/index/*                            | 
+2015/05/26 11:01:19 [router.go:845] [D] | GET        | /item/index                              | 88.005ms         | match      | /item/index/*                            | 
+2015/05/26 11:01:30 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/26 11:01:39 [router.go:845] [D] | GET        | /item/index                              | 52.003ms         | match      | /item/index/*                            | 
+2015/05/26 11:04:09 [router.go:845] [D] | GET        | /item/index                              | 48.0028ms        | match      | /item/index/*                            | 
+2015/05/26 11:04:11 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/26 11:04:13 [router.go:845] [D] | GET        | /item/index                              | 70.004ms         | match      | /item/index/*                            | 
+2015/05/26 11:04:14 [router.go:845] [D] | GET        | /item/index                              | 68.0039ms        | match      | /item/index/*                            | 
+2015/05/26 11:04:15 [router.go:845] [D] | GET        | /item/index                              | 69.004ms         | match      | /item/index/*                            | 
+2015/05/26 11:06:05 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 11:06:06 [app.go:96] [I] http server Running on :8080
+2015/05/26 11:08:59 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 11:08:59 [app.go:96] [I] http server Running on :8080
+2015/05/26 11:09:01 [router.go:845] [D] | GET        | /item/index                              | 82.0047ms        | match      | /item/index/*                            | 
+2015/05/26 11:09:10 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/26 11:09:24 [router.go:845] [D] | GET        | /item/index                              | 82.0047ms        | match      | /item/index/*                            | 
+2015/05/26 11:10:04 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 11:10:04 [app.go:96] [I] http server Running on :8080
+2015/05/26 11:10:06 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/26 11:11:26 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 11:11:26 [app.go:96] [I] http server Running on :8080
+2015/05/26 11:12:21 [router.go:845] [D] | GET        | /item/index                              | 93.0053ms        | match      | /item/index/*                            | 
+2015/05/26 11:12:59 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 11:12:59 [app.go:96] [I] http server Running on :8080
+2015/05/26 11:14:11 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 11:14:11 [app.go:96] [I] http server Running on :8080
+2015/05/26 11:14:14 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/26 11:15:09 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 11:15:09 [app.go:96] [I] http server Running on :8080
+2015/05/26 11:15:10 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/26 11:16:03 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 11:16:03 [app.go:96] [I] http server Running on :8080
+2015/05/26 11:16:05 [router.go:845] [D] | GET        | /item/index                              | 76.0044ms        | match      | /item/index/*                            | 
+2015/05/26 11:18:08 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 11:18:08 [app.go:96] [I] http server Running on :8080
+2015/05/26 11:18:09 [router.go:845] [D] | GET        | /item/index                              | 67.0038ms        | match      | /item/index/*                            | 
+2015/05/26 11:18:12 [router.go:845] [D] | GET        | /item/index                              | 47.0027ms        | match      | /item/index/*                            | 
+2015/05/26 11:18:17 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/26 11:18:21 [router.go:845] [D] | GET        | /item/index                              | 78.0044ms        | match      | /item/index/*                            | 
+2015/05/26 11:24:25 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 11:24:25 [app.go:96] [I] http server Running on :8080
+2015/05/26 11:24:25 [router.go:845] [D] | GET        | /item/index                              | 58.0033ms        | match      | /item/index/*                            | 
+2015/05/26 11:24:29 [router.go:845] [D] | GET        | /item/index                              | 68.0039ms        | match      | /item/index/*                            | 
+2015/05/26 11:24:31 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/26 11:24:33 [router.go:845] [D] | GET        | /item/index                              | 65.0037ms        | match      | /item/index/*                            | 
+2015/05/26 11:24:34 [router.go:845] [D] | GET        | /item/index                              | 85.0048ms        | match      | /item/index/*                            | 
+2015/05/26 11:24:35 [router.go:845] [D] | GET        | /item/index                              | 47.0027ms        | match      | /item/index/*                            | 
+2015/05/26 11:29:11 [router.go:845] [D] | GET        | /item/index                              | 43.0025ms        | match      | /item/index/*                            | 
+2015/05/26 11:29:16 [router.go:845] [D] | GET        | /media                                   | 101.0058ms       | match      | /media                                   | 
+2015/05/26 11:29:20 [router.go:845] [D] | GET        | /community                               | 80.0046ms        | match      | /community                               | 
+2015/05/26 11:29:23 [router.go:845] [D] | GET        | /item/index                              | 71.004ms         | match      | /item/index/*                            | 
+2015/05/26 11:29:25 [router.go:845] [D] | GET        | /                                        | 86.0049ms        | match      | /                                        | 
+2015/05/26 11:29:28 [router.go:845] [D] | GET        | /my/company                              | 138.0079ms       | match      | /my/company                              | 
+2015/05/26 11:32:09 [router.go:845] [D] | GET        | /my/company                              | 49.0028ms        | match      | /my/company                              | 
+2015/05/26 11:32:12 [router.go:845] [D] | GET        | /admin/media                             | 63.0036ms        | match      | /admin/media/*                           | 
+2015/05/26 11:32:14 [router.go:845] [D] | GET        | /admin/company                           | 75.0042ms        | match      | /admin/company/*                         | 
+2015/05/26 11:32:15 [router.go:845] [D] | GET        | /admin/account                           | 68.0039ms        | match      | /admin/account/*                         | 
+2015/05/26 11:32:24 [router.go:845] [D] | GET        | /admin/company                           | 51.003ms         | match      | /admin/company/*                         | 
+2015/05/26 11:32:30 [router.go:845] [D] | GET        | /my/company                              | 75.0043ms        | match      | /my/company                              | 
+2015/05/26 11:32:34 [router.go:845] [D] | GET        | /item/info/1                             | 184.0106ms       | match      | /item/info/*                             | 
+2015/05/26 11:32:41 [router.go:845] [D] | GET        | /company/edit                            | 73.0041ms        | match      | /company/edit/*                          | 
+2015/05/26 11:32:42 [router.go:845] [D] | GET        | /company/GetContact/0                    | 50.0029ms        | match      | /company/getcontact/*                    | 
+2015/05/26 11:32:42 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 56.0032ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 11:32:42 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 59.0034ms        | match      | /company/getlinks/*                      | 
+2015/05/26 11:32:42 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 74.0042ms        | match      | /company/getmembers/*                    | 
+2015/05/26 11:32:42 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 84.0048ms        | match      | /company/getloops/*                      | 
+2015/05/26 11:42:27 [router.go:845] [D] | GET        | /company/edit                            | 79.0045ms        | match      | /company/edit/*                          | 
+2015/05/26 11:42:27 [router.go:845] [D] | GET        | /company/GetContact/0                    | 88.005ms         | match      | /company/getcontact/*                    | 
+2015/05/26 11:42:27 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 163.0093ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 11:42:27 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 166.0095ms       | match      | /company/getlinks/*                      | 
+2015/05/26 11:42:27 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 231.0133ms       | match      | /company/getmembers/*                    | 
+2015/05/26 11:42:27 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 241.0138ms       | match      | /company/getloops/*                      | 
+2015/05/26 11:42:39 [router.go:845] [D] | GET        | /company/edit                            | 58.0033ms        | match      | /company/edit/*                          | 
+2015/05/26 11:42:39 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 74.0043ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 11:42:39 [router.go:845] [D] | GET        | /company/GetContact/0                    | 103.0059ms       | match      | /company/getcontact/*                    | 
+2015/05/26 11:42:39 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 115.0065ms       | match      | /company/getmembers/*                    | 
+2015/05/26 11:42:39 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 140.008ms        | match      | /company/getlinks/*                      | 
+2015/05/26 11:42:39 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 140.008ms        | match      | /company/getloops/*                      | 
+2015/05/26 11:42:57 [router.go:845] [D] | GET        | /company/edit                            | 48.0027ms        | match      | /company/edit/*                          | 
+2015/05/26 11:42:57 [router.go:845] [D] | GET        | /company/GetContact/0                    | 124.0071ms       | match      | /company/getcontact/*                    | 
+2015/05/26 11:42:57 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 128.0073ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 11:42:57 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 135.0078ms       | match      | /company/getmembers/*                    | 
+2015/05/26 11:42:57 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 141.0081ms       | match      | /company/getlinks/*                      | 
+2015/05/26 11:42:57 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 163.0093ms       | match      | /company/getloops/*                      | 
+2015/05/26 11:43:18 [router.go:845] [D] | GET        | /admin/company                           | 78.0044ms        | match      | /admin/company/*                         | 
+2015/05/26 11:43:20 [router.go:845] [D] | GET        | /admin/account                           | 57.0032ms        | match      | /admin/account/*                         | 
+2015/05/26 11:43:24 [router.go:845] [D] | GET        | /basic/index/0                           | 80.0046ms        | match      | /basic/index/:typeId                     | 
+2015/05/26 11:43:31 [router.go:845] [D] | GET        | /admin/company                           | 65.0037ms        | match      | /admin/company/*                         | 
+2015/05/26 11:43:33 [router.go:845] [D] | GET        | /admin/media                             | 52.003ms         | match      | /admin/media/*                           | 
+2015/05/26 11:46:26 [router.go:845] [D] | GET        | /admin/media                             | 56.0032ms        | match      | /admin/media/*                           | 
+2015/05/26 11:46:41 [router.go:845] [D] | GET        | /admin/media                             | 76.0043ms        | match      | /admin/media/*                           | 
+2015/05/26 11:48:52 [router.go:845] [D] | GET        | /admin/company                           | 50.0028ms        | match      | /admin/company/*                         | 
+2015/05/26 11:49:06 [router.go:845] [D] | GET        | /admin/company                           | 79.0045ms        | match      | /admin/company/*                         | 
+2015/05/26 11:50:27 [router.go:845] [D] | GET        | /admin/company                           | 61.0035ms        | match      | /admin/company/*                         | 
+2015/05/26 11:50:28 [router.go:845] [D] | GET        | /admin/media                             | 57.0033ms        | match      | /admin/media/*                           | 
+2015/05/26 11:50:31 [router.go:845] [D] | GET        | /admin/company                           | 44.0025ms        | match      | /admin/company/*                         | 
+2015/05/26 11:50:33 [router.go:845] [D] | GET        | /admin/account                           | 76.0044ms        | match      | /admin/account/*                         | 
+2015/05/26 11:51:00 [router.go:845] [D] | GET        | /admin/account                           | 68.0039ms        | match      | /admin/account/*                         | 
+2015/05/26 11:51:05 [router.go:845] [D] | GET        | /basic/index/8                           | 79.0045ms        | match      | /basic/index/:typeId                     | 
+2015/05/26 11:51:20 [router.go:845] [D] | GET        | /basic/index/8                           | 57.0033ms        | match      | /basic/index/:typeId                     | 
+2015/05/26 11:51:26 [router.go:845] [D] | GET        | /basic/index/2                           | 70.004ms         | match      | /basic/index/:typeId                     | 
+2015/05/26 11:51:29 [router.go:845] [D] | GET        | /basic/index/5                           | 53.0031ms        | match      | /basic/index/:typeId                     | 
+2015/05/26 11:51:37 [router.go:845] [D] | GET        | /my/profile                              | 63.0036ms        | match      | /my/profile                              | 
+2015/05/26 11:51:53 [router.go:845] [D] | GET        | /my/profile                              | 74.0043ms        | match      | /my/profile                              | 
+2015/05/26 11:51:57 [router.go:845] [D] | GET        | /my/company                              | 80.0045ms        | match      | /my/company                              | 
+2015/05/26 11:52:17 [router.go:845] [D] | GET        | /my/company                              | 54.0031ms        | match      | /my/company                              | 
+2015/05/26 11:52:22 [router.go:845] [D] | GET        | /my/touzi                                | 1.0001ms         | notmatch   | 
+2015/05/26 11:52:35 [router.go:845] [D] | GET        | /apply/index/1                           | 58.0033ms        | match      | /apply/index/*                           | 
+2015/05/26 11:52:52 [router.go:845] [D] | GET        | /apply/index/1                           | 42.0024ms        | match      | /apply/index/*                           | 
+2015/05/26 11:52:59 [router.go:845] [D] | GET        | /my/company                              | 72.0041ms        | match      | /my/company                              | 
+2015/05/26 11:53:01 [router.go:845] [D] | GET        | /company/edit                            | 86.0049ms        | match      | /company/edit/*                          | 
+2015/05/26 11:53:01 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 84.0048ms        | match      | /company/getlinks/*                      | 
+2015/05/26 11:53:01 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 108.0062ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 11:53:01 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 128.0073ms       | match      | /company/getmembers/*                    | 
+2015/05/26 11:53:01 [router.go:845] [D] | GET        | /company/GetContact/0                    | 144.0082ms       | match      | /company/getcontact/*                    | 
+2015/05/26 11:53:01 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 130.0075ms       | match      | /company/getloops/*                      | 
+2015/05/26 11:53:07 [router.go:845] [D] | GET        | /my/company                              | 86.0049ms        | match      | /my/company                              | 
+2015/05/26 11:53:56 [router.go:845] [D] | GET        | /my/company                              | 59.0034ms        | match      | /my/company                              | 
+2015/05/26 11:54:25 [router.go:845] [D] | GET        | /my/company                              | 58.0033ms        | match      | /my/company                              | 
+2015/05/26 11:54:40 [router.go:845] [D] | GET        | /my/company                              | 82.0047ms        | match      | /my/company                              | 
+2015/05/26 11:54:45 [router.go:845] [D] | GET        | /                                        | 69.0039ms        | match      | /                                        | 
+2015/05/26 11:54:53 [router.go:845] [D] | GET        | /item/index                              | 71.004ms         | match      | /item/index/*                            | 
+2015/05/26 11:54:55 [router.go:845] [D] | GET        | /item/index                              | 89.0051ms        | match      | /item/index/*                            | 
+2015/05/26 11:54:56 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/05/26 11:54:58 [router.go:845] [D] | GET        | /item/index                              | 70.004ms         | match      | /item/index/*                            | 
+2015/05/26 11:55:03 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/26 11:56:38 [router.go:845] [D] | GET        | /item/index                              | 87.0049ms        | match      | /item/index/*                            | 
+2015/05/26 11:56:40 [router.go:845] [D] | GET        | /item/index                              | 81.0046ms        | match      | /item/index/*                            | 
+2015/05/26 11:57:35 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 11:57:36 [app.go:96] [I] http server Running on :8080
+2015/05/26 11:57:36 [router.go:845] [D] | GET        | /item/index                              | 49.0028ms        | match      | /item/index/*                            | 
+2015/05/26 11:59:15 [router.go:845] [D] | GET        | /item/index                              | 80.0046ms        | match      | /item/index/*                            | 
+2015/05/26 12:00:50 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:00:51 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:00:52 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/26 12:01:48 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:01:48 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:02:17 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:02:17 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:02:27 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:02:27 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:02:29 [log.go:108] [D]  --------------- Item/Index Info:loop=,  0,  &strconv.NumError{
+    Func: ParseInt,
+    Num: ,
+    Err: &errors.errorString{
+            s: invalid syntax,
+        },
+} 
+2015/05/26 12:02:29 [router.go:845] [D] | GET        | /item/index                              | 59.0033ms        | match      | /item/index/*                            | 
+2015/05/26 12:04:28 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:04:28 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:04:28 [router.go:845] [D] | GET        | /item/index                              | 50.0029ms        | match      | /item/index/*                            | 
+2015/05/26 12:04:43 [router.go:845] [D] | GET        | /item/index                              | 50.0029ms        | match      | /item/index/*                            | 
+2015/05/26 12:04:45 [router.go:845] [D] | GET        | /item/index                              | 54.0031ms        | match      | /item/index/*                            | 
+2015/05/26 12:04:47 [router.go:845] [D] | GET        | /item/index                              | 62.0035ms        | match      | /item/index/*                            | 
+2015/05/26 12:05:01 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:05:01 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:05:15 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:05:15 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:08:03 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:08:03 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:08:06 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:08:06 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:11:41 [router.go:845] [D] | GET        | /item/index                              | 59.0033ms        | match      | /item/index/*                            | 
+2015/05/26 12:13:21 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:13:21 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:14:14 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:14:14 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:15:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:15:40 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:15:40 [router.go:845] [D] | GET        | /item/index                              | 50.0029ms        | match      | /item/index/*                            | 
+2015/05/26 12:15:43 [router.go:845] [D] | GET        | /item/index                              | 65.0037ms        | match      | /item/index/*                            | 
+2015/05/26 12:15:44 [router.go:845] [D] | GET        | /item/index                              | 74.0043ms        | match      | /item/index/*                            | 
+2015/05/26 12:15:46 [router.go:845] [D] | GET        | /item/index                              | 71.0041ms        | match      | /item/index/*                            | 
+2015/05/26 12:15:48 [router.go:845] [D] | GET        | /item/index                              | 84.0048ms        | match      | /item/index/*                            | 
+2015/05/26 12:15:50 [router.go:845] [D] | GET        | /item/index                              | 87.005ms         | match      | /item/index/*                            | 
+2015/05/26 12:15:51 [router.go:845] [D] | GET        | /item/index                              | 86.005ms         | match      | /item/index/*                            | 
+2015/05/26 12:15:52 [router.go:845] [D] | GET        | /item/index                              | 66.0038ms        | match      | /item/index/*                            | 
+2015/05/26 12:15:53 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/26 12:15:55 [router.go:845] [D] | GET        | /item/index                              | 73.0042ms        | match      | /item/index/*                            | 
+2015/05/26 12:15:57 [router.go:845] [D] | GET        | /item/index                              | 84.0048ms        | match      | /item/index/*                            | 
+2015/05/26 12:15:59 [router.go:845] [D] | GET        | /item/index                              | 66.0037ms        | match      | /item/index/*                            | 
+2015/05/26 12:16:00 [router.go:845] [D] | GET        | /item/index                              | 74.0042ms        | match      | /item/index/*                            | 
+2015/05/26 12:16:01 [router.go:845] [D] | GET        | /item/index                              | 85.0049ms        | match      | /item/index/*                            | 
+2015/05/26 12:16:02 [router.go:845] [D] | GET        | /item/index                              | 52.003ms         | match      | /item/index/*                            | 
+2015/05/26 12:16:02 [router.go:845] [D] | GET        | /item/index                              | 73.0042ms        | match      | /item/index/*                            | 
+2015/05/26 12:16:07 [router.go:845] [D] | GET        | /item/index                              | 83.0048ms        | match      | /item/index/*                            | 
+2015/05/26 12:16:13 [router.go:845] [D] | GET        | /item/index                              | 60.0035ms        | match      | /item/index/*                            | 
+2015/05/26 12:17:27 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:17:27 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:17:31 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 3 } 
+2015/05/26 12:17:31 [router.go:845] [D] | GET        | /item/index                              | 83.0047ms        | match      | /item/index/*                            | 
+2015/05/26 12:19:02 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:19:03 [router.go:845] [D] | GET        | /item/index                              | 88.005ms         | match      | /item/index/*                            | 
+2015/05/26 12:19:14 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:19:14 [router.go:845] [D] | GET        | /item/index                              | 82.0047ms        | match      | /item/index/*                            | 
+2015/05/26 12:22:07 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:22:07 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:22:09 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:22:09 [router.go:845] [D] | GET        | /item/index                              | 60.0035ms        | match      | /item/index/*                            | 
+2015/05/26 12:26:39 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:26:39 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:26:40 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:26:40 [router.go:845] [D] | GET        | /item/index                              | 65.0037ms        | match      | /item/index/*                            | 
+2015/05/26 12:29:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:29:40 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:29:44 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:29:44 [router.go:845] [D] | GET        | /item/index                              | 67.0038ms        | match      | /item/index/*                            | 
+2015/05/26 12:31:10 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:31:10 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:31:13 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:31:13 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/26 12:34:02 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:34:03 [router.go:845] [D] | GET        | /item/index                              | 86.0049ms        | match      | /item/index/*                            | 
+2015/05/26 12:34:34 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:34:34 [router.go:845] [D] | GET        | /item/index                              | 59.0034ms        | match      | /item/index/*                            | 
+2015/05/26 12:35:08 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:35:08 [router.go:845] [D] | GET        | /item/index                              | 88.005ms         | match      | /item/index/*                            | 
+2015/05/26 12:35:21 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:35:21 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:35:22 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:35:22 [router.go:845] [D] | GET        | /item/index                              | 50.0028ms        | match      | /item/index/*                            | 
+2015/05/26 12:36:43 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:36:43 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:36:44 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:36:44 [router.go:845] [D] | GET        | /item/index                              | 49.0028ms        | match      | /item/index/*                            | 
+2015/05/26 12:37:42 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:37:42 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:37:45 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:37:45 [router.go:845] [D] | GET        | /item/index                              | 87.005ms         | match      | /item/index/*                            | 
+2015/05/26 12:38:49 [log.go:108] [D]  --------------- Item/Index Info:0,  []int64{ 2, 3 } 
+2015/05/26 12:38:49 [router.go:845] [D] | GET        | /item/index                              | 49.0028ms        | match      | /item/index/*                            | 
+2015/05/26 12:38:50 [log.go:108] [D]  --------------- Item/Index Info:1,  []int64{ 2, 3 } 
+2015/05/26 12:38:50 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/26 12:38:51 [log.go:108] [D]  --------------- Item/Index Info:0,  []int64{ 2, 3 } 
+2015/05/26 12:38:51 [router.go:845] [D] | GET        | /item/index                              | 84.0048ms        | match      | /item/index/*                            | 
+2015/05/26 12:38:52 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:38:52 [router.go:845] [D] | GET        | /item/index                              | 55.0032ms        | match      | /item/index/*                            | 
+2015/05/26 12:39:19 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 12:39:19 [app.go:96] [I] http server Running on :8080
+2015/05/26 12:39:19 [log.go:108] [D]  --------------- Item/Index Info:0,  []int64{ 2, 3 } 
+2015/05/26 12:39:19 [router.go:845] [D] | GET        | /item/index                              | 61.0035ms        | match      | /item/index/*                            | 
+2015/05/26 12:39:20 [log.go:108] [D]  --------------- Item/Index Info:1,  []int64{ 2, 3 } 
+2015/05/26 12:39:20 [router.go:845] [D] | GET        | /item/index                              | 64.0037ms        | match      | /item/index/*                            | 
+2015/05/26 12:39:21 [log.go:108] [D]  --------------- Item/Index Info:0,  []int64{ 2, 3 } 
+2015/05/26 12:39:21 [router.go:845] [D] | GET        | /item/index                              | 63.0036ms        | match      | /item/index/*                            | 
+2015/05/26 12:39:22 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:39:22 [router.go:845] [D] | GET        | /item/index                              | 55.0032ms        | match      | /item/index/*                            | 
+2015/05/26 12:40:47 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ 2, 3 } 
+2015/05/26 12:40:47 [router.go:845] [D] | GET        | /item/index                              | 91.0052ms        | match      | /item/index/*                            | 
+2015/05/26 14:32:52 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 14:32:52 [app.go:96] [I] http server Running on :8080
+2015/05/26 14:32:59 [router.go:845] [D] | GET        | /                                        | 50.0029ms        | match      | /                                        | 
+2015/05/26 14:33:03 [router.go:845] [D] | GET        | /my/company                              | 88.005ms         | match      | /my/company                              | 
+2015/05/26 14:33:11 [router.go:845] [D] | GET        | /company/edit                            | 79.0046ms        | match      | /company/edit/*                          | 
+2015/05/26 14:33:11 [router.go:845] [D] | GET        | /company/GetContact/0                    | 74.0043ms        | match      | /company/getcontact/*                    | 
+2015/05/26 14:33:11 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 80.0045ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 14:33:11 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 88.0051ms        | match      | /company/getlinks/*                      | 
+2015/05/26 14:33:11 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 87.005ms         | match      | /company/getmembers/*                    | 
+2015/05/26 14:33:11 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 111.0064ms       | match      | /company/getloops/*                      | 
+2015/05/26 14:36:53 [router.go:845] [D] | GET        | /company/edit                            | 53.0031ms        | match      | /company/edit/*                          | 
+2015/05/26 14:36:53 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 79.0045ms        | match      | /company/getlinks/*                      | 
+2015/05/26 14:36:53 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 88.005ms         | match      | /company/getintroduce/*                  | 
+2015/05/26 14:36:53 [router.go:845] [D] | GET        | /company/GetContact/0                    | 102.0058ms       | match      | /company/getcontact/*                    | 
+2015/05/26 14:36:53 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 112.0064ms       | match      | /company/getmembers/*                    | 
+2015/05/26 14:36:53 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 116.0067ms       | match      | /company/getloops/*                      | 
+2015/05/26 14:38:07 [router.go:845] [D] | GET        | /company/edit                            | 84.0048ms        | match      | /company/edit/*                          | 
+2015/05/26 14:38:07 [router.go:845] [D] | GET        | /company/GetContact/0                    | 77.0044ms        | match      | /company/getcontact/*                    | 
+2015/05/26 14:38:07 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 83.0048ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 14:38:07 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 81.0046ms        | match      | /company/getlinks/*                      | 
+2015/05/26 14:38:07 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 93.0053ms        | match      | /company/getmembers/*                    | 
+2015/05/26 14:38:07 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 106.006ms        | match      | /company/getloops/*                      | 
+2015/05/26 14:47:10 [router.go:845] [D] | GET        | /company/edit                            | 52.003ms         | match      | /company/edit/*                          | 
+2015/05/26 14:47:10 [router.go:845] [D] | GET        | /company/GetContact/0                    | 80.0046ms        | match      | /company/getcontact/*                    | 
+2015/05/26 14:47:10 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 95.0055ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 14:47:10 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 99.0057ms        | match      | /company/getlinks/*                      | 
+2015/05/26 14:47:10 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 118.0067ms       | match      | /company/getmembers/*                    | 
+2015/05/26 14:47:10 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 134.0077ms       | match      | /company/getloops/*                      | 
+2015/05/26 14:47:20 [router.go:845] [D] | GET        | /company/edit                            | 48.0027ms        | match      | /company/edit/*                          | 
+2015/05/26 14:47:21 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 61.0034ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 14:47:21 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 77.0044ms        | match      | /company/getlinks/*                      | 
+2015/05/26 14:47:21 [router.go:845] [D] | GET        | /company/GetContact/0                    | 89.0051ms        | match      | /company/getcontact/*                    | 
+2015/05/26 14:47:21 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 89.0051ms        | match      | /company/getloops/*                      | 
+2015/05/26 14:47:21 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 93.0053ms        | match      | /company/getmembers/*                    | 
+2015/05/26 14:47:50 [router.go:845] [D] | GET        | /company/edit                            | 57.0033ms        | match      | /company/edit/*                          | 
+2015/05/26 14:47:50 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 76.0043ms        | match      | /company/getlinks/*                      | 
+2015/05/26 14:47:50 [router.go:845] [D] | GET        | /company/GetContact/0                    | 82.0047ms        | match      | /company/getcontact/*                    | 
+2015/05/26 14:47:50 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 106.006ms        | match      | /company/getmembers/*                    | 
+2015/05/26 14:47:50 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 132.0076ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 14:47:50 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 127.0073ms       | match      | /company/getloops/*                      | 
+2015/05/26 14:47:58 [router.go:845] [D] | GET        | /company/edit                            | 79.0045ms        | match      | /company/edit/*                          | 
+2015/05/26 14:47:58 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 97.0055ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 14:47:58 [router.go:845] [D] | GET        | /company/GetContact/0                    | 101.0058ms       | match      | /company/getcontact/*                    | 
+2015/05/26 14:47:58 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 90.0052ms        | match      | /company/getloops/*                      | 
+2015/05/26 14:47:58 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 101.0058ms       | match      | /company/getlinks/*                      | 
+2015/05/26 14:47:58 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 121.0069ms       | match      | /company/getmembers/*                    | 
+2015/05/26 14:48:34 [router.go:845] [D] | GET        | /company/edit                            | 45.0026ms        | match      | /company/edit/*                          | 
+2015/05/26 14:48:34 [router.go:845] [D] | GET        | /company/GetContact/0                    | 50.0028ms        | match      | /company/getcontact/*                    | 
+2015/05/26 14:48:34 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 92.0053ms        | match      | /company/getmembers/*                    | 
+2015/05/26 14:48:34 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 108.0062ms       | match      | /company/getlinks/*                      | 
+2015/05/26 14:48:34 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 105.006ms        | match      | /company/getloops/*                      | 
+2015/05/26 14:48:34 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 184.0105ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 14:48:47 [router.go:845] [D] | GET        | /company/edit                            | 65.0038ms        | match      | /company/edit/*                          | 
+2015/05/26 14:48:47 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 75.0043ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 14:48:47 [router.go:845] [D] | GET        | /company/GetContact/0                    | 79.0045ms        | match      | /company/getcontact/*                    | 
+2015/05/26 14:48:47 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 92.0053ms        | match      | /company/getlinks/*                      | 
+2015/05/26 14:48:47 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 120.0069ms       | match      | /company/getmembers/*                    | 
+2015/05/26 14:48:47 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 135.0078ms       | match      | /company/getloops/*                      | 
+2015/05/26 14:50:46 [router.go:845] [D] | GET        | /company/edit                            | 83.0048ms        | match      | /company/edit/*                          | 
+2015/05/26 14:50:46 [router.go:845] [D] | GET        | /company/GetContact/0                    | 85.0048ms        | match      | /company/getcontact/*                    | 
+2015/05/26 14:50:46 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 97.0055ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 14:50:46 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 93.0053ms        | match      | /company/getlinks/*                      | 
+2015/05/26 14:50:46 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 119.0068ms       | match      | /company/getmembers/*                    | 
+2015/05/26 14:50:46 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 135.0077ms       | match      | /company/getloops/*                      | 
+2015/05/26 14:50:51 [m_base.go:133] [E] 无效数据：Name.Required-Can not be empty 
+2015/05/26 14:50:51 [m_base.go:133] [E] 无效数据：CompanyName.Required-Can not be empty 
+2015/05/26 14:50:51 [m_base.go:133] [E] 无效数据：Intro.Required-Can not be empty 
+2015/05/26 14:51:01 [m_base.go:133] [E] 无效数据：Name.Required-Can not be empty 
+2015/05/26 14:51:01 [m_base.go:133] [E] 无效数据：CompanyName.Required-Can not be empty 
+2015/05/26 14:51:01 [m_base.go:133] [E] 无效数据：Intro.Required-Can not be empty 
+2015/05/26 14:51:15 [m_base.go:133] [E] 无效数据：Name.Required-Can not be empty 
+2015/05/26 14:51:15 [m_base.go:133] [E] 无效数据：CompanyName.Required-Can not be empty 
+2015/05/26 14:51:15 [m_base.go:133] [E] 无效数据：Intro.Required-Can not be empty 
+2015/05/26 14:51:51 [router.go:845] [D] | GET        | /company/edit                            | 57.0033ms        | match      | /company/edit/*                          | 
+2015/05/26 14:51:51 [router.go:845] [D] | GET        | /company/GetContact/0                    | 84.0048ms        | match      | /company/getcontact/*                    | 
+2015/05/26 14:51:51 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 85.0048ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 14:51:51 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 87.0049ms        | match      | /company/getlinks/*                      | 
+2015/05/26 14:51:51 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 100.0057ms       | match      | /company/getmembers/*                    | 
+2015/05/26 14:51:51 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 107.0061ms       | match      | /company/getloops/*                      | 
+2015/05/26 14:51:53 [m_base.go:133] [E] 无效数据：Name.Required-Can not be empty 
+2015/05/26 14:51:53 [m_base.go:133] [E] 无效数据：CompanyName.Required-Can not be empty 
+2015/05/26 14:51:53 [m_base.go:133] [E] 无效数据：Intro.Required-Can not be empty 
+2015/05/26 15:01:38 [router.go:845] [D] | GET        | /company/edit                            | 57.0033ms        | match      | /company/edit/*                          | 
+2015/05/26 15:01:38 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 71.0041ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 15:01:38 [router.go:845] [D] | GET        | /company/GetContact/0                    | 83.0048ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:01:38 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 94.0054ms        | match      | /company/getloops/*                      | 
+2015/05/26 15:01:38 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 98.0056ms        | match      | /company/getmembers/*                    | 
+2015/05/26 15:01:38 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 116.0066ms       | match      | /company/getlinks/*                      | 
+2015/05/26 15:01:40 [m_base.go:133] [E] 无效数据：Name.Required-Can not be empty 
+2015/05/26 15:01:40 [m_base.go:133] [E] 无效数据：CompanyName.Required-Can not be empty 
+2015/05/26 15:01:40 [m_base.go:133] [E] 无效数据：Intro.Required-Can not be empty 
+2015/05/26 15:03:22 [router.go:845] [D] | GET        | /company/edit                            | 45.0025ms        | match      | /company/edit/*                          | 
+2015/05/26 15:03:23 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 70.004ms         | match      | /company/getintroduce/*                  | 
+2015/05/26 15:03:23 [router.go:845] [D] | GET        | /company/GetContact/0                    | 81.0046ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:03:23 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 83.0047ms        | match      | /company/getmembers/*                    | 
+2015/05/26 15:03:23 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 95.0054ms        | match      | /company/getlinks/*                      | 
+2015/05/26 15:03:23 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 91.0052ms        | match      | /company/getloops/*                      | 
+2015/05/26 15:03:38 [m_base.go:133] [E] 无效数据：Name.Required-Can not be empty 
+2015/05/26 15:03:38 [m_base.go:133] [E] 无效数据：Intro.Required-Can not be empty 
+2015/05/26 15:04:29 [m_base.go:133] [E] 无效数据：Name.Required-Can not be empty 
+2015/05/26 15:04:29 [m_base.go:133] [E] 无效数据：Intro.Required-Can not be empty 
+2015/05/26 15:07:53 [router.go:845] [D] | GET        | /company/edit                            | 64.0036ms        | match      | /company/edit/*                          | 
+2015/05/26 15:07:54 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 78.0044ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 15:07:54 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 85.0048ms        | match      | /company/getlinks/*                      | 
+2015/05/26 15:07:54 [router.go:845] [D] | GET        | /company/GetContact/0                    | 92.0053ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:07:54 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 89.0051ms        | match      | /company/getloops/*                      | 
+2015/05/26 15:07:54 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 158.0091ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:08:32 [router.go:845] [D] | GET        | /company/edit                            | 89.005ms         | match      | /company/edit/*                          | 
+2015/05/26 15:08:32 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 59.0033ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 15:08:32 [router.go:845] [D] | GET        | /company/GetContact/0                    | 68.0039ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:08:32 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 78.0045ms        | match      | /company/getlinks/*                      | 
+2015/05/26 15:08:32 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 75.0043ms        | match      | /company/getloops/*                      | 
+2015/05/26 15:08:32 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 153.0088ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:15:43 [router.go:845] [D] | GET        | /company/edit                            | 72.0041ms        | match      | /company/edit/*                          | 
+2015/05/26 15:15:43 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 101.0058ms       | match      | /company/getlinks/*                      | 
+2015/05/26 15:15:43 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 108.0061ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:15:43 [router.go:845] [D] | GET        | /company/GetContact/0                    | 120.0069ms       | match      | /company/getcontact/*                    | 
+2015/05/26 15:15:43 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 119.0068ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:15:43 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 125.0071ms       | match      | /company/getloops/*                      | 
+2015/05/26 15:17:26 [router.go:845] [D] | GET        | /company/edit                            | 85.0049ms        | match      | /company/edit/*                          | 
+2015/05/26 15:17:26 [router.go:845] [D] | GET        | /company/GetContact/0                    | 104.006ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:17:26 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 123.0071ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:17:26 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 123.007ms        | match      | /company/getloops/*                      | 
+2015/05/26 15:17:26 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 154.0088ms       | match      | /company/getlinks/*                      | 
+2015/05/26 15:17:26 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 163.0093ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:18:07 [router.go:845] [D] | GET        | /company/edit                            | 62.0036ms        | match      | /company/edit/*                          | 
+2015/05/26 15:18:07 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 80.0046ms        | match      | /company/getmembers/*                    | 
+2015/05/26 15:18:07 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 94.0054ms        | match      | /company/getlinks/*                      | 
+2015/05/26 15:18:07 [router.go:845] [D] | GET        | /company/GetContact/0                    | 118.0067ms       | match      | /company/getcontact/*                    | 
+2015/05/26 15:18:07 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 119.0068ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:18:07 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 131.0075ms       | match      | /company/getloops/*                      | 
+2015/05/26 15:18:33 [router.go:845] [D] | GET        | /company/edit                            | 61.0035ms        | match      | /company/edit/*                          | 
+2015/05/26 15:18:33 [router.go:845] [D] | GET        | /company/GetContact/0                    | 87.0049ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:18:33 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 106.006ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 15:18:33 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 94.0053ms        | match      | /company/getloops/*                      | 
+2015/05/26 15:18:33 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 116.0067ms       | match      | /company/getlinks/*                      | 
+2015/05/26 15:18:33 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 147.0084ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:20:57 [router.go:845] [D] | GET        | /company/edit                            | 79.0045ms        | match      | /company/edit/*                          | 
+2015/05/26 15:20:57 [router.go:845] [D] | GET        | /company/GetContact/0                    | 73.0042ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:20:57 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 114.0066ms       | match      | /company/getlinks/*                      | 
+2015/05/26 15:20:57 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 118.0067ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:20:57 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 135.0078ms       | match      | /company/getloops/*                      | 
+2015/05/26 15:20:58 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 152.0087ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:26:53 [router.go:845] [D] | GET        | /company/edit                            | 57.0032ms        | match      | /company/edit/*                          | 
+2015/05/26 15:26:53 [router.go:845] [D] | GET        | /company/GetContact/0                    | 108.0062ms       | match      | /company/getcontact/*                    | 
+2015/05/26 15:26:53 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 116.0067ms       | match      | /company/getloops/*                      | 
+2015/05/26 15:26:53 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 127.0072ms       | match      | /company/getlinks/*                      | 
+2015/05/26 15:26:53 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 131.0074ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:26:53 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 160.0092ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:29:10 [router.go:845] [D] | GET        | /company/edit                            | 54.0031ms        | match      | /company/edit/*                          | 
+2015/05/26 15:29:10 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 95.0055ms        | match      | /company/getlinks/*                      | 
+2015/05/26 15:29:10 [router.go:845] [D] | GET        | /company/GetContact/0                    | 108.0062ms       | match      | /company/getcontact/*                    | 
+2015/05/26 15:29:10 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 104.006ms        | match      | /company/getloops/*                      | 
+2015/05/26 15:29:10 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 144.0082ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:29:10 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 149.0085ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:33:11 [router.go:845] [D] | GET        | /company/edit                            | 80.0046ms        | match      | /company/edit/*                          | 
+2015/05/26 15:33:11 [router.go:845] [D] | GET        | /company/GetContact/0                    | 68.0039ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:33:11 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 112.0064ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:33:11 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 179.0102ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:33:11 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 199.0114ms       | match      | /company/getlinks/*                      | 
+2015/05/26 15:33:11 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 217.0124ms       | match      | /company/getloops/*                      | 
+2015/05/26 15:35:29 [router.go:845] [D] | GET        | /company/edit                            | 56.0032ms        | match      | /company/edit/*                          | 
+2015/05/26 15:35:29 [router.go:845] [D] | GET        | /company/GetContact/0                    | 75.0043ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:35:29 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 97.0055ms        | match      | /company/getlinks/*                      | 
+2015/05/26 15:35:29 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 117.0067ms       | match      | /company/getloops/*                      | 
+2015/05/26 15:35:29 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 148.0085ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:35:29 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 155.0089ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:44:04 [router.go:845] [D] | GET        | /company/edit                            | 56.0032ms        | match      | /company/edit/*                          | 
+2015/05/26 15:44:04 [router.go:845] [D] | GET        | /company/GetContact/0                    | 91.0052ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:44:04 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 89.0051ms        | match      | /company/getlinks/*                      | 
+2015/05/26 15:44:04 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 115.0065ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:44:04 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 115.0066ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:44:04 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 141.008ms        | match      | /company/getloops/*                      | 
+2015/05/26 15:52:01 [router.go:845] [D] | GET        | /company/edit                            | 56.0033ms        | match      | /company/edit/*                          | 
+2015/05/26 15:52:01 [router.go:845] [D] | GET        | /company/GetContact/0                    | 96.0055ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:52:01 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 104.006ms        | match      | /company/getlinks/*                      | 
+2015/05/26 15:52:01 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 124.0071ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:52:01 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 147.0084ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:52:01 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 170.0098ms       | match      | /company/getloops/*                      | 
+2015/05/26 15:55:41 [router.go:845] [D] | GET        | /company/edit                            | 46.0027ms        | match      | /company/edit/*                          | 
+2015/05/26 15:55:41 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 66.0038ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 15:55:41 [router.go:845] [D] | GET        | /company/GetContact/0                    | 105.006ms        | match      | /company/getcontact/*                    | 
+2015/05/26 15:55:41 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 122.007ms        | match      | /company/getmembers/*                    | 
+2015/05/26 15:55:41 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 134.0077ms       | match      | /company/getlinks/*                      | 
+2015/05/26 15:55:41 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 146.0084ms       | match      | /company/getloops/*                      | 
+2015/05/26 15:56:58 [router.go:845] [D] | GET        | /company/edit                            | 64.0037ms        | match      | /company/edit/*                          | 
+2015/05/26 15:56:58 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 91.0052ms        | match      | /company/getlinks/*                      | 
+2015/05/26 15:56:58 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 117.0067ms       | match      | /company/getmembers/*                    | 
+2015/05/26 15:56:58 [router.go:845] [D] | GET        | /company/GetContact/0                    | 142.0082ms       | match      | /company/getcontact/*                    | 
+2015/05/26 15:56:58 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 134.0077ms       | match      | /company/getloops/*                      | 
+2015/05/26 15:56:58 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 178.0102ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:59:03 [router.go:845] [D] | GET        | /company/edit                            | 84.0048ms        | match      | /company/edit/*                          | 
+2015/05/26 15:59:03 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 82.0047ms        | match      | /company/getmembers/*                    | 
+2015/05/26 15:59:03 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 109.0062ms       | match      | /company/getlinks/*                      | 
+2015/05/26 15:59:03 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 144.0082ms       | match      | /company/getintroduce/*                  | 
+2015/05/26 15:59:03 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 133.0076ms       | match      | /company/getloops/*                      | 
+2015/05/26 15:59:03 [router.go:845] [D] | GET        | /company/GetContact/0                    | 155.0089ms       | match      | /company/getcontact/*                    | 
+2015/05/26 16:01:27 [router.go:845] [D] | GET        | /company/edit                            | 45.0026ms        | match      | /company/edit/*                          | 
+2015/05/26 16:01:28 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 94.0054ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 16:01:28 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 93.0053ms        | match      | /company/getlinks/*                      | 
+2015/05/26 16:01:28 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 108.0062ms       | match      | /company/getmembers/*                    | 
+2015/05/26 16:01:28 [router.go:845] [D] | GET        | /company/GetContact/0                    | 116.0067ms       | match      | /company/getcontact/*                    | 
+2015/05/26 16:01:28 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 110.0063ms       | match      | /company/getloops/*                      | 
+2015/05/26 16:06:08 [router.go:845] [D] | GET        | /company/edit                            | 59.0034ms        | match      | /company/edit/*                          | 
+2015/05/26 16:06:08 [router.go:845] [D] | GET        | /company/GetContact/0                    | 85.0049ms        | match      | /company/getcontact/*                    | 
+2015/05/26 16:06:08 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 94.0054ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 16:06:08 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 110.0063ms       | match      | /company/getlinks/*                      | 
+2015/05/26 16:06:08 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 127.0072ms       | match      | /company/getloops/*                      | 
+2015/05/26 16:06:08 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 136.0078ms       | match      | /company/getmembers/*                    | 
+2015/05/26 17:03:39 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:03:43 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:09:59 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:09:59 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:10:53 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:10:54 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:11:47 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:11:47 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:14:17 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:14:17 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:22:33 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:22:33 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:25:47 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:25:47 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:27:09 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:27:09 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:28:04 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:28:04 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:38:26 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:38:26 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:45:06 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:45:07 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:45:24 [router.go:845] [D] | GET        | /company/edit                            | 113.0065ms       | match      | /company/edit/*                          | 
+2015/05/26 17:45:25 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 56.0032ms        | match      | /company/getlinks/*                      | 
+2015/05/26 17:45:25 [router.go:845] [D] | GET        | /company/GetContact/0                    | 66.0037ms        | match      | /company/getcontact/*                    | 
+2015/05/26 17:45:25 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 69.004ms         | match      | /company/getmembers/*                    | 
+2015/05/26 17:45:25 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 72.0041ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 17:45:25 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 73.0041ms        | match      | /company/getloops/*                      | 
+2015/05/26 17:48:37 [router.go:845] [D] | GET        | /article/edit                            | 1.0001ms         | notmatch   | 
+2015/05/26 17:50:09 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 17:50:09 [app.go:96] [I] http server Running on :8080
+2015/05/26 17:50:13 [router.go:845] [D] | GET        | /article/edit                            | 60.0034ms        | match      | /article/edit/*                          | 
+2015/05/26 17:50:13 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 61.0035ms        | match      | /company/getintroduce/*                  | 
+2015/05/26 17:50:13 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 75.0043ms        | match      | /company/getlinks/*                      | 
+2015/05/26 17:50:13 [router.go:845] [D] | GET        | /company/GetContact/0                    | 82.0047ms        | match      | /company/getcontact/*                    | 
+2015/05/26 17:50:13 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 92.0053ms        | match      | /company/getmembers/*                    | 
+2015/05/26 17:50:13 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 108.0062ms       | match      | /company/getloops/*                      | 
+2015/05/26 17:51:51 [router.go:845] [D] | GET        | /article/edit                            | 63.0036ms        | match      | /article/edit/*                          | 
+2015/05/26 17:52:50 [router.go:845] [D] | GET        | /article/edit                            | 45.0026ms        | match      | /article/edit/*                          | 
+2015/05/26 18:03:44 [router.go:845] [D] | GET        | /article/edit                            | 79.0045ms        | match      | /article/edit/*                          | 
+2015/05/26 18:05:50 [router.go:845] [D] | GET        | /article/edit                            | 55.0031ms        | match      | /article/edit/*                          | 
+2015/05/26 18:09:32 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 18:09:32 [app.go:96] [I] http server Running on :8080
+2015/05/26 18:09:39 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 18:09:39 [app.go:96] [I] http server Running on :8080
+2015/05/26 18:15:27 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/26 18:15:27 [app.go:96] [I] http server Running on :8080
+2015/05/26 18:20:25 [router.go:845] [D] | GET        | /article/edit                            | 73.0042ms        | match      | /article/edit/*                          | 
+2015/05/26 18:20:50 [router.go:845] [D] | GET        | /article/edit                            | 80.0045ms        | match      | /article/edit/*                          | 
+2015/05/26 18:23:36 [router.go:845] [D] | GET        | /article/edit                            | 72.0041ms        | match      | /article/edit/*                          | 
+2015/05/26 18:24:24 [router.go:845] [D] | GET        | /article/edit                            | 86.0049ms        | match      | /article/edit/*                          | 
+2015/05/26 18:25:05 [router.go:845] [D] | GET        | /article/edit                            | 61.0035ms        | match      | /article/edit/*                          | 
+2015/05/26 18:26:08 [router.go:845] [D] | GET        | /article/edit                            | 53.0031ms        | match      | /article/edit/*                          | 
+2015/05/26 18:26:24 [router.go:845] [D] | GET        | /article/edit                            | 61.0035ms        | match      | /article/edit/*                          | 
+2015/05/26 18:27:24 [router.go:845] [D] | GET        | /article/edit                            | 77.0044ms        | match      | /article/edit/*                          | 
+2015/05/26 18:27:42 [router.go:845] [D] | GET        | /article/edit                            | 78.0044ms        | match      | /article/edit/*                          | 
+2015/05/26 18:28:15 [router.go:845] [D] | GET        | /article/edit                            | 59.0034ms        | match      | /article/edit/*                          | 
+2015/05/26 18:29:53 [router.go:845] [D] | GET        | /article/edit                            | 54.0031ms        | match      | /article/edit/*                          | 
+2015/05/26 18:31:30 [router.go:845] [D] | GET        | /article/edit                            | 87.0049ms        | match      | /article/edit/*                          | 
+2015/05/26 18:33:53 [router.go:845] [D] | GET        | /article/edit                            | 48.0027ms        | match      | /article/edit/*                          | 

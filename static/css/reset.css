@@ -97,11 +97,35 @@ textarea {
 	overflow: hidden;
 }
 /*定位*/
-
+.abs{
+	position: absolute;
+}
+.abs.top{
+	top: 0;
+}
+.abs.right{
+	right: 0;
+}
+.abs.left{
+	left: 0;
+}
+.abs.top5{
+	top: 5px;
+}
+.abs.right5{
+	right: 5px;
+}
+.abs.left5{
+	left: 5px;
+}
 .abs-top {
 	position: absolute;
 	top: 0;
 	z-index: 1000;
+}
+.abs-center{
+	left: 0;
+	right: 0;
 }
 .abs-right-bottom {
 	position: absolute;
@@ -141,12 +165,12 @@ header.abs-top .nav>li>a {
 	border: 1px solid #666;
 	padding: 5px 15px;
 	margin: 8px;
-	background: #fff;
-	color: #333;
-	border-radius: 5px;
+	/*background: #fff;*/
+	color: #fff;
+	/*border-radius: 5px;*/
 }
 header.abs-top .nav>li.active a {
-	color: #eee !important;
+	color: #999 !important;
 	background: transparent !important;
 }
 .nav .snow-profile img {
@@ -319,6 +343,7 @@ header.abs-top .nav>li.active a {
 	margin: 0;
 	padding: 0;
 	height: 180px;
+	border: 1px solid #666;
 }
 .snow-media:nth-child(2n+1){
 	background: #666;
@@ -339,7 +364,7 @@ header.abs-top .nav>li.active a {
 	padding: 15px;
 }
 article.container {
-	margin-top: 80px;
+	margin-top: 50px;
 }
 article p {
 	text-align: left;
@@ -365,7 +390,12 @@ dl.snow-condition a.active {
 	background: #ddd;
 }
 /*表单*/
-
+form .error{
+	font-size: .8em;
+}
+form .quirks .error{
+	color:#fff;
+}
 form .alert {
 	/*visibility:hidden;*/
 	
