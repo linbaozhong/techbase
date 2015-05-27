@@ -15071,3 +15071,1986 @@
 2015/05/26 18:29:53 [router.go:845] [D] | GET        | /article/edit                            | 54.0031ms        | match      | /article/edit/*                          | 
 2015/05/26 18:31:30 [router.go:845] [D] | GET        | /article/edit                            | 87.0049ms        | match      | /article/edit/*                          | 
 2015/05/26 18:33:53 [router.go:845] [D] | GET        | /article/edit                            | 48.0027ms        | match      | /article/edit/*                          | 
+2015/05/27 10:08:47 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 10:08:51 [app.go:96] [I] http server Running on :8080
+2015/05/27 10:09:02 [router.go:845] [D] | GET        | /                                        | 125.0071ms       | match      | /                                        | 
+2015/05/27 10:09:11 [router.go:845] [D] | GET        | /my/company                              | 82.0047ms        | match      | /my/company                              | 
+2015/05/27 10:09:13 [router.go:845] [D] | GET        | /admin/media                             | 74.0042ms        | match      | /admin/media/*                           | 
+2015/05/27 10:11:50 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 10:11:51 [app.go:96] [I] http server Running on :8080
+2015/05/27 10:12:08 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 10:12:08 [app.go:96] [I] http server Running on :8080
+2015/05/27 10:12:08 [router.go:845] [D] | GET        | /admin/media                             | 1.0001ms         | notmatch   | 
+2015/05/27 10:12:12 [router.go:845] [D] | GET        | /admin/company                           | 80.0046ms        | match      | /admin/company/*                         | 
+2015/05/27 10:12:15 [router.go:845] [D] | GET        | /article/index                           | 71.0041ms        | match      | /article/index/*                         | 
+2015/05/27 10:14:13 [router.go:845] [D] | GET        | /article/index                           | 42.0024ms        | match      | /article/index/*                         | 
+2015/05/27 10:17:02 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 10:17:02 [app.go:96] [I] http server Running on :8080
+2015/05/27 10:17:08 [router.go:845] [D] | GET        | /article/index                           | 49.0028ms        | match      | /article/index/*                         | 
+2015/05/27 10:19:37 [router.go:845] [D] | GET        | /article/index                           | 78.0044ms        | match      | /article/index/*                         | 
+2015/05/27 10:19:41 [router.go:845] [D] | GET        | /article/edit                            | 75.0043ms        | match      | /article/edit/*                          | 
+2015/05/27 10:25:29 [router.go:845] [D] | GET        | /article/index                           | 53.0031ms        | match      | /article/index/*                         | 
+2015/05/27 10:27:10 [router.go:845] [D] | GET        | /article/edit                            | 80.0046ms        | match      | /article/edit/*                          | 
+2015/05/27 10:40:28 [router.go:845] [D] | GET        | /article/edit                            | 54.0031ms        | match      | /article/edit/*                          | 
+2015/05/27 10:40:42 [router.go:845] [D] | GET        | /article/edit                            | 86.0049ms        | match      | /article/edit/*                          | 
+2015/05/27 10:43:00 [router.go:845] [D] | GET        | /article/edit                            | 64.0036ms        | match      | /article/edit/*                          | 
+2015/05/27 10:43:50 [router.go:845] [D] | GET        | /article/edit                            | 57.0033ms        | match      | /article/edit/*                          | 
+2015/05/27 11:23:55 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 11:23:55 [app.go:96] [I] http server Running on :8080
+2015/05/27 11:33:23 [router.go:845] [D] | GET        | /article/edit                            | 61.0035ms        | match      | /article/edit/*                          | 
+2015/05/27 11:35:05 [router.go:845] [D] | GET        | /article/edit                            | 52.003ms         | match      | /article/edit/*                          | 
+2015/05/27 11:35:13 [router.go:845] [D] | GET        | /article/edit                            | 80.0046ms        | match      | /article/edit/*                          | 
+2015/05/27 11:38:09 [router.go:845] [D] | GET        | /article/edit                            | 76.0043ms        | match      | /article/edit/*                          | 
+2015/05/27 11:39:20 [router.go:845] [D] | GET        | /article/edit                            | 60.0034ms        | match      | /article/edit/*                          | 
+2015/05/27 11:41:37 [router.go:845] [D] | GET        | /article/edit                            | 54.0031ms        | match      | /article/edit/*                          | 
+2015/05/27 11:43:43 [router.go:845] [D] | GET        | /article/edit                            | 61.0035ms        | match      | /article/edit/*                          | 
+2015/05/27 11:48:41 [router.go:845] [D] | GET        | /article/edit                            | 53.003ms         | match      | /article/edit/*                          | 
+2015/05/27 11:49:07 [router.go:845] [D] | GET        | /article/edit                            | 85.0048ms        | match      | /article/edit/*                          | 
+2015/05/27 11:49:41 [router.go:845] [D] | GET        | /article/edit                            | 60.0034ms        | match      | /article/edit/*                          | 
+2015/05/27 11:49:48 [router.go:845] [D] | GET        | /article/edit                            | 53.0031ms        | match      | /article/edit/*                          | 
+2015/05/27 11:53:07 [router.go:845] [D] | GET        | /article/edit                            | 78.0044ms        | match      | /article/edit/*                          | 
+2015/05/27 11:57:31 [router.go:845] [D] | GET        | /article/edit                            | 78.0045ms        | match      | /article/edit/*                          | 
+2015/05/27 11:57:45 [router.go:845] [D] | GET        | /article/edit                            | 57.0033ms        | match      | /article/edit/*                          | 
+2015/05/27 11:59:25 [router.go:845] [D] | GET        | /article/edit                            | 59.0034ms        | match      | /article/edit/*                          | 
+2015/05/27 12:00:16 [router.go:845] [D] | GET        | /article/edit                            | 56.0032ms        | match      | /article/edit/*                          | 
+2015/05/27 12:00:44 [router.go:845] [D] | GET        | /article/edit                            | 59.0033ms        | match      | /article/edit/*                          | 
+2015/05/27 12:11:27 [router.go:845] [D] | GET        | /article/edit                            | 79.0045ms        | match      | /article/edit/*                          | 
+2015/05/27 12:11:43 [router.go:845] [D] | GET        | /my/company                              | 75.0043ms        | match      | /my/company                              | 
+2015/05/27 12:11:51 [router.go:845] [D] | GET        | /company/edit                            | 56.0033ms        | match      | /company/edit/*                          | 
+2015/05/27 12:11:52 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 80.0046ms        | match      | /company/getlinks/*                      | 
+2015/05/27 12:11:52 [router.go:845] [D] | GET        | /company/GetContact/0                    | 101.0058ms       | match      | /company/getcontact/*                    | 
+2015/05/27 12:11:52 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 114.0065ms       | match      | /company/getintroduce/*                  | 
+2015/05/27 12:11:52 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 117.0066ms       | match      | /company/getmembers/*                    | 
+2015/05/27 12:11:52 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 120.0068ms       | match      | /company/getloops/*                      | 
+2015/05/27 12:13:13 [router.go:845] [D] | GET        | /admin/account                           | 106.0061ms       | match      | /admin/account/*                         | 
+2015/05/27 12:14:15 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 12:14:15 [app.go:96] [I] http server Running on :8080
+2015/05/27 12:14:36 [router.go:845] [D] | GET        | /my/company                              | 63.0036ms        | match      | /my/company                              | 
+2015/05/27 12:16:01 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 12:16:01 [app.go:96] [I] http server Running on :8080
+2015/05/27 12:16:05 [router.go:845] [D] | GET        | /admin/account                           | 54.0031ms        | match      | /admin/account/*                         | 
+2015/05/27 12:17:29 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 12:17:29 [app.go:96] [I] http server Running on :8080
+2015/05/27 12:19:36 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 12:19:36 [app.go:96] [I] http server Running on :8080
+2015/05/27 12:23:08 [router.go:845] [D] | GET        | /article/index                           | 58.0034ms        | match      | /article/index/*                         | 
+2015/05/27 12:23:09 [router.go:845] [D] | GET        | /article/edit                            | 87.005ms         | match      | /article/edit/*                          | 
+2015/05/27 12:32:04 [router.go:845] [D] | GET        | /article/edit                            | 93.0053ms        | match      | /article/edit/*                          | 
+2015/05/27 12:32:52 [router.go:845] [D] | GET        | /article/edit                            | 59.0034ms        | match      | /article/edit/*                          | 
+2015/05/27 12:34:17 [router.go:876] [C] the request url is  /admin/upload 
+2015/05/27 12:34:17 [router.go:877] [C] Handler crashed with error reflect: Call of unexported method 
+2015/05/27 12:34:17 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/27 12:34:17 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:698 
+2015/05/27 12:34:17 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:444 
+2015/05/27 12:34:17 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:411 
+2015/05/27 12:34:17 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:794 
+2015/05/27 12:34:17 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/27 12:34:17 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/27 12:34:17 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/27 12:34:49 [router.go:845] [D] | GET        | /article/edit                            | 75.0043ms        | match      | /article/edit/*                          | 
+2015/05/27 12:46:35 [router.go:845] [D] | GET        | /article/edit                            | 79.0045ms        | match      | /article/edit/*                          | 
+2015/05/27 12:46:37 [router.go:845] [D] | GET        | /article/edit                            | 79.0046ms        | match      | /article/edit/*                          | 
+2015/05/27 12:47:35 [router.go:845] [D] | GET        | /article/edit                            | 84.0048ms        | match      | /article/edit/*                          | 
+2015/05/27 12:48:00 [router.go:845] [D] | GET        | /article/edit                            | 63.0036ms        | match      | /article/edit/*                          | 
+2015/05/27 13:04:47 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 13:04:47 [app.go:96] [I] http server Running on :8080
+2015/05/27 13:05:20 [router.go:845] [D] | GET        | /article/edit                            | 86.0049ms        | match      | /article/edit/*                          | 
+2015/05/27 13:05:24 [router.go:845] [D] | GET        | /article/edit                            | 85.0049ms        | match      | /article/edit/*                          | 
+2015/05/27 13:05:42 [router.go:845] [D] | GET        | /article/edit                            | 70.004ms         | match      | /article/edit/*                          | 
+2015/05/27 13:05:49 [router.go:845] [D] | POST       | /up/image                                | 5.0003ms         | notmatch   | 
+2015/05/27 13:07:18 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 13:07:19 [app.go:96] [I] http server Running on :8080
+2015/05/27 13:10:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 13:10:57 [app.go:96] [I] http server Running on :8080
+2015/05/27 13:13:19 [router.go:845] [D] | GET        | /article/edit                            | 67.0039ms        | match      | /article/edit/*                          | 
+2015/05/27 13:18:24 [router.go:845] [D] | GET        | /article/edit                            | 58.0033ms        | match      | /article/edit/*                          | 
+2015/05/27 13:18:24 [router.go:845] [D] | GET        | /article/undefinedlang/zh-cn/zh-cn.js    | 0                | notmatch   | 
+2015/05/27 13:18:24 [router.go:845] [D] | GET        | /article/undefinedthemes/default/css/ueditor.css | 1.0001ms         | notmatch   | 
+2015/05/27 13:18:24 [router.go:845] [D] | GET        | /up/image                                | 0                | notmatch   | 
+2015/05/27 13:18:30 [router.go:845] [D] | GET        | /article/undefinedthemes/default/css/ueditor.css | 1.0001ms         | notmatch   | 
+2015/05/27 13:21:10 [router.go:845] [D] | GET        | /article/edit                            | 64.0036ms        | match      | /article/edit/*                          | 
+2015/05/27 13:21:11 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/asp/controller.asp: The system cannot find the path specified. 
+2015/05/27 13:21:11 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/codemirror/codemirror.js: The system cannot find the path specified. 
+2015/05/27 13:21:11 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/codemirror/codemirror.css: The system cannot find the path specified. 
+2015/05/27 13:21:11 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/zeroclipboard/ZeroClipboard.js: The system cannot find the path specified. 
+2015/05/27 13:21:44 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/jquery-1.10.2.min.js: The system cannot find the path specified. 
+2015/05/27 13:21:44 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/webuploader/webuploader.min.js: The system cannot find the path specified. 
+2015/05/27 13:21:44 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/webuploader/webuploader.css: The system cannot find the path specified. 
+2015/05/27 13:57:25 [router.go:845] [D] | GET        | /article/edit                            | 80.0045ms        | match      | /article/edit/*                          | 
+2015/05/27 13:57:25 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/up: The system cannot find the file specified. 
+2015/05/27 13:57:26 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/codemirror/codemirror.js: The system cannot find the path specified. 
+2015/05/27 13:57:26 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/codemirror/codemirror.css: The system cannot find the path specified. 
+2015/05/27 13:57:26 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/zeroclipboard/ZeroClipboard.js: The system cannot find the path specified. 
+2015/05/27 13:57:32 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/jquery-1.10.2.min.js: The system cannot find the path specified. 
+2015/05/27 13:57:32 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/webuploader/webuploader.min.js: The system cannot find the path specified. 
+2015/05/27 13:57:32 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/webuploader/webuploader.css: The system cannot find the path specified. 
+2015/05/27 13:59:26 [router.go:845] [D] | GET        | /article/edit                            | 55.0032ms        | match      | /article/edit/*                          | 
+2015/05/27 13:59:27 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/net/controller.ashx: The system cannot find the path specified. 
+2015/05/27 13:59:28 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/codemirror/codemirror.js: The system cannot find the path specified. 
+2015/05/27 13:59:28 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/codemirror/codemirror.css: The system cannot find the path specified. 
+2015/05/27 13:59:28 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/zeroclipboard/ZeroClipboard.js: The system cannot find the path specified. 
+2015/05/27 14:01:00 [router.go:845] [D] | GET        | /article/edit                            | 77.0044ms        | match      | /article/edit/*                          | 
+2015/05/27 14:01:01 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/net/controller.ashx: The system cannot find the path specified. 
+2015/05/27 14:01:02 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/codemirror/codemirror.js: The system cannot find the path specified. 
+2015/05/27 14:01:02 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/codemirror/codemirror.css: The system cannot find the path specified. 
+2015/05/27 14:01:02 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/zeroclipboard/ZeroClipboard.js: The system cannot find the path specified. 
+2015/05/27 14:01:44 [router.go:845] [D] | GET        | /article/edit                            | 57.0032ms        | match      | /article/edit/*                          | 
+2015/05/27 14:01:46 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/net/controller.ashx: The system cannot find the path specified. 
+2015/05/27 14:01:46 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/zeroclipboard/ZeroClipboard.js: The system cannot find the path specified. 
+2015/05/27 14:03:09 [router.go:845] [D] | GET        | /article/edit                            | 41.0023ms        | match      | /article/edit/*                          | 
+2015/05/27 14:03:09 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/net/controller.ashx: The system cannot find the path specified. 
+2015/05/27 14:03:10 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/zeroclipboard/ZeroClipboard.js: The system cannot find the path specified. 
+2015/05/27 14:04:14 [router.go:845] [D] | GET        | /article/edit                            | 40.0023ms        | match      | /article/edit/*                          | 
+2015/05/27 14:04:14 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/net/controller.ashx: The system cannot find the path specified. 
+2015/05/27 14:04:14 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/zeroclipboard/ZeroClipboard.js: The system cannot find the path specified. 
+2015/05/27 14:05:41 [router.go:845] [D] | GET        | /article/edit                            | 75.0043ms        | match      | /article/edit/*                          | 
+2015/05/27 14:05:42 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/up: The system cannot find the file specified. 
+2015/05/27 14:05:42 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/third-party/zeroclipboard/ZeroClipboard.js: The system cannot find the path specified. 
+2015/05/27 14:10:14 [router.go:845] [D] | GET        | /article/edit                            | 42.0024ms        | match      | /article/edit/*                          | 
+2015/05/27 14:10:15 [staticfile.go:62] [W] GetFileAttributesEx static/umeditor/up: The system cannot find the file specified. 
+2015/05/27 14:11:48 [router.go:845] [D] | GET        | /article/edit                            | 73.0042ms        | match      | /article/edit/*                          | 
+2015/05/27 14:11:49 [staticfile.go:62] [W] GetFileAttributesEx static/ueditor/up: The system cannot find the file specified. 
+2015/05/27 14:12:22 [router.go:845] [D] | GET        | /article/edit                            | 92.0052ms        | match      | /article/edit/*                          | 
+2015/05/27 14:12:22 [staticfile.go:62] [W] GetFileAttributesEx static/ueditor/up: The system cannot find the file specified. 
+2015/05/27 14:13:00 [router.go:845] [D] | GET        | /article/edit                            | 42.0024ms        | match      | /article/edit/*                          | 
+2015/05/27 14:13:00 [router.go:845] [D] | GET        | /up                                      | 1.0001ms         | match      | /up                                      | 
+2015/05/27 14:27:15 [router.go:845] [D] | GET        | /article/edit                            | 52.0029ms        | match      | /article/edit/*                          | 
+2015/05/27 14:27:22 [router.go:845] [D] | GET        | /article/edit                            | 66.0038ms        | match      | /article/edit/*                          | 
+2015/05/27 14:27:46 [router.go:845] [D] | GET        | /article/edit                            | 63.0036ms        | match      | /article/edit/*                          | 
+2015/05/27 14:27:49 [router.go:845] [D] | GET        | /article/edit                            | 98.0056ms        | match      | /article/edit/*                          | 
+2015/05/27 14:31:20 [router.go:845] [D] | GET        | /article/edit                            | 89.0051ms        | match      | /article/edit/*                          | 
+2015/05/27 14:32:44 [router.go:845] [D] | GET        | /article/edit                            | 62.0036ms        | match      | /article/edit/*                          | 
+2015/05/27 14:35:06 [router.go:845] [D] | GET        | /article/edit                            | 78.0044ms        | match      | /article/edit/*                          | 
+2015/05/27 14:35:25 [router.go:845] [D] | POST       | /article/undefined                       | 7.0004ms         | notmatch   | 
+2015/05/27 14:37:08 [router.go:845] [D] | POST       | /article/undefined                       | 7.0004ms         | notmatch   | 
+2015/05/27 14:49:22 [router.go:845] [D] | GET        | /article/edit                            | 73.0041ms        | match      | /article/edit/*                          | 
+2015/05/27 14:54:59 [router.go:845] [D] | GET        | /article/edit                            | 62.0035ms        | match      | /article/edit/*                          | 
+2015/05/27 14:58:35 [router.go:845] [D] | GET        | /article/edit                            | 98.0057ms        | match      | /article/edit/*                          | 
+2015/05/27 14:58:45 [router.go:845] [D] | GET        | /article/edit                            | 67.0038ms        | match      | /article/edit/*                          | 
+2015/05/27 14:59:38 [router.go:845] [D] | GET        | /article/edit                            | 72.0041ms        | match      | /article/edit/*                          | 
+2015/05/27 15:05:49 [router.go:845] [D] | GET        | /article/edit                            | 52.003ms         | match      | /article/edit/*                          | 
+2015/05/27 15:06:20 [router.go:845] [D] | GET        | /article/edit                            | 60.0034ms        | match      | /article/edit/*                          | 
+2015/05/27 15:08:41 [router.go:845] [D] | GET        | /article/edit                            | 78.0045ms        | match      | /article/edit/*                          | 
+2015/05/27 15:09:31 [router.go:845] [D] | GET        | /article/edit                            | 101.0057ms       | match      | /article/edit/*                          | 
+2015/05/27 15:09:54 [router.go:845] [D] | GET        | /article/edit                            | 61.0035ms        | match      | /article/edit/*                          | 
+2015/05/27 15:53:24 [router.go:845] [D] | GET        | /                                        | 645.0369ms       | match      | /                                        | 
+2015/05/27 15:58:01 [router.go:845] [D] | GET        | /                                        | 133.0077ms       | match      | /                                        | 
+2015/05/27 15:59:33 [router.go:845] [D] | GET        | /                                        | 140.008ms        | match      | /                                        | 
+2015/05/27 16:01:52 [router.go:845] [D] | GET        | /                                        | 126.0072ms       | match      | /                                        | 
+2015/05/27 16:02:04 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/05/27 16:02:04 [router.go:845] [D] | GET        | /item/index                              | 165.0094ms       | match      | /item/index/*                            | 
+2015/05/27 16:02:07 [router.go:845] [D] | GET        | /media                                   | 94.0054ms        | match      | /media                                   | 
+2015/05/27 16:02:12 [router.go:845] [D] | GET        | /my/profile                              | 123.007ms        | match      | /my/profile                              | 
+2015/05/27 16:02:15 [router.go:845] [D] | GET        | /my/company                              | 187.0107ms       | match      | /my/company                              | 
+2015/05/27 16:02:20 [router.go:845] [D] | GET        | /item/info/1                             | 380.0218ms       | match      | /item/info/*                             | 
+2015/05/27 16:04:06 [router.go:845] [D] | GET        | /item/info/1                             | 193.011ms        | match      | /item/info/*                             | 
+2015/05/27 16:12:36 [router.go:845] [D] | GET        | /my/company                              | 123.007ms        | match      | /my/company                              | 
+2015/05/27 16:12:37 [router.go:845] [D] | GET        | /article/index                           | 90.0051ms        | match      | /article/index/*                         | 
+2015/05/27 16:12:38 [router.go:845] [D] | GET        | /article/edit                            | 92.0053ms        | match      | /article/edit/*                          | 
+2015/05/27 16:14:14 [router.go:845] [D] | POST       | /article/undefined                       | 35.002ms         | notmatch   | 
+2015/05/27 16:30:17 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 16:30:20 [app.go:96] [I] http server Running on :8080
+2015/05/27 16:30:23 [router.go:845] [D] | GET        | /article/edit                            | 84.0048ms        | match      | /article/edit/*                          | 
+2015/05/27 16:32:49 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 16:32:49 [app.go:96] [I] http server Running on :8080
+2015/05/27 16:43:34 [router.go:845] [D] | GET        | /article/edit                            | 59.0034ms        | match      | /article/edit/*                          | 
+2015/05/27 16:46:38 [router.go:845] [D] | GET        | /article/edit                            | 73.0041ms        | match      | /article/edit/*                          | 
+2015/05/27 17:08:35 [router.go:845] [D] | GET        | /article/edit                            | 42.0024ms        | match      | /article/edit/*                          | 
+2015/05/27 17:09:37 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 17:09:38 [app.go:96] [I] http server Running on :8080
+2015/05/27 17:10:01 [router.go:845] [D] | GET        | /article/edit                            | 67.0039ms        | match      | /article/edit/*                          | 
+2015/05/27 17:11:36 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 17:11:36 [app.go:96] [I] http server Running on :8080
+2015/05/27 17:11:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 17:11:57 [app.go:96] [I] http server Running on :8080
+2015/05/27 17:12:51 [router.go:845] [D] | GET        | /article/edit                            | 43.0025ms        | match      | /article/edit/*                          | 
+2015/05/27 17:18:27 [router.go:845] [D] | GET        | /article/edit                            | 50.0029ms        | match      | /article/edit/*                          | 
+2015/05/27 17:18:30 [router.go:845] [D] | GET        | /article/edit                            | 80.0046ms        | match      | /article/edit/*                          | 
+2015/05/27 17:25:55 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 17:25:55 [app.go:96] [I] http server Running on :8080
+2015/05/27 17:28:31 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 17:28:31 [app.go:96] [I] http server Running on :8080
+2015/05/27 17:37:24 [router.go:845] [D] | GET        | /article/edit                            | 42.0024ms        | match      | /article/edit/*                          | 
+2015/05/27 17:37:28 [router.go:845] [D] | GET        | /article/edit                            | 82.0047ms        | match      | /article/edit/*                          | 
+2015/05/27 17:55:11 [router.go:845] [D] | GET        | /article/edit                            | 78.0044ms        | match      | /article/edit/*                          | 
+2015/05/27 18:03:52 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 18:03:53 [app.go:96] [I] http server Running on :8080
+2015/05/27 18:17:17 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 18:17:17 [app.go:96] [I] http server Running on :8080
+2015/05/27 18:22:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 18:22:57 [app.go:96] [I] http server Running on :8080
+2015/05/27 18:23:04 [router.go:845] [D] | GET        | /articls/info/1                          | 1.0001ms         | notmatch   | 
+2015/05/27 18:24:03 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 18:24:03 [app.go:96] [I] http server Running on :8080
+2015/05/27 18:24:08 [router.go:845] [D] | GET        | /articls/edit/1                          | 1ms              | notmatch   | 
+2015/05/27 18:24:19 [router.go:845] [D] | GET        | /articl/edit/1                           | 1.0001ms         | notmatch   | 
+2015/05/27 18:24:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:24:35 [router.go:845] [D] | GET        | /articls/info/1                          | 1.0001ms         | notmatch   | 
+2015/05/27 18:26:58 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 18:26:58 [app.go:96] [I] http server Running on :8080
+2015/05/27 18:27:20 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 18:27:20 [app.go:96] [I] http server Running on :8080
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:29 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:30 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:27:35 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/27 18:28:03 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 18:28:03 [app.go:96] [I] http server Running on :8080
+2015/05/27 18:29:04 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 18:29:05 [app.go:96] [I] http server Running on :8080
+2015/05/27 18:29:08 [router.go:845] [D] | GET        | /articls/edit/1                          | 2.0001ms         | notmatch   | 
+2015/05/27 18:29:21 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: gggg,
+    SubTitle: jjjj,
+    Intro: llll.l.l,
+    Content: <p><img alt="" src="/upload/2015-05/1432720741478522000.jpg" style="height:215px; width:245px" /></p>
+,
+    Published: 0001-01-01T00:00:00Z,
+    Tags: 1,
+    Original: 0,
+    Author: hhhh,
+    Resource: jjj,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432720751477,
+    Updator: 2,
+    Updated: 1432720751477,
+    Ip: 127.0.0.1,
+} 
+2015/05/27 18:29:21 [router.go:845] [D] | GET        | /article/edit/1                          | 51.0029ms        | match      | /article/edit/*                          | 
+2015/05/27 18:31:15 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/27 18:31:16 [app.go:96] [I] http server Running on :8080
+2015/05/27 18:31:18 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: gggg,
+    SubTitle: jjjj,
+    Intro: llll.l.l,
+    Content: <p><img alt="" src="/upload/2015-05/1432720741478522000.jpg" style="height:215px; width:245px" /></p>
+,
+    Published: 0001-01-01T00:00:00Z,
+    Tags: 1,
+    Original: 0,
+    Author: hhhh,
+    Resource: jjj,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432720751477,
+    Updator: 2,
+    Updated: 1432720751477,
+    Ip: 127.0.0.1,
+} 
+2015/05/27 18:31:18 [log.go:108] [D] template Execute err: template: article/edit.tpl:70:105: executing "article/edit.tpl" at <.article.Intor>: Intor is not a field of struct type interface {} 
+2015/05/27 18:31:18 [router.go:876] [C] the request url is  /article/edit/1 
+2015/05/27 18:31:18 [router.go:877] [C] Handler crashed with error template: article/edit.tpl:70:105: executing "article/edit.tpl" at <.article.Intor>: Intor is not a field of struct type interface {} 
+2015/05/27 18:31:18 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/27 18:31:18 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/27 18:31:18 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/27 18:31:18 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/27 18:31:18 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/27 18:31:49 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: gggg,
+    SubTitle: jjjj,
+    Intro: llll.l.l,
+    Content: <p><img alt="" src="/upload/2015-05/1432720741478522000.jpg" style="height:215px; width:245px" /></p>
+,
+    Published: 0001-01-01T00:00:00Z,
+    Tags: 1,
+    Original: 0,
+    Author: hhhh,
+    Resource: jjj,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432720751477,
+    Updator: 2,
+    Updated: 1432720751477,
+    Ip: 127.0.0.1,
+} 
+2015/05/27 18:31:49 [log.go:108] [D] template Execute err: template: article/edit.tpl:82:109: executing "article/edit.tpl" at <.article.PublicDate>: PublicDate is not a field of struct type interface {} 
+2015/05/27 18:31:49 [router.go:876] [C] the request url is  /article/edit/1 
+2015/05/27 18:31:49 [router.go:877] [C] Handler crashed with error template: article/edit.tpl:82:109: executing "article/edit.tpl" at <.article.PublicDate>: PublicDate is not a field of struct type interface {} 
+2015/05/27 18:31:49 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/27 18:31:49 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:802 
+2015/05/27 18:31:49 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/27 18:31:49 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/27 18:31:49 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/27 18:32:09 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: gggg,
+    SubTitle: jjjj,
+    Intro: llll.l.l,
+    Content: <p><img alt="" src="/upload/2015-05/1432720741478522000.jpg" style="height:215px; width:245px" /></p>
+,
+    Published: 0001-01-01T00:00:00Z,
+    Tags: 1,
+    Original: 0,
+    Author: hhhh,
+    Resource: jjj,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432720751477,
+    Updator: 2,
+    Updated: 1432720751477,
+    Ip: 127.0.0.1,
+} 
+2015/05/27 18:32:09 [router.go:845] [D] | GET        | /article/edit/1                          | 54.0031ms        | match      | /article/edit/*                          | 
+2015/05/27 18:32:42 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: gggg,
+    SubTitle: jjjj,
+    Intro: llll.l.l,
+    Content: <p><img alt="" src="/upload/2015-05/1432720741478522000.jpg" style="height:215px; width:245px" /></p>
+,
+    Published: 0001-01-01T00:00:00Z,
+    Tags: 1,
+    Original: 0,
+    Author: hhhh,
+    Resource: jjj,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432720751477,
+    Updator: 2,
+    Updated: 1432720751477,
+    Ip: 127.0.0.1,
+} 
+2015/05/27 18:32:42 [router.go:845] [D] | GET        | /article/edit/1                          | 80.0045ms        | match      | /article/edit/*                          | 
+2015/05/27 18:32:48 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 2,
+    Topic: /upload/2015-05/1432721053916392400.jpg,
+    Title: gggg,
+    SubTitle: jjjj,
+    Intro: llll.l.l 22222222222222222222222222,
+    Content: <p><img alt="" src="/upload/2015-05/1432720741478522000.jpg" style="height:215px; width:245px" /></p>
+,
+    Published: 0001-01-01T00:00:00Z,
+    Tags: 1,
+    Original: 0,
+    Author: hhhh,
+    Resource: jjj,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432721061305,
+    Updator: 2,
+    Updated: 1432721135095,
+    Ip: 127.0.0.1,
+} 
+2015/05/27 18:32:48 [router.go:845] [D] | GET        | /article/edit/2                          | 52.003ms         | match      | /article/edit/*                          | 
+2015/05/27 18:33:15 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 2,
+    Topic: /upload/2015-05/1432721053916392400.jpg,
+    Title: gggg,
+    SubTitle: jjjj,
+    Intro: llll.l.l 22222222222222222222222222,
+    Content: <p><img alt="" src="/upload/2015-05/1432720741478522000.jpg" style="height:215px; width:245px" /></p>
+,
+    Published: 0001-01-01T00:00:00Z,
+    Tags: 0,1,
+    Original: 0,
+    Author: hhhh,
+    Resource: jjj,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432721061305,
+    Updator: 2,
+    Updated: 1432722777238,
+    Ip: 127.0.0.1,
+} 
+2015/05/27 18:33:15 [router.go:845] [D] | GET        | /article/edit/2                          | 86.0049ms        | match      | /article/edit/*                          | 
+2015/05/27 18:33:27 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: gggg,
+    SubTitle: jjjj,
+    Intro: llll.l.l,
+    Content: <p><img alt="" src="/upload/2015-05/1432720741478522000.jpg" style="height:215px; width:245px" /></p>
+,
+    Published: 0001-01-01T00:00:00Z,
+    Tags: 1,
+    Original: 0,
+    Author: hhhh,
+    Resource: jjj,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432720751477,
+    Updator: 2,
+    Updated: 1432720751477,
+    Ip: 127.0.0.1,
+} 
+2015/05/27 18:33:27 [router.go:845] [D] | GET        | /article/edit/1                          | 45.0026ms        | match      | /article/edit/*                          | 

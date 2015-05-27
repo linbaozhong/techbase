@@ -272,6 +272,12 @@ func (this *Base) renderJsonp(data interface{}) {
 	this.end()
 }
 
+//
+func (this *Base) renderString(arg string) {
+	this.Ctx.WriteString(arg)
+	this.end()
+}
+
 //返回html字符串格式响应
 func (this *Base) serveString(arg string) {
 	this.Ctx.Output.Body([]byte(arg))

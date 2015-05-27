@@ -67,5 +67,6 @@ func init() {
 	up := &controllers.Upload{}
 	beego.Router("/up", up)
 	beego.Router("/up/avatar", up, "post:Avatar")
+	beego.Router("/up/file", up, "post:File")
 	beego.AutoRouter(up)
 }

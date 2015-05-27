@@ -21,7 +21,7 @@
 					</div>
 					<ul class="nav navbar-nav" style="margin-left:40px;">
 						{{if lt .account.Role 3 }}
-						<li class="{{if eq .index "article"}} active {{end}}"><a href="/admin/media">媒体管理</a>
+						<li class="{{if eq .index "article"}} active {{end}}"><a href="/article/index">媒体管理</a>
 						</li>
 						<li class="{{if eq .index "company"}} active {{end}}"><a href="/admin/company">项目审核</a>
 						</li>

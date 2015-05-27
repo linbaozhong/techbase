@@ -1,5 +1,11 @@
 package utils
 
+import (
+//"errors"
+//"fmt"
+//"reflect"
+)
+
 type Result struct {
 	Ok   bool        `json:"ok"`
 	Key  string      `json:"key"`

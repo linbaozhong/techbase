@@ -311,8 +311,8 @@ header.abs-top .nav>li.active a {
 	background-image: url(/html/images/banner01.png);
 }
 .slides .description {
-	width: 100%;
 	height: 100%;
+	padding: 0 40px;
 	font-size: 1.5em;
 	position: relative;
 	z-index: 1000;

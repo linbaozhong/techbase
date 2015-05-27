@@ -21,7 +21,7 @@
 					<div class="img-circle" style="width: 100px;height: 100px;border: 1px solid #eee;overflow: hidden;margin: 0 auto;">
 						<img src="{{.company.Logo}}" style="width:100px;"/>
 						{{if eq .company.Creator .account.Id}}
-						<p class="small abs-top" style="margin-left: 220px;top: 40px;">
+						<p class="small abs-top" style="margin-left: 150px;top: 40px;">
 							{{if eq .company.Status 0}}
 								<span title="您的项目仍未提交审核，请尽快完善公司注册内容并提交审核，审核通过后，她本营的工作人员会与您取得进一步联系">未提交审核</span>
 							{{else if eq .company.Status 1}}

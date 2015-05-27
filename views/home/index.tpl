@@ -2,7 +2,7 @@
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1">
-				<div class="description">
+				<div class="container description">
 					<h2 style="color:#fff;"><a target="_blank" href="/herstart">Her Startup </a></h2>
 					<a href="/brand">
 						<p style="color:#fff;">5月 Coming soon... </p>
@@ -12,7 +12,7 @@
 				</div>
 			</li>
 			<li class="banner-2">
-				<div class="description">
+				<div class="container description">
 					<h2><a href="/home">她本营 <span>TechBase</span></a></h2>
 					<a href="/home">
 						<p calss="" style="color:#fff;">女性科技互联网创业生态圈</p>

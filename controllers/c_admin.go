@@ -34,25 +34,6 @@ func (this *Admin) Prepare() {
 	}
 }
 
-// 媒体管理
-func (this *Admin) Media() {
-	// 读取分页规则
-	p := new(models.Pagination)
-
-	if size, err := this.GetInt("size"); err != nil || size == 0 {
-		p.Size = 20
-	}
-	p.Index, _ = this.GetInt("index")
-
-	art := new(models.Articles)
-
-	// 读取全部文章
-	as, _ := art.ListEx(p, "")
-
-	this.Data["index"] = "article"
-	this.Data["articles"] = as
-}
-
 // 项目审核
 func (this *Admin) Company() {
 	com := new(models.Company)

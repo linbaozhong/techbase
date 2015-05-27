@@ -36,3 +36,22 @@ func (this *Upload) Avatar() {
 		this.renderJson(utils.JsonResult(false, "", err))
 	}
 }
+
+// ckeditor上传图片
+func (this *Upload) File() {
+
+	var url string
+	//var state string
+
+	fs, err := this.upload("upload")
+
+	if err == nil {
+		//	state = "SUCCESS"
+		url = fs[0].Path
+	} else {
+		//	state = err.Error()
+	}
+
+	this.renderString("<script type=\"text/javascript\">window.parent.CKEDITOR.tools.callFunction(" + this.GetString("CKEditorFuncNum") + ",'" + url + "','');</script>")
+
+}

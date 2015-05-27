@@ -1,14 +1,9 @@
+<script src="/static/ckeditor/ckeditor.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/ckeditor/adapters/jquery.js" type="text/javascript" charset="utf-8"></script>
 <script src="http://cdn.bootcss.com/jquery-validate/1.13.1/jquery.validate.min.js"></script>
 <script src="http://cdn.bootcss.com/jquery-validate/1.13.1/additional-methods.min.js"></script>
 <script src="/static/js/messages_zh.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-	// 手机号码验证
-	$.validator.addMethod('isMobile', function(value, element) {
-		var length = value.length,mobile = /^1[3-8]+\d{9}/;
-		console.log(length,mobile.test(value));
-		return this.optional(element) || (length == 11 && mobile.test(value));
-	}, '请正确填写您的手机号码');
-</script>
+
 <div class="banner" style="height: 90px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
@@ -44,14 +39,14 @@
 					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label">所属板块</label>
-						<div class="col-sm-9 snow-field">
+						<div class="col-sm-9 snow-tags">
 							
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-3 control-label"><span class="snow-required">*</span>主题图</label>
+						<label class="col-sm-3 control-label">主题图</label>
 						<div class="col-sm-9 text-center">
-							<div class="snow-upload-target" title="点我上传主题图片" style="width:100px;height:100px;overflow: hidden;margin: 0 auto;">
+							<div class="snow-upload-target" title="点我上传主题图片" style="width:200px;height:100px;overflow: hidden;margin: 0 auto;">
 								<img src="{{.article.Topic}}"/>
 							</div>
 							<span class="small" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
@@ -60,31 +55,31 @@
 					<div class="form-group">
 						<label class="col-sm-3 control-label"><span class="snow-required">*</span>标题</label>
 						<div class="col-sm-9">
-							<input class="form-control" required name="title" placeholder="文章摘要" value="{{.article.Title}}">
+							<input class="form-control" required name="title" placeholder="标题" value="{{.article.Title}}">
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-3 control-label"><span class="snow-required">*</span>副标题</label>
+						<label class="col-sm-3 control-label">副标题</label>
 						<div class="col-sm-9">
-							<input class="form-control" required name="subTitle" placeholder="文章摘要" value="{{.article.SubTitle}}">
+							<input class="form-control" name="subTitle" placeholder="副标题" value="{{.article.SubTitle}}">
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label"><span class="snow-required">*</span>摘要</label>
 						<div class="col-sm-9">
-							<input class="form-control" required name="intro" placeholder="文章摘要" value="{{.article.Intor}}">
+							<textarea class="form-control" name="intro" rows="" cols=""  placeholder="文章摘要">{{.article.Intro}}</textarea>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label"><span class="snow-required">*</span>正文</label>
 						<div class="col-sm-9">
-							<textarea class="form-control" name="content" rows="" cols=""  placeholder="文章内容"></textarea>
+							<textarea id="form-content" name="content" placeholder="文章内容" style="width: 100%;height: 300px;">{{.article.Content}}</textarea>
 						</div>
 					</div>
 					<!--<div class="form-group">
 						<label class="col-sm-3 control-label">发布时间</label>
 						<div class="col-sm-4">
-							<input type="date" class="form-control" name="publicDate" placeholder="发布日期" value="{{.article.PublicDate}}">
+							<input type="date" class="form-control" name="publicDate" placeholder="发布日期" value="{{.article.Published}}">
 						</div>
 						<div class="col-sm-4 col-sm-offset-1">
 							<label></label>
@@ -127,50 +122,54 @@
 <script src="/static/js/upload.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 
+	CKEDITOR.disableAutoInline = true;
 	
 	$(function(){
+
+		$('#form-content').ckeditor();
+
+		// 手机号码验证
+		$.validator.addMethod('isMobile', function(value, element) {
+			var length = value.length,mobile = /^1[3-8]+\d{9}/;
+			console.log(length,mobile.test(value));
+			return this.optional(element) || (length == 11 && mobile.test(value));
+		}, '请正确填写您的手机号码');
+	
+		// 文章所属板块
+		$.each(snow.basic, function(index,item) {   
+			var _tags='{{.article.Tags}}'.split(',');
+			
+			if(item.type == 8)   {
+				var _html = [];
+				_html.push('<label class="checkbox-inline"><input');
+				
+				if ($.inArray(item.value.toString(),_tags) != -1) {
+					_html.push(' checked');                                                          
+				}
+				_html.push(' type="checkbox" name="tags" value="'+item.value+'">'+item.name+"</label>"); 
+				//
+				$('form.snow-form-1 .snow-tags').append(_html.join(''))
+			}
+		});
 
 		// 提交审核 事件
 		$('.submit-review').click(function(e){
 			e.preventDefault();
-			if('{{.article.Status}}'=='0' && $('form.snow-form-1 input[name="id"]').val() > 0
-				&& $('form.snow-form-2 input[name="id"]').val() > 0
-				&& $('form.snow-form-3 input[name="id"]').val() > 0
-				&& $('.snow-loop').length > 0 && $('.snow-member').length > 0
-				){
+			if('{{.article.Status}}'=='0' && $('form.snow-form-1 input[name="id"]').val() > 0){
 				// 提交审核
-				$.getJSON('/company/submitaudit',{id:$('form.snow-form-1 input[name="id"]').val()},function(json){
+				$.getJSON('/article/audit',{id:$('form.snow-form-1 input[name="id"]').val()},function(json){
 					if (json.ok) {
-						snow.alert('你的项目已提交审核，请等待……');
+						snow.alert('你的文章已提交审核，请等待……');
 					} else{
 						snow.alert(json.data.message);
 					}
 				});
 			}else{
-				snow.alert('你的项目信息不完善，请尽量完善项目信息……');
+				snow.alert('你的文章信息不完善，请尽量完善项目信息……');
 			}
 			return false;	
 		});
 
-
-		// 公司领域
-		$.getJSON('/item/field',function(json){
-			if (json.ok) {
-				var _html=[],_field='{{.article.Field}}'.split(',');
-				
-				$.each(json.data, function(index,item) {    
-					_html.push('<label class="checkbox-inline"><input');
-					
-					if ($.inArray(item.value.toString(),_field) != -1) {
-						_html.push(' checked');                                                          
-					}
-					_html.push(' type="checkbox" name="field" value="'+item.value+'">'+item.name+"</label>");                                                          
-				});
-				$('.snow-form-1 .snow-field').empty().html(_html.join(''));
-			} else{
-				
-			}
-		});
 		
 
 		// 验证表单
@@ -187,7 +186,7 @@
 			var _form = $(this);
 			// 禁用提交按钮
 			submit_disable(_form);
-			$.post('/company/postcompany',_form.serialize(),function(json){
+			$.post('/article/save',_form.serialize(),function(json){
 				console.log(json);
 				// 启用提交按钮
 				submit_enable(_form);
@@ -196,24 +195,22 @@
 					$('article .snow-row').show();
 					// 写入表单id域
 					_form.find('input[name="id"]').val(json.data.id);
-					// 写入本页面全部companyid域
-					$('input[name="companyId"]').val(json.data.id).change();
 					
-					showMessage($('.snow-alert-1'),'hi,我已经为你保存好了,不用谢了……',true);
+					showMessage($('form .snow-alert-1'),'hi,我已经为你保存好了,不用谢了……',true);
 				} else{
 					var _errors=[];
 					for (var i = 0; i < json.data.length; i++) {
 						_errors.push(json.data[i].key +','+ json.data[i].message);
 					}
-					showMessage($('.snow-alert-1'),_errors.join(';'),false);
+					showMessage($('form .snow-alert-1'),_errors.join(';'),false);
 				}
 			});
 		});
 		
 		$("form.snow-form-1 .snow-upload-target").upload({
 		    label: '上传主题图片',//"<i class=\"fa fa-plus\"></i>",
-		    accept:'.jpg,.jpeg,.gif,.png',
-		    action:'/up/avatar',
+		    accept:'.jpg,.jpeg,.png',
+		    action:'/up',
 		    postData:{width:100,height:100}
 		}).on("filestart.upload", function(){})
 		  .on("fileprogress.upload", function(){})

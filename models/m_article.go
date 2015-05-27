@@ -10,16 +10,16 @@ import (
 
 // article表
 type Articles struct {
-	Id          int64  `json:"articleId"`
+	Id          int64  `json:"id"`
 	Topic       string `json:"topic"`                               //主题图
 	Title       string `json:"title" valid:"Required;MaxSize(250)"` //标题
 	SubTitle    string `json:"subTitle" valid:"MaxSize(250)"`       //副标题
 	Intro       string `json:"intro" valid:"MaxSize(250)"`          //内容
 	Content     string `json:"content" valid:"Required"`            //内容
-	PublicDate  string `json:"publicDate"`                          //发布日期
+	Published   string `json:"published"`                           //发布日期
 	Tags        string `json:"tags" valid:"MaxSize(50)"`            //标签
-	Original    string `json"original"`                             //是否原创
-	Author      int64  `json:"author"`                              //作者
+	Original    int    `json"original"`                             //是否原创
+	Author      string `json:"author"`                              //作者
 	Resource    string `json"resource"`                             //来源单位
 	ResourceUrl string `json"resourceUrl"`                          //来源链接
 	Recommend   int    `json"recommend"`                            //推荐的
@@ -109,28 +109,25 @@ func (this *Articles) Save() (error, []Error) {
 
 // 只读取可见的
 func (this *Articles) Get() (bool, error) {
-	return this._get(true)
+	return this._get(false)
 }
 
 // 读取全部
 func (this *Articles) GetEx() (bool, error) {
-	return this._get(false)
+	return this._get(true)
 }
 
 // 读取
 func (this *Articles) _get(all bool) (bool, error) {
-	// Dal对象
-	_dal := &Dal{}
-	_dal.Field = "articles.*,documents.title,documents.content"
-	_dal.From = "articles,documents"
-	_dal.Where = "documents.id = articles.documentId and articles.id=?"
+	session := db.Id(this.Id)
+	defer session.Close()
 
 	// 可见的
 	if all {
-		_dal.Where += fmt.Sprintf(" and articles.status=%d and articles.deleted=%d and documents.status=%d and documents.deleted=%d", Unlock, Undelete, Unlock, Undelete)
+		return session.Where("articles.status=? and articles.deleted=?", Audit_Yes, Undelete).Get(this)
+		//_dal.Where += fmt.Sprintf(" and articles.status=%d and articles.deleted=%d and documents.status=%d and documents.deleted=%d", Unlock, Undelete, Unlock, Undelete)
 	}
-
-	return db.Sql(_dal.Select(), this.Id).Get(this)
+	return session.Get(this)
 }
 
 // 分页列表可见的
