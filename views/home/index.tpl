@@ -144,48 +144,8 @@
 
 </div>
 <script type="text/javascript">
-	(function($) {
-		var speed = 5000,
-			count = $('.slideshow li').length,
-			index = 0;
-		var slidetimes;
 
-		function start(index) {
-			$('.slideshow .banner-nav span').eq(index).addClass('current').siblings().removeClass('current');
-			$('.slideshow li').eq(index).fadeIn('slow').siblings('li').fadeOut('slow');
-		};
-
-		function slideshow() {
-			slidetimes = setInterval(function() {
-				if (index == count) {
-					index = 0;
-				}
-				start(index);
-				index++;
-			}, speed);
-		};
-		$('.slideshow li').hover(function() {
-			clearInterval(slidetimes);
-		}, function() {
-			slideshow();
-		});
-		$('.slideshow .banner-nav span').click(function() {
-			start($(this).index());
-		});
-		slideshow();
-	})(jQuery);
-	
 	$(function(){
-		function getBasicName(type,value){
-			var _name='';
-			$.each(snow.basic,function(i,item){
-				if(item.type==type && item.value==value){
-					_name = item.name;
-					return false;
-				}
-			});
-			return _name;
-		}
 		function setBasic(){
 			// 融资
 			$('.brand-loop').each(function(i,item){

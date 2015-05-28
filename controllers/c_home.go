@@ -54,10 +54,67 @@ func (this *Home) Get() {
 	this.setTplNames("index")
 }
 
+// 分页读取新闻列表
+func (this *Home) News() {
+	// 读取分页规则
+	p := new(models.Pagination)
+
+	if size, err := this.GetInt("size"); err != nil || size == 0 {
+		p.Size = 20
+	} else {
+		p.Size = size
+	}
+
+	p.Index, _ = this.GetInt("index")
+
+	art := new(models.Articles)
+
+	// 读取全部文章
+	as, err := art.List(p, "")
+
+	if err == nil {
+		this.renderJson(utils.JsonResult(true, "", as))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
+}
+
 //
 func (this *Home) Show() {
-	this.Data["index"] = "brandshow"
-	this.setTplNames("brandshow")
+	id, err := this.getParamsInt64("0")
+	if err != nil || id <= 0 {
+		// 转向错误页
+	}
+	this.Data["review"] = this.GetString("review")
+	this.Data["articleId"] = id
+	this.Data["index"] = "media"
+	this.setTplNames("show")
+}
+
+// 读取文章
+func (this *Home) ShowNews() {
+	id, err := this.GetInt64("id")
+
+	if err != nil || id <= 0 {
+		// 返回错误
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
+
+	art := new(models.Articles)
+
+	art.Id = id
+
+	if this.GetString("review") == "1" && this.currentUser.Id > 0 {
+		_, err = art.GetEx()
+	} else {
+		_, err = art.Get()
+	}
+
+	if err == nil {
+		this.renderJson(utils.JsonResult(true, "", art))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
 }
 
 //

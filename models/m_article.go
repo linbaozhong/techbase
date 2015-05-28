@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/astaxie/beego/validation"
 	"strings"
-	"techbase/utils"
+	//"techbase/utils"
 )
 
 // article表
@@ -17,14 +17,15 @@ type Articles struct {
 	Intro       string `json:"intro" valid:"MaxSize(250)"`          //内容
 	Content     string `json:"content" valid:"Required"`            //内容
 	Published   string `json:"published"`                           //发布日期
-	Tags        string `json:"tags" valid:"MaxSize(50)"`            //标签
+	Tags        int    `json:"tags"`                                //标签
 	Original    int    `json"original"`                             //是否原创
 	Author      string `json:"author"`                              //作者
 	Resource    string `json"resource"`                             //来源单位
-	ResourceUrl string `json"resourceUrl"`                          //来源链接
+	ResourceUrl string `json"resourceUrl" valid:"MaxSize(250)"`     //来源链接
 	Recommend   int    `json"recommend"`                            //推荐的
 	IsTop       int    `json:"isTop"`                               //置顶的
 	Position    int    `json:"position"`                            //位置
+	Reason      string `json"reason" valid:"MaxSize(250)"`          //审核未通过原因
 	Status      int    `json:"status" valid:"Range(-1,2)"`          //0-草稿，1-审核中，2-审核通过发布，-1-审核未通过
 	Deleted     int    `json:"deleted" valid:"Range(0,1)"`
 	Creator     int64  `json:"creator"`
@@ -32,6 +33,50 @@ type Articles struct {
 	Updator     int64  `json:"updator"`
 	Updated     int64  `json:"updated"`
 	Ip          string `json:"ip" valid:"MaxSize(23)"`
+}
+type ArticlesView struct {
+	Id          int64  `json:"id"`
+	Topic       string `json:"topic"`      //主题图
+	Title       string `json:"title"`      //标题
+	SubTitle    string `json:"subTitle"`   //副标题
+	Intro       string `json:"intro"`      //内容
+	Content     string `json:"content"`    //内容
+	Published   string `json:"published"`  //发布日期
+	Tags        int    `json:"tags"`       //标签
+	Original    int    `json"original"`    //是否原创
+	Author      string `json:"author"`     //作者
+	Resource    string `json"resource"`    //来源单位
+	ResourceUrl string `json"resourceUrl"` //来源链接
+	Recommend   int    `json"recommend"`   //推荐的
+	IsTop       int    `json:"isTop"`      //置顶的
+	Position    int    `json:"position"`   //位置
+	Reason      string `json:"reason"`
+	Status      int    `json:"status"` //0-草稿，1-审核中，2-审核通过发布，-1-审核未通过
+	Deleted     int    `json:"deleted"`
+	Updator     int64  `json:"updator"`
+	Updated     int64  `json:"updated"`
+	Ip          string `json:"ip"`
+	Tag         string `json:"tag"`
+}
+
+//
+func (this *Articles) SetStatus() (int64, error) {
+	return db.Id(this.Id).Cols("status", "reason", "updator", "updated", "ip").Update(this)
+}
+
+// 置顶
+func (this *Articles) SetTop() (int64, error) {
+	return db.Id(this.Id).Cols("istop", "updator", "updated", "ip").Update(this)
+}
+
+// 推荐
+func (this *Articles) SetRecommend() (int64, error) {
+	return db.Id(this.Id).Cols("recommend", "updator", "updated", "ip").Update(this)
+}
+
+// 删除
+func (this *Articles) SetDelete() (int64, error) {
+	return db.Id(this.Id).Cols("deleted", "updator", "updated", "ip").Update(this)
 }
 
 // 文章是否存在
@@ -46,6 +91,7 @@ func (this *Articles) Valid(v *validation.Validation) {
 
 // 新文章
 func (this *Articles) Save() (error, []Error) {
+
 	//数据有效性检验
 	if d, err := dataCheck(this); err != nil {
 		return err, d
@@ -75,31 +121,31 @@ func (this *Articles) Save() (error, []Error) {
 			return err, nil
 		}
 
-		// 变更关联映射,首先删除旧的关系
-		_, err = session.Exec("delete from tagarticle where articleId = ?", this.Id)
+		//// 变更关联映射,首先删除旧的关系
+		//_, err = session.Exec("delete from tagarticle where articleId = ?", this.Id)
 
-		if err != nil {
-			session.Rollback()
-			return err, nil
-		}
+		//if err != nil {
+		//	session.Rollback()
+		//	return err, nil
+		//}
 
 	}
 
-	// 批量插入新的映射
-	if _tags := strings.Split(this.Tags, ","); len(_tags) > 0 {
+	//// 批量插入新的映射
+	//if _tags := strings.Split(this.Tags, ","); len(_tags) > 0 {
 
-		tas := make([]TagArticle, len(_tags))
-		for i, f := range _tags {
-			tas[i].ArticleId = this.Id
-			tas[i].TagId = utils.Str2int64(f)
-		}
+	//	tas := make([]TagArticle, len(_tags))
+	//	for i, f := range _tags {
+	//		tas[i].ArticleId = this.Id
+	//		tas[i].TagId = utils.Str2int64(f)
+	//	}
 
-		_, err = session.Insert(&tas)
-		if err != nil {
-			session.Rollback()
-			return err, nil
-		}
-	}
+	//	_, err = session.Insert(&tas)
+	//	if err != nil {
+	//		session.Rollback()
+	//		return err, nil
+	//	}
+	//}
 
 	// 提交事务
 	err = session.Commit()
@@ -109,55 +155,51 @@ func (this *Articles) Save() (error, []Error) {
 
 // 只读取可见的
 func (this *Articles) Get() (bool, error) {
-	return this._get(false)
+	return this._get(true)
 }
 
 // 读取全部
 func (this *Articles) GetEx() (bool, error) {
-	return this._get(true)
+	return this._get(false)
 }
 
 // 读取
-func (this *Articles) _get(all bool) (bool, error) {
-	session := db.Id(this.Id)
-	defer session.Close()
-
+func (this *Articles) _get(view bool) (bool, error) {
 	// 可见的
-	if all {
-		return session.Where("articles.status=? and articles.deleted=?", Audit_Yes, Undelete).Get(this)
-		//_dal.Where += fmt.Sprintf(" and articles.status=%d and articles.deleted=%d and documents.status=%d and documents.deleted=%d", Unlock, Undelete, Unlock, Undelete)
+	if view {
+		return db.Where("status=? and deleted=?", Audit_Yes, Undelete).Get(this)
 	}
-	return session.Get(this)
+	return db.Where("deleted=?", Undelete).Get(this)
 }
 
 // 分页列表可见的
-func (this *Articles) List(page *Pagination, condition string, params ...interface{}) ([]Articles, error) {
+func (this *Articles) List(page *Pagination, condition string, params ...interface{}) ([]ArticlesView, error) {
 	return this._list(true, page, condition, params...)
 }
 
 // 分页列表全部的
-func (this *Articles) ListEx(page *Pagination, condition string, params ...interface{}) ([]Articles, error) {
+func (this *Articles) ListEx(page *Pagination, condition string, params ...interface{}) ([]ArticlesView, error) {
 	return this._list(false, page, condition, params...)
 }
 
 // 分页列表
-func (this *Articles) _list(view bool, page *Pagination, condition string, params ...interface{}) ([]Articles, error) {
+func (this *Articles) _list(view bool, page *Pagination, condition string, params ...interface{}) ([]ArticlesView, error) {
 	// Dal对象
 	_dal := &Dal{}
-	_dal.From = "articles"
-	_dal.Where = "1=1"
-	_dal.OrderBy = "articlemore.position"
+	_dal.From = "articles,basic"
+	_dal.Where = fmt.Sprintf("articles.tags = basic.value and articles.deleted=%d and basic.type=%d", Undelete, Type_Media)
+	_dal.OrderBy = "articles.istop desc,articles.recommend desc,articles.updated desc"
 
 	// 可见的
 	if view {
-		_dal.Where += fmt.Sprintf(" and articles.status=%d and articles.deleted=%d", Unlock, Undelete)
+		_dal.Where += fmt.Sprintf(" and articles.status=%d", Audit_Yes)
 	}
 	// 条件
 	if strings.TrimSpace(condition) != "" {
 		_dal.Where += " and " + condition
 	}
 	// slice承载返回的结果
-	as := make([]Articles, 0)
+	as := make([]ArticlesView, 0)
 
 	// 读取符合条件的记录总数
 	if page.Count == 0 {
@@ -167,82 +209,17 @@ func (this *Articles) _list(view bool, page *Pagination, condition string, param
 			getPageCount(rows, page)
 		}
 	}
-
+	// 如果总页数>0,计算分页
 	if page.Count > 0 {
 
 		_dal.Size = page.Size
 		_dal.Offset = page.Index * page.Size
 
-		_dal.Field = "id,title,subtitle,updated"
+		_dal.Field = "articles.id,articles.title,articles.topic,articles.istop,articles.recommend,articles.status,articles.reason,articles.updated,basic.name as tag"
 		err := db.Sql(_dal.Select(), params...).Find(&as)
 		return as, err
 	}
 	return as, nil
-}
-
-// 设置locked、deleted等状态字段的公共方法
-func (this *Articles) SetStatus(action string) error {
-	a := new(Articles)
-	a.Id = this.Id
-
-	// 验证当前用户的权限
-	if has, err := db.Id(a.Id).Cols("creator").Get(a); has {
-		// 如果不是作者，只能删除映射关系
-		if a.Creator != this.Updator {
-			_, err = db.Exec("delete from articlemore where articleid = ?", this.Id)
-			return err
-		}
-	} else {
-		return err
-	}
-
-	a.Updated = this.Updated
-	a.Updator = this.Updator
-	a.Ip = this.Ip
-
-	switch strings.ToLower(action) {
-	case "lock":
-		action = "status"
-		a.Status = Locked
-	case "unlock":
-		action = "status"
-		a.Status = Unlock
-	case "delete":
-		action = "deleted"
-		a.Deleted = Deleted
-	case "undelete":
-		action = "deleted"
-		a.Deleted = Undelete
-	}
-
-	// 事务
-	session := db.NewSession()
-	defer session.Close()
-	// 事务开始
-	err := session.Begin()
-
-	if err != nil {
-		session.Rollback()
-		return err
-	}
-	// 修改articles状态
-	_, err = session.Id(a.Id).Cols(action, "updator", "updated", "ip").Update(a)
-
-	if err != nil {
-		session.Rollback()
-		return err
-	}
-
-	// 读取关联的文档id
-	if ok, err := this.GetEx(); !ok {
-		session.Rollback()
-		return err
-	}
-
-	// 完成事务提交
-	session.Commit()
-
-	return err
 }
 
 // 设置文档节点位置

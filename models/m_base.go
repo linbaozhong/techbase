@@ -152,6 +152,7 @@ func parseDb(dbs []map[string][]byte) []map[string]string {
 
 // 根据记录总数，返回总页数
 func getPageCount(rows int64, page *Pagination) {
+	fmt.Println(rows, page.Size)
 	page.Count = int(math.Ceil(float64(rows) / float64(page.Size)))
 }
 

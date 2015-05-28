@@ -17054,3 +17054,564 @@
     Ip: 127.0.0.1,
 } 
 2015/05/27 18:33:27 [router.go:845] [D] | GET        | /article/edit/1                          | 45.0026ms        | match      | /article/edit/*                          | 
+2015/05/28 09:28:34 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 09:28:34 [app.go:96] [I] http server Running on :8080
+2015/05/28 09:28:55 [router.go:845] [D] | GET        | /                                        | 101.0058ms       | match      | /                                        | 
+2015/05/28 09:29:23 [router.go:845] [D] | GET        | /my/company                              | 110.0063ms       | match      | /my/company                              | 
+2015/05/28 09:29:25 [router.go:845] [D] | GET        | /article/index                           | 146.0083ms       | match      | /article/index/*                         | 
+2015/05/28 09:29:43 [router.go:845] [D] | GET        | /my/company                              | 131.0075ms       | match      | /my/company                              | 
+2015/05/28 09:37:02 [router.go:845] [D] | GET        | /article/index                           | 122.007ms        | match      | /article/index/*                         | 
+2015/05/28 09:39:24 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: gggg,
+    SubTitle: jjjj,
+    Intro: llll.l.l,
+    Content: <p><img alt="" src="/upload/2015-05/1432720741478522000.jpg" style="height:215px; width:245px" /></p>
+,
+    Published: 0001-01-01T00:00:00Z,
+    Tags: 1,
+    Original: 0,
+    Author: hhhh,
+    Resource: jjj,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432720751477,
+    Updator: 2,
+    Updated: 1432720751477,
+    Ip: 127.0.0.1,
+} 
+2015/05/28 09:39:24 [router.go:845] [D] | GET        | /article/edit/1                          | 210.012ms        | match      | /article/edit/*                          | 
+2015/05/28 09:40:41 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 09:40:41 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 09:40:41 [app.go:96] [I] http server Running on :8080
+2015/05/28 09:41:28 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 09:41:28 [app.go:96] [I] http server Running on :8080
+2015/05/28 09:46:16 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 09:46:16 [app.go:96] [I] http server Running on :8080
+2015/05/28 09:46:32 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 09:46:32 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:00:47 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:00:48 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:00:56 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:00:56 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:01:07 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:01:07 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:10:25 [router.go:845] [D] | GET        | /admin/media                             | 1ms              | notmatch   | 
+2015/05/28 10:11:01 [router.go:845] [D] | GET        | /article/info/1                          | 1.0001ms         | notmatch   | 
+2015/05/28 10:11:04 [router.go:845] [D] | GET        | /article/index                           | 113.0065ms       | match      | /article/index/*                         | 
+2015/05/28 10:12:57 [log.go:108] [D] Loading language: en-US 
+2015/05/28 10:12:57 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 10:12:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:12:57 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:13:45 [log.go:108] [D] Loading language: en-US 
+2015/05/28 10:13:45 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 10:13:45 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:13:45 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:17:46 [log.go:108] [D] Loading language: en-US 
+2015/05/28 10:17:46 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 10:17:46 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:17:46 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:18:02 [router.go:845] [D] | GET        | /article/edit                            | 147.0084ms       | match      | /article/edit/*                          | 
+2015/05/28 10:18:07 [router.go:845] [D] | GET        | /article/index                           | 134.0077ms       | match      | /article/index/*                         | 
+2015/05/28 10:20:31 [log.go:108] [D] Loading language: en-US 
+2015/05/28 10:20:31 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 10:20:31 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:20:31 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:21:06 [router.go:845] [D] | GET        | /article/index                           | 133.0076ms       | match      | /article/index/*                         | 
+2015/05/28 10:24:29 [log.go:108] [D] Loading language: en-US 
+2015/05/28 10:24:29 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 10:24:29 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:24:29 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:24:32 [router.go:845] [D] | GET        | /article/index                           | 420.024ms        | match      | /article/index/*                         | 
+2015/05/28 10:26:17 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:26:17 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:26:18 [router.go:845] [D] | GET        | /article/index                           | 478.0273ms       | match      | /article/index/*                         | 
+2015/05/28 10:26:23 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:26:23 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:31:37 [router.go:845] [D] | GET        | /article/index                           | 105.006ms        | match      | /article/index/*                         | 
+2015/05/28 10:33:02 [router.go:845] [D] | GET        | /article/index                           | 140.008ms        | match      | /article/index/*                         | 
+2015/05/28 10:33:09 [router.go:845] [D] | GET        | /article/info/1                          | 0                | notmatch   | 
+2015/05/28 10:34:23 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:34:23 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:34:53 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:34:53 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:35:56 [router.go:845] [D] | GET        | /article/info/2                          | 1.0001ms         | notmatch   | 
+2015/05/28 10:36:18 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:36:18 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:36:52 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 2,
+    Topic: ,
+    Title: ,
+    SubTitle: ,
+    Intro: ,
+    Content: ,
+    Published: ,
+    Tags: ,
+    Original: 0,
+    Author: ,
+    Resource: ,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/28 10:36:52 [router.go:845] [D] | GET        | /article/info/2                          | 1ms              | notmatch   | 
+2015/05/28 10:37:16 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:37:16 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:37:17 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 2,
+    Topic: /upload/2015-05/1432721053916392400.jpg,
+    Title: gggg,
+    SubTitle: jjjj,
+    Intro: llll.l.l 22222222222222222222222222,
+    Content: <p><img alt="" src="/upload/2015-05/1432720741478522000.jpg" style="height:215px; width:245px" /></p>
+,
+    Published: 0001-01-01T00:00:00Z,
+    Tags: 0,1,
+    Original: 0,
+    Author: hhhh,
+    Resource: jjj,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432721061305,
+    Updator: 2,
+    Updated: 1432722777238,
+    Ip: 127.0.0.1,
+} 
+2015/05/28 10:37:17 [router.go:845] [D] | GET        | /article/edit/2                          | 187.0107ms       | match      | /article/edit/*                          | 
+2015/05/28 10:37:22 [log.go:108] [D]  --------------- Article/Edit Info:&models.Articles{
+    Id: 1,
+    Topic: ,
+    Title: gggg,
+    SubTitle: jjjj,
+    Intro: llll.l.l,
+    Content: <p><img alt="" src="/upload/2015-05/1432720741478522000.jpg" style="height:215px; width:245px" /></p>
+,
+    Published: 0001-01-01T00:00:00Z,
+    Tags: 1,
+    Original: 0,
+    Author: hhhh,
+    Resource: jjj,
+    ResourceUrl: ,
+    Recommend: 0,
+    IsTop: 0,
+    Position: 0,
+    Status: 0,
+    Deleted: 0,
+    Creator: 2,
+    Created: 1432720751477,
+    Updator: 2,
+    Updated: 1432720751477,
+    Ip: 127.0.0.1,
+} 
+2015/05/28 10:37:22 [router.go:845] [D] | GET        | /article/edit/1                          | 177.0101ms       | match      | /article/edit/*                          | 
+2015/05/28 10:37:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:37:40 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:38:46 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 10:38:46 [app.go:96] [I] http server Running on :8080
+2015/05/28 10:39:11 [router.go:845] [D] | GET        | /article/index                           | 122.0069ms       | match      | /article/index/*                         | 
+2015/05/28 11:09:31 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:09:31 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:09:39 [router.go:845] [D] | GET        | /article/index                           | 112.0064ms       | match      | /article/index/*                         | 
+2015/05/28 11:11:00 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:11:00 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:11:34 [log.go:108] [D] Loading language: en-US 
+2015/05/28 11:11:34 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 11:11:34 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:11:34 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:12:21 [router.go:845] [D] | GET        | /article/index                           | 110.0063ms       | match      | /article/index/*                         | 
+2015/05/28 11:13:08 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:13:08 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:13:13 [router.go:845] [D] | GET        | /article/index                           | 138.0079ms       | match      | /article/index/*                         | 
+2015/05/28 11:13:15 [router.go:876] [C] the request url is  /article/settop 
+2015/05/28 11:13:15 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/05/28 11:13:15 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/28 11:13:15 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/05/28 11:13:15 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/05/28 11:13:15 [router.go:883] [C] c:/snow/src/techbase/controllers/c_article.go:121 
+2015/05/28 11:13:15 [router.go:883] [C] c:/go/src/pkg/runtime/asm_386.s:383 
+2015/05/28 11:13:15 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:563 
+2015/05/28 11:13:15 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:411 
+2015/05/28 11:13:15 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:794 
+2015/05/28 11:13:15 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/28 11:13:15 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/28 11:13:15 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/28 11:13:17 [router.go:845] [D] | GET        | /article/index                           | 120.0069ms       | match      | /article/index/*                         | 
+2015/05/28 11:13:21 [router.go:845] [D] | GET        | /article/index                           | 112.0064ms       | match      | /article/index/*                         | 
+2015/05/28 11:13:24 [router.go:876] [C] the request url is  /article/settop 
+2015/05/28 11:13:24 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/05/28 11:13:24 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/28 11:13:24 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/05/28 11:13:24 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/05/28 11:13:24 [router.go:883] [C] c:/snow/src/techbase/controllers/c_article.go:121 
+2015/05/28 11:13:24 [router.go:883] [C] c:/go/src/pkg/runtime/asm_386.s:383 
+2015/05/28 11:13:24 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:563 
+2015/05/28 11:13:24 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:411 
+2015/05/28 11:13:24 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:794 
+2015/05/28 11:13:24 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/28 11:13:24 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/28 11:13:24 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/28 11:13:53 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:13:53 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:14:02 [router.go:845] [D] | GET        | /article/index                           | 109.0062ms       | match      | /article/index/*                         | 
+2015/05/28 11:14:04 [router.go:876] [C] the request url is  /article/settop 
+2015/05/28 11:14:04 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/05/28 11:14:04 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/28 11:14:04 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/05/28 11:14:04 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/05/28 11:14:04 [router.go:883] [C] c:/snow/src/techbase/controllers/c_article.go:119 
+2015/05/28 11:14:04 [router.go:883] [C] c:/go/src/pkg/runtime/asm_386.s:383 
+2015/05/28 11:14:04 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:563 
+2015/05/28 11:14:04 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:411 
+2015/05/28 11:14:04 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:794 
+2015/05/28 11:14:04 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/28 11:14:04 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/28 11:14:04 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/28 11:14:06 [router.go:845] [D] | GET        | /article/index                           | 147.0084ms       | match      | /article/index/*                         | 
+2015/05/28 11:14:09 [router.go:876] [C] the request url is  /article/settop 
+2015/05/28 11:14:09 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/05/28 11:14:09 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/28 11:14:09 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/05/28 11:14:09 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/05/28 11:14:09 [router.go:883] [C] c:/snow/src/techbase/controllers/c_article.go:119 
+2015/05/28 11:14:09 [router.go:883] [C] c:/go/src/pkg/runtime/asm_386.s:383 
+2015/05/28 11:14:09 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:563 
+2015/05/28 11:14:09 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:411 
+2015/05/28 11:14:09 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:794 
+2015/05/28 11:14:09 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/28 11:14:09 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/28 11:14:09 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/28 11:15:10 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:15:10 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:15:15 [router.go:845] [D] | GET        | /article/index                           | 1.0040575s       | match      | /article/index/*                         | 
+2015/05/28 11:15:21 [log.go:108] [D]  --------------- Article/SetTop Info:invalid 
+2015/05/28 11:15:21 [router.go:876] [C] the request url is  /article/settop 
+2015/05/28 11:15:21 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/05/28 11:15:21 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/28 11:15:21 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/05/28 11:15:21 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/05/28 11:15:21 [router.go:883] [C] c:/snow/src/techbase/controllers/c_article.go:120 
+2015/05/28 11:15:21 [router.go:883] [C] c:/go/src/pkg/runtime/asm_386.s:383 
+2015/05/28 11:15:21 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:563 
+2015/05/28 11:15:21 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:411 
+2015/05/28 11:15:21 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:794 
+2015/05/28 11:15:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/28 11:15:21 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/28 11:15:21 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/28 11:17:06 [log.go:108] [D]  --------------- Article/SetTop Info:invalid 
+2015/05/28 11:17:06 [router.go:876] [C] the request url is  /article/settop 
+2015/05/28 11:17:06 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/05/28 11:17:06 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/28 11:17:06 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/05/28 11:17:06 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/05/28 11:17:06 [router.go:883] [C] c:/snow/src/techbase/controllers/c_article.go:120 
+2015/05/28 11:17:06 [router.go:883] [C] c:/go/src/pkg/runtime/asm_386.s:383 
+2015/05/28 11:17:06 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:563 
+2015/05/28 11:17:06 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:411 
+2015/05/28 11:17:06 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:794 
+2015/05/28 11:17:06 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/28 11:17:06 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/28 11:17:06 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/28 11:17:12 [log.go:108] [D]  --------------- Article/SetTop Info:invalid 
+2015/05/28 11:17:12 [router.go:876] [C] the request url is  /article/settop 
+2015/05/28 11:17:12 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/05/28 11:17:12 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:248 
+2015/05/28 11:17:12 [router.go:883] [C] c:/go/src/pkg/runtime/panic.c:552 
+2015/05/28 11:17:12 [router.go:883] [C] c:/go/src/pkg/runtime/os_windows.c:359 
+2015/05/28 11:17:12 [router.go:883] [C] c:/snow/src/techbase/controllers/c_article.go:120 
+2015/05/28 11:17:12 [router.go:883] [C] c:/go/src/pkg/runtime/asm_386.s:383 
+2015/05/28 11:17:12 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:563 
+2015/05/28 11:17:12 [router.go:883] [C] c:/go/src/pkg/reflect/value.go:411 
+2015/05/28 11:17:12 [router.go:883] [C] c:/snow/src/github.com/astaxie/beego/router.go:794 
+2015/05/28 11:17:12 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1673 
+2015/05/28 11:17:12 [router.go:883] [C] c:/go/src/pkg/net/http/server.go:1174 
+2015/05/28 11:17:12 [router.go:883] [C] c:/go/src/pkg/runtime/proc.c:1445 
+2015/05/28 11:18:29 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:18:29 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:18:32 [router.go:845] [D] | GET        | /article/index                           | 147.0084ms       | match      | /article/index/*                         | 
+2015/05/28 11:18:38 [router.go:845] [D] | GET        | /article/index                           | 199.0114ms       | match      | /article/index/*                         | 
+2015/05/28 11:20:08 [router.go:845] [D] | GET        | /article/index                           | 184.0105ms       | match      | /article/index/*                         | 
+2015/05/28 11:20:11 [router.go:845] [D] | GET        | /article/index                           | 119.0068ms       | match      | /article/index/*                         | 
+2015/05/28 11:21:07 [router.go:845] [D] | GET        | /article/index                           | 165.0094ms       | match      | /article/index/*                         | 
+2015/05/28 11:22:54 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:22:55 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:23:06 [router.go:845] [D] | GET        | /article/index                           | 192.011ms        | match      | /article/index/*                         | 
+2015/05/28 11:23:25 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:23:25 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:23:26 [router.go:845] [D] | GET        | /article/index                           | 158.0091ms       | match      | /article/index/*                         | 
+2015/05/28 11:24:12 [router.go:845] [D] | GET        | /article/index                           | 194.0111ms       | match      | /article/index/*                         | 
+2015/05/28 11:25:48 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:25:48 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:25:51 [router.go:845] [D] | GET        | /article/index                           | 133.0076ms       | match      | /article/index/*                         | 
+2015/05/28 11:25:53 [log.go:108] [D]  --------------- Article/SetTop Info:true,  invalid 
+2015/05/28 11:26:23 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:26:23 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:27:01 [router.go:845] [D] | GET        | /article/index                           | 132.0075ms       | match      | /article/index/*                         | 
+2015/05/28 11:27:50 [router.go:845] [D] | GET        | /article/index                           | 135.0077ms       | match      | /article/index/*                         | 
+2015/05/28 11:32:52 [log.go:108] [D] Loading language: en-US 
+2015/05/28 11:32:52 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 11:32:52 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:32:52 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:33:11 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:33:11 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:36:17 [router.go:845] [D] | GET        | /article/index                           | 136.0078ms       | match      | /article/index/*                         | 
+2015/05/28 11:37:21 [router.go:845] [D] | GET        | /article/index                           | 180.0103ms       | match      | /article/index/*                         | 
+2015/05/28 11:39:22 [router.go:845] [D] | GET        | /article/index                           | 207.0118ms       | match      | /article/index/*                         | 
+2015/05/28 11:39:32 [router.go:845] [D] | GET        | /article/index                           | 165.0095ms       | match      | /article/index/*                         | 
+2015/05/28 11:42:05 [router.go:845] [D] | GET        | /article/edit/2                          | 128.0073ms       | match      | /article/edit/*                          | 
+2015/05/28 11:52:02 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:52:02 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:54:01 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:54:01 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:54:43 [log.go:108] [D] Loading language: en-US 
+2015/05/28 11:54:43 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 11:54:43 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:54:44 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:55:42 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 11:55:42 [app.go:96] [I] http server Running on :8080
+2015/05/28 11:56:44 [router.go:845] [D] | GET        | /article/index                           | 134.0077ms       | match      | /article/index/*                         | 
+2015/05/28 12:03:59 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 12:03:59 [app.go:96] [I] http server Running on :8080
+2015/05/28 12:05:43 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 12:05:43 [app.go:96] [I] http server Running on :8080
+2015/05/28 12:05:47 [router.go:845] [D] | GET        | /article/index                           | 262.015ms        | match      | /article/index/*                         | 
+2015/05/28 12:07:44 [router.go:845] [D] | GET        | /article/index                           | 249.0142ms       | match      | /article/index/*                         | 
+2015/05/28 12:11:16 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 12:11:16 [app.go:96] [I] http server Running on :8080
+2015/05/28 12:11:20 [router.go:845] [D] | GET        | /article/index                           | 250.0143ms       | match      | /article/index/*                         | 
+2015/05/28 12:13:20 [router.go:845] [D] | GET        | /basic/index/8                           | 170.0097ms       | match      | /basic/index/:typeId                     | 
+2015/05/28 12:14:23 [router.go:845] [D] | GET        | /article/index                           | 158.009ms        | match      | /article/index/*                         | 
+2015/05/28 12:14:30 [router.go:845] [D] | GET        | /basic/index/8                           | 167.0096ms       | match      | /basic/index/:typeId                     | 
+2015/05/28 12:15:20 [router.go:845] [D] | GET        | /                                        | 168.0096ms       | match      | /                                        | 
+2015/05/28 12:16:30 [router.go:845] [D] | GET        | /media                                   | 143.0081ms       | match      | /media                                   | 
+2015/05/28 12:24:16 [router.go:845] [D] | GET        | /media                                   | 134.0077ms       | match      | /media                                   | 
+2015/05/28 12:27:21 [router.go:845] [D] | GET        | /media                                   | 127.0073ms       | match      | /media                                   | 
+2015/05/28 12:28:06 [router.go:845] [D] | GET        | /home                                    | 158.0091ms       | match      | /home                                    | 
+2015/05/28 12:29:22 [router.go:845] [D] | GET        | /                                        | 144.0083ms       | match      | /                                        | 
+2015/05/28 12:31:13 [router.go:845] [D] | GET        | /                                        | 192.0109ms       | match      | /                                        | 
+2015/05/28 12:33:45 [router.go:845] [D] | GET        | /                                        | 148.0084ms       | match      | /                                        | 
+2015/05/28 12:35:51 [router.go:845] [D] | GET        | /                                        | 188.0108ms       | match      | /                                        | 
+2015/05/28 12:37:04 [router.go:845] [D] | GET        | /                                        | 145.0083ms       | match      | /                                        | 
+2015/05/28 12:37:46 [router.go:845] [D] | GET        | /                                        | 190.0108ms       | match      | /                                        | 
+2015/05/28 12:38:43 [router.go:845] [D] | GET        | /                                        | 177.0101ms       | match      | /                                        | 
+2015/05/28 12:40:29 [router.go:845] [D] | GET        | /                                        | 178.0101ms       | match      | /                                        | 
+2015/05/28 12:41:20 [router.go:845] [D] | GET        | /media                                   | 152.0087ms       | match      | /media                                   | 
+2015/05/28 12:42:06 [router.go:845] [D] | GET        | /media                                   | 176.0101ms       | match      | /media                                   | 
+2015/05/28 12:43:19 [router.go:845] [D] | GET        | /media                                   | 140.008ms        | match      | /media                                   | 
+2015/05/28 12:54:45 [router.go:845] [D] | GET        | /media                                   | 146.0084ms       | match      | /media                                   | 
+2015/05/28 12:56:32 [router.go:845] [D] | GET        | /my/company                              | 124.0071ms       | match      | /my/company                              | 
+2015/05/28 12:56:33 [router.go:845] [D] | GET        | /article/index                           | 139.008ms        | match      | /article/index/*                         | 
+2015/05/28 12:57:00 [router.go:845] [D] | GET        | /admin/account                           | 200.0115ms       | match      | /admin/account/*                         | 
+2015/05/28 12:57:04 [router.go:845] [D] | GET        | /basic/index/2                           | 163.0094ms       | match      | /basic/index/:typeId                     | 
+2015/05/28 12:57:15 [router.go:845] [D] | GET        | /                                        | 176.0101ms       | match      | /                                        | 
+2015/05/28 12:57:17 [router.go:845] [D] | GET        | /media                                   | 243.0139ms       | match      | /media                                   | 
+2015/05/28 12:59:24 [router.go:845] [D] | GET        | /media                                   | 102.0058ms       | match      | /media                                   | 
+2015/05/28 13:01:43 [router.go:845] [D] | GET        | /media                                   | 111.0063ms       | match      | /media                                   | 
+2015/05/28 13:02:05 [router.go:845] [D] | GET        | /media                                   | 173.0099ms       | match      | /media                                   | 
+2015/05/28 13:03:18 [router.go:845] [D] | GET        | /media                                   | 159.0091ms       | match      | /media                                   | 
+2015/05/28 13:09:11 [router.go:845] [D] | GET        | /media                                   | 116.0066ms       | match      | /media                                   | 
+2015/05/28 13:10:47 [router.go:845] [D] | GET        | /media                                   | 119.0068ms       | match      | /media                                   | 
+2015/05/28 13:12:27 [router.go:845] [D] | GET        | /media                                   | 182.0104ms       | match      | /media                                   | 
+2015/05/28 13:12:39 [router.go:845] [D] | GET        | /media                                   | 204.0117ms       | match      | /media                                   | 
+2015/05/28 13:15:28 [router.go:845] [D] | GET        | /media                                   | 182.0104ms       | match      | /media                                   | 
+2015/05/28 13:20:39 [router.go:845] [D] | GET        | /media                                   | 184.0105ms       | match      | /media                                   | 
+2015/05/28 13:21:32 [router.go:845] [D] | GET        | /media                                   | 176.0101ms       | match      | /media                                   | 
+2015/05/28 13:23:05 [router.go:845] [D] | GET        | /media                                   | 182.0104ms       | match      | /media                                   | 
+2015/05/28 13:23:59 [router.go:845] [D] | GET        | /media                                   | 161.0092ms       | match      | /media                                   | 
+2015/05/28 13:24:50 [router.go:845] [D] | GET        | /media                                   | 563.0322ms       | match      | /media                                   | 
+2015/05/28 13:24:50 [staticfile.go:62] [W] GetFileAttributesEx html/brand/5.png: The system cannot find the file specified. 
+2015/05/28 13:24:50 [staticfile.go:62] [W] GetFileAttributesEx html/brand/6.png: The system cannot find the file specified. 
+2015/05/28 13:24:50 [staticfile.go:62] [W] GetFileAttributesEx html/brand/5.png: The system cannot find the file specified. 
+2015/05/28 13:26:24 [router.go:845] [D] | GET        | /media                                   | 137.0079ms       | match      | /media                                   | 
+2015/05/28 13:31:31 [router.go:845] [D] | GET        | /media                                   | 156.0089ms       | match      | /media                                   | 
+2015/05/28 13:34:28 [router.go:845] [D] | GET        | /media                                   | 74.0042ms        | match      | /media                                   | 
+2015/05/28 13:36:57 [router.go:845] [D] | GET        | /media                                   | 169.0096ms       | match      | /media                                   | 
+2015/05/28 13:38:25 [router.go:845] [D] | GET        | /media                                   | 111.0063ms       | match      | /media                                   | 
+2015/05/28 13:41:02 [router.go:845] [D] | GET        | /media                                   | 100.0057ms       | match      | /media                                   | 
+2015/05/28 13:41:32 [router.go:845] [D] | GET        | /media                                   | 120.0068ms       | match      | /media                                   | 
+2015/05/28 13:42:09 [router.go:845] [D] | GET        | /media                                   | 124.0071ms       | match      | /media                                   | 
+2015/05/28 13:42:43 [router.go:845] [D] | GET        | /media                                   | 108.0062ms       | match      | /media                                   | 
+2015/05/28 13:42:54 [router.go:845] [D] | GET        | /media                                   | 151.0086ms       | match      | /media                                   | 
+2015/05/28 13:52:21 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 13:52:21 [app.go:96] [I] http server Running on :8080
+2015/05/28 13:58:05 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 13:58:05 [app.go:96] [I] http server Running on :8080
+2015/05/28 14:01:19 [router.go:845] [D] | GET        | /media                                   | 115.0066ms       | match      | /media                                   | 
+2015/05/28 14:01:55 [router.go:845] [D] | GET        | /media                                   | 166.0095ms       | match      | /media                                   | 
+2015/05/28 14:02:41 [router.go:845] [D] | GET        | /media                                   | 155.0088ms       | match      | /media                                   | 
+2015/05/28 14:03:01 [router.go:845] [D] | GET        | /media                                   | 138.0079ms       | match      | /media                                   | 
+2015/05/28 14:04:19 [router.go:845] [D] | GET        | /media                                   | 2.885165s        | match      | /media                                   | 
+2015/05/28 14:04:21 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 14:04:21 [app.go:96] [I] http server Running on :8080
+2015/05/28 14:04:27 [router.go:845] [D] | GET        | /media                                   | 179.0102ms       | match      | /media                                   | 
+2015/05/28 14:05:37 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 14:05:37 [app.go:96] [I] http server Running on :8080
+2015/05/28 14:05:43 [router.go:845] [D] | GET        | /media                                   | 156.0089ms       | match      | /media                                   | 
+2015/05/28 14:28:33 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 14:28:33 [app.go:96] [I] http server Running on :8080
+2015/05/28 14:30:56 [router.go:845] [D] | GET        | /media                                   | 221.0126ms       | match      | /media                                   | 
+2015/05/28 14:31:02 [router.go:845] [D] | GET        | /home/show/2                             | 539.0308ms       | match      | /home/show/*                             | 
+2015/05/28 14:38:28 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 14:38:28 [app.go:96] [I] http server Running on :8080
+2015/05/28 14:52:36 [router.go:845] [D] | GET        | /home/show/2                             | 84.0048ms        | match      | /home/show/*                             | 
+2015/05/28 14:53:23 [router.go:845] [D] | GET        | /home/show/1                             | 122.007ms        | match      | /home/show/*                             | 
+2015/05/28 14:58:55 [router.go:845] [D] | GET        | /home/show/1                             | 86.0049ms        | match      | /home/show/*                             | 
+2015/05/28 14:59:25 [router.go:845] [D] | GET        | /home/show/1                             | 113.0064ms       | match      | /home/show/*                             | 
+2015/05/28 14:59:40 [router.go:845] [D] | GET        | /home/show/1                             | 101.0058ms       | match      | /home/show/*                             | 
+2015/05/28 15:00:01 [router.go:845] [D] | GET        | /home/show/1                             | 89.0051ms        | match      | /home/show/*                             | 
+2015/05/28 15:00:07 [router.go:845] [D] | GET        | /home/show/2                             | 154.0088ms       | match      | /home/show/*                             | 
+2015/05/28 15:01:35 [router.go:845] [D] | GET        | /home/show/2                             | 330.0189ms       | match      | /home/show/*                             | 
+2015/05/28 15:02:25 [router.go:845] [D] | GET        | /my/company                              | 196.0113ms       | match      | /my/company                              | 
+2015/05/28 15:02:26 [router.go:845] [D] | GET        | /article/index                           | 128.0073ms       | match      | /article/index/*                         | 
+2015/05/28 15:02:44 [router.go:845] [D] | GET        | /basic/index/8                           | 131.0075ms       | match      | /basic/index/:typeId                     | 
+2015/05/28 15:04:24 [router.go:845] [D] | GET        | /home/show/2                             | 255.0146ms       | match      | /home/show/*                             | 
+2015/05/28 15:08:45 [router.go:845] [D] | GET        | /home/show/2                             | 206.0118ms       | match      | /home/show/*                             | 
+2015/05/28 15:08:57 [router.go:845] [D] | GET        | /home/show/1                             | 92.0053ms        | match      | /home/show/*                             | 
+2015/05/28 16:12:30 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 16:12:30 [app.go:96] [I] http server Running on :8080
+2015/05/28 16:12:36 [router.go:845] [D] | GET        | /                                        | 101.0058ms       | match      | /                                        | 
+2015/05/28 16:12:39 [router.go:845] [D] | GET        | /my/company                              | 146.0084ms       | match      | /my/company                              | 
+2015/05/28 16:12:41 [router.go:845] [D] | GET        | /article/index                           | 149.0086ms       | match      | /article/index/*                         | 
+2015/05/28 16:12:43 [router.go:845] [D] | GET        | /article/edit                            | 189.0108ms       | match      | /article/edit/*                          | 
+2015/05/28 16:31:14 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 16:31:14 [app.go:96] [I] http server Running on :8080
+2015/05/28 16:31:20 [router.go:845] [D] | GET        | /article/edit                            | 137.0078ms       | match      | /article/edit/*                          | 
+2015/05/28 16:36:54 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 16:36:54 [app.go:96] [I] http server Running on :8080
+2015/05/28 16:38:55 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 16:38:55 [app.go:96] [I] http server Running on :8080
+2015/05/28 16:39:04 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 16:39:04 [app.go:96] [I] http server Running on :8080
+2015/05/28 16:40:48 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 16:40:48 [app.go:96] [I] http server Running on :8080
+2015/05/28 16:43:08 [log.go:108] [D] Loading language: en-US 
+2015/05/28 16:43:08 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 16:43:08 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 16:43:08 [app.go:96] [I] http server Running on :8080
+2015/05/28 16:44:23 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 16:44:23 [app.go:96] [I] http server Running on :8080
+2015/05/28 16:46:15 [router.go:845] [D] | GET        | /article/index                           | 278.0159ms       | match      | /article/index/*                         | 
+2015/05/28 16:51:22 [router.go:845] [D] | GET        | /article/index                           | 183.0105ms       | match      | /article/index/*                         | 
+2015/05/28 16:52:25 [router.go:845] [D] | GET        | /article/index                           | 508.029ms        | match      | /article/index/*                         | 
+2015/05/28 16:53:59 [router.go:845] [D] | GET        | /article/index                           | 148.0085ms       | match      | /article/index/*                         | 
+2015/05/28 16:54:01 [router.go:845] [D] | GET        | /home/show/1                             | 321.0184ms       | match      | /home/show/*                             | 
+2015/05/28 16:56:45 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 16:56:45 [app.go:96] [I] http server Running on :8080
+2015/05/28 16:57:47 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 16:57:47 [app.go:96] [I] http server Running on :8080
+2015/05/28 17:00:47 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 17:00:47 [app.go:96] [I] http server Running on :8080
+2015/05/28 17:03:03 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 17:03:03 [app.go:96] [I] http server Running on :8080
+2015/05/28 17:03:34 [router.go:845] [D] | GET        | /article/index                           | 204.0117ms       | match      | /article/index/*                         | 
+2015/05/28 17:03:39 [router.go:845] [D] | GET        | /home/show/1                             | 272.0156ms       | match      | /home/show/*                             | 
+2015/05/28 17:05:50 [router.go:845] [D] | GET        | /home/show/1                             | 166.0095ms       | match      | /home/show/*                             | 
+2015/05/28 17:10:25 [router.go:845] [D] | GET        | /home/show/1                             | 204.0117ms       | match      | /home/show/*                             | 
+2015/05/28 17:12:12 [router.go:845] [D] | GET        | /home/show/1                             | 238.0137ms       | match      | /home/show/*                             | 
+2015/05/28 17:13:37 [router.go:845] [D] | GET        | /home/show/1                             | 251.0143ms       | match      | /home/show/*                             | 
+2015/05/28 17:14:06 [router.go:845] [D] | GET        | /article/edit/1                          | 180.0103ms       | match      | /article/edit/*                          | 
+2015/05/28 17:14:11 [router.go:845] [D] | GET        | /article/audit                           | 0                | notmatch   | 
+2015/05/28 17:23:14 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 17:23:14 [app.go:96] [I] http server Running on :8080
+2015/05/28 17:24:44 [router.go:845] [D] | GET        | /article/index                           | 146.0083ms       | match      | /article/index/*                         | 
+2015/05/28 17:24:50 [router.go:845] [D] | GET        | /article/index                           | 165.0094ms       | match      | /article/index/*                         | 
+2015/05/28 17:25:25 [router.go:845] [D] | GET        | /article/index                           | 138.0079ms       | match      | /article/index/*                         | 
+2015/05/28 17:25:36 [router.go:845] [D] | GET        | /article/index                           | 168.0096ms       | match      | /article/index/*                         | 
+2015/05/28 17:26:18 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 17:26:18 [app.go:96] [I] http server Running on :8080
+2015/05/28 17:26:23 [router.go:845] [D] | GET        | /article/index                           | 167.0096ms       | match      | /article/index/*                         | 
+2015/05/28 17:26:23 [log.go:108] [D]  --------------- Article/List Info:[]models.ArticlesView{
+    models.ArticlesView{
+        Id: 1,
+        Topic: /upload/2015-05/1432801944677550900.png,
+        Title: 国际物流服务电商平台“运去哪”，用互联网+的方式做货主/货代在线撮合,
+        SubTitle: ,
+        Intro: ,
+        Content: ,
+        Published: ,
+        Tags: 0,
+        Original: 0,
+        Author: ,
+        Resource: ,
+        ResourceUrl: ,
+        Recommend: 0,
+        IsTop: 0,
+        Position: 0,
+        Status: 0,
+        Deleted: 0,
+        Updator: 0,
+        Updated: 1432805049280,
+        Ip: ,
+        Tag: 她推荐,
+    },
+} 
+2015/05/28 17:27:16 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 17:27:16 [app.go:96] [I] http server Running on :8080
+2015/05/28 17:27:32 [router.go:845] [D] | GET        | /article/index                           | 2.2841306s       | match      | /article/index/*                         | 
+2015/05/28 17:27:34 [log.go:108] [D] Loading language: en-US 
+2015/05/28 17:27:34 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 17:27:34 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 17:27:34 [app.go:96] [I] http server Running on :8080
+2015/05/28 17:27:58 [router.go:845] [D] | GET        | /article/info/1                          | 1.0001ms         | notmatch   | 
+2015/05/28 17:31:49 [router.go:845] [D] | GET        | /home/show/1                             | 262.015ms        | match      | /home/show/*                             | 
+2015/05/28 17:34:52 [router.go:845] [D] | GET        | /article/index                           | 205.0117ms       | match      | /article/index/*                         | 
+2015/05/28 17:35:40 [router.go:845] [D] | GET        | /article/index                           | 248.0142ms       | match      | /article/index/*                         | 
+2015/05/28 17:37:39 [router.go:845] [D] | GET        | /article/index                           | 156.0089ms       | match      | /article/index/*                         | 
+2015/05/28 17:37:56 [router.go:845] [D] | GET        | /article/index                           | 144.0082ms       | match      | /article/index/*                         | 
+2015/05/28 17:42:42 [router.go:845] [D] | GET        | /article/index                           | 161.0092ms       | match      | /article/index/*                         | 
+2015/05/28 17:43:05 [router.go:845] [D] | GET        | /article/index                           | 175.01ms         | match      | /article/index/*                         | 
+2015/05/28 17:43:25 [router.go:845] [D] | GET        | /article/index                           | 224.0128ms       | match      | /article/index/*                         | 
+2015/05/28 18:00:24 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 18:00:24 [app.go:96] [I] http server Running on :8080
+2015/05/28 18:01:23 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 18:01:23 [app.go:96] [I] http server Running on :8080
+2015/05/28 18:01:37 [router.go:845] [D] | GET        | /article/index                           | 179.0103ms       | match      | /article/index/*                         | 
+2015/05/28 18:01:39 [router.go:845] [D] | GET        | /article/index                           | 167.0096ms       | match      | /article/index/*                         | 
+2015/05/28 18:02:31 [router.go:845] [D] | GET        | /article/index                           | 185.0106ms       | match      | /article/index/*                         | 
+2015/05/28 18:02:46 [router.go:845] [D] | GET        | /article/index                           | 187.0107ms       | match      | /article/index/*                         | 
+2015/05/28 18:02:50 [router.go:845] [D] | GET        | /article/index                           | 195.0111ms       | match      | /article/index/*                         | 
+2015/05/28 18:03:34 [router.go:845] [D] | GET        | /article/index                           | 239.0137ms       | match      | /article/index/*                         | 
+2015/05/28 18:03:49 [router.go:845] [D] | GET        | /article/index                           | 221.0126ms       | match      | /article/index/*                         | 
+2015/05/28 18:03:55 [router.go:845] [D] | GET        | /article/index                           | 197.0113ms       | match      | /article/index/*                         | 
+2015/05/28 18:04:28 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 18:04:28 [app.go:96] [I] http server Running on :8080
+2015/05/28 18:04:39 [router.go:845] [D] | GET        | /article/index                           | 219.0126ms       | match      | /article/index/*                         | 
+2015/05/28 18:06:14 [router.go:845] [D] | GET        | /article/index                           | 201.0115ms       | match      | /article/index/*                         | 
+2015/05/28 18:06:22 [router.go:845] [D] | GET        | /article/index                           | 251.0143ms       | match      | /article/index/*                         | 
+2015/05/28 18:07:15 [log.go:108] [D] Loading language: en-US 
+2015/05/28 18:07:15 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 18:07:15 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 18:07:15 [app.go:96] [I] http server Running on :8080
+2015/05/28 18:07:20 [router.go:845] [D] | GET        | /article/index                           | 265.0151ms       | match      | /article/index/*                         | 
+2015/05/28 18:08:34 [log.go:108] [D] Loading language: zh-CN 
+2015/05/28 18:08:34 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 18:08:34 [app.go:96] [I] http server Running on :8080
+2015/05/28 18:09:43 [router.go:845] [D] | GET        | /admin/company                           | 192.011ms        | match      | /admin/company/*                         | 
+2015/05/28 18:11:38 [router.go:845] [D] | GET        | /article/index                           | 262.015ms        | match      | /article/index/*                         | 
+2015/05/28 18:12:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/28 18:12:57 [app.go:96] [I] http server Running on :8080
+2015/05/28 18:12:58 [router.go:845] [D] | GET        | /article/index                           | 155.0089ms       | match      | /article/index/*                         | 
+2015/05/28 18:14:04 [router.go:845] [D] | GET        | /article/index                           | 133.0076ms       | match      | /article/index/*                         | 
+2015/05/28 18:14:23 [router.go:845] [D] | GET        | /article/edit/1                          | 218.0125ms       | match      | /article/edit/*                          | 
+2015/05/28 18:16:31 [router.go:845] [D] | GET        | /article/edit/1                          | 203.0116ms       | match      | /article/edit/*                          | 
+2015/05/28 18:16:36 [router.go:845] [D] | GET        | /article/index                           | 190.0109ms       | match      | /article/index/*                         | 
+2015/05/28 18:16:45 [router.go:845] [D] | GET        | /article/index                           | 186.0106ms       | match      | /article/index/*                         | 
+2015/05/28 18:18:35 [router.go:845] [D] | GET        | /article/index                           | 172.0098ms       | match      | /article/index/*                         | 

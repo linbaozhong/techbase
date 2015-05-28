@@ -19,7 +19,7 @@
 				<h4>{{.subTitle}}</h4>
 				<div class="pull-right">
 					<a class="submit-review" href="#"><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
-					<a href="/admin/media"><i class="fa fa-th-list"></i>&nbsp;返回我的文章</a>
+					<a href="/article/index"><i class="fa fa-th-list"></i>&nbsp;返回我的文章</a>
 				</div>
 				<hr />
 			</div>
@@ -146,7 +146,7 @@
 				if ($.inArray(item.value.toString(),_tags) != -1) {
 					_html.push(' checked');                                                          
 				}
-				_html.push(' type="checkbox" name="tags" value="'+item.value+'">'+item.name+"</label>"); 
+				_html.push(' type="radio" name="tags" value="'+item.value+'">'+item.name+"</label>"); 
 				//
 				$('form.snow-form-1 .snow-tags').append(_html.join(''))
 			}
@@ -155,11 +155,12 @@
 		// 提交审核 事件
 		$('.submit-review').click(function(e){
 			e.preventDefault();
-			if('{{.article.Status}}'=='0' && $('form.snow-form-1 input[name="id"]').val() > 0){
+			if(parseInt('{{.article.Status}}') < 1 && $('form.snow-form-1 input[name="id"]').val() > 0){
 				// 提交审核
 				$.getJSON('/article/audit',{id:$('form.snow-form-1 input[name="id"]').val()},function(json){
 					if (json.ok) {
 						snow.alert('你的文章已提交审核，请等待……');
+						snow.go('/article/index');
 					} else{
 						snow.alert(json.data.message);
 					}

@@ -592,3 +592,18 @@ overflow: hidden;
 .mobile .navbar-fixed-bottom {
 	position: relative !important;
 }
+/*新闻页*/
+.snow-media-article .snow-media-intro{
+	border: 1px solid #eee;
+  padding: 20px;
+  margin: 20px 0;
+}
+.snow-media-article .snow-media-topic{
+	padding: 20px 0;
+	overflow: hidden;
+}
+.snow-media-article .snow-media-body{
+	padding: 20px 0;
+	font-size: 1.2em;
+	line-height: 1.8em;
+}

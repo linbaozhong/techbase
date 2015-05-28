@@ -1,3 +1,86 @@
+	// 扩展字符串方法，用指定字符填充字符串
+	String.prototype.padLeft = function(int, char) {
+		if (this.length >= int) {
+			return this;
+		} else {
+			var n = int - this.length,
+				s = [];
+			for (var i = 0; i < n; i++) {
+				s.push(char);
+			}
+			return s.join('') + this;
+		}
+	};
+	// 扩展日期方法，日期格式化
+	Date.prototype.format = function(format) {
+		var date = this;
+		if (arguments.length == 0 && !date.getTime) {
+			format = date;
+			date = new Date();
+		}
+		if (typeof format != 'string') {
+			var _now = new Date(),
+				_fmt = [];
+			if (date.getFullYear() != _now.getFullYear()) {
+				_fmt.push('yyyy年');
+			}
+			if (date.getMonth() != _now.getMonth()) {
+				_fmt.push('MM月');
+			}
+			if (date.getDate() != _now.getDate()) {
+				if (_fmt.length) {
+					_fmt.push('dd日');
+				} else {
+					var _day = _now.getDate() - date.getDate();
+					if (_day > 2) {
+						_fmt.push('当月dd日');
+					} else {
+						return _day == 1 ? '昨天' : '前天';
+					}
+				}
+			}
+			if (!_fmt.length) {
+				if (date.getHours() != _now.getHours()) {
+					return (_now.getHours() - date.getHours()).toString() + '小时前';
+				}
+				if (date.getMinutes() != _now.getMinutes()) {
+					return (_now.getMinutes() - date.getMinutes()).toString() + '分钟前';
+				}
+				return '刚刚';
+			}
+			//format = 'yyyy年MM月dd日 hh时mm分ss秒';
+			format = _fmt.join('');
+		}
+		var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', '日', '一', '二', '三', '四', '五', '六'];
+		return format.replace(/yyyy|yy|MM|dd|hh|mm|ss|星期|周|www|week/g, function(a) {
+			switch (a) {
+				case "yyyy":
+					return date.getFullYear();
+				case "yy":
+					return (date.getFullYear() + "").slice(2);
+				case "MM":
+					return (date.getMonth() + 1).toString(); //.padLeft(2,'0');
+				case "dd":
+					return date.getDate().toString(); //.padLeft(2, '0');
+				case "hh":
+					return date.getHours().toString().padLeft(2, '0');
+				case "mm":
+					return date.getMinutes().toString().padLeft(2, '0');
+				case "ss":
+					return date.getSeconds().toString().padLeft(2, '0');
+				case "星期":
+					return "星期" + week[date.getDay() + 7];
+				case "周":
+					return "周" + week[date.getDay() + 7];
+				case "week":
+					return week[date.getDay()];
+				case "www":
+					return week[date.getDay()].slice(0, 3);
+			}
+		});
+	};
+
+
 /*
 jQuery弹窗插件 By 哈利蔺特 
  * 使用方法:
@@ -113,6 +196,17 @@ snow.go = function(u){
 	window.location = u;
 }
 
+function getBasicName(type,value){
+	var _name='';
+	$.each(snow.basic,function(i,item){
+		if(item.type==type && item.value==value){
+			_name = item.name;
+			return false;
+		}
+	});
+	return _name;
+}
+
 function submit_disable(obj) {
 	$('.btn[type="submit"]', obj).attr('disabled', true).prepend('<i class="fa fa-spinner fa-spin"></i> ');
 }
@@ -131,3 +225,40 @@ function showMessage(obj, msg, success) {
 		obj.slideUp(600);
 	}, 5000)
 }
+
+$(function(){
+	(function($) {
+		var speed = 5000,
+			count = $('.slideshow li').length,
+			index = 1;
+		var slidetimes;
+
+		function start(index) {
+			$('.slideshow .banner-nav span').eq(index).addClass('current').siblings().removeClass('current');
+			$('.slideshow li').eq(index).fadeIn('slow').siblings('li').fadeOut('slow');
+		};
+
+		function slideshow() {
+			slidetimes = setInterval(function() {
+			
+				if (index == count) {
+					index = 0;
+				}
+				start(index);
+				index++;
+			}, speed);
+		};
+		$('.slideshow li').hover(function() {
+			clearInterval(slidetimes);
+		}, function() {
+			slideshow();
+		});
+		$('.slideshow .banner-nav span').click(function() {
+			start($(this).index());
+		});
+		//
+		if(count > 1){
+			slideshow();
+		}
+	})(jQuery);
+});
