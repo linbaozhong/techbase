@@ -85,6 +85,7 @@ func (this *Home) Show() {
 	if err != nil || id <= 0 {
 		// 转向错误页
 	}
+
 	this.Data["review"] = this.GetString("review")
 	this.Data["articleId"] = id
 	this.Data["index"] = "media"

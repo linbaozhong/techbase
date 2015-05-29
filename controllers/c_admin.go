@@ -18,7 +18,7 @@ func (this *Admin) Prepare() {
 	this.Auth.Prepare()
 
 	// 要求管理员以上级别访问权限
-	if this.currentUser.Role == models.Role_Auditor || this.currentUser.Role == models.Role_Administrator || this.currentUser.Role == models.Role_System {
+	if this.currentUser.Role <= models.Role_Editor {
 
 	} else {
 		if this.IsAjax() {
@@ -37,13 +37,44 @@ func (this *Admin) Prepare() {
 // 项目审核
 func (this *Admin) Company() {
 	com := new(models.Company)
-	//com.Status, _ = this.GetInt("status")
-	com.Status = 1 //已提交审核的公司
+
+	if status, err := this.GetInt("0"); err == nil {
+		com.Status = status
+	} else {
+		com.Status = 1 //已提交审核的公司
+	}
+	com.Apply = -1
+	com.Startup = -1
+	com.City = -1
 
 	cs, _ := com.AllList(nil)
 
+	this.Data["status"] = com.Status
 	this.Data["index"] = "company"
 	this.Data["companys"] = cs
+}
+
+// 项目删除
+func (this *Admin) DelCompany() {
+	id, err := this.GetInt64("id")
+
+	if err != nil || id <= 0 {
+		this.renderJson(utils.JsonResult(false, "", models.Err("缺乏相应的参数")))
+		return
+	}
+
+	com := new(models.Company)
+	com.Id = id
+	com.Deleted = models.Deleted
+
+	this.extend(com)
+
+	if err := com.Delete(); err == nil {
+		this.renderJson(utils.JsonResult(true, "", ""))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
+
 }
 
 // 指定为大赛项目

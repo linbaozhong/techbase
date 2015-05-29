@@ -5,8 +5,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">-->
-		<title>{{i18n .Lang "app title"}} {{.subTitle}}</title>
+		<title>{{i18n .Lang "app title"}}</title>
 		{{.Head}}
 	</head>
 
@@ -19,26 +18,22 @@
 							<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
 						</a>
 					</div>
-					<ul class="nav navbar-nav" style="margin-left:40px;">
-						{{if lt .account.Role 4 }}
-							<li class="{{if eq .index "article"}} active {{end}}"><a href="/article/index">媒体管理</a>
-							</li>
-							{{if lt .account.Role 3 }}
-								<li class="{{if eq .index "company"}} active {{end}}"><a href="/admin/company">项目审核</a>
-								</li>
-								<li class="{{if eq .index "company"}} active {{end}}"><a href="/admin/company">投资人审核</a>
-								</li>
-							{{end}}
-						{{end}}
-						{{if lt .account.Role 2 }}
-							<li class="{{if eq .index "account"}} active {{end}}"><a href="/admin/account">账户管理</a>
-							</li>
-							<li class="menu {{if eq .index "index"}} active {{end}}" data-rel = "submenu-1"><a href="javascript:;">基础数据</a>
-							</li>
-						{{end}}
+					<ul class="nav navbar-nav" style="margin-left:80px;">
+						<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
+						</li>
+						<li class="{{if eq .index "items"}}active {{end}}"><a href="/item/index">她项目</a>
+						</li>
+						<li {{if eq .index "home"}} class="active" {{end}}><a href="/media">她ＶＣ</a>
+						</li>
+						<li class="{{if eq .index "media"}} active {{end}}"><a href="/media">她媒体</a>
+						</li>
+						<li class="{{if eq .index "community"}} active {{end}}"><a href="/community">她社区</a>
+						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li id="avatar" class="menu snow-profile" data-rel = "submenu-0">
+						<li class="login"><a href="javascript:;">登录</a>
+						</li>
+						<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
 							<a href="javascript:;"><img class="img-circle" src="" />
 							<span class="nickname">
 							</span></a>
@@ -46,7 +41,6 @@
 					</ul>
 				</nav>
 			</div>
-
 		</header>
 		<div class="submenu submenu-0">
 			<i class="fa fa-caret-up"></i>
@@ -62,38 +56,24 @@
 				</li>
 			</ul>
 		</div>
-		<div class="submenu submenu-1">
-			<i class="fa fa-caret-up"></i>
-			<ul class="">
-				<li><a href="/basic/index/8">媒体分类</a>
-				</li>
-				<li><hr style="margin: 5px 0;" /></li>
-				<li><a href="/basic/index/0">国家</a>
-				</li>
-				<li><a href="/basic/index/2">城市</a>
-				</li>
-				<li><a href="/basic/index/3">领域</a>
-				</li>
-				<li><a href="/basic/index/4">运营状态</a>
-				</li>
-				<li><a href="/basic/index/5">职位</a>
-				</li>
-				<li><a href="/basic/index/6">融资轮次</a>
-				</li>
-				<li><a href="/basic/index/7">币种</a>
-				</li>
-			</ul>
+		<div class="text-center" style="position: fixed;top: 200px;right: 0;background: #fff;padding: 10px;font-size: 12px;border: 1px solid #eee;z-index: 1000;">
+			<img src="/static/img/weixin-qr.png" style="width: 140px;">
+			<div class="co-card">
+				<p>用微信扫描</p>
+				<p>关注 TechBase她本营</p>
+				<a href="mailto://techbase@tabenying.com">给我们发邮件 </a>
+			</div>
 		</div>
 		{{.LayoutContent}}
+		<!--END container-->
 		{{.Footer}}
-
 	</body>
 
 </html>
 <script type="text/javascript">
 
 	$(function() {
-		//
+		// 他创投
 		function mouseleave(obj) {
 			setTimeout(function() {
 				if (obj.data('hide')) {
@@ -101,7 +81,18 @@
 				}
 			}, 100);
 		};
-
+		
+//		$('button.navbar-toggle').click(function(){
+//			var _self=$(this);
+//			if (_self.data('expanded')) {
+//				$('#xs-nav').hide();
+//				_self.data('expanded',false)
+//			} else{
+//				$('#xs-nav').show();
+//				_self.data('expanded',true)
+//			}
+//		});
+		
 		$(".menu").hover(
 			function(e) {
 				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',false);
@@ -129,9 +120,9 @@
 		}, function(e) {
 			mouseleave($(this).data('hide',true));
 		});
-
+		
 		// 页脚自适应沉底，页眉自适应浮动
-		snow.footerBottom = function(){
+		function footerBottom(){
 			// 页脚
 			var _footer_0 = $('#footer_0'),
 				_footer = $('#footer');
@@ -142,31 +133,50 @@
 		};
 		// 全部图片加载完成后，重置页脚
 		$('img').load(function(){
-			snow.footerBottom();
+			footerBottom();
 		});
+		setTimeout(footerBottom,500);
 		
 		$(window).resize(function() {
-			snow.footerBottom();
+			footerBottom();
 		}).scroll(function() {
 			if ($(document).scrollTop() > 50) {
-//				$('header.navbar-fixed-top').addClass('header_shadow');
+				//$('header.navbar-fixed-top').addClass('header_shadow');
 				$('#go-top').removeClass('hidden');
 			} else {
-//				$('header.navbar-fixed-top').removeClass('header_shadow');
+				//$('header.navbar-fixed-top').removeClass('header_shadow');
 				$('#go-top').addClass('hidden');
 			}
 		});
-//
+		// 
 		$('#go-top').click(function() {
 			$('html,body').animate({
 				scrollTop: 0
 			});
 		});
-
+		// 登录
+		function signin(){
+			$('#signin').popWindow({
+				width: 600,
+				height: 560,
+				close: '<span><i class="fa fa-times"></i></span>'
+			});
+		};
+		
+		$('.login').click(function() {
+			if ($('#signin').length) {
+				signin();
+			}else{
+				$('.x-data').load('/connect/weixin',function(){
+					signin();
+				});
+			}
+		});
 		// 签出
 		$('#logout').click(function(){
 			$.post('/signout',function(json){
 				if (json.ok) {
+					//snow.checkin(false);
 					window.location = "/";
 				}
 			});
@@ -179,12 +189,28 @@
 				_avatar.find('.nickname').text($.cookie('nickname'));
 				$('.snow-profile').show();
 				$('.login').hide();
-
+//				//记录登录状态
+//				$.post('/connect/signtrace', {
+//					from: $.cookie('from'),
+//					token: $.cookie('token'),
+//					openId: $.cookie('openid'),
+//					nickName: $.cookie('nickname'),
+//					avatar_1: $.cookie('avatar')
+//				}, function(d) {
+//					if (d.ok) {
+//						console.log('Successfully login');
+//					}else{
+//						console.log('Login failed');
+//					}
+//				});
+				return true;
 			} else {
-				window.location = "/";
+				$('.snow-profile').hide();
+				$('.login').show();
+				return false;
 			}
 		};
 		snow.checkin(true);
 	});
 </script>
-
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>

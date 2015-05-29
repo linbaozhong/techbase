@@ -14,7 +14,10 @@
 		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 			<h3>项目审核</h3>
 			<div class="text-right">
-
+				<select name="status">
+					<option value="1" {{if eq .status 1}}selected{{end}}>等待审核的项目</option>
+					<option value="2" {{if eq .status 2}}selected{{end}}>审核通过的项目</option>
+				</select>
 			</div>
 			<!--<hr />-->
 			<!--创建公司-->
@@ -29,22 +32,25 @@
 					<div class="media-body">
 						<div><span class="media-heading lead">{{$company.Name}}</span> 
 							<div class="pull-right" style="display: inline-flex;margin-left: 20px;">
+								<a class="snow-del" href="javascript:;" data-id="{{$company.Id}}">删除</a>
+							</div>
+							{{if eq $company.Status 0}}
+								<span>未提交审核</span>
+							{{else if eq $company.Status 1}}
+								<span>正在审核中</span>
+								<div class="pull-right" style="display: inline-flex;margin-left: 20px;">
+									<a class="snow-audit" href="javascript:;" data-id="{{$company.Id}}">审核</a>
+								</div>
+							{{else if eq $company.Status 2}}
+								<span>审核通过</span>
+							{{else}}
+								<span>审核未通过</span>
+							{{end}}
+							<div class="pull-right">
 								<input class="" type="checkbox" name="startup" value="{{$company.Id}}" {{if eq $company.Startup 1}}checked{{end}} />
 								大赛项目
 							</div>	
-							{{if eq $company.Status 0}}
-							<span>未提交审核</span>
-							{{else if eq $company.Status 1}}
-							<span>正在审核中</span>
-							<div class="pull-right">
-								<a class="snow-btn-valid" href="javascript:;" data-id="{{$company.Id}}">审核</a>
-							</div>
-							{{else if eq $company.Status 2}}
-							<span>审核通过</span>
-							{{else}}
-							<span>审核未通过</span>
-							{{end}}
-						
+
 							<p>{{$company.Intro}}</p>
 						</div>
 					</div>
@@ -86,8 +92,30 @@
 </article>
 <script type="text/javascript">
 	$(function() {
-
-		$('.snow-btn-valid').click(function(e){
+		// 选择条件
+		$('select[name="status"]').change(function(){
+			window.location = '/admin/company/' + $(this).val();
+		});
+		// 项目删除
+		$('.snow-del').click(function(e){
+			if(!snow.confirm('你确定要删除吗？')){
+				return false;
+			}
+			
+			var _this = $(this),
+				_id = _this.data('id');
+			
+			$.post('/admin/delCompany',{id:_id},function(json){
+				if(json.ok){
+					_this.closest('.media').remove();
+				}else{
+					snow.alert(json.data.message);
+				}
+			});
+		});
+		
+		// 项目审核
+		$('.snow-audit').click(function(e){
 			$('form.snow-form-1 input[name="id"]').val($(this).data('id'));
 			
 			$('#snow-wrap-valid').popWindow({

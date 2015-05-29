@@ -18,14 +18,14 @@ type Articles struct {
 	Content     string `json:"content" valid:"Required"`            //内容
 	Published   string `json:"published"`                           //发布日期
 	Tags        int    `json:"tags"`                                //标签
-	Original    int    `json"original"`                             //是否原创
+	Original    int    `json:"original"`                            //是否原创
 	Author      string `json:"author"`                              //作者
-	Resource    string `json"resource"`                             //来源单位
-	ResourceUrl string `json"resourceUrl" valid:"MaxSize(250)"`     //来源链接
-	Recommend   int    `json"recommend"`                            //推荐的
+	Resource    string `json:"resource"`                            //来源单位
+	ResourceUrl string `json:"resourceUrl" valid:"MaxSize(250)"`    //来源链接
+	Recommend   int    `json:"recommend"`                           //推荐的
 	IsTop       int    `json:"isTop"`                               //置顶的
 	Position    int    `json:"position"`                            //位置
-	Reason      string `json"reason" valid:"MaxSize(250)"`          //审核未通过原因
+	Reason      string `json:"reason" valid:"MaxSize(250)"`         //审核未通过原因
 	Status      int    `json:"status" valid:"Range(-1,2)"`          //0-草稿，1-审核中，2-审核通过发布，-1-审核未通过
 	Deleted     int    `json:"deleted" valid:"Range(0,1)"`
 	Creator     int64  `json:"creator"`

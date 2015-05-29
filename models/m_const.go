@@ -4,9 +4,10 @@ const (
 	Role_System        = 0 //超级管理员
 	Role_Administrator = 1 //网站管理员
 	Role_Auditor       = 2 //内容审核人
-	Role_Author        = 3 //作者
-	Role_Reader        = 4 //读者
-	Role_Guest         = 5 //游客
+	Role_Editor        = 3 //网站编辑
+	Role_Author        = 4 //网站客户
+	Role_Reader        = 5 //读者
+	Role_Guest         = 6 //游客
 
 	Open_Alipay = 0 //支付宝用户
 	Open_QQ     = 1 //qq用户

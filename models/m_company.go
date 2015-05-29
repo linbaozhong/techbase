@@ -50,11 +50,11 @@ func (this *Company) AllList(ids []int64) (cs []Company, err error) {
 	session := db.NewSession()
 	defer session.Close()
 
-	fmt.Println("条件为空，直接返回", ids != nil)
+	fmt.Println("条件为空，直接返回", ids == nil)
 
 	// ids=nil 没有id条件
 	if ids == nil || len(ids) == 0 {
-		return
+		//return
 	} else {
 		session.In("id", ids)
 
@@ -173,6 +173,12 @@ func (this *Company) Save() (error, []Error) {
 	err = session.Commit()
 
 	return err, nil
+}
+
+// 删除
+func (this *Company) Delete() error {
+	_, err := db.Id(this.Id).Cols("deleted", "updator", "updated", "ip").Update(this)
+	return err
 }
 
 //

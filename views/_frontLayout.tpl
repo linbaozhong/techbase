@@ -69,7 +69,7 @@
 				</li>
 			</ul>
 		</div>-->
-		<div class="text-center" style="position: fixed;top: 200px;right: 0;background: #fff;padding: 10px;font-size: 12px;border: 1px solid #eee;z-index: 1000;">
+		<div class="text-center weixin-public" style="position: fixed;top: 350px;right: 0;background: #fff;padding: 10px;font-size: 12px;border: 1px solid #eee;z-index: 1000;">
 			<img src="/static/img/weixin-qr.png" style="width: 140px;">
 			<div class="co-card">
 				<p>用微信扫描</p>

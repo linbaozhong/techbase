@@ -17615,3 +17615,293 @@
 2015/05/28 18:16:36 [router.go:845] [D] | GET        | /article/index                           | 190.0109ms       | match      | /article/index/*                         | 
 2015/05/28 18:16:45 [router.go:845] [D] | GET        | /article/index                           | 186.0106ms       | match      | /article/index/*                         | 
 2015/05/28 18:18:35 [router.go:845] [D] | GET        | /article/index                           | 172.0098ms       | match      | /article/index/*                         | 
+2015/05/29 11:56:51 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 11:57:05 [app.go:96] [I] http server Running on :8080
+2015/05/29 11:57:10 [router.go:845] [D] | GET        | /                                        | 92.0053ms        | match      | /                                        | 
+2015/05/29 11:57:23 [router.go:845] [D] | GET        | /my/company                              | 81.0047ms        | match      | /my/company                              | 
+2015/05/29 11:57:34 [router.go:845] [D] | GET        | /admin/company                           | 52.0029ms        | match      | /admin/company/*                         | 
+2015/05/29 11:57:36 [router.go:845] [D] | GET        | /article/index                           | 65.0037ms        | match      | /article/index/*                         | 
+2015/05/29 11:57:43 [router.go:845] [D] | GET        | /home/show/1                             | 57.0033ms        | match      | /home/show/*                             | 
+2015/05/29 11:58:05 [router.go:845] [D] | GET        | /                                        | 91.0052ms        | match      | /                                        | 
+2015/05/29 11:58:07 [router.go:845] [D] | GET        | /connect/weixin                          | 51.0029ms        | match      | /connect/weixin/*                        | 
+2015/05/29 12:09:28 [router.go:845] [D] | GET        | /                                        | 44.0026ms        | match      | /                                        | 
+2015/05/29 12:09:30 [router.go:845] [D] | GET        | /connect/weixin                          | 62.0035ms        | match      | /connect/weixin/*                        | 
+2015/05/29 12:10:14 [router.go:845] [D] | GET        | /connect/wx_callback                     | 1.0030574s       | match      | /connect/wx_callback/*                   | 
+2015/05/29 12:10:14 [log.go:108] [D]  --------------- Connect/SignTrace Info:记录登录日志 
+2015/05/29 12:10:15 [router.go:845] [D] | GET        | /                                        | 87.005ms         | match      | /                                        | 
+2015/05/29 12:10:21 [router.go:845] [D] | GET        | /my/profile                              | 80.0046ms        | match      | /my/profile                              | 
+2015/05/29 12:10:25 [router.go:845] [D] | GET        | /admin/company                           | 78.0045ms        | match      | /admin/company/*                         | 
+2015/05/29 12:30:33 [router.go:845] [D] | GET        | /admin/company                           | 72.0041ms        | match      | /admin/company/*                         | 
+2015/05/29 12:31:06 [router.go:845] [D] | GET        | /admin/company                           | 48.0027ms        | match      | /admin/company/*                         | 
+2015/05/29 12:35:17 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 12:35:17 [app.go:96] [I] http server Running on :8080
+2015/05/29 12:35:33 [router.go:845] [D] | GET        | /admin/company                           | 73.0042ms        | match      | /admin/company/*                         | 
+2015/05/29 12:38:20 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 12:38:20 [app.go:96] [I] http server Running on :8080
+2015/05/29 12:38:23 [router.go:845] [D] | GET        | /admin/company                           | 55.0031ms        | match      | /admin/company/*                         | 
+2015/05/29 12:38:23 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:38:23 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:42:14 [router.go:845] [D] | GET        | /admin/company                           | 83.0048ms        | match      | /admin/company/*                         | 
+2015/05/29 12:42:14 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:42:14 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:44:57 [router.go:845] [D] | GET        | /admin/company                           | 79.0045ms        | match      | /admin/company/*                         | 
+2015/05/29 12:44:57 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:44:57 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:50:17 [router.go:845] [D] | GET        | /admin/company                           | 77.0044ms        | match      | /admin/company/*                         | 
+2015/05/29 12:50:17 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:50:17 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:50:35 [router.go:845] [D] | GET        | /admin/company/2                         | 55.0031ms        | match      | /admin/company/*                         | 
+2015/05/29 12:50:35 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:50:35 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:50:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 12:50:57 [app.go:96] [I] http server Running on :8080
+2015/05/29 12:51:01 [router.go:845] [D] | GET        | /admin/company/2                         | 78.0045ms        | match      | /admin/company/*                         | 
+2015/05/29 12:51:01 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:51:01 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:52:24 [router.go:845] [D] | GET        | /admin/company/2                         | 72.0041ms        | match      | /admin/company/*                         | 
+2015/05/29 12:52:24 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:52:24 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:53:44 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 12:53:44 [app.go:96] [I] http server Running on :8080
+2015/05/29 12:53:45 [log.go:108] [D]  --------------- Admin/Company Info:&models.Company{
+    Id: 0,
+    AccountId: 0,
+    Name: ,
+    CompanyName: ,
+    Fullname: ,
+    Website: ,
+    Logo: ,
+    Intro: ,
+    City: -1,
+    Country: 0,
+    StartTime: ,
+    Field: ,
+    State: 0,
+    Status: 1,
+    Reason: ,
+    Startup: -1,
+    Readed: 0,
+    Apply: -1,
+    ApplyId: 0,
+    Deleted: 0,
+    Creator: 0,
+    Created: 0,
+    Updator: 0,
+    Updated: 0,
+    Ip: ,
+} 
+2015/05/29 12:53:45 [router.go:845] [D] | GET        | /admin/company/2                         | 56.0032ms        | match      | /admin/company/*                         | 
+2015/05/29 12:53:45 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:53:45 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:54:18 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 12:54:18 [app.go:96] [I] http server Running on :8080
+2015/05/29 12:54:22 [router.go:845] [D] | GET        | /admin/company/2                         | 55.0032ms        | match      | /admin/company/*                         | 
+2015/05/29 12:54:22 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:54:22 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:54:52 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 12:54:52 [app.go:96] [I] http server Running on :8080
+2015/05/29 12:54:53 [log.go:108] [D]  --------------- Admin/Company Info:2,  invalid 
+2015/05/29 12:54:53 [router.go:845] [D] | GET        | /admin/company/2                         | 58.0033ms        | match      | /admin/company/*                         | 
+2015/05/29 12:54:53 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:54:54 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:55:41 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 12:55:41 [app.go:96] [I] http server Running on :8080
+2015/05/29 12:55:45 [router.go:845] [D] | GET        | /admin/company/2                         | 85.0049ms        | match      | /admin/company/*                         | 
+2015/05/29 12:55:45 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432272843518943700.JPG: The system cannot find the file specified. 
+2015/05/29 12:55:45 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 12:55:45 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432272843518943700.JPG: The system cannot find the file specified. 
+2015/05/29 12:55:45 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 12:56:25 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 12:56:25 [app.go:96] [I] http server Running on :8080
+2015/05/29 12:57:26 [router.go:845] [D] | GET        | /admin/company/2                         | 49.0028ms        | match      | /admin/company/*                         | 
+2015/05/29 12:57:26 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432272843518943700.JPG: The system cannot find the file specified. 
+2015/05/29 12:57:26 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 12:57:32 [router.go:845] [D] | GET        | /admin/company/1                         | 86.0049ms        | match      | /admin/company/*                         | 
+2015/05/29 12:57:33 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:57:33 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:57:38 [router.go:845] [D] | GET        | /admin/company                           | 53.0031ms        | match      | /admin/company/*                         | 
+2015/05/29 12:57:38 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 12:57:38 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 13:00:24 [router.go:845] [D] | GET        | /admin/company                           | 79.0045ms        | match      | /admin/company/*                         | 
+2015/05/29 13:00:24 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 13:00:24 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 13:00:27 [router.go:845] [D] | GET        | /admin/company/2                         | 64.0037ms        | match      | /admin/company/*                         | 
+2015/05/29 13:00:27 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432272843518943700.JPG: The system cannot find the file specified. 
+2015/05/29 13:00:27 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 13:00:27 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432272843518943700.JPG: The system cannot find the file specified. 
+2015/05/29 13:00:29 [router.go:845] [D] | GET        | /admin/company/2/1                       | 68.0039ms        | match      | /admin/company/*                         | 
+2015/05/29 13:00:29 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432272843518943700.JPG: The system cannot find the file specified. 
+2015/05/29 13:00:29 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 13:00:40 [router.go:845] [D] | GET        | /admin/company/2/1/1                     | 62.0036ms        | match      | /admin/company/*                         | 
+2015/05/29 13:00:41 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432272843518943700.JPG: The system cannot find the file specified. 
+2015/05/29 13:00:41 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 13:01:20 [router.go:845] [D] | GET        | /admin/company/2/1/1                     | 50.0028ms        | match      | /admin/company/*                         | 
+2015/05/29 13:01:20 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432272843518943700.JPG: The system cannot find the file specified. 
+2015/05/29 13:01:21 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 13:01:23 [router.go:845] [D] | GET        | /admin/company/1                         | 64.0037ms        | match      | /admin/company/*                         | 
+2015/05/29 13:01:23 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 13:01:23 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 13:01:25 [router.go:845] [D] | GET        | /admin/company/2                         | 61.0035ms        | match      | /admin/company/*                         | 
+2015/05/29 13:01:25 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432272843518943700.JPG: The system cannot find the file specified. 
+2015/05/29 13:01:25 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 13:01:25 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432272843518943700.JPG: The system cannot find the file specified. 
+2015/05/29 13:01:29 [router.go:845] [D] | GET        | /admin/company/1                         | 57.0033ms        | match      | /admin/company/*                         | 
+2015/05/29 13:01:29 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/05/29 13:01:31 [router.go:845] [D] | GET        | /admin/company/2                         | 62.0035ms        | match      | /admin/company/*                         | 
+2015/05/29 13:01:31 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432272843518943700.JPG: The system cannot find the file specified. 
+2015/05/29 13:01:31 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 13:06:24 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 13:06:24 [app.go:96] [I] http server Running on :8080
+2015/05/29 13:07:16 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 13:07:16 [app.go:96] [I] http server Running on :8080
+2015/05/29 13:09:27 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 13:09:28 [app.go:96] [I] http server Running on :8080
+2015/05/29 13:09:42 [router.go:845] [D] | GET        | /admin/company/2                         | 46.0026ms        | match      | /admin/company/*                         | 
+2015/05/29 13:09:42 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 13:09:43 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 13:11:18 [router.go:845] [D] | GET        | /admin/company/2                         | 43.0025ms        | match      | /admin/company/*                         | 
+2015/05/29 13:11:18 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432437955681453700.jpg: The system cannot find the file specified. 
+2015/05/29 13:22:41 [router.go:845] [D] | GET        | /admin/company/2                         | 62.0035ms        | match      | /admin/company/*                         | 
+2015/05/29 14:50:50 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 14:50:52 [app.go:96] [I] http server Running on :8080
+2015/05/29 14:50:55 [router.go:845] [D] | GET        | /article/index                           | 122.007ms        | match      | /article/index/*                         | 
+2015/05/29 14:50:59 [router.go:845] [D] | GET        | /article/index                           | 61.0035ms        | match      | /article/index/*                         | 
+2015/05/29 14:51:03 [router.go:845] [D] | GET        | /home/show/1                             | 58.0033ms        | match      | /home/show/*                             | 
+2015/05/29 15:04:20 [router.go:845] [D] | GET        | /home/show/1                             | 62.0036ms        | match      | /home/show/*                             | 
+2015/05/29 15:06:18 [router.go:845] [D] | GET        | /home/show/1                             | 80.0045ms        | match      | /home/show/*                             | 
+2015/05/29 15:07:10 [router.go:845] [D] | GET        | /home/show/1                             | 53.003ms         | match      | /home/show/*                             | 
+2015/05/29 15:08:07 [router.go:845] [D] | GET        | /home/show/1                             | 69.004ms         | match      | /home/show/*                             | 
+2015/05/29 15:09:39 [router.go:845] [D] | GET        | /home/show/1                             | 57.0032ms        | match      | /home/show/*                             | 
+2015/05/29 15:10:17 [router.go:845] [D] | GET        | /home/show/1                             | 58.0034ms        | match      | /home/show/*                             | 
+2015/05/29 15:13:14 [router.go:845] [D] | GET        | /home/show/1                             | 47.0027ms        | match      | /home/show/*                             | 
+2015/05/29 15:14:00 [router.go:845] [D] | GET        | /home/show/1                             | 66.0037ms        | match      | /home/show/*                             | 
+2015/05/29 15:14:29 [router.go:845] [D] | GET        | /home/show/1                             | 88.005ms         | match      | /home/show/*                             | 
+2015/05/29 15:14:59 [router.go:845] [D] | GET        | /home/show/1                             | 61.0035ms        | match      | /home/show/*                             | 
+2015/05/29 15:15:33 [router.go:845] [D] | GET        | /home/show/1                             | 50.0029ms        | match      | /home/show/*                             | 
+2015/05/29 15:18:04 [router.go:845] [D] | GET        | /home/show/1                             | 71.004ms         | match      | /home/show/*                             | 
+2015/05/29 15:18:15 [router.go:845] [D] | GET        | /home/show/1                             | 68.0039ms        | match      | /home/show/*                             | 
+2015/05/29 15:20:36 [router.go:845] [D] | GET        | /home/show/1                             | 75.0043ms        | match      | /home/show/*                             | 
+2015/05/29 15:22:48 [router.go:845] [D] | GET        | /home/show/1                             | 90.0051ms        | match      | /home/show/*                             | 
+2015/05/29 15:24:21 [router.go:845] [D] | GET        | /home/show/1                             | 85.0049ms        | match      | /home/show/*                             | 
+2015/05/29 15:26:13 [router.go:845] [D] | GET        | /home/show/1                             | 62.0035ms        | match      | /home/show/*                             | 
+2015/05/29 15:26:40 [router.go:845] [D] | GET        | /home/show/1                             | 61.0035ms        | match      | /home/show/*                             | 
+2015/05/29 15:27:16 [router.go:845] [D] | GET        | /home/show/1                             | 50.0028ms        | match      | /home/show/*                             | 
+2015/05/29 15:34:04 [router.go:845] [D] | GET        | /home/show/1                             | 82.0047ms        | match      | /home/show/*                             | 
+2015/05/29 15:34:44 [router.go:845] [D] | GET        | /home/show/1                             | 86.0049ms        | match      | /home/show/*                             | 
+2015/05/29 15:35:03 [router.go:845] [D] | GET        | /home/show/1                             | 72.0041ms        | match      | /home/show/*                             | 
+2015/05/29 15:36:06 [router.go:845] [D] | GET        | /home/show/1                             | 70.004ms         | match      | /home/show/*                             | 
+2015/05/29 15:36:33 [router.go:845] [D] | GET        | /home/show/1                             | 81.0047ms        | match      | /home/show/*                             | 
+2015/05/29 15:36:52 [router.go:845] [D] | GET        | /home/show/1                             | 79.0046ms        | match      | /home/show/*                             | 
+2015/05/29 15:37:07 [router.go:845] [D] | GET        | /home/show/1                             | 70.004ms         | match      | /home/show/*                             | 
+2015/05/29 15:37:41 [router.go:845] [D] | GET        | /home/show/1                             | 75.0043ms        | match      | /home/show/*                             | 
+2015/05/29 15:39:10 [router.go:845] [D] | GET        | /home/show/1                             | 60.0034ms        | match      | /home/show/*                             | 
+2015/05/29 15:42:52 [router.go:845] [D] | GET        | /home/show/1                             | 60.0034ms        | match      | /home/show/*                             | 
+2015/05/29 15:43:04 [router.go:845] [D] | GET        | /home/show/1                             | 55.0032ms        | match      | /home/show/*                             | 
+2015/05/29 15:43:34 [router.go:845] [D] | GET        | /home/show/1                             | 47.0027ms        | match      | /home/show/*                             | 
+2015/05/29 15:43:52 [router.go:845] [D] | GET        | /                                        | 63.0036ms        | match      | /                                        | 
+2015/05/29 15:43:53 [router.go:845] [D] | GET        | /media                                   | 82.0047ms        | match      | /media                                   | 
+2015/05/29 15:43:57 [router.go:845] [D] | GET        | /home/show/1                             | 66.0037ms        | match      | /home/show/*                             | 
+2015/05/29 15:45:57 [router.go:845] [D] | GET        | /home/show/1                             | 74.0043ms        | match      | /home/show/*                             | 
+2015/05/29 15:47:24 [router.go:845] [D] | GET        | /home/show/1                             | 89.0051ms        | match      | /home/show/*                             | 
+2015/05/29 15:48:48 [router.go:845] [D] | GET        | /home/show/1                             | 68.0039ms        | match      | /home/show/*                             | 
+2015/05/29 15:48:57 [router.go:845] [D] | GET        | /home/show/1                             | 83.0047ms        | match      | /home/show/*                             | 
+2015/05/29 15:49:23 [router.go:845] [D] | GET        | /home/show/1                             | 60.0034ms        | match      | /home/show/*                             | 
+2015/05/29 15:54:24 [router.go:845] [D] | GET        | /home/show/1                             | 54.0031ms        | match      | /home/show/*                             | 
+2015/05/29 15:54:52 [router.go:845] [D] | GET        | /home/show/1                             | 62.0035ms        | match      | /home/show/*                             | 
+2015/05/29 15:56:06 [router.go:845] [D] | GET        | /home/show/1                             | 76.0044ms        | match      | /home/show/*                             | 
+2015/05/29 15:58:19 [router.go:845] [D] | GET        | /home/show/1                             | 65.0037ms        | match      | /home/show/*                             | 
+2015/05/29 15:58:36 [router.go:845] [D] | GET        | /home/show/1                             | 91.0052ms        | match      | /home/show/*                             | 
+2015/05/29 16:05:31 [router.go:845] [D] | GET        | /home/show/1                             | 78.0045ms        | match      | /home/show/*                             | 
+2015/05/29 16:06:38 [router.go:845] [D] | GET        | /home/show/1                             | 63.0036ms        | match      | /home/show/*                             | 
+2015/05/29 16:06:41 [router.go:845] [D] | GET        | /home/show/1                             | 89.0051ms        | match      | /home/show/*                             | 
+2015/05/29 16:08:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 16:08:42 [app.go:96] [I] http server Running on :8080
+2015/05/29 16:08:43 [router.go:845] [D] | GET        | /home/show/1                             | 86.0049ms        | match      | /home/show/*                             | 
+2015/05/29 16:08:46 [router.go:845] [D] | GET        | /home/show/1                             | 76.0044ms        | match      | /home/show/*                             | 
+2015/05/29 16:11:05 [router.go:845] [D] | GET        | /home/show/1                             | 53.003ms         | match      | /home/show/*                             | 
+2015/05/29 16:11:46 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 16:11:46 [app.go:96] [I] http server Running on :8080
+2015/05/29 16:13:37 [router.go:845] [D] | GET        | /home/show/1                             | 94.0053ms        | match      | /home/show/*                             | 
+2015/05/29 16:14:44 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 16:14:44 [app.go:96] [I] http server Running on :8080
+2015/05/29 16:14:48 [router.go:845] [D] | GET        | /home/show/1                             | 56.0032ms        | match      | /home/show/*                             | 
+2015/05/29 16:19:14 [router.go:845] [D] | GET        | /home/show/1                             | 62.0036ms        | match      | /home/show/*                             | 
+2015/05/29 16:20:28 [router.go:845] [D] | GET        | /home/show/1                             | 83.0048ms        | match      | /home/show/*                             | 
+2015/05/29 16:22:02 [router.go:845] [D] | GET        | /home/show/1                             | 77.0044ms        | match      | /home/show/*                             | 
+2015/05/29 16:22:30 [router.go:845] [D] | GET        | /home/show/1                             | 65.0037ms        | match      | /home/show/*                             | 
+2015/05/29 16:26:11 [router.go:845] [D] | GET        | /home/show/1                             | 58.0034ms        | match      | /home/show/*                             | 
+2015/05/29 16:34:51 [router.go:845] [D] | GET        | /home/show/1                             | 86.0049ms        | match      | /home/show/*                             | 
+2015/05/29 16:49:39 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 16:49:39 [app.go:96] [I] http server Running on :8080
+2015/05/29 16:49:45 [router.go:876] [C] the request url is  /home/show/1 
+2015/05/29 16:49:45 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/05/29 16:49:45 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/29 16:49:45 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:552 
+2015/05/29 16:49:45 [router.go:883] [C] E:/Go/src/pkg/runtime/os_windows.c:359 
+2015/05/29 16:49:45 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/controllers/c_home.go:93 
+2015/05/29 16:49:45 [router.go:883] [C] E:/Go/src/pkg/runtime/asm_386.s:383 
+2015/05/29 16:49:45 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:563 
+2015/05/29 16:49:45 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:411 
+2015/05/29 16:49:45 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:794 
+2015/05/29 16:49:45 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/29 16:49:45 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/29 16:49:45 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/29 16:50:17 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 16:50:17 [app.go:96] [I] http server Running on :8080
+2015/05/29 16:50:18 [router.go:876] [C] the request url is  /home/show/1 
+2015/05/29 16:50:18 [router.go:877] [C] Handler crashed with error runtime error: invalid memory address or nil pointer dereference 
+2015/05/29 16:50:18 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/05/29 16:50:18 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:552 
+2015/05/29 16:50:18 [router.go:883] [C] E:/Go/src/pkg/runtime/os_windows.c:359 
+2015/05/29 16:50:18 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/techbase/controllers/c_home.go:84 
+2015/05/29 16:50:18 [router.go:883] [C] E:/Go/src/pkg/runtime/asm_386.s:383 
+2015/05/29 16:50:18 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:563 
+2015/05/29 16:50:18 [router.go:883] [C] E:/Go/src/pkg/reflect/value.go:411 
+2015/05/29 16:50:18 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:794 
+2015/05/29 16:50:18 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/05/29 16:50:18 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/05/29 16:50:18 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/05/29 16:50:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 16:50:57 [app.go:96] [I] http server Running on :8080
+2015/05/29 16:51:03 [log.go:108] [D]  --------------- Home/Show Info:invalid 
+2015/05/29 16:51:03 [router.go:845] [D] | GET        | /home/show/1                             | 68.0039ms        | match      | /home/show/*                             | 
+2015/05/29 16:51:03 [router.go:845] [D] | GET        | /home/getshare                           | 0                | notmatch   | 
+2015/05/29 16:51:30 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 16:51:30 [app.go:96] [I] http server Running on :8080
+2015/05/29 16:51:57 [router.go:845] [D] | GET        | /home/show/1                             | 93.0053ms        | match      | /home/show/*                             | 
+2015/05/29 16:51:57 [router.go:845] [D] | GET        | /home/getshare                           | 1ms              | notmatch   | 
+2015/05/29 16:52:07 [router.go:845] [D] | GET        | /home/show/1                             | 61.0034ms        | match      | /home/show/*                             | 
+2015/05/29 16:52:07 [router.go:845] [D] | GET        | /home/getshare                           | 1.0001ms         | notmatch   | 
+2015/05/29 16:52:13 [router.go:845] [D] | GET        | /home/show/1                             | 62.0036ms        | match      | /home/show/*                             | 
+2015/05/29 16:52:13 [router.go:845] [D] | GET        | /home/getshare                           | 4.0003ms         | notmatch   | 
+2015/05/29 16:53:03 [router.go:845] [D] | GET        | /home/show/1                             | 62.0035ms        | match      | /home/show/*                             | 
+2015/05/29 16:53:03 [router.go:845] [D] | GET        | /home/getshare                           | 1.0001ms         | notmatch   | 
+2015/05/29 16:54:17 [router.go:845] [D] | GET        | /home/show/1                             | 58.0033ms        | match      | /home/show/*                             | 
+2015/05/29 16:54:17 [router.go:845] [D] | GET        | /home/getshare                           | 0                | notmatch   | 
+2015/05/29 16:58:16 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 16:58:16 [app.go:96] [I] http server Running on :8080
+2015/05/29 16:58:17 [log.go:108] [D]  --------------- Home/show Info:3e1aef8a6ac03babdf988e3624d66dad 
+2015/05/29 16:58:17 [router.go:845] [D] | GET        | /home/show/1                             | 49.0028ms        | match      | /home/show/*                             | 
+2015/05/29 16:58:18 [router.go:845] [D] | GET        | /home/getshare                           | 1.0001ms         | notmatch   | 
+2015/05/29 16:58:20 [log.go:108] [D]  --------------- Home/show Info:a40db74e7c1c1a33345784c66df48251 
+2015/05/29 16:58:20 [router.go:845] [D] | GET        | /home/show/1                             | 92.0053ms        | match      | /home/show/*                             | 
+2015/05/29 16:58:21 [router.go:845] [D] | GET        | /home/getshare                           | 0                | notmatch   | 
+2015/05/29 16:58:23 [log.go:108] [D]  --------------- Home/show Info:a40db74e7c1c1a33345784c66df48251 
+2015/05/29 16:58:24 [router.go:845] [D] | GET        | /home/show/1                             | 85.0048ms        | match      | /home/show/*                             | 
+2015/05/29 16:58:24 [router.go:845] [D] | GET        | /home/getshare                           | 1.0001ms         | notmatch   | 
+2015/05/29 16:58:25 [log.go:108] [D]  --------------- Home/show Info:a40db74e7c1c1a33345784c66df48251 
+2015/05/29 16:58:25 [router.go:845] [D] | GET        | /home/show/1                             | 62.0035ms        | match      | /home/show/*                             | 
+2015/05/29 16:58:25 [router.go:845] [D] | GET        | /home/getshare                           | 0                | notmatch   | 
+2015/05/29 16:58:27 [log.go:108] [D]  --------------- Home/show Info:a40db74e7c1c1a33345784c66df48251 
+2015/05/29 16:58:27 [router.go:845] [D] | GET        | /home/show/1                             | 69.004ms         | match      | /home/show/*                             | 
+2015/05/29 16:58:27 [router.go:845] [D] | GET        | /home/getshare                           | 1ms              | notmatch   | 
+2015/05/29 16:58:28 [log.go:108] [D]  --------------- Home/show Info:a40db74e7c1c1a33345784c66df48251 
+2015/05/29 16:58:28 [router.go:845] [D] | GET        | /home/show/1                             | 73.0042ms        | match      | /home/show/*                             | 
+2015/05/29 16:58:29 [router.go:845] [D] | GET        | /home/getshare                           | 1.0001ms         | notmatch   | 
+2015/05/29 16:58:30 [log.go:108] [D]  --------------- Home/show Info:a40db74e7c1c1a33345784c66df48251 
+2015/05/29 16:58:30 [router.go:845] [D] | GET        | /home/show/1                             | 91.0052ms        | match      | /home/show/*                             | 
+2015/05/29 16:58:30 [router.go:845] [D] | GET        | /home/getshare                           | 1ms              | notmatch   | 
+2015/05/29 16:58:50 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 16:58:50 [app.go:96] [I] http server Running on :8080
+2015/05/29 16:59:00 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/05/29 16:59:00 [app.go:96] [I] http server Running on :8080
