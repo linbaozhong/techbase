@@ -177,9 +177,7 @@
 			$(window).resize();
 		});
 		//
-//		if (parseInt('{{.companyId}}') > 0) {
-//			$('article .snow-row').show();
-//		}
+
 		// 提交审核 事件
 		$('.submit-review').click(function(e){
 			e.preventDefault();
@@ -202,76 +200,88 @@
 			return false;	
 		});
 
+
 		// 国家发生变化
 		$('form.snow-form-1 select[name="country"]').change(function(){
 			// 读取城市选项
-			$.getJSON('/item/city',{parentId:$(this).val()},function(json){
-				if (json.ok) {
-					var _html=[];
-					$.each(json.data, function(index,item) {    
-						_html.push('<option');
-						if (item.value == '{{.company.City}}') {
-							_html.push(' selected');                                                          
-						}
-						_html.push(' value="'+item.value+'">'+item.name+'</option>');                                                          
-					});
-					$('.snow-form-1 select[name="city"]').empty().html(_html.join(''));
-				} else{
-					
+			var _country=$(this).val(), 
+				_city=[];
+			
+			$.each(snow.basic,function(i,item){
+				if(item.parentId == _country && item.type == 2){
+					_city.push('<option');
+					if (item.value == '{{.company.City}}') {
+						_city.push(' selected');                                                          
+					}
+					_city.push(' value="'+item.value+'">'+item.name+'</option>');                                                          
 				}
-			})
-		});
-		// 读取国家选项
-		$.getJSON('/item/country',function(json){
-			if (json.ok) {
-				var _html=[];
-				$.each(json.data, function(index,item) {    
-					_html.push('<option');
-					if (item.value == '{{.company.Country}}') {
-						_html.push(' selected');                                                          
-					}
-					_html.push(' value="'+item.value+'">'+item.name+'</option>');                                                          
-				});
-				$('.snow-form-1 select[name="country"]').empty().html(_html.join('')).change();
-			} else{
-				
-			}
-		});
-		// 公司领域
-		$.getJSON('/item/field',function(json){
-			if (json.ok) {
-				var _html=[],_field='{{.company.Field}}'.split(',');
-				
-				$.each(json.data, function(index,item) {    
-					_html.push('<label class="checkbox-inline"><input');
-					
-					if ($.inArray(item.value.toString(),_field) != -1) {
-						_html.push(' checked');                                                          
-					}
-					_html.push(' type="checkbox" name="field" value="'+item.value+'">'+item.name+"</label>");                                                          
-				});
-				$('.snow-form-1 .snow-field').empty().html(_html.join(''));
-			} else{
-				
-			}
+			});
+			
+			$('.snow-form-1 select[name="city"]').empty().html(_city.join(''));
+
 		});
 		
-		// 运营状态
-		$.getJSON('/item/state',function(json){
-			if (json.ok) {
-				var _html=[];
-				$.each(json.data, function(index,item) {    
-					_html.push('<label class="radio-inline"><input');
-					if (item.value == '{{.company.State}}') {
-						_html.push(' checked');                                                          
-					}
-					_html.push(' type="radio" name="state" value="'+item.value+'">'+item.name+"</label>");                                                          
-				});
-				$('.snow-form-1 .snow-state').empty().html(_html.join(''));
-			} else{
+
+		function setBasic(){
+			var _loop='',
+				_field_opts=[],_country=[],_state=[],
+				_field='{{.company.Field}}'.split(',');
 				
-			}
-		});
+			$.each(snow.basic,function(i,item){
+				switch (item.type){
+					case 0://国家
+						_country.push('<option');
+						if (item.value == '{{.company.Country}}') {
+							_country.push(' selected'); 
+						}
+						_country.push(' value="'+item.value+'">'+item.name+'</option>'); 
+						break;
+					case 2://城市
+						break;
+					case 3://行业
+						_field_opts.push('<label class="checkbox-inline"><input');
+						
+						if ($.inArray(item.value.toString(),_field) != -1) {
+							_field_opts.push(' checked');                                                          
+						}
+						_field_opts.push(' type="checkbox" name="field" value="'+item.value+'">'+item.name+"</label>");      
+						break;
+					case 4://运营状态
+						_state.push('<label class="radio-inline"><input');
+						if (item.value == '{{.company.State}}') {
+							_state.push(' checked');                                                          
+						}
+						_state.push(' type="radio" name="state" value="'+item.value+'">'+item.name+"</label>");    
+						break;
+					case 5:// 修复创始成员
+						break;
+					case 6://融资轮次
+						break;
+					case 7://币种
+						break;
+					default:
+						break;
+				}
+			});
+			$('.snow-form-1 select[name="country"]').empty().html(_country.join('')).change();
+			$('.snow-form-1 .snow-field').empty().html(_field_opts.join(''));
+			$('.snow-form-1 .snow-state').empty().html(_state.join(''));
+		}
+		// 基础数据
+		if(snow.basic){
+			setBasic();
+		}else{
+			$.getJSON('/item/basic',function(json){
+				if(json.ok){
+					snow.basic = json.data;
+					setBasic();
+				}else{
+					
+				}
+			});
+		}
+		
+
 
 		// 领域最多可选择3项
 		$('.snow-field').on('click','input[name="field"]',function(e){
