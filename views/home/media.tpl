@@ -2,13 +2,14 @@
 	.snow-media-list .row{
 		height: 300px;
 		margin: 50px 0;
+		border: 1px solid #eee;
 	}
 	.snow-media-list .row header{
 		padding: 30px;
 		height: 100%;
-		border-width: 1px 0 1px 1px;
+		/*border-width: 1px 0 1px 1px;
 		border-color: #eee;
-		border-style: solid;
+		border-style: solid;*/
 	}
 	.snow-media-list footer{
 		height: 100%;
@@ -19,7 +20,7 @@
 		width: 100%;
 	}
 	.snow-media-list .row:nth-child(2n) header{
-		border-width: 1px 1px 1px 0;
+		/*border-width: 1px 1px 1px 0;*/
 		float: right;
 	}
 	.snow-media-list .row:nth-child(2n) footer{
@@ -35,7 +36,7 @@
   		overflow: hidden;
 	}
 </style>
-<div class="banner">
+<div class="container banner">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1">

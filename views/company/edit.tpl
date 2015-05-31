@@ -9,7 +9,7 @@
 		return this.optional(element) || (length == 11 && mobile.test(value));
 	}, '请正确填写您的手机号码');
 </script>
-<div class="banner">
+<div class="container banner">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -25,8 +25,8 @@
 </div>
 <article class="container">
 	<div class="snow-row snow-row-1">
-		<div class="row">
-			<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
+		<!--<div class="row">-->
+			<div class="col-md-12 col-xs-12">
 				<h4>{{.subTitle}}</h4>
 				<div class="pull-right">
 					<a class="submit-review" href="#"><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
@@ -34,13 +34,13 @@
 				</div>
 				<hr />
 			</div>
-		</div>
+		<!--</div>-->
 		<!--项目简介-->
-		<div class="row">
-			<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
+		<!--<div class="row">-->
+			<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 	
 				<form class="form-horizontal snow-form-1">
-					<div class="abs text-center quirks" style="top: -229px;width:100%;">
+					<div class="abs text-center quirks" style="top: -260px;width:100%;">
 						<div style="padding-top:15px;">
 							<span class="snow-required">*</span><input required name="name" class="small" style="padding: 5px;width: 200px;color:initial;" placeholder="项目名称" value="{{.company.Name}}" />
 						</div>
@@ -116,7 +116,7 @@
 					</div>
 				</form>
 			</div>
-		</div>
+		<!--</div>-->
 	</div>
 	
 	<!--联系公司-->

@@ -1,8 +1,9 @@
 body {
 	color: #666;
-	font-family: "Microsoft YaHei", 'PingHei 200', "Lucida Grande", "Lucida Sans Unicode", "Helvetica", "Arial", "Verdana", "sans-serif";
+	font-family: "Microsoft YaHei", "Lucida Grande", "Lucida Sans Unicode", "Helvetica", "Arial", "Verdana", "sans-serif";
 	font-size: 14px;
 	letter-spacing: 1px;
+	background: url(/static/img/bg.png) repeat-y center top;
 }
 h4 {} h5 {
 	font-size: 16px;
@@ -133,7 +134,9 @@ textarea {
 	bottom: 0;
 }
 /*修正bootstrap*/
-
+.container{
+	max-width: 1002px !important;
+}
 .form-control {
 	border-radius: initial;
 }
@@ -162,7 +165,7 @@ header.abs-top .nav {
 	margin-top: 15px;
 }
 header.abs-top .nav>li>a {
-	border: 1px solid #666;
+	/*border: 1px solid #666;*/
 	padding: 5px 15px;
 	margin: 8px;
 	/*background: #fff;*/
@@ -243,6 +246,7 @@ header.abs-top .nav>li.active a {
 .banner {
 	position: relative;
 	margin-bottom: 30px;
+	padding: 0;
 }
 .banner .small {
 	font-size: 12px;
@@ -365,9 +369,11 @@ header.abs-top .nav>li.active a {
 }
 article.container {
 	margin-top: 50px;
+	padding: 30px;
 }
 article p {
 	text-align: left;
+	overflow-x: hidden;
 }
 dl.snow-condition {
 	margin-bottom: 10px;
@@ -454,9 +460,9 @@ form .alert.visible {
 }
 #go-top {
 	position: fixed;
-	margin-left: 45px;
+	right: 125px;
+	bottom: 210px;
 	z-index: 999;
-	bottom: 225px;
 	display: inline-block;
 	font-size: 24px;
 	background: #333;
@@ -473,8 +479,8 @@ form .alert.visible {
 
 .brand-zone {
 	position: relative;
-	margin-left: -25px;
-	margin-right: -25px;
+	/*margin-left: -25px;
+	margin-right: -25px;*/
 }
 .brand-zone .brand-card-container {
 	padding: 2px 10px;

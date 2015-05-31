@@ -32,6 +32,11 @@ type OpenSign struct {
 	Avatar_2 string //100*100的qq头像
 }
 
+// 移动端微信登陆弹窗
+func (this *Connect) Pop_Weixin() {
+
+}
+
 // 微信登陆框
 func (this *Connect) Weixin() {
 	this.Data["appid"] = appconf("weixin::appid")

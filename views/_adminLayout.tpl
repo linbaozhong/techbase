@@ -11,42 +11,39 @@
 	</head>
 
 	<body>
-		<header class="abs-top abs-center">
-			<div class="container">
-				<nav style="height:65px;margin-top: 20px;">
-					<div class="navbar-header">
-						<a class="navbar-brand" href="/">
-							<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
-						</a>
-					</div>
-					<ul class="nav navbar-nav" style="margin-left:40px;">
-						{{if lt .account.Role 4 }}
-							<li class="{{if eq .index "article"}} active {{end}}"><a href="/article/index">媒体管理</a>
-							</li>
-							{{if lt .account.Role 3 }}
-								<li class="{{if eq .index "company"}} active {{end}}"><a href="/admin/company">项目审核</a>
-								</li>
-								<li class="{{if eq .index "company"}} active {{end}}"><a href="/admin/company">投资人审核</a>
-								</li>
-							{{end}}
-						{{end}}
-						{{if lt .account.Role 2 }}
-							<li class="{{if eq .index "account"}} active {{end}}"><a href="/admin/account">账户管理</a>
-							</li>
-							<li class="menu {{if eq .index "index"}} active {{end}}" data-rel = "submenu-1"><a href="javascript:;">基础数据</a>
-							</li>
-						{{end}}
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li id="avatar" class="menu snow-profile" data-rel = "submenu-0">
-							<a href="javascript:;"><img class="img-circle" src="" />
-							<span class="nickname">
-							</span></a>
+		<header class="container abs-top abs-center">
+			<nav style="height:65px;margin-top: 20px;">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
+					</a>
+				</div>
+				<ul class="nav navbar-nav" style="margin-left:40px;">
+					{{if lt .account.Role 4 }}
+						<li class="{{if eq .index "article"}} active {{end}}"><a href="/article/index">媒体管理</a>
 						</li>
-					</ul>
-				</nav>
-			</div>
-
+						{{if lt .account.Role 3 }}
+							<li class="{{if eq .index "company"}} active {{end}}"><a href="/admin/company">项目审核</a>
+							</li>
+							<li class="{{if eq .index "company"}} active {{end}}"><a href="/admin/company">投资人审核</a>
+							</li>
+						{{end}}
+					{{end}}
+					{{if lt .account.Role 2 }}
+						<li class="{{if eq .index "account"}} active {{end}}"><a href="/admin/account">账户管理</a>
+						</li>
+						<li class="menu {{if eq .index "index"}} active {{end}}" data-rel = "submenu-1"><a href="javascript:;">基础数据</a>
+						</li>
+					{{end}}
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li id="avatar" class="menu snow-profile" data-rel = "submenu-0">
+						<a href="javascript:;"><img class="img-circle" src="" />
+						<span class="nickname">
+						</span></a>
+					</li>
+				</ul>
+			</nav>
 		</header>
 		<div class="submenu submenu-0">
 			<i class="fa fa-caret-up"></i>

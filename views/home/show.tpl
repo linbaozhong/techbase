@@ -21,7 +21,7 @@
 	}
 
 </style>
-<div class="banner" style="height: 90px;overflow: hidden;">
+<div class="container banner" style="height: 90px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">

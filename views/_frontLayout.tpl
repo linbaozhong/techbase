@@ -11,40 +11,38 @@
 	</head>
 
 	<body>
-		<header class="abs-top abs-center">
-			<div class="container">
-				<nav style="height:65px;margin-top: 20px;">
-					<div class="navbar-header">
-						<a class="navbar-brand" href="/">
-							<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
-						</a>
-					</div>
-					<ul class="nav navbar-nav" style="margin-left:80px;">
-						<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
-						</li>
-						<li class="{{if eq .index "items"}}active {{end}}"><a href="/item/index">她项目</a>
-						</li>
-						<li {{if eq .index "home"}} class="active" {{end}}><a href="/media">她ＶＣ</a>
-						</li>
-						<li class="{{if eq .index "media"}} active {{end}}"><a href="/media">她媒体</a>
-						</li>
-						<li class="{{if eq .index "community"}} active {{end}}"><a href="/community">她社区</a>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li class="login"><a href="javascript:;">登录</a>
-						</li>
-						<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
-							<a href="javascript:;"><img class="img-circle" src="" />
-							<span class="nickname">
-							</span></a>
-						</li>
-						<!--<li class="menu" data-rel = "submenu-2">
-							<a href="javascript:;">关注我们</a>
-						</li>-->
-					</ul>
-				</nav>
-			</div>
+		<header class="container abs-top abs-center">
+			<nav style="height:65px;margin-top: 20px;">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
+					</a>
+				</div>
+				<ul class="nav navbar-nav" style="margin-left:80px;">
+					<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
+					</li>
+					<li class="{{if eq .index "items"}}active {{end}}"><a href="/item/index">她项目</a>
+					</li>
+					<li {{if eq .index "home"}} class="active" {{end}}><a href="/media">她ＶＣ</a>
+					</li>
+					<li class="{{if eq .index "media"}} active {{end}}"><a href="/media">她媒体</a>
+					</li>
+					<li class="{{if eq .index "community"}} active {{end}}"><a href="/community">她社区</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="login"><a href="javascript:;">登录</a>
+					</li>
+					<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
+						<a href="javascript:;"><img class="img-circle" src="" />
+						<span class="nickname">
+						</span></a>
+					</li>
+					<!--<li class="menu" data-rel = "submenu-2">
+						<a href="javascript:;">关注我们</a>
+					</li>-->
+				</ul>
+			</nav>
 		</header>
 		<div class="submenu submenu-0">
 			<i class="fa fa-caret-up"></i>
@@ -69,7 +67,7 @@
 				</li>
 			</ul>
 		</div>-->
-		<div class="text-center weixin-public" style="position: fixed;top: 350px;right: 0;background: #fff;padding: 10px;font-size: 12px;border: 1px solid #eee;z-index: 1000;">
+		<div class="text-center weixin-public" style="position: fixed;bottom: 251px;right: 0;background: #fff;padding: 10px;font-size: 12px;border: 1px solid #eee;z-index: 1000;">
 			<img src="/static/img/weixin-qr.png" style="width: 140px;">
 			<div class="co-card">
 				<p>用微信扫描</p>
@@ -200,12 +198,17 @@
 		};
 		
 		$('.login').click(function() {
-			if ($('#signin').length) {
-				signin();
+			// 移动端
+			if(snow.isMobile){
+				window.open('/connect/Wx_Login','weixin_login')
 			}else{
-				$('.x-data').load('/connect/weixin',function(){
+				if ($('#signin').length) {
 					signin();
-				});
+				}else{
+					$('.x-data').load('/connect/weixin',function(){
+						signin();
+					});
+				}
 			}
 		});
 		// 签出

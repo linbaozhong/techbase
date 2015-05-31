@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="container banner">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -10,8 +10,8 @@
 	</div>
 </div>
 <article class="container">
-	<div class="row">
-		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
+	
+		<div class="col-md-12 col-xs-12">
 			<div id="snow-item-condition" class="row snow-row-1">
 				<dl class="snow-condition">
 					<dt>融资状态</dt>
@@ -91,7 +91,7 @@
 				{{end}}
 			</div>
 		</div>
-	</div>
+	
 </article>
 <script type="text/javascript">
 	$(function() {

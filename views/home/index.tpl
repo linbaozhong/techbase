@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="container banner">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1">
@@ -27,9 +27,9 @@
 		</nav>
 	</div>
 </div>
-<div class="container">
+<article class="container">
 	{{if gt (len .startup) 0}}
-	<div class="brand-zone row">
+	<div class="brand-zone">
 		<div>
 			<p class="pull-right"><a class="link" href="/item/index">更多 <span class="fa fa-angle-right"></span></a>
 			</p>
@@ -72,7 +72,7 @@
 						<div class="col-md-5 col-md-offset-2">{{$loop.Investor}}</div>
 					</div>
 					<div class="brand-info">
-						<div class="col-md-5">
+						<div class="col-md-12">
 							<span class="brand-money" data-value="{{$loop.AmountMoney}}"></span>
 							{{$loop.Amount}}万
 						</div>
@@ -142,7 +142,7 @@
 	</div>
 	{{end}}
 
-</div>
+</article>
 <script type="text/javascript">
 
 	$(function(){

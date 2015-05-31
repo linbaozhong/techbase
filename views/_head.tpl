@@ -21,6 +21,7 @@
 		<script src="http://cdn.bootcss.com/device.js/0.2.7/device.min.js"></script>
 		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
 		<script type="text/javascript">
+			snow.isMobile = device.mobile();
 //			if (device.mobile() || device.tablet()) {
 //				document.writeln('<link href="http://cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.min.css" rel="stylesheet">');
 //				snow.writeJs('http://cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.min.js');

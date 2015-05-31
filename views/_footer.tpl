@@ -1,8 +1,7 @@
 <div id="footer_0" style="margin-top:35px;">
 </div>
-<footer class="" id="footer">
-	<div class="container">
-		
+<footer class="container" id="footer">
+	
 	<div class="col-xs-8 col-md-8 col-sm-8 col-xs-offset-2">
 		<div class="row">
 			<div class="col-xs-4 col-md-4">
@@ -41,7 +40,7 @@
 			<i class="fa fa-angle-up"></i>
 		</a>
 	</div>
-	</div>
+
 </footer>
 <div class="x-data">
 
