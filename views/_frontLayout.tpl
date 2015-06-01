@@ -12,7 +12,7 @@
 
 	<body>
 		<header class="container abs-top abs-center">
-			<nav style="height:65px;margin-top: 20px;">
+			<nav style="height:65px;margin-top: 10px;">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">
 						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
@@ -45,7 +45,7 @@
 			</nav>
 		</header>
 		<div class="submenu submenu-0">
-			<i class="fa fa-caret-up"></i>
+			<span class="caret-up"></span>
 			<ul class="">
 				<li><a href="/my/profile">我的帐号</a>
 				</li>
@@ -67,12 +67,13 @@
 				</li>
 			</ul>
 		</div>-->
-		<div class="text-center weixin-public" style="position: fixed;bottom: 251px;right: 0;background: #fff;padding: 10px;font-size: 12px;border: 1px solid #eee;z-index: 1000;">
-			<img src="/static/img/weixin-qr.png" style="width: 140px;">
-			<div class="co-card">
-				<p>用微信扫描</p>
-				<p>关注 TechBase她本营</p>
-				<a href="mailto://techbase@tabenying.com">给我们发邮件 </a>
+		<div class="text-center weixin-public" style="position: fixed;top: 350px;right: 0;background: #fff;font-size: 12px;z-index: 1000;">
+			<div class="co-card" style="border: 1px solid #f56f74;">
+				<img src="/static/img/weixin-qr.png" style="width: 140px;">
+				<p>扫描关注微信号</p>
+			</div>
+			<div class="" style="color: #fff;background: #f56f74;margin-top: 2px;padding: 5px;">
+				<a href="mailto://techbase@tabenying.com" style="color: inherit;">给我们发邮件 </a>
 			</div>
 		</div>
 		<!--<div class="submenu submenu-2">

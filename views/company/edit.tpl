@@ -13,7 +13,7 @@
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
-				<div class="">
+				<div style="position: relative;top: 120px;">
 					<div class="snow-upload-target" title="点我上传图片" style="width:100px;height:100px;overflow: hidden;margin: 0 auto;">
 						<img src="{{.company.Logo}}"/>
 					</div>

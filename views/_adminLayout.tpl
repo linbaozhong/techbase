@@ -12,7 +12,7 @@
 
 	<body>
 		<header class="container abs-top abs-center">
-			<nav style="height:65px;margin-top: 20px;">
+			<nav style="height:65px;margin-top: 10px;">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">
 						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
@@ -46,7 +46,7 @@
 			</nav>
 		</header>
 		<div class="submenu submenu-0">
-			<i class="fa fa-caret-up"></i>
+			<span class="caret-up"></span>
 			<ul class="">
 				<li><a href="/my/profile">我的帐号</a>
 				</li>
@@ -60,7 +60,7 @@
 			</ul>
 		</div>
 		<div class="submenu submenu-1">
-			<i class="fa fa-caret-up"></i>
+			<span class="caret-up"></span>
 			<ul class="">
 				<li><a href="/basic/index/8">媒体分类</a>
 				</li>

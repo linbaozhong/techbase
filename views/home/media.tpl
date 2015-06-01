@@ -28,7 +28,7 @@
 	}
 	
 	.snow-media-list .snow-article-tag{
-		color: #f00;
+		color: #f56f74;
 	}
 	.snow-media-list .snow-article-title{
 		max-height: 4em;
@@ -41,21 +41,7 @@
 		<ol class="slides">
 			<li class="current banner-1">
 				<div class="container description">
-					<h2 style="color:#fff;"><a target="_blank" href="/herstart">Her Startup </a></h2>
-					<a href="/brand">
-						<p style="color:#fff;">5月 Coming soon... </p>
-						<p class="small" style="color:#fdfdfd;">业界最高规格的女性科技互联网创业大赛 </p>
-						<p class="small" style="color:#fdfdfd;">一场属于科技与创新的比赛，一个展示女性创意与实力的舞台</p>
-					</a>
-				</div>
-			</li>
-			<li class="banner-2">
-				<div class="container description">
-					<h2><a href="/home">她本营 <span>TechBase</span></a></h2>
-					<a href="/home">
-						<p calss="" style="color:#fff;">女性科技互联网创业生态圈</p>
-						<p class="small" style="color:#fdfdfd;">加速器&nbsp;<strong class="dot">·</strong>&nbsp;媒体<strong>&nbsp;·&nbsp;</strong>社区</p>
-					</a>
+
 				</div>
 			</li>
 		</ol>

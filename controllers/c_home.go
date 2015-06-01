@@ -112,9 +112,29 @@ func (this *Home) ShowNews() {
 	}
 
 	if err == nil {
+		// 记录阅读次数
+		go this.readed(art)
+
 		this.renderJson(utils.JsonResult(true, "", art))
 	} else {
 		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
+
+}
+
+// 阅读次数
+func (this *Home) readed(art *models.Articles) {
+	//
+	sessionId := this.Ctx.GetCookie("snow_sessionId")
+	if this.currentUser.Id > 0 || len(sessionId) > 0 {
+		sns := new(models.SnsArticle)
+		sns.AccountId = this.currentUser.Id
+		sns.SessionId = sessionId
+		sns.ArticleId = art.Id
+
+		if ok := sns.SetReaded(); ok {
+			//art.SetReaded()
+		}
 	}
 }
 

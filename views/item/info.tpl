@@ -13,7 +13,7 @@
 		overflow: hidden;
 	}
 </style>
-<div class="banner">
+<div class="container banner">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">

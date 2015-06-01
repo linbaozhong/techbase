@@ -99,7 +99,23 @@ func (this *Item) Info() {
 
 	this.setTplNames("info")
 	// 记录阅读次数
-	com.SetReaded()
+	go this.readed(com)
+}
+
+// 阅读次数
+func (this *Item) readed(com *models.Company) {
+	//
+	sessionId := this.Ctx.GetCookie("snow_sessionId")
+	if this.currentUser.Id > 0 || len(sessionId) > 0 {
+		sns := new(models.SnsProject)
+		sns.AccountId = this.currentUser.Id
+		sns.SessionId = sessionId
+		sns.ProjectId = com.Id
+
+		if ok := sns.SetReaded(); ok {
+			com.SetReaded()
+		}
+	}
 }
 
 // 国家

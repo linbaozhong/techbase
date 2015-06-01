@@ -259,6 +259,9 @@ $(function(){
 		//
 		if(count > 1){
 			slideshow();
+			$('.slideshow .banner-nav span').show();
+		}else{
+			$('.slideshow .banner-nav span').hide();
 		}
 	})(jQuery);
 });

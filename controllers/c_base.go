@@ -81,6 +81,13 @@ func (this *Base) Prepare() {
 
 //
 func (this *Base) initPage() {
+	// 记录访问痕迹
+	if sessionId := this.Ctx.GetCookie("snow_sessionId"); sessionId == "" {
+		this.cookieHttpOnly("snow_sessionId", this.Ctx.GetCookie("beegosessionID"))
+		this.trace(sessionId)
+	}
+
+	// 记录请求开始时间
 	this.Data["PageStartTime"] = time.Now()
 
 	// Redirect to make URL clean.

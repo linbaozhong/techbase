@@ -25,6 +25,9 @@ a:focus {
 textarea {
 	resize: vertical;
 }
+.snow-color-red{
+	color: #f56f74;
+}
 .snow-required {
 	margin-right: 5px;
 	font-size: 1.2em;
@@ -166,10 +169,11 @@ header.abs-top .nav {
 }
 header.abs-top .nav>li>a {
 	/*border: 1px solid #666;*/
-	padding: 5px 15px;
-	margin: 8px;
+	/*padding: 5px 15px;
+	margin: 8px;*/
 	/*background: #fff;*/
-	color: #fff;
+	color: #f56f74;
+	font-weight: 700;
 	/*border-radius: 5px;*/
 }
 header.abs-top .nav>li.active a {
@@ -178,8 +182,8 @@ header.abs-top .nav>li.active a {
 }
 .nav .snow-profile img {
 	position: absolute;
-	top: -4px;
-	margin-left: -64px;
+	top: 6px;
+	margin-left: -50px;
 	width: 38px;
 	height: 38px;
 	border: 1px solid #eee;
@@ -197,19 +201,25 @@ header.abs-top .nav>li.active a {
 .submenu {
 	display: none;
 	position: fixed;
-	top: 85px;
+	top: 75px;
 	background-color: rgba(255, 255, 255, 1);
-	box-shadow: 0px 0px 2px #666;
+	box-shadow: 0px 0px 2px #f56f74;
 	min-width: 140px;
 	padding: 10px 0;
 	text-align: center;
 	z-index: 2000;
 }
-.submenu .fa-caret-up {
-	margin-top: -30px;
-	display: block;
-	color: rgba(255, 255, 255, 1);
-	font-size: 32px;
+.submenu .caret-up {
+    position: relative;
+    top: -16px;
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    border-top: 1px solid #f56f74;
+    border-left: 1px solid #f56f74;
+    transform: rotateZ(45deg);
+    display: block;
+    background: #fff;
 }
 .submenu * {
 	color: inherit;
@@ -260,7 +270,7 @@ header.abs-top .nav>li.active a {
 	position: relative;
 }
 .slideshow * {
-	color: #fff;
+	/*color: #fff;*/
 }
 .slideshow > .banner-nav {
 	text-align: center;
@@ -289,14 +299,14 @@ header.abs-top .nav>li.active a {
 	padding: 0;
 	margin: 0;
 	position: relative;
-	height: 425px;
+	height: 527px;
 	width: 100%;
 	overflow: hidden;
 	color: #333;
 }
 .slides > li {
-	-webkit-perspective: 1600px;
-	perspective: 1600px;
+	/*-webkit-perspective: 1600px;
+	perspective: 1600px;*/
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -309,16 +319,17 @@ header.abs-top .nav>li.active a {
 	background-position-y: center;
 }
 .slides > li.banner-1 {
-	background-image: url(/html/images/banner02.png);
+	background-image: url(/html/images/indexbanner.png);
 }
 .slides > li.banner-2 {
 	background-image: url(/html/images/banner01.png);
 }
 .slides .description {
+	position: relative;
+	top: 120px;
 	height: 100%;
 	padding: 0 40px;
 	font-size: 1.5em;
-	position: relative;
 	z-index: 1000;
 	letter-spacing: .2em;
 }
@@ -341,7 +352,7 @@ header.abs-top .nav>li.active a {
 	border-color: #FF0000;
 }
 .snow-item-line .snow-color-red i {
-	color: #FF0000;
+	color: #f56f74;;
 }
 .snow-media{
 	margin: 0;
@@ -460,12 +471,12 @@ form .alert.visible {
 }
 #go-top {
 	position: fixed;
-	right: 125px;
-	bottom: 210px;
+	right: 95px;
+	top: 550px;
 	z-index: 999;
 	display: inline-block;
 	font-size: 24px;
-	background: #333;
+	background: #f56f74;
 	padding: 4px 10px 5px 11px;
 	opacity: 0.3;
 }

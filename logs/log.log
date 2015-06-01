@@ -18032,3 +18032,187 @@
 2015/05/31 12:00:10 [router.go:845] [D] | GET        | /apply/index/2                           | 101.0058ms       | match      | /apply/index/*                           | 
 2015/05/31 13:25:21 [main.go:18] [I] tabenying 1.1.14.1105 
 2015/05/31 13:25:21 [app.go:96] [I] http server Running on :8080
+2015/06/01 10:58:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 10:58:43 [app.go:96] [I] http server Running on :8080
+2015/06/01 11:00:41 [router.go:845] [D] | GET        | /                                        | 640.0366ms       | match      | /                                        | 
+2015/06/01 11:01:22 [router.go:845] [D] | GET        | /                                        | 92.0053ms        | match      | /                                        | 
+2015/06/01 11:02:54 [router.go:845] [D] | GET        | /                                        | 44.0025ms        | match      | /                                        | 
+2015/06/01 11:05:16 [router.go:845] [D] | GET        | /                                        | 642.0367ms       | match      | /                                        | 
+2015/06/01 11:06:00 [router.go:845] [D] | GET        | /my/company                              | 104.0059ms       | match      | /my/company                              | 
+2015/06/01 11:06:05 [router.go:845] [D] | GET        | /article/index                           | 126.0072ms       | match      | /article/index/*                         | 
+2015/06/01 11:06:09 [router.go:845] [D] | GET        | /                                        | 91.0052ms        | match      | /                                        | 
+2015/06/01 11:12:02 [router.go:845] [D] | GET        | /                                        | 78.0045ms        | match      | /                                        | 
+2015/06/01 11:13:22 [router.go:845] [D] | GET        | /                                        | 61.0035ms        | match      | /                                        | 
+2015/06/01 11:13:30 [router.go:845] [D] | GET        | /                                        | 114.0065ms       | match      | /                                        | 
+2015/06/01 11:13:45 [router.go:845] [D] | GET        | /                                        | 71.004ms         | match      | /                                        | 
+2015/06/01 11:14:25 [router.go:845] [D] | GET        | /                                        | 65.0037ms        | match      | /                                        | 
+2015/06/01 11:16:01 [router.go:845] [D] | GET        | /                                        | 85.0049ms        | match      | /                                        | 
+2015/06/01 11:16:35 [router.go:845] [D] | GET        | /                                        | 82.0047ms        | match      | /                                        | 
+2015/06/01 11:20:34 [router.go:845] [D] | GET        | /                                        | 149.0085ms       | match      | /                                        | 
+2015/06/01 11:21:41 [router.go:845] [D] | GET        | /                                        | 77.0044ms        | match      | /                                        | 
+2015/06/01 11:22:46 [router.go:845] [D] | GET        | /                                        | 63.0036ms        | match      | /                                        | 
+2015/06/01 11:23:42 [router.go:845] [D] | GET        | /                                        | 68.0038ms        | match      | /                                        | 
+2015/06/01 11:27:19 [router.go:845] [D] | GET        | /                                        | 85.0049ms        | match      | /                                        | 
+2015/06/01 11:27:38 [router.go:845] [D] | GET        | /                                        | 70.004ms         | match      | /                                        | 
+2015/06/01 11:35:54 [router.go:845] [D] | GET        | /                                        | 84.0048ms        | match      | /                                        | 
+2015/06/01 11:37:41 [router.go:845] [D] | GET        | /                                        | 72.0041ms        | match      | /                                        | 
+2015/06/01 11:38:30 [router.go:845] [D] | GET        | /                                        | 93.0054ms        | match      | /                                        | 
+2015/06/01 11:39:30 [router.go:845] [D] | GET        | /                                        | 91.0052ms        | match      | /                                        | 
+2015/06/01 11:43:54 [router.go:845] [D] | GET        | /                                        | 80.0046ms        | match      | /                                        | 
+2015/06/01 11:47:37 [router.go:845] [D] | GET        | /                                        | 85.0049ms        | match      | /                                        | 
+2015/06/01 11:48:13 [router.go:845] [D] | GET        | /                                        | 84.0048ms        | match      | /                                        | 
+2015/06/01 11:50:05 [router.go:845] [D] | GET        | /                                        | 99.0056ms        | match      | /                                        | 
+2015/06/01 11:52:36 [router.go:845] [D] | GET        | /                                        | 95.0055ms        | match      | /                                        | 
+2015/06/01 11:53:45 [router.go:845] [D] | GET        | /                                        | 86.0049ms        | match      | /                                        | 
+2015/06/01 11:53:57 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/06/01 11:53:57 [router.go:845] [D] | GET        | /item/index                              | 143.0082ms       | match      | /item/index/*                            | 
+2015/06/01 11:54:06 [router.go:845] [D] | GET        | /media                                   | 120.0069ms       | match      | /media                                   | 
+2015/06/01 11:54:22 [router.go:845] [D] | GET        | /community                               | 106.0061ms       | match      | /community                               | 
+2015/06/01 11:54:25 [router.go:845] [D] | GET        | /media                                   | 87.0049ms        | match      | /media                                   | 
+2015/06/01 11:54:28 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/06/01 11:54:28 [router.go:845] [D] | GET        | /item/index                              | 98.0056ms        | match      | /item/index/*                            | 
+2015/06/01 11:54:30 [router.go:845] [D] | GET        | /media                                   | 98.0056ms        | match      | /media                                   | 
+2015/06/01 11:55:08 [router.go:845] [D] | GET        | /media                                   | 64.0037ms        | match      | /media                                   | 
+2015/06/01 11:55:12 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/06/01 11:55:12 [router.go:845] [D] | GET        | /item/index                              | 88.005ms         | match      | /item/index/*                            | 
+2015/06/01 11:58:13 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/06/01 11:58:14 [router.go:845] [D] | GET        | /item/index                              | 84.0048ms        | match      | /item/index/*                            | 
+2015/06/01 12:08:02 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/06/01 12:08:03 [router.go:845] [D] | GET        | /item/index                              | 105.006ms        | match      | /item/index/*                            | 
+2015/06/01 12:11:19 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/06/01 12:11:19 [router.go:845] [D] | GET        | /item/index                              | 98.0056ms        | match      | /item/index/*                            | 
+2015/06/01 12:15:28 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/06/01 12:15:28 [router.go:845] [D] | GET        | /item/index                              | 67.0038ms        | match      | /item/index/*                            | 
+2015/06/01 12:21:11 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/06/01 12:21:11 [router.go:845] [D] | GET        | /item/index                              | 81.0046ms        | match      | /item/index/*                            | 
+2015/06/01 12:21:13 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/06/01 12:21:13 [router.go:845] [D] | GET        | /item/index                              | 75.0043ms        | match      | /item/index/*                            | 
+2015/06/01 12:21:19 [router.go:845] [D] | GET        | /                                        | 91.0052ms        | match      | /                                        | 
+2015/06/01 12:21:34 [router.go:845] [D] | GET        | /media                                   | 102.0059ms       | match      | /media                                   | 
+2015/06/01 12:24:25 [router.go:845] [D] | GET        | /media                                   | 107.0061ms       | match      | /media                                   | 
+2015/06/01 12:27:12 [router.go:845] [D] | GET        | /media                                   | 62.0036ms        | match      | /media                                   | 
+2015/06/01 12:53:02 [router.go:845] [D] | GET        | /media                                   | 58.0033ms        | match      | /media                                   | 
+2015/06/01 12:54:28 [router.go:845] [D] | GET        | /media                                   | 122.007ms        | match      | /media                                   | 
+2015/06/01 12:55:31 [router.go:845] [D] | GET        | /community                               | 65.0038ms        | match      | /community                               | 
+2015/06/01 12:55:39 [router.go:845] [D] | GET        | /media                                   | 59.0034ms        | match      | /media                                   | 
+2015/06/01 12:55:41 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/06/01 12:55:41 [router.go:845] [D] | GET        | /item/index                              | 64.0037ms        | match      | /item/index/*                            | 
+2015/06/01 12:55:43 [router.go:845] [D] | GET        | /                                        | 113.0065ms       | match      | /                                        | 
+2015/06/01 12:55:46 [router.go:845] [D] | GET        | /community                               | 105.006ms        | match      | /community                               | 
+2015/06/01 12:55:56 [router.go:845] [D] | GET        | /                                        | 151.0087ms       | match      | /                                        | 
+2015/06/01 13:03:54 [router.go:845] [D] | GET        | /                                        | 53.0031ms        | match      | /                                        | 
+2015/06/01 13:04:13 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
+2015/06/01 13:04:13 [router.go:845] [D] | GET        | /item/index                              | 83.0048ms        | match      | /item/index/*                            | 
+2015/06/01 13:04:17 [router.go:845] [D] | GET        | /media                                   | 76.0043ms        | match      | /media                                   | 
+2015/06/01 13:05:02 [router.go:845] [D] | GET        | /media                                   | 87.005ms         | match      | /media                                   | 
+2015/06/01 13:05:25 [router.go:845] [D] | GET        | /my/company                              | 127.0072ms       | match      | /my/company                              | 
+2015/06/01 13:05:34 [router.go:845] [D] | GET        | /article/index                           | 128.0073ms       | match      | /article/index/*                         | 
+2015/06/01 13:05:38 [router.go:845] [D] | GET        | /admin/company                           | 80.0046ms        | match      | /admin/company/*                         | 
+2015/06/01 13:05:38 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/06/01 13:06:32 [router.go:845] [D] | GET        | /admin/company                           | 85.0049ms        | match      | /admin/company/*                         | 
+2015/06/01 13:06:32 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/06/01 13:06:32 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/06/01 13:11:17 [router.go:845] [D] | GET        | /admin/company                           | 57.0032ms        | match      | /admin/company/*                         | 
+2015/06/01 13:11:17 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/06/01 13:11:17 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/06/01 13:11:40 [router.go:845] [D] | GET        | /basic/index/8                           | 115.0065ms       | match      | /basic/index/:typeId                     | 
+2015/06/01 13:11:54 [router.go:845] [D] | GET        | /basic/index/0                           | 113.0064ms       | match      | /basic/index/:typeId                     | 
+2015/06/01 13:12:33 [router.go:845] [D] | GET        | /basic/index/0                           | 86.0049ms        | match      | /basic/index/:typeId                     | 
+2015/06/01 13:12:48 [router.go:845] [D] | GET        | /basic/index/6                           | 84.0048ms        | match      | /basic/index/:typeId                     | 
+2015/06/01 13:12:50 [router.go:845] [D] | GET        | /admin/account                           | 116.0066ms       | match      | /admin/account/*                         | 
+2015/06/01 13:13:08 [router.go:845] [D] | GET        | /admin/account                           | 118.0067ms       | match      | /admin/account/*                         | 
+2015/06/01 13:13:13 [router.go:845] [D] | GET        | /admin/company                           | 72.0041ms        | match      | /admin/company/*                         | 
+2015/06/01 13:13:13 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/06/01 13:13:13 [staticfile.go:62] [W] GetFileAttributesEx upload/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/06/01 13:13:16 [router.go:845] [D] | GET        | /article/index                           | 80.0045ms        | match      | /article/index/*                         | 
+2015/06/01 13:13:19 [router.go:845] [D] | GET        | /article/edit                            | 60.0035ms        | match      | /article/edit/*                          | 
+2015/06/01 13:13:23 [router.go:845] [D] | GET        | /article/index                           | 75.0043ms        | match      | /article/index/*                         | 
+2015/06/01 13:13:29 [router.go:845] [D] | GET        | /my/company                              | 94.0054ms        | match      | /my/company                              | 
+2015/06/01 13:13:31 [router.go:845] [D] | GET        | /company/edit                            | 54.0031ms        | match      | /company/edit/*                          | 
+2015/06/01 13:13:32 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 146.0084ms       | match      | /company/getlinks/*                      | 
+2015/06/01 13:13:32 [router.go:845] [D] | GET        | /company/GetContact/0                    | 166.0095ms       | match      | /company/getcontact/*                    | 
+2015/06/01 13:13:32 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 165.0095ms       | match      | /company/getintroduce/*                  | 
+2015/06/01 13:13:32 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 227.013ms        | match      | /company/getloops/*                      | 
+2015/06/01 13:13:32 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 269.0154ms       | match      | /company/getmembers/*                    | 
+2015/06/01 13:17:49 [router.go:845] [D] | GET        | /company/edit                            | 101.0057ms       | match      | /company/edit/*                          | 
+2015/06/01 13:17:49 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 75.0043ms        | match      | /company/getlinks/*                      | 
+2015/06/01 13:17:49 [router.go:845] [D] | GET        | /company/GetContact/0                    | 134.0077ms       | match      | /company/getcontact/*                    | 
+2015/06/01 13:17:49 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 146.0083ms       | match      | /company/getmembers/*                    | 
+2015/06/01 13:17:49 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 169.0097ms       | match      | /company/getintroduce/*                  | 
+2015/06/01 13:17:49 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 176.0101ms       | match      | /company/getloops/*                      | 
+2015/06/01 13:18:32 [router.go:845] [D] | GET        | /company/edit                            | 83.0048ms        | match      | /company/edit/*                          | 
+2015/06/01 13:18:32 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 138.0079ms       | match      | /company/getlinks/*                      | 
+2015/06/01 13:18:32 [router.go:845] [D] | GET        | /company/GetContact/0                    | 151.0087ms       | match      | /company/getcontact/*                    | 
+2015/06/01 13:18:32 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 160.0092ms       | match      | /company/getintroduce/*                  | 
+2015/06/01 13:18:32 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 161.0092ms       | match      | /company/getmembers/*                    | 
+2015/06/01 13:18:32 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 138.0079ms       | match      | /company/getloops/*                      | 
+2015/06/01 13:19:35 [router.go:845] [D] | GET        | /my/company                              | 66.0037ms        | match      | /my/company                              | 
+2015/06/01 13:19:39 [router.go:845] [D] | GET        | /apply/index/2                           | 84.0048ms        | match      | /apply/index/*                           | 
+2015/06/01 13:19:45 [router.go:845] [D] | GET        | /item/info/2                             | 272.0155ms       | match      | /item/info/*                             | 
+2015/06/01 13:20:37 [router.go:845] [D] | GET        | /item/info/2                             | 142.0081ms       | match      | /item/info/*                             | 
+2015/06/01 13:23:56 [router.go:845] [D] | GET        | /item/info/2                             | 177.0101ms       | match      | /item/info/*                             | 
+2015/06/01 13:24:04 [router.go:845] [D] | GET        | /company/edit                            | 83.0047ms        | match      | /company/edit/*                          | 
+2015/06/01 13:24:04 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 65.0037ms        | match      | /company/getintroduce/*                  | 
+2015/06/01 13:24:04 [router.go:845] [D] | GET        | /company/GetContact/0                    | 73.0042ms        | match      | /company/getcontact/*                    | 
+2015/06/01 13:24:04 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 76.0043ms        | match      | /company/getlinks/*                      | 
+2015/06/01 13:24:04 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 93.0053ms        | match      | /company/getloops/*                      | 
+2015/06/01 13:24:04 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 117.0067ms       | match      | /company/getmembers/*                    | 
+2015/06/01 13:26:59 [router.go:845] [D] | GET        | /                                        | 83.0047ms        | match      | /                                        | 
+2015/06/01 15:59:10 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 15:59:10 [app.go:96] [I] http server Running on :8080
+2015/06/01 15:59:21 [router.go:845] [D] | GET        | /                                        | 71.0041ms        | match      | /                                        | 
+2015/06/01 16:00:06 [router.go:845] [D] | GET        | /                                        | 51.003ms         | match      | /                                        | 
+2015/06/01 16:01:11 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 16:01:11 [app.go:96] [I] http server Running on :8080
+2015/06/01 16:01:27 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 16:01:27 [app.go:96] [I] http server Running on :8080
+2015/06/01 16:01:31 [log.go:108] [D]  --------------- Home/Get Info: 
+2015/06/01 16:01:31 [router.go:845] [D] | GET        | /                                        | 98.0056ms        | match      | /                                        | 
+2015/06/01 16:02:04 [router.go:845] [D] | GET        | /                                        | 61.0035ms        | match      | /                                        | 
+2015/06/01 16:03:11 [router.go:845] [D] | GET        | /                                        | 44.0025ms        | match      | /                                        | 
+2015/06/01 16:03:30 [router.go:845] [D] | GET        | /                                        | 56.0032ms        | match      | /                                        | 
+2015/06/01 16:15:15 [router.go:845] [D] | GET        | /                                        | 71.0041ms        | match      | /                                        | 
+2015/06/01 16:22:21 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 16:22:21 [app.go:96] [I] http server Running on :8080
+2015/06/01 17:01:42 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 17:01:42 [app.go:96] [I] http server Running on :8080
+2015/06/01 17:08:18 [router.go:845] [D] | GET        | /                                        | 64.0037ms        | match      | /                                        | 
+2015/06/01 17:13:05 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 17:13:05 [app.go:96] [I] http server Running on :8080
+2015/06/01 17:13:38 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 17:13:38 [app.go:96] [I] http server Running on :8080
+2015/06/01 17:14:11 [router.go:845] [D] | GET        | /item/info/1                             | 80.0046ms        | match      | /item/info/*                             | 
+2015/06/01 17:15:14 [router.go:845] [D] | GET        | /item/info/1                             | 65.0037ms        | match      | /item/info/*                             | 
+2015/06/01 17:19:52 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 17:19:52 [app.go:96] [I] http server Running on :8080
+2015/06/01 17:20:46 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 17:20:46 [app.go:96] [I] http server Running on :8080
+2015/06/01 17:20:56 [router.go:845] [D] | GET        | /item/info/1                             | 70.004ms         | match      | /item/info/*                             | 
+2015/06/01 17:21:56 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 17:21:56 [app.go:96] [I] http server Running on :8080
+2015/06/01 17:22:01 [router.go:845] [D] | GET        | /item/info/1                             | 60.0034ms        | match      | /item/info/*                             | 
+2015/06/01 17:22:46 [router.go:845] [D] | GET        | /item/info/1                             | 61.0035ms        | match      | /item/info/*                             | 
+2015/06/01 17:22:53 [router.go:845] [D] | GET        | /item/info/1                             | 53.0031ms        | match      | /item/info/*                             | 
+2015/06/01 17:25:29 [router.go:845] [D] | GET        | /media                                   | 60.0034ms        | match      | /media                                   | 
+2015/06/01 17:28:16 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 17:28:16 [app.go:96] [I] http server Running on :8080
+2015/06/01 17:28:41 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 17:28:41 [app.go:96] [I] http server Running on :8080
+2015/06/01 17:29:10 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 17:29:10 [app.go:96] [I] http server Running on :8080
+2015/06/01 17:29:20 [router.go:845] [D] | GET        | /home/show/1                             | 64.0037ms        | match      | /home/show/*                             | 
+2015/06/01 17:29:21 [router.go:845] [D] | GET        | /home/getshare                           | 1.0001ms         | notmatch   | 
+2015/06/01 17:30:03 [router.go:845] [D] | GET        | /home/show/1                             | 76.0044ms        | match      | /home/show/*                             | 
+2015/06/01 17:30:03 [router.go:845] [D] | GET        | /home/getshare                           | 1ms              | notmatch   | 
+2015/06/01 17:30:35 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/01 17:30:35 [app.go:96] [I] http server Running on :8080
+2015/06/01 17:30:37 [router.go:845] [D] | GET        | /home/show/1                             | 90.0052ms        | match      | /home/show/*                             | 
+2015/06/01 17:30:38 [router.go:845] [D] | GET        | /home/getshare                           | 1.0001ms         | notmatch   | 
+2015/06/01 17:30:44 [router.go:845] [D] | GET        | /home/show/1                             | 65.0037ms        | match      | /home/show/*                             | 
+2015/06/01 17:30:44 [router.go:845] [D] | GET        | /home/getshare                           | 1ms              | notmatch   | 
+2015/06/01 17:30:49 [router.go:845] [D] | GET        | /home/show/1                             | 86.0049ms        | match      | /home/show/*                             | 
+2015/06/01 17:30:49 [router.go:845] [D] | GET        | /home/getshare                           | 0                | notmatch   | 
+2015/06/01 17:30:55 [router.go:845] [D] | GET        | /                                        | 71.0041ms        | match      | /                                        | 
+2015/06/01 17:31:02 [router.go:845] [D] | GET        | /media                                   | 66.0037ms        | match      | /media                                   | 
+2015/06/01 17:31:06 [router.go:845] [D] | GET        | /home/show/1                             | 67.0038ms        | match      | /home/show/*                             | 
+2015/06/01 17:31:06 [router.go:845] [D] | GET        | /home/getshare                           | 1ms              | notmatch   | 

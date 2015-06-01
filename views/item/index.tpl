@@ -3,7 +3,7 @@
 		<ol class="slides">
 			<li class="current banner-1 text-center">
 				<div class="description">
-					<button id="snow-create-item" class="btn btn-primary" style="margin-top: 160px;">创建项目 精准融资</button>
+					<button id="snow-create-item" class="btn btn-primary" style="margin-top: 290px;">创建项目 精准融资</button>
 				</div>
 			</li>
 		</ol>
