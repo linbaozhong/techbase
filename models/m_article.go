@@ -227,25 +227,6 @@ func (this *Articles) SetPosition() (bool, error) {
 	return false, nil
 }
 
-// 读取目录
-func (this *Articles) Catalog(id int64) ([]Articles, error) {
-	// Dal对象
-	_dal := &Dal{}
-	_dal.Field = "articlemore.id as moreid,articlemore.parentid,articlemore.position,articlemore.updator,articles.id,articles.documentid,articles.creator,documents.title"
-	_dal.From = "articlemore,articles,documents"
-	_dal.Where = fmt.Sprintf("documents.id = articles.documentId and articles.id = articlemore.articleid and articlemore.depth like '%d,%s'", id, "%")
-	_dal.OrderBy = "articlemore.depth,articlemore.position"
-
-	// 可见的
-	_dal.Where += fmt.Sprintf(" and articles.status=%d and articles.deleted=%d and documents.status=%d and documents.deleted=%d", Unlock, Undelete, Unlock, Undelete)
-
-	// slice承载返回的结果
-	as := make([]Articles, 0)
-
-	err := db.Sql(_dal.Select()).Find(&as)
-	return as, err
-}
-
 // 内容分页列表（可见子孙节点）
 func (this *Articles) GetContent(page *Pagination, id int64, condition string, params ...interface{}) ([]Articles, error) {
 	return this._content(true, page, id, condition, params...)

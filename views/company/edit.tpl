@@ -11,10 +11,10 @@
 </script>
 <div class="container banner">
 	<div class="slideshow">
-		<ol class="slides">
-			<li class="current banner-1 text-center">
-				<div style="position: relative;top: 120px;">
-					<div class="snow-upload-target" title="点我上传图片" style="width:100px;height:100px;overflow: hidden;margin: 0 auto;">
+		<ol class="slides" style="height: 345px;">
+			<li class="current text-center" style="background-image: url(/html/images/sign-up-banner.png);">
+				<div style="position: relative;top: -64px;">
+					<div class="snow-upload-target" title="点我上传图片" style="width:100px;height:100px;overflow: hidden;margin: 0 auto;border-radius: 50% 50%;background:#fff;">
 						<img src="{{.company.Logo}}"/>
 					</div>
 					<span class="small" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
@@ -25,22 +25,22 @@
 </div>
 <article class="container">
 	<div class="snow-row snow-row-1">
-		<!--<div class="row">-->
-			<div class="col-md-12 col-xs-12">
-				<h4>{{.subTitle}}</h4>
+		<div class="row">
+			<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
+				<h4 class="snow-color-red">{{.subTitle}}</h4>
 				<div class="pull-right">
 					<a class="submit-review" href="#"><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
 					<a href="/my/company"><i class="fa fa-th-list"></i>&nbsp;返回我的项目</a>
 				</div>
 				<hr />
 			</div>
-		<!--</div>-->
+		</div>
 		<!--项目简介-->
-		<!--<div class="row">-->
-			<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
+		<div class="row">
+			<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
 	
 				<form class="form-horizontal snow-form-1">
-					<div class="abs text-center quirks" style="top: -260px;width:100%;">
+					<div class="abs text-center quirks" style="top: -230px;width:100%;">
 						<div style="padding-top:15px;">
 							<span class="snow-required">*</span><input required name="name" class="small" style="padding: 5px;width: 200px;color:initial;" placeholder="项目名称" value="{{.company.Name}}" />
 						</div>
@@ -116,7 +116,7 @@
 					</div>
 				</form>
 			</div>
-		<!--</div>-->
+		</div>
 	</div>
 	
 	<!--联系公司-->
@@ -144,10 +144,12 @@
 			<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
 			<div class="col-md-10 col-xs-10 col-md-offset-2 col-xs-offset-2">
 				<h4>提示：</h4>
-				<p class="small">1. 请尽量完善项目信息，以便投资人及潜在的合作伙伴更充分地了解您。</p>
-				<p class="small">2. 项目的图文介绍、融资经历、团队信息都很重要。</p>
-				<p class="small">3. 完成时，可点击“提交审核”。审核提交后，所有信息将无法再进行编辑。</p>
-				<p class="small">4. 审核通过后，即可展示在“她项目”页面中，并且在“我的项目”页面中可以为项目快速申请融资。</p>
+				<ol>
+					<li class="small">请尽量完善项目信息，以便投资人及潜在的合作伙伴更充分地了解您。</li>
+					<li class="small">项目的图文介绍、融资经历、团队信息都很重要。</li>
+					<li class="small">完成时，可点击“提交审核”。审核提交后，所有信息将无法再进行编辑。</li>
+					<li class="small">审核通过后，即可展示在“她项目”页面中，并且在“我的项目”页面中可以为项目快速申请融资。</li>
+				</ol>
 				<button type="button" class="btn btn-primary col-sm-12 submit-review">提交审核</button>
 			</div>
 			</div>

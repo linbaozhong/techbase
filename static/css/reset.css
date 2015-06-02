@@ -5,6 +5,7 @@ body {
 	letter-spacing: 1px;
 	background: url(/static/img/bg.png) repeat-y center top;
 }
+
 h4 {} h5 {
 	font-size: 16px;
 }
@@ -24,6 +25,9 @@ a:focus {
 }
 textarea {
 	resize: vertical;
+}
+.snow-color-love{
+	color: #f00;
 }
 .snow-color-red{
 	color: #f56f74;
@@ -86,7 +90,7 @@ textarea {
 	font-size: 12px;
 	line-height: initial;
 	background-color: transparent;
-	border-width: 1px;
+	border-width: 0;
 }
 /*头像*/
 
@@ -140,6 +144,10 @@ textarea {
 .container{
 	max-width: 1002px !important;
 }
+.form-horizontal .checkbox, .form-horizontal .checkbox-inline, .form-horizontal .radio, .form-horizontal .radio-inline{
+	margin-left: 0;
+	margin-right: 10px;
+}
 .form-control {
 	border-radius: initial;
 }
@@ -172,7 +180,7 @@ header.abs-top .nav>li>a {
 	/*padding: 5px 15px;
 	margin: 8px;*/
 	/*background: #fff;*/
-	color: #f56f74;
+	color: #f00;
 	font-weight: 700;
 	/*border-radius: 5px;*/
 }
@@ -380,7 +388,7 @@ header.abs-top .nav>li.active a {
 }
 article.container {
 	margin-top: 50px;
-	padding: 30px;
+	padding: 0 30px;
 }
 article p {
 	text-align: left;
@@ -621,6 +629,9 @@ overflow: hidden;
 }
 .snow-media-article .snow-media-body{
 	padding: 20px 0;
-	font-size: 1.2em;
+	/*font-size: 1.2em;*/
 	line-height: 1.8em;
+}
+.snow-media-article .snow-media-topic img,.snow-media-article .snow-media-body img{
+	width:100%;
 }

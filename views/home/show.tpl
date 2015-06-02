@@ -1,7 +1,7 @@
 <style type="text/css">
-.snow-sns{
-	text-align: right;
-}
+	.snow-sns{
+		text-align: right;
+	}
 	.snow-sns a{
 		width: 50px;
 		height: 50px;
@@ -25,19 +25,16 @@
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
-				<div class="description">
-					
-				</div>
 			</li>
 		</ol>
 	</div>
 </div>
 <article class="container snow-media-article">
 	<div class="col-md-8 col-xs-8">
-		<h1>
-			<span class="snow-media-tag"></span>&nbsp;|&nbsp;
-			<span class="snow-media-title"></span>
-		</h1>
+		<h2>
+			<span class="snow-color-red snow-media-tag"></span>
+			<span class="small snow-media-title"></span>
+		</h2>
 		<div class="snow-media-intro">
 			
 		</div>
@@ -47,20 +44,20 @@
 		<div class="snow-media-body">
 			
 		</div>
-		<div class="snow-media-original">
+		<div class="snow-media-original small">
 			
 		</div>
 		<div class="snow-padding-top-40 snow-padding-bottom-40 snow-sns">
-			<a href="javascript:;"><i class="fa fa-heart"></i></a>&nbsp;&nbsp;<a class="snow-sns-weixin" href="javascript:;"><i class="fa fa-weixin"></i></a>
+			<a class="snow-sns-love" href="javascript:;"><i class="fa fa-heart"></i></a>&nbsp;&nbsp;<a class="snow-sns-weixin" href="javascript:;"><i class="fa fa-weixin"></i></a>
 		</div>
 		<hr />
-		<div class="snow-media-author" style="margin-top: -32px;background: #fff;margin-left: auto;margin-right: auto;width: 288px;text-align: center;">
+		<div class="snow-media-author small" style="margin-top: -32px;background: #fff;margin-left: auto;margin-right: auto;width: 288px;text-align: center;">
 			作者
 		</div>
 			
 	</div>
 	<div class="col-md-4 col-xs-4">
-		
+		<h2 class="snow-color-red">热门文章</h2>
 	</div>
 	<div id="snow-wrap-qrcode" class="text-center" style="display: none;">
 		<h6 class="snow-padding-top-40">打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</h6>
@@ -74,12 +71,29 @@
 	$(function(){
 		// 微信公众号左移
 		$('.weixin-public').css('right','auto');
-		// 微信二维码
+		$('#go-top').css({
+			right:'auto',
+			left:95
+		})
+		// 生成网址二维码
 		$('.sonw-weixin-qrcode').qrcode({
 //			render: "table", //table方式 
 		    width: 200, //宽度 
 		    height:200, //高度 
 			text:window.location.href
+		});
+		// 点赞
+		$('.snow-sns .snow-sns-love').click(function(){
+			var _this = $('i',this);
+			$.post('/home/loved',{id:'{{.articleId}}'},function(json){
+				if(json.ok){
+					if(_this.hasClass('snow-color-love')){
+						_this.removeClass('snow-color-love');
+					}else{
+						_this.addClass('snow-color-love');
+					}
+				}
+			});
 		});
 		// 分享
 		$('.snow-sns .snow-sns-weixin').click(function(){
@@ -117,9 +131,13 @@
 			}
 		});
 		// 读取当前用户的分享状态
-		$.getJSON('/home/getshare',{id:'{{.articleId}}'},function(json){
+		$.getJSON('/home/getsns',{id:'{{.articleId}}'},function(json){
 			if(json.ok){
-				
+				if(json.data.loved){
+					$('.snow-sns .snow-sns-love i').addClass('snow-color-love');
+				}else{
+					$('.snow-sns .snow-sns-love i').removeClass('snow-color-love');
+				}
 			}else{
 				
 			}

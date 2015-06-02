@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
-		<h4>{{.subTitle}}</h4>
+		<h4 class="snow-color-red">{{.subTitle}}</h4>
 		<div class="pull-right">
 			<a href="/my/company"><i class="fa fa-th-list"></i>&nbsp;返回我的项目</a>
 		</div>
@@ -22,7 +22,7 @@
 				<div class="col-sm-9">
 					<span class="small"> ( 最多可以上传 5 张，仅支持JPG、GIF、PNG格式，文件小于5M )</span>
 					<ul class="snow-uploads" style="margin-top: 10px;">
-						<li class="snow-upload-target"></li>
+						<li class="snow-upload-target" style="border: 1px dashed #ccc;"></li>
 					</ul>
 				</div>
 			</div>

@@ -1,13 +1,17 @@
 package models
 
+import (
+	"fmt"
+)
+
 type SnsArticle struct {
-	Id        int64
-	AccountId int64
-	SessionId string
-	ArticleId int64
-	Readed    int
-	Loved     int
-	Weixin    int
+	Id        int64  `json:"id"`
+	AccountId int64  `json:"accountId"`
+	SessionId string `json:"sessionId"`
+	ArticleId int64  `json:"articleId"`
+	Readed    int    `json:"readed"`
+	Loved     int    `json:"loved"`
+	Weixin    int    `json:"weixin"`
 }
 
 // 读过
@@ -18,7 +22,7 @@ func (this *SnsArticle) SetReaded() bool {
 	if ok {
 		if this.Readed != 1 {
 			this.Readed = 1
-			db.Update(this)
+			db.Id(this.Id).Cols("readed").Update(this)
 			return true
 		}
 		return false
@@ -35,12 +39,15 @@ func (this *SnsArticle) SetLoved() bool {
 	ok, _ := db.Get(this)
 	// 如果存在痕迹
 	if ok {
-		if this.Loved != 1 {
+		if this.Loved == 1 {
+			this.Loved = 0
+		} else {
 			this.Loved = 1
-			db.Update(this)
-			return true
 		}
-		return false
+
+		fmt.Println(this)
+		db.Id(this.Id).Cols("loved").Update(this)
+		return true
 	} else {
 		this.Loved = 1
 		n, _ := db.Insert(this)
@@ -56,7 +63,7 @@ func (this *SnsArticle) SetWeixin() bool {
 	if ok {
 		if this.Weixin != 1 {
 			this.Weixin = 1
-			db.Update(this)
+			db.Id(this.Id).Update(this)
 			return true
 		}
 		return false
@@ -65,6 +72,9 @@ func (this *SnsArticle) SetWeixin() bool {
 		n, _ := db.Insert(this)
 		return n > 0
 	}
+}
+func (this *SnsArticle) GetSNS() (bool, error) {
+	return db.Get(this)
 }
 
 /////////////////////////////////////

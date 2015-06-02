@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
-		<h4>{{.subTitle}}</h4>
+		<h4 class="snow-color-red">{{.subTitle}}</h4>
 		<div class="pull-right">
 			<a href="/my/company"><i class="fa fa-th-list"></i>&nbsp;返回我的项目</a>
 		</div>

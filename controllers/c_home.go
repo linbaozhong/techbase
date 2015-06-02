@@ -138,6 +138,58 @@ func (this *Home) readed(art *models.Articles) {
 	}
 }
 
+// 点赞
+func (this *Home) Loved() {
+	this.trace("点赞")
+	id, err := this.GetInt64("id")
+
+	if err != nil || id <= 0 {
+		// 返回错误
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
+	//
+	//
+	sessionId := this.Ctx.GetCookie("snow_sessionId")
+	if this.currentUser.Id > 0 || len(sessionId) > 0 {
+		sns := new(models.SnsArticle)
+		sns.AccountId = this.currentUser.Id
+		sns.SessionId = sessionId
+		sns.ArticleId = id
+
+		if ok := sns.SetLoved(); ok {
+			this.renderJson(utils.JsonResult(true, "", ""))
+			//art.SetReaded()
+		} else {
+			this.renderJson(utils.JsonResult(false, "", ""))
+		}
+	}
+}
+
+//
+func (this *Home) GetSNS() {
+	id, err := this.GetInt64("id")
+
+	if err != nil || id <= 0 {
+		// 返回错误
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
+
+	sessionId := this.Ctx.GetCookie("snow_sessionId")
+	if this.currentUser.Id > 0 || len(sessionId) > 0 {
+		sns := new(models.SnsArticle)
+		sns.AccountId = this.currentUser.Id
+		sns.SessionId = sessionId
+		sns.ArticleId = id
+
+		if ok, err := sns.GetSNS(); ok {
+			this.renderJson(utils.JsonResult(true, "", sns))
+			//art.SetReaded()
+		} else {
+			this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+		}
+	}
+}
+
 //
 func (this *Home) Home() {
 	this.Data["index"] = "home"

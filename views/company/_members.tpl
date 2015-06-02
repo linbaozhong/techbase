@@ -1,7 +1,7 @@
 
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
-		<h4>{{.subTitle}}</h4>
+		<h4 class="snow-color-red">{{.subTitle}}</h4>
 		<div class="pull-right">
 			{{if and (lt .company.Id 0) (eq .company.Status 0)}}
 			<a class="submit-review" href=""><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;

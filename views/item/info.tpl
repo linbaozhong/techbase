@@ -15,24 +15,26 @@
 </style>
 <div class="container banner">
 	<div class="slideshow">
-		<ol class="slides">
-			<li class="current banner-1 text-center">
-				<div class="description">
-					<div class="img-circle" style="width: 100px;height: 100px;border: 1px solid #eee;overflow: hidden;margin: 0 auto;">
-						<img src="{{.company.Logo}}" style="width:100px;"/>
-						{{if eq .company.Creator .account.Id}}
-						<p class="small abs-top" style="margin-left: 150px;top: 40px;">
-							{{if eq .company.Status 0}}
-								<span title="您的项目仍未提交审核，请尽快完善公司注册内容并提交审核，审核通过后，她本营的工作人员会与您取得进一步联系">未提交审核</span>
-							{{else if eq .company.Status 1}}
-								<span title="您的项目正在审核中，审核会在3个工作日内完成，审核通过后，即可展示在“她项目”">审核中</span>
-							{{else if eq .company.Status 2}}
-								<span>审核通过</span>
-							{{else}}
-								<span title="{{.company.Reason}}">审核未通过</span>
+		<ol class="slides" style="height: 345px;">
+			<li class="current text-center" style="background-image: url(/html/images/sign-up-banner.png);">
+				<div class="description" style="top: -50px;">
+					<div class="img-circle" style="width: 100px;height: 100px;line-height: 100px;border: 1px solid #fff;overflow: hidden;margin: 0 auto;">
+						<!--<div style="display: table-cell;vertical-align: middle;height: 100px;width: 100px;">-->
+							<img src="{{.company.Logo}}" style="width:100px;"/>
+							{{if eq .company.Creator .account.Id}}
+							<p class="small abs-top" style="margin-left: 150px;top: 40px;">
+								{{if eq .company.Status 0}}
+									<span title="您的项目仍未提交审核，请尽快完善公司注册内容并提交审核，审核通过后，她本营的工作人员会与您取得进一步联系">未提交审核</span>
+								{{else if eq .company.Status 1}}
+									<span title="您的项目正在审核中，审核会在3个工作日内完成，审核通过后，即可展示在“她项目”">审核中</span>
+								{{else if eq .company.Status 2}}
+									<span>审核通过</span>
+								{{else}}
+									<span title="{{.company.Reason}}">审核未通过</span>
+								{{end}}
+							</p>
 							{{end}}
-						</p>
-						{{end}}
+						<!--</div>-->
 					</div>
 					<h3>{{.company.Name}}</h3>
 					<h5>{{.company.Intro}}</h5>
@@ -45,7 +47,7 @@
 <article class="container">
 	<div class="row">
 		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
-			<h4>项目简介</h4>
+			<h4 class="snow-color-red">项目简介</h4>
 			<div class="pull-right">
 				{{if eq .company.Creator .account.Id}}
 					{{if eq .company.Status 0}}
@@ -135,7 +137,7 @@
 			<!--创始团队-->
 	<div class="row snow-padding-top-40">
 		<div class="col-md-10 col-md-offset-1">
-			<h4>创始团队</h4>
+			<h4 class="snow-color-red">创始团队</h4>
 			<hr />
 		</div>
 	</div>
@@ -161,7 +163,7 @@
 	<!--融资经历-->
 	<div class="row snow-padding-top-40">
 		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
-			<h4>融资经历</h4>
+			<h4 class="snow-color-red">融资经历</h4>
 			<div class="pull-right">
 				{{if eq .company.Creator .account.Id}}
 					<i class="fa fa-money"></i> 
