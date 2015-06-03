@@ -24,12 +24,14 @@ func (this *Upload) Avatar() {
 	//缩略图
 	_image := new(utils.Image)
 	for index, img := range fs {
-		if filepath, err := _image.ToThumbnail(img.Path[1:], ""); err == nil {
+		//
+		if filepath, err := _image.ToThumbnail(img.FullName, ""); err == nil {
 			fs[index].Path = "/" + filepath
 		} else {
-			//this.trace(err)
+			this.trace(err)
 		}
 	}
+
 	if err == nil {
 		this.renderJson(utils.JsonResult(true, "", fs))
 	} else {

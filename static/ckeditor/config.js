@@ -11,9 +11,10 @@ CKEDITOR.editorConfig = function( config ) {
 //	    [ 'Bold', 'Italic', 'Underline','Strikethrough','Subscript' ,'Superscript','Remove Format']
 //	];
 	config.toolbarGroups = [
-	    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+	    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup'] },
 	    { name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align' ] },
-	    '/',
+	    {name:'colors'},
+//	    '/',
 	    { name: 'links' },
 	    { name: 'insert' },
 	    { name: 'tools' },

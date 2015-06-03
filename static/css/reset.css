@@ -217,6 +217,9 @@ header.abs-top .nav>li.active a {
 	text-align: center;
 	z-index: 2000;
 }
+.submenu ul{
+	margin-top: -12px;
+}
 .submenu .caret-up {
     position: relative;
     top: -16px;

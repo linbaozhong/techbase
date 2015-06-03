@@ -9,13 +9,14 @@
 package utils
 
 import (
-	//"fmt"
+	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/disintegration/imaging"
 	"image"
 	"path/filepath"
 	"regexp"
 	"strconv"
+	"strings"
 )
 
 type Image struct {
@@ -70,7 +71,7 @@ func (this *Image) open(filename string) error {
 //图片库路径
 func (this *Image) imagePath() string {
 	if this.ImagePath == "" {
-		this.ImagePath = beego.AppConfig.String("UploadPath")
+		this.ImagePath = beego.AppConfig.String("UploadPhysicalPath")
 	}
 	return this.ImagePath
 }
@@ -113,6 +114,7 @@ func (this *Image) dstFilename(t int) (string, error) {
 func (this *Image) resize(filename string, w, h, s int) (string, error) {
 	if this.source == nil {
 		if err := this.open(filename); err != nil {
+			fmt.Println(err)
 			return "", err
 		}
 	}
@@ -121,9 +123,11 @@ func (this *Image) resize(filename string, w, h, s int) (string, error) {
 	dst = imaging.Resize(this.source, w, h, imaging.CatmullRom)
 	//取目标文件名
 	dstfile, err := this.dstFilename(s)
+
 	if err != nil {
 		return "", err
 	}
+
 	//保存文件
-	return filepath.ToSlash(dstfile), imaging.Save(dst, dstfile)
+	return filepath.ToSlash(strings.Replace(dstfile, beego.AppConfig.String("UploadPhysicalPath"), beego.AppConfig.String("UploadPath"), 1)), imaging.Save(dst, dstfile)
 }

@@ -42,7 +42,7 @@ func initFuncMap() {
 // 初始化静态目录
 func initStaticPath() {
 	beego.SetStaticPath("/html", "html")
-	beego.SetStaticPath("/upload", "upload")
+	beego.SetStaticPath("/upload", beego.AppConfig.String("UploadPhysicalPath")) //"upload"
 }
 
 // 初始化模板后缀

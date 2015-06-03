@@ -55,7 +55,7 @@ func (this *Article) Edit() {
 
 		// 如果已经提交审核，禁止编辑，跳转至项目信息页
 		if id > 0 && (art.Creator != this.currentUser.Id || art.Status > 0) {
-			this.Redirect(fmt.Sprintf("/article/info/%d", id), 302)
+			this.Redirect(fmt.Sprintf("/home/show/%d?review=1", id), 302)
 			this.end()
 		}
 
@@ -75,11 +75,7 @@ func (this *Article) Save() {
 	art.Intro = this.GetString("intro")
 	art.Content = this.GetString("content")
 	art.Author = this.GetString("author")
-
-	if _original, _ := this.GetBool("original"); _original {
-		art.Original = 1
-	}
-
+	art.Original, _ = this.GetInt("original")
 	art.Resource = this.GetString("resource")
 	art.ResourceUrl = this.GetString("resourceUrl")
 	//art.Tags = strings.Join(this.GetStrings("tags"), ",")

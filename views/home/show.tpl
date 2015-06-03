@@ -35,6 +35,7 @@
 			<span class="snow-color-red snow-media-tag"></span>
 			<span class="small snow-media-title"></span>
 		</h2>
+		<h5 class="snow-media-subtitle" style="text-indent: 7em;"></h5>
 		<div class="snow-media-intro">
 			
 		</div>
@@ -107,14 +108,15 @@
 		// 读取新闻并渲染至页面
 		$.getJSON('/home/shownews',{id:'{{.articleId}}',review:'{{.review}}'},function(json){
 			if(json.ok){
-				var item = json.data;console.log(json.data);
+				var item = json.data;
 				$('.snow-media-article .snow-media-tag').text(getBasicName(8,item.tags));
 				$('.snow-media-article .snow-media-title').text(item.title);
+				$('.snow-media-article .snow-media-subtitle').text(item.subTitle);
 				$('.snow-media-article .snow-media-intro').text(item.intro);
 				$('.snow-media-article .snow-media-body').html(item.content);
 				$('.snow-media-article .snow-media-topic img').attr('src',item.topic);
 				if(item.original){
-					$('.snow-media-article .snow-media-original').text('声明：本文系作者 xxx授权她本营发表，并经她本营编辑，转载请注明出处和本文链接。');
+					$('.snow-media-article .snow-media-original').text('声明：本文系作者 '+(item.author || '')+' 授权她本营发表，并经她本营编辑，转载请注明出处和本文链接。');
 					$('.snow-media-article .snow-media-author').html('原创文章 &nbsp;&nbsp;作者：'+(item.author || ''));
 				}else{
 					$('.snow-media-article .snow-media-original').text('声明：本文内容来源于其他网站，转载请注明内容来源和本文链接。');
@@ -129,6 +131,8 @@
 			}else{
 				
 			}
+			//
+			snow.footerBottom();
 		});
 		// 读取当前用户的分享状态
 		$.getJSON('/home/getsns',{id:'{{.articleId}}'},function(json){

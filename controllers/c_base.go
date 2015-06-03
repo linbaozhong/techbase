@@ -558,13 +558,19 @@ func (this *Base) upload(key string) (files []*models.UploadFile, err error) {
 	t := time.Now().Format(time.RFC3339)
 	//文件夹是否存在或创建文件夹
 	UploadPath := appconf("UploadPath")
-	folder := utils.MergePath(UploadPath)
+	// 物理路径
+	folder := appconf("UploadPhysicalPath")
+	if strings.Index(folder, ":") < 0 {
+		folder = utils.MergePath(folder)
+	}
+
 	err = utils.GetDir(folder)
 	if err != nil {
 		return
 	}
 	//文件夹是否存在或创建文件夹
 	UploadPath = path.Join(UploadPath, beego.Substr(t, 0, 7))
+
 	folder = path.Join(folder, beego.Substr(t, 0, 7))
 	err = utils.GetDir(folder)
 	if err != nil {
@@ -609,8 +615,11 @@ func (this *Base) upload(key string) (files []*models.UploadFile, err error) {
 		filename := filepath.Base(value)
 
 		//新建文件
-		UploadPath = path.Join("/", UploadPath, fmt.Sprintf("%d%s", time.Now().UnixNano(), filepath.Ext(filename)))
-		f, err = os.OpenFile(path.Join(folder, fmt.Sprintf("%d%s", time.Now().UnixNano(), filepath.Ext(filename))), os.O_WRONLY|os.O_CREATE, 0666)
+		_filename := fmt.Sprintf("%d%s", time.Now().UnixNano(), filepath.Ext(filename)) //文件名
+		_fullname := path.Join(folder, _filename)                                       //全路径文件名
+
+		UploadPath = path.Join(UploadPath, _filename)
+		f, err = os.OpenFile(_fullname, os.O_WRONLY|os.O_CREATE, 0666)
 		if err != nil {
 			return
 		}
@@ -620,6 +629,7 @@ func (this *Base) upload(key string) (files []*models.UploadFile, err error) {
 		io.Copy(f, file)
 
 		upf := new(models.UploadFile)
+		upf.FullName = _fullname
 		upf.Name = filename
 		upf.Ext = filepath.Ext(filename)
 		upf.Path = UploadPath

@@ -19084,3 +19084,1918 @@
 2015/06/02 16:38:37 [log.go:108] [D]  --------------- Item/Index Info:-1,  []int64{ } 
 2015/06/02 16:38:37 [log.go:108] [D]  --------------- Item/Index Info:1,  []int64{ 1, 2, 4, 7 } 
 2015/06/02 16:38:37 [router.go:845] [D] | GET        | /item/index                              | 56.0032ms        | match      | /item/index/*                            | 
+2015/06/03 09:25:06 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 09:25:08 [app.go:96] [I] http server Running on :8080
+2015/06/03 09:32:33 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 09:32:33 [app.go:96] [I] http server Running on :8080
+2015/06/03 09:32:47 [log.go:108] [D]  --------------- Home/index Info:<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<title>她本营</title>
+				<meta property="qc:admins" content="6050272677640117256375" />
+		
+		<link rel="shortcut icon" href="/static/img/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/non-responsive.min.css">
+		<link rel="stylesheet" href="/static/css/reset.css">
+		
+		<script type="text/javascript">
+			var snow = snow || {};
+			function basicJsonp(json){
+				snow.basic = json;
+				
+			}
+			snow.writeJs = function(jsurl){
+				var _script = document.createElement('script');
+				_script.setAttribute('src',jsurl);
+				document.getElementsByTagName('head')[0].appendChild(_script);
+			};
+		</script>
+		<script src="http://cdn.bootcss.com/device.js/0.2.7/device.min.js"></script>
+		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			snow.isMobile = device.mobile();
+
+
+
+
+		</script>
+		<script src="/item/basic/?callback=basicJsonp" type="text/javascript" charset="UTF-8"></script>
+		<script src="/static/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<header class="container abs-top abs-center">
+			<nav style="height:65px;margin-top: 10px;">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
+					</a>
+				</div>
+				<ul class="nav navbar-nav" style="margin-left:80px;">
+					<li  class="active" ><a href="/">她首页</a>
+					</li>
+					<li class=""><a href="/item/index">她项目</a>
+					</li>
+					<li ><a href="/media">她ＶＣ</a>
+					</li>
+					<li class=""><a href="/media">她媒体</a>
+					</li>
+					<li class=""><a href="/community">她社区</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="login"><a href="javascript:;">登录</a>
+					</li>
+					<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
+						<a href="javascript:;"><img class="img-circle" src="" />
+						<span class="nickname">
+						</span></a>
+					</li>
+					
+				</ul>
+			</nav>
+		</header>
+		<div class="submenu submenu-0">
+			<span class="caret-up"></span>
+			<ul class="">
+				<li><a href="/my/profile">我的帐号</a>
+				</li>
+				<li><a href="/my/company">我的项目</a>
+				</li>
+				
+				<li><hr style="margin: 5px 0;" /></li>
+				<li id="logout"><a href="javascript:;">退出</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="text-center weixin-public" style="position: fixed;top: 350px;right: 0;background: #fff;font-size: 12px;z-index: 1000;">
+			<div class="co-card" style="border: 1px solid #f56f74;">
+				<img src="/static/img/weixin-qr.png" style="width: 140px;">
+				<p>扫描关注微信号</p>
+			</div>
+			<div class="" style="color: #fff;background: #f56f74;margin-top: 2px;padding: 5px;">
+				<a href="mailto://techbase@tabenying.com" style="color: inherit;">给我们发邮件 </a>
+			</div>
+		</div>
+		
+		<div class="container banner">
+	<div class="slideshow">
+		<ol class="slides">
+			<li class="current banner-1">
+				<div class="container description">
+					
+				</div>
+			</li>
+		</ol>
+		<nav class="banner-nav">
+			<span class="current"></span>
+			<span class=""></span>
+		</nav>
+	</div>
+</div>
+<article class="container">
+	
+	<div class="brand-zone">
+		<div>
+			<p class="pull-right"><a class="link" href="/item/index">更多 <span class="fa fa-angle-right"></span></a>
+			</p>
+			<h5 class="snow-color-red">Her Startup女性创业大赛</h5>
+		</div>
+		
+		
+		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
+			<div class="brand-card">
+				<div class="small abs-top" style="padding: 5px;right: 0;">
+					<span>
+						
+							尚未申请融资
+						
+					</span>&nbsp;&nbsp;
+					<i class="fa fa-eye"></i>&nbsp;6
+				</div>
+				<div class="brand-body">
+					<div class="logo-img">
+						<a href="/item/info/1">
+							<img src="/upload/2015-05/1430710768350472000.png" class="img-circle" alt=""> </a>
+					</div>
+					<div class="brand-footer">
+						<h4 class="brand-name"><a href="/item/info/1">她本营</a></h4>
+						<p>关注女性创业的社会公司</p> 
+					</div>
+				</div>
+				
+					
+					<div class="brand-info">
+						<div class="col-md-5 brand-loop" data-value="1">&nbsp;</div>
+						<div class="col-md-5 col-md-offset-2">IDG</div>
+					</div>
+					<div class="brand-info">
+						<div class="col-md-12">
+							<span class="brand-money" data-value="0"></span>
+							500万
+						</div>
+					</div>
+					
+				
+			</div>
+		</div>
+		
+	</div>
+	
+
+	
+
+</article>
+<script type="text/javascript">
+
+	$(function(){
+		function setBasic(){
+			
+			$('.brand-loop').each(function(i,item){
+				var _this = $(item),_loop = _this.data('value');
+				_this.text(getBasicName(6,_loop));
+			});
+			
+			$('.brand-money').each(function(i,item){
+				var _this = $(item),_money = _this.data('value');
+				_this.text(getBasicName(7,_money));
+			});
+		}
+		
+		
+		if(snow.basic){
+			setBasic();
+		}else{
+			$.getJSON('/item/basic',function(json){
+				if(json.ok){
+					snow.basic = json.data;
+					setBasic();
+				}else{
+					
+				}
+			});
+		}
+	});
+</script>
+		
+		<style type="text/css">
+	#footer a{
+		display: inline-block;
+		margin: 0 10px;
+	}
+</style>
+<div id="footer_0" style="margin-top:35px;">
+</div>
+<footer class="container" id="footer">
+	
+	<div class="col-xs-10 col-md-10 col-sm-10 col-xs-offset-1">
+		<div class="row">
+			<div class="col-xs-6 col-md-6">
+				<h4>公司信息</h4>
+				<p>公司：她本营网络科技有限公司</p>
+				<p>地址：北京市朝阳区方恒国际中心D座2317室</p>
+				<p>邮件：techbase@tabenying.com</p>
+			</div>
+			<div class="col-xs-6 col-md-6">
+				<h4>友情链接</h4>
+				<p>
+					<a href="http://leanin.org/" target="_blank">
+						<img src="/static/img/leanin.png"/>
+					</a>
+					<a href="http://www.sycapital.cn/" target="_blank">
+						<img src="/static/img/logo2.png"/>
+					</a>
+					<a href="http://www.36kr.com/" target="_blank">
+						<img src="/static/img/logo3.png"/>
+					</a>
+					<a href="http://itjuzi.com/" target="_blank">
+						<img src="/static/img/logo4.png"/>
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="row copyright-div">
+			<p class="copyright">
+				Copyright © TechBase. All Rights Reserved.
+				<br>她本营TechBase 版权所有
+			</p>
+		</div>
+	</div>
+	<div class="col-xs-1 col-md-1 col-sm-1">
+		<a class="hidden" id="go-top" href="javascript:;">
+			<i class="fa fa-angle-up"></i>
+		</a>
+	</div>
+
+</footer>
+<div class="x-data">
+
+</div>
+	</body>
+
+</html>
+<script type="text/javascript">
+
+	$(function() {
+		
+		function mouseleave(obj) {
+			setTimeout(function() {
+				if (obj.data('hide')) {
+					obj.stop().slideUp('fast');
+				}
+			}, 100);
+		};
+		
+
+
+
+
+
+
+
+
+
+
+		
+		$(".menu").hover(
+			function(e) {
+				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',false);
+				
+				if ($(window).width() - _this.offset().left >= _target.outerWidth() + 10) {
+					_target.css({
+						'left': _this.offset().left-((_target.outerWidth()-_this.outerWidth())/2),
+						'right': 'inherit'
+					}).slideDown('fast');
+				} else {
+					_target.css({
+						'right': 10,
+						'left': 'inherit'
+					}).slideDown('fast');
+				}
+			}, 
+			function() {
+				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',true);
+				mouseleave(_target);
+			}
+		);
+
+		$(".submenu").hover(function(e) {
+			$(this).data('hide',false)
+		}, function(e) {
+			mouseleave($(this).data('hide',true));
+		});
+		
+		
+		function footerBottom(){
+			
+			var _footer_0 = $('#footer_0'),
+				_footer = $('#footer');
+			_footer.addClass('navbar-fixed-bottom');
+			if (_footer_0.offset().top > _footer.offset().top) {
+				_footer.removeClass('navbar-fixed-bottom');
+			}
+		};
+		
+		$('img').load(function(){
+			footerBottom();
+		});
+		setTimeout(footerBottom,500);
+		
+		$(window).resize(function() {
+			footerBottom();
+		}).scroll(function() {
+			if ($(document).scrollTop() > 50) {
+				
+				$('#go-top').removeClass('hidden');
+			} else {
+				
+				$('#go-top').addClass('hidden');
+			}
+		});
+		
+		$('#go-top').click(function() {
+			$('html,body').animate({
+				scrollTop: 0
+			});
+		});
+		
+		function signin(){
+			$('#signin').popWindow({
+				width: 600,
+				height: 560,
+				close: '<span><i class="fa fa-times"></i></span>'
+			});
+		};
+		
+		$('.login').click(function() {
+			
+			if(snow.isMobile){
+				window.open('/connect/Wx_Login','weixin_login')
+			}else{
+				if ($('#signin').length) {
+					signin();
+				}else{
+					$('.x-data').load('/connect/weixin',function(){
+						signin();
+					});
+				}
+			}
+		});
+		
+		$('#logout').click(function(){
+			$.post('/signout',function(json){
+				if (json.ok) {
+					
+					window.location = "/";
+				}
+			});
+		});
+		
+		snow.checkin = function(state){
+			if (state && $.cookie('_snow_token') && $.cookie('_snow_token').length) {
+				var _avatar = $('#avatar');
+				_avatar.find('img').attr('src', $.cookie('avatar'));
+				_avatar.find('.nickname').text($.cookie('nickname'));
+				$('.snow-profile').show();
+				$('.login').hide();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				return true;
+			} else {
+				$('.snow-profile').hide();
+				$('.login').show();
+				return false;
+			}
+		};
+		snow.checkin(true);
+	});
+</script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+,  invalid 
+2015/06/03 09:32:47 [router.go:845] [D] | GET        | /                                        | 153.0087ms       | match      | /                                        | 
+2015/06/03 09:35:18 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 09:35:18 [app.go:96] [I] http server Running on :8080
+2015/06/03 09:43:46 [router.go:845] [D] | GET        | /my/profile                              | 901.0515ms       | match      | /my/profile                              | 
+2015/06/03 09:50:07 [router.go:845] [D] | GET        | /my/profile                              | 42.0024ms        | match      | /my/profile                              | 
+2015/06/03 09:56:47 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 09:56:47 [app.go:96] [I] http server Running on :8080
+2015/06/03 10:10:14 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 10:10:14 [app.go:96] [I] http server Running on :8080
+2015/06/03 10:10:22 [staticfile.go:62] [W] GetFileAttributesEx static/index: The system cannot find the file specified. 
+2015/06/03 10:13:51 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 10:13:51 [app.go:96] [I] http server Running on :8080
+2015/06/03 10:14:00 [log.go:108] [D]  --------------- Jingtai/Index Info:&url.Error{
+    Op: Get,
+    URL: /,
+    Err: &http.badStringError{
+            what: unsupported protocol scheme,
+            str: ,
+        },
+} 
+2015/06/03 10:14:00 [router.go:876] [C] the request url is  /jingtai/index 
+2015/06/03 10:14:00 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:jingtai/index.tpl 
+2015/06/03 10:14:00 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/06/03 10:14:00 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/06/03 10:14:00 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/06/03 10:14:00 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/06/03 10:14:00 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/06/03 10:14:00 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/06/03 10:14:00 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/06/03 10:15:28 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 10:15:28 [app.go:96] [I] http server Running on :8080
+2015/06/03 10:16:01 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 10:16:02 [app.go:96] [I] http server Running on :8080
+2015/06/03 10:16:04 [log.go:108] [D]  --------------- Home/Get Info: 
+2015/06/03 10:16:04 [router.go:845] [D] | GET        | /                                        | 80.0045ms        | match      | /                                        | 
+2015/06/03 10:16:04 [log.go:108] [D]  --------------- Jingtai/Index Info:<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<title>TechBase</title>
+				<meta property="qc:admins" content="6050272677640117256375" />
+		
+		<link rel="shortcut icon" href="/static/img/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/non-responsive.min.css">
+		<link rel="stylesheet" href="/static/css/reset.css">
+		
+		<script type="text/javascript">
+			var snow = snow || {};
+			function basicJsonp(json){
+				snow.basic = json;
+				
+			}
+			snow.writeJs = function(jsurl){
+				var _script = document.createElement('script');
+				_script.setAttribute('src',jsurl);
+				document.getElementsByTagName('head')[0].appendChild(_script);
+			};
+		</script>
+		<script src="http://cdn.bootcss.com/device.js/0.2.7/device.min.js"></script>
+		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			snow.isMobile = device.mobile();
+
+
+
+
+		</script>
+		<script src="/item/basic/?callback=basicJsonp" type="text/javascript" charset="UTF-8"></script>
+		<script src="/static/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<header class="container abs-top abs-center">
+			<nav style="height:65px;margin-top: 10px;">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
+					</a>
+				</div>
+				<ul class="nav navbar-nav" style="margin-left:80px;">
+					<li  class="active" ><a href="/">她首页</a>
+					</li>
+					<li class=""><a href="/item/index">她项目</a>
+					</li>
+					<li ><a href="/media">她ＶＣ</a>
+					</li>
+					<li class=""><a href="/media">她媒体</a>
+					</li>
+					<li class=""><a href="/community">她社区</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="login"><a href="javascript:;">登录</a>
+					</li>
+					<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
+						<a href="javascript:;"><img class="img-circle" src="" />
+						<span class="nickname">
+						</span></a>
+					</li>
+					
+				</ul>
+			</nav>
+		</header>
+		<div class="submenu submenu-0">
+			<span class="caret-up"></span>
+			<ul class="">
+				<li><a href="/my/profile">我的帐号</a>
+				</li>
+				<li><a href="/my/company">我的项目</a>
+				</li>
+				
+				<li><hr style="margin: 5px 0;" /></li>
+				<li id="logout"><a href="javascript:;">退出</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="text-center weixin-public" style="position: fixed;top: 350px;right: 0;background: #fff;font-size: 12px;z-index: 1000;">
+			<div class="co-card" style="border: 1px solid #f56f74;">
+				<img src="/static/img/weixin-qr.png" style="width: 140px;">
+				<p>扫描关注微信号</p>
+			</div>
+			<div class="" style="color: #fff;background: #f56f74;margin-top: 2px;padding: 5px;">
+				<a href="mailto://techbase@tabenying.com" style="color: inherit;">给我们发邮件 </a>
+			</div>
+		</div>
+		
+		<div class="container banner">
+	<div class="slideshow">
+		<ol class="slides">
+			<li class="current banner-1">
+				<div class="container description">
+					
+				</div>
+			</li>
+		</ol>
+		<nav class="banner-nav">
+			<span class="current"></span>
+			<span class=""></span>
+		</nav>
+	</div>
+</div>
+<article class="container">
+	
+	<div class="brand-zone">
+		<div>
+			<p class="pull-right"><a class="link" href="/item/index">更多 <span class="fa fa-angle-right"></span></a>
+			</p>
+			<h5 class="snow-color-red">Her Startup女性创业大赛</h5>
+		</div>
+		
+		
+		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
+			<div class="brand-card">
+				<div class="small abs-top" style="padding: 5px;right: 0;">
+					<span>
+						
+							尚未申请融资
+						
+					</span>&nbsp;&nbsp;
+					<i class="fa fa-eye"></i>&nbsp;6
+				</div>
+				<div class="brand-body">
+					<div class="logo-img">
+						<a href="/item/info/1">
+							<img src="/upload/2015-05/1430710768350472000.png" class="img-circle" alt=""> </a>
+					</div>
+					<div class="brand-footer">
+						<h4 class="brand-name"><a href="/item/info/1">她本营</a></h4>
+						<p>关注女性创业的社会公司</p> 
+					</div>
+				</div>
+				
+					
+					<div class="brand-info">
+						<div class="col-md-5 brand-loop" data-value="1">&nbsp;</div>
+						<div class="col-md-5 col-md-offset-2">IDG</div>
+					</div>
+					<div class="brand-info">
+						<div class="col-md-12">
+							<span class="brand-money" data-value="0"></span>
+							500万
+						</div>
+					</div>
+					
+				
+			</div>
+		</div>
+		
+	</div>
+	
+
+	
+
+</article>
+<script type="text/javascript">
+
+	$(function(){
+		function setBasic(){
+			
+			$('.brand-loop').each(function(i,item){
+				var _this = $(item),_loop = _this.data('value');
+				_this.text(getBasicName(6,_loop));
+			});
+			
+			$('.brand-money').each(function(i,item){
+				var _this = $(item),_money = _this.data('value');
+				_this.text(getBasicName(7,_money));
+			});
+		}
+		
+		
+		if(snow.basic){
+			setBasic();
+		}else{
+			$.getJSON('/item/basic',function(json){
+				if(json.ok){
+					snow.basic = json.data;
+					setBasic();
+				}else{
+					
+				}
+			});
+		}
+	});
+</script>
+		
+		<style type="text/css">
+	#footer a{
+		display: inline-block;
+		margin: 0 10px;
+	}
+</style>
+<div id="footer_0" style="margin-top:35px;">
+</div>
+<footer class="container" id="footer">
+	
+	<div class="col-xs-10 col-md-10 col-sm-10 col-xs-offset-1">
+		<div class="row">
+			<div class="col-xs-6 col-md-6">
+				<h4>公司信息</h4>
+				<p>公司：她本营网络科技有限公司</p>
+				<p>地址：北京市朝阳区方恒国际中心D座2317室</p>
+				<p>邮件：techbase@tabenying.com</p>
+			</div>
+			<div class="col-xs-6 col-md-6">
+				<h4>友情链接</h4>
+				<p>
+					<a href="http://leanin.org/" target="_blank">
+						<img src="/static/img/leanin.png"/>
+					</a>
+					<a href="http://www.sycapital.cn/" target="_blank">
+						<img src="/static/img/logo2.png"/>
+					</a>
+					<a href="http://www.36kr.com/" target="_blank">
+						<img src="/static/img/logo3.png"/>
+					</a>
+					<a href="http://itjuzi.com/" target="_blank">
+						<img src="/static/img/logo4.png"/>
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="row copyright-div">
+			<p class="copyright">
+				Copyright © TechBase. All Rights Reserved.
+				<br>她本营TechBase 版权所有
+			</p>
+		</div>
+	</div>
+	<div class="col-xs-1 col-md-1 col-sm-1">
+		<a class="hidden" id="go-top" href="javascript:;">
+			<i class="fa fa-angle-up"></i>
+		</a>
+	</div>
+
+</footer>
+<div class="x-data">
+
+</div>
+	</body>
+
+</html>
+<script type="text/javascript">
+
+	$(function() {
+		
+		function mouseleave(obj) {
+			setTimeout(function() {
+				if (obj.data('hide')) {
+					obj.stop().slideUp('fast');
+				}
+			}, 100);
+		};
+		
+
+
+
+
+
+
+
+
+
+
+		
+		$(".menu").hover(
+			function(e) {
+				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',false);
+				
+				if ($(window).width() - _this.offset().left >= _target.outerWidth() + 10) {
+					_target.css({
+						'left': _this.offset().left-((_target.outerWidth()-_this.outerWidth())/2),
+						'right': 'inherit'
+					}).slideDown('fast');
+				} else {
+					_target.css({
+						'right': 10,
+						'left': 'inherit'
+					}).slideDown('fast');
+				}
+			}, 
+			function() {
+				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',true);
+				mouseleave(_target);
+			}
+		);
+
+		$(".submenu").hover(function(e) {
+			$(this).data('hide',false)
+		}, function(e) {
+			mouseleave($(this).data('hide',true));
+		});
+		
+		
+		function footerBottom(){
+			
+			var _footer_0 = $('#footer_0'),
+				_footer = $('#footer');
+			_footer.addClass('navbar-fixed-bottom');
+			if (_footer_0.offset().top > _footer.offset().top) {
+				_footer.removeClass('navbar-fixed-bottom');
+			}
+		};
+		
+		$('img').load(function(){
+			footerBottom();
+		});
+		setTimeout(footerBottom,500);
+		
+		$(window).resize(function() {
+			footerBottom();
+		}).scroll(function() {
+			if ($(document).scrollTop() > 50) {
+				
+				$('#go-top').removeClass('hidden');
+			} else {
+				
+				$('#go-top').addClass('hidden');
+			}
+		});
+		
+		$('#go-top').click(function() {
+			$('html,body').animate({
+				scrollTop: 0
+			});
+		});
+		
+		function signin(){
+			$('#signin').popWindow({
+				width: 600,
+				height: 560,
+				close: '<span><i class="fa fa-times"></i></span>'
+			});
+		};
+		
+		$('.login').click(function() {
+			
+			if(snow.isMobile){
+				window.open('/connect/Wx_Login','weixin_login')
+			}else{
+				if ($('#signin').length) {
+					signin();
+				}else{
+					$('.x-data').load('/connect/weixin',function(){
+						signin();
+					});
+				}
+			}
+		});
+		
+		$('#logout').click(function(){
+			$.post('/signout',function(json){
+				if (json.ok) {
+					
+					window.location = "/";
+				}
+			});
+		});
+		
+		snow.checkin = function(state){
+			if (state && $.cookie('_snow_token') && $.cookie('_snow_token').length) {
+				var _avatar = $('#avatar');
+				_avatar.find('img').attr('src', $.cookie('avatar'));
+				_avatar.find('.nickname').text($.cookie('nickname'));
+				$('.snow-profile').show();
+				$('.login').hide();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				return true;
+			} else {
+				$('.snow-profile').hide();
+				$('.login').show();
+				return false;
+			}
+		};
+		snow.checkin(true);
+	});
+</script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+ 
+2015/06/03 10:16:04 [router.go:876] [C] the request url is  /jingtai/index 
+2015/06/03 10:16:04 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:jingtai/index.tpl 
+2015/06/03 10:16:04 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/06/03 10:16:04 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/06/03 10:16:04 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/06/03 10:16:04 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/06/03 10:16:04 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/06/03 10:16:04 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/06/03 10:16:04 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/06/03 10:19:35 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 10:19:35 [app.go:96] [I] http server Running on :8080
+2015/06/03 10:19:40 [log.go:108] [D]  --------------- Home/Get Info: 
+2015/06/03 10:19:41 [router.go:845] [D] | GET        | /                                        | 50.0029ms        | match      | /                                        | 
+2015/06/03 10:19:41 [log.go:108] [D]  --------------- Jingtai/Index Info:<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<title>TechBase</title>
+				<meta property="qc:admins" content="6050272677640117256375" />
+		
+		<link rel="shortcut icon" href="/static/img/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/non-responsive.min.css">
+		<link rel="stylesheet" href="/static/css/reset.css">
+		
+		<script type="text/javascript">
+			var snow = snow || {};
+			function basicJsonp(json){
+				snow.basic = json;
+				
+			}
+			snow.writeJs = function(jsurl){
+				var _script = document.createElement('script');
+				_script.setAttribute('src',jsurl);
+				document.getElementsByTagName('head')[0].appendChild(_script);
+			};
+		</script>
+		<script src="http://cdn.bootcss.com/device.js/0.2.7/device.min.js"></script>
+		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			snow.isMobile = device.mobile();
+
+
+
+
+		</script>
+		<script src="/item/basic/?callback=basicJsonp" type="text/javascript" charset="UTF-8"></script>
+		<script src="/static/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<header class="container abs-top abs-center">
+			<nav style="height:65px;margin-top: 10px;">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
+					</a>
+				</div>
+				<ul class="nav navbar-nav" style="margin-left:80px;">
+					<li  class="active" ><a href="/">她首页</a>
+					</li>
+					<li class=""><a href="/item/index">她项目</a>
+					</li>
+					<li ><a href="/media">她ＶＣ</a>
+					</li>
+					<li class=""><a href="/media">她媒体</a>
+					</li>
+					<li class=""><a href="/community">她社区</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="login"><a href="javascript:;">登录</a>
+					</li>
+					<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
+						<a href="javascript:;"><img class="img-circle" src="" />
+						<span class="nickname">
+						</span></a>
+					</li>
+					
+				</ul>
+			</nav>
+		</header>
+		<div class="submenu submenu-0">
+			<span class="caret-up"></span>
+			<ul class="">
+				<li><a href="/my/profile">我的帐号</a>
+				</li>
+				<li><a href="/my/company">我的项目</a>
+				</li>
+				
+				<li><hr style="margin: 5px 0;" /></li>
+				<li id="logout"><a href="javascript:;">退出</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="text-center weixin-public" style="position: fixed;top: 350px;right: 0;background: #fff;font-size: 12px;z-index: 1000;">
+			<div class="co-card" style="border: 1px solid #f56f74;">
+				<img src="/static/img/weixin-qr.png" style="width: 140px;">
+				<p>扫描关注微信号</p>
+			</div>
+			<div class="" style="color: #fff;background: #f56f74;margin-top: 2px;padding: 5px;">
+				<a href="mailto://techbase@tabenying.com" style="color: inherit;">给我们发邮件 </a>
+			</div>
+		</div>
+		
+		<div class="container banner">
+	<div class="slideshow">
+		<ol class="slides">
+			<li class="current banner-1">
+				<div class="container description">
+					
+				</div>
+			</li>
+		</ol>
+		<nav class="banner-nav">
+			<span class="current"></span>
+			<span class=""></span>
+		</nav>
+	</div>
+</div>
+<article class="container">
+	
+	<div class="brand-zone">
+		<div>
+			<p class="pull-right"><a class="link" href="/item/index">更多 <span class="fa fa-angle-right"></span></a>
+			</p>
+			<h5 class="snow-color-red">Her Startup女性创业大赛</h5>
+		</div>
+		
+		
+		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
+			<div class="brand-card">
+				<div class="small abs-top" style="padding: 5px;right: 0;">
+					<span>
+						
+							尚未申请融资
+						
+					</span>&nbsp;&nbsp;
+					<i class="fa fa-eye"></i>&nbsp;6
+				</div>
+				<div class="brand-body">
+					<div class="logo-img">
+						<a href="/item/info/1">
+							<img src="/upload/2015-05/1430710768350472000.png" class="img-circle" alt=""> </a>
+					</div>
+					<div class="brand-footer">
+						<h4 class="brand-name"><a href="/item/info/1">她本营</a></h4>
+						<p>关注女性创业的社会公司</p> 
+					</div>
+				</div>
+				
+					
+					<div class="brand-info">
+						<div class="col-md-5 brand-loop" data-value="1">&nbsp;</div>
+						<div class="col-md-5 col-md-offset-2">IDG</div>
+					</div>
+					<div class="brand-info">
+						<div class="col-md-12">
+							<span class="brand-money" data-value="0"></span>
+							500万
+						</div>
+					</div>
+					
+				
+			</div>
+		</div>
+		
+	</div>
+	
+
+	
+
+</article>
+<script type="text/javascript">
+
+	$(function(){
+		function setBasic(){
+			
+			$('.brand-loop').each(function(i,item){
+				var _this = $(item),_loop = _this.data('value');
+				_this.text(getBasicName(6,_loop));
+			});
+			
+			$('.brand-money').each(function(i,item){
+				var _this = $(item),_money = _this.data('value');
+				_this.text(getBasicName(7,_money));
+			});
+		}
+		
+		
+		if(snow.basic){
+			setBasic();
+		}else{
+			$.getJSON('/item/basic',function(json){
+				if(json.ok){
+					snow.basic = json.data;
+					setBasic();
+				}else{
+					
+				}
+			});
+		}
+	});
+</script>
+		
+		<style type="text/css">
+	#footer a{
+		display: inline-block;
+		margin: 0 10px;
+	}
+</style>
+<div id="footer_0" style="margin-top:35px;">
+</div>
+<footer class="container" id="footer">
+	
+	<div class="col-xs-10 col-md-10 col-sm-10 col-xs-offset-1">
+		<div class="row">
+			<div class="col-xs-6 col-md-6">
+				<h4>公司信息</h4>
+				<p>公司：她本营网络科技有限公司</p>
+				<p>地址：北京市朝阳区方恒国际中心D座2317室</p>
+				<p>邮件：techbase@tabenying.com</p>
+			</div>
+			<div class="col-xs-6 col-md-6">
+				<h4>友情链接</h4>
+				<p>
+					<a href="http://leanin.org/" target="_blank">
+						<img src="/static/img/leanin.png"/>
+					</a>
+					<a href="http://www.sycapital.cn/" target="_blank">
+						<img src="/static/img/logo2.png"/>
+					</a>
+					<a href="http://www.36kr.com/" target="_blank">
+						<img src="/static/img/logo3.png"/>
+					</a>
+					<a href="http://itjuzi.com/" target="_blank">
+						<img src="/static/img/logo4.png"/>
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="row copyright-div">
+			<p class="copyright">
+				Copyright © TechBase. All Rights Reserved.
+				<br>她本营TechBase 版权所有
+			</p>
+		</div>
+	</div>
+	<div class="col-xs-1 col-md-1 col-sm-1">
+		<a class="hidden" id="go-top" href="javascript:;">
+			<i class="fa fa-angle-up"></i>
+		</a>
+	</div>
+
+</footer>
+<div class="x-data">
+
+</div>
+	</body>
+
+</html>
+<script type="text/javascript">
+
+	$(function() {
+		
+		function mouseleave(obj) {
+			setTimeout(function() {
+				if (obj.data('hide')) {
+					obj.stop().slideUp('fast');
+				}
+			}, 100);
+		};
+		
+
+
+
+
+
+
+
+
+
+
+		
+		$(".menu").hover(
+			function(e) {
+				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',false);
+				
+				if ($(window).width() - _this.offset().left >= _target.outerWidth() + 10) {
+					_target.css({
+						'left': _this.offset().left-((_target.outerWidth()-_this.outerWidth())/2),
+						'right': 'inherit'
+					}).slideDown('fast');
+				} else {
+					_target.css({
+						'right': 10,
+						'left': 'inherit'
+					}).slideDown('fast');
+				}
+			}, 
+			function() {
+				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',true);
+				mouseleave(_target);
+			}
+		);
+
+		$(".submenu").hover(function(e) {
+			$(this).data('hide',false)
+		}, function(e) {
+			mouseleave($(this).data('hide',true));
+		});
+		
+		
+		function footerBottom(){
+			
+			var _footer_0 = $('#footer_0'),
+				_footer = $('#footer');
+			_footer.addClass('navbar-fixed-bottom');
+			if (_footer_0.offset().top > _footer.offset().top) {
+				_footer.removeClass('navbar-fixed-bottom');
+			}
+		};
+		
+		$('img').load(function(){
+			footerBottom();
+		});
+		setTimeout(footerBottom,500);
+		
+		$(window).resize(function() {
+			footerBottom();
+		}).scroll(function() {
+			if ($(document).scrollTop() > 50) {
+				
+				$('#go-top').removeClass('hidden');
+			} else {
+				
+				$('#go-top').addClass('hidden');
+			}
+		});
+		
+		$('#go-top').click(function() {
+			$('html,body').animate({
+				scrollTop: 0
+			});
+		});
+		
+		function signin(){
+			$('#signin').popWindow({
+				width: 600,
+				height: 560,
+				close: '<span><i class="fa fa-times"></i></span>'
+			});
+		};
+		
+		$('.login').click(function() {
+			
+			if(snow.isMobile){
+				window.open('/connect/Wx_Login','weixin_login')
+			}else{
+				if ($('#signin').length) {
+					signin();
+				}else{
+					$('.x-data').load('/connect/weixin',function(){
+						signin();
+					});
+				}
+			}
+		});
+		
+		$('#logout').click(function(){
+			$.post('/signout',function(json){
+				if (json.ok) {
+					
+					window.location = "/";
+				}
+			});
+		});
+		
+		snow.checkin = function(state){
+			if (state && $.cookie('_snow_token') && $.cookie('_snow_token').length) {
+				var _avatar = $('#avatar');
+				_avatar.find('img').attr('src', $.cookie('avatar'));
+				_avatar.find('.nickname').text($.cookie('nickname'));
+				$('.snow-profile').show();
+				$('.login').hide();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				return true;
+			} else {
+				$('.snow-profile').hide();
+				$('.login').show();
+				return false;
+			}
+		};
+		snow.checkin(true);
+	});
+</script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+ 
+2015/06/03 10:19:41 [router.go:876] [C] the request url is  /jingtai/index 
+2015/06/03 10:19:41 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:jingtai/index.tpl 
+2015/06/03 10:19:41 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/06/03 10:19:41 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/06/03 10:19:41 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/06/03 10:19:41 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/06/03 10:19:41 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/06/03 10:19:41 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/06/03 10:19:41 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/06/03 10:20:02 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 10:20:02 [app.go:96] [I] http server Running on :8080
+2015/06/03 10:20:05 [log.go:108] [D]  --------------- Home/Get Info: 
+2015/06/03 10:20:05 [router.go:845] [D] | GET        | /                                        | 46.0026ms        | match      | /                                        | 
+2015/06/03 10:20:05 [log.go:108] [D]  --------------- Jingtai/Index Info:<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<title>TechBase</title>
+				<meta property="qc:admins" content="6050272677640117256375" />
+		
+		<link rel="shortcut icon" href="/static/img/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/non-responsive.min.css">
+		<link rel="stylesheet" href="/static/css/reset.css">
+		
+		<script type="text/javascript">
+			var snow = snow || {};
+			function basicJsonp(json){
+				snow.basic = json;
+				
+			}
+			snow.writeJs = function(jsurl){
+				var _script = document.createElement('script');
+				_script.setAttribute('src',jsurl);
+				document.getElementsByTagName('head')[0].appendChild(_script);
+			};
+		</script>
+		<script src="http://cdn.bootcss.com/device.js/0.2.7/device.min.js"></script>
+		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			snow.isMobile = device.mobile();
+
+
+
+
+		</script>
+		<script src="/item/basic/?callback=basicJsonp" type="text/javascript" charset="UTF-8"></script>
+		<script src="/static/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<header class="container abs-top abs-center">
+			<nav style="height:65px;margin-top: 10px;">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
+					</a>
+				</div>
+				<ul class="nav navbar-nav" style="margin-left:80px;">
+					<li  class="active" ><a href="/">她首页</a>
+					</li>
+					<li class=""><a href="/item/index">她项目</a>
+					</li>
+					<li ><a href="/media">她ＶＣ</a>
+					</li>
+					<li class=""><a href="/media">她媒体</a>
+					</li>
+					<li class=""><a href="/community">她社区</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="login"><a href="javascript:;">登录</a>
+					</li>
+					<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
+						<a href="javascript:;"><img class="img-circle" src="" />
+						<span class="nickname">
+						</span></a>
+					</li>
+					
+				</ul>
+			</nav>
+		</header>
+		<div class="submenu submenu-0">
+			<span class="caret-up"></span>
+			<ul class="">
+				<li><a href="/my/profile">我的帐号</a>
+				</li>
+				<li><a href="/my/company">我的项目</a>
+				</li>
+				
+				<li><hr style="margin: 5px 0;" /></li>
+				<li id="logout"><a href="javascript:;">退出</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="text-center weixin-public" style="position: fixed;top: 350px;right: 0;background: #fff;font-size: 12px;z-index: 1000;">
+			<div class="co-card" style="border: 1px solid #f56f74;">
+				<img src="/static/img/weixin-qr.png" style="width: 140px;">
+				<p>扫描关注微信号</p>
+			</div>
+			<div class="" style="color: #fff;background: #f56f74;margin-top: 2px;padding: 5px;">
+				<a href="mailto://techbase@tabenying.com" style="color: inherit;">给我们发邮件 </a>
+			</div>
+		</div>
+		
+		<div class="container banner">
+	<div class="slideshow">
+		<ol class="slides">
+			<li class="current banner-1">
+				<div class="container description">
+					
+				</div>
+			</li>
+		</ol>
+		<nav class="banner-nav">
+			<span class="current"></span>
+			<span class=""></span>
+		</nav>
+	</div>
+</div>
+<article class="container">
+	
+	<div class="brand-zone">
+		<div>
+			<p class="pull-right"><a class="link" href="/item/index">更多 <span class="fa fa-angle-right"></span></a>
+			</p>
+			<h5 class="snow-color-red">Her Startup女性创业大赛</h5>
+		</div>
+		
+		
+		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
+			<div class="brand-card">
+				<div class="small abs-top" style="padding: 5px;right: 0;">
+					<span>
+						
+							尚未申请融资
+						
+					</span>&nbsp;&nbsp;
+					<i class="fa fa-eye"></i>&nbsp;6
+				</div>
+				<div class="brand-body">
+					<div class="logo-img">
+						<a href="/item/info/1">
+							<img src="/upload/2015-05/1430710768350472000.png" class="img-circle" alt=""> </a>
+					</div>
+					<div class="brand-footer">
+						<h4 class="brand-name"><a href="/item/info/1">她本营</a></h4>
+						<p>关注女性创业的社会公司</p> 
+					</div>
+				</div>
+				
+					
+					<div class="brand-info">
+						<div class="col-md-5 brand-loop" data-value="1">&nbsp;</div>
+						<div class="col-md-5 col-md-offset-2">IDG</div>
+					</div>
+					<div class="brand-info">
+						<div class="col-md-12">
+							<span class="brand-money" data-value="0"></span>
+							500万
+						</div>
+					</div>
+					
+				
+			</div>
+		</div>
+		
+	</div>
+	
+
+	
+
+</article>
+<script type="text/javascript">
+
+	$(function(){
+		function setBasic(){
+			
+			$('.brand-loop').each(function(i,item){
+				var _this = $(item),_loop = _this.data('value');
+				_this.text(getBasicName(6,_loop));
+			});
+			
+			$('.brand-money').each(function(i,item){
+				var _this = $(item),_money = _this.data('value');
+				_this.text(getBasicName(7,_money));
+			});
+		}
+		
+		
+		if(snow.basic){
+			setBasic();
+		}else{
+			$.getJSON('/item/basic',function(json){
+				if(json.ok){
+					snow.basic = json.data;
+					setBasic();
+				}else{
+					
+				}
+			});
+		}
+	});
+</script>
+		
+		<style type="text/css">
+	#footer a{
+		display: inline-block;
+		margin: 0 10px;
+	}
+</style>
+<div id="footer_0" style="margin-top:35px;">
+</div>
+<footer class="container" id="footer">
+	
+	<div class="col-xs-10 col-md-10 col-sm-10 col-xs-offset-1">
+		<div class="row">
+			<div class="col-xs-6 col-md-6">
+				<h4>公司信息</h4>
+				<p>公司：她本营网络科技有限公司</p>
+				<p>地址：北京市朝阳区方恒国际中心D座2317室</p>
+				<p>邮件：techbase@tabenying.com</p>
+			</div>
+			<div class="col-xs-6 col-md-6">
+				<h4>友情链接</h4>
+				<p>
+					<a href="http://leanin.org/" target="_blank">
+						<img src="/static/img/leanin.png"/>
+					</a>
+					<a href="http://www.sycapital.cn/" target="_blank">
+						<img src="/static/img/logo2.png"/>
+					</a>
+					<a href="http://www.36kr.com/" target="_blank">
+						<img src="/static/img/logo3.png"/>
+					</a>
+					<a href="http://itjuzi.com/" target="_blank">
+						<img src="/static/img/logo4.png"/>
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="row copyright-div">
+			<p class="copyright">
+				Copyright © TechBase. All Rights Reserved.
+				<br>她本营TechBase 版权所有
+			</p>
+		</div>
+	</div>
+	<div class="col-xs-1 col-md-1 col-sm-1">
+		<a class="hidden" id="go-top" href="javascript:;">
+			<i class="fa fa-angle-up"></i>
+		</a>
+	</div>
+
+</footer>
+<div class="x-data">
+
+</div>
+	</body>
+
+</html>
+<script type="text/javascript">
+
+	$(function() {
+		
+		function mouseleave(obj) {
+			setTimeout(function() {
+				if (obj.data('hide')) {
+					obj.stop().slideUp('fast');
+				}
+			}, 100);
+		};
+		
+
+
+
+
+
+
+
+
+
+
+		
+		$(".menu").hover(
+			function(e) {
+				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',false);
+				
+				if ($(window).width() - _this.offset().left >= _target.outerWidth() + 10) {
+					_target.css({
+						'left': _this.offset().left-((_target.outerWidth()-_this.outerWidth())/2),
+						'right': 'inherit'
+					}).slideDown('fast');
+				} else {
+					_target.css({
+						'right': 10,
+						'left': 'inherit'
+					}).slideDown('fast');
+				}
+			}, 
+			function() {
+				var _this = $(this),_target = $('.'+_this.data('rel')).data('hide',true);
+				mouseleave(_target);
+			}
+		);
+
+		$(".submenu").hover(function(e) {
+			$(this).data('hide',false)
+		}, function(e) {
+			mouseleave($(this).data('hide',true));
+		});
+		
+		
+		function footerBottom(){
+			
+			var _footer_0 = $('#footer_0'),
+				_footer = $('#footer');
+			_footer.addClass('navbar-fixed-bottom');
+			if (_footer_0.offset().top > _footer.offset().top) {
+				_footer.removeClass('navbar-fixed-bottom');
+			}
+		};
+		
+		$('img').load(function(){
+			footerBottom();
+		});
+		setTimeout(footerBottom,500);
+		
+		$(window).resize(function() {
+			footerBottom();
+		}).scroll(function() {
+			if ($(document).scrollTop() > 50) {
+				
+				$('#go-top').removeClass('hidden');
+			} else {
+				
+				$('#go-top').addClass('hidden');
+			}
+		});
+		
+		$('#go-top').click(function() {
+			$('html,body').animate({
+				scrollTop: 0
+			});
+		});
+		
+		function signin(){
+			$('#signin').popWindow({
+				width: 600,
+				height: 560,
+				close: '<span><i class="fa fa-times"></i></span>'
+			});
+		};
+		
+		$('.login').click(function() {
+			
+			if(snow.isMobile){
+				window.open('/connect/Wx_Login','weixin_login')
+			}else{
+				if ($('#signin').length) {
+					signin();
+				}else{
+					$('.x-data').load('/connect/weixin',function(){
+						signin();
+					});
+				}
+			}
+		});
+		
+		$('#logout').click(function(){
+			$.post('/signout',function(json){
+				if (json.ok) {
+					
+					window.location = "/";
+				}
+			});
+		});
+		
+		snow.checkin = function(state){
+			if (state && $.cookie('_snow_token') && $.cookie('_snow_token').length) {
+				var _avatar = $('#avatar');
+				_avatar.find('img').attr('src', $.cookie('avatar'));
+				_avatar.find('.nickname').text($.cookie('nickname'));
+				$('.snow-profile').show();
+				$('.login').hide();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				return true;
+			} else {
+				$('.snow-profile').hide();
+				$('.login').show();
+				return false;
+			}
+		};
+		snow.checkin(true);
+	});
+</script>
+<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+,  http://www.tabenying.com:8080 
+2015/06/03 10:20:05 [router.go:876] [C] the request url is  /jingtai/index 
+2015/06/03 10:20:05 [router.go:877] [C] Handler crashed with error can't find templatefile in the path:jingtai/index.tpl 
+2015/06/03 10:20:05 [router.go:883] [C] E:/Go/src/pkg/runtime/panic.c:248 
+2015/06/03 10:20:05 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:208 
+2015/06/03 10:20:05 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/controller.go:179 
+2015/06/03 10:20:05 [router.go:883] [C] G:/baiduyun/cloud/GoWalker/src/github.com/astaxie/beego/router.go:801 
+2015/06/03 10:20:05 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1673 
+2015/06/03 10:20:05 [router.go:883] [C] E:/Go/src/pkg/net/http/server.go:1174 
+2015/06/03 10:20:05 [router.go:883] [C] E:/Go/src/pkg/runtime/proc.c:1445 
+2015/06/03 10:33:14 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 10:33:14 [app.go:96] [I] http server Running on :8080
+2015/06/03 10:40:06 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 10:40:06 [app.go:96] [I] http server Running on :8080
+2015/06/03 10:44:26 [staticfile.go:62] [W] GetFileAttributesEx upload/logo_100.pan: The system cannot find the file specified. 
+2015/06/03 10:44:31 [staticfile.go:62] [W] GetFileAttributesEx upload/logo_100.pag: The system cannot find the file specified. 
+2015/06/03 10:44:44 [staticfile.go:62] [W] GetFileAttributesEx upload/logo_100.png: The system cannot find the file specified. 
+2015/06/03 10:45:30 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 10:45:30 [app.go:96] [I] http server Running on :8080
+2015/06/03 10:51:49 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 10:51:49 [app.go:96] [I] http server Running on :8080
+2015/06/03 10:52:19 [router.go:845] [D] | GET        | /                                        | 80.0046ms        | match      | /                                        | 
+2015/06/03 10:52:41 [router.go:845] [D] | GET        | /                                        | 64.0037ms        | match      | /                                        | 
+2015/06/03 10:52:41 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1430710768350472000.png: The system cannot find the path specified. 
+2015/06/03 10:52:42 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1430710768350472000.png: The system cannot find the path specified. 
+2015/06/03 10:52:55 [router.go:845] [D] | GET        | /my/company                              | 79.0045ms        | match      | /my/company                              | 
+2015/06/03 10:53:02 [router.go:845] [D] | GET        | /company/edit/3                          | 93.0053ms        | match      | /company/edit/*                          | 
+2015/06/03 10:53:02 [router.go:845] [D] | GET        | /company/GetIntroduce/3                  | 68.0039ms        | match      | /company/getintroduce/*                  | 
+2015/06/03 10:53:02 [router.go:845] [D] | GET        | /company/GetLoops/3                      | 77.0044ms        | match      | /company/getloops/*                      | 
+2015/06/03 10:53:02 [router.go:845] [D] | GET        | /company/GetContact/3                    | 97.0056ms        | match      | /company/getcontact/*                    | 
+2015/06/03 10:53:02 [router.go:845] [D] | GET        | /company/GetMembers/3                    | 85.0049ms        | match      | /company/getmembers/*                    | 
+2015/06/03 10:53:02 [router.go:845] [D] | GET        | /company/GetLinks/3                      | 101.0057ms       | match      | /company/getlinks/*                      | 
+2015/06/03 10:55:46 [router.go:845] [D] | GET        | /company/edit/3                          | 56.0032ms        | match      | /company/edit/*                          | 
+2015/06/03 10:55:46 [router.go:845] [D] | GET        | /company/GetIntroduce/3                  | 60.0034ms        | match      | /company/getintroduce/*                  | 
+2015/06/03 10:55:46 [router.go:845] [D] | GET        | /company/GetLoops/3                      | 82.0047ms        | match      | /company/getloops/*                      | 
+2015/06/03 10:55:46 [router.go:845] [D] | GET        | /company/GetContact/3                    | 121.0069ms       | match      | /company/getcontact/*                    | 
+2015/06/03 10:55:46 [router.go:845] [D] | GET        | /company/GetMembers/3                    | 93.0053ms        | match      | /company/getmembers/*                    | 
+2015/06/03 10:55:46 [router.go:845] [D] | GET        | /company/GetLinks/3                      | 119.0068ms       | match      | /company/getlinks/*                      | 
+2015/06/03 10:55:46 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432097369071145300.png: The system cannot find the path specified. 
+2015/06/03 11:01:09 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:01:09 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:15:15 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:15:16 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:15:19 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:15:19 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:15:52 [router.go:845] [D] | GET        | /company/edit/3                          | 93.0053ms        | match      | /company/edit/*                          | 
+2015/06/03 11:15:52 [router.go:845] [D] | GET        | /company/GetContact/3                    | 57.0032ms        | match      | /company/getcontact/*                    | 
+2015/06/03 11:15:52 [router.go:845] [D] | GET        | /company/GetIntroduce/3                  | 74.0043ms        | match      | /company/getintroduce/*                  | 
+2015/06/03 11:15:52 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432097369071145300.png: The system cannot find the path specified. 
+2015/06/03 11:15:52 [router.go:845] [D] | GET        | /company/GetLinks/3                      | 100.0057ms       | match      | /company/getlinks/*                      | 
+2015/06/03 11:15:52 [router.go:845] [D] | GET        | /company/GetMembers/3                    | 110.0063ms       | match      | /company/getmembers/*                    | 
+2015/06/03 11:15:52 [router.go:845] [D] | GET        | /company/GetLoops/3                      | 128.0073ms       | match      | /company/getloops/*                      | 
+2015/06/03 11:15:59 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/1433301359002573700.jpg: The system cannot find the file specified. 
+2015/06/03 11:20:35 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:20:36 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:21:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:21:40 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:22:17 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432097369071145300.png: The system cannot find the path specified. 
+2015/06/03 11:23:48 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:23:48 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:24:11 [router.go:845] [D] | GET        | /company/edit/3                          | 47.0027ms        | match      | /company/edit/*                          | 
+2015/06/03 11:24:12 [router.go:845] [D] | GET        | /company/GetIntroduce/3                  | 79.0045ms        | match      | /company/getintroduce/*                  | 
+2015/06/03 11:24:12 [router.go:845] [D] | GET        | /company/GetContact/3                    | 86.0049ms        | match      | /company/getcontact/*                    | 
+2015/06/03 11:24:12 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432097369071145300.png: The system cannot find the path specified. 
+2015/06/03 11:24:12 [router.go:845] [D] | GET        | /company/GetLinks/3                      | 104.006ms        | match      | /company/getlinks/*                      | 
+2015/06/03 11:24:12 [router.go:845] [D] | GET        | /company/GetMembers/3                    | 106.0061ms       | match      | /company/getmembers/*                    | 
+2015/06/03 11:24:12 [router.go:845] [D] | GET        | /company/GetLoops/3                      | 136.0078ms       | match      | /company/getloops/*                      | 
+2015/06/03 11:24:25 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/1/1433301865637551500.jpg: The system cannot find the path specified. 
+2015/06/03 11:25:48 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:25:48 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:25:57 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:25:57 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:29:45 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/1/1433301865637551500.jpg: The system cannot find the path specified. 
+2015/06/03 11:29:56 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432097369071145300.png: The system cannot find the path specified. 
+2015/06/03 11:30:21 [router.go:845] [D] | GET        | /company/edit/3                          | 46.0027ms        | match      | /company/edit/*                          | 
+2015/06/03 11:30:21 [router.go:845] [D] | GET        | /company/GetLinks/3                      | 69.0039ms        | match      | /company/getlinks/*                      | 
+2015/06/03 11:30:21 [router.go:845] [D] | GET        | /company/GetContact/3                    | 83.0048ms        | match      | /company/getcontact/*                    | 
+2015/06/03 11:30:21 [router.go:845] [D] | GET        | /company/GetLoops/3                      | 109.0062ms       | match      | /company/getloops/*                      | 
+2015/06/03 11:30:21 [router.go:845] [D] | GET        | /company/GetIntroduce/3                  | 159.0091ms       | match      | /company/getintroduce/*                  | 
+2015/06/03 11:30:21 [router.go:845] [D] | GET        | /company/GetMembers/3                    | 163.0093ms       | match      | /company/getmembers/*                    | 
+2015/06/03 11:30:21 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432097369071145300.png: The system cannot find the path specified. 
+2015/06/03 11:33:56 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:33:56 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:34:02 [log.go:108] [D]  --------------- Upload/Avatar Info:&os.PathError{
+    Op: open,
+    Path: upload/2015-06/1433302442925570500.png,
+    Err: unknow,
+} 
+2015/06/03 11:36:05 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:36:05 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:36:18 [log.go:108] [D]  --------------- Upload/Avatar Info:&models.UploadFile{
+    Name: Z830.jpg,
+    Ext: .jpg,
+    Path: /upload/2015-06/1433302578550327800.jpg,
+    Size: 17745,
+} 
+2015/06/03 11:36:18 [log.go:108] [D]  --------------- Upload/Avatar Info:&os.PathError{
+    Op: open,
+    Path: upload/2015-06/1433302578550327800.jpg,
+    Err: unknow,
+} 
+2015/06/03 11:39:32 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:39:32 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:39:45 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:39:45 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:44:45 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:44:45 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:52:10 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:52:10 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:52:15 [log.go:108] [D]  --------------- Upload/Avatar Info:&models.UploadFile{
+    FullPath: G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-06,
+    Name: p1059052995.jpg,
+    Ext: .jpg,
+    Path: /upload/2015-06/1433303535881084000.jpg,
+    Size: 70808,
+} 
+2015/06/03 11:52:15 [log.go:108] [D]  --------------- Upload/Avatar Info:&os.PathError{
+    Op: open,
+    Path: upload/2015-06/1433303535881084000.jpg,
+    Err: unknow,
+} 
+2015/06/03 11:56:21 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:56:21 [app.go:96] [I] http server Running on :8080
+2015/06/03 11:56:26 [log.go:108] [D]  --------------- Upload/Avatar Info:&os.PathError{
+    Op: open,
+    Path: upload/2015-06/1433303786090395200.jpg,
+    Err: unknow,
+} 
+2015/06/03 11:57:35 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 11:57:35 [app.go:96] [I] http server Running on :8080
+2015/06/03 12:04:07 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 12:04:07 [app.go:96] [I] http server Running on :8080
+2015/06/03 12:04:12 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 12:04:12 [app.go:96] [I] http server Running on :8080
+2015/06/03 12:04:26 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 12:04:26 [app.go:96] [I] http server Running on :8080
+2015/06/03 12:04:42 [router.go:845] [D] | GET        | /G:/baiduyun/cloud/GoWalker/src/writer/static/img/1/1433304282333778700.jpg | 1.0001ms         | notmatch   | 
+2015/06/03 12:40:59 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 12:40:59 [app.go:96] [I] http server Running on :8080
+2015/06/03 12:41:04 [router.go:845] [D] | GET        | /G:/baiduyun/cloud/GoWalker/src/writer/static/img/1/1433306464435587700.jpg | 1.0001ms         | notmatch   | 
+2015/06/03 12:42:39 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 12:42:39 [app.go:96] [I] http server Running on :8080
+2015/06/03 12:45:37 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 12:45:37 [app.go:96] [I] http server Running on :8080
+2015/06/03 12:45:43 [router.go:845] [D] | GET        | /G:/baiduyun/cloud/GoWalker/src/writer/static/img/1/1433306743442546000.jpg | 1ms              | notmatch   | 
+2015/06/03 12:47:46 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 12:47:46 [app.go:96] [I] http server Running on :8080
+2015/06/03 12:51:25 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 12:51:25 [app.go:96] [I] http server Running on :8080
+2015/06/03 12:54:01 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 12:54:01 [app.go:96] [I] http server Running on :8080
+2015/06/03 17:05:40 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 17:05:40 [app.go:96] [I] http server Running on :8080
+2015/06/03 17:05:41 [router.go:845] [D] | GET        | /                                        | 48.0027ms        | match      | /                                        | 
+2015/06/03 17:05:41 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1430710768350472000.png: The system cannot find the path specified. 
+2015/06/03 17:05:53 [router.go:845] [D] | GET        | /my/company                              | 80.0046ms        | match      | /my/company                              | 
+2015/06/03 17:05:53 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/1/1431943139632278100.png: The system cannot find the file specified. 
+2015/06/03 17:05:54 [router.go:845] [D] | GET        | /article/index                           | 69.0039ms        | match      | /article/index/*                         | 
+2015/06/03 17:06:49 [router.go:845] [D] | GET        | /article/index                           | 73.0042ms        | match      | /article/index/*                         | 
+2015/06/03 17:13:22 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 17:13:22 [app.go:96] [I] http server Running on :8080
+2015/06/03 17:13:31 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 17:13:31 [app.go:96] [I] http server Running on :8080
+2015/06/03 17:25:25 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 17:25:25 [app.go:96] [I] http server Running on :8080
+2015/06/03 17:50:53 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/03 17:50:53 [app.go:96] [I] http server Running on :8080
+2015/06/03 17:51:35 [router.go:845] [D] | GET        | /                                        | 147.0084ms       | match      | /                                        | 
+2015/06/03 17:51:35 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1430710768350472000.png: The system cannot find the path specified. 
+2015/06/03 17:51:38 [router.go:845] [D] | GET        | /my/company                              | 70.004ms         | match      | /my/company                              | 
+2015/06/03 17:51:38 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/1/1431943139632278100.png: The system cannot find the file specified. 
+2015/06/03 17:51:40 [router.go:845] [D] | GET        | /article/index                           | 63.0036ms        | match      | /article/index/*                         | 
+2015/06/03 17:51:44 [router.go:845] [D] | GET        | /home/show/1                             | 61.0035ms        | match      | /home/show/*                             | 
+2015/06/03 17:51:44 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 17:52:39 [router.go:845] [D] | GET        | /article/index                           | 89.0051ms        | match      | /article/index/*                         | 
+2015/06/03 17:52:41 [router.go:845] [D] | GET        | /article/index                           | 54.003ms         | match      | /article/index/*                         | 
+2015/06/03 17:52:43 [router.go:845] [D] | GET        | /article/edit/1                          | 62.0035ms        | match      | /article/edit/*                          | 
+2015/06/03 17:52:43 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 17:52:43 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 17:56:33 [router.go:845] [D] | GET        | /article/index                           | 82.0047ms        | match      | /article/index/*                         | 
+2015/06/03 17:56:35 [router.go:845] [D] | GET        | /home/show/1                             | 62.0035ms        | match      | /home/show/*                             | 
+2015/06/03 17:56:35 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 17:56:58 [router.go:845] [D] | GET        | /article/edit/1                          | 68.0039ms        | match      | /article/edit/*                          | 
+2015/06/03 17:56:58 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 17:56:58 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:02:41 [router.go:845] [D] | GET        | /admin/account                           | 70.004ms         | match      | /admin/account/*                         | 
+2015/06/03 18:03:28 [router.go:845] [D] | GET        | /admin/company                           | 82.0047ms        | match      | /admin/company/*                         | 
+2015/06/03 18:03:28 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/06/03 18:03:28 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/1/1432459102716695400.png: The system cannot find the file specified. 
+2015/06/03 18:03:29 [router.go:845] [D] | GET        | /admin/account                           | 60.0034ms        | match      | /admin/account/*                         | 
+2015/06/03 18:13:03 [router.go:845] [D] | GET        | /                                        | 46.0026ms        | match      | /                                        | 
+2015/06/03 18:13:04 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1430710768350472000.png: The system cannot find the path specified. 
+2015/06/03 18:13:04 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1430710768350472000.png: The system cannot find the path specified. 
+2015/06/03 18:13:05 [router.go:845] [D] | GET        | /my/company                              | 68.0039ms        | match      | /my/company                              | 
+2015/06/03 18:13:05 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/1/1431943139632278100.png: The system cannot find the file specified. 
+2015/06/03 18:13:08 [router.go:845] [D] | GET        | /article/index                           | 67.0039ms        | match      | /article/index/*                         | 
+2015/06/03 18:13:09 [router.go:845] [D] | GET        | /article/edit/1                          | 61.0035ms        | match      | /article/edit/*                          | 
+2015/06/03 18:13:09 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:13:10 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:13:30 [router.go:845] [D] | GET        | /article/edit/1                          | 47.0027ms        | match      | /article/edit/*                          | 
+2015/06/03 18:13:30 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:13:30 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:14:31 [router.go:845] [D] | GET        | /article/edit/1                          | 46.0026ms        | match      | /article/edit/*                          | 
+2015/06/03 18:14:31 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:14:31 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:14:47 [router.go:845] [D] | GET        | /article/edit/1                          | 72.0041ms        | match      | /article/edit/*                          | 
+2015/06/03 18:14:47 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:32:51 [router.go:845] [D] | GET        | /article/edit/1                          | 83.0047ms        | match      | /article/edit/*                          | 
+2015/06/03 18:32:52 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:32:52 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:32:54 [router.go:845] [D] | GET        | /article/edit/1                          | 84.0048ms        | match      | /article/edit/*                          | 
+2015/06/03 18:32:54 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:32:54 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:33:07 [router.go:845] [D] | GET        | /article/edit/1                          | 71.0041ms        | match      | /article/edit/*                          | 
+2015/06/03 18:33:07 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:33:07 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:33:09 [router.go:845] [D] | GET        | /article/edit/1                          | 83.0047ms        | match      | /article/edit/*                          | 
+2015/06/03 18:33:09 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:33:09 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:33:34 [router.go:845] [D] | GET        | /article/edit/1                          | 63.0036ms        | match      | /article/edit/*                          | 
+2015/06/03 18:33:34 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:33:34 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:34:17 [router.go:845] [D] | GET        | /article/edit/1                          | 57.0033ms        | match      | /article/edit/*                          | 
+2015/06/03 18:34:17 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:36:40 [router.go:845] [D] | GET        | /article/edit/1                          | 146.0083ms       | match      | /article/edit/*                          | 
+2015/06/03 18:36:40 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/03 18:36:41 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 

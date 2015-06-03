@@ -148,8 +148,8 @@ func (this *Admin) Account() {
 	this.Data["accounts"] = as
 
 	// 角色选择框
-	roles := []string{"系统管理员", "网站管理员", "内容审核人", "作者", "读者", "游客"}
-	options := make([]string, 6)
+	roles := []string{"系统管理员", "网站管理员", "内容审核人", "网站编辑", "作者", "读者", "游客"}
+	options := make([]string, 7)
 	length := len(roles) - this.currentUser.Role - 1
 
 	for i := 0; i < length; i++ {

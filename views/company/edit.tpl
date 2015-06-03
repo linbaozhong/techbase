@@ -14,7 +14,7 @@
 		<ol class="slides" style="height: 345px;">
 			<li class="current text-center" style="background-image: url(/html/images/sign-up-banner.png);">
 				<div style="position: relative;top: -64px;">
-					<div class="snow-upload-target" title="点我上传图片" style="width:100px;height:100px;overflow: hidden;margin: 0 auto;border-radius: 50% 50%;background:#fff;">
+					<div class="snow-upload-target" title="点我上传图片" style="width:100px;height:100px;line-height: 100px;overflow: hidden;margin: 0 auto;border-radius: 50% 50%;background:#fff;">
 						<img src="{{.company.Logo}}"/>
 					</div>
 					<span class="small" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
@@ -349,6 +349,7 @@
 			  		// 写入表单logo域
 			  		$('form.snow-form-1 input[name="logo"]').val(_src);
 			  	} else{
+			  		console.log(response.data);
 			  		alert(response.data[0].message);
 			  	}
 		  })

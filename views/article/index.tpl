@@ -101,7 +101,7 @@
 					_html.push('<td>' + _status + '</td>');
 					_html.push('<td><a href="/home/show/'+art.id+'?review=1" target="_blank">预览</a>&nbsp;&nbsp;');
 					// 审核和发布状态，不允许编辑
-					if(art.status < 1){
+					if(art.status < 1 || parseInt('{{.account.Role}}') < 3){
 						_html.push('<a href="/article/edit/'+art.id+'">编辑</a>&nbsp;&nbsp;');
 					}else if(art.status == 1){
 						_html.push('<a href="javascript:;" class="snow-valid" data-id="'+art.id+'">审核</a>&nbsp;&nbsp;');

@@ -92,7 +92,7 @@
 						</div>
 						<div class="col-sm-5">
 							<label>
-							<input type="checkbox" class="checkbox-inline" name="original" placeholder="是否原创" value="{{.article.Original}}">是否原创</label>
+							<input type="checkbox" class="checkbox-inline" name="original" {{if eq .article.Original 1}} checked {{end}} placeholder="是否原创" value="{{.article.Original}}">是否原创</label>
 						</div>
 					</div>
 					<div class="form-group">
@@ -171,7 +171,14 @@
 			return false;	
 		});
 
-		
+		$('form.snow-form-1 input[name="original"]').change(function(){
+			var _this = $(this);
+			if(_this.is(':checked')){
+				_this.val(1);
+			}else{
+				_this.val(0);
+			}
+		});
 
 		// 验证表单
 		var validator_form_1 = $('form.snow-form-1').validate();
