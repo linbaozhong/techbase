@@ -20999,3 +20999,55 @@
 2015/06/03 18:36:40 [router.go:845] [D] | GET        | /article/edit/1                          | 146.0083ms       | match      | /article/edit/*                          | 
 2015/06/03 18:36:40 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
 2015/06/03 18:36:41 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/04 11:38:10 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/04 11:38:14 [app.go:96] [I] http server Running on :8080
+2015/06/04 11:38:27 [router.go:845] [D] | GET        | /                                        | 91.0052ms        | match      | /                                        | 
+2015/06/04 11:38:28 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1430710768350472000.png: The system cannot find the path specified. 
+2015/06/04 11:38:45 [router.go:845] [D] | GET        | /my/company                              | 57.0033ms        | match      | /my/company                              | 
+2015/06/04 11:38:45 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/1/1431943139632278100.png: The system cannot find the file specified. 
+2015/06/04 11:38:51 [router.go:845] [D] | GET        | /company/edit                            | 88.0051ms        | match      | /company/edit/*                          | 
+2015/06/04 11:38:51 [router.go:845] [D] | GET        | /company/GetLinks/0                      | 71.0041ms        | match      | /company/getlinks/*                      | 
+2015/06/04 11:38:51 [router.go:845] [D] | GET        | /company/GetContact/0                    | 87.005ms         | match      | /company/getcontact/*                    | 
+2015/06/04 11:38:51 [router.go:845] [D] | GET        | /company/GetIntroduce/0                  | 94.0054ms        | match      | /company/getintroduce/*                  | 
+2015/06/04 11:38:51 [router.go:845] [D] | GET        | /company/GetMembers/0                    | 132.0076ms       | match      | /company/getmembers/*                    | 
+2015/06/04 11:38:51 [router.go:845] [D] | GET        | /company/GetLoops/0                      | 158.0091ms       | match      | /company/getloops/*                      | 
+2015/06/04 11:39:58 [router.go:845] [D] | GET        | /article/index                           | 53.003ms         | match      | /article/index/*                         | 
+2015/06/04 11:40:00 [router.go:845] [D] | GET        | /article/edit                            | 59.0034ms        | match      | /article/edit/*                          | 
+2015/06/04 11:42:41 [router.go:845] [D] | GET        | /article/edit                            | 41.0024ms        | match      | /article/edit/*                          | 
+2015/06/04 11:47:29 [router.go:845] [D] | GET        | /article/edit                            | 53.0031ms        | match      | /article/edit/*                          | 
+2015/06/04 11:47:52 [router.go:845] [D] | GET        | /article/edit                            | 89.0051ms        | match      | /article/edit/*                          | 
+2015/06/04 11:51:19 [router.go:845] [D] | GET        | /article/edit                            | 80.0046ms        | match      | /article/edit/*                          | 
+2015/06/05 10:26:50 [main.go:18] [I] tabenying 1.1.14.1105 
+2015/06/05 10:26:52 [app.go:96] [I] http server Running on :8080
+2015/06/05 10:26:52 [router.go:845] [D] | GET        | /                                        | 210.012ms        | match      | /                                        | 
+2015/06/05 10:26:53 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1430710768350472000.png: The system cannot find the path specified. 
+2015/06/05 10:26:56 [router.go:845] [D] | GET        | /my/profile                              | 63.0036ms        | match      | /my/profile                              | 
+2015/06/05 10:26:58 [router.go:845] [D] | GET        | /article/index                           | 89.0051ms        | match      | /article/index/*                         | 
+2015/06/05 10:27:00 [router.go:845] [D] | GET        | /home/show/1                             | 50.0029ms        | match      | /home/show/*                             | 
+2015/06/05 10:27:01 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/05 10:27:04 [router.go:845] [D] | GET        | /article/edit                            | 80.0046ms        | match      | /article/edit/*                          | 
+2015/06/05 10:27:11 [router.go:845] [D] | GET        | /article/edit                            | 63.0036ms        | match      | /article/edit/*                          | 
+2015/06/05 10:30:03 [router.go:845] [D] | GET        | /article/edit                            | 67.0038ms        | match      | /article/edit/*                          | 
+2015/06/05 10:30:26 [router.go:845] [D] | GET        | /article/edit                            | 85.0048ms        | match      | /article/edit/*                          | 
+2015/06/05 10:32:16 [router.go:845] [D] | GET        | /article/edit                            | 76.0043ms        | match      | /article/edit/*                          | 
+2015/06/05 10:34:22 [router.go:845] [D] | GET        | /article/edit                            | 67.0038ms        | match      | /article/edit/*                          | 
+2015/06/05 10:35:02 [router.go:845] [D] | GET        | /article/edit                            | 42.0024ms        | match      | /article/edit/*                          | 
+2015/06/05 10:36:16 [router.go:845] [D] | GET        | /article/edit                            | 60.0034ms        | match      | /article/edit/*                          | 
+2015/06/05 10:36:56 [router.go:845] [D] | GET        | /article/edit                            | 79.0045ms        | match      | /article/edit/*                          | 
+2015/06/05 10:37:36 [router.go:845] [D] | GET        | /article/edit                            | 71.0041ms        | match      | /article/edit/*                          | 
+2015/06/05 10:37:55 [router.go:845] [D] | GET        | /article/edit                            | 81.0047ms        | match      | /article/edit/*                          | 
+2015/06/05 10:39:11 [router.go:845] [D] | GET        | /article/edit                            | 64.0036ms        | match      | /article/edit/*                          | 
+2015/06/05 10:40:18 [router.go:845] [D] | GET        | /article/edit                            | 76.0044ms        | match      | /article/edit/*                          | 
+2015/06/05 10:41:08 [router.go:845] [D] | GET        | /article/edit                            | 62.0036ms        | match      | /article/edit/*                          | 
+2015/06/05 10:42:15 [router.go:845] [D] | GET        | /article/edit                            | 81.0047ms        | match      | /article/edit/*                          | 
+2015/06/05 10:44:01 [router.go:845] [D] | GET        | /article/edit                            | 57.0032ms        | match      | /article/edit/*                          | 
+2015/06/05 10:44:29 [router.go:845] [D] | GET        | /article/edit                            | 80.0045ms        | match      | /article/edit/*                          | 
+2015/06/05 10:45:23 [router.go:845] [D] | GET        | /article/edit                            | 63.0036ms        | match      | /article/edit/*                          | 
+2015/06/05 10:45:46 [router.go:845] [D] | GET        | /article/edit                            | 64.0037ms        | match      | /article/edit/*                          | 
+2015/06/05 11:03:29 [router.go:845] [D] | GET        | /article/edit                            | 56.0032ms        | match      | /article/edit/*                          | 
+2015/06/05 11:03:35 [router.go:845] [D] | GET        | /article/index                           | 68.0039ms        | match      | /article/index/*                         | 
+2015/06/05 11:03:45 [router.go:845] [D] | GET        | /home/show/1                             | 55.0032ms        | match      | /home/show/*                             | 
+2015/06/05 11:03:45 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/05 11:04:00 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1432801944677550900.png: The system cannot find the path specified. 
+2015/06/05 11:47:21 [router.go:845] [D] | GET        | /                                        | 73.0042ms        | match      | /                                        | 
+2015/06/05 11:47:21 [staticfile.go:62] [W] GetFileAttributesEx G:\baiduyun\cloud\GoWalker\src\writer\static\img/2015-05/1430710768350472000.png: The system cannot find the path specified. 

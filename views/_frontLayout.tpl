@@ -11,7 +11,7 @@
 	</head>
 
 	<body>
-		<header class="container abs-top abs-center">
+		<header class="container abs-top abs-center" style="background: rgba(51,51,51,.5);">
 			<nav style="height:65px;margin-top: 10px;">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">

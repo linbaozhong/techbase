@@ -1,4 +1,4 @@
-<div class="container banner" style="height: 90px;overflow: hidden;">
+<div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -12,7 +12,7 @@
 <article class="container">
 	<!--<div class="row">-->
 		<div class="col-md-12 col-xs-12">
-			<h3>项目审核</h3>
+			<h3 class="snow-color-red">项目审核</h3>
 			<div class="text-right">
 				<select name="status">
 					<option value="1" {{if eq .status 1}}selected{{end}}>等待审核的项目</option>

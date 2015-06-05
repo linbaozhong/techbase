@@ -1,4 +1,4 @@
-<div class="container banner" style="height: 90px;overflow: hidden;">
+<div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -11,11 +11,8 @@
 </div>
 <article class="container text-center">
 	<div class="row">
-		<div class="col-md-3">
-
-		</div>
-		<div class="col-md-6">
-			<h2>她本营</h2>
+		<div class="col-md-8 col-md-offset-2">
+			<h2 class="snow-color-red">她本营</h2>
 			<h4>女性科技互联网创业生态圈</h4>
 			<hr />
 			<form class="form-horizontal">
@@ -45,15 +42,13 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-sm-12">
+					<div class="col-sm-9 col-sm-offset-3">
 						<button type="submit" class="btn btn-primary col-sm-12">保存</button>
 					</div>
 				</div>
 			</form>
 		</div>
-		<div class="col-md-3">
 
-		</div>
 	</div>
 
 </article>

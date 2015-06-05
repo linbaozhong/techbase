@@ -21,7 +21,7 @@
 	}
 
 </style>
-<div class="container banner" style="height: 90px;overflow: hidden;">
+<div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -36,6 +36,9 @@
 			<span class="small snow-media-title"></span>
 		</h2>
 		<h5 class="snow-media-subtitle" style="text-indent: 7em;"></h5>
+		<div class="small snow-media-published" style="color: #bbb;margin-top: 20px;text-align: right;">
+			
+		</div>
 		<div class="snow-media-intro">
 			
 		</div>
@@ -111,7 +114,8 @@
 				var item = json.data;
 				$('.snow-media-article .snow-media-tag').text(getBasicName(8,item.tags));
 				$('.snow-media-article .snow-media-title').text(item.title);
-				$('.snow-media-article .snow-media-subtitle').text(item.subTitle);
+				$('.snow-media-article .snow-media-subtitle').text('---- ' + item.subTitle);
+				$('.snow-media-article .snow-media-published').text((new Date(item.created).format()));
 				$('.snow-media-article .snow-media-intro').text(item.intro);
 				$('.snow-media-article .snow-media-body').html(item.content);
 				$('.snow-media-article .snow-media-topic img').attr('src',item.topic);

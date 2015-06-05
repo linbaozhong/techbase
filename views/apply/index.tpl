@@ -1,4 +1,4 @@
-<div class="container banner" style="height: 90px;overflow: hidden;">
+<div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1 text-center">
 			<div><img src="/static/img/logo001.png" alt="logo" style="width:120px;"></div>
-			<h4>她本营 融资顾问服务协议</h4>
+			<h4 class="snow-color-red">她本营 融资顾问服务协议</h4>
 			<pre class="text-left" style="min-height: 400px;margin-top: 30px;">
 服务协议
     haha		

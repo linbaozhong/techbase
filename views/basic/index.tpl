@@ -1,4 +1,4 @@
-<div class="container banner" style="height: 90px;overflow: hidden;">
+<div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -15,7 +15,7 @@
 
 		</div>
 		<div class="col-md-10">
-			<h3>基础数据 - {{.subTitle}}</h3>
+			<h3 class="snow-color-red">基础数据 - {{.subTitle}}</h3>
 			{{if eq .typeid 2}}
 				<div class="form-group text-right">
 					<label class="control-label">选择国家：</label>

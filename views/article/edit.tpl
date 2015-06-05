@@ -4,7 +4,7 @@
 <script src="http://cdn.bootcss.com/jquery-validate/1.13.1/additional-methods.min.js"></script>
 <script src="/static/js/messages_zh.js" type="text/javascript" charset="utf-8"></script>
 
-<div class="container banner" style="height: 90px;overflow: hidden;">
+<div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -16,7 +16,7 @@
 	<div class="snow-row snow-row-1">
 		<!--<div class="row">-->
 			<div class="col-md-12 col-xs-12">
-				<h4>{{.subTitle}}</h4>
+				<h4 class="snow-color-red">{{.subTitle}}</h4>
 				<div class="pull-right">
 					<a class="submit-review" href="#"><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
 					<a href="/article/index"><i class="fa fa-th-list"></i>&nbsp;返回我的文章</a>
@@ -46,10 +46,10 @@
 					<div class="form-group">
 						<label class="col-sm-3 control-label">主题图</label>
 						<div class="col-sm-9 text-center">
-							<div class="snow-upload-target" title="点我上传主题图片" style="width:200px;height:100px;overflow: hidden;margin: 0 auto;">
+							<div class="snow-upload-target" title="点我上传主题图片" style="width:300px;height:150px;overflow: hidden;margin: 0 auto;border: 1px dashed #ccc;">
 								<img src="{{.article.Topic}}"/>
 							</div>
-							<span class="small" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
+							<span class="small" style="width: 100px;clear: both;"> ( 仅支持JPG、GIF、PNG格式图片文件 )</span>
 						</div>
 					</div>
 					<div class="form-group">

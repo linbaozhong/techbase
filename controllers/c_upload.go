@@ -26,7 +26,11 @@ func (this *Upload) Avatar() {
 	for index, img := range fs {
 		//
 		if filepath, err := _image.ToThumbnail(img.FullName, ""); err == nil {
-			fs[index].Path = "/" + filepath
+			//如果返回的是相对路径，改为绝对路径
+			if filepath[:1] != "/" {
+				filepath = "/" + filepath
+			}
+			fs[index].Path = filepath
 		} else {
 			this.trace(err)
 		}
@@ -49,6 +53,10 @@ func (this *Upload) File() {
 
 	if err == nil {
 		//	state = "SUCCESS"
+		//如果返回的是相对路径，改为绝对路径
+		if fs[0].Path[:1] != "/" {
+			fs[0].Path = "/" + fs[0].Path
+		}
 		url = fs[0].Path
 	} else {
 		//	state = err.Error()

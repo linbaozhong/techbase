@@ -115,7 +115,7 @@ func (this *Articles) Save() (error, []Error) {
 			return err, nil
 		}
 	} else {
-		_, err = session.Id(this.Id).Cols("Topic", "Title", "SubTitle", "Intro", "Content", "Tags", "Original", "Auther", "Resource", "ResourceUrl", "Updator", "Updated", "Ip").Update(this)
+		_, err = session.Id(this.Id).Cols("Topic", "Title", "SubTitle", "Intro", "Content", "Tags", "Original", "Author", "Resource", "ResourceUrl", "Updator", "Updated", "Ip").Update(this)
 		if err != nil {
 			session.Rollback()
 			return err, nil

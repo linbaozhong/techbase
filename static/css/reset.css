@@ -30,7 +30,7 @@ textarea {
 	color: #f00;
 }
 .snow-color-red{
-	color: #f56f74;
+	color: #FE4A66;
 }
 .snow-required {
 	margin-right: 5px;
@@ -86,9 +86,9 @@ textarea {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	padding: 35px 0;
+	/*padding: 35px 0;*/
 	font-size: 12px;
-	line-height: initial;
+	line-height: 150px;
 	background-color: transparent;
 	border-width: 0;
 }
@@ -141,6 +141,11 @@ textarea {
 	bottom: 0;
 }
 /*修正bootstrap*/
+blockquote{
+	font-size:inherit;
+	background: #eee;
+	border-left: 10px solid #aaa;
+}
 .container{
 	max-width: 1002px !important;
 }
@@ -173,19 +178,19 @@ table .btn {
 /*导航条*/
 
 header.abs-top .nav {
-	margin-top: 15px;
+	margin-top: 10px;
 }
 header.abs-top .nav>li>a {
 	/*border: 1px solid #666;*/
 	/*padding: 5px 15px;
 	margin: 8px;*/
 	/*background: #fff;*/
-	color: #f00;
+	color: #fff;
 	font-weight: 700;
 	/*border-radius: 5px;*/
 }
 header.abs-top .nav>li.active a {
-	color: #999 !important;
+	color: #FE4A66 !important;
 	background: transparent !important;
 }
 .nav .snow-profile img {
@@ -196,8 +201,8 @@ header.abs-top .nav>li.active a {
 	height: 38px;
 	border: 1px solid #eee;
 }
-.abs-top .nav a:hover,
-.abs-top .nav a:focus {
+header .nav a:hover,
+header .nav a:focus {
 	color: orangered;
 	background: rgba(255, 255, 255, 0) !important;
 }
@@ -624,7 +629,8 @@ overflow: hidden;
 .snow-media-article .snow-media-intro{
 	border: 1px solid #eee;
   padding: 20px;
-  margin: 20px 0;
+  margin: 10px 0;
+  text-align:justify;
 }
 .snow-media-article .snow-media-topic{
 	padding: 20px 0;
@@ -634,7 +640,18 @@ overflow: hidden;
 	padding: 20px 0;
 	/*font-size: 1.2em;*/
 	line-height: 1.8em;
+	text-align: justify;
+	/*word-break: break-all;*/
+	text-indent: 2em;
 }
-.snow-media-article .snow-media-topic img,.snow-media-article .snow-media-body img{
+.snow-media-article .snow-media-body p{
+	text-align: justify;
+}
+.snow-media-article .snow-media-body p img{
+	width:100% !important;
+	height: inherit !important;
+	margin-left: -2em;
+}
+.snow-media-article .snow-media-topic img{
 	width:100%;
 }

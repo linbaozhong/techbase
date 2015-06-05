@@ -1,4 +1,4 @@
-<div class="container banner" style="height: 90px;overflow: hidden;">
+<div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -11,7 +11,7 @@
 </div>
 <article class="container">
 	<div class="col-md-12">
-		<h3>媒体管理</h3>
+		<h3 class="snow-color-red">媒体管理</h3>
 		<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-30px;" href="/article/edit"><i class="fa fa-plus-circle"></i>&nbsp; 新建文章</a>
 
 		<!--账号列表-->
@@ -101,9 +101,9 @@
 					_html.push('<td>' + _status + '</td>');
 					_html.push('<td><a href="/home/show/'+art.id+'?review=1" target="_blank">预览</a>&nbsp;&nbsp;');
 					// 审核和发布状态，不允许编辑
-					if(art.status < 1 || parseInt('{{.account.Role}}') < 3){
+					if(art.status < 1){
 						_html.push('<a href="/article/edit/'+art.id+'">编辑</a>&nbsp;&nbsp;');
-					}else if(art.status == 1){
+					}else if(art.status == 1 && parseInt('{{.account.Role}}') < 3){
 						_html.push('<a href="javascript:;" class="snow-valid" data-id="'+art.id+'">审核</a>&nbsp;&nbsp;');
 					}
 					

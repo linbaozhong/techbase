@@ -1,4 +1,4 @@
-<div class="container banner" style="height: 90px;overflow: hidden;">
+<div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -12,7 +12,7 @@
 <article class="container">
 	<div class="row">
 		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
-			<h3>{{.subTitle}}</h3>
+			<h3 class="snow-color-red">{{.subTitle}}</h3>
 			<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-30px;" href="/company/edit"><i class="fa fa-plus-circle"></i>&nbsp; 创建项目</a>
 	
 			<!--数据在这里-->

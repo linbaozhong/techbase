@@ -1,4 +1,4 @@
-<div class="container banner" style="height: 90px;overflow: hidden;">
+<div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -15,7 +15,7 @@
 
 		</div>
 		<div class="col-md-10">
-			<h3>账号管理</h3>
+			<h3 class="snow-color-red">账号管理</h3>
 			<div class="text-right">
 
 			</div>
