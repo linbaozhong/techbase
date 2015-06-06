@@ -58,7 +58,7 @@
 			</div>-->
 			<div class="form-group">
 				<label class="control-label">审核未通过的原因:</label>
-				<textarea class="form-control" name="reason" rows="" cols=""></textarea>
+				<textarea class="form-control" maxlength="250" name="reason" rows="" cols=""></textarea>
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary col-md-12">提交</button>

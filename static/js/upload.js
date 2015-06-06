@@ -18,7 +18,7 @@
 			html += '</div>';
 			html += '<input class="' + RawClasses.input + '" type="file" accept="' + data.accept + '"';
 			if (data.maxQueue > 1) {
-				html += ' ' + RawClasses.multiple;
+				html += ' multiple ' + RawClasses.multiple;
 			}
 			html += '>';
 
@@ -200,7 +200,11 @@
 	function checkQueue(data) {
 		var transfering = 0,
 			newQueue = [];
-
+		// 上传文件数量限制
+		if(snow.uploadLimit){
+			data.queue.length = snow.uploadLimit();
+		}
+		
 		// remove lingering items from queue
 		for (var i in data.queue) {
 			if (data.queue.hasOwnProperty(i) && !data.queue[i].complete && !data.queue[i].error) {
@@ -211,6 +215,7 @@
 		data.queue = newQueue;
 
 		for (var j in data.queue) {
+			
 			if (data.queue.hasOwnProperty(j)) {
 				if (!data.queue[j].started) {
 					var formData = new FormData();
@@ -231,7 +236,7 @@
 				if (transfering >= data.maxQueue) {
 					return;
 				} else {
-					i++;
+					j++;
 				}
 			}
 		}

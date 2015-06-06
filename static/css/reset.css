@@ -48,12 +48,20 @@ textarea {
 .snow-padding-bottom-40 {
 	padding-bottom: 40px;
 }
+.snow-progress{
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	height: 5px;
+	margin: auto;
+	background-color: #FE4A66;
+}
 .snow-uploads li {
 	position: relative;
 	width: 100px;
 	height: 100px;
 	line-height: 100px;
-	margin-right: 20px;
+	margin-right: 10px;
 	display: inline-block;
 	border: 1px solid #eee;
 	overflow: hidden;
@@ -88,7 +96,7 @@ textarea {
 	bottom: 0;
 	/*padding: 35px 0;*/
 	font-size: 12px;
-	line-height: 150px;
+	/*line-height: 150px;*/
 	background-color: transparent;
 	border-width: 0;
 }
@@ -430,10 +438,18 @@ form .quirks .error{
 	color:#fff;
 }
 form .alert {
-	/*visibility:hidden;*/
-	
-	display: none;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  width: 400px;
+	  height: 100px;
+	  margin: auto;
+	  text-align: center;
 	font-size: .9em;
+	display: none;
+	z-index: 999;
 }
 form .alert.visible {
 	visibility: visible;
@@ -647,11 +663,7 @@ overflow: hidden;
 .snow-media-article .snow-media-body p{
 	text-align: justify;
 }
-.snow-media-article .snow-media-body p img{
-	width:100% !important;
-	height: inherit !important;
-	margin-left: -2em;
-}
+
 .snow-media-article .snow-media-topic img{
 	width:100%;
 }

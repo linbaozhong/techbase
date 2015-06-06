@@ -22,7 +22,8 @@
 				<label class="col-sm-3 control-label">微信二维码</label>
 				<div class="col-sm-9">
 					<span class="small"> ( 仅支持JPG、GIF、PNG格式，文件小于5M )</span>
-					<div class="snow-upload-target" title="点我上传二维码" style="width:100px;height:100px;overflow: hidden;border: 1px dashed #ccc;">
+					<div class="snow-upload-target text-center" title="点我上传二维码" style="width:100px;height:100px;line-height:100px;overflow: hidden;border: 1px dashed #ccc;">
+						<div class="snow-progress"></div>
 						<img src="{{.links.Qrcode}}"/>
 					</div>
 				</div>
@@ -30,31 +31,31 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Web端链接</label>
 				<div class="col-sm-9">
-					<input class="form-control" name="web" placeholder="Web端链接" value="{{.links.Web}}">
+					<input class="form-control" maxlength="250" name="web" placeholder="Web端链接" value="{{.links.Web}}">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">iPhone下载链接</label>
 				<div class="col-sm-9">
-					<input class="form-control" name="iphone" placeholder="iPhone下载链接" value="{{.links.Iphone}}">
+					<input class="form-control" maxlength="250" name="iphone" placeholder="iPhone下载链接" value="{{.links.Iphone}}">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">PC下载端链接</label>
 				<div class="col-sm-9">
-					<input class="form-control" name="windows" placeholder="PC下载端链接" value="{{.links.Windows}}">
+					<input class="form-control" maxlength="250" name="windows" placeholder="PC下载端链接" value="{{.links.Windows}}">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Android下载链接</label>
 				<div class="col-sm-9">
-					<input class="form-control" name="android" placeholder="Android下载链接" value="{{.links.Android}}">
+					<input class="form-control" maxlength="250" name="android" placeholder="Android下载链接" value="{{.links.Android}}">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">iPad下载链接</label>
 				<div class="col-sm-9">
-					<input class="form-control" name="ipad" placeholder="iPad下载链接" value="{{.links.Ipad}}">
+					<input class="form-control" maxlength="250" name="ipad" placeholder="iPad下载链接" value="{{.links.Ipad}}">
 				</div>
 			</div>
 			<div class="form-group">
@@ -115,13 +116,17 @@
 		});
 		
 		$("form.snow-form-4 .snow-upload-target").upload({
-		    label: '<span style="display:block;font-size:1.3em;margin-top:-8px;">上传</span><span>微信二维码</span>',//"<i class=\"fa fa-plus\"></i>",
+		    label: '<div style="line-height: initial;display: inline-block;vertical-align: middle;"><span style="display:block;font-size:1.3em;margin-top:-8px;">上传</span><span>微信二维码</span></div>',//"<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
+		    maxQueue:1,
 		    action:'/up',
 		    postData:{}
-		}).on("filestart.upload", function(){})
-		  .on("fileprogress.upload", function(){})
-		  .on("filecomplete.upload", function(e,file,response){
+		}).on("filestart.upload",function(e,file){
+			$('.snow-progress',this).show();
+		}).on("fileprogress.upload", function(e,file,percent){
+			var _progress = $('.snow-progress',this).css({width:percent+'%'});
+			percent==100 && _progress.hide();
+		}).on("filecomplete.upload", function(e,file,response){
 		  	if (response.ok) {
 		  		var _src=response.data[0].path;
 		  		// 写入表单域

@@ -79,12 +79,14 @@
 								<div class="col-md-5 brand-loop-{{$loop.Loop}}" data-value="{{$loop.Loop}}">&nbsp;</div>
 								<div class="col-md-5 col-md-offset-2">&nbsp;{{$loop.Investor}}</div>
 							</div>
-							<div class="">
-								<div class="col-md-5">
-									<span class="brand-money-{{$loop.AmountMoney}}" data-value="{{$loop.AmountMoney}}"></span>
-									{{$loop.Amount}}万
+							{{if gt $loop.Loop 0}}
+								<div class="">
+									<div class="col-md-5">
+										<span class="brand-money-{{$loop.AmountMoney}}" data-value="{{$loop.AmountMoney}}"></span>
+										{{$loop.Amount}}万
+									</div>
 								</div>
-							</div>
+							{{end}}
 						{{end}}
 					{{end}}
 				</div>

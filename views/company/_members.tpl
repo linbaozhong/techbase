@@ -28,6 +28,7 @@
 				<div class="col-sm-9">
 					<span class="small"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
 					<div class="snow-upload-target" style="width:100px;height:100px;">
+						<div class="snow-progress"></div>
 						<img src="/static/img/avatar.png"/>
 					</div>
 				</div>
@@ -35,7 +36,7 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label"><span class="snow-required">*</span>姓名</label>
 				<div class="col-sm-9">
-					<input class="form-control" required name="name" placeholder="姓名" value="">
+					<input class="form-control" required maxlength="50" name="name" placeholder="姓名" value="">
 				</div>
 			</div>
 			<div class="form-group">
@@ -46,13 +47,13 @@
 					</select>
 				</div>
 				<div class="col-sm-3">
-					<input class="form-control" name="title" placeholder="如: CEO/COO" value="">
+					<input class="form-control" maxlength="50" name="title" placeholder="如: CEO/COO" value="">
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 control-label">简介</label>
 				<div class="col-sm-9">
-					<textarea class="form-control" name="intro" placeholder="简介"></textarea>
+					<textarea class="form-control" maxlength="250" name="intro" placeholder="简介"></textarea>
 				</div>
 			</div>
 	
@@ -254,11 +255,15 @@
 		$("form.snow-form-5 .snow-upload-target").upload({
 		    label: '',//'<span style="display:block;font-size:1.3em;margin-top:-8px;">上传头像</span><span>点击选择照片</span>',
 		    accept:'.jpg,.jpeg,.gif,.png',
+		    maxQueue:1,
 		    action:'/up/avatar',
 		    postData:{width:100,height:100}
-		}).on("filestart.upload", function(){})
-		  .on("fileprogress.upload", function(){})
-		  .on("filecomplete.upload", function(e,file,response){
+		}).on("filestart.upload", function(e,file){
+			$('.snow-progress',this).show();
+		}).on("fileprogress.upload", function(e,file,percent){
+			var _progress = $('.snow-progress',this).css({width:percent+'%'});
+			percent==100 && _progress.hide();
+		}).on("filecomplete.upload", function(e,file,response){
 		  	if (response.ok) {
 		  		var _img = $(this).find('img'),_src=response.data[0].path;
 		  		if (_img.length) {

@@ -1,8 +1,8 @@
 <style type="text/css">
 	.snow-media-list .row{
 		height: 250px;
-		border-top: 1px solid #eee;
-		border-bottom: 1px solid #eee;
+		border: 1px solid #ddd;
+		/*border-bottom: 1px solid #eee;*/
 		margin-bottom: 30px;
 		width: 850px;
 		margin-left: auto;

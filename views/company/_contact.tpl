@@ -22,7 +22,7 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>联系人姓名</label>
 			<div class="col-sm-9">
-				<input class="form-control" required name="name" placeholder="联系人姓名" value="{{.contact.Name}}">
+				<input class="form-control" required maxlength="50" name="name" placeholder="联系人姓名" value="{{.contact.Name}}">
 			</div>
 		</div>
 		<div class="form-group">
@@ -33,7 +33,7 @@
 				</select>
 			</div>
 			<div class="col-sm-3">
-				<input class="form-control" name="title" placeholder="如: CEO/COO" value="{{.contact.Title}}">
+				<input class="form-control" maxlength="50" name="title" placeholder="如: CEO/COO" value="{{.contact.Title}}">
 			</div>
 		</div>
 		<div class="form-group">
@@ -67,25 +67,25 @@
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>手机号码</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control isMobile" required name="tel" placeholder="手机号码" value="{{.contact.Tel}}">
+				<input type="text" class="form-control isMobile" maxlength="50" required name="tel" placeholder="手机号码" value="{{.contact.Tel}}">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>微信号</label>
 			<div class="col-sm-9">
-				<input class="form-control" required name="weixin" placeholder="微信号" value="{{.contact.Weixin}}">
+				<input class="form-control" required maxlength="50" name="weixin" placeholder="微信号" value="{{.contact.Weixin}}">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label"><span class="snow-required">*</span>E_Mail</label>
 			<div class="col-sm-9">
-				<input type="email" class="form-control" required name="email" placeholder="E_Mail" value="{{.contact.Email}}">
+				<input type="email" class="form-control" maxlength="250" required name="email" placeholder="E_Mail" value="{{.contact.Email}}">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-3 control-label">Linkedin</label>
 			<div class="col-sm-9">
-				<input class="form-control" name="linkedin" placeholder="Linkedin" value="{{.contact.Linkedin}}">
+				<input class="form-control" maxlength="250" name="linkedin" placeholder="Linkedin" value="{{.contact.Linkedin}}">
 			</div>
 		</div>
 

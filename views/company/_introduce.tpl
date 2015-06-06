@@ -29,7 +29,7 @@
 			<div class="form-group clearfix">
 				<label class="col-sm-3 control-label">文字介绍</label>
 				<div class="col-sm-9">
-				<textarea class="form-control" name="content" rows="6" cols="" placeholder="">{{.introduce.Content}}</textarea>
+				<textarea class="form-control" maxlength="2500" name="content" rows="6" cols="" placeholder="">{{.introduce.Content}}</textarea>
 				</div>
 			</div>
 	
@@ -49,10 +49,33 @@
 
 <script type="text/javascript">
 	$(function(){
+		// 限制上传5张图片
+		snow.uploadLimit = function(){
+			return 5-$('form.snow-form-3 .snow-uploads li.snow-img').length;
+		};
+		
 		// 加载图片
-		function load_introduce_image(item){
-			$("form.snow-form-3 .snow-upload-target")
-				.before('<li class="snow-img"><i class="fa fa-lg fa-times-circle-o"></i><img src="'+item+'"></li>');
+		function load_introduce_image(src,index){
+			var _target = $("form.snow-form-3 .snow-upload-target")
+				,_li = [];
+	  		// 限制5张图
+		  	if (snow.uploadLimit() == 1) {
+		  		_target.hide();
+		  	}
+		  	// 如果src和index都存在，
+		  	if(src.length && $.type(index)=="number"){
+		  		$('#snow-img-' + index + ' img').attr('src',src);
+		  	}else{
+			  	_li.push('<li class="snow-img"');
+			  	if($.type(index)=="number"){
+			  		_li.push(' id="snow-img-' + index + '"><div class="snow-progress"></div>');
+			  	}else{
+			  		_li.push('>');
+			  	}
+			  	_li.push('<i class="fa fa-lg fa-times-circle-o"></i><img src="'+src+'"></li>');
+			  	
+				_target.before(_li.join(''));
+		  	}
 		};
 		
 		var _images = '{{.introduce.Images}}';
@@ -120,31 +143,31 @@
 			}
 		});
 		// 最多允许上传5张
-		if($("form.snow-form-3 .snow-uploads li.snow-img").length >= 5){
+		if(snow.uploadLimit() == 0){
 			$("form.snow-form-3 .snow-upload-target").hide();
 		}
+		
 		
 		$("form.snow-form-3 .snow-upload-target").upload({
 		    label: '上传图片',//"<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
+		    maxQueue:snow.uploadLimit(),
 		    action:'/up'
-		}).on("filestart.upload", function(){})
-		  .on("fileprogress.upload", function(){})
-		  .on("filecomplete.upload", function(e,file,response){
+		}).on("filestart.upload", function(e,file){
+		  	load_introduce_image('',file.index);
+		}).on("fileprogress.upload", function(e,file,percent){
+			var _progress = $('#snow-img-'+file.index).find('.snow-progress').css({width:percent+'%'});
+			percent==100 && _progress.remove();
+		}).on("filecomplete.upload", function(e,file,response){
 		  	if (response.ok) {
-		  		console.log(file);
 		  		var _src=response.data[0].path;
 		  		// 写入表单域
-		  		load_introduce_image(_src);
-		  		// 限制5张图
-			  	if (file.index > 3) {
-			  		$(this).find(".snow-upload-target").hide();
-			  	}
+		  		load_introduce_image(_src,file.index);
 		  	} else{
 		  		alert(response.data[0].message);
 		  	}
 		  })
 		  .on("fileerror.upload", function(){});
-
+		//
 	});
 </script>

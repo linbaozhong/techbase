@@ -7,7 +7,11 @@
 		<hr />
 	</div>
 </div>
-
+<style>
+	.snow-apply{
+		display: none;
+	}
+</style>
 <div class="row">
 	<div class="col-md-8 col-md-offset-2">
 		<!--这里是融资经历编辑器-->
@@ -27,7 +31,7 @@
 					</select>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group snow-apply">
 				<label class="col-sm-3 control-label">融资金额</label>
 				<div class="col-sm-3">
 					<select class="form-control" name="amountMoney">
@@ -41,7 +45,7 @@
 					<label class="control-label">万</label>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group snow-apply">
 				<label class="col-sm-3 control-label">估值</label>
 				<div class="col-sm-3">
 					<select class="form-control" name="valueMoney">
@@ -55,7 +59,7 @@
 					<label class="control-label">万</label>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group snow-apply">
 				<label class="col-sm-3 control-label"><span class="snow-required">*</span>融资时间</label>
 				<div class="col-sm-3">
 					<select class="form-control" required name="year">
@@ -81,7 +85,7 @@
 					</select>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group snow-apply">
 				<label class="col-sm-3 control-label">投资主体</label>
 				<div class="col-sm-9">
 					<input class="form-control" name="investor" placeholder="如：经纬中国" value="">
@@ -171,6 +175,14 @@
 					+'<label class="control-label"><%.investor%></label>'
 				+'</div>'
 			+'</div>';
+		//
+		$('.snow-form-6 select[name="loop"]').change(function(){
+			if($(this).val() == 0){
+				$('.snow-apply').hide();
+			}else{
+				$('.snow-apply').show();
+			}
+		});
 		// 读取融资轮次
 		$.getJSON('/item/loop',function(json){
 			if (json.ok) {

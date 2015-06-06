@@ -29,8 +29,8 @@
 		</ol>
 	</div>
 </div>
-<article class="container snow-media-article">
-	<div class="col-md-8 col-xs-8">
+<article class="container">
+	<div class="col-md-8 col-xs-8 snow-media-article">
 		<h2>
 			<span class="snow-color-red snow-media-tag"></span>
 			<span class="small snow-media-title"></span>
@@ -114,7 +114,11 @@
 				var item = json.data;
 				$('.snow-media-article .snow-media-tag').text(getBasicName(8,item.tags));
 				$('.snow-media-article .snow-media-title').text(item.title);
-				$('.snow-media-article .snow-media-subtitle').text('---- ' + item.subTitle);
+				
+				if(item.subTitle.length){
+					$('.snow-media-article .snow-media-subtitle').text('———— ' + item.subTitle);
+				}
+				
 				$('.snow-media-article .snow-media-published').text((new Date(item.created).format()));
 				$('.snow-media-article .snow-media-intro').text(item.intro);
 				$('.snow-media-article .snow-media-body').html(item.content);
@@ -135,6 +139,17 @@
 			}else{
 				
 			}
+			// 调整图片样式
+			$('.snow-media-article .snow-media-body img').each(function(){
+				var _img = $(this);
+				if(_img.width() >= _img.closest('.snow-media-article').width()){
+					_img.css({
+						width:'100%',
+						height: 'inherit',
+						marginLeft: '-2em'
+					});
+				}
+			});
 			//
 			snow.footerBottom();
 		});

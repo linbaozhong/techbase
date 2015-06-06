@@ -55,19 +55,19 @@
 					<div class="form-group">
 						<label class="col-sm-3 control-label"><span class="snow-required">*</span>标题</label>
 						<div class="col-sm-9">
-							<input class="form-control" required name="title" placeholder="标题" value="{{.article.Title}}">
+							<input class="form-control" required maxlength="250" name="title" placeholder="标题" value="{{.article.Title}}">
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label">副标题</label>
 						<div class="col-sm-9">
-							<input class="form-control" name="subTitle" placeholder="副标题" value="{{.article.SubTitle}}">
+							<input class="form-control" maxlength="250" name="subTitle" placeholder="副标题" value="{{.article.SubTitle}}">
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label"><span class="snow-required">*</span>摘要</label>
 						<div class="col-sm-9">
-							<textarea class="form-control" name="intro" rows="" cols=""  placeholder="文章摘要">{{.article.Intro}}</textarea>
+							<textarea class="form-control" maxlength="250" name="intro" rows="" cols=""  placeholder="文章摘要">{{.article.Intro}}</textarea>
 						</div>
 					</div>
 					<div class="form-group">

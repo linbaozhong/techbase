@@ -15,6 +15,7 @@
 			<li class="current text-center" style="background-image: url(/html/images/sign-up-banner.png);">
 				<div style="position: relative;top: -64px;">
 					<div class="snow-upload-target" title="点我上传图片" style="width:100px;height:100px;line-height: 100px;overflow: hidden;margin: 0 auto;border-radius: 50% 50%;background:#fff;">
+						<div class="snow-progress"></div>
 						<img src="{{.company.Logo}}"/>
 					</div>
 					<span class="small" style="width: 100px;clear: both;"> ( 仅支持100*100像素的JPG、GIF、PNG格式图片文件 )</span>
@@ -42,10 +43,10 @@
 				<form class="form-horizontal snow-form-1">
 					<div class="abs text-center quirks" style="top: -230px;width:100%;">
 						<div style="padding-top:15px;">
-							<span class="snow-required">*</span><input required name="name" class="small" style="padding: 5px;width: 200px;color:initial;" placeholder="项目名称" value="{{.company.Name}}" />
+							<span class="snow-required">*</span><input required maxlength="50" name="name" class="small" style="padding: 5px;width: 200px;color:initial;" placeholder="项目名称" value="{{.company.Name}}" />
 						</div>
 						<div style="padding-top:15px;">
-							<span class="snow-required">*</span><input required name="intro" class="small" style="padding: 5px;width: 300px;color:initial;" placeholder="用一句话介绍项目" value="{{.company.Intro}}" />
+							<span class="snow-required">*</span><input required maxlength="250" name="intro" class="small" style="padding: 5px;width: 300px;color:initial;" placeholder="用一句话介绍项目" value="{{.company.Intro}}" />
 						</div>
 					</div>
 					<div class="form-group">
@@ -85,19 +86,19 @@
 					<div class="form-group">
 						<label class="col-sm-3 control-label"><span class="snow-required">*</span>公司简称</label>
 						<div class="col-sm-9">
-							<input class="form-control" required name="companyName" placeholder="公司简称" value="{{.company.CompanyName}}">
+							<input class="form-control" required maxlength="50" name="companyName" placeholder="公司简称" value="{{.company.CompanyName}}">
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label">公司网址</label>
 						<div class="col-sm-9">
-							<input class="form-control" name="website" placeholder="公司网址" value="{{.company.Website}}">
+							<input class="form-control" maxlength="250" name="website" placeholder="公司网址" value="{{.company.Website}}">
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label">公司全称</label>
 						<div class="col-sm-9">
-							<input class="form-control" name="fullname" placeholder="公司全称" value="{{.company.Fullname}}">
+							<input class="form-control" maxlength="250" name="fullname" placeholder="公司全称" value="{{.company.Fullname}}">
 						</div>
 					</div>
 					<div class="form-group">
@@ -188,10 +189,12 @@
 				&& $('form.snow-form-3 input[name="id"]').val() > 0
 				&& $('.snow-loop').length > 0 && $('.snow-member').length > 0
 				){
+				var _id = $('form.snow-form-1 input[name="id"]').val();
 				// 提交审核
-				$.getJSON('/company/submitaudit',{id:$('form.snow-form-1 input[name="id"]').val()},function(json){
+				$.getJSON('/company/submitaudit',{id:_id},function(json){
 					if (json.ok) {
 						snow.alert('你的项目已提交审核，请等待……');
+						snow.go('/item/info/' + _id);
 					} else{
 						snow.alert(json.data.message);
 					}
@@ -332,13 +335,17 @@
 		});
 		
 		$(".slides .snow-upload-target").upload({
-		    label: '上传项目<br>Logo',//"<i class=\"fa fa-plus\"></i>",
+		    label: '<div style="line-height: initial;display: inline-block;vertical-align: middle;">上传项目<br>Logo</div>',//"<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.gif,.png',
+		    maxQueue:1,
 		    action:'/up/avatar',
 		    postData:{width:100,height:100}
-		}).on("filestart.upload", function(){})
-		  .on("fileprogress.upload", function(){})
-		  .on("filecomplete.upload", function(e,file,response){
+		}).on("filestart.upload", function(e,file){
+			$('.snow-progress',this).show();
+		}).on("fileprogress.upload", function(e,file,percent){
+			var _progress = $('.snow-progress',this).css({width:percent+'%'});
+			percent==100 && _progress.hide();
+		}).on("filecomplete.upload", function(e,file,response){
 			  	if (response.ok) {
 			  		var _img = $(this).find('img'),_src = response.data[0].path;
 			  		if (_img.length) {
@@ -352,8 +359,7 @@
 			  		console.log(response.data);
 			  		alert(response.data[0].message);
 			  	}
-		  })
-		  .on("fileerror.upload", function(){});
+		  }).on("fileerror.upload", function(){});
 
 	});
 </script>

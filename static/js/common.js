@@ -217,12 +217,12 @@ function submit_enable(obj) {
 
 function showMessage(obj, msg, success) {
 	if (success) {
-		obj.removeClass('alert-danger').addClass('alert-success').slideDown().html('<i class="fa fa-smile-o"></i> ,' + msg);
+		obj.removeClass('alert-danger').addClass('alert-success').stop().fadeIn().html('<i class="fa fa-smile-o"></i> ,' + msg);
 	} else {
-		obj.removeClass('alert-success').addClass('alert-danger').slideDown().html('<i class="fa fa-frown-o"></i> ,' + msg);
+		obj.removeClass('alert-success').addClass('alert-danger').stop().fadeIn().html('<i class="fa fa-frown-o"></i> ,' + msg);
 	}
 	setTimeout(function() {
-		obj.slideUp(600);
+		obj.stop().fadeOut(600);
 	}, 5000)
 }
 
