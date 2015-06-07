@@ -19,6 +19,7 @@ func init() {
 	beego.Router("/brandshow", home, "get:Show")
 	beego.Router("/home", home, "get:Home")
 	beego.Router("/media", home, "get:Media")
+	beego.Router("/vc", home, "get:Vc")
 	beego.Router("/community", home, "get:Community")
 	beego.Router("/herstart", home, "get:HerStart")
 	beego.Router("/brand/:id", home, "get:Brand")

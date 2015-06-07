@@ -79,6 +79,7 @@
 			}else{
 				
 			}
+			snow.footerBottom();
 		});
 	});
 </script>

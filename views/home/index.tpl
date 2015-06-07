@@ -25,8 +25,8 @@
 		{{range $index,$company := .startup}}
 		<div class="col-md-4 col-sm-4 col-xs-4 brand-card-container">
 			<div class="brand-card">
-				<div class="small abs-top" style="padding: 5px;right: 0;">
-					<span>
+				<div class="small abs-top" style="padding: 5px;left: 0;right: 0;">
+					<span class="pull-left">
 						{{if eq $company.Apply 0}}
 							尚未申请融资
 						{{else if eq $company.Apply 1}}
@@ -38,8 +38,9 @@
 						{{else if eq $company.Apply 4}}
 							融资未成功
 						{{end}}
-					</span>&nbsp;&nbsp;
-					<i class="fa fa-eye"></i>&nbsp;{{$company.Readed}}
+					</span>
+					<span class="pull-right">
+					<i class="fa fa-eye"></i>&nbsp;{{$company.Readed}}</span>
 				</div>
 				<div class="brand-body">
 					<div class="logo-img">
@@ -54,17 +55,15 @@
 				{{range $i,$loop := $loops}}
 					{{if eq $loop.CompanyId $company.Id}}
 					<div class="brand-info">
-						<div class="col-md-5 brand-loop" data-value="{{$loop.Loop}}">&nbsp;</div>
-						<div class="col-md-5 col-md-offset-2">{{$loop.Investor}}</div>
-					</div>
+						<span class="brand-loop" data-value="{{$loop.Loop}}"></span>
 						{{if gt $loop.Loop 0}}
-							<div class="brand-info">
-								<div class="col-md-12">
-									<span class="brand-money" data-value="{{$loop.AmountMoney}}"></span>
-									{{$loop.Amount}}万
-								</div>
-							</div>
+							<span class="brand-money snow-color-red" data-value="{{$loop.AmountMoney}}"></span>
+							<span class="snow-color-red">{{$loop.Amount}}万</span>
 						{{end}}
+					</div>
+					<div class="brand-info small">
+						{{$loop.Investor}}
+					</div>
 					{{end}}
 				{{end}}
 			</div>

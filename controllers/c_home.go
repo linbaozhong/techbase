@@ -202,6 +202,12 @@ func (this *Home) Media() {
 	this.setTplNames("media")
 }
 
+// 她vc
+func (this *Home) Vc() {
+	this.Data["index"] = "vc"
+	this.setTplNames("vc")
+}
+
 //
 func (this *Home) HerStart() {
 	this.Data["index"] = "home"
