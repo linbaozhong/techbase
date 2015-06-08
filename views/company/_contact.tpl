@@ -105,9 +105,11 @@
 	// 职位下拉选项
 	function contactPlaceOptions(){
 		var _html=[];
-		$.each(snow.place, function(index,item) {    
-			_html.push('<option');
-			_html.push(' value="'+item.value+'">'+item.name+'</option>');                                                          
+		$.each(snow.basic, function(index,item) { 
+			if(item.type == 5){
+				_html.push('<option');
+				_html.push(' value="'+item.value+'">'+item.name+'</option>');   
+			}
 		});
 		$('form.snow-form-2 select[name="place"]').empty().html(_html.join(''));
 	}
@@ -117,12 +119,12 @@
 		$('form.snow-form-2 select[name="month"]').val('{{.contact.Month}}');
 
 		// 读取职位选项
-		if(snow.place){
+		if(snow.basic){
 			contactPlaceOptions();
 		}else{
-			$.getJSON('/item/place',function(json){
+			$.getJSON('/item/basic',function(json){
 				if (json.ok) {
-					snow.place = json.data;
+					snow.basic = json.data;
 					contactPlaceOptions();
 				} else{
 					

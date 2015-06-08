@@ -252,7 +252,7 @@ func (this *Contact) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		_, err = db.Cols("name", "place", "title", "year", "month", "tel", "weixin", "email", "linkedin", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
 	}
 	return err, nil
 }
@@ -285,7 +285,7 @@ func (this *Introduce) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		_, err = db.Cols("images", "content", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
 	}
 	return err, nil
 }
@@ -322,7 +322,7 @@ func (this *Links) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		_, err = db.Cols("qrcode", "web", "iphone", "ipad", "android", "windows", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
 	}
 	return err, nil
 }
@@ -361,7 +361,7 @@ func (this *Members) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Cols("name", "place", "title", "avatar").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		_, err = db.Cols("name", "place", "title", "avatar", "intro").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
 	}
 	return err, nil
 }
@@ -429,7 +429,7 @@ func (this *Loops) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		_, err = db.Cols("loop", "amountmoney", "amount", "valuemoney", "value", "year", "month", "investor", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
 	}
 	return err, nil
 }

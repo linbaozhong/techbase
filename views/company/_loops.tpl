@@ -137,8 +137,8 @@
 
 	snow.getLoop = function(v){
 		_loop = 'A轮';
-		$.each(snow.loop, function(index,item) {    
-			if (v == item.value) {
+		$.each(snow.basic, function(index,item) {    
+			if (item.type == 6 && v == item.value) {
 				_loop = item.name;
 				return false;
 			}
@@ -147,8 +147,8 @@
 	};
 	snow.getMoney = function(v){
 		_money='人民币';
-		$.each(snow.money, function(index,item) {    
-			if (v == item.value) {
+		$.each(snow.basic, function(index,item) {    
+			if (item.type == 7 && v == item.value) {
 				_money = item.alias;
 				return false;
 			}
@@ -183,43 +183,84 @@
 				$('.snow-apply').show();
 			}
 		});
-		// 读取融资轮次
-		$.getJSON('/item/loop',function(json){
-			if (json.ok) {
-				var _html=[];
-				// 前端使用
-				snow.loop = json.data;
-				
-				$.each(json.data, function(index,item) {    
-					_html.push('<option');
-					_html.push(' value="'+item.value+'">'+item.name+'</option>');    
-					// 修复融资经历时间线
-					$('.snow-list-6 .snow-loop-'+item.value).text(item.name);
-				});
-				$('.snow-form-6 select[name="loop"]').empty().html(_html.join(''));
-			} else{
-				
-			}
-		});
-		// 读取币种
-		$.getJSON('/item/money',function(json){
-			if (json.ok) {
-				var _html=[];
-				// 前端使用
-				snow.money = json.data;
-				
-				$.each(json.data, function(index,item) {    
-					_html.push('<option');
-					_html.push(' value="'+item.value+'">'+item.name+'</option>');
-					// 修复融资经历时间线
-					$('.snow-list-6 .snow-money-'+item.value).addClass('fa-'+item.alias);
-				});
-				$('.snow-form-6 select[name="amountMoney"]').empty().html(_html.join(''));
-				$('.snow-form-6 select[name="valueMoney"]').empty().html(_html.join(''));
-			} else{
-				
-			}
-		});
+
+
+		function setBasic(){
+			var _loop = [],_money = [];
+			$.each(snow.basic,function(i,item){
+				switch (item.type){
+					case 6://融资轮次
+						_loop.push('<option');
+						_loop.push(' value="'+item.value+'">'+item.name+'</option>');    
+						// 修复融资经历时间线
+						$('.snow-list-6 .snow-loop-'+item.value).text(item.name);
+						break;
+					case 7://币种
+						_money.push('<option');
+						_money.push(' value="'+item.value+'">'+item.name+'</option>');
+						// 修复融资经历时间线
+						$('.snow-list-6 .snow-money-'+item.value).addClass('fa-'+item.alias);
+						break;
+					default:
+						break;
+				}
+			});
+			$('.snow-form-6 select[name="loop"]').empty().html(_loop.join('')).change();
+			
+			$('.snow-form-6 select[name="amountMoney"]').empty().html(_money.join(''));
+			$('.snow-form-6 select[name="valueMoney"]').empty().html(_money.join(''));
+		}
+		// 基础数据
+		if(snow.basic){
+			setBasic();
+		}else{
+			$.getJSON('/item/basic',function(json){
+				if(json.ok){
+					snow.basic = json.data;
+					setBasic();
+				}else{
+					
+				}
+			});
+		}
+
+//		// 读取融资轮次
+//		$.getJSON('/item/loop',function(json){
+//			if (json.ok) {
+//				var _html=[];
+//				// 前端使用
+//				snow.loop = json.data;
+//				
+//				$.each(json.data, function(index,item) {    
+//					_html.push('<option');
+//					_html.push(' value="'+item.value+'">'+item.name+'</option>');    
+//					// 修复融资经历时间线
+//					$('.snow-list-6 .snow-loop-'+item.value).text(item.name);
+//				});
+//				$('.snow-form-6 select[name="loop"]').empty().html(_html.join('')).change();
+//			} else{
+//				
+//			}
+//		});
+//		// 读取币种
+//		$.getJSON('/item/money',function(json){
+//			if (json.ok) {
+//				var _money=[];
+//				// 前端使用
+//				snow.money = json.data;
+//				
+//				$.each(json.data, function(index,item) {    
+//					_money.push('<option');
+//					_money.push(' value="'+item.value+'">'+item.name+'</option>');
+//					// 修复融资经历时间线
+//					$('.snow-list-6 .snow-money-'+item.value).addClass('fa-'+item.alias);
+//				});
+//				$('.snow-form-6 select[name="amountMoney"]').empty().html(_money.join(''));
+//				$('.snow-form-6 select[name="valueMoney"]').empty().html(_money.join(''));
+//			} else{
+//				
+//			}
+//		});
 		// 编辑 删除
 		$('.snow-list-6').on('click','.snow-edit',function(e){
 			e.preventDefault();
@@ -307,6 +348,7 @@
 					// 初始化表单
 					_form.find('input[name="id"]').val('');
 					_form[0].reset();
+					_form.find('select[name="loop"]').change();
 				} else{
 					var _errors=[];
 					for (var i = 0; i < json.data.length; i++) {
@@ -316,7 +358,10 @@
 				}
 			});
 		}).find('button[type="reset"]').click(function(){
-			$(this).closest('form').find('input[name="id"]').val('0');
+			var _form = $(this).closest('form');
+			_form.find('input[name="id"]').val('0');
+			_form[0].reset();
+			_form.find('select[name="loop"]').change();
 		});
 	});
 </script>

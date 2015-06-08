@@ -101,9 +101,9 @@
 <script type="text/javascript">
 	snow.getPlace = function(v){
 		_place = '创始人';
-		$.each(snow.place, function(index,item) {  
-			console.log(v,item.value);
-			if (v == item.value) {
+		$.each(snow.basic, function(index,item) {  
+			
+			if (item.type == 5 && v == item.value) {
 				_place = item.name;
 				return false;
 			}
@@ -113,11 +113,13 @@
 	// 职位下拉选项
 	function memberPlaceOptions(){
 		var _html=[];
-		$.each(snow.place, function(index,item) {    
-			_html.push('<option');
-			_html.push(' value="'+item.value+'">'+item.name+'</option>');                                                          
-			// 修复创始成员
-			$('.snow-list-5 .snow-member-'+item.value).text(item.name);
+		$.each(snow.basic, function(index,item) {  
+			if(item.type == 5){
+				_html.push('<option');
+				_html.push(' value="'+item.value+'">'+item.name+'</option>');                                                          
+				// 修复创始成员
+				$('.snow-list-5 .snow-member-'+item.value).text(item.name);
+			}
 		});
 		$('form.snow-form-5 select[name="place"]').empty().html(_html.join(''));
 	}
@@ -139,12 +141,12 @@
 					+'</div>'
 				+'</div>';
 		// 读取职位选项
-		if(snow.place){
+		if(snow.basic){
 			memberPlaceOptions();
 		}else{
-			$.getJSON('/item/place',function(json){
+			$.getJSON('/item/basic',function(json){
 				if (json.ok) {
-					snow.place = json.data;
+					snow.basic = json.data;
 					memberPlaceOptions();
 				} else{
 					
@@ -236,7 +238,7 @@
 					}
 					// 初始化表单
 					_form.find('input[name="id"]').val('');
-					_form.find('img').attr('src','');
+					_form.find('img').attr('src','/static/img/avatar.png');
 					_form[0].reset();
 				} else{
 					var _errors=[];
@@ -249,7 +251,8 @@
 		}).find('button[type="reset"]').click(function(){
 			var _form = $(this).closest('form');
 			_form.find('input[name="id"]').val('0');
-			_form.find('img').attr('src','');
+			_form.find('img').attr('src','/static/img/avatar.png');
+			_form[0].reset();
 		});
 		//
 		$("form.snow-form-5 .snow-upload-target").upload({
