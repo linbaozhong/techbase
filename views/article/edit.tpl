@@ -46,7 +46,8 @@
 					<div class="form-group">
 						<label class="col-sm-3 control-label">主题图</label>
 						<div class="col-sm-9 text-center">
-							<div class="snow-upload-target" title="点我上传主题图片" style="width:300px;height:150px;overflow: hidden;margin: 0 auto;border: 1px dashed #ccc;">
+							<div class="snow-upload-target" title="点我上传主题图片" style="width:300px;height:150px;line-height:150px;overflow: hidden;margin: 0 auto;border: 1px dashed #ccc;">
+								<div class="snow-progress"></div>
 								<img src="{{.article.Topic}}"/>
 							</div>
 							<span class="small" style="width: 100px;clear: both;"> ( 仅支持JPG、GIF、PNG格式图片文件 )</span>
@@ -216,13 +217,16 @@
 		});
 		
 		$("form.snow-form-1 .snow-upload-target").upload({
-		    label: '上传主题图片',//"<i class=\"fa fa-plus\"></i>",
+		    label: '<div style="line-height: initial;display: inline-block;vertical-align: middle;">上传主题图片</div>',//"<i class=\"fa fa-plus\"></i>",
 		    accept:'.jpg,.jpeg,.png',
 		    action:'/up',
 		    postData:{width:100,height:100}
-		}).on("filestart.upload", function(){})
-		  .on("fileprogress.upload", function(){})
-		  .on("filecomplete.upload", function(e,file,response){
+		}).on("filestart.upload", function(e,file){
+			$('.snow-progress',this).show();
+		}).on("fileprogress.upload", function(e,file,percent){
+			var _progress = $('.snow-progress',this).css({width:percent+'%'});
+			percent==100 && _progress.hide();
+		}).on("filecomplete.upload", function(e,file,response){
 			  	if (response.ok) {
 			  		var _img = $(this).find('img'),_src = response.data[0].path;
 			  		if (_img.length) {

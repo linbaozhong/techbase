@@ -11,21 +11,21 @@
 	</head>
 
 	<body>
-		<header class="container abs-top abs-center" style="background: rgba(51,51,51,.5);">
-			<nav style="height:65px;margin-top: 10px;">
+		<header class="container abs-top abs-center" style="background: rgba(0, 0, 0, .4);">
+			<nav style="height:65px;margin-top: 10px;  padding: 0 20px;">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">
-						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
+						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -15px;height: 60px;">
 					</a>
 				</div>
-				<ul class="nav navbar-nav" style="margin-left:80px;">
+				<ul class="nav navbar-nav" style="margin-left:60px;">
 					<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
+					</li>
+					<li class="{{if eq .index "media"}} active {{end}}"><a href="/media">她媒体</a>
 					</li>
 					<li class="{{if eq .index "items"}}active {{end}}"><a href="/item/index">她项目</a>
 					</li>
 					<li {{if eq .index "vc"}} class="active" {{end}}><a href="/vc">她ＶＣ</a>
-					</li>
-					<li class="{{if eq .index "media"}} active {{end}}"><a href="/media">她媒体</a>
 					</li>
 					<li class="{{if eq .index "community"}} active {{end}}"><a href="/community">她社区</a>
 					</li>
@@ -156,24 +156,14 @@
 			mouseleave($(this).data('hide',true));
 		});
 		
-		// 页脚自适应沉底，页眉自适应浮动
-		function footerBottom(){
-			// 页脚
-			var _footer_0 = $('#footer_0'),
-				_footer = $('#footer');
-			_footer.addClass('navbar-fixed-bottom');
-			if (_footer_0.offset().top > _footer.offset().top) {
-				_footer.removeClass('navbar-fixed-bottom');
-			}
-		};
 		// 全部图片加载完成后，重置页脚
 		$('img').load(function(){
-			footerBottom();
+			snow.footerBottom();
 		});
-		setTimeout(footerBottom,500);
+		setTimeout(snow.footerBottom,500);
 		
 		$(window).resize(function() {
-			footerBottom();
+			snow.footerBottom();
 		}).scroll(function() {
 			if ($(document).scrollTop() > 50) {
 				//$('header.navbar-fixed-top').addClass('header_shadow');

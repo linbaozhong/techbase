@@ -6,7 +6,7 @@
 </style>
 <div id="footer_0" style="margin-top:35px;">
 </div>
-<footer class="container" id="footer">
+<footer class="container navbar-fixed-bottom" id="footer">
 	
 	<div class="col-xs-10 col-md-10 col-sm-10 col-xs-offset-1">
 		<div class="row">

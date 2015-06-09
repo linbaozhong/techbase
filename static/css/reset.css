@@ -194,12 +194,14 @@ header.abs-top .nav>li>a {
 	margin: 8px;*/
 	/*background: #fff;*/
 	color: #fff;
-	font-weight: 700;
+	/*font-weight: 700;*/
 	/*border-radius: 5px;*/
 }
 header.abs-top .nav>li.active a {
-	color: #FE4A66 !important;
-	background: transparent !important;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-top: -2px;
+  	background: transparent !important;
 }
 .nav .snow-profile img {
 	position: absolute;
@@ -207,7 +209,7 @@ header.abs-top .nav>li.active a {
 	margin-left: -50px;
 	width: 38px;
 	height: 38px;
-	border: 1px solid #eee;
+	/*border: 1px solid #eee;*/
 }
 header .nav a:hover,
 header .nav a:focus {

@@ -17,6 +17,7 @@ type Basic struct {
 
 // 首页
 func (this *Basic) Index() {
+	this.Data["index"] = "basic"
 	typeid, _ := this.GetInt(":typeid")
 
 	var subTitle string

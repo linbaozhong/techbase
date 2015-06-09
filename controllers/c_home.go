@@ -105,17 +105,18 @@ func (this *Home) ShowNews() {
 
 	art.Id = id
 
+	var av interface{}
 	if this.GetString("review") == "1" && this.currentUser.Id > 0 {
-		_, err = art.GetEx()
+		av, err = art.ShowArticle(false)
 	} else {
-		_, err = art.Get()
+		av, err = art.ShowArticle(true)
 	}
 
 	if err == nil {
 		// 记录阅读次数
 		go this.readed(art)
 
-		this.renderJson(utils.JsonResult(true, "", art))
+		this.renderJson(utils.JsonResult(true, "", av))
 	} else {
 		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
 	}

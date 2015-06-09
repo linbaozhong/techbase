@@ -195,6 +195,16 @@ snow.refresh = function(){
 snow.go = function(u){
 	window.location = u;
 }
+// 页脚自适应沉底，页眉自适应浮动
+snow.footerBottom = function(){
+	// 页脚
+	var _footer_0 = $('#footer_0'),
+		_footer = $('#footer');
+	_footer.addClass('navbar-fixed-bottom');
+	if (_footer_0.offset().top > _footer.offset().top) {
+		_footer.removeClass('navbar-fixed-bottom');
+	}
+};
 
 function getBasicName(type,value){
 	var _name='';

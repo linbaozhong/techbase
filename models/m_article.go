@@ -36,27 +36,28 @@ type Articles struct {
 }
 type ArticlesView struct {
 	Id          int64  `json:"id"`
-	Topic       string `json:"topic"`      //主题图
-	Title       string `json:"title"`      //标题
-	SubTitle    string `json:"subTitle"`   //副标题
-	Intro       string `json:"intro"`      //内容
-	Content     string `json:"content"`    //内容
-	Published   string `json:"published"`  //发布日期
-	Tags        int    `json:"tags"`       //标签
-	Original    int    `json"original"`    //是否原创
-	Author      string `json:"author"`     //作者
-	Resource    string `json"resource"`    //来源单位
-	ResourceUrl string `json"resourceUrl"` //来源链接
-	Recommend   int    `json"recommend"`   //推荐的
-	IsTop       int    `json:"isTop"`      //置顶的
-	Position    int    `json:"position"`   //位置
+	Topic       string `json:"topic"`     //主题图
+	Title       string `json:"title"`     //标题
+	SubTitle    string `json:"subTitle"`  //副标题
+	Intro       string `json:"intro"`     //内容
+	Content     string `json:"content"`   //内容
+	Published   string `json:"published"` //发布日期
+	Tags        int    `json:"tags"`      //标签
+	Tag         string `json:"tag"`
+	Original    int    `json:"original"`    //是否原创
+	Author      string `json:"author"`      //作者
+	Resource    string `json:"resource"`    //来源单位
+	ResourceUrl string `json:"resourceUrl"` //来源链接
+	Recommend   int    `json:"recommend"`   //推荐的
+	IsTop       int    `json:"isTop"`       //置顶的
+	Position    int    `json:"position"`    //位置
 	Reason      string `json:"reason"`
 	Status      int    `json:"status"` //0-草稿，1-审核中，2-审核通过发布，-1-审核未通过
 	Deleted     int    `json:"deleted"`
 	Updator     int64  `json:"updator"`
+	UpdatorName string `json:"updatorName"` //编者姓名
 	Updated     int64  `json:"updated"`
 	Ip          string `json:"ip"`
-	Tag         string `json:"tag"`
 }
 
 //
@@ -170,6 +171,23 @@ func (this *Articles) _get(view bool) (bool, error) {
 		return db.Where("status=? and deleted=?", Audit_Yes, Undelete).Get(this)
 	}
 	return db.Where("deleted=?", Undelete).Get(this)
+}
+
+// 显示文章
+func (this *Articles) ShowArticle(view bool) ([]ArticlesView, error) {
+	art := make([]ArticlesView, 0)
+
+	_sql := "select articles.*,accounts.nickname as updatorName from articles left join accounts on accounts.id = articles.updator where articles.id = ? and articles.deleted=?"
+
+	var err error
+
+	if view {
+		err = db.Sql(_sql+" and status=?", this.Id, Undelete, Audit_Yes).Find(&art)
+	} else {
+		err = db.Sql(_sql, this.Id, Undelete).Find(&art)
+	}
+
+	return art, err
 }
 
 // 分页列表可见的

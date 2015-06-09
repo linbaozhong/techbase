@@ -11,11 +11,11 @@
 	</head>
 
 	<body>
-		<header class="container abs-top abs-center" style="background: rgba(51,51,51,.5);">
-			<nav style="height:65px;margin-top: 10px;">
+		<header class="container abs-top abs-center" style="background: rgba(0,0,0,.4);">
+			<nav style="height:65px;margin-top: 10px; padding: 0 20px;">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">
-						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -12px;height: 60px;">
+						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -15px;height: 60px;">
 					</a>
 				</div>
 				<ul class="nav navbar-nav" style="margin-left:40px;">
@@ -34,7 +34,7 @@
 					{{if lt .account.Role 2 }}
 						<li class="{{if eq .index "account"}} active {{end}}"><a href="/admin/account">账户管理</a>
 						</li>
-						<li class="menu {{if eq .index "index"}} active {{end}}" data-rel = "submenu-1"><a href="javascript:;">基础数据</a>
+						<li class="menu {{if eq .index "basic"}} active {{end}}" data-rel = "submenu-1"><a href="javascript:;">基础数据</a>
 						</li>
 					{{end}}
 				</ul>
@@ -145,16 +145,6 @@
 			mouseleave($(this).data('hide',true));
 		});
 
-		// 页脚自适应沉底，页眉自适应浮动
-		snow.footerBottom = function(){
-			// 页脚
-			var _footer_0 = $('#footer_0'),
-				_footer = $('#footer');
-			_footer.addClass('navbar-fixed-bottom');
-			if (_footer_0.offset().top > _footer.offset().top) {
-				_footer.removeClass('navbar-fixed-bottom');
-			}
-		};
 		// 全部图片加载完成后，重置页脚
 		$('img').load(function(){
 			snow.footerBottom();

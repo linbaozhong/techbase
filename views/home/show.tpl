@@ -111,7 +111,8 @@
 		// 读取新闻并渲染至页面
 		$.getJSON('/home/shownews',{id:'{{.articleId}}',review:'{{.review}}'},function(json){
 			if(json.ok){
-				var item = json.data;
+				var item = json.data[0];
+				console.log(item);
 				$('.snow-media-article .snow-media-tag').text(getBasicName(8,item.tags));
 				$('.snow-media-article .snow-media-title').text(item.title);
 				
@@ -119,7 +120,7 @@
 					$('.snow-media-article .snow-media-subtitle').text('———— ' + item.subTitle);
 				}
 				
-				$('.snow-media-article .snow-media-published').text((new Date(item.created).format()));
+				$('.snow-media-article .snow-media-published').html('小编：'+ item.updatorName + '&nbsp;&nbsp;&nbsp;&nbsp;' + (new Date(item.updated).format()));
 				$('.snow-media-article .snow-media-intro').text(item.intro);
 				$('.snow-media-article .snow-media-body').html(item.content);
 				$('.snow-media-article .snow-media-topic img').attr('src',item.topic);

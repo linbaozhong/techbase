@@ -90,7 +90,6 @@
 							_status = '<span title="'+ art.reason+ '">审核未通过<i class="fa fa-exclamation-circle"></i></span>';
 							break;
 					}
-					console.log(art);
 					
 					_html.push('<tr>');
 					_html.push('<td></td>');

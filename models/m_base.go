@@ -93,7 +93,7 @@ var (
 func init() {
 	var err error
 	//db, err = xorm.NewEngine("mysql", "writer:writer2015@tcp(dbwriter.mysql.rds.aliyuncs.com:3306)/writer?charset=utf8")
-	db, err = xorm.NewEngine("sqlite3", "./data/techbase.db")
+	db, err = xorm.NewEngine("sqlite3", beego.AppConfig.String("Sqlite3DB"))
 
 	if err != nil {
 		beego.Trace(err)
