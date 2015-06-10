@@ -4,7 +4,8 @@
 		margin: 0 10px;
 	}
 </style>
-<div id="footer_0" style="margin-top:35px;">
+<div id="footer_0" class="container text-center" style="margin: 20px auto;">
+	<i class="fa fa-spinner fa-spin fa-2x" style="display: none;"></i>
 </div>
 <footer class="container navbar-fixed-bottom" id="footer">
 	

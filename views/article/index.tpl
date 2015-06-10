@@ -66,9 +66,7 @@
 		</form>
 	</div>
 </article>
-<!--<script src="http://cdn.bootcss.com/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-<script src="http://cdn.bootcss.com/jquery-validate/1.13.1/additional-methods.min.js"></script>
-<script src="/static/js/messages_zh.js" type="text/javascript" charset="utf-8"></script>-->
+
 <script type="text/javascript">
 	$(function() {
 		$.getJSON('/article/list',{size:20,index:0},function(json){

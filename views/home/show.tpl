@@ -30,7 +30,7 @@
 	</div>
 </div>
 <article class="container">
-	<div class="col-md-8 col-xs-8 snow-media-article">
+	<div class="col-md-8 col-xs-8 snow-media-article" style="padding-left:30px;padding-right:30px;">
 		<h2>
 			<span class="snow-color-red snow-media-tag"></span>
 			<span class="small snow-media-title"></span>
@@ -70,7 +70,7 @@
 		</div>
 	</div>
 </article>
-<script src="http://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="/static/js/jquery.qrcode.min.js"></script>
 <script type="text/javascript">
 	$(function(){
 		// 微信公众号左移
@@ -112,7 +112,9 @@
 		$.getJSON('/home/shownews',{id:'{{.articleId}}',review:'{{.review}}'},function(json){
 			if(json.ok){
 				var item = json.data[0];
-				console.log(item);
+				//窗口标题
+				$('title').text('{{i18n .Lang "app title"}} - ' + item.title);
+				
 				$('.snow-media-article .snow-media-tag').text(getBasicName(8,item.tags));
 				$('.snow-media-article .snow-media-title').text(item.title);
 				
@@ -143,11 +145,14 @@
 			// 调整图片样式
 			$('.snow-media-article .snow-media-body img').each(function(){
 				var _img = $(this);
-				if(_img.width() >= _img.closest('.snow-media-article').width()){
+				if(_img.width() >= _img.closest('.snow-media-body').width()){
 					_img.css({
 						width:'100%',
-						height: 'inherit',
-						marginLeft: '-2em'
+						height: 'inherit'
+					});
+				}else{
+					_img.parent().css({
+						
 					});
 				}
 			});

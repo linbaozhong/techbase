@@ -13,7 +13,7 @@ func (this *Auth) Prepare() {
 	this.Base.Prepare()
 
 	// 检查当前用户是否合法用户
-	if !this.allowRequest() {
+	if this.currentUser.Id <= 0 {
 		//
 		if this.IsAjax() {
 			this.renderJson(utils.JsonResult(false, "", utils.UrlEncode("无效用户,请登录……")))
@@ -25,10 +25,10 @@ func (this *Auth) Prepare() {
 			this.end()
 		}
 	}
-	// 检查当前用户是否被禁用
-	act := new(models.Accounts)
-	act.Id = this.currentUser.Id
-	this.currentUser.Role, this.currentUser.Status, _ = act.GetRole()
+	//// 检查当前用户是否被禁用
+	//act := new(models.Accounts)
+	//act.Id = this.currentUser.Id
+	//this.currentUser.Role, this.currentUser.Status, _ = act.GetRole()
 
 	if this.currentUser.Status == models.Locked {
 		//---跳转至错误页
@@ -58,7 +58,7 @@ func (this *Auth) Prepare() {
 }
 
 func (this *Auth) Finish() {
-
+	this.Base.Finish()
 }
 
 /////////////////////////////////////

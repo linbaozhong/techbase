@@ -250,7 +250,6 @@ func (this *Home) SignOut() {
 * 通用错误消息地址
  */
 func (this *Home) Error() {
-	this.trace(this.GetString(":msg"))
 	this.Data["message"] = this.GetString(":msg")
 	this.setTplNames("error")
 }

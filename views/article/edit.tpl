@@ -1,8 +1,8 @@
 <script src="/static/ckeditor/ckeditor.js" type="text/javascript" charset="utf-8"></script>
 <script src="/static/ckeditor/adapters/jquery.js" type="text/javascript" charset="utf-8"></script>
-<script src="http://cdn.bootcss.com/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-<script src="http://cdn.bootcss.com/jquery-validate/1.13.1/additional-methods.min.js"></script>
-<script src="/static/js/messages_zh.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/jquery.validate.min.js"></script>
+<script src="/static/js/additional-methods.min.js"></script>
+<script src="/static/js/messages_zh.min.js" type="text/javascript" charset="utf-8"></script>
 
 <div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">

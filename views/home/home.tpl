@@ -126,7 +126,7 @@
 		</div></article>
 	</section>
 </div>
-<script src="http://cdn.bootcss.com/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
+<script src="/static/js/jquery.mousewheel.min.js"></script>
 <script type="text/javascript">
 	$(window).resize(function() {
 		$('section.sec').css({

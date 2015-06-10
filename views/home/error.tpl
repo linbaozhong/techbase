@@ -1,3 +1,3 @@
-<article class="container text-center">
-	<h2>{{.message}}</h2>
-</article>
+<div class="container banner text-center" style="height: 600px;">
+	<h2 style="line-height: 600px;">{{.message}}</h2>
+</div>

@@ -661,12 +661,32 @@ form .alert.visible {
 	line-height: 1.8em;
 	text-align: justify;
 	/*word-break: break-all;*/
-	text-indent: 2em;
 }
 .snow-media-article .snow-media-body p{
+	/*text-indent: 2em;*/
 	text-align: justify;
 }
-
+.snow-media-article .snow-media-body h1{
+	/*text-align: center;*/
+	font-size: 1.4em;
+}
+.snow-media-article .snow-media-body h2{
+	/*text-align: center;*/
+	font-size: 1.3em;
+}
+.snow-media-article .snow-media-body h3{
+	/*text-align: center;*/
+	font-size: 1.2em;
+}
+.snow-media-article .snow-media-body h4{
+	/*text-align: center;*/
+	font-size: 1.1em;
+}
+.snow-media-article .snow-media-body h5,
+.snow-media-article .snow-media-body h6{
+	/*text-align: center;*/
+	font-size: 1em;
+}
 .snow-media-article .snow-media-topic img{
 	width:100%;
 }

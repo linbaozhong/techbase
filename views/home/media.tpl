@@ -58,28 +58,55 @@
 
 <script type="text/javascript">
 	$(function(){
-		$.getJSON('/home/news',{size:20,index:0},function(json){
-			console.log(json);
-			if(json.ok){
-				$.each(json.data,function(i,item){
-					var _html=[];
-					_html.push('<div class="row">');
-					_html.push('<header class="col-md-4">');
-					_html.push('<h3 class="snow-article-tag">' + item.tag+ '</h3>');
-					_html.push('<p class="snow-article-title"><a href="/home/show/'+item.id+'" target="_blank">' + item.title+ '</a></p>');
-					_html.push('<p class="snow-article-date">' + (new Date(item.updated)).format()+ '</p>');
-					_html.push('</header>');
-					_html.push('<footer class="col-md-8"><a href="/home/show/'+item.id+'" target="_blank">');
-					_html.push('<img src="'+ item.topic+'"/>');
-					_html.push('</a></footer>');
-					_html.push('</div>');
-					
-					$('.snow-media-list').append(_html.join(''));
-				});
-			}else{
+		function showNews(d){
+			$.each(d,function(i,item){
+				var _html=[];
+				_html.push('<div class="row">');
+				_html.push('<header class="col-md-4">');
+				_html.push('<h3 class="snow-article-tag">' + item.tag+ '</h3>');
+				_html.push('<p class="snow-article-title"><a href="/home/show/'+item.id+'" target="_blank">' + item.title+ '</a></p>');
+				_html.push('<p class="snow-article-date">' + (new Date(item.updated)).format()+ '</p>');
+				_html.push('</header>');
+				_html.push('<footer class="col-md-8"><a href="/home/show/'+item.id+'" target="_blank">');
+				_html.push('<img src="'+ item.topic+'"/>');
+				_html.push('</a></footer>');
+				_html.push('</div>');
 				
-			}
+				$('.snow-media-list').append(_html.join(''));
+			});
 			snow.footerBottom();
-		});
+		};
+		
+		function loadNews(index){
+			var _footer = $('#footer_0').data('loading',true);
+			
+			$.getJSON('/home/news',{size:3,index:index},function(json){
+				//console.log(json);
+				if(json.ok){
+					// 隐藏进度
+					_footer.find('i.fa').hide();
+					// 已经没有数据可供载入
+					if(json.data.length == 0){
+						return;
+					}
+					showNews(json.data);
+					_footer.data('index',index+1).data('loading',false);
+				}else{
+					
+				}
+			});				
+		};
+		//
+		$(window).scroll(function(){
+			var _this = $(this),_footer = $('#footer_0');
+			
+			if(!_footer.data('loading') && (_footer.offset().top <= _this.scrollTop() + _this.height())){
+				// 显示进度
+				_footer.find('i.fa').show();
+				var _index = _footer.data('index') || 0;
+				loadNews(_index);
+			}
+		}).scroll();
+
 	});
 </script>

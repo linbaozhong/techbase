@@ -22,5 +22,5 @@ func (this *Front) Prepare() {
 }
 
 func (this *Front) Finish() {
-
+	this.Base.Finish()
 }

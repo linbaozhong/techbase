@@ -182,7 +182,7 @@ func (this *Articles) ShowArticle(view bool) ([]ArticlesView, error) {
 	var err error
 
 	if view {
-		err = db.Sql(_sql+" and status=?", this.Id, Undelete, Audit_Yes).Find(&art)
+		err = db.Sql(_sql+" and articles.status=?", this.Id, Undelete, Audit_Yes).Find(&art)
 	} else {
 		err = db.Sql(_sql, this.Id, Undelete).Find(&art)
 	}

@@ -3,8 +3,8 @@
 
 	<head>
 		<meta charset="utf-8">
-		<script src="http://cdn.bootcss.com/device.js/0.2.7/device.min.js"></script>
-		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+		<script src="/static/js/device.min.js"></script>
+		<script type="text/javascript" src="../../static/js/jquery-2.1.4.min.js."></script>
 		<script type="text/javascript">
 			
 			$(function() {

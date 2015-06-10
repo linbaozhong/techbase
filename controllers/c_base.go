@@ -73,10 +73,25 @@ func appconf(key string) string {
 func (this *Base) Prepare() {
 
 	this.currentUser = new(models.Current)
+	this.currentUser.Role = -1
+
 	// 读取当前控制器和方法名称
 	this.controllerName, this.actionName = this.GetControllerAndAction()
 
 	this.initPage()
+	//fmt.Println(this.controllerName, this.actionName)
+	// 如果是测试环境，非本站测试或者管理人员，跳转回首页,错误页放行
+	if this.controllerName == "Connect" || (this.controllerName == "Home" && this.actionName == "Error") {
+	} else {
+		this.allowRequest()
+
+		if beego.RunMode == "dev" && (this.currentUser.Role == -1 || this.currentUser.Role > models.Role_Editor) {
+			this.error_page("内部使用，谢绝访问")
+		}
+	}
+}
+func (this *Base) Finish() {
+
 }
 
 //
@@ -386,11 +401,32 @@ func (this *Base) getParamsString(key string) string {
 func (this *Base) allowRequest() bool {
 	this.currentUser.Id = utils.Str2int64(this.Ctx.GetCookie("_snow_id"))
 
-	if this.currentUser.Id == 0 {
+	if this.currentUser.Id <= 0 {
 		return false
+	} else if this.Ctx.GetCookie("_snow_r") == "" || this.Ctx.GetCookie("_snow_s") == "" {
+		// 检查当前用户是否被禁用
+		act := new(models.Accounts)
+		act.Id = this.currentUser.Id
+		this.currentUser.Role, this.currentUser.Status, _ = act.GetRole()
+		//
+		this.cookieHttpOnly("_snow_r", utils.Int2str(act.Role), -1)
+		this.cookieHttpOnly("_snow_s", utils.Int2str(act.Status), -1)
+	} else {
+		// 当前用户的角色和状态
+		if r, err := utils.Str2int(this.Ctx.GetCookie("_snow_r")); err == nil {
+			this.currentUser.Role = r
+		} else {
+			this.currentUser.Role = -1
+		}
+		if s, err := utils.Str2int(this.Ctx.GetCookie("_snow_s")); err == nil {
+			this.currentUser.Status = s
+		} else {
+			this.currentUser.Status = models.Locked
+		}
 	}
 	// 来自第三方平台的账户
 	this.currentUser.From = this.Ctx.GetCookie("from")
+	fmt.Println(this.currentUser)
 	//
 	return this._sonw_token(this.currentUser.Id, this.currentUser.From) == this.Ctx.GetCookie("_snow_token")
 }
@@ -514,8 +550,12 @@ func (this *Base) cookie(name, value string) {
 }
 
 // 写入cookie,禁止客户端读取
-func (this *Base) cookieHttpOnly(name, value string) {
-	this.Ctx.SetCookie(name, value, 1<<31-1, "/", page.Domain, nil, true)
+func (this *Base) cookieHttpOnly(name, value string, t ...int) {
+	if len(t) == 0 {
+		t = append(t, 1<<31-1)
+	}
+
+	this.Ctx.SetCookie(name, value, t[0], "/", page.Domain, nil, true)
 }
 
 // 设置模板文件
@@ -532,10 +572,10 @@ func (this *Base) _sonw_token(id int64, from string) string {
 }
 
 // 签入
-func (this *Base) loginIn(id int64, from string) {
-	this.cookieHttpOnly("from", from)
-	this.cookieHttpOnly("_snow_id", strconv.FormatInt(id, 10))
-	this.cookie("_snow_token", this._sonw_token(id, from))
+func (this *Base) loginIn(act *models.Accounts) {
+	this.cookieHttpOnly("from", act.OpenFrom)
+	this.cookieHttpOnly("_snow_id", strconv.FormatInt(act.Id, 10))
+	this.cookie("_snow_token", this._sonw_token(act.Id, act.OpenFrom))
 }
 
 // 签出
