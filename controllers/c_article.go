@@ -14,6 +14,7 @@ type Article struct {
 // 媒体管理
 func (this *Article) Index() {
 	this.Data["index"] = "article"
+	this.Data["status"] = 0
 }
 
 //
@@ -28,11 +29,12 @@ func (this *Article) List() {
 	}
 
 	p.Index, _ = this.GetInt("index")
+	status, _ := this.GetInt("status")
 
 	art := new(models.Articles)
 
 	// 读取全部文章
-	as, err := art.ListEx(p, "")
+	as, err := art.ListEx(p, "articles.status=?", status)
 
 	if err == nil {
 		this.renderJson(utils.JsonResult(true, "", as))
@@ -54,7 +56,7 @@ func (this *Article) Edit() {
 		_, err = art.GetEx()
 
 		// 如果已经提交审核，禁止编辑，跳转至项目信息页
-		if id > 0 && (art.Creator != this.currentUser.Id || art.Status > 0) {
+		if id > 0 && this.currentUser.Role > 3 && art.Creator != this.currentUser.Id || art.Status > 0 {
 			this.Redirect(fmt.Sprintf("/home/show/%d?review=1", id), 302)
 			this.end()
 		}

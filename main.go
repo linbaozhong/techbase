@@ -33,6 +33,7 @@ func init() {
 
 // 初始化模板函数
 func initFuncMap() {
+
 	beego.AddFuncMap("i18n", i18n.Tr)
 	beego.AddFuncMap("loadtimes", loadtimes)
 	beego.AddFuncMap("split", strings.Split)

@@ -12,7 +12,15 @@
 <article class="container">
 	<div class="col-md-12">
 		<h3 class="snow-color-red">媒体管理</h3>
-		<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-30px;" href="/article/edit"><i class="fa fa-plus-circle"></i>&nbsp; 新建文章</a>
+		<div class="pull-right" style="margin-top:-30px;">
+			<select name="status">
+				<option value="0" {{if eq .status 0}}selected{{end}}>草稿</option>
+				<option value="1" {{if eq .status 1}}selected{{end}}>审核中</option>
+				<option value="2" {{if eq .status 2}}selected{{end}}>已发布</option>
+				<option value="-1" {{if eq .status -1}}selected{{end}}>审核未通过</option>
+			</select>&nbsp;&nbsp;
+			<a class="btn btn-primary btn-create" style="padding-top: 0;padding-bottom: 0;" href="/article/edit"><i class="fa fa-plus-circle"></i>&nbsp; 新建文章</a>
+		</div>
 
 		<!--账号列表-->
 		<div class="row snow-row-1 snow-padding-top-40">
@@ -25,7 +33,8 @@
 						<th>标题</th>
 						<th>编辑日期</th>
 						<th>状态</th>
-						<th></th>
+						<th>
+						</th>
 					</tr>
 				</thead>
 				<tbody id="snow-article-list">
@@ -69,51 +78,60 @@
 
 <script type="text/javascript">
 	$(function() {
-		$.getJSON('/article/list',{size:20,index:0},function(json){
-			if(json.ok){
-				$.each(json.data,function(i,art){
-					var _html=[],_status='';
+		
+		function loadNews(index,status){
+			$('#snow-article-list').empty();
+			
+			$.getJSON('/article/list',{size:20,index:index,status:status},function(json){
+				if(json.ok){
+					$.each(json.data,function(i,art){
+						var _html=[],_status='';
+						
+						switch(art.status){
+							case 0:
+								_status = '草稿';
+								break;
+							case 1:
+								_status = '审核中';
+								break;
+							case 2:
+								_status = '发布';
+								break;
+							default:
+								_status = '<span title="'+ art.reason+ '">审核未通过<i class="fa fa-exclamation-circle"></i></span>';
+								break;
+						}
+						
+						_html.push('<tr>');
+						_html.push('<td></td>');
+						_html.push('<td><input class="snow-istop" type="checkbox" data-id="' + art.id + '" ' + (art.isTop==1 ? 'checked' : '') + ' /></td>');
+						_html.push('<td><input class="snow-recommend" type="checkbox" data-id="' + art.id + '" ' + (art.Recommend==1 ? 'checked' : '') + ' /></td>');
+						_html.push('<td>['+ art.tag + ']' + art.title + '</td>');
+						_html.push('<td>' + (new Date(art.updated)).format() + '</td>');
+						_html.push('<td>' + _status + '</td>');
+						_html.push('<td><a href="/home/show/'+art.id+'?review=1" target="_blank">预览</a>&nbsp;&nbsp;');
+						// 审核和发布状态，不允许编辑
+						if(art.status < 1){
+							_html.push('<a href="/article/edit/'+art.id+'">编辑</a>&nbsp;&nbsp;');
+						}else if(art.status == 1 && parseInt('{{.account.Role}}') < 3){
+							_html.push('<a href="javascript:;" class="snow-valid" data-id="'+art.id+'">审核</a>&nbsp;&nbsp;');
+						}
+						
+						_html.push('<a href="javascript:;" class="snow-del" data-id="'+art.id+'">删除</a></td>');
+						
+						_html.push('</tr>');
+						
+						$('#snow-article-list').append(_html.join(''));
+					});
+				}else{
 					
-					switch(art.status){
-						case 0:
-							_status = '草稿';
-							break;
-						case 1:
-							_status = '审核中';
-							break;
-						case 2:
-							_status = '发布';
-							break;
-						default:
-							_status = '<span title="'+ art.reason+ '">审核未通过<i class="fa fa-exclamation-circle"></i></span>';
-							break;
-					}
-					
-					_html.push('<tr>');
-					_html.push('<td></td>');
-					_html.push('<td><input class="snow-istop" type="checkbox" data-id="' + art.id + '" ' + (art.isTop==1 ? 'checked' : '') + ' /></td>');
-					_html.push('<td><input class="snow-recommend" type="checkbox" data-id="' + art.id + '" ' + (art.Recommend==1 ? 'checked' : '') + ' /></td>');
-					_html.push('<td>['+ art.tag + ']' + art.title + '</td>');
-					_html.push('<td>' + (new Date(art.updated)).format() + '</td>');
-					_html.push('<td>' + _status + '</td>');
-					_html.push('<td><a href="/home/show/'+art.id+'?review=1" target="_blank">预览</a>&nbsp;&nbsp;');
-					// 审核和发布状态，不允许编辑
-					if(art.status < 1){
-						_html.push('<a href="/article/edit/'+art.id+'">编辑</a>&nbsp;&nbsp;');
-					}else if(art.status == 1 && parseInt('{{.account.Role}}') < 3){
-						_html.push('<a href="javascript:;" class="snow-valid" data-id="'+art.id+'">审核</a>&nbsp;&nbsp;');
-					}
-					
-					_html.push('<a href="javascript:;" class="snow-del" data-id="'+art.id+'">删除</a></td>');
-					
-					_html.push('</tr>');
-					
-					$('#snow-article-list').append(_html.join(''));
-				});
-			}else{
-				
-			}
-		});
+				}
+			});
+		};
+		
+		$('select[name="status"]').change(function(){
+			loadNews(0,$(this).val());
+		}).change();
 		
 		// 附属操作
 		$('#snow-article-list').on('click','.snow-istop',function(){

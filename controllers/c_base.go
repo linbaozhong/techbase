@@ -273,8 +273,9 @@ func (this *Base) outputJson(data interface{}, err error) {
 
 //
 func (this *Base) setJsonData(data interface{}) {
+
 	//操作成功，清除token
-	if resp := reflect.Indirect(reflect.ValueOf(data)); resp.FieldByName("Ok").Bool() {
+	if resp := reflect.Indirect(reflect.ValueOf(data)); resp.FieldByName("Status").Elem().Bool() {
 		this.XsrfToken()
 	}
 	this.Data["json"] = data
