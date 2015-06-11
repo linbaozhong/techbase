@@ -415,7 +415,7 @@ func (this *Loops) ListByCompany(ids []int64) ([]Loops, error) {
 
 	err := db.Sql("select max(loop) as loop,amountmoney,amount,investor,companyid from loops where companyid in ("+strings.Join(_ids, ",")+") and deleted=? group by companyid", Undelete).Find(&ls)
 
-	fmt.Println(ls)
+	//fmt.Println(ls)
 	return ls, err
 }
 

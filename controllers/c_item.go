@@ -55,7 +55,7 @@ func (this *Item) Index() {
 		loop = -1
 	}
 
-	this.trace(this.Data["field"], ids)
+	//this.trace(this.Data["field"], ids)
 	// 如果指定行业的项目数为空，直接返回空记录集
 	if this.Data["field"] != -1 && len(ids) == 0 {
 		this.Data["companys"] = nil
@@ -65,7 +65,7 @@ func (this *Item) Index() {
 	// 按指定融资轮次读取项目id
 	ids = new(models.Loops).GetCompany(loop, ids)
 
-	this.trace(loop, ids)
+	//this.trace(loop, ids)
 	// 如果符合融资条件的项目数为空，直接返回空记录集
 	if len(ids) == 0 {
 		this.Data["companys"] = nil

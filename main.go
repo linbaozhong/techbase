@@ -22,7 +22,7 @@ func main() {
 
 func init() {
 	//beego.SetLevel(beego.LevelInformational)
-	os.Mkdir("./log", os.ModePerm)
+	os.Mkdir("./logs", os.ModePerm)
 	//日志文件名
 	beego.BeeLogger.SetLogger("file", `{"filename": "logs/log.log"}`)
 

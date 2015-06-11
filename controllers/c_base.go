@@ -343,27 +343,6 @@ func (this *Base) renderTemplateString(tplString string) error {
 	return t.Execute(this.Ctx.ResponseWriter, this.Data)
 }
 
-////文件服务
-//func (this *Base) serverFile(file, filename string) {
-//	file = filepath.Join(".", file)
-
-//	//友好文件名
-//	if len(filename) == 0 {
-//		filename = utils.UrlEncode(filepath.Base(file))
-//	}
-
-//	this.Ctx.ResponseWriter.Header().Set("Content-Description", "File Transfer")
-//	this.Ctx.ResponseWriter.Header().Set("Content-Type", "application/octet-stream;charset=UTF-8")
-//	this.Ctx.ResponseWriter.Header().Set("Content-Disposition", "attachment; filename="+filename)
-//	this.Ctx.ResponseWriter.Header().Set("Content-Transfer-Encoding", "binary")
-//	this.Ctx.ResponseWriter.Header().Set("Expires", "0")
-//	this.Ctx.ResponseWriter.Header().Set("Cache-Control", "must-revalidate")
-//	this.Ctx.ResponseWriter.Header().Set("Pragma", "public")
-
-//	http.ServeFile(this.Ctx.ResponseWriter, this.Ctx.Request, file)
-//	this.end()
-//}
-
 //获取URL参数
 func (this *Base) getParamsInt64(key string) (int64, error) {
 	i64, err := strconv.ParseInt(this.getParamsString(key), 10, 64)
@@ -399,36 +378,58 @@ func (this *Base) getParamsString(key string) string {
 
 //允许新的请求，数据通用字段初始信息，附带验证用户是否合法(err)，
 func (this *Base) allowRequest() bool {
-	this.currentUser.Id = utils.Str2int64(this.Ctx.GetCookie("_snow_id"))
+	// 来自第三方平台的账户
+	this.currentUser.From = this.Ctx.GetCookie("from")
+	//
+	_token := this.Ctx.GetCookie("_snow_token")
+	// 旧的方式
+	if len(_token) <= 32 {
+		this.currentUser.Id = utils.Str2int64(this.Ctx.GetCookie("_snow_id"))
 
-	if this.currentUser.Id <= 0 {
-		return false
-	} else if this.Ctx.GetCookie("_snow_r") == "" || this.Ctx.GetCookie("_snow_s") == "" {
-		// 检查当前用户是否被禁用
-		act := new(models.Accounts)
-		act.Id = this.currentUser.Id
-		this.currentUser.Role, this.currentUser.Status, _ = act.GetRole()
+		if this.currentUser.Id <= 0 {
+			return false
+		} else if this.Ctx.GetCookie("_snow_r") == "" || this.Ctx.GetCookie("_snow_s") == "" {
+			fmt.Println("读取用户身份信息")
+			// 检查当前用户是否被禁用
+			act := new(models.Accounts)
+			act.Id = this.currentUser.Id
+			this.currentUser.Role, this.currentUser.Status, _ = act.GetRole()
+			//
+			this.cookieHttpOnly("_snow_r", utils.Int2str(act.Role), 0)
+			this.cookieHttpOnly("_snow_s", utils.Int2str(act.Status), 0)
+		} else {
+			// 当前用户的角色和状态
+			if r, err := utils.Str2int(this.Ctx.GetCookie("_snow_r")); err == nil {
+				this.currentUser.Role = r
+			} else {
+				this.currentUser.Role = -1
+			}
+			if s, err := utils.Str2int(this.Ctx.GetCookie("_snow_s")); err == nil {
+				this.currentUser.Status = s
+			} else {
+				this.currentUser.Status = models.Locked
+			}
+		}
 		//
-		this.cookieHttpOnly("_snow_r", utils.Int2str(act.Role), -1)
-		this.cookieHttpOnly("_snow_s", utils.Int2str(act.Status), -1)
+		return utils.MD5Ex(fmt.Sprintf("%d_%s", this.currentUser.Id, this.currentUser.From)) == _token
 	} else {
-		// 当前用户的角色和状态
-		if r, err := utils.Str2int(this.Ctx.GetCookie("_snow_r")); err == nil {
+		this.currentUser.Id = utils.Str2int64(_token[36:])
+		if this.currentUser.Id <= 0 {
+			return false
+		}
+		if r, err := utils.Str2int(_token[32:34]); err == nil {
 			this.currentUser.Role = r
 		} else {
 			this.currentUser.Role = -1
 		}
-		if s, err := utils.Str2int(this.Ctx.GetCookie("_snow_s")); err == nil {
+		if s, err := utils.Str2int(_token[34:36]); err == nil {
 			this.currentUser.Status = s
 		} else {
 			this.currentUser.Status = models.Locked
 		}
+		return this._sonw_token(this.currentUser.Id, this.currentUser.From, this.currentUser.Role, this.currentUser.Status) == _token
 	}
-	// 来自第三方平台的账户
-	this.currentUser.From = this.Ctx.GetCookie("from")
-	fmt.Println(this.currentUser)
-	//
-	return this._sonw_token(this.currentUser.Id, this.currentUser.From) == this.Ctx.GetCookie("_snow_token")
+
 }
 
 ////读取登录用户的Cookie信息
@@ -567,15 +568,16 @@ func (this *Base) setTplNames(name ...string) {
 }
 
 //签名
-func (this *Base) _sonw_token(id int64, from string) string {
-	return utils.MD5Ex(fmt.Sprintf("%d_%s", id, from))
+func (this *Base) _sonw_token(id int64, from string, role, status int) string {
+	return fmt.Sprintf("%s%s%s%d", utils.MD5Ex(fmt.Sprintf("%d_%s", id, from)), utils.StringStartPad(utils.Int2str(role), "0", 2), utils.StringStartPad(utils.Int2str(status), "0", 2), id)
 }
 
 // 签入
 func (this *Base) loginIn(act *models.Accounts) {
 	this.cookieHttpOnly("from", act.OpenFrom)
-	this.cookieHttpOnly("_snow_id", strconv.FormatInt(act.Id, 10))
-	this.cookie("_snow_token", this._sonw_token(act.Id, act.OpenFrom))
+	//this.cookieHttpOnly("_snow_id", strconv.FormatInt(act.Id, 10))
+	//this.cookie("_snow_token", this._sonw_token(act.Id, act.OpenFrom))
+	this.cookie("_snow_token", this._sonw_token(act.Id, act.OpenFrom, act.Role, act.Status))
 }
 
 // 签出

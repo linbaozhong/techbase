@@ -19,16 +19,31 @@
 					</a>
 				</div>
 				<ul class="nav navbar-nav" style="margin-left:60px;">
-					<li {{if eq .index "index"}} class="active" {{end}}><a href="/">她首页</a>
-					</li>
-					<li class="{{if eq .index "media"}} active {{end}}"><a href="/media">她媒体</a>
-					</li>
-					<li class="{{if eq .index "items"}}active {{end}}"><a href="/item/index">她项目</a>
-					</li>
-					<li {{if eq .index "vc"}} class="active" {{end}}><a href="/vc">她ＶＣ</a>
-					</li>
-					<li class="{{if eq .index "community"}} active {{end}}"><a href="/community">她社区</a>
-					</li>
+					{{if eq .index "index"}}
+						<li class="active" ><a href="javascript:;">她首页</a></li>
+					{{else}}
+						<li><a href="/">她首页</a></li>
+					{{end}}
+					{{if eq .index "media"}}
+						<li class="active"><a href="javascript:;">她媒体</a></li>
+					{{else}}
+						<li><a href="/media">她媒体</a></li>
+					{{end}}
+					{{if eq .index "items"}}
+						<li class="active "><a href="javascript:;">她项目</a></li>
+					{{else}}
+						<li><a href="/item/index">她项目</a></li>
+					{{end}}
+					{{if eq .index "vc"}}
+						<li  class="active" ><a href="javascript:;">她ＶＣ</a></li>
+					{{else}}
+						<li><a href="/vc">她ＶＣ</a></li>
+					{{end}}
+					{{if eq .index "community"}}
+						<li class="active"><a href="javascript:;">她社区</a></li>
+					{{else}}
+						<li><a href="/community">她社区</a></li>
+					{{end}}
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="login"><a href="javascript:;">登录</a>
