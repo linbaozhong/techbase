@@ -42,7 +42,7 @@ func (this *Profile) Post() (error, []Error) {
 
 	if ok, _ := _profile.Exists(); ok {
 		// 更新
-		_, err = db.Update(this)
+		_, err = db.Id(this.Id).Update(this)
 	} else {
 		// 插入
 		_, err = db.Insert(this)

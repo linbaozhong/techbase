@@ -8,6 +8,17 @@
 		<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">-->
 		<title>{{i18n .Lang "app title"}} {{.subTitle}}</title>
 		{{.Head}}
+		<script src="/static/js/jquery.validate.min.js"></script>
+		<script src="/static/js/additional-methods.min.js"></script>
+		<script src="/static/js/messages_zh.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 手机号码验证
+			$.validator.addMethod('isMobile', function(value, element) {
+				var length = value.length,mobile = /^1[3-8]+\d{9}/;
+				console.log(length,mobile.test(value));
+				return this.optional(element) || (length == 11 && mobile.test(value));
+			}, '请正确填写您的手机号码');
+		</script>
 	</head>
 
 	<body>

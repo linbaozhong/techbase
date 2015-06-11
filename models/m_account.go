@@ -79,7 +79,7 @@ func (this *Accounts) Post() (error, []Error) {
 	//
 	var err error
 	if this.Id > 0 {
-		_, err = db.Update(this)
+		_, err = db.Id(this.Id).Update(this)
 	} else {
 		_, err = db.Insert(this)
 	}

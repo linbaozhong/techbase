@@ -1,3 +1,4 @@
+
 <div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
@@ -18,21 +19,21 @@
 			<form class="form-horizontal">
 				<div class="alert" role="alert">hi</div>
 				<div class="form-group">
-					<label for="inputNickname" class="col-sm-3 control-label">用户昵称</label>
+					<label for="inputNickname" class="col-sm-3 control-label">用户昵称<span class="snow-required">*</span></label>
 					<div class="col-sm-9">
-						<input type="text" class="form-control" id="inputNickname" name="nickname" placeholder="用户昵称" value="{{.nickName}}">
+						<input type="text" class="form-control" id="inputNickname" required name="nickname" placeholder="用户昵称" value="{{.nickName}}">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputTelphone" class="col-sm-3 control-label">电话</label>
+					<label for="inputTelphone" class="col-sm-3 control-label isMobile">手机号码<span class="snow-required">*</span></label>
 					<div class="col-sm-9">
-						<input type="tel" class="form-control" id="inputTelphone" name="telphone" placeholder="电话" value="{{.profile.Telphone}}">
+						<input type="tel" class="form-control" id="inputTelphone" required name="telphone" placeholder="手机号码" value="{{.profile.Telphone}}">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputEmail" class="col-sm-3 control-label">邮件</label>
+					<label for="inputEmail" class="col-sm-3 control-label">邮件<span class="snow-required">*</span></label>
 					<div class="col-sm-9">
-						<input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" value="{{.profile.Email}}">
+						<input type="email" class="form-control" id="inputEmail" required name="email" placeholder="Email" value="{{.profile.Email}}">
 					</div>
 				</div>
 				<div class="form-group">
@@ -58,16 +59,16 @@
 			var _form = $(this);
 			e.preventDefault();
 			$.post('/my/save',_form.serialize(),function(json){
-				//console.log(json);
+				console.log(json);
 				if(json.ok){
 					$('#avatar .nickname').text(json.data.nickName);
-					_form.children('.alert').removeClass('alert-danger').addClass('alert-success').addClass('visible').text('hi,我已经为你保存好了,不用谢了…… :)');
+					showMessage(_form.children('.alert'),'hi,我已经为你保存好了,不用谢了……',true);
 				}else{
 					var _errors=[];
 					for (var i = 0; i < json.data.length; i++) {
 						_errors.push(json.data[i].message);
 					}
-					_form.children('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( ,'+_errors.join(';'));
+					showMessage(_form.children('.alert'),_errors.join(';'),false);
 				}
 			});
 		});

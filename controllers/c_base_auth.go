@@ -33,6 +33,7 @@ func (this *Auth) Prepare() {
 	if this.currentUser.Status == models.Locked {
 		//---跳转至错误页
 		this.Redirect(this.UrlFor("Home.Error", ":msg", utils.UrlEncode("你的账户已经被禁用，请联系网站管理员……")), 302)
+		this.end()
 	}
 
 	//// 当前用户角色是否存在
