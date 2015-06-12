@@ -1,15 +1,14 @@
 <style type="text/css">
 	.snow-media-list .row{
 		height: 250px;
-		border: 1px solid #ddd;
-		/*border-bottom: 1px solid #eee;*/
-		margin-bottom: 30px;
+		/*border-bottom: 1px solid #eee;
 		width: 850px;
 		margin-left: auto;
-		margin-right: auto;
+		margin-right: auto;*/
+		margin-bottom: 50px;
 	}
 	.snow-media-list .row header{
-		padding: 30px;
+		padding: 30px 80px;
 		height: 100%;
 		/*border-width: 1px 0 1px 1px;
 		border-color: #eee;
@@ -62,12 +61,12 @@
 			$.each(d,function(i,item){
 				var _html=[];
 				_html.push('<div class="row">');
-				_html.push('<header class="col-md-4">');
+				_html.push('<header class="col-md-5">');
 				_html.push('<h3 class="snow-article-tag">' + item.tag+ '</h3>');
 				_html.push('<p class="snow-article-title"><a href="/home/show/'+item.id+'" target="_blank">' + item.title+ '</a></p>');
 				_html.push('<p class="snow-article-date">' + (new Date(item.updated)).format()+ '</p>');
 				_html.push('</header>');
-				_html.push('<footer class="col-md-8"><a href="/home/show/'+item.id+'" target="_blank">');
+				_html.push('<footer class="col-md-7"><a href="/home/show/'+item.id+'" target="_blank">');
 				_html.push('<img src="'+ item.topic+'"/>');
 				_html.push('</a></footer>');
 				_html.push('</div>');
@@ -78,17 +77,21 @@
 		};
 		
 		function loadNews(index){
-			var _footer = $('#footer_0').data('loading',true);
+			var _footer = $('#footer').data('loading',true);
 			
 			$.getJSON('/home/news',{size:3,index:index},function(json){
 				//console.log(json);
 				if(json.ok){
-					// 隐藏进度
-					_footer.find('i.fa').hide();
 					// 已经没有数据可供载入
 					if(json.data.length == 0){
+						$('#footer_0 span').text('我勒个去，累死奴家了……');
+						setTimeout(function(){
+							$('#footer_0').children().fadeOut();
+						},4000)
 						return;
 					}
+					// 隐藏进度
+					$('#footer_0').children().hide();
 					showNews(json.data);
 					_footer.data('index',index+1).data('loading',false);
 				}else{
@@ -98,11 +101,11 @@
 		};
 		//
 		$(window).scroll(function(){
-			var _this = $(this),_footer = $('#footer_0');
+			var _this = $(this),_footer = $('#footer');
 			
-			if(!_footer.data('loading') && (_footer.offset().top <= _this.scrollTop() + _this.height())){
+			if(!_footer.data('loading') && (150 + _footer.offset().top <= _this.scrollTop() + _this.height())){
 				// 显示进度
-				_footer.find('i.fa').show();
+				$('#footer_0').children().show();
 				var _index = _footer.data('index') || 0;
 				loadNews(_index);
 			}

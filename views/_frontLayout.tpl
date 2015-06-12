@@ -84,7 +84,7 @@
 		</div>-->
 		<div class="text-center weixin-public" style="position: fixed;top: 350px;right: 0;background: #fff;font-size: 12px;z-index: 1000;">
 			<div class="co-card" style="border: 1px solid #f56f74;">
-				<img src="/static/img/weixin-qr.png" style="width: 140px;">
+				<img src="/static/img/weixin-qr-140.png" style="width: 140px;">
 				<p>扫描关注微信号</p>
 			</div>
 			<div class="" style="color: #fff;background: #f56f74;margin-top: 2px;padding: 5px;">

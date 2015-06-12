@@ -17,7 +17,9 @@ body
 
 	margin: 20px;
 }
-
+p{
+	text-indent: 2em;
+}
 .cke_editable
 {
 	font-size: 13px;
@@ -66,13 +68,27 @@ h1,h2,h3,h4,h5,h6
 	font-weight: bold;
 	line-height: 1.2;
 }
+h1{
+	font-size:1.4em;
+}
+h2{
+	font-size:1.3em;
+}
+h3{
+	font-size:1.2em;
+}
+h4{
+	font-size:1.1em;
+}
 
 hr
 {
 	border: 0px;
 	border-top: 1px solid #ccc;
 }
-
+p img{
+	margin-left: -2em;
+}
 img.right
 {
 	border: 1px solid #ccc;

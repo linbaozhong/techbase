@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	//"strings"
+	"github.com/astaxie/beego"
 	"techbase/models"
 	"techbase/utils"
 )
@@ -69,8 +69,16 @@ func (this *Home) News() {
 
 	art := new(models.Articles)
 
-	// 读取全部文章
-	as, err := art.List(p, "")
+	// 读取文章
+	as := make([]models.ArticlesView, 0)
+	var err error
+	// 开发模式，读取全部文章
+	if beego.RunMode == "dev" {
+		as, err = art.ListEx(p, "articles.deleted=?", models.Undelete)
+	} else {
+		// 生成模式，读取已发布的文章
+		as, err = art.List(p, "")
+	}
 
 	if err == nil {
 		this.renderJson(utils.JsonResult(true, "", as))

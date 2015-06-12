@@ -155,7 +155,7 @@ blockquote{
 	border-left: 10px solid #aaa;
 }
 .container{
-	max-width: 1002px !important;
+	/*max-width: 1002px !important;*/
 }
 .form-horizontal .checkbox, .form-horizontal .checkbox-inline, .form-horizontal .radio, .form-horizontal .radio-inline{
 	margin-left: 0;
@@ -665,6 +665,9 @@ form .alert.visible {
 .snow-media-article .snow-media-body p{
 	/*text-indent: 2em;*/
 	text-align: justify;
+}
+.snow-media-article .snow-media-body p img{
+	/*margin-left: -2em;*/
 }
 .snow-media-article .snow-media-body h1{
 	/*text-align: center;*/

@@ -18,6 +18,7 @@
 				<option value="1" {{if eq .status 1}}selected{{end}}>审核中</option>
 				<option value="2" {{if eq .status 2}}selected{{end}}>已发布</option>
 				<option value="-1" {{if eq .status -1}}selected{{end}}>审核未通过</option>
+				<option value="-2" {{if eq .status -2}}selected{{end}}>回收站</option>
 			</select>&nbsp;&nbsp;
 			<a class="btn btn-primary btn-create" style="padding-top: 0;padding-bottom: 0;" href="/article/edit"><i class="fa fa-plus-circle"></i>&nbsp; 新建文章</a>
 		</div>
@@ -109,16 +110,22 @@
 						_html.push('<td>['+ art.tag + ']' + art.title + '</td>');
 						_html.push('<td>' + (new Date(art.updated)).format() + '</td>');
 						_html.push('<td>' + _status + '</td>');
-						_html.push('<td><a href="/home/show/'+art.id+'?review=1" target="_blank">预览</a>&nbsp;&nbsp;');
-						// 审核和发布状态，不允许编辑
-						if(art.status < 1){
-							_html.push('<a href="/article/edit/'+art.id+'">编辑</a>&nbsp;&nbsp;');
-						}else if(art.status == 1 && parseInt('{{.account.Role}}') < 3){
-							_html.push('<a href="javascript:;" class="snow-valid" data-id="'+art.id+'">审核</a>&nbsp;&nbsp;');
+						_html.push('<td>');
+						// 如果是回收站
+						if(art.deleted){
+							_html.push('<a href="javascript:;" class="snow-del" data-id="'+art.id+'" data-value="'+art.deleted+'">还原</a>');
+						}else{
+							_html.push('<a href="/home/show/'+art.id+'?review=1" target="_blank">预览</a>&nbsp;&nbsp;');
+							// 审核和发布状态，不允许编辑
+							if(art.status < 1){
+								_html.push('<a href="/article/edit/'+art.id+'">编辑</a>&nbsp;&nbsp;');
+							}else if(art.status == 1 && parseInt('{{.account.Role}}') < 3){
+								_html.push('<a href="javascript:;" class="snow-valid" data-id="'+art.id+'">审核</a>&nbsp;&nbsp;');
+							}
+							_html.push('<a href="javascript:;" class="snow-del" data-id="'+art.id+'" data-value="'+art.deleted+'">删除</a>');
 						}
 						
-						_html.push('<a href="javascript:;" class="snow-del" data-id="'+art.id+'">删除</a></td>');
-						
+						_html.push('</td>');
 						_html.push('</tr>');
 						
 						$('#snow-article-list').append(_html.join(''));
@@ -155,11 +162,11 @@
 				}
 			});
 		}).on('click','.snow-del',function(){
-			if(!snow.confirm('你确定要删除吗？')){
-				return false;
-			}
+//			if(!snow.confirm('你确定要删除吗？')){
+//				return false;
+//			}
 			var _this = $(this),_id = _this.data('id');
-			$.post('/article/setdelete',{id:_id},function(json){
+			$.post('/article/setdelete',{id:_id,value:_this.data('value')},function(json){
 				if(json.ok){
 					_this.closest('tr').remove();
 				}else{

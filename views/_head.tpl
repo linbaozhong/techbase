@@ -1,4 +1,5 @@
 		<meta property="qc:admins" content="6050272677640117256375" />
+		<meta id="description" name="description" content=""/>
 		<!--<link rel="stylesheet" href="/static/css/pinghei.css">-->
 		<link rel="shortcut icon" href="/static/img/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css" />

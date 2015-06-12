@@ -4,8 +4,10 @@
 		margin: 0 10px;
 	}
 </style>
-<div id="footer_0" class="container text-center" style="margin: 20px auto;">
-	<i class="fa fa-spinner fa-spin fa-2x" style="display: none;"></i>
+<div id="footer_0" class="container " style="margin: 40px auto;">
+	<div class="text-center" style="display:none;">
+		<i class="fa fa-spinner fa-spin fa-2x"></i><span style="vertical-align: super;margin-left: 1em;">正在拼命地读取……</span>
+	</div>
 </div>
 <footer class="container navbar-fixed-bottom" id="footer">
 	

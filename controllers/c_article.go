@@ -33,8 +33,16 @@ func (this *Article) List() {
 
 	art := new(models.Articles)
 
-	// 读取全部文章
-	as, err := art.ListEx(p, "articles.status=?", status)
+	as := make([]models.ArticlesView, 0)
+	var err error
+
+	// 读取回收站文章
+	if status == -2 {
+		as, err = art.ListEx(p, "articles.deleted=?", models.Deleted)
+	} else {
+		// 按status读取全部文章
+		as, err = art.ListEx(p, "articles.status=? and articles.deleted=?", status, models.Undelete)
+	}
 
 	if err == nil {
 		this.renderJson(utils.JsonResult(true, "", as))
@@ -185,7 +193,12 @@ func (this *Article) SetDelete() {
 
 	if err == nil && id > 0 {
 		art.Id = id
-		art.Deleted = models.Deleted
+		if val, _ := this.GetInt("value"); val == 0 {
+			art.Deleted = models.Deleted
+		} else {
+			art.Deleted = models.Undelete
+			art.Status = models.Audit_Ing
+		}
 	} else {
 		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
 		return

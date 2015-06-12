@@ -77,7 +77,7 @@ func (this *Articles) SetRecommend() (int64, error) {
 
 // 删除
 func (this *Articles) SetDelete() (int64, error) {
-	return db.Id(this.Id).Cols("deleted", "updator", "updated", "ip").Update(this)
+	return db.Id(this.Id).Cols("status", "deleted", "updator", "updated", "ip").Update(this)
 }
 
 // 文章是否存在
@@ -205,12 +205,12 @@ func (this *Articles) _list(view bool, page *Pagination, condition string, param
 	// Dal对象
 	_dal := &Dal{}
 	_dal.From = "articles,basic"
-	_dal.Where = fmt.Sprintf("articles.tags = basic.value and articles.deleted=%d and basic.type=%d", Undelete, Type_Media)
+	_dal.Where = fmt.Sprintf("articles.tags = basic.value and basic.type=%d", Type_Media)
 	_dal.OrderBy = "articles.istop desc,articles.recommend desc,articles.updated desc"
 
 	// 可见的
 	if view {
-		_dal.Where += fmt.Sprintf(" and articles.status=%d", Audit_Yes)
+		_dal.Where += fmt.Sprintf(" and articles.status=%d and articles.deleted=%d", Audit_Yes, Undelete)
 	}
 	// 条件
 	if strings.TrimSpace(condition) != "" {
@@ -233,7 +233,7 @@ func (this *Articles) _list(view bool, page *Pagination, condition string, param
 		_dal.Size = page.Size
 		_dal.Offset = page.Index * page.Size
 
-		_dal.Field = "articles.id,articles.title,articles.topic,articles.istop,articles.recommend,articles.status,articles.reason,articles.updated,basic.name as tag"
+		_dal.Field = "articles.id,articles.title,articles.topic,articles.istop,articles.recommend,articles.status,articles.deleted,articles.reason,articles.updated,basic.name as tag"
 		err := db.Sql(_dal.Select(), params...).Find(&as)
 		return as, err
 	}

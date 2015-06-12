@@ -25,6 +25,10 @@ func init() {
 	beego.Router("/brand/:id", home, "get:Brand")
 	beego.AutoRouter(home)
 
+	// 移动端
+	m := &controllers.M{}
+	beego.AutoRouter(m)
+
 	// 社交帐户登录
 	conn := &controllers.Connect{}
 	beego.AutoRouter(conn)

@@ -21,16 +21,8 @@
 	}
 
 </style>
-<div class="container banner" style="height: 75px;overflow: hidden;">
-	<div class="slideshow">
-		<ol class="slides">
-			<li class="current banner-1 text-center">
-			</li>
-		</ol>
-	</div>
-</div>
 <article class="container">
-	<div class="col-md-8 col-xs-8 snow-media-article" style="padding-left:30px;padding-right:30px;">
+	<div class="snow-media-article">
 		<h2>
 			<span class="snow-color-red snow-media-tag"></span>
 			<span class="small snow-media-title"></span>
@@ -51,62 +43,17 @@
 		<div class="snow-media-original small">
 			
 		</div>
-		<div class="snow-padding-top-40 snow-padding-bottom-40 snow-sns">
-			<a class="snow-sns-love" href="javascript:;"><i class="fa fa-heart"></i></a>&nbsp;&nbsp;<a class="snow-sns-weixin" href="javascript:;"><i class="fa fa-weixin"></i></a>
-		</div>
+
 		<hr />
 		<div class="snow-media-author small" style="margin-top: -32px;background: #fff;margin-left: auto;margin-right: auto;width: 288px;text-align: center;">
 			作者
 		</div>
 			
 	</div>
-	<div class="col-md-4 col-xs-4">
-		<h2 class="snow-color-red">热门文章</h2>
-	</div>
-	<div id="snow-wrap-qrcode" class="text-center" style="display: none;">
-		<h6 class="snow-padding-top-40">打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</h6>
-		<div class="sonw-weixin-qrcode" style="margin: 40px auto;width: 200px;">
-			
-		</div>
-	</div>
 </article>
 <script src="/static/js/jquery.qrcode.min.js"></script>
 <script type="text/javascript">
 	$(function(){
-		// 微信公众号左移
-		$('.weixin-public').css('right','auto');
-		$('#go-top').css({
-			right:'auto',
-			left:95
-		})
-		// 生成网址二维码
-		$('.sonw-weixin-qrcode').qrcode({
-//			render: "table", //table方式 
-		    width: 200, //宽度 
-		    height:200, //高度 
-			text:window.location.protocol + '//' + window.location.host + '/m/show/{{.articleId}}'
-		});
-		// 点赞
-		$('.snow-sns .snow-sns-love').click(function(){
-			var _this = $('i',this);
-			$.post('/home/loved',{id:'{{.articleId}}'},function(json){
-				if(json.ok){
-					if(_this.hasClass('snow-color-love')){
-						_this.removeClass('snow-color-love');
-					}else{
-						_this.addClass('snow-color-love');
-					}
-				}
-			});
-		});
-		// 分享
-		$('.snow-sns .snow-sns-weixin').click(function(){
-			$('#snow-wrap-qrcode').popWindow({
-				width: 390,
-				height: 360,
-				close: ''
-			});
-		});
 		
 		// 读取新闻并渲染至页面
 		$.getJSON('/home/shownews',{id:'{{.articleId}}',review:'{{.review}}'},function(json){
@@ -158,20 +105,8 @@
 					});
 				}
 			});
-			//
-			snow.footerBottom();
+
 		});
-		// 读取当前用户的分享状态
-		$.getJSON('/home/getsns',{id:'{{.articleId}}'},function(json){
-			if(json.ok){
-				if(json.data.loved){
-					$('.snow-sns .snow-sns-love i').addClass('snow-color-love');
-				}else{
-					$('.snow-sns .snow-sns-love i').removeClass('snow-color-love');
-				}
-			}else{
-				
-			}
-		});
+
 	});
 </script>
