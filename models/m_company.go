@@ -77,26 +77,38 @@ func (this *Company) AllList(ids []int64) (cs []Company, err error) {
 }
 
 // 全部融资状态公司列表
-func (this *Company) ApplyList(top int) ([]Company, error) {
+func (this *Company) ApplyList(top int, isDev bool) ([]Company, error) {
 	cs := make([]Company, 0)
 
 	if top > 0 {
 		db.Limit(top)
 	}
 
-	err := db.Where("apply = ? and status = ? and deleted = ?", this.Apply, Audit_Yes, Undelete).Desc("updated").Find(&cs)
+	var err error
 
+	if isDev {
+		err = db.Where("apply = ?", this.Apply).Desc("updated").Find(&cs)
+	} else {
+		err = db.Where("apply = ? and status = ? and deleted = ?", this.Apply, Audit_Yes, Undelete).Desc("updated").Find(&cs)
+	}
 	return cs, err
 }
 
 // 参加大赛的公司列表
-func (this *Company) StartupList(top int) ([]Company, error) {
+func (this *Company) StartupList(top int, isDev bool) ([]Company, error) {
 	cs := make([]Company, 0)
 
 	if top > 0 {
 		db.Limit(top)
 	}
-	err := db.Where("startup = ? and status = ? and deleted = ?", this.Startup, Audit_Yes, Undelete).Desc("updated").Find(&cs)
+
+	var err error
+
+	if isDev {
+		err = db.Where("startup = ?", this.Startup).Desc("updated").Find(&cs)
+	} else {
+		err = db.Where("startup = ? and status = ? and deleted = ?", this.Startup, Audit_Yes, Undelete).Desc("updated").Find(&cs)
+	}
 
 	return cs, err
 }
@@ -400,7 +412,7 @@ type Loops struct {
 // 读取
 func (this *Loops) List() ([]Loops, error) {
 	ls := make([]Loops, 0)
-	err := db.Where("companyId=? and deleted=?", this.CompanyId, Undelete).Find(&ls)
+	err := db.Where("companyId=? and deleted=?", this.CompanyId, Undelete).OrderBy("loop").Find(&ls)
 	return ls, err
 }
 

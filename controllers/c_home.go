@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
+	//"github.com/astaxie/beego"
 	"techbase/models"
 	"techbase/utils"
 )
@@ -16,7 +16,7 @@ func (this *Home) Get() {
 	com := new(models.Company)
 	//大赛的项目
 	com.Startup = 1
-	cs, _ := com.StartupList(3)
+	cs, _ := com.StartupList(3, Dev)
 	this.Data["startup"] = cs
 	//融资情况
 	ids := make([]int64, len(cs))
@@ -35,7 +35,7 @@ func (this *Home) Get() {
 
 	//融资完成的项目
 	com.Apply = 3
-	cs, _ = com.ApplyList(3)
+	cs, _ = com.ApplyList(3, Dev)
 	this.Data["apply"] = cs
 	//融资情况
 	ids = make([]int64, len(cs))
@@ -73,7 +73,7 @@ func (this *Home) News() {
 	as := make([]models.ArticlesView, 0)
 	var err error
 	// 开发模式，读取全部文章
-	if beego.RunMode == "dev" {
+	if Dev {
 		as, err = art.ListEx(p, "articles.deleted=?", models.Undelete)
 	} else {
 		// 生成模式，读取已发布的文章

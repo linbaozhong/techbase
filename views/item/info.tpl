@@ -38,7 +38,7 @@
 					</div>
 					<h3>{{.company.Name}}</h3>
 					<h5>{{.company.Intro}}</h5>
-					<p class="small"><span class="company-field"></span>&nbsp;<span class="company-loop"></span></p>
+					<p class="small"><span class="company-field"></span>&nbsp;<span class="snow-loop-{{.loop}}"></span></p>
 				</div>
 			</li>
 		</ol>
@@ -71,7 +71,7 @@
 						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-tags"></i> <span class="company-field">
 							
 						</span></li>
-						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-money"></i> <span class="company-loop">
+						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-money"></i> <span class="snow-loop-{{.loop}}">
 							
 						</span></li>
 						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-tree"></i> <span id="company-state">
@@ -203,14 +203,23 @@
 			{{range .loops}}
 			<div class="col-md-5 col-xs-5 snow-loop snow-loops-{{.Id}}">
 				<div>
-					<label class="control-label lead snow-loop-{{.Loop}}"></label><span>{{.Year}}.{{.Month}}</span>
+					<label class="control-label lead snow-loop-{{.Loop}}"></label>
+				{{if gt .Loop 0}}
+					<span>{{.Year}}.{{.Month}}</span>
+				{{end}}
 				</div>
 				<div class="clearfix">
 					<div class="pull-left">
-						<label class="control-label">融资金额:</label><span><i class="fa snow-money-{{.AmountMoney}}"></i> {{.Amount}}</span><span>万</span>
+						<label class="control-label">融资金额:</label>
+						{{if gt .Loop 0}}
+						<span><i class="fa snow-money-{{.AmountMoney}}"></i> {{.Amount}}</span><span>万</span>
+						{{end}}
 					</div>
 					<div class="pull-right">
-						<label class="control-label">融资估值:</label><span><i class="fa snow-money-{{.ValueMoney}}"></i> {{.Value}}</span><span>万</span>
+						<label class="control-label">融资估值:</label>
+						{{if gt .Loop 0}}
+						<span><i class="fa snow-money-{{.ValueMoney}}"></i> {{.Value}}</span><span>万</span>
+						{{end}}
 					</div>
 				</div>
 				<hr />
@@ -276,8 +285,7 @@
 		});
 		
 		function setBasic(){
-			var _loop='',
-				_field_opts=[],
+			var _field_opts=[],
 				_field='{{.company.Field}}'.split(',');
 				
 			$.each(snow.basic,function(i,item){
@@ -302,7 +310,6 @@
 						break;
 					case 6://融资轮次
 						$('.snow-loop-'+item.value).text(item.name);
-						_loop = item.name;
 						break;
 					case 7://币种
 						$('.snow-money-'+item.value).addClass('fa-'+item.alias);
@@ -311,7 +318,6 @@
 						break;
 				}
 				$('.company-field').text(_field_opts.join(' '));
-				$('.company-loop').text(_loop);
 			});
 		}
 		// 基础数据

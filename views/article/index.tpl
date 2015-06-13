@@ -103,7 +103,7 @@
 								break;
 						}
 						
-						_html.push('<tr>');
+						_html.push('<tr id="snow-row-'+art.id +'">');
 						_html.push('<td></td>');
 						_html.push('<td><input class="snow-istop" type="checkbox" data-id="' + art.id + '" ' + (art.isTop==1 ? 'checked' : '') + ' /></td>');
 						_html.push('<td><input class="snow-recommend" type="checkbox" data-id="' + art.id + '" ' + (art.Recommend==1 ? 'checked' : '') + ' /></td>');
@@ -118,6 +118,7 @@
 							_html.push('<a href="/home/show/'+art.id+'?review=1" target="_blank">预览</a>&nbsp;&nbsp;');
 							// 审核和发布状态，不允许编辑
 							if(art.status < 1){
+								_html.push('<a class="submit-review" href="javascript:;" data-id="'+art.id+'">提审</a>&nbsp;&nbsp;');
 								_html.push('<a href="/article/edit/'+art.id+'">编辑</a>&nbsp;&nbsp;');
 							}else if(art.status == 1 && parseInt('{{.account.Role}}') < 3){
 								_html.push('<a href="javascript:;" class="snow-valid" data-id="'+art.id+'">审核</a>&nbsp;&nbsp;');
@@ -129,6 +130,8 @@
 						_html.push('</tr>');
 						
 						$('#snow-article-list').append(_html.join(''));
+						//
+						snow.footerBottom();
 					});
 				}else{
 					
@@ -142,6 +145,7 @@
 		
 		// 附属操作
 		$('#snow-article-list').on('click','.snow-istop',function(){
+			// 置顶
 			var _this = $(this),_id = _this.data('id');
 			$.getJSON('/article/settop',{id:_id,istop:_this.is(':checked')?1:0},function(json){
 				if(json.ok){
@@ -152,6 +156,7 @@
 				}
 			});
 		}).on('click','.snow-recommend',function(){
+			// 推荐
 			var _this = $(this),_id = _this.data('id');
 			$.getJSON('/article/setrecommend',{id:_id,recommend:_this.is(':checked')?1:0},function(json){
 				if(json.ok){
@@ -162,28 +167,42 @@
 				}
 			});
 		}).on('click','.snow-del',function(){
-//			if(!snow.confirm('你确定要删除吗？')){
-//				return false;
-//			}
+			// 删除
 			var _this = $(this),_id = _this.data('id');
 			$.post('/article/setdelete',{id:_id,value:_this.data('value')},function(json){
 				if(json.ok){
-					_this.closest('tr').remove();
+					_this.closest('tr').slideUp(1000,function(){
+						$(this).remove();
+					});
 				}else{
 					snow.alert(json.data.message);
 				}
 			});
 		}).on('click','.snow-valid',function(){
+			// 审核
 			$('form.snow-form-1 input[name="id"]').val($(this).data('id'));
 			
-			$('#snow-wrap-valid').popWindow({
+			snow.popWindow = $('#snow-wrap-valid').popWindow({
 				width: 400,
 				height: 340,
 				close: '<span><i class="fa fa-times"></i></span>'
 			});
+		}).on('click','.submit-review',function(e){
+			// 提交审核
+			var _this = $(this),_id = _this.data('id');
+			$.getJSON('/article/audit',{id:_id},function(json){
+				if (json.ok) {
+					_this.closest('tr').slideUp(1000,function(){
+						$(this).remove();
+					});
+				} else{
+					snow.alert(json.data.message);
+				}
+			});
 		});
-		//
-//		$('form.snow-form-1').validate();
+
+
+//
 		// 提交审核
 		$('form.snow-form-1').submit(function(e){
 			e.preventDefault();
@@ -193,12 +212,15 @@
 			submit_disable(_form);
 			
 			$.getJSON('/article/audit',_form.serialize(),function(json){
-				
 				// 启用提交按钮
 				submit_enable(_form);
 				if (json.ok) {
-					snow.alert('审核请求已经提交');
-					snow.refresh();
+					$('#snow-row-'+_form.find('input[name="id"]').val()).slideUp(1000,function(){
+						$(this).remove();
+					});
+					_form.find('input[name="id"]').val('');
+					_form[0].reset();
+					snow.popWindow.close();
 				} else{
 					snow.alert(json.data.message);
 				}

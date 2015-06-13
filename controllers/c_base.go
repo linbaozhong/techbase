@@ -40,9 +40,11 @@ const sub = "\\w\\W\u4e00-\u9fa5"
 var (
 	page      models.Page
 	langTypes []*langType
+	Dev       bool
 )
 
 func init() {
+	Dev = beego.RunMode == "dev"
 	page.Domain = appconf("site::domain")
 
 	// 引用beego官网代码
@@ -85,7 +87,7 @@ func (this *Base) Prepare() {
 	} else {
 		this.allowRequest()
 
-		if beego.RunMode == "dev" && (this.currentUser.Role == -1 || this.currentUser.Role > models.Role_Editor) {
+		if Dev && (this.currentUser.Role == -1 || this.currentUser.Role > models.Role_Editor) {
 			this.error_page("内部使用，谢绝访问")
 		}
 	}
@@ -688,7 +690,7 @@ func (this *Base) upload(key string) (files []*models.UploadFile, err error) {
 * 跟踪
  */
 func (this *Base) trace(v ...interface{}) {
-	beego.Trace(fmt.Sprintf(" --------------- %s/%s ", this.controllerName, this.actionName) + fmt.Sprintf("Info:%s", utils.Interface2str(v...)))
+	beego.Debug(fmt.Sprintf("[%s] %s/%s ", this.Ctx.Input.IP(), this.controllerName, this.actionName) + fmt.Sprintf("Info:%s", utils.Interface2str(v...)))
 }
 
 /*

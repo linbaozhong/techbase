@@ -13,13 +13,20 @@
 		</nav>
 	</div>
 </div>
+<style type="text/css">
+	.snow-yeqian{
+		padding: 10px 20px 10px 40px;margin-left: -30px;background-color: #fe4a66;color: #fff;border-radius: 0 10px 0 0;
+	}
+</style>
 <article class="container">
 	{{if gt (len .startup) 0}}
 	<div class="brand-zone">
 		<div>
 			<p class="pull-right"><a class="link" href="/item/index">更多 <span class="fa fa-angle-right"></span></a>
 			</p>
-			<h5 class="snow-color-red">Her Startup女性创业大赛</h5>
+			<h5 style="margin-bottom: 30px;">
+				<span class="snow-yeqian">Her Startup女性创业大赛</span>
+			</h5>
 		</div>
 		{{$loops := .startupLoop}}
 		{{range $index,$company := .startup}}
@@ -77,7 +84,9 @@
 		<div>
 			<p class="pull-right"><a class="link" href="/item/index">更多 <span class="fa fa-angle-right"></span></a>
 			</p>
-			<h5 class="snow-color-red">正在融资</h5>
+			<h5 style="margin-bottom: 30px;">
+				<span class="snow-yeqian"></span>正在融资
+			</h5>
 		</div>
 		{{$loops := .applyLoop}}
 		{{range $index,$company := .apply}}

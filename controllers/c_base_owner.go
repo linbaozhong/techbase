@@ -96,6 +96,9 @@ func (this *Base) getLoopsList(id int64) {
 	}
 	this.Data["companyId"] = id
 	this.Data["loops"] = ls
+	// 最后一次融资的轮次
+	this.Data["loop"] = ls[len(ls)-1].Loop
+	this.trace(this.Data["loop"])
 	////
 	//_json, err := utils.Interface2Json(ls, false, false)
 	//if err != nil {

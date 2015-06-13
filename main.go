@@ -21,7 +21,13 @@ func main() {
 }
 
 func init() {
-	//beego.SetLevel(beego.LevelInformational)
+	// 日志级别
+	if beego.RunMode == "dev" {
+		beego.SetLevel(beego.LevelDebug)
+	} else {
+		beego.SetLevel(beego.LevelNotice)
+	}
+
 	os.Mkdir("./logs", os.ModePerm)
 	//日志文件名
 	beego.BeeLogger.SetLogger("file", `{"filename": "logs/log.log"}`)
