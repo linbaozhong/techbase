@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 			<h3 class="snow-color-red">{{.subTitle}}</h3>
-			<a class="btn btn-primary btn-create pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-30px;" href="/company/edit"><i class="fa fa-plus-circle"></i>&nbsp; 创建项目</a>
+			<a class="btn btn-primary pull-right" style="padding-top: 0;padding-bottom: 0;margin-top:-30px;" href="/company/edit"><i class="fa fa-plus-circle"></i>&nbsp; 创建项目</a>
 	
 			<!--数据在这里-->
 			<div class="" id="snow-list" style="margin-top: 30px;">
@@ -21,7 +21,31 @@
 			</div>
 		</div>
 	</div>
-
+	<div id="snow-form" style="display:none;padding:30px;">
+		<div class="text-center">
+			<h5>转移管理权 - 意味着你将失去管理权</h5>
+		</div>
+		<form class="form-horizontal" style="position: absolute;left: 31px;right: 30px;bottom: 20px;">
+			<div class="alert" role="alert">hi</div>
+			<input type="hidden" name="id" id="inputId" value="0" />
+			<div class="form-group">
+				<div class="col-sm-12 snow-shift-url" style="word-wrap: break-word;">
+					
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputEmail" class="col-sm-3 control-label">Email</label>
+				<div class="col-sm-9">
+					<input type="email" required class="form-control" id="inputEmail" name="email" placeholder="Email" value="">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-12">
+					<button type="submit" class="btn btn-primary col-sm-12">转移</button>
+				</div>
+			</div>
+		</form>
+	</div>
 </article>
 <script type="text/javascript">
 	function push_item(item){
@@ -31,6 +55,7 @@
 			_html = [],_url='',_rongzi='';
 			
 		if(item.creator=={{.account.Id}} && item.status < 1){
+		//if(item.accountId=={{.account.Id}}){
 			_url = '/company/edit/'+item.id
 		}else{
 			_url = '/item/info/'+item.id
@@ -62,7 +87,7 @@
 		 _html.push('</div><p>');
 		 _html.push(item.intro);                                                         
 		 _html.push('</p>');
-		 _html.push('<div>'+_rongzi+'</div>');
+		 _html.push('<div><div class="pull-right">&nbsp;&nbsp;<a class="snow-shift" data-id="'+item.id+'" href="javascript:;">转移管理权</a></div>'+_rongzi+'</div>');
 		 _html.push('</div>');
 		 
 		 // 检查该行是否已经存在
@@ -84,7 +109,7 @@
 	// 读取数据列表
 	function load_data(){
 		// 清空数据列表
-		$('#snow-list tbody tr.data-row').remove();
+		$('#snow-list').empty();
 		// 拉取数据
 		$.getJSON('/company/list',function(json){
 			if (json.ok) {
@@ -108,37 +133,30 @@
 		load_data();
 		
 		// 新建按钮事件，弹出编辑框
-		$('#snow-list tbody').on('click','.btn-create',function(){
+		$('#snow-list').on('click','.snow-shift',function(){
 			// 重置表单
 			$('#snow-form').find('form')[0].reset();
+			$('#snow-form input[name="id"]').val($(this).data('id'));
+			$('#snow-form .snow-shift-url').text('');
 			// 弹窗
 			pop_window();
-		}).on('click','.btn-edit',function(){
-			var item = $(this).closest('tr').data('data');
-			// 重置表单
-			$('#snow-form').find('form')[0].reset();
-			$('#inputId').val(item.id);
-			$('#inputName').val(item.name);
-			$('#inputValue').val(item.value);
-			// 弹窗
-			pop_window();
-		});
-		// 选项改变
-		$('#selectParentId').change(function(){
-			$('#inputParentId').val($(this).val());
-			load_data();
 		});
 		// 提交表单
 		$('#snow-form form').submit(function(e){
 			e.preventDefault();
 			var _form = $(this);
-			$.post('/basic/save',_form.serialize(),function(json){
+			
+			$.post('/company/shift',_form.serialize(),function(json){
 				if (json.ok) {
-					_form.children('.alert').removeClass('visible');
-					snow.popWindow.close();
-					push_item(json.data);
+					var _url = window.location.protocol 
+						+ '//' + window.location.host 
+						+ '/company/shifted?id='+json.data.companyId+'&token='+json.data.token;
+						
+					$('#snow-form .snow-shift-url').html('邮件已经发出，也可以将此链接发给对方:<br>'+_url);
+					showMessage(_form.find('.alert'),'邮件已经发出，也可以将此链接发给对方:<br>'+_url,true);
+					//snow.popWindow.close();
 				} else{
-					_form.children('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( , '+json.message);
+					showMessage(_form.find('.alert'),json.message,false);
 				}
 			});
 		})

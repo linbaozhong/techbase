@@ -116,11 +116,22 @@
 							<a class="snow-del" href="#" data-id="{{.Id}}"><i class="fa fa-times"></i></a>
 						</div>
 						<div>
-							<label class="control-label lead snow-loop-{{.Loop}}">天使轮</label><span>{{.Year}}.{{.Month}}</span>
+							<label class="control-label lead snow-loop-{{.Loop}}">天使轮</label>
+							{{if gt .Loop 0}}
+							<span>{{.Year}}.{{.Month}}</span>
+							{{end}}
 						</div>
 						<div class="clearfix">
-							<div class="pull-left"><label class="control-label">融资金额:</label><span><i class="fa snow-money-{{.AmountMoney}}"></i> {{.Amount}}</span><span>万</span></div>
-							<div class="pull-right"><label class="control-label">融资估值:</label><span><i class="fa snow-money-{{.ValueMoney}}"></i> {{.Value}}</span><span>万</span></div>
+							<div class="pull-left"><label class="control-label">融资金额:</label>
+								{{if gt .Loop 0}}
+								<span><i class="fa snow-money-{{.AmountMoney}}"></i> {{.Amount}}</span><span>万</span>
+								{{end}}
+							</div>
+							<div class="pull-right"><label class="control-label">融资估值:</label>
+								{{if gt .Loop 0}}
+								<span><i class="fa snow-money-{{.ValueMoney}}"></i> {{.Value}}</span><span>万</span>
+								{{end}}
+							</div>
 						</div>
 						<hr />
 						<div>
@@ -329,12 +340,12 @@
 					var _html = _template
 							.replace(/<%.id%>/ig,json.data.id)
 							.replace(/<%.loop%>/ig,snow.getLoop(json.data.loop))
-							.replace(/<%.year%>/ig,json.data.year)
-							.replace(/<%.month%>/ig,json.data.month)
-							.replace(/<%.aalias%>/ig,snow.getMoney(json.data.amountMoney))
-							.replace(/<%.valias%>/ig,snow.getMoney(json.data.valueMoney))
-							.replace(/<%.amount%>/ig,json.data.amount)
-							.replace(/<%.value%>/ig,json.data.value)
+							.replace(/<%.year%>/ig,json.data.loop > 0 ? json.data.year : '')
+							.replace(/<%.month%>/ig,json.data.loop > 0 ? json.data.month : '')
+							.replace(/<%.aalias%>/ig,json.data.loop > 0 ? snow.getMoney(json.data.amountMoney) : '')
+							.replace(/<%.valias%>/ig,json.data.loop > 0 ? snow.getMoney(json.data.valueMoney) : '')
+							.replace(/<%.amount%>/ig,json.data.loop > 0 ? json.data.amount : '--')
+							.replace(/<%.value%>/ig,json.data.loop > 0 ? json.data.value : '--')
 							.replace(/<%.investor%>/ig,json.data.investor);
 					// 实体是否存在
 					var _obj = $('.snow-list-6 .snow-loops-'+json.data.id);

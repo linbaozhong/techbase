@@ -115,11 +115,12 @@ func (this *Company) StartupList(top int, isDev bool) ([]Company, error) {
 
 // 读取
 func (this *Company) Get() (bool, error) {
-	if this.AccountId == 0 {
-		return db.Id(this.Id).Get(this)
-	} else {
-		return db.Where("id=? and accountId=?", this.Id, this.AccountId).Get(this)
-	}
+	//if this.AccountId == 0 {
+	//	return db.Id(this.Id).Get(this)
+	//} else {
+	//	return db.Where("id=? and accountId=?", this.Id, this.AccountId).Get(this)
+	//}
+	return db.Get(this)
 }
 
 // 保存
@@ -229,6 +230,12 @@ func (this *Company) SetReaded() {
 	db.Id(this.Id).Cols("readed").Update(this)
 }
 
+// 转移所有权
+func (this *Company) Shift() error {
+	_, err := db.Id(this.Id).Cols("accountId", "updator", "updated", "ip").Update(this)
+	return err
+}
+
 /*
 * 联系公司
  */
@@ -251,7 +258,7 @@ type Contact struct {
 
 // 读取
 func (this *Contact) Get() (bool, error) {
-	return db.Where("companyId=?", this.CompanyId).Get(this)
+	return db.Get(this)
 }
 
 // 保存
@@ -284,7 +291,7 @@ type Introduce struct {
 
 // 读取
 func (this *Introduce) Get() (bool, error) {
-	return db.Where("companyId=?", this.CompanyId).Get(this)
+	return db.Get(this)
 }
 
 // 保存
@@ -321,7 +328,7 @@ type Links struct {
 
 // 读取
 func (this *Links) Get() (bool, error) {
-	return db.Where("companyId=?", this.CompanyId).Get(this)
+	return db.Get(this)
 }
 
 // 保存
@@ -380,7 +387,7 @@ func (this *Members) Save() (error, []Error) {
 
 // 读取
 func (this *Members) Get() (bool, error) {
-	return db.Id(this.Id).Get(this)
+	return db.Get(this)
 }
 
 // 删除
@@ -448,7 +455,7 @@ func (this *Loops) Save() (error, []Error) {
 
 // 读取
 func (this *Loops) Get() (bool, error) {
-	return db.Id(this.Id).Get(this)
+	return db.Get(this)
 }
 
 // 删除

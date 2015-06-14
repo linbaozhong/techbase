@@ -101,11 +101,11 @@ func init() {
 
 	db.SetMapper(core.SameMapper{})
 
-	db.ShowInfo = true
-	db.ShowDebug = true
+	//db.ShowInfo = true
+	//db.ShowDebug = true
 	db.ShowSQL = true
 	//db.ShowErr = true
-	db.ShowWarn = true
+	//db.ShowWarn = true
 
 	// 缓存
 	bm, err = cache.NewCache("memory", `{"interval":60}`)

@@ -30,6 +30,7 @@ func (this *Company) Edit() {
 
 	// 如果已经提交审核，禁止编辑，跳转至项目信息页
 	if id > 0 && (com.Creator != this.currentUser.Id || com.Status > 0) {
+		//if id > 0 && (com.AccountId != this.currentUser.Id) {
 		this.Redirect(fmt.Sprintf("/item/info/%d", id), 302)
 		this.end()
 	}
@@ -44,6 +45,82 @@ func (this *Company) Apply() {
 	id, _ := this.GetInt64(":id")
 	this.trace(id)
 	this.setTplNames("apply")
+}
+
+// 转移所有权
+func (this *Company) Shift() {
+	companyId, err := this.GetInt64("id")
+	if err != nil || companyId <= 0 {
+		this.renderJson(utils.ActionResult(false, models.Err("缺乏相应的项目信息")))
+		return
+	}
+	// 检查要提交数据的项目是否存在，防止第三方恶意写入
+	if !this.exists(companyId) {
+		this.renderJson(utils.ActionResult(false, models.Err("项目主体错误或不存在")))
+		return
+	}
+
+	shift := new(models.CompanyShift)
+	shift.CompanyId = companyId
+	shift.Email = strings.TrimSpace(this.GetString("email"))
+	shift.Token = utils.MD5Ex(fmt.Sprintf("%s%d", shift.Email, shift.CompanyId))
+
+	this.extendEx(shift)
+
+	if err, es := shift.Save(); err == nil {
+		this.renderJson(utils.ActionResult(true, shift))
+	} else {
+		this.trace(err, es)
+		es = append(es, models.Err(err.Error()))
+		this.renderJson(utils.ActionResult(false, es))
+	}
+}
+
+// 接收项目所有权
+func (this *Company) Shifted() {
+	companyId, err := this.GetInt64("id")
+	if err != nil || companyId <= 0 {
+		this.renderJson(utils.ActionResult(false, models.Err("缺乏相应的项目信息")))
+		return
+	}
+	// 签名
+	token := this.GetString("token")
+	// 读取当前用户的email
+	act := new(models.Profile)
+	act.Id = this.currentUser.Id
+
+	if ok, _ := act.Get(); ok {
+		shift := new(models.CompanyShift)
+		shift.CompanyId = companyId
+
+		// status=1 表示所有权已经转移
+		if ok, _ := shift.Get(); ok && shift.Status == 0 {
+			// token一致,转移所有权
+			if token == shift.Token && shift.Token == utils.MD5Ex(fmt.Sprintf("%s%d", act.Email, companyId)) {
+				// 转移所有权
+				com := new(models.Company)
+				com.Id = companyId
+				com.AccountId = this.currentUser.Id
+				this.extend(com)
+
+				if err := com.Shift(); err == nil {
+					shift.Status = 1
+					go shift.Save()
+
+					this.Redirect("/my/company", 302)
+				} else {
+					this.error_page("接收项目所有权失败：" + err.Error())
+				}
+			} else {
+				this.error_page("签名校验不一致")
+			}
+		} else {
+			this.error_page("该项目没有所有权转移请求")
+		}
+	} else {
+		this.error_page("非法的账户请求")
+	}
+
 }
 
 // 我的项目列表

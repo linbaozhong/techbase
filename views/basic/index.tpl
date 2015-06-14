@@ -189,7 +189,6 @@
 			var _form = $(this);
 			$.post('/basic/save',_form.serialize(),function(json){
 				if (json.ok) {
-					_form.children('.alert').removeClass('visible');
 					snow.popWindow.close();
 					push_item(json.data);
 				} else{
@@ -197,7 +196,7 @@
 					for (var i = 0; i < json.data.length; i++) {
 						_errors.push(json.data[i].key +','+ json.data[i].message);
 					}
-					_form.children('.alert').removeClass('alert-success').addClass('alert-danger').addClass('visible').text(':( , '+_errors.join(';'));
+					showMessage(_form.find('.alert'),_errors.join(';'),false);
 				}
 			});
 		})
