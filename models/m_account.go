@@ -54,7 +54,6 @@ func (this *Accounts) AllList() ([]AccountProfile, error) {
 
 // 账号是否存在
 func (this *Accounts) Exists() (bool, error) {
-	//fmt.Println(this)
 	return db.Get(this)
 }
 

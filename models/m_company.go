@@ -150,7 +150,7 @@ func (this *Company) Save() (error, []Error) {
 			return err, nil
 		}
 	} else {
-		_, err = session.Where("id=? and accountId=?", this.Id, this.AccountId).Cols("Name", "CompanyName", "Fullname", "Website", "Logo", "Intro", "City", "Country", "StartTime", "Field", "State", "Updator", "Updated", "Ip").Update(this)
+		_, err = session.Where("id=? and accountId=?", this.Id, this.AccountId).Cols("Name", "CompanyName", "Fullname", "Website", "Logo", "Intro", "City", "Country", "StartTime", "Field", "State", "status", "Updator", "Updated", "Ip").Update(this)
 
 		if err != nil {
 			session.Rollback()
@@ -271,7 +271,15 @@ func (this *Contact) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Cols("name", "place", "title", "year", "month", "tel", "weixin", "email", "linkedin", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		// 初始项目状态
+		com := new(Company)
+		com.Id = this.CompanyId
+		com.Status = 0
+
+		err = com.SetStatus()
+		if err == nil {
+			_, err = db.Cols("name", "place", "title", "year", "month", "tel", "weixin", "email", "linkedin", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		}
 	}
 	return err, nil
 }
@@ -304,7 +312,15 @@ func (this *Introduce) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Cols("images", "content", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		// 初始项目状态
+		com := new(Company)
+		com.Id = this.CompanyId
+		com.Status = 0
+
+		err = com.SetStatus()
+		if err == nil {
+			_, err = db.Cols("images", "content", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		}
 	}
 	return err, nil
 }
@@ -341,7 +357,15 @@ func (this *Links) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Cols("qrcode", "web", "iphone", "ipad", "android", "windows", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		// 初始项目状态
+		com := new(Company)
+		com.Id = this.CompanyId
+		com.Status = 0
+
+		err = com.SetStatus()
+		if err == nil {
+			_, err = db.Cols("qrcode", "web", "iphone", "ipad", "android", "windows", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		}
 	}
 	return err, nil
 }
@@ -380,7 +404,15 @@ func (this *Members) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Cols("name", "place", "title", "avatar", "intro").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		// 初始项目状态
+		com := new(Company)
+		com.Id = this.CompanyId
+		com.Status = 0
+
+		err = com.SetStatus()
+		if err == nil {
+			_, err = db.Cols("name", "place", "title", "avatar", "intro").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		}
 	}
 	return err, nil
 }
@@ -392,7 +424,15 @@ func (this *Members) Get() (bool, error) {
 
 // 删除
 func (this *Members) Delete() error {
-	_, err := db.Id(this.Id).Cols("deleted", "updator", "updated", "ip").Update(this)
+	// 初始项目状态
+	com := new(Company)
+	com.Id = this.CompanyId
+	com.Status = 0
+
+	err := com.SetStatus()
+	if err == nil {
+		_, err = db.Id(this.Id).Cols("deleted", "updator", "updated", "ip").Update(this)
+	}
 	return err
 }
 
@@ -448,7 +488,15 @@ func (this *Loops) Save() (error, []Error) {
 	if this.Id == 0 {
 		_, err = db.Insert(this)
 	} else {
-		_, err = db.Cols("loop", "amountmoney", "amount", "valuemoney", "value", "year", "month", "investor", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		// 初始项目状态
+		com := new(Company)
+		com.Id = this.CompanyId
+		com.Status = 0
+
+		err = com.SetStatus()
+		if err == nil {
+			_, err = db.Cols("loop", "amountmoney", "amount", "valuemoney", "value", "year", "month", "investor", "updator", "updated", "ip").Where("id=? and companyId=?", this.Id, this.CompanyId).Update(this)
+		}
 	}
 	return err, nil
 }
@@ -460,7 +508,15 @@ func (this *Loops) Get() (bool, error) {
 
 // 删除
 func (this *Loops) Delete() error {
-	_, err := db.Id(this.Id).Cols("deleted", "updator", "updated", "ip").Update(this)
+	// 初始项目状态
+	com := new(Company)
+	com.Id = this.CompanyId
+	com.Status = 0
+
+	err := com.SetStatus()
+	if err == nil {
+		_, err = db.Id(this.Id).Cols("deleted", "updator", "updated", "ip").Update(this)
+	}
 	return err
 }
 

@@ -10,6 +10,7 @@ import (
 	"strings"
 	"techbase/models"
 	"techbase/utils"
+	"time"
 )
 
 type Company struct {
@@ -29,7 +30,7 @@ func (this *Company) Edit() {
 	com := this.getCompanyInfo(id)
 
 	// 如果已经提交审核，禁止编辑，跳转至项目信息页
-	if id > 0 && (com.Creator != this.currentUser.Id || com.Status > 0) {
+	if id > 0 && (com.Creator != this.currentUser.Id || com.Status == 1) {
 		//if id > 0 && (com.AccountId != this.currentUser.Id) {
 		this.Redirect(fmt.Sprintf("/item/info/%d", id), 302)
 		this.end()
@@ -59,44 +60,79 @@ func (this *Company) Shift() {
 		this.renderJson(utils.ActionResult(false, models.Err("项目主体错误或不存在")))
 		return
 	}
+	//email
+	email := strings.TrimSpace(this.GetString("email"))
+	// 检查该email账户是否存在
+	act := new(models.Profile)
+	act.Email = email
+
+	if ok, _ := act.Exists(); !ok {
+		// 如果不存在，返回一个错误
+		this.renderJson(utils.ActionResult(false, models.Err(fmt.Sprintf("%s 账户不存在", email))))
+		return
+	}
 
 	shift := new(models.CompanyShift)
 	shift.CompanyId = companyId
-	shift.Email = strings.TrimSpace(this.GetString("email"))
-	shift.Token = utils.MD5Ex(fmt.Sprintf("%s%d", shift.Email, shift.CompanyId))
+	shift.Email = email
+
+	//shift.Token = utils.MD5Ex(fmt.Sprintf("%s%d", shift.Email, shift.CompanyId))
+	shift.Token = encode(shift.Email, shift.CompanyId)
 
 	this.extendEx(shift)
 
 	if err, es := shift.Save(); err == nil {
+		// 发送邮件通知
+		go this.sendmail(shift)
 		this.renderJson(utils.ActionResult(true, shift))
 	} else {
-		this.trace(err, es)
+		//this.trace(err, es)
 		es = append(es, models.Err(err.Error()))
 		this.renderJson(utils.ActionResult(false, es))
 	}
 }
 
+// 生成token
+func encode(email string, companyId int64) string {
+	return utils.MD5Ex(fmt.Sprintf("%s%d", email, companyId))
+}
+
+// 发送项目管理权转移邮件给接受方
+func (this *Company) sendmail(shift *models.CompanyShift) {
+	url := fmt.Sprintf("%s://%s:%s/company/shifted/%d/%s", strings.ToLower(this.Ctx.Request.Proto[:4]), this.Ctx.Request.Host, appconf("httpport"), shift.CompanyId, shift.Token)
+
+	body := fmt.Sprintf(appconf("service::emailBody"), url, url, time.Now().Format("2006年01月02日 15:04分"))
+	// 发送
+	this.mailSend(shift.Email, fmt.Sprintf(appconf("service::emailSubject"), time.Now().Format("2006年01月02日 15:04分")), body)
+}
+
 // 接收项目所有权
 func (this *Company) Shifted() {
-	companyId, err := this.GetInt64("id")
+	companyId, err := this.GetInt64("0")
 	if err != nil || companyId <= 0 {
 		this.renderJson(utils.ActionResult(false, models.Err("缺乏相应的项目信息")))
 		return
 	}
 	// 签名
-	token := this.GetString("token")
+	token := this.GetString("1")
 	// 读取当前用户的email
 	act := new(models.Profile)
 	act.Id = this.currentUser.Id
 
 	if ok, _ := act.Get(); ok {
+		// 初次验证token
+		if token != encode(act.Email, companyId) {
+			this.error_page("签名校验不一致")
+			return
+		}
+
 		shift := new(models.CompanyShift)
 		shift.CompanyId = companyId
 
 		// status=1 表示所有权已经转移
 		if ok, _ := shift.Get(); ok && shift.Status == 0 {
 			// token一致,转移所有权
-			if token == shift.Token && shift.Token == utils.MD5Ex(fmt.Sprintf("%s%d", act.Email, companyId)) {
+			if token == shift.Token {
 				// 转移所有权
 				com := new(models.Company)
 				com.Id = companyId
@@ -105,6 +141,7 @@ func (this *Company) Shifted() {
 
 				if err := com.Shift(); err == nil {
 					shift.Status = 1
+					// 变更转移状态
 					go shift.Save()
 
 					this.Redirect("/my/company", 302)
@@ -115,7 +152,7 @@ func (this *Company) Shifted() {
 				this.error_page("签名校验不一致")
 			}
 		} else {
-			this.error_page("该项目没有所有权转移请求")
+			this.error_page("此请求已失效")
 		}
 	} else {
 		this.error_page("非法的账户请求")

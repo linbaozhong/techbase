@@ -75,6 +75,11 @@ func (this *Articles) SetRecommend() (int64, error) {
 	return db.Id(this.Id).Cols("recommend", "updator", "updated", "ip").Update(this)
 }
 
+// 顺序
+func (this *Articles) SetPosition() (int64, error) {
+	return db.Id(this.Id).Cols("position", "updator", "updated", "ip").Update(this)
+}
+
 // 删除
 func (this *Articles) SetDelete() (int64, error) {
 	return db.Id(this.Id).Cols("status", "deleted", "updator", "updated", "ip").Update(this)
@@ -206,7 +211,7 @@ func (this *Articles) _list(view bool, page *Pagination, condition string, param
 	_dal := &Dal{}
 	_dal.From = "articles,basic"
 	_dal.Where = fmt.Sprintf("articles.tags = basic.value and basic.type=%d", Type_Media)
-	_dal.OrderBy = "articles.istop desc,articles.recommend desc,articles.updated desc"
+	_dal.OrderBy = "articles.istop desc,articles.recommend desc,articles.position desc,articles.updated desc"
 
 	// 可见的
 	if view {
@@ -233,16 +238,11 @@ func (this *Articles) _list(view bool, page *Pagination, condition string, param
 		_dal.Size = page.Size
 		_dal.Offset = page.Index * page.Size
 
-		_dal.Field = "articles.id,articles.title,articles.topic,articles.istop,articles.recommend,articles.status,articles.deleted,articles.reason,articles.updated,basic.name as tag"
+		_dal.Field = "articles.id,articles.title,articles.topic,articles.istop,articles.recommend,articles.position,articles.status,articles.deleted,articles.reason,articles.updated,basic.name as tag"
 		err := db.Sql(_dal.Select(), params...).Find(&as)
 		return as, err
 	}
 	return as, nil
-}
-
-// 设置文档节点位置
-func (this *Articles) SetPosition() (bool, error) {
-	return false, nil
 }
 
 // 内容分页列表（可见子孙节点）

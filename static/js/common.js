@@ -236,6 +236,75 @@ function showMessage(obj, msg, success) {
 	}, 5000)
 }
 
+
+//分页 index从1开始
+function showPages(count,index,size){
+	var pageHtml = [];
+
+	if (count > 0) {
+        //页码按钮数
+        var buttons = 5;
+        var start = 1;
+        if (index >= buttons)
+        {
+            if (count - index > buttons)
+            {
+                start = index - 2;
+            }
+            else if (count - index < buttons)
+            {
+                start = count - buttons;
+            }
+            else if (count - index == buttons)
+            {
+                start = count - buttons - 1;
+            }
+        }
+        if (index > 1)
+        {
+            pageHtml.push('<li data-id="1" title="首页"><a href="javascript:;">|<</a></li>');
+            pageHtml.push('<li data-id="'+(index - 1)+'" title="上一页"><a href="javascript:;"><</a></li>');
+        }
+        else
+        {
+            pageHtml.push('<li disabled="disabled" data-id="0" title="首页"><a href="javascript:;">|<</a></li>');
+            pageHtml.push('<li disabled="disabled" data-id="0" title="上一页"><a href="javascript:;"><</a></li>');
+        }
+
+		for( var i = start; i < count + 1; i++ ){ 
+			if (i - start > 5)
+            {
+                break;
+            }
+            if ((count > buttons) && (index >= buttons && i == start) || (index <= count - buttons && i == start + buttons))
+            {
+            	pageHtml.push('<li class="pagemore" data-id="' + i + '"><a href="javascript:;" >...</a></li>');
+            }
+            else
+            {
+            	if(i==index){
+            		pageHtml.push('<li class="active" disabled="disabled" data-id="' + i + '"><a href="javascript:;">' + i + '</a></li>');
+            	}else{
+            		pageHtml.push('<li data-id="' + i + '"><a href="javascript:;">' + i + '</a></li>');
+            	}
+            }
+			
+		}
+
+		if (index < count)
+        {
+            pageHtml.push('<li data-id="'+(index + 1)+'" title="下一页"><a href="javascript:;">></a></li>');
+            pageHtml.push('<li title="末页" data-id="'+count+'"><a href="javascript:;">>|</a></li>');
+        }
+        else
+        {
+            pageHtml.push('<li disabled="disabled" title="下一页" data-id="0"><a href="javascript:;">></a></li>');
+            pageHtml.push('<li disabled="disabled" title="末页" data-id="0"><a href="javascript:;">>|</a></li>');
+        }
+	}
+	return pageHtml.join('');
+}
+
 $(function(){
 	(function($) {
 		var speed = 5000,
@@ -274,4 +343,13 @@ $(function(){
 			$('.slideshow .banner-nav span').hide();
 		}
 	})(jQuery);
+});
+
+$(function(){
+	$('img').each(function(){
+		console.log(this.complete,this.naturalWidth);
+		if(!this.complete || !this.naturalWidth){
+			this.src = '/static/img/png.png';
+		}
+	});
 });

@@ -29,7 +29,7 @@
 			<div class="alert" role="alert">hi</div>
 			<input type="hidden" name="id" id="inputId" value="0" />
 			<div class="form-group">
-				<div class="col-sm-12 snow-shift-url" style="word-wrap: break-word;">
+				<div class="col-sm-12 small snow-shift-url" style="word-wrap: break-word;">
 					
 				</div>
 			</div>
@@ -49,17 +49,16 @@
 </article>
 <script type="text/javascript">
 	function push_item(item){
-		console.log(item);
 		
 		var _row = $('#snow-list').find('.row-id-'+item.id),
 			_html = [],_url='',_rongzi='';
 			
-		if(item.creator=={{.account.Id}} && item.status < 1){
-		//if(item.accountId=={{.account.Id}}){
+		if(item.creator=={{.account.Id}} && item.status != 1){
 			_url = '/company/edit/'+item.id
 		}else{
 			_url = '/item/info/'+item.id
 		}
+		
 		 _html.push('<div class="media row-id-'+item.id+'">');                                                         
 		 _html.push('<div class="media-left"><a href="'+_url+'"><img class="media-object" src="'+item.logo+'" style="width: 100px;"></a></div>');                                                         
 		 _html.push('<div class="media-body"><div><a href="'+_url+'"><span class="media-heading" style="font-size:1.15em;">'+item.name+'</span></a>');
@@ -147,16 +146,18 @@
 			var _form = $(this);
 			
 			$.post('/company/shift',_form.serialize(),function(json){
+				console.log(json);
 				if (json.ok) {
 					var _url = window.location.protocol 
 						+ '//' + window.location.host 
-						+ '/company/shifted?id='+json.data.companyId+'&token='+json.data.token;
+						+ '/company/shifted/'+json.data.companyId+'/'+json.data.token;
 						
-					$('#snow-form .snow-shift-url').html('邮件已经发出，也可以将此链接发给对方:<br>'+_url);
-					showMessage(_form.find('.alert'),'邮件已经发出，也可以将此链接发给对方:<br>'+_url,true);
+					$('#snow-form .snow-shift-url').html('邮件已经发出，鉴于邮件有可能被拦截，建议复制此链接并以其它方式发送给对方:<br>'+_url);
+					//showMessage(_form.find('.alert'),'邮件已经发出，也可以将此链接发给对方:<br>'+_url,true);
 					//snow.popWindow.close();
 				} else{
-					showMessage(_form.find('.alert'),json.message,false);
+					var msg = json.data.length ?json.data[0]:json.data;
+					showMessage(_form.find('.alert'),msg.message,false);
 				}
 			});
 		})

@@ -33,6 +33,7 @@
 						<th>推荐</th>
 						<th>标题</th>
 						<th>编辑日期</th>
+						<th>顺序</th>
 						<th>状态</th>
 						<th>
 						</th>
@@ -42,7 +43,9 @@
 
 				</tbody>
 			</table>
-
+			<div class="clearfix small">
+				<ul class="pagination pull-right" id="newspage"></ul>
+			</div>
 		</div>
 	</div>
 	<div id="snow-wrap-valid" class="text-center" style="display: none;padding: 40px">
@@ -85,7 +88,9 @@
 			
 			$.getJSON('/article/list',{size:20,index:index,status:status},function(json){
 				if(json.ok){
-					$.each(json.data,function(i,art){
+					console.log(json.data);
+					$("#newspage").empty().append(showPages(json.data.page.count,json.data.page.index+1,json.data.page.size));
+					$.each(json.data.data,function(i,art){
 						var _html=[],_status='';
 						
 						switch(art.status){
@@ -106,9 +111,10 @@
 						_html.push('<tr id="snow-row-'+art.id +'">');
 						_html.push('<td></td>');
 						_html.push('<td><input class="snow-istop" type="checkbox" data-id="' + art.id + '" ' + (art.isTop==1 ? 'checked' : '') + ' /></td>');
-						_html.push('<td><input class="snow-recommend" type="checkbox" data-id="' + art.id + '" ' + (art.Recommend==1 ? 'checked' : '') + ' /></td>');
+						_html.push('<td><input class="snow-recommend" type="checkbox" data-id="' + art.id + '" ' + (art.recommend==1 ? 'checked' : '') + ' /></td>');
 						_html.push('<td>['+ art.tag + ']' + art.title + '</td>');
 						_html.push('<td>' + (new Date(art.updated)).format() + '</td>');
+						_html.push('<td><input class="snow-position" type="number" data-id="' + art.id + '" value="'+art.position+'" style="width:50px;" /></td>');
 						_html.push('<td>' + _status + '</td>');
 						_html.push('<td>');
 						// 如果是回收站
@@ -139,6 +145,24 @@
 			});
 		};
 		
+
+		//分页新闻
+		$("#newspage").on("click", "li", function(){
+			if($(this).hasClass('active')){
+				return false;
+			}
+			var index = $(this).data("id");
+			if (index > 0) {
+				if($(this).hasClass("pagemore")){
+					$("#newspage").empty().append(showPages(1,1,20));
+				}else{
+					loadNews(index-1,$('select[name="status"]').val())
+				}		
+			}
+	
+			return false
+		});
+	
 		$('select[name="status"]').change(function(){
 			loadNews(0,$(this).val());
 		}).change();
@@ -195,6 +219,17 @@
 					_this.closest('tr').slideUp(1000,function(){
 						$(this).remove();
 					});
+				} else{
+					snow.alert(json.data.message);
+				}
+			});
+		}).on('change','.snow-position',function(){
+			// 提交审核
+			var _this = $(this),_id = _this.data('id');
+			$.getJSON('/article/setposition',{id:_id,position:_this.val()},function(json){
+				console.log(json);
+				if (json.ok) {
+					
 				} else{
 					snow.alert(json.data.message);
 				}

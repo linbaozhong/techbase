@@ -45,7 +45,11 @@ func (this *Article) List() {
 	}
 
 	if err == nil {
-		this.renderJson(utils.JsonResult(true, "", as))
+		rtjson := new(models.ReturnJson)
+		rtjson.Page = p
+		rtjson.Data = as
+
+		this.renderJson(utils.JsonResult(true, "", rtjson))
 	} else {
 		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
 	}
@@ -185,7 +189,31 @@ func (this *Article) SetRecommend() {
 	}
 }
 
-// 推荐
+// 顺序
+func (this *Article) SetPosition() {
+	art := new(models.Articles)
+
+	id, err := this.GetInt64("id")
+	position, err := this.GetInt("position")
+
+	if err == nil && id > 0 {
+		art.Id = id
+		art.Position = position
+	} else {
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+		return
+	}
+
+	this.extend(art)
+
+	if ok, err := art.SetPosition(); err == nil && ok > 0 {
+		this.renderJson(utils.JsonResult(true, "", ""))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
+}
+
+// 删除
 func (this *Article) SetDelete() {
 	art := new(models.Articles)
 

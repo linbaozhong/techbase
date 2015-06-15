@@ -9,6 +9,7 @@ import (
 	"html/template"
 	"io"
 	"mime/multipart"
+	"net/smtp"
 	"net/url"
 	"os"
 	"path"
@@ -435,29 +436,6 @@ func (this *Base) allowRequest() bool {
 
 }
 
-////读取登录用户的Cookie信息
-//func (this *Base) GetCurrentUser(cookie string) (currentuser *models.Current) {
-//	currentuser = new(models.Current)
-
-//	cookie = utils.CookieDecode(cookie)
-
-//	//拆分cookie
-//	curr := strings.Split(cookie, "|")
-//	if len(curr) > 0 {
-//		currentuser.Id, _ = utils.Str2int64(curr[0]) //strconv.ParseInt(curr[0], 10, 0)
-//	}
-//	if len(curr) > 1 {
-//		currentuser.Name = curr[1]
-//	}
-//	if len(curr) > 2 {
-//		currentuser.Avatar = curr[2]
-//	}
-//	if len(curr) > 3 {
-//		currentuser.Role = curr[3]
-//	}
-//	return
-//}
-
 /*
 * 返回form表单中checkbox的状态值的bool形式
  */
@@ -691,6 +669,35 @@ func (this *Base) upload(key string) (files []*models.UploadFile, err error) {
  */
 func (this *Base) trace(v ...interface{}) {
 	beego.Debug(fmt.Sprintf("[%s] %s/%s ", this.Ctx.Input.IP(), this.controllerName, this.actionName) + fmt.Sprintf("Info:%s", utils.Interface2str(v...)))
+}
+
+//邮件发送方法
+func (this *Base) mailSend(to, subject, body string) error {
+	//
+	user := appconf("service::smtpAccount")
+	password := appconf("service::smtpPassword")
+	host := appconf("service::smtpServer")
+	port := appconf("service::smtpPort")
+	mailtype := "html"
+	//
+	auth := smtp.PlainAuth("", user, password, host)
+
+	var content_type string
+	if mailtype == "html" {
+		content_type = "Content-Type: text/" + mailtype + "; charset=UTF-8"
+	} else {
+		content_type = "Content-Type: text/plain" + "; charset=UTF-8"
+	}
+
+	msg := []byte("To: " + to + "\r\nFrom: " + user + "<" + user + ">\r\nSubject: " + subject + "\r\n" + content_type + "\r\n\r\n" + body)
+
+	send_to := strings.Split(to, ";")
+
+	err := smtp.SendMail(fmt.Sprintf("%s:%s", host, port), auth, user, send_to, msg)
+
+	this.trace(err)
+
+	return err
 }
 
 /*
