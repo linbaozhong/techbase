@@ -4,7 +4,7 @@
 		margin: 0 10px;
 	}
 </style>
-<div id="footer_0" class="container " style="margin: 40px auto;">
+<div id="footer_0" class="container row" style="margin:0 auto;padding:10px 0;">
 	<div class="text-center" style="display:none;">
 		<i class="fa fa-spinner fa-spin fa-2x"></i><span style="vertical-align: super;margin-left: 1em;">正在拼命地读取……</span>
 	</div>
@@ -15,7 +15,7 @@
 		<div class="row">
 			<div class="col-xs-6 col-md-6">
 				<h4>公司信息</h4>
-				<p>公司：她本营网络科技有限公司</p>
+				<p>公司：北京她本营网络科技有限公司</p>
 				<p>地址：北京市朝阳区方恒国际中心D座2317室</p>
 				<p>邮件：techbase@tabenying.com</p>
 			</div>

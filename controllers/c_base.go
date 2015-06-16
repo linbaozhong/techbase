@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/cache"
 	"github.com/astaxie/beego/validation"
 	"github.com/beego/i18n"
 	"html/template"
@@ -42,10 +43,26 @@ var (
 	page      models.Page
 	langTypes []*langType
 	Dev       bool
+	BCache    cache.Cache //缓存
+	//CacheTime int64       //缓存时间，秒
 )
 
 func init() {
+	var err error
+
+	BCache, err = cache.NewCache("memory", `{"interval":600}`)
+	if err != nil {
+		fmt.Println(err)
+	}
+	// 缓存
+	//CacheTime, _ := beego.AppConfig.Int64("CacheExpired") //缓存时间
+	//if CacheTime == 0 {
+	//	CacheTime = 60
+	//}
+
+	// 运行模式
 	Dev = beego.RunMode == "dev"
+
 	page.Domain = appconf("site::domain")
 
 	// 引用beego官网代码

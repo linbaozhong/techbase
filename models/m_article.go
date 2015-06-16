@@ -195,6 +195,21 @@ func (this *Articles) ShowArticle(view bool) ([]ArticlesView, error) {
 	return art, err
 }
 
+// 热门文章列表
+func (this *Articles) HotList(size int) ([]ArticlesView, error) {
+	if size == 0 {
+		size = 10
+	}
+	// slice承载返回的结果
+	as := make([]ArticlesView, 0)
+
+	err := db.Sql(`select articles.id,articles.title,articles.topic,articles.intro 
+		from (select articleid, sum(readed) as rd,sum(loved),sum(weixin) from snsarticle group by articleid order by rd desc limit ?) as sns
+		left join articles on sns.articleid=articles.id`, size).Find(&as)
+
+	return as, err
+}
+
 // 分页列表可见的
 func (this *Articles) List(page *Pagination, condition string, params ...interface{}) ([]ArticlesView, error) {
 	return this._list(true, page, condition, params...)
@@ -238,7 +253,7 @@ func (this *Articles) _list(view bool, page *Pagination, condition string, param
 		_dal.Size = page.Size
 		_dal.Offset = page.Index * page.Size
 
-		_dal.Field = "articles.id,articles.title,articles.topic,articles.istop,articles.recommend,articles.position,articles.status,articles.deleted,articles.reason,articles.updated,basic.name as tag"
+		_dal.Field = "articles.id,articles.title,articles.topic,articles.intro,articles.istop,articles.recommend,articles.position,articles.status,articles.deleted,articles.reason,articles.updated,basic.name as tag"
 		err := db.Sql(_dal.Select(), params...).Find(&as)
 		return as, err
 	}

@@ -1,4 +1,19 @@
 <style type="text/css">
+	#snow-hotnews-list{
+		list-style-type: disc;
+  		margin-left: 20px;
+  		text-align: justify;
+	}
+	#snow-hotnews-list li{
+		border-bottom: 1px #ccc dotted;
+		padding: 5px 0;
+	}
+	.snow-yeqian{
+		padding: 10px 20px;
+  		margin-right: -46px;
+  		background-color: #fe4a66;
+  		color: #fff;
+	}
 	.snow-sns{
 		text-align: right;
 	}
@@ -61,7 +76,10 @@
 			
 	</div>
 	<div class="col-md-4 col-xs-4">
-		<h2 class="snow-color-red">热门文章</h2>
+		<h5 class="snow-yeqian">热门文章</h5>
+		<ul id="snow-hotnews-list">
+			
+		</ul>
 	</div>
 	<div id="snow-wrap-qrcode" class="text-center" style="display: none;">
 		<h6 class="snow-padding-top-40">打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</h6>
@@ -107,7 +125,19 @@
 				close: ''
 			});
 		});
-		
+		// 读取热门文章列表
+		$.getJSON('/home/hotnews',{size:10},function(json){
+			if(json.ok){
+				var _li = [];
+				$.each(json.data,function(i,item){
+					_li.push('<li>');
+					_li.push('<a href="/home/show/'+item.id+'">' + item.title + '</a>');
+					_li.push('</li>');
+				});
+				
+				$('#snow-hotnews-list').empty().html(_li.join(''));
+			}
+		})
 		// 读取新闻并渲染至页面
 		$.getJSON('/home/shownews',{id:'{{.articleId}}',review:'{{.review}}'},function(json){
 			if(json.ok){
@@ -129,8 +159,8 @@
 				$('.snow-media-article .snow-media-body').html(item.content);
 				$('.snow-media-article .snow-media-topic img').attr('src',item.topic);
 				if(item.original){
-					$('.snow-media-article .snow-media-original').text('声明：本文系作者 '+(item.author || item.updatorName)+' 授权她本营编辑后发表。转载须经过她本营同意并授权。联系邮箱：techbase@tabenying.com。');
-					$('.snow-media-article .snow-media-author').html('原创文章 &nbsp;&nbsp;作者：'+(item.author || item.updatorName));
+					$('.snow-media-article .snow-media-original').text('声明：本文系作者 '+ item.author +' 授权她本营编辑后发表。转载须经过她本营同意并授权。联系邮箱：techbase@tabenying.com。');
+					$('.snow-media-article .snow-media-author').html(item.author=='' ? '' : ('原创文章 &nbsp;&nbsp;作者：'+ item.author));
 				}else{
 					$('.snow-media-article .snow-media-original').text('声明：本文内容来源于其他网站，转载请注明内容来源和本文链接。');
 					

@@ -15,7 +15,7 @@
 </div>
 <style type="text/css">
 	.snow-yeqian{
-		padding: 10px 20px 10px 40px;margin-left: -30px;background-color: #fe4a66;color: #fff;border-radius: 0 10px 0 0;
+		padding: 10px 20px 10px 40px;margin-left: -30px;background-color: #fe4a66;color: #fff;
 	}
 </style>
 <article class="container">

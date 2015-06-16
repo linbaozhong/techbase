@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"fmt"
 	//"github.com/astaxie/beego"
 	"techbase/models"
 	"techbase/utils"
@@ -67,6 +68,15 @@ func (this *Home) News() {
 
 	p.Index, _ = this.GetInt("index")
 
+	cache_key := fmt.Sprintf("%s_%s_%d_%d", this.controllerName, this.actionName, p.Size, p.Index)
+	// 检查和读取cache
+	if BCache.IsExist(cache_key) && BCache.Get(cache_key) != nil {
+
+		this.renderJson(utils.ActionResult(true, BCache.Get(cache_key)))
+
+		return
+	}
+
 	art := new(models.Articles)
 
 	// 读取文章
@@ -81,7 +91,31 @@ func (this *Home) News() {
 	}
 
 	if err == nil {
+		// 缓存
+		BCache.Put(cache_key, as, 600)
 		this.renderJson(utils.JsonResult(true, "", as))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
+}
+
+// 热门文章
+func (this *Home) HotNews() {
+	//热门文章的条数
+	size, _ := this.GetInt("size")
+	cache_key := fmt.Sprintf("hotnews_%d", size)
+	// 检查和读取cache
+	if BCache.IsExist(cache_key) && BCache.Get(cache_key) != nil {
+		this.renderJson(utils.ActionResult(true, BCache.Get(cache_key)))
+		return
+	}
+
+	art := new(models.Articles)
+	if as, err := art.HotList(size); err == nil {
+		// 缓存
+		BCache.Put(cache_key, as, 600)
+		// 输出
+		this.renderJson(utils.ActionResult(true, as))
 	} else {
 		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
 	}
@@ -110,23 +144,33 @@ func (this *Home) ShowNews() {
 	}
 
 	art := new(models.Articles)
-
 	art.Id = id
 
+	cache_key := fmt.Sprintf("%s_%s_%d_%s", this.controllerName, this.actionName, id, this.GetString("review"))
+	// 检查和读取cache
+	if BCache.IsExist(cache_key) && BCache.Get(cache_key) != nil {
+		// 记录阅读次数
+		go this.readed(art)
+		this.renderJson(utils.ActionResult(true, BCache.Get(cache_key)))
+		return
+	}
+
 	var av interface{}
-	if this.GetString("review") == "1" && this.currentUser.Id > 0 {
+	if (Dev || this.GetString("review") == "1") && this.currentUser.Id > 0 {
 		av, err = art.ShowArticle(false)
 	} else {
 		av, err = art.ShowArticle(true)
 	}
 
 	if err == nil {
+		// 缓存
+		BCache.Put(cache_key, av, 600)
 		// 记录阅读次数
 		go this.readed(art)
 
-		this.renderJson(utils.JsonResult(true, "", av))
+		this.renderJson(utils.ActionResult(true, av))
 	} else {
-		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+		this.renderJson(utils.ActionResult(false, models.Err(err.Error())))
 	}
 
 }

@@ -1,84 +1,106 @@
-	// 扩展字符串方法，用指定字符填充字符串
-	String.prototype.padLeft = function(int, char) {
-		if (this.length >= int) {
-			return this;
-		} else {
-			var n = int - this.length,
-				s = [];
-			for (var i = 0; i < n; i++) {
-				s.push(char);
-			}
-			return s.join('') + this;
+// 扩展字符串方法，按最大长度截取字符串
+String.prototype.cut = function(max,end) {
+    var returnValue = [];
+    var byteValLen = 0;
+    for (var i = 0; i < this.length; i++) {
+
+        if (this[i].match(/[^x00-xff]/ig) == null)
+            byteValLen += 1;
+        else
+            byteValLen += 2;
+
+        if (byteValLen > max){
+        	returnValue.push(end || '');
+            break;
+        }
+        
+        returnValue.push(this[i]);
+    }
+    
+    return returnValue.join('');
+}
+
+// 扩展字符串方法，用指定字符填充字符串
+String.prototype.padLeft = function(int, char) {
+	if (this.length >= int) {
+		return this;
+	} else {
+		var n = int - this.length,
+			s = [];
+		for (var i = 0; i < n; i++) {
+			s.push(char);
 		}
-	};
-	// 扩展日期方法，日期格式化
-	Date.prototype.format = function(format) {
-		var date = this;
-		if (arguments.length == 0 && !date.getTime) {
-			format = date;
-			date = new Date();
+		return s.join('') + this;
+	}
+};
+// 扩展日期方法，日期格式化
+Date.prototype.format = function(format) {
+	var date = this;
+	if (arguments.length == 0 && !date.getTime) {
+		format = date;
+		date = new Date();
+	}
+	if (typeof format != 'string') {
+		var _now = new Date(),
+			_fmt = [];
+		if (date.getFullYear() != _now.getFullYear()) {
+			_fmt.push('yyyy年');
 		}
-		if (typeof format != 'string') {
-			var _now = new Date(),
-				_fmt = [];
-			if (date.getFullYear() != _now.getFullYear()) {
-				_fmt.push('yyyy年');
-			}
-			if (date.getMonth() != _now.getMonth()) {
-				_fmt.push('MM月');
-			}
-			if (date.getDate() != _now.getDate()) {
-				if (_fmt.length) {
+		if (date.getMonth() != _now.getMonth()) {
+			_fmt.push('MM月');
+		}
+		if (date.getDate() != _now.getDate()) {
+			if (_fmt.length) {
+				_fmt.push('dd日');
+			} else {
+				var _day = _now.getDate() - date.getDate();
+				if (_day > 2) {
 					_fmt.push('dd日');
 				} else {
-					var _day = _now.getDate() - date.getDate();
-					if (_day > 2) {
-						_fmt.push('当月dd日');
-					} else {
-						return _day == 1 ? '昨天' : '前天';
-					}
+					return _day == 1 ? '昨天' : '前天';
 				}
 			}
-			if (!_fmt.length) {
-				if (date.getHours() != _now.getHours()) {
-					return (_now.getHours() - date.getHours()).toString() + '小时前';
-				}
-				if (date.getMinutes() != _now.getMinutes()) {
-					return (_now.getMinutes() - date.getMinutes()).toString() + '分钟前';
-				}
-				return '刚刚';
-			}
-			//format = 'yyyy年MM月dd日 hh时mm分ss秒';
-			format = _fmt.join('');
 		}
-		var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', '日', '一', '二', '三', '四', '五', '六'];
-		return format.replace(/yyyy|yy|MM|dd|hh|mm|ss|星期|周|www|week/g, function(a) {
-			switch (a) {
-				case "yyyy":
-					return date.getFullYear();
-				case "yy":
-					return (date.getFullYear() + "").slice(2);
-				case "MM":
-					return (date.getMonth() + 1).toString(); //.padLeft(2,'0');
-				case "dd":
-					return date.getDate().toString(); //.padLeft(2, '0');
-				case "hh":
-					return date.getHours().toString().padLeft(2, '0');
-				case "mm":
-					return date.getMinutes().toString().padLeft(2, '0');
-				case "ss":
-					return date.getSeconds().toString().padLeft(2, '0');
-				case "星期":
-					return "星期" + week[date.getDay() + 7];
-				case "周":
-					return "周" + week[date.getDay() + 7];
-				case "week":
-					return week[date.getDay()];
-				case "www":
-					return week[date.getDay()].slice(0, 3);
+		if (!_fmt.length) {
+			if (date.getHours() != _now.getHours()) {
+				return (_now.getHours() - date.getHours()).toString() + '小时前';
 			}
-		});
-	};
+			if (date.getMinutes() != _now.getMinutes()) {
+				return (_now.getMinutes() - date.getMinutes()).toString() + '分钟前';
+			}
+			return '刚刚';
+		}
+		//format = 'yyyy年MM月dd日 hh时mm分ss秒';
+		format = _fmt.join('');
+	}
+	var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', '日', '一', '二', '三', '四', '五', '六'];
+	return format.replace(/yyyy|yy|MM|dd|hh|mm|ss|星期|周|www|week/g, function(a) {
+		switch (a) {
+			case "yyyy":
+				return date.getFullYear();
+			case "yy":
+				return (date.getFullYear() + "").slice(2);
+			case "MM":
+				return (date.getMonth() + 1).toString(); //.padLeft(2,'0');
+			case "dd":
+				return date.getDate().toString(); //.padLeft(2, '0');
+			case "hh":
+				return date.getHours().toString().padLeft(2, '0');
+			case "mm":
+				return date.getMinutes().toString().padLeft(2, '0');
+			case "ss":
+				return date.getSeconds().toString().padLeft(2, '0');
+			case "星期":
+				return "星期" + week[date.getDay() + 7];
+			case "周":
+				return "周" + week[date.getDay() + 7];
+			case "week":
+				return week[date.getDay()];
+			case "www":
+				return week[date.getDay()].slice(0, 3);
+		}
+	});
+};
 
 
 /*
@@ -178,7 +200,12 @@ jQuery弹窗插件 By 哈利蔺特
 	};
 })(jQuery);
 
+
+//全局变量
+//
 snow = snow || {};
+// 缺省的透明图片
+snow.default_img = '/static/img/png.png';
 
 snow.confirm = function(msg) {
 	return confirm(msg);
@@ -195,6 +222,7 @@ snow.refresh = function(){
 snow.go = function(u){
 	window.location = u;
 }
+
 // 页脚自适应沉底，页眉自适应浮动
 snow.footerBottom = function(){
 	// 页脚
@@ -347,9 +375,8 @@ $(function(){
 
 $(function(){
 	$('img').each(function(){
-		console.log(this.complete,this.naturalWidth);
-		if(!this.complete || !this.naturalWidth){
-			this.src = '/static/img/png.png';
+		if(this.complete && !this.naturalWidth){
+			this.src = snow.default_img;
 		}
 	});
 });

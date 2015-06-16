@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"fmt"
 	"techbase/models"
 	"techbase/utils"
 )
@@ -178,10 +179,25 @@ func (this *Item) Money() {
 
 // 全部基础数据
 func (this *Item) Basic() {
+	cache_key := fmt.Sprintf("%s_%s", this.controllerName, this.actionName)
+	// 检查和读取cache
+	if BCache.IsExist(cache_key) && BCache.Get(cache_key) != nil {
+		if callback := this.GetString("callback"); callback != "" {
+			this.renderJsonp(BCache.Get(cache_key))
+		} else {
+			this.renderJson(utils.ActionResult(true, BCache.Get(cache_key)))
+		}
+		return
+	}
+
 	basic := new(models.Basic)
 	bs, err := basic.All()
 
 	if err == nil {
+
+		// 缓存
+		BCache.Put(cache_key, bs, 600)
+
 		if callback := this.GetString("callback"); callback != "" {
 			this.renderJsonp(bs)
 		} else {

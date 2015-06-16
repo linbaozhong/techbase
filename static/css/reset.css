@@ -665,6 +665,7 @@ form .alert.visible {
 .snow-media-article .snow-media-body p{
 	/*text-indent: 2em;*/
 	text-align: justify;
+	overflow: hidden;
 }
 .snow-media-article .snow-media-body p img{
 	/*margin-left: -2em;*/

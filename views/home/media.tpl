@@ -1,18 +1,31 @@
 <style type="text/css">
+	#footer_0{
+		background-color: #eee;
+	}
+	.snow-media-list{
+		background-color:#eee;
+		margin-top: -150px;
+	}
 	.snow-media-list .row{
-		height: 250px;
+		height: 220px;
 		/*border-bottom: 1px solid #eee;
 		width: 850px;
 		margin-left: auto;
 		margin-right: auto;*/
-		margin-bottom: 50px;
+		margin-bottom: 35px;
+		background-color:#fff;
 	}
 	.snow-media-list .row header{
-		padding: 30px 80px;
+		padding: 20px 80px;
 		height: 100%;
+		opacity: .9;
 		/*border-width: 1px 0 1px 1px;
 		border-color: #eee;
 		border-style: solid;*/
+	}
+	.snow-media-list .row:hover header{
+		/*background-color: rgba(245, 111, 116, 0.4);*/
+		opacity: 1;
 	}
 	.snow-media-list footer{
 		height: 100%;
@@ -38,6 +51,17 @@
 		font-size: 16px;
   		overflow: hidden;
 	}
+	.snow-media-list .snow-article-title{
+		color: #337ab7;
+	}
+	.snow-media-list .snow-article-intro{
+		height:3em;
+		color: #666;
+		overflow: hidden;
+	}
+	.snow-media-list .snow-article-date{
+		color:#bbb;
+	}
 </style>
 <div class="container banner">
 	<div class="slideshow">
@@ -51,7 +75,7 @@
 		</nav>
 	</div>
 </div>
-<div class="container snow-media-list" style="margin-top: -150px;">
+<div class="container snow-media-list">
 	
 </div>
 
@@ -61,12 +85,13 @@
 			$.each(d,function(i,item){
 				var _html=[];
 				_html.push('<div class="row">');
-				_html.push('<header class="col-md-5">');
+				_html.push('<a href="/home/show/'+item.id+'" target="_blank"><header class="col-md-8">');
 				_html.push('<h3 class="snow-article-tag">' + item.tag+ '</h3>');
-				_html.push('<p class="snow-article-title"><a href="/home/show/'+item.id+'" target="_blank">' + item.title+ '</a></p>');
-				_html.push('<p class="snow-article-date">' + (new Date(item.updated)).format()+ '</p>');
-				_html.push('</header>');
-				_html.push('<footer class="col-md-7"><a href="/home/show/'+item.id+'" target="_blank">');
+				_html.push('<p class="snow-article-title">' + item.title.cut(60,'...')+ '</p>');
+				_html.push('<p class="snow-article-intro">' + item.intro.cut(120,'...') + '</p>');
+				_html.push('<p class="snow-article-date small">' + (new Date(item.updated)).format()+ '</p>');
+				_html.push('</header></a>');
+				_html.push('<footer class="col-md-4"><a href="/home/show/'+item.id+'" target="_blank">');
 				_html.push('<img src="'+ item.topic+'"/>');
 				_html.push('</a></footer>');
 				_html.push('</div>');
@@ -74,6 +99,20 @@
 				$('.snow-media-list').append(_html.join(''));
 			});
 			snow.footerBottom();
+			// 调整图片
+			$('.snow-media-list img').each(function(){
+				var _img = $(this);
+				_img.load(function(){
+					if(_img.height() < 220){
+						_img.css({
+							height:220,
+							width:'auto'
+						});
+					}
+				}).error(function(){
+					_img.attr('src',snow.default_img)
+				});
+			});
 		};
 		
 		function loadNews(index){
@@ -86,7 +125,7 @@
 					if(json.data.length == 0){
 						$('#footer_0 span').text('我勒个去，累死奴家了……');
 						setTimeout(function(){
-							$('#footer_0').children().fadeOut();
+							$('#footer_0').children().slideUp(600);
 						},4000)
 						return;
 					}
