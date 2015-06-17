@@ -70,9 +70,9 @@ func (this *Home) News() {
 
 	cache_key := fmt.Sprintf("%s_%s_%d_%d", this.controllerName, this.actionName, p.Size, p.Index)
 	// 检查和读取cache
-	if BCache.IsExist(cache_key) && BCache.Get(cache_key) != nil {
+	if cache_val := BCache.Get(cache_key); cache_val != nil {
 
-		this.renderJson(utils.ActionResult(true, BCache.Get(cache_key)))
+		this.renderJson(utils.ActionResult(true, cache_val))
 
 		return
 	}
@@ -105,8 +105,8 @@ func (this *Home) HotNews() {
 	size, _ := this.GetInt("size")
 	cache_key := fmt.Sprintf("hotnews_%d", size)
 	// 检查和读取cache
-	if BCache.IsExist(cache_key) && BCache.Get(cache_key) != nil {
-		this.renderJson(utils.ActionResult(true, BCache.Get(cache_key)))
+	if cache_val := BCache.Get(cache_key); cache_val != nil {
+		this.renderJson(utils.ActionResult(true, cache_val))
 		return
 	}
 
@@ -148,10 +148,10 @@ func (this *Home) ShowNews() {
 
 	cache_key := fmt.Sprintf("%s_%s_%d_%s", this.controllerName, this.actionName, id, this.GetString("review"))
 	// 检查和读取cache
-	if BCache.IsExist(cache_key) && BCache.Get(cache_key) != nil {
+	if cache_val := BCache.Get(cache_key); cache_val != nil {
 		// 记录阅读次数
 		go this.readed(art)
-		this.renderJson(utils.ActionResult(true, BCache.Get(cache_key)))
+		this.renderJson(utils.ActionResult(true, cache_val))
 		return
 	}
 

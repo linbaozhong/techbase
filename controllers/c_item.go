@@ -181,11 +181,11 @@ func (this *Item) Money() {
 func (this *Item) Basic() {
 	cache_key := fmt.Sprintf("%s_%s", this.controllerName, this.actionName)
 	// 检查和读取cache
-	if BCache.IsExist(cache_key) && BCache.Get(cache_key) != nil {
+	if cache_val := BCache.Get(cache_key); cache_val != nil {
 		if callback := this.GetString("callback"); callback != "" {
-			this.renderJsonp(BCache.Get(cache_key))
+			this.renderJsonp(cache_val)
 		} else {
-			this.renderJson(utils.ActionResult(true, BCache.Get(cache_key)))
+			this.renderJson(utils.ActionResult(true, cache_val))
 		}
 		return
 	}

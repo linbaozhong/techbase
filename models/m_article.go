@@ -67,17 +67,17 @@ func (this *Articles) SetStatus() (int64, error) {
 
 // 置顶
 func (this *Articles) SetTop() (int64, error) {
-	return db.Id(this.Id).Cols("istop", "updator", "updated", "ip").Update(this)
+	return db.Id(this.Id).Cols("istop", "updator", "ip").Update(this)
 }
 
 // 推荐
 func (this *Articles) SetRecommend() (int64, error) {
-	return db.Id(this.Id).Cols("recommend", "updator", "updated", "ip").Update(this)
+	return db.Id(this.Id).Cols("recommend", "updator", "ip").Update(this)
 }
 
 // 顺序
 func (this *Articles) SetPosition() (int64, error) {
-	return db.Id(this.Id).Cols("position", "updator", "updated", "ip").Update(this)
+	return db.Id(this.Id).Cols("position", "updator", "ip").Update(this)
 }
 
 // 删除
