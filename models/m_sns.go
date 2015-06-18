@@ -16,10 +16,9 @@ type SnsArticle struct {
 
 // 读过
 func (this *SnsArticle) SetReaded() bool {
-	//.Where("(accountId=? or sessionId=?) and articleId=?", this.AccountId, this.SessionId, this.ArticleId)
-	ok, _ := db.Get(this)
+	fmt.Println(this)
 	// 如果存在痕迹
-	if ok {
+	if this.Id > 0 {
 		if this.Readed != 1 {
 			this.Readed = 1
 			db.Id(this.Id).Cols("readed").Update(this)
@@ -35,7 +34,6 @@ func (this *SnsArticle) SetReaded() bool {
 
 // 喜欢
 func (this *SnsArticle) SetLoved() bool {
-	//.Where("(accountId=? or sessionId=?) and articleId=?", this.AccountId, this.SessionId, this.ArticleId)
 	ok, _ := db.Get(this)
 	// 如果存在痕迹
 	if ok {
@@ -57,7 +55,6 @@ func (this *SnsArticle) SetLoved() bool {
 
 // weixin分享
 func (this *SnsArticle) SetWeixin() bool {
-	//.Where("(accountId=? or sessionId=?) and articleId=?", this.AccountId, this.SessionId, this.ArticleId)
 	ok, _ := db.Get(this)
 	// 如果存在痕迹
 	if ok {

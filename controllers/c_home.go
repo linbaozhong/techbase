@@ -149,8 +149,6 @@ func (this *Home) ShowNews() {
 	cache_key := fmt.Sprintf("%s_%s_%d_%s", this.controllerName, this.actionName, id, this.GetString("review"))
 	// 检查和读取cache
 	if cache_val := BCache.Get(cache_key); cache_val != nil {
-		// 记录阅读次数
-		go this.readed(art)
 		this.renderJson(utils.ActionResult(true, cache_val))
 		return
 	}
@@ -165,8 +163,6 @@ func (this *Home) ShowNews() {
 	if err == nil {
 		// 缓存
 		BCache.Put(cache_key, av, 600)
-		// 记录阅读次数
-		go this.readed(art)
 
 		this.renderJson(utils.ActionResult(true, av))
 	} else {
@@ -211,7 +207,6 @@ func (this *Home) Loved() {
 
 		if ok := sns.SetLoved(); ok {
 			this.renderJson(utils.JsonResult(true, "", ""))
-			//art.SetReaded()
 		} else {
 			this.renderJson(utils.JsonResult(false, "", ""))
 		}
@@ -235,8 +230,9 @@ func (this *Home) GetSNS() {
 		sns.ArticleId = id
 
 		if ok, err := sns.GetSNS(); ok {
+			// 记录阅读此时
+			go sns.SetReaded()
 			this.renderJson(utils.JsonResult(true, "", sns))
-			//art.SetReaded()
 		} else {
 			this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
 		}
