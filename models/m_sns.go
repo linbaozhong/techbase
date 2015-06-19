@@ -15,20 +15,19 @@ type SnsArticle struct {
 }
 
 // 读过
-func (this *SnsArticle) SetReaded() bool {
+func (this *SnsArticle) SetReaded() (bool, error) {
 	fmt.Println(this)
 	// 如果存在痕迹
 	if this.Id > 0 {
 		if this.Readed != 1 {
 			this.Readed = 1
 			db.Id(this.Id).Cols("readed").Update(this)
-			return true
 		}
-		return false
+		return true, nil
 	} else {
 		this.Readed = 1
-		n, _ := db.Insert(this)
-		return n > 0
+		n, err := db.Insert(this)
+		return n > 0, err
 	}
 }
 

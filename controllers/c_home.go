@@ -181,7 +181,7 @@ func (this *Home) readed(art *models.Articles) {
 		sns.SessionId = sessionId
 		sns.ArticleId = art.Id
 
-		if ok := sns.SetReaded(); ok {
+		if ok, _ := sns.SetReaded(); ok {
 			//art.SetReaded()
 		}
 	}
@@ -229,11 +229,11 @@ func (this *Home) GetSNS() {
 		sns.SessionId = sessionId
 		sns.ArticleId = id
 
-		if ok, err := sns.GetSNS(); ok {
-			// 记录阅读此时
-			go sns.SetReaded()
+		// 记录阅读此时
+		if ok, err := sns.SetReaded(); ok {
 			this.renderJson(utils.JsonResult(true, "", sns))
 		} else {
+			this.trace(sns)
 			this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
 		}
 	}

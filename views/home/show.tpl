@@ -34,7 +34,18 @@
 	.snow-sns .fa-weixin:hover{
 		color: greenyellow;
 	}
-
+	.snow-media-article{
+		padding-left:30px;padding-right:30px;min-height: 600px;
+	}
+	.snow-media-article .snow-media-subtitle{
+		text-indent: 7em;
+	}
+	.snow-media-article .snow-media-published{
+		color: #bbb;margin-top: 20px;text-align: right;
+	}
+	.snow-media-article .snow-media-author{
+		margin-top: -32px;background: #fff;margin-left: auto;margin-right: auto;width: 288px;text-align: center;
+	}
 </style>
 <div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
@@ -45,35 +56,10 @@
 	</div>
 </div>
 <article class="container">
-	<div class="col-md-8 col-xs-8 snow-media-article" style="padding-left:30px;padding-right:30px;">
-		<h2>
-			<span class="snow-color-red snow-media-tag"></span>
-			<span class="small snow-media-title"></span>
-		</h2>
-		<h5 class="snow-media-subtitle" style="text-indent: 7em;"></h5>
-		<div class="small snow-media-published" style="color: #bbb;margin-top: 20px;text-align: right;">
-			
+	<div class="col-md-8 col-xs-8 snow-media-article">
+		<div class="text-center snow-color-red" style="position: absolute; right: 0; bottom: 0; top: 0; left: 0; height: 20px;margin: auto;">
+			<i class="fa fa-spinner fa-spin fa-2x"></i><span style="vertical-align: super;margin-left: 1em;">正在拼命地读取……</span>
 		</div>
-		<div class="snow-media-intro">
-			
-		</div>
-		<div class="snow-media-topic">
-			<img src=""/>
-		</div>
-		<div class="snow-media-body">
-			
-		</div>
-		<div class="snow-media-original small">
-			
-		</div>
-		<div class="snow-padding-top-40 snow-padding-bottom-40 snow-sns">
-			<a class="snow-sns-love" href="javascript:;"><i class="fa fa-heart"></i></a>&nbsp;&nbsp;<a class="snow-sns-weixin" href="javascript:;"><i class="fa fa-weixin"></i></a>
-		</div>
-		<hr />
-		<div class="snow-media-author small" style="margin-top: -32px;background: #fff;margin-left: auto;margin-right: auto;width: 288px;text-align: center;">
-			作者
-		</div>
-			
 	</div>
 	<div class="col-md-4 col-xs-4">
 		<h5 class="snow-yeqian">热门文章</h5>
@@ -99,13 +85,12 @@
 		})
 		// 生成网址二维码
 		$('.sonw-weixin-qrcode').qrcode({
-//			render: "table", //table方式 
 		    width: 200, //宽度 
 		    height:200, //高度 
 			text:window.location.protocol + '//' + window.location.host + '/m/show/{{.articleId}}'
 		});
 		// 点赞
-		$('.snow-sns .snow-sns-love').click(function(){
+		$('.snow-media-article').on('click','.snow-sns-love',function(){
 			var _this = $('i',this);
 			$.post('/home/loved',{id:'{{.articleId}}'},function(json){
 				if(json.ok){
@@ -116,9 +101,8 @@
 					}
 				}
 			});
-		});
-		// 分享
-		$('.snow-sns .snow-sns-weixin').click(function(){
+		}).on('click','.snow-sns-weixin',function(){
+			// 分享
 			$('#snow-wrap-qrcode').popWindow({
 				width: 390,
 				height: 360,
@@ -141,36 +125,59 @@
 		// 读取新闻并渲染至页面
 		$.getJSON('/home/shownews',{id:'{{.articleId}}',review:'{{.review}}'},function(json){
 			if(json.ok){
-				var item = json.data[0];
+				var item = json.data[0],_html = [],_original='',_author='';
 				//窗口标题
 				$('title').text('{{i18n .Lang "app title"}} - ' + item.title);
 				//描述
 				$('#description').attr('content',item.intro);
-				
-				$('.snow-media-article .snow-media-tag').text(getBasicName(8,item.tags));
-				$('.snow-media-article .snow-media-title').text(item.title);
+				// 正文
+				_html.push('<h2><span class="snow-color-red snow-media-tag">' + getBasicName(8,item.tags) + '</span>');
+				_html.push('&nbsp;<span class="small snow-media-title">' + item.title + '</span></h2>');
 				
 				if(item.subTitle.length){
-					$('.snow-media-article .snow-media-subtitle').text('———— ' + item.subTitle);
+					_html.push('<h5 class="snow-media-subtitle">———— ' + item.subTitle + '</h5>');
 				}
 				
-				$('.snow-media-article .snow-media-published').html('小编：'+ item.updatorName + '&nbsp;&nbsp;&nbsp;&nbsp;' + (new Date(item.updated).format()));
-				$('.snow-media-article .snow-media-intro').text(item.intro);
-				$('.snow-media-article .snow-media-body').html(item.content);
-				$('.snow-media-article .snow-media-topic img').attr('src',item.topic);
+				_html.push('<div class="small snow-media-published">小编：' + item.updatorName + '&nbsp;&nbsp;&nbsp;&nbsp;' + (new Date(item.updated).format()) + '</div>');
+				
+				if(item.intro.length){
+					_html.push('<div class="snow-media-intro">' + item.intro + '</div>');
+				}
+				
+				if(item.topic.length){
+					_html.push('<div class="snow-media-topic"><img src="' + item.topic + '"/></div>');
+				}
+				
+				_html.push('<div class="snow-media-body">' + item.content + '</div>');
+				
+				
 				if(item.original){
-					$('.snow-media-article .snow-media-original').text('声明：本文系作者 '+ item.author +' 授权她本营编辑后发表。转载须经过她本营同意并授权。联系邮箱：techbase@tabenying.com。');
-					$('.snow-media-article .snow-media-author').html(item.author=='' ? '' : ('原创文章 &nbsp;&nbsp;作者：'+ item.author));
+					_original = '声明：本文系作者 ' + item.author + ' 授权她本营编辑后发表。转载须经过她本营同意并授权。联系邮箱：techbase@tabenying.com。';
+					_author =  (item.author=='' ? '' : ('原创文章 &nbsp;&nbsp;作者：'+ item.author));
 				}else{
-					$('.snow-media-article .snow-media-original').text('声明：本文内容来源于其他网站，转载请注明内容来源和本文链接。');
-					
+					_original = '声明：本文内容来源于其他网站，转载请注明内容来源和本文链接。';
+
 					var _url = item.resourceUrl;
 					
 					if(item.resourceUrl.slice(0,5) != 'http:' && item.resourceUrl.slice(0,6) != 'https:'){
 						_url = 'http://' + item.resourceUrl;
 					}
-					$('.snow-media-article .snow-media-author').html('内容来源： &nbsp;&nbsp;<a href="'+_url+'" target="_blank">'+(item.resourceUrl || '') +'</a>');
+					_author = '内容来源： &nbsp;&nbsp;<a href="' + _url + '" target="_blank">'+(item.resourceUrl || '')  + '</a>';
 				}
+
+				_html.push('<div class="snow-media-original small">' + _original + '</div>');
+				_html.push('<div class="snow-padding-top-40 snow-padding-bottom-40 snow-sns">');
+				_html.push('<a class="snow-sns-love" href="javascript:;"><i class="fa fa-heart"></i></a>&nbsp;&nbsp;');
+				_html.push('<a class="snow-sns-weixin" href="javascript:;"><i class="fa fa-weixin"></i></a></div>');
+				
+				if(_author.length){
+					_html.push('<hr />');
+					_html.push('<div class="snow-media-author small">' + _author + '</div>');
+				}
+
+
+				$('.snow-media-article').empty().html(_html.join(''));
+				
 			}else{
 				
 			}

@@ -21,6 +21,7 @@
 		</script>
 		<script src="/static/js/device.min.js"></script>
 		<script type="text/javascript" src="/static/js/jquery-2.1.4.min.js"></script>
+		<script src="/static/js/jquery.touchSwipe.min.js"></script>
 		<script type="text/javascript">
 			snow.isMobile = device.mobile();
 //			if (device.mobile() || device.tablet()) {

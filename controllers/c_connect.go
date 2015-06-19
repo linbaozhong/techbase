@@ -66,7 +66,8 @@ func (this *Connect) Wx_Callback() {
 	//---用户禁止授权
 	if this.GetString("code") == "" {
 		//---跳转至错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", "用户禁止授权"), 302)
+		this.error_page("用户禁止授权")
+		//this.Redirect(this.UrlFor("Home.Error", ":msg", "用户禁止授权"), 302)
 		return
 	}
 
@@ -116,14 +117,16 @@ func (this *Connect) Wx_Callback() {
 	} else {
 
 		//---跳转至错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
+		this.error_page(err.Error())
+		//this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
 		return
 	}
 	fmt.Println(_account)
 	//---创建读取userinfo的请求
 	if err != nil || wx_userinfo(_account) != nil {
 		//---跳转至错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
+		this.error_page(err.Error())
+		//this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
 		return
 	}
 
@@ -232,14 +235,16 @@ func (this *Connect) QQ_Callback() {
 	//---检查是否有接口调用错误
 	if this.GetString("msg") != "" {
 		//---跳转至错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", this.GetString("msg")), 302)
+		this.error_page(this.GetString("msg"))
+		//this.Redirect(this.UrlFor("Home.Error", ":msg", this.GetString("msg")), 302)
 		return
 	}
 
 	//---验证state防止csrf攻击
 	if this.GetString("state") != this.GetSession("state").(string) {
 		//---跳转至错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", ""), 302)
+		this.error_page("")
+		//this.Redirect(this.UrlFor("Home.Error", ":msg", ""), 302)
 		return
 	}
 
@@ -276,21 +281,24 @@ func (this *Connect) QQ_Callback() {
 
 	} else {
 		//---跳转至错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
+		this.error_page(err.Error())
+		//this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
 		return
 	}
 
 	//---创建读取openid的请求
 	if qq_openid(_account) != nil {
 		//---跳转至错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
+		this.error_page(err.Error())
+		//this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
 		return
 	}
 
 	//---创建读取userinfo的请求
 	if qq_userinfo(_account) != nil {
 		//---跳转至错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
+		this.error_page(err.Error())
+		//this.Redirect(this.UrlFor("Home.Error", ":msg", err.Error()), 302)
 		return
 	}
 	// 清空旧的用户信息

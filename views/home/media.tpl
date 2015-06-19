@@ -85,13 +85,13 @@
 			$.each(d,function(i,item){
 				var _html=[];
 				_html.push('<div class="row">');
-				_html.push('<a href="/home/show/'+item.id+'" target="_blank"><header class="col-md-8">');
+				_html.push('<a href="/home/show/'+item.id+'" target="_blank"><header class="col-xs-8 col-md-8">');
 				_html.push('<h3 class="snow-article-tag">' + item.tag+ '</h3>');
 				_html.push('<p class="snow-article-title">' + item.title.cut(60,'...')+ '</p>');
 				_html.push('<p class="snow-article-intro">' + item.intro.cut(120,'...') + '</p>');
 				_html.push('<p class="snow-article-date small">' + (new Date(item.updated)).format()+ '</p>');
 				_html.push('</header></a>');
-				_html.push('<footer class="col-md-4"><a href="/home/show/'+item.id+'" target="_blank">');
+				_html.push('<footer class="col-xs-4 col-md-4"><a href="/home/show/'+item.id+'" target="_blank">');
 				_html.push('<img src="'+ item.topic+'"/>');
 				_html.push('</a></footer>');
 				_html.push('</div>');
@@ -139,15 +139,25 @@
 			});				
 		};
 		//
-		$(window).scroll(function(){
-			var _this = $(this),_footer = $('#footer');
+		function bodyScroll(){
+			var _this = $(window),_footer = $('#footer');
 			
-			if(!_footer.data('loading') && (150 + _footer.offset().top <= _this.scrollTop() + _this.height())){
+			if(!_footer.data('loading') && (120 + _footer.offset().top <= _this.scrollTop() + _this.height())){
 				// 显示进度
 				$('#footer_0').children().show();
 				var _index = _footer.data('index') || 0;
 				loadNews(_index);
 			}
+		};
+		
+		$('body').swipe({
+			swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
+				bodyScroll();
+			}
+		});
+
+		$(window).scroll(function(){
+			bodyScroll();
 		}).scroll();
 
 	});

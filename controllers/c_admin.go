@@ -26,9 +26,9 @@ func (this *Admin) Prepare() {
 			return
 		} else {
 			// 跳转到错误页
-			//this.Redirect(this.UrlFor("Home.Error", ":msg", utils.UrlEncode("拒绝访问未授权的功能，请联系系统管理员……")), 302)
+			//this.Redirect(this.UrlFor("Home.Error", ":msg", "拒绝访问未授权的功能，请联系系统管理员……"), 302)
 			//this.end()
-			this.error_page(utils.UrlEncode("拒绝访问未授权的功能，请联系系统管理员……"))
+			this.error_page("拒绝访问未授权的功能，请联系系统管理员……")
 			return
 		}
 	}

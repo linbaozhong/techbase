@@ -16,13 +16,13 @@ func (this *Auth) Prepare() {
 	if this.currentUser.Id <= 0 {
 		//
 		if this.IsAjax() {
-			this.renderJson(utils.JsonResult(false, "", utils.UrlEncode("无效用户,请登录……")))
+			this.renderJson(utils.JsonResult(false, "", "无效用户,请登录……"))
 			return
 		} else {
 			// 跳转到错误页
-			//this.Redirect("/login?returnurl="+this.Ctx.Request.URL.String(), 302)
-			this.Redirect(this.UrlFor("Home.Error", ":msg", utils.UrlEncode("你正在访问未经许可的内容，请登录后重试……")), 302)
-			this.end()
+			this.error_page("你正在访问未经许可的内容，请登录后重试……")
+			//this.Redirect(this.UrlFor("Home.Error", ":msg", "你正在访问未经许可的内容，请登录后重试……"), 302)
+			//this.end()
 		}
 	}
 	//// 检查当前用户是否被禁用
@@ -32,8 +32,9 @@ func (this *Auth) Prepare() {
 
 	if this.currentUser.Status == models.Locked {
 		//---跳转至错误页
-		this.Redirect(this.UrlFor("Home.Error", ":msg", utils.UrlEncode("你的账户已经被禁用，请联系网站管理员……")), 302)
-		this.end()
+		this.error_page("你的账户已经被禁用，请联系网站管理员……")
+		//this.Redirect(this.UrlFor("Home.Error", ":msg", "你的账户已经被禁用，请联系网站管理员……"), 302)
+		//this.end()
 	}
 
 	//// 当前用户角色是否存在
