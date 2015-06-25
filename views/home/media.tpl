@@ -129,10 +129,11 @@
 						},4000)
 						return;
 					}
-					// 隐藏进度
+					// 隐藏进度条
 					$('#footer_0').children().hide();
 					showNews(json.data);
 					_footer.data('index',index+1).data('loading',false);
+					bodyScroll();
 				}else{
 					
 				}
@@ -142,7 +143,8 @@
 		function bodyScroll(){
 			var _this = $(window),_footer = $('#footer');
 			
-			if(!_footer.data('loading') && (120 + _footer.offset().top <= _this.scrollTop() + _this.height())){
+			//if(!_footer.data('loading') && (120 + _footer.offset().top <= _this.scrollTop() + _this.height())){
+			if(!_footer.data('loading') && ($(document).height() - _footer.height() <= _this.scrollTop() + _this.height())){
 				// 显示进度
 				$('#footer_0').children().show();
 				var _index = _footer.data('index') || 0;
