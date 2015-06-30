@@ -6,7 +6,7 @@ package controllers
 import (
 	"errors"
 	"fmt"
-	"strconv"
+	//"strconv"
 	"strings"
 	"techbase/models"
 	"techbase/utils"
@@ -23,7 +23,9 @@ type OpenSign struct {
 	Msg      string //错误时的消息提示
 	Id       int64  //本站账户id
 	From     string //第三方标识
-	OpenId   string //账户id
+	OpenId   string //来自网站的第三方账户id
+	MOpenId  string //来自手机端的第三方账户id
+	UnionId  string //当前开发账户下全部应用的用户统一id
 	Token    string //access_token
 	Refresh  string //refresh_token
 	NickName string //昵称
@@ -90,7 +92,7 @@ func (this *Connect) Wx_Callback() {
 	req.Param("secret", appconf("weixin::appkey"))
 	req.Param("code", this.GetString("code"))
 
-	fmt.Println(this.GetString("code"), state)
+	//fmt.Println(this.GetString("code"), state)
 	//---读取返回的内容
 	rep, err := req.String()
 
@@ -99,7 +101,6 @@ func (this *Connect) Wx_Callback() {
 		jmap := utils.JsonString2map(rep)
 
 		if len(jmap) > 0 && jmap["errcode"] == nil {
-			fmt.Println(1)
 			//--- access_token
 			_account.Token = utils.Interface2str(jmap["access_token"])
 			//--- refresh_token
@@ -161,13 +162,13 @@ func wx_userinfo(act *OpenSign) (err error) {
 	if err == nil {
 		//---解析返回的内容,检查如果包含callback,读取openid
 		jmap := utils.JsonString2map(rep)
-
+		//fmt.Println(jmap)
 		if len(jmap) > 0 && jmap["errcode"] == nil {
 
 			act.NickName = utils.Interface2str(jmap["nickname"])
 			act.Gender = utils.Interface2str(jmap["sex"])
 			act.Avatar_1 = utils.Interface2str(jmap["headimgurl"])
-			//act.Avatar_2 = utils.Interface2str(jmap["figureurl_qq_2"])
+			act.UnionId = utils.Interface2str(jmap["unionid"])
 		} else if jmap["errcode"] != nil {
 			err = errors.New(utils.Interface2str(jmap["errmsg"]))
 		} else {
@@ -175,6 +176,7 @@ func wx_userinfo(act *OpenSign) (err error) {
 		}
 
 	}
+
 	return
 }
 
@@ -424,11 +426,13 @@ func qq_refresh(act *OpenSign) (err error) {
 func (this *Connect) SignTrace() {
 
 	_account := new(OpenSign)
-	_account.Id, _ = strconv.ParseInt(this.Ctx.GetCookie("_snow_id"), 10, 64)
+	_account.Id = this.currentUser.Id //strconv.ParseInt(this.Ctx.GetCookie("_snow_id"), 10, 64)
 	_account.From = this.GetString("from")
 	_account.Gender = this.GetString("gender")
 	_account.NickName = this.GetString("nickName")
+	_account.UnionId = this.GetString("unionId")
 	_account.OpenId = this.GetString("openId")
+	_account.MOpenId = this.GetString("mOpenId")
 	_account.Token = this.GetString("token")
 	_account.Refresh = this.GetString("refresh")
 	_account.Avatar_1 = this.GetString("avatar_1")
@@ -446,8 +450,9 @@ func (this *Connect) SignTrace() {
 	if _account.Id > 0 {
 		_m_account.Id = _account.Id
 	} else {
-		_m_account.OpenId = _account.OpenId
 		_m_account.OpenFrom = _account.From
+		_m_account.OpenId = _account.OpenId
+		_m_account.MOpenId = _account.MOpenId
 	}
 
 	// 账户是否存在
@@ -497,6 +502,7 @@ func (this *Connect) SignTrace() {
 				// 更新access_token and refresh_token and Updated
 				_m_account.AccessToken = _account.Token
 				_m_account.RefreshToken = _account.Refresh
+				_m_account.UnionId = _account.UnionId
 				this.extend(_m_account)
 				_m_account.RefreshAccessToken()
 			}
@@ -510,6 +516,7 @@ func (this *Connect) SignTrace() {
 			_m_account.Gender = 1
 		}
 		_m_account.NickName = _account.NickName
+		_m_account.UnionId = _account.UnionId
 		_m_account.AccessToken = _account.Token
 		_m_account.RefreshToken = _account.Refresh
 		_m_account.Avatar_1 = _account.Avatar_1

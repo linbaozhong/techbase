@@ -9,13 +9,15 @@
 			
 			$(function() {
 				(function open_login(u) {
-					console.log(u);	
+					//console.log(u);
+					
 					if(u){
 						//记录登录状态
 						$.post('/connect/signtrace', {
 							from: u.From,
 							token: u.Token,
 							openId: u.OpenId,
+							unionId:u.UnionId,
 							nickName: u.NickName,
 							gender: u.Gender,
 							refresh: u.Refresh,
@@ -30,7 +32,12 @@
 									window.open('','_self','');//for IE7
 									window.close(); 
 								}else{
-									window.location = '{{.return_uri}}';
+									var returnUrl = '{{.return_uri}}';
+									if(returnUrl.indexOf('/home/error') > 0){
+										window.location = '/'
+									}else{
+										window.location = returnUrl;
+									}
 								}
 
 							}else{

@@ -119,7 +119,7 @@
 			var _footer = $('#footer').data('loading',true);
 			
 			$.getJSON('/home/news',{size:3,index:index},function(json){
-				//console.log(json);
+				console.log(json);
 				if(json.ok){
 					// 已经没有数据可供载入
 					if(json.data.length == 0){

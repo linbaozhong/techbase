@@ -13,7 +13,9 @@ type Accounts struct {
 	LoginName    string `json:"loginName" valid:"MaxSize(50)"`
 	Password     string `json:"password"`
 	RealName     string `json:"realName" valid:"MaxSize(50)"`
+	UnionId      string `json:"unionId"`
 	OpenId       string `json:"openId" valid:"MaxSize(32)"`
+	MOpenId      string `json:"openId" valid:"MaxSize(32)"`
 	OpenFrom     string `json:"openFrom" valid:"MaxSize(10)"`
 	NickName     string `json:"nickName" valid:"MaxSize(50)"`
 	Gender       int    `json:"gender" valid:"Range(0,1)"`
@@ -112,7 +114,7 @@ func (this *Accounts) UpdateStatus() error {
 
 // 更新第三方登录的refreshToken
 func (this *Accounts) RefreshAccessToken() (int64, error) {
-	return db.Id(this.Id).Cols("accessToken", "refreshToken", "updated").Update(this)
+	return db.Id(this.Id).Cols("unionId", "accessToken", "refreshToken", "updated").Update(this)
 }
 
 // --------------------------------------------------
