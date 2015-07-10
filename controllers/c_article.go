@@ -84,6 +84,7 @@ func (this *Article) Save() {
 
 	art.Id, _ = this.GetInt64("id")
 	art.Topic = this.GetString("topic")
+	art.TopicCss = this.GetString("topicCss")
 	art.Title = this.GetString("title")
 	art.SubTitle = this.GetString("subTitle")
 	art.Intro = this.GetString("intro")

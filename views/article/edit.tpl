@@ -1,6 +1,14 @@
 <script src="/static/ckeditor/ckeditor.js" type="text/javascript" charset="utf-8"></script>
 <script src="/static/ckeditor/adapters/jquery.js" type="text/javascript" charset="utf-8"></script>
-
+<style type="text/css">
+	.snow-image-position span{
+		width: 30px;
+		height: 30px;
+	}
+	.snow-image-position span i{
+		cursor: pointer;
+	}
+</style>
 <div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
@@ -29,6 +37,7 @@
 						<div class="col-sm-3">
 							<input type="hidden" name="id" value="{{.article.Id}}" />
 							<input type="hidden" name="topic" value="{{.article.Topic}}" />
+							<input type="hidden" name="topicCss" value="{{.article.TopicCss}}" />
 						</div>
 						<div class="col-sm-9">
 							<div class="alert snow-alert-1" role="alert"></div>
@@ -45,7 +54,28 @@
 						<div class="col-sm-9 text-center">
 							<div class="snow-upload-target" title="点我上传主题图片" style="width:300px;height:150px;line-height:150px;overflow: hidden;margin: 0 auto;border: 1px dashed #ccc;">
 								<div class="snow-progress"></div>
-								<img src="{{.article.Topic}}"/>
+								<img style="{{css .article.TopicCss}}" src="{{.article.Topic}}" />
+							</div>
+							<div class="snow-image-position">
+								<div>
+									<span id="">
+									<i class="fa fa-lg fa-arrow-up"></i>
+								</span>
+								</div>
+								<div>
+									<span id="">
+										<i class="fa fa-lg fa-arrow-left"></i>
+									</span>
+									<span>&nbsp;&nbsp;</span>
+									<span id="">
+										<i class="fa fa-lg fa-arrow-right"></i>
+									</span>
+								</div>
+								<div>
+									<span id="">
+										<i class="fa fa-lg fa-arrow-down"></i>
+									</span>
+								</div>
 							</div>
 							<span class="small" style="width: 100px;clear: both;"> ( 仅支持JPG、GIF、PNG格式图片文件 )</span>
 						</div>
@@ -190,6 +220,9 @@
 			}
 			
 			var _form = $(this);
+			// 主题图样式
+			_form.find('input[name="topicCss"]').val($('.snow-upload-target img').attr('style'));
+			
 			// 禁用提交按钮
 			submit_disable(_form);
 			$.post('/article/save',_form.serialize(),function(json){
@@ -238,6 +271,36 @@
 			  	}
 		  })
 		  .on("fileerror.upload", function(){});
-
+		
+		// 主题图位置微调
+		$('.snow-image-position').on('click','i.fa-arrow-up',function(e){
+			e.stopPropagation();
+			e.preventDefault();
+			var _img = $('.snow-upload-target img');
+			_img.css({
+				marginTop:parseInt(_img.css('marginTop'))-5
+			});
+		}).on('click','i.fa-arrow-down',function(e){
+			e.stopPropagation();
+			e.preventDefault();
+			var _img = $('.snow-upload-target img');
+			_img.css({
+				marginTop:parseInt(_img.css('marginTop'))+5
+			});
+		}).on('click','i.fa-arrow-left',function(e){
+			e.stopPropagation();
+			e.preventDefault();
+			var _img = $('.snow-upload-target img');
+			_img.css({
+				marginLeft:parseInt(_img.css('marginLeft'))-5
+			});
+		}).on('click','i.fa-arrow-right',function(e){
+			e.stopPropagation();
+			e.preventDefault();
+			var _img = $('.snow-upload-target img');
+			_img.css({
+				marginLeft:parseInt(_img.css('marginLeft'))+5
+			});
+		})
 	});
 </script>

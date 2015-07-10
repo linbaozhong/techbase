@@ -92,7 +92,7 @@
 				_html.push('<p class="snow-article-date small">' + (new Date(item.updated)).format()+ '</p>');
 				_html.push('</header></a>');
 				_html.push('<footer class="col-xs-4 col-md-4"><a href="/home/show/'+item.id+'" target="_blank">');
-				_html.push('<img src="'+ item.topic+'"/>');
+				_html.push('<img src="'+ item.topic+'" style="'+ item.topicCss +'"/>');
 				_html.push('</a></footer>');
 				_html.push('</div>');
 				

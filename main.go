@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/astaxie/beego"
 	"github.com/beego/i18n"
+	"html/template"
 	"os"
 	"strings"
 	_ "techbase/routers"
@@ -44,6 +45,9 @@ func initFuncMap() {
 	beego.AddFuncMap("loadtimes", loadtimes)
 	beego.AddFuncMap("split", strings.Split)
 	beego.AddFuncMap("m2t", utils.Msec2Time)
+	beego.AddFuncMap("css", func(s string) template.CSS {
+		return template.CSS(s)
+	})
 }
 
 // 初始化静态目录

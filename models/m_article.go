@@ -12,6 +12,7 @@ import (
 type Articles struct {
 	Id          int64  `json:"id"`
 	Topic       string `json:"topic"`                               //主题图
+	TopicCss    string `json:"topicCss"`                            //主题图样式
 	Title       string `json:"title" valid:"Required;MaxSize(250)"` //标题
 	SubTitle    string `json:"subTitle" valid:"MaxSize(250)"`       //副标题
 	Intro       string `json:"intro" valid:"MaxSize(250)"`          //内容
@@ -37,6 +38,7 @@ type Articles struct {
 type ArticlesView struct {
 	Id          int64  `json:"id"`
 	Topic       string `json:"topic"`     //主题图
+	TopicCss    string `json:"topicCss"`  //主题图样式
 	Title       string `json:"title"`     //标题
 	SubTitle    string `json:"subTitle"`  //副标题
 	Intro       string `json:"intro"`     //内容
@@ -121,7 +123,7 @@ func (this *Articles) Save() (error, []Error) {
 			return err, nil
 		}
 	} else {
-		_, err = session.Id(this.Id).Cols("Topic", "Title", "SubTitle", "Intro", "Content", "Tags", "Original", "Author", "Resource", "ResourceUrl", "Updator", "Updated", "Ip").Update(this)
+		_, err = session.Id(this.Id).Cols("Topic", "TopicCss", "Title", "SubTitle", "Intro", "Content", "Tags", "Original", "Author", "Resource", "ResourceUrl", "Updator", "Updated", "Ip").Update(this)
 		if err != nil {
 			session.Rollback()
 			return err, nil
@@ -253,7 +255,7 @@ func (this *Articles) _list(view bool, page *Pagination, condition string, param
 		_dal.Size = page.Size
 		_dal.Offset = page.Index * page.Size
 
-		_dal.Field = "articles.id,articles.title,articles.topic,articles.intro,articles.istop,articles.recommend,articles.position,articles.status,articles.deleted,articles.reason,articles.updated,basic.name as tag"
+		_dal.Field = "articles.id,articles.title,articles.topic,articles.topicCss,articles.intro,articles.istop,articles.recommend,articles.position,articles.status,articles.deleted,articles.reason,articles.updated,basic.name as tag"
 		err := db.Sql(_dal.Select(), params...).Find(&as)
 		return as, err
 	}
