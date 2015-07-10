@@ -70,11 +70,13 @@ func (this *Home) News() {
 
 	cache_key := fmt.Sprintf("%s_%s_%d_%d", this.controllerName, this.actionName, p.Size, p.Index)
 	// 检查和读取cache
-	if cache_val := BCache.Get(cache_key); cache_val != nil {
+	if !Dev {
+		if cache_val := BCache.Get(cache_key); cache_val != nil {
 
-		this.renderJson(utils.ActionResult(true, cache_val))
+			this.renderJson(utils.ActionResult(true, cache_val))
 
-		return
+			return
+		}
 	}
 
 	art := new(models.Articles)
@@ -105,9 +107,11 @@ func (this *Home) HotNews() {
 	size, _ := this.GetInt("size")
 	cache_key := fmt.Sprintf("hotnews_%d", size)
 	// 检查和读取cache
-	if cache_val := BCache.Get(cache_key); cache_val != nil {
-		this.renderJson(utils.ActionResult(true, cache_val))
-		return
+	if !Dev {
+		if cache_val := BCache.Get(cache_key); cache_val != nil {
+			this.renderJson(utils.ActionResult(true, cache_val))
+			return
+		}
 	}
 
 	art := new(models.Articles)
@@ -148,9 +152,11 @@ func (this *Home) ShowNews() {
 
 	cache_key := fmt.Sprintf("%s_%s_%d_%s", this.controllerName, this.actionName, id, this.GetString("review"))
 	// 检查和读取cache
-	if cache_val := BCache.Get(cache_key); cache_val != nil {
-		this.renderJson(utils.ActionResult(true, cache_val))
-		return
+	if !Dev {
+		if cache_val := BCache.Get(cache_key); cache_val != nil {
+			this.renderJson(utils.ActionResult(true, cache_val))
+			return
+		}
 	}
 
 	var av interface{}
