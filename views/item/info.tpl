@@ -63,7 +63,7 @@
 		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 			<div class="row">
 				<div class="col-md-8 col-xs-8">
-					<div style="height: 110px;overflow: hidden;">{{.introduce.Content}}</div>
+					<div style="height: 110px;overflow-y: scroll;margin-bottom:20px;line-height: 1.58em;">{{.introduce.Content}}</div>
 					<ul>
 						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-map-marker"></i> <span id="company-city">
 							北京
@@ -109,7 +109,7 @@
 				</div>
 				<div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1">
 					<a href="#">
-						<img class="" src="{{.links.Qrcode}}" style="width: 150px;">
+						<img class="" src="{{.links.Qrcode}}" alt="二维码" style="width: 150px;">
 					</a>
 				</div>
 			</div>			
@@ -260,7 +260,7 @@
 				return;
 			}
 			// 计算移动的距离
-			var _left = _obj.position().left + 400;
+			var _left = _obj.position().left + 600;
 			_left = _left > 0 ? 0:_left;
 			
 			_obj.animate({
@@ -275,7 +275,7 @@
 				return;
 			}
 			// 计算移动的距离
-			var _left = _obj.position().left - 400;
+			var _left = _obj.position().left - 600;
 			
 			_left = _left <= _obj.parent().width()-_obj.width() ? _obj.parent().width()-_obj.width() : _left;
 			

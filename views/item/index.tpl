@@ -69,18 +69,18 @@
 						</a>
 					</div>
 					<div class="media-body">
-						<p><span class="media-heading lead">{{$company.Name}}</span> 
+						<p style="margin-bottom:5px;"><span class="media-heading lead">{{$company.Name}}</span> 
 						</p>
-						<div style="height: 60px;overflow: hidden;">{{$company.Intro}}</div>
+						<div class="small" style="height: 54px;overflow: hidden;">{{$company.Intro}}</div>
 					</div>
 					{{range $i,$loop := $loops}}
 						{{if eq $loop.CompanyId $company.Id}}
-							<div class="">
+							<div class="small">
 								<div class="col-md-5 brand-loop-{{$loop.Loop}}" data-value="{{$loop.Loop}}">&nbsp;</div>
 								<div class="col-md-5 col-md-offset-2">&nbsp;{{$loop.Investor}}</div>
 							</div>
 							{{if gt $loop.Loop 0}}
-								<div class="">
+								<div class="small">
 									<div class="col-md-5">
 										<span class="brand-money-{{$loop.AmountMoney}}" data-value="{{$loop.AmountMoney}}"></span>
 										{{$loop.Amount}}万

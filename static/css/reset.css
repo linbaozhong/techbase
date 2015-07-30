@@ -182,6 +182,7 @@ table .btn {
 .media-heading {
 	margin-right: 3em;
 	font-weight: bold;
+	white-space: nowrap;
 }
 /*导航条*/
 
@@ -325,7 +326,7 @@ header .nav a:focus {
 	padding: 0;
 	margin: 0;
 	position: relative;
-	height: 527px;
+	height: 374px;
 	width: 100%;
 	overflow: hidden;
 	color: #333;
@@ -345,7 +346,7 @@ header .nav a:focus {
 	background-position-y: center;
 }
 .slides > li.banner-1 {
-	background-image: url(/html/images/indexbanner.png);
+	background-image: url(/html/images/banner.7.29.jpg);
 }
 .slides > li.banner-2 {
 	background-image: url(/html/images/banner01.png);
@@ -394,7 +395,7 @@ header .nav a:focus {
 	padding: 0;
 	width: 100px;
 	height: 100px;
-  	display: table-cell;
+  	display: inline-block;
   	vertical-align: middle;
   	overflow: hidden;
 }
@@ -402,7 +403,9 @@ header .nav a:focus {
 
 }
 .snow-media .media-body{
-	padding: 15px;
+	width: 150px;
+	padding: 30px 15px 10px;
+	display: inline-block;
 }
 article.container {
 	margin-top: 50px;
