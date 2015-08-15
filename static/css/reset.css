@@ -282,7 +282,7 @@ header .nav a:focus {
 
 .banner {
 	position: relative;
-	margin-bottom: 30px;
+	/*margin-bottom: 30px;*/
 	padding: 0;
 }
 .banner .small {

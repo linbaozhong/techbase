@@ -11,7 +11,7 @@
 	</head>
 
 	<body>
-		<header class="container abs-top abs-center" style="background: rgba(0, 0, 0, .4);">
+		<header class="container abs-top abs-center" style="background: #333;">
 			<nav style="height:65px;margin-top: 10px;  padding: 0 20px;">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">
@@ -20,33 +20,33 @@
 				</div>
 				<ul class="nav navbar-nav" style="margin-left:60px;">
 					{{if eq .index "index"}}
-						<li class="active" ><a href="javascript:;">她首页</a></li>
+						<li class="active" ><a href="javascript:;">{{i18n .Lang "shouye"}}</a></li>
 					{{else}}
-						<li><a href="/">她首页</a></li>
+						<li><a href="/">{{i18n .Lang "shouye"}}</a></li>
 					{{end}}
 					{{if eq .index "media"}}
-						<li class="active"><a href="javascript:;">她媒体</a></li>
+						<li class="active"><a href="javascript:;">{{i18n .Lang "meiti"}}</a></li>
 					{{else}}
-						<li><a href="/media">她媒体</a></li>
+						<li><a href="/media">{{i18n .Lang "meiti"}}</a></li>
 					{{end}}
 					{{if eq .index "items"}}
-						<li class="active "><a href="javascript:;">她项目</a></li>
+						<li class="active "><a href="javascript:;">{{i18n .Lang "xiangmu"}}</a></li>
 					{{else}}
-						<li><a href="/item/index">她项目</a></li>
+						<li><a href="/item/index">{{i18n .Lang "xiangmu"}}</a></li>
 					{{end}}
 					{{if eq .index "vc"}}
-						<li  class="active" ><a href="javascript:;">她ＶＣ</a></li>
+						<li  class="active" ><a href="javascript:;">{{i18n .Lang "vc"}}</a></li>
 					{{else}}
-						<li><a href="/vc">她ＶＣ</a></li>
+						<li><a href="/vc">{{i18n .Lang "vc"}}</a></li>
 					{{end}}
 					{{if eq .index "community"}}
-						<li class="active"><a href="javascript:;">她社区</a></li>
+						<li class="active"><a href="javascript:;">{{i18n .Lang "shequ"}}</a></li>
 					{{else}}
-						<li><a href="/community">她社区</a></li>
+						<li><a href="/community">{{i18n .Lang "shequ"}}</a></li>
 					{{end}}
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="login"><a href="javascript:;">登录</a>
+					<li class="login"><a href="javascript:;">{{i18n .Lang "denglu"}}</a>
 					</li>
 					<li id="avatar" class="menu snow-profile" style="display:none;" data-rel = "submenu-0">
 						<a href="javascript:;"><img class="img-circle" src="" />

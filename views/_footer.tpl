@@ -4,7 +4,7 @@
 		margin: 0 10px;
 	}
 </style>
-<div id="footer_0" class="container row" style="margin:0 auto;padding:10px 0;">
+<div id="footer_0" class="container row" style="margin:0 auto;padding:0;">
 	<div class="text-center snow-color-red" style="display:none;">
 		<i class="fa fa-spinner fa-spin fa-2x"></i><span style="vertical-align: super;margin-left: 1em;">正在拼命地读取……</span>
 	</div>
