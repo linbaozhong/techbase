@@ -257,6 +257,24 @@ func (this *Home) Media() {
 	this.setTplNames("media")
 }
 
+// 媒体报道
+func (this *Home) Baodao() {
+	this.Data["index"] = "baodao"
+	this.setTplNames("baodao")
+}
+
+// 活动日历
+func (this *Home) Rili() {
+	this.Data["index"] = "rili"
+	this.setTplNames("rili")
+}
+
+// 关于我们
+func (this *Home) About() {
+	this.Data["index"] = "about"
+	this.setTplNames("about")
+}
+
 // 她vc
 func (this *Home) Vc() {
 	this.Data["index"] = "vc"

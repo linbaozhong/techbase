@@ -4,7 +4,6 @@
 	}
 	.snow-media-list{
 		background-color:#eee;
-		margin-top: -150px;
 	}
 	.snow-media-list .row{
 		height: 220px;
@@ -63,10 +62,13 @@
 		color:#bbb;
 	}
 </style>
-<div class="container banner">
+<div class="container banner" style="margin-top:75px;">
 	<div class="slideshow">
-		<ol class="slides" style="height: 664px;">
+		<ol class="slides">
 			<li class="current" style="background-image: url(/html/images/media-banner.png);">
+				<a href="/about">
+					<div style="width:100%;height:100%;"></div>
+				</a>
 			</li>
 		</ol>
 		<nav class="banner-nav">

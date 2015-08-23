@@ -34,15 +34,20 @@
 					{{else}}
 						<li><a href="/item/index">{{i18n .Lang "xiangmu"}}</a></li>
 					{{end}}
-					{{if eq .index "vc"}}
-						<li  class="active" ><a href="javascript:;">{{i18n .Lang "vc"}}</a></li>
+					{{if eq .index "baodao"}}
+						<li  class="active" ><a href="javascript:;">{{i18n .Lang "baodao"}}</a></li>
 					{{else}}
-						<li><a href="/vc">{{i18n .Lang "vc"}}</a></li>
+						<li><a href="/baodao">{{i18n .Lang "baodao"}}</a></li>
 					{{end}}
-					{{if eq .index "community"}}
-						<li class="active"><a href="javascript:;">{{i18n .Lang "shequ"}}</a></li>
+					{{if eq .index "rili"}}
+						<li class="active"><a href="javascript:;">{{i18n .Lang "rili"}}</a></li>
 					{{else}}
-						<li><a href="/community">{{i18n .Lang "shequ"}}</a></li>
+						<li><a href="/rili">{{i18n .Lang "rili"}}</a></li>
+					{{end}}
+					{{if eq .index "about"}}
+						<li class="active"><a href="javascript:;">{{i18n .Lang "about"}}</a></li>
+					{{else}}
+						<li><a href="/about">{{i18n .Lang "about"}}</a></li>
 					{{end}}
 				</ul>
 				<ul class="nav navbar-nav navbar-right">

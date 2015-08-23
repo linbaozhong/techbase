@@ -340,7 +340,7 @@ header .nav a:focus {
 	right: 0;
 	display: none;
 	height: 100%;
-	padding: 180px 80px 60px;
+	/*padding: 180px 80px 60px;*/
 	background-size: cover;
 	background-position-x: center;
 	background-position-y: center;
