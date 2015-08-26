@@ -457,6 +457,7 @@ func (this *Connect) SignTrace() {
 
 	// 账户是否存在
 	has, err := _m_account.Exists()
+
 	if err != nil {
 		this.trace(err.Error())
 		this.renderJson(utils.JsonResult(false, "", err))

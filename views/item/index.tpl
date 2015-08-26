@@ -1,4 +1,4 @@
-<div class="container banner">
+<div class="container banner" style="margin-top:75px;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">

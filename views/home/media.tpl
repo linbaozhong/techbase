@@ -77,7 +77,7 @@
 		</nav>
 	</div>
 </div>
-<div class="container snow-media-list">
+<div class="container snow-media-list" style="padding-top:35px;">
 	
 </div>
 
