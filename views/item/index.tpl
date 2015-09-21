@@ -9,91 +9,63 @@
 		</ol>
 	</div>
 </div>
-<article class="container">
-	
-		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
-			<div id="snow-item-condition" class="row snow-row-1">
-				<dl class="snow-condition">
-					<dt>融资状态</dt>
-					<dd>
-						<a href="javascript:;" class="{{if eq .apply -1}}active{{end}}" data-name="apply" data-value="-1">全部</a>
-						<a href="javascript:;" class="{{if eq .apply 3}}active{{end}}" data-name="apply" data-value="3">融资完成</a>
-						<a href="javascript:;" class="{{if eq .apply 2}}active{{end}}" data-name="apply" data-value="2">正在融资中</a>
-					</dd>
-				</dl>
-				<dl id="snow-basic-field" class="snow-condition">
-					<dt>所在行业</dt>
-					<dd>
-						<a href="javascript:;" class="{{if eq .field -1}}active{{end}}" data-name="field" data-value="-1">全部</a>
-					</dd>
-				</dl>
-				<dl id="snow-basic-city" class="snow-condition">
-					<dt>所在地</dt>
-					<dd>
-						<a href="javascript:;" class="{{if eq .city -1}}active{{end}}" data-name="city" data-value="-1">全部</a>
-					</dd>
-				</dl>
-				<dl class="snow-condition">
-					<dt>项目来源</dt>
-					<dd>
-						<a href="javascript:;" class="{{if eq .source -1}}active{{end}}" data-name="source" data-value="-1">全部</a>
-						<a href="javascript:;" class="{{if eq .source 1}}active{{end}}" data-name="source" data-value="1">Her Startup大赛</a>
-					</dd>
-				</dl>
-				<dl id="snow-basic-loop" class="snow-condition">
-					<dt>已融资轮次</dt>
-					<dd>
-						<a href="javascript:;" class="{{if eq .loop -1}}active{{end}}" data-name="loop" data-value="-1">不限</a>
-					</dd>
-				</dl>
-			</div>
-			<!--创建公司-->
-			<div class="row snow-row-1 snow-padding-top-40 snow-padding-bottom-40">
-				{{$loops := .applyLoop}}
-				{{range $index,$company := .companys}}
-				<div class="snow-media col-xs-4">
-					<span class="abs top5 right5 small">
-						{{if eq $company.Status 0}}
-						未提交审核
-						{{else if eq $company.Status 1}}
-						等待审核中
-						{{else if eq $company.Status 2}}
-						审核通过
-						{{else}}
-						审核未通过
-						{{end}}
-					</span>
-					<div class="media-left">
-						<a href="/item/info/{{$company.Id}}" target="_blank">
-							<img class="media-object" src="{{$company.Logo}}" style="width: 100px;">
-						</a>
-					</div>
-					<div class="media-body">
-						<p style="margin-bottom:5px;"><span class="media-heading lead">{{$company.Name}}</span> 
-						</p>
-						<div class="small" style="height: 54px;overflow: hidden;">{{$company.Intro}}</div>
-					</div>
-					{{range $i,$loop := $loops}}
-						{{if eq $loop.CompanyId $company.Id}}
-							<div class="small">
-								<div class="col-md-5 brand-loop-{{$loop.Loop}}" data-value="{{$loop.Loop}}">&nbsp;</div>
-								<div class="col-md-5 col-md-offset-2">&nbsp;{{$loop.Investor}}</div>
-							</div>
-							{{if gt $loop.Loop 0}}
-								<div class="small">
-									<div class="col-md-5">
-										<span class="brand-money-{{$loop.AmountMoney}}" data-value="{{$loop.AmountMoney}}"></span>
-										{{$loop.Amount}}万
-									</div>
-								</div>
-							{{end}}
-						{{end}}
-					{{end}}
-				</div>
-				{{end}}
-			</div>
+<article class="container" style="background-color: #eee;padding: 50px 30px; margin-top: 0;">
+
+	<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
+		<div id="snow-item-condition" class="row snow-row-1">
+			<dl class="snow-condition">
+				<dt>融资状态</dt>
+				<dd>
+					<a href="javascript:;" class="{{if eq .apply -1}}active{{end}}" data-name="apply" data-value="-1">全部</a>
+					<a href="javascript:;" class="{{if eq .apply 3}}active{{end}}" data-name="apply" data-value="3">融资完成</a>
+					<a href="javascript:;" class="{{if eq .apply 2}}active{{end}}" data-name="apply" data-value="2">正在融资中</a>
+				</dd>
+			</dl>
+			<dl id="snow-basic-field" class="snow-condition">
+				<dt>所在行业</dt>
+				<dd>
+					<a href="javascript:;" class="{{if eq .field -1}}active{{end}}" data-name="field" data-value="-1">全部</a>
+				</dd>
+			</dl>
+			<dl id="snow-basic-city" class="snow-condition">
+				<dt>所在地</dt>
+				<dd>
+					<a href="javascript:;" class="{{if eq .city -1}}active{{end}}" data-name="city" data-value="-1">全部</a>
+				</dd>
+			</dl>
+			<dl class="snow-condition">
+				<dt>项目来源</dt>
+				<dd>
+					<a href="javascript:;" class="{{if eq .source -1}}active{{end}}" data-name="source" data-value="-1">全部</a>
+					<a href="javascript:;" class="{{if eq .source 1}}active{{end}}" data-name="source" data-value="1">Her Startup大赛</a>
+				</dd>
+			</dl>
+			<dl id="snow-basic-loop" class="snow-condition">
+				<dt>已融资轮次</dt>
+				<dd>
+					<a href="javascript:;" class="{{if eq .loop -1}}active{{end}}" data-name="loop" data-value="-1">不限</a>
+				</dd>
+			</dl>
 		</div>
-	
+		<!--创建公司-->
+		<div class="row snow-row-1 snow-padding-top-40 snow-padding-bottom-40" style="margin-right: -25px;margin-left: -25px;">
+			{{$loops := .applyLoop}} {{range $index,$company := .companys}}
+			<a href="/item/info/{{$company.Id}}" target="_blank">
+				<div class="snow-media col-xs-4" style="text-align: center;padding:10px;">
+					<div style="background:#fff;padding:10px;height: 100%;">
+						<div style="padding:10px;">
+							<img class="" src="{{$company.Logo}}" style="width: 100px;height: 100px;">
+						</div>
+						<div class="media-body">
+							{{$company.Name}}
+						</div>
+					</div>
+				</div>
+			</a>
+			{{end}}
+		</div>
+	</div>
+
 </article>
 <script type="text/javascript">
 	$(function() {

@@ -1,4 +1,4 @@
-
+<!--
 <div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
@@ -9,8 +9,8 @@
 			</li>
 		</ol>
 	</div>
-</div>
-<article class="container text-center">
+</div>-->
+<article class="container text-center" style="margin-top:120px;">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<h2 class="snow-color-red">她本营</h2>

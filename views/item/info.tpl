@@ -13,11 +13,11 @@
 		overflow: hidden;
 	}
 </style>
-<div class="container banner">
+<div class="container banner" style="margin-top:75px;">
 	<div class="slideshow">
 		<ol class="slides" style="height: 345px;">
 			<li class="current text-center" style="background-image: url(/html/images/sign-up-banner.png);">
-				<div class="description" style="top: -50px;">
+				<div class="description" style="top: 60px;">
 					<div class="img-circle" style="width: 100px;height: 100px;line-height: 100px;border: 1px solid #fff;overflow: hidden;margin: 0 auto;">
 						<!--<div style="display: table-cell;vertical-align: middle;height: 100px;width: 100px;">-->
 							<img src="{{.company.Logo}}" style="width:100px;"/>

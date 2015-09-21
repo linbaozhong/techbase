@@ -1,4 +1,4 @@
-<div class="container banner" style="height: 75px;overflow: hidden;">
+<!--<div class="container banner" style="height: 75px;overflow: hidden;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -8,8 +8,8 @@
 			</li>
 		</ol>
 	</div>
-</div>
-<article class="container">
+</div>-->
+<article class="container" style="margin-top:120px;">
 	<div class="row">
 		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 			<h3 class="snow-color-red">{{.subTitle}}</h3>

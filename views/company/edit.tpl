@@ -1,9 +1,9 @@
 
-<div class="container banner">
+<div class="container banner" style="margin-top:75px;">
 	<div class="slideshow">
 		<ol class="slides" style="height: 345px;">
 			<li class="current text-center" style="background-image: url(/html/images/sign-up-banner.png);">
-				<div style="position: relative;top: -64px;">
+				<div style="position: relative;top: 95px;">
 					<div class="snow-upload-target" title="点我上传图片" style="width:100px;height:100px;line-height: 100px;overflow: hidden;margin: 0 auto;border-radius: 50% 50%;background:#fff;">
 						<div class="snow-progress"></div>
 						<img src="{{.company.Logo}}"/>

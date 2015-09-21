@@ -384,13 +384,13 @@ header .nav a:focus {
 .snow-media{
 	margin: 0;
 	padding: 0;
-	height: 180px;
-	border: 1px solid #666;
+	height: 200px;
+	/*border: 1px solid #666;*/
 }
-.snow-media:nth-child(2n+1){
+/*.snow-media:nth-child(2n+1){
 	background: #666;
 	color: #fff;
-}
+}*/
 .snow-media .media-left{
 	padding: 0;
 	width: 100px;
@@ -403,9 +403,9 @@ header .nav a:focus {
 
 }
 .snow-media .media-body{
-	width: 150px;
-	padding: 30px 15px 10px;
-	display: inline-block;
+	padding: 15px 10px;
+	/*width: 150px;
+	display: inline-block;*/
 }
 article.container {
 	margin-top: 50px;
@@ -605,7 +605,7 @@ form .alert.visible {
 	background-color: #eee;
 }
 .snow-loop label {
-	margin-right: 20px;
+	/*margin-right: 20px;*/
 }
 .snow-loop .lead {
 	margin-bottom: 15px;
