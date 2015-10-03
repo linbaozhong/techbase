@@ -475,7 +475,7 @@ func (this *Company) GetLoops() {
 	this.getLoopsList(id)
 
 	this.Data["companyId"] = id
-	this.Data["subTitle"] = "融资经历"
+	this.Data["subTitle"] = "融资需求"
 	this.Layout = ""
 	this.setTplNames("_loops")
 }

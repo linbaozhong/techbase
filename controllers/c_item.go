@@ -106,6 +106,15 @@ func (this *Item) Info() {
 	}
 
 	this.getIntroduceInfo(id)
+
+	//联系人信息只有审核人和投资人可见
+	if this.currentUser.Role < models.Role_Editor || this.currentUser.Role == models.Role_VC {
+		this.Data["look"] = true
+		this.getContactInfo(id)
+	} else {
+		this.Data["look"] = false
+	}
+
 	this.getLinksInfo(id)
 	this.getMembersList(id)
 	this.getLoopsList(id)

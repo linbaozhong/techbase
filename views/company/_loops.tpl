@@ -59,7 +59,7 @@
 					<label class="control-label">万</label>
 				</div>
 			</div>
-			<div class="form-group snow-apply">
+			<!--<div class="form-group snow-apply">
 				<label class="col-sm-3 control-label"><span class="snow-required">*</span>融资时间</label>
 				<div class="col-sm-3">
 					<select class="form-control" required name="year">
@@ -84,7 +84,7 @@
 						<option value="12">12 月</option>
 					</select>
 				</div>
-			</div>
+			</div>-->
 			<div class="form-group snow-apply">
 				<label class="col-sm-3 control-label">投资主体</label>
 				<div class="col-sm-9">
@@ -174,9 +174,9 @@
 					+'<a class="snow-edit" href="#" data-id="<%.id%>"><i class="fa fa-pencil"></i></a>&nbsp;'
 					+'<a class="snow-del" href="#" data-id="<%.id%>"><i class="fa fa-times"></i></a>'
 				+'</div>'
-				+'<div>'
-					+'<label class="control-label lead"><%.loop%></label><span><%.year%>.<%.month%></span>'
-				+'</div>'
+//				+'<div>'
+//					+'<label class="control-label lead"><%.loop%></label><span><%.year%>.<%.month%></span>'
+//				+'</div>'
 				+'<div class="clearfix">'
 					+'<div class="pull-left"><label class="control-label">融资金额:</label><span><i class="fa fa-<%.aalias%>"></i> <%.amount%></span><span>万</span></div>'
 					+'<div class="pull-right"><label class="control-label">融资估值:</label><span><i class="fa fa-<%.valias%>"></i> <%.value%></span><span>万</span></div>'
@@ -340,8 +340,8 @@
 					var _html = _template
 							.replace(/<%.id%>/ig,json.data.id)
 							.replace(/<%.loop%>/ig,snow.getLoop(json.data.loop))
-							.replace(/<%.year%>/ig,json.data.loop > 0 ? json.data.year : '')
-							.replace(/<%.month%>/ig,json.data.loop > 0 ? json.data.month : '')
+//							.replace(/<%.year%>/ig,json.data.loop > 0 ? json.data.year : '')
+//							.replace(/<%.month%>/ig,json.data.loop > 0 ? json.data.month : '')
 							.replace(/<%.aalias%>/ig,json.data.loop > 0 ? snow.getMoney(json.data.amountMoney) : '')
 							.replace(/<%.valias%>/ig,json.data.loop > 0 ? snow.getMoney(json.data.valueMoney) : '')
 							.replace(/<%.amount%>/ig,json.data.loop > 0 ? json.data.amount : '--')

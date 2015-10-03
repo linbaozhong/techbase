@@ -5,8 +5,8 @@ const (
 	Role_Administrator = 1 //网站管理员
 	Role_Auditor       = 2 //内容审核人
 	Role_Editor        = 3 //网站编辑
-	Role_Author        = 4 //网站客户
-	Role_Reader        = 5 //读者
+	Role_Author        = 4 //创业团队
+	Role_VC            = 5 //投资人
 	Role_Guest         = 6 //游客
 
 	Open_Alipay = 0 //支付宝用户
