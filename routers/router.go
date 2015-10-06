@@ -59,6 +59,9 @@ func init() {
 	// 媒体管理
 	article := &controllers.Article{}
 	beego.AutoRouter(article)
+	// 活动日历
+	events := &controllers.Events{}
+	beego.AutoRouter(events)
 	// 页面静态化
 	jintai := &controllers.Jingtai{}
 	beego.AutoRouter(jintai)

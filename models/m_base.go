@@ -103,7 +103,7 @@ func init() {
 
 	//db.ShowInfo = true
 	//db.ShowDebug = true
-	//db.ShowSQL = true
+	db.ShowSQL = true
 	//db.ShowErr = true
 	//db.ShowWarn = true
 

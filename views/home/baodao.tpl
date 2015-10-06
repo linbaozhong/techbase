@@ -9,6 +9,8 @@
 </style>
 <div class="container" style="margin-top:75px;padding: 50px;">
 	<dl>
+		<dt>Her Startup - CCTV</dt>
+		<dd><a href="http://english.cntv.cn/2015/10/03/VIDE1443864360784748.shtml" target="_blank">China Insight 10/03/2015 Women's role in China</a></dd>
 		<dt>财新视频</dt>
 		<dd><a href="http://video.caixin.com/2015-06-12/100818748.html" target="_blank">科技互联网创业 女性也有机会</a></dd>
 		<dt>Women of China</dt>

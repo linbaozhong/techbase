@@ -15,9 +15,9 @@
 		<div class="row">
 			<div class="col-xs-6 col-md-6">
 				<h4>公司信息</h4>
-				<p>公司：北京她本营网络科技有限公司</p>
-				<p>地址：北京市朝阳区方恒国际中心D座2317室</p>
-				<p>邮件：techbase@tabenying.com</p>
+				<p>{{i18n .Lang "company"}}</p>
+				<p>{{i18n .Lang "address"}}</p>
+				<p>{{i18n .Lang "email"}}</p>
 			</div>
 			<div class="col-xs-6 col-md-6">
 				<h4>友情链接</h4>
