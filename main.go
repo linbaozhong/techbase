@@ -1,14 +1,15 @@
 package main
 
 import (
-	"github.com/astaxie/beego"
-	"github.com/beego/i18n"
 	"html/template"
 	"os"
 	"strings"
 	_ "techbase/routers"
 	"techbase/utils"
 	"time"
+
+	"github.com/astaxie/beego"
+	"github.com/beego/i18n"
 )
 
 const (

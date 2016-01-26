@@ -18,7 +18,7 @@
 						<img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -15px;height: 60px;">
 					</a>
 				</div>
-				<ul class="nav navbar-nav" style="margin-left:60px;">
+				<ul class="nav navbar-nav" style="margin-left:30px;">
 					{{if eq .index "index"}}
 						<li class="active" ><a href="javascript:;">{{i18n .Lang "shouye"}}</a></li>
 					{{else}}
@@ -49,6 +49,7 @@
 					{{else}}
 						<li><a href="/about">{{i18n .Lang "about"}}</a></li>
 					{{end}}
+					<li><a href="/?lang={{if eq .Lang "en-US"}}{{"cn-ZH"}}{{else}}{{"en-US"}}{{end}}">{{i18n .Lang "language"}}</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="login"><a href="javascript:;">{{i18n .Lang "denglu"}}</a>

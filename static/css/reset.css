@@ -190,13 +190,11 @@ header.abs-top .nav {
 	margin-top: 10px;
 }
 header.abs-top .nav>li>a {
-	/*border: 1px solid #666;*/
-	/*padding: 5px 15px;
-	margin: 8px;*/
-	/*background: #fff;*/
+    padding: 15px 12px;
 	color: #fff;
-	/*font-weight: 700;*/
-	/*border-radius: 5px;*/
+}
+header.abs-top .nav>li>a:hover{
+	color:#f56f74;
 }
 header.abs-top .nav>li.active a {
   font-weight: 700;
