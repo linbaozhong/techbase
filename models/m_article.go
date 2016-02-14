@@ -3,8 +3,9 @@ package models
 import (
 	// "errors"
 	"fmt"
-	"github.com/astaxie/beego/validation"
 	"strings"
+
+	"github.com/astaxie/beego/validation"
 	//"techbase/utils"
 )
 
@@ -15,7 +16,7 @@ type Articles struct {
 	TopicCss    string `json:"topicCss"`                            //主题图样式
 	Title       string `json:"title" valid:"Required;MaxSize(250)"` //标题
 	SubTitle    string `json:"subTitle" valid:"MaxSize(250)"`       //副标题
-	Intro       string `json:"intro" valid:"MaxSize(250)"`          //内容
+	Intro       string `json:"intro" valid:"MaxSize(250)"`          //简介
 	Content     string `json:"content" valid:"Required"`            //内容
 	Published   string `json:"published"`                           //发布日期
 	Tags        int    `json:"tags"`                                //标签
@@ -41,7 +42,7 @@ type ArticlesView struct {
 	TopicCss    string `json:"topicCss"`  //主题图样式
 	Title       string `json:"title"`     //标题
 	SubTitle    string `json:"subTitle"`  //副标题
-	Intro       string `json:"intro"`     //内容
+	Intro       string `json:"intro"`     //简介
 	Content     string `json:"content"`   //内容
 	Published   string `json:"published"` //发布日期
 	Tags        int    `json:"tags"`      //标签

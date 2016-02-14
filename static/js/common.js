@@ -53,11 +53,13 @@ Date.prototype.format = function(format) {
 			if (_fmt.length) {
 				_fmt.push('dd日');
 			} else {
-				var _day = _now.getDate() - date.getDate();
+				var _day = (_now.getTime() - date.getTime()) / (24*60*60*1000);
 				if (_day > 2) {
 					_fmt.push('dd日');
-				} else {
+				} else if (_day > 0){
 					return _day == 1 ? '昨天' : '前天';
+				}else{
+					_fmt.push('dd日');
 				}
 			}
 		}

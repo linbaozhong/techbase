@@ -54,13 +54,13 @@
 				</div>
 			</nav>
 			<div class="snow-menu-wrap" style="position:fixed;top:0;right:0;bottom:0;left:0;background-color:rgba(0, 0, 0, .4);display: none;">
-				<div class="snow-submenu" style="width: 100px;height: 100%;padding:40px 20px;margin-left: auto;margin-right: -100px;font-size:1.2em;line-height: 2.5em;background-color: #333;">
+				<div class="snow-submenu" style="width: 120px;height: 100%;padding:40px 20px;margin-left: auto;margin-right: -120px;font-size:1.2em;line-height: 2.5em;background-color: #333;">
 					<ul>
-						<li><a href="/">她首页</a></li>
-						<li><a href="/media">她媒体</a></li>
-						<li><a href="/item/index">她项目</a></li>
-						<li><a href="/vc">她ＶＣ</a></li>
-						<li><a href="/community">她社区</a></li>
+						<li><a href="/">创业服务</a></li>
+						<li><a href="/media">人物访谈</a></li>
+						<li><a href="/item/index">项目展示</a></li>
+						<li><a href="/baodao">媒体报道</a></li>
+						<li><a href="/about">联系我们</a></li>
 						<!--<li style="height:1em;"></li>
 						<li><a href="">登录</a></li>-->
 					</ul>
@@ -106,7 +106,7 @@
 		}
 		function hideMenu(){
 			$('.snow-submenu').animate({
-				marginRight:-100
+				marginRight:-120
 			});	
 			$('.snow-menu-wrap').fadeOut();
 		}

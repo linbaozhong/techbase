@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"fmt"
+	//	"time"
 	//"github.com/astaxie/beego"
 	"techbase/models"
 	"techbase/utils"
@@ -101,6 +102,52 @@ func (this *Home) News() {
 	}
 }
 
+// 读取活动日历
+func (this *Home) Event() {
+	id, err := this.getParamsInt64("0")
+	if err != nil || id <= 0 {
+		// 转向错误页
+		this.error_page()
+	}
+
+	ev := new(models.Events)
+	ev.Id = id
+
+	ok := false
+
+	if this.GetString("review") == "1" {
+		ok, err = ev.Get(false)
+	} else {
+		ok, err = ev.Get(true)
+	}
+
+	if !ok || err != nil {
+		// 转向错误页
+		this.error_page()
+	} else {
+		this.Data["event"] = ev
+		this.Data["index"] = "rili"
+
+		this.setTplNames("event")
+	}
+}
+
+// 读取活动日历列表
+func (this *Home) Events() {
+	t, _ := this.GetInt64("time")
+	dt := utils.Msec2Time(t)
+
+	evt := new(models.Events)
+
+	es, err := evt.List(true, "startTime>? and endTime<?", utils.Millisecond(dt.AddDate(0, 0, -7)), utils.Millisecond(dt.AddDate(0, 1, 7)))
+
+	if err == nil {
+		this.renderJson(utils.JsonResult(true, "", es))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
+}
+
 // 热门文章
 func (this *Home) HotNews() {
 	//热门文章的条数
@@ -130,12 +177,34 @@ func (this *Home) Show() {
 	id, err := this.getParamsInt64("0")
 	if err != nil || id <= 0 {
 		// 转向错误页
+		this.error_page()
 	}
 
-	this.Data["review"] = this.GetString("review")
+	//	art := new(models.Articles)
+	//	art.Id = id
+
+	//	av := make([]models.ArticlesView, 0)
+
+	//	if (Dev || this.GetString("review") == "1") && this.currentUser.Id > 0 {
+	//		av, err = art.ShowArticle(false)
+	//	} else {
+	//		av, err = art.ShowArticle(true)
+	//	}
+
+	//	if err == nil && len(av) > 0 {
+	//		this.Data["article"] = &av[0]
+	//		this.Data["index"] = "media"
+	//		this.setTplNames("show")
+	//	} else {
+	//		// 转向错误页
+	//		this.error_page()
+	//	}
+
 	this.Data["articleId"] = id
+	this.Data["review"] = this.GetString("review")
 	this.Data["index"] = "media"
 	this.setTplNames("show")
+
 }
 
 // 读取文章
@@ -239,7 +308,7 @@ func (this *Home) GetSNS() {
 		if ok, err := sns.SetReaded(); ok {
 			this.renderJson(utils.JsonResult(true, "", sns))
 		} else {
-			this.trace(sns)
+			//			this.trace(sns)
 			this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
 		}
 	}

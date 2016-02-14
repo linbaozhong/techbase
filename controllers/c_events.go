@@ -3,16 +3,39 @@ package controllers
 import (
 	"techbase/models"
 	"techbase/utils"
+	"time"
 )
 
 type Events struct {
 	Admin
 }
 
+// 活动首页
 func (this *Events) Index() {
 	this.Data["index"] = "events"
 
 }
+
+// 编辑文章
+func (this *Events) Edit() {
+	ev := new(models.Events)
+
+	id, err := this.getParamsInt64("0")
+	if err != nil || id <= 0 {
+		this.Data["subTitle"] = "新活动"
+		ev.StartTime = utils.Millisecond(time.Now())
+		ev.EndTime = utils.Millisecond(time.Now())
+	} else {
+		ev.Id = id
+		_, err = ev.Get(false)
+
+		this.Data["subTitle"] = "活动修改"
+	}
+
+	this.Data["event"] = ev
+	this.Data["index"] = "events"
+}
+
 func (this *Events) List() {
 	evt := new(models.Events)
 
@@ -29,12 +52,14 @@ func (this *Events) List() {
 func (this *Events) Save() {
 	evt := new(models.Events)
 	evt.Id, _ = this.GetInt64("id")
-	evt.Topic = this.GetString("topic")
-	evt.Start, _ = this.GetInt64("start")
-	evt.End, _ = this.GetInt64("end")
+	evt.Title = this.GetString("title")
+	//	_start, _ := time.Parse("2006-01-02", this.GetString("startTime"))
+	//	_end, _ := time.Parse("2006-01-02", this.GetString("endTime"))
+	evt.StartTime, _ = this.GetInt64("startTime")
+	evt.EndTime, _ = this.GetInt64("endTime")
 	evt.Intro = this.GetString("intro")
-	evt.Img = this.GetString("img")
-	evt.Address = this.GetString("address")
+	//	evt.Img = this.GetString("img")
+	//	evt.Address = this.GetString("address")
 
 	if evt.Id == 0 {
 		this.extendEx(evt)
@@ -58,6 +83,11 @@ func (this *Events) SetStatus() {
 
 	if err == nil && id > 0 {
 		evt.Id = id
+		if status == models.Unlock {
+			status = models.Locked
+		} else {
+			status = models.Unlock
+		}
 		evt.Status = status
 	} else {
 		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
@@ -83,6 +113,12 @@ func (this *Events) SetDeleted() {
 
 	if err == nil && id > 0 {
 		evt.Id = id
+		if deleted == models.Undelete {
+			deleted = models.Deleted
+		} else {
+			deleted = models.Undelete
+		}
+
 		evt.Deleted = deleted
 	} else {
 		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))

@@ -33,9 +33,11 @@
 					{{if lt .account.Role 4 }}
 						<li class="{{if eq .index "article"}} active {{end}}"><a href="/article/index">媒体管理</a>
 						</li>
+						<li class="{{if eq .index "events"}} active {{end}}"><a href="/events/index">活动</a>
+						</li>
 						{{if lt .account.Role 3 }}
-							<li class="menu {{if eq .index "static"}} active {{end}}" data-rel = "submenu-2"><a href="javascript:;">持久化</a>
-							</li>
+							<!--<li class="menu {{if eq .index "static"}} active {{end}}" data-rel = "submenu-2"><a href="javascript:;">持久化</a>
+							</li>-->
 							<li class="{{if eq .index "company"}} active {{end}}"><a href="/admin/company">项目审核</a>
 							</li>
 							<li class="{{if eq .index "vc"}} active {{end}}"><a href="javascript:;">投资人审核</a>

@@ -55,7 +55,7 @@ func (this *Article) List() {
 	}
 }
 
-// 创建项目视图
+// 编辑文章
 func (this *Article) Edit() {
 	art := new(models.Articles)
 

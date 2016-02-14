@@ -57,7 +57,19 @@
 </div>
 <article class="container">
 	<div class="col-md-8 col-xs-8 snow-media-article">
-
+		<!--<h2><span class="snow-color-red snow-media-tag">{{.article.Tags}}</span>
+		&nbsp;<span class="small snow-media-title">{{.article.Title}}</span></h2>
+		{{if gt (len .article.SubTitle) 0}}
+		<h5 class="snow-media-subtitle">———— {{.article.SubTitle}}</h5>
+		{{end}}
+		<div class="small snow-media-published">小编：{{.article.UpdatorName}} &nbsp;&nbsp;&nbsp;&nbsp;{{dateformat (m2t .article.Updated) "2006-01-02"}}</div>
+		{{if gt (len .article.Intro) 0}}
+		<div class="snow-media-intro">{{.article.Intro}}</div>
+		{{end}}
+		{{if gt (len .article.Topic) 0}}
+		<div class="snow-media-topic"><img src="{{.article.Topic}}"/></div>
+		{{end}}
+		<div class="snow-media-body">{{str2html .article.Content}}</div>-->
 	</div>
 	<div class="col-md-4 col-xs-4">
 		<h5 class="snow-yeqian">热门文章</h5>
