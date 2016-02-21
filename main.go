@@ -13,11 +13,11 @@ import (
 )
 
 const (
-	APP_VER = "0.1.24.1105"
+	version = "0.1.24.1105"
 )
 
 func main() {
-	beego.Info(beego.AppName, APP_VER)
+	beego.Info(beego.AppName, version)
 	beego.Run()
 
 }

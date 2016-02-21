@@ -12,6 +12,7 @@ import (
 // article表
 type Articles struct {
 	Id          int64  `json:"id"`
+	Type        int    `json:"type"`                                //所属频道，用来区分外部媒体对她本营的报道和其他文章
 	Topic       string `json:"topic"`                               //主题图
 	TopicCss    string `json:"topicCss"`                            //主题图样式
 	Title       string `json:"title" valid:"Required;MaxSize(250)"` //标题
@@ -38,6 +39,7 @@ type Articles struct {
 }
 type ArticlesView struct {
 	Id          int64  `json:"id"`
+	Type        int    `json:"type"`      //所属频道，用来区分外部媒体对她本营的报道和其他文章
 	Topic       string `json:"topic"`     //主题图
 	TopicCss    string `json:"topicCss"`  //主题图样式
 	Title       string `json:"title"`     //标题
@@ -199,7 +201,7 @@ func (this *Articles) ShowArticle(view bool) ([]ArticlesView, error) {
 }
 
 // 热门文章列表
-func (this *Articles) HotList(size int) ([]ArticlesView, error) {
+func (this *Articles) HotList(size int, articleType int) ([]ArticlesView, error) {
 	if size == 0 {
 		size = 10
 	}
@@ -208,7 +210,7 @@ func (this *Articles) HotList(size int) ([]ArticlesView, error) {
 
 	err := db.Sql(`select articles.id,articles.title,articles.topic,articles.intro 
 		from (select articleid, sum(readed) as rd,sum(loved),sum(weixin) from snsarticle group by articleid order by rd desc limit ?) as sns
-		left join articles on sns.articleid=articles.id`, size).Find(&as)
+		left join articles on sns.articleid=articles.id where articles.type=?`, size, articleType).Find(&as)
 
 	return as, err
 }

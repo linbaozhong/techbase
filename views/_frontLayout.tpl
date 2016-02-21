@@ -24,15 +24,15 @@
 					{{else}}
 						<li><a href="/">{{i18n .Lang "shouye"}}</a></li>
 					{{end}}
-					{{if eq .index "media"}}
-						<li class="active"><a href="javascript:;">{{i18n .Lang "meiti"}}</a></li>
-					{{else}}
-						<li><a href="/media">{{i18n .Lang "meiti"}}</a></li>
-					{{end}}
 					{{if eq .index "items"}}
 						<li class="active "><a href="javascript:;">{{i18n .Lang "xiangmu"}}</a></li>
 					{{else}}
 						<li><a href="/item/index">{{i18n .Lang "xiangmu"}}</a></li>
+					{{end}}
+					{{if eq .index "media"}}
+						<li class="active"><a href="javascript:;">{{i18n .Lang "meiti"}}</a></li>
+					{{else}}
+						<li><a href="/media">{{i18n .Lang "meiti"}}</a></li>
 					{{end}}
 					{{if eq .index "baodao"}}
 						<li  class="active" ><a href="javascript:;">{{i18n .Lang "baodao"}}</a></li>

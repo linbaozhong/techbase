@@ -69,7 +69,9 @@ func (this *Home) News() {
 
 	p.Index, _ = this.GetInt("index")
 
-	cache_key := fmt.Sprintf("%s_%s_%d_%d", this.controllerName, this.actionName, p.Size, p.Index)
+	_type, _ := this.GetInt("type")
+
+	cache_key := fmt.Sprintf("%s_%s_%d_%d_%d", this.controllerName, this.actionName, _type, p.Size, p.Index)
 	// 检查和读取cache
 	if !Dev {
 		if cache_val := BCache.Get(cache_key); cache_val != nil {
@@ -87,10 +89,10 @@ func (this *Home) News() {
 	var err error
 	// 开发模式，读取全部文章
 	if Dev {
-		as, err = art.ListEx(p, "articles.deleted=?", models.Undelete)
+		as, err = art.ListEx(p, "articles.deleted=? and articles.type=?", models.Undelete, _type)
 	} else {
 		// 生成模式，读取已发布的文章
-		as, err = art.List(p, "")
+		as, err = art.List(p, "articles.type=?", _type)
 	}
 
 	if err == nil {
@@ -152,7 +154,8 @@ func (this *Home) Events() {
 func (this *Home) HotNews() {
 	//热门文章的条数
 	size, _ := this.GetInt("size")
-	cache_key := fmt.Sprintf("hotnews_%d", size)
+	_type, _ := this.GetInt("type")
+	cache_key := fmt.Sprintf("hotnews_%d_%d", size, _type)
 	// 检查和读取cache
 	if !Dev {
 		if cache_val := BCache.Get(cache_key); cache_val != nil {
@@ -162,7 +165,7 @@ func (this *Home) HotNews() {
 	}
 
 	art := new(models.Articles)
-	if as, err := art.HotList(size); err == nil {
+	if as, err := art.HotList(size, _type); err == nil {
 		// 缓存
 		BCache.Put(cache_key, as, 600)
 		// 输出
@@ -180,30 +183,33 @@ func (this *Home) Show() {
 		this.error_page()
 	}
 
-	//	art := new(models.Articles)
-	//	art.Id = id
+	art := new(models.Articles)
+	art.Id = id
 
-	//	av := make([]models.ArticlesView, 0)
+	av := make([]models.ArticlesView, 0)
 
-	//	if (Dev || this.GetString("review") == "1") && this.currentUser.Id > 0 {
-	//		av, err = art.ShowArticle(false)
-	//	} else {
-	//		av, err = art.ShowArticle(true)
-	//	}
+	if (Dev || this.GetString("review") == "1") && this.currentUser.Id > 0 {
+		av, err = art.ShowArticle(false)
+	} else {
+		av, err = art.ShowArticle(true)
+	}
 
-	//	if err == nil && len(av) > 0 {
-	//		this.Data["article"] = &av[0]
-	//		this.Data["index"] = "media"
-	//		this.setTplNames("show")
-	//	} else {
-	//		// 转向错误页
-	//		this.error_page()
-	//	}
-
-	this.Data["articleId"] = id
-	this.Data["review"] = this.GetString("review")
-	this.Data["index"] = "media"
-	this.setTplNames("show")
+	if err == nil && len(av) > 0 {
+		this.Data["article"] = av[0]
+		if av[0].Type == 0 {
+			this.Data["index"] = "media"
+		} else {
+			this.Data["index"] = "baodao"
+		}
+		this.setTplNames("show")
+	} else {
+		// 转向错误页
+		this.error_page()
+	}
+	//	this.Data["articleId"] = id
+	//	this.Data["review"] = this.GetString("review")
+	//	this.Data["index"] = "media"
+	//	this.setTplNames("show")
 
 }
 

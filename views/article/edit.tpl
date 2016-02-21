@@ -20,91 +20,100 @@
 <article class="container">
 	<div class="snow-row snow-row-1">
 		<!--<div class="row">-->
-			<div class="col-md-12 col-xs-12">
-				<h4 class="snow-color-red">{{.subTitle}}</h4>
-				<div class="pull-right">
-					<a class="submit-review" href="#"><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
-					<a href="/article/index"><i class="fa fa-th-list"></i>&nbsp;返回我的文章</a>
-				</div>
-				<hr />
+		<div class="col-md-12 col-xs-12">
+			<h4 class="snow-color-red">{{.subTitle}}</h4>
+			<div class="pull-right">
+				<a class="submit-review" href="#"><i class="fa fa-check-circle-o"></i>&nbsp;提交审核</a>&nbsp;&nbsp;&nbsp;
+				<a href="/article/index"><i class="fa fa-th-list"></i>&nbsp;返回我的文章</a>
 			</div>
+			<hr />
+		</div>
 		<!--</div>-->
 		<!--项目简介-->
 		<!--<div class="row">-->
-			<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
-				<form class="form-horizontal snow-form-1">
-					<div class="form-group">
-						<div class="col-sm-3">
-							<input type="hidden" name="id" value="{{.article.Id}}" />
-							<input type="hidden" name="topic" value="{{.article.Topic}}" />
-							<input type="hidden" name="topicCss" value="{{.article.TopicCss}}" />
-						</div>
-						<div class="col-sm-9">
-							<div class="alert snow-alert-1" role="alert"></div>
-						</div>
+		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
+			<form class="form-horizontal snow-form-1">
+				<div class="form-group">
+					<div class="col-sm-3">
+						<input type="hidden" name="id" value="{{.article.Id}}" />
+						<input type="hidden" name="topic" value="{{.article.Topic}}" />
+						<input type="hidden" name="topicCss" value="{{.article.TopicCss}}" />
 					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label">所属板块</label>
-						<div class="col-sm-9 snow-tags">
-							
-						</div>
+					<div class="col-sm-9">
+						<div class="alert snow-alert-1" role="alert"></div>
 					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label">主题图</label>
-						<div class="col-sm-9 text-center">
-							<div class="snow-upload-target" title="点我上传主题图片" style="width:300px;height:150px;line-height:150px;overflow: hidden;margin: 0 auto;border: 1px dashed #ccc;">
-								<div class="snow-progress"></div>
-								<img style="{{css .article.TopicCss}}" src="{{.article.Topic}}" />
-							</div>
-							<div class="snow-image-position">
-								<div>
-									<span id="">
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">频道</label>
+					<div class="col-sm-9 snow-type">
+						<label class="checkbox-inline">
+							<input type="radio" name="type" value="0" {{if eq .article.Type 0}} checked {{end}}>站内文章</label>
+						<label class="checkbox-inline">
+							<input type="radio" name="type" value="1" {{if eq .article.Type 1}} checked {{end}}>外部对她本营的报道</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">所属板块</label>
+					<div class="col-sm-9 snow-tags">
+
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">主题图</label>
+					<div class="col-sm-9 text-center">
+						<div class="snow-upload-target" title="点我上传主题图片" style="width:300px;height:150px;line-height:150px;overflow: hidden;margin: 0 auto;border: 1px dashed #ccc;">
+							<div class="snow-progress"></div>
+							<img style="{{css .article.TopicCss}}" src="{{.article.Topic}}" />
+						</div>
+						<div class="snow-image-position">
+							<div>
+								<span id="">
 									<i class="fa fa-lg fa-arrow-up"></i>
 								</span>
-								</div>
-								<div>
-									<span id="">
+							</div>
+							<div>
+								<span id="">
 										<i class="fa fa-lg fa-arrow-left"></i>
 									</span>
-									<span>&nbsp;&nbsp;</span>
-									<span id="">
+								<span>&nbsp;&nbsp;</span>
+								<span id="">
 										<i class="fa fa-lg fa-arrow-right"></i>
 									</span>
-								</div>
-								<div>
-									<span id="">
+							</div>
+							<div>
+								<span id="">
 										<i class="fa fa-lg fa-arrow-down"></i>
 									</span>
-								</div>
 							</div>
-							<span class="small" style="width: 100px;clear: both;"> ( 仅支持JPG、GIF、PNG格式图片文件 )</span>
 						</div>
+						<span class="small" style="width: 100px;clear: both;"> ( 仅支持JPG、GIF、PNG格式图片文件 )</span>
 					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label"><span class="snow-required">*</span>标题</label>
-						<div class="col-sm-9">
-							<input class="form-control" required maxlength="250" name="title" placeholder="标题" value="{{.article.Title}}">
-						</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label"><span class="snow-required">*</span>标题</label>
+					<div class="col-sm-9">
+						<input class="form-control" required maxlength="250" name="title" placeholder="标题" value="{{.article.Title}}">
 					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label">副标题</label>
-						<div class="col-sm-9">
-							<input class="form-control" maxlength="250" name="subTitle" placeholder="副标题" value="{{.article.SubTitle}}">
-						</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">副标题</label>
+					<div class="col-sm-9">
+						<input class="form-control" maxlength="250" name="subTitle" placeholder="副标题" value="{{.article.SubTitle}}">
 					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label"><span class="snow-required">*</span>摘要</label>
-						<div class="col-sm-9">
-							<textarea class="form-control" maxlength="250" name="intro" rows="" cols=""  placeholder="文章摘要">{{.article.Intro}}</textarea>
-						</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label"><span class="snow-required">*</span>摘要</label>
+					<div class="col-sm-9">
+						<textarea class="form-control" maxlength="250" name="intro" rows="" cols="" placeholder="文章摘要">{{.article.Intro}}</textarea>
 					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label"><span class="snow-required">*</span>正文</label>
-						<div class="col-sm-9">
-							<textarea id="form-content" name="content" placeholder="文章内容" style="width: 100%;height: 300px;">{{.article.Content}}</textarea>
-						</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label"><span class="snow-required">*</span>正文</label>
+					<div class="col-sm-9">
+						<textarea id="form-content" name="content" placeholder="文章内容" style="width: 100%;height: 300px;">{{.article.Content}}</textarea>
 					</div>
-					<!--<div class="form-group">
+				</div>
+				<!--<div class="form-group">
 						<label class="col-sm-3 control-label">发布时间</label>
 						<div class="col-sm-4">
 							<input type="date" class="form-control" name="publicDate" placeholder="发布日期" value="{{.article.Published}}">
@@ -113,43 +122,42 @@
 							<label></label>
 						</div>
 					</div>-->
-					<div class="form-group">
-						<label class="col-sm-3 control-label">作者</label>
-						<div class="col-sm-4">
-							<input class="form-control" name="author" placeholder="作者" value="{{.article.Author}}">
-						</div>
-						<div class="col-sm-5">
-							<label>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">作者</label>
+					<div class="col-sm-4">
+						<input class="form-control" name="author" placeholder="作者" value="{{.article.Author}}">
+					</div>
+					<div class="col-sm-5">
+						<label>
 							<input type="checkbox" class="checkbox-inline" name="original" {{if eq .article.Original 1}} checked {{end}} placeholder="是否原创" value="{{.article.Original}}">是否原创</label>
-						</div>
 					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label">文章来源</label>
-						<div class="col-sm-3">
-							<input class="form-control" name="resource" placeholder="单位" value="{{.article.Resource}}">
-						</div>
-						<div class="col-sm-6">
-							<input class="form-control" name="resourceUrl" placeholder="来源网址" value="{{.article.ResourceUrl}}">
-						</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">文章来源</label>
+					<div class="col-sm-3">
+						<input class="form-control" name="resource" placeholder="单位" value="{{.article.Resource}}">
 					</div>
-			
-					<div class="form-group">
-						<label for="inputIntro" class="col-sm-3 control-label">
-						</label>
-						<div class="col-sm-9">
-							<button type="submit" class="btn btn-primary col-sm-12">保存</button>
-						</div>
+					<div class="col-sm-6">
+						<input class="form-control" name="resourceUrl" placeholder="来源网址" value="{{.article.ResourceUrl}}">
 					</div>
-				</form>
-			</div>
+				</div>
+
+				<div class="form-group">
+					<label for="inputIntro" class="col-sm-3 control-label">
+					</label>
+					<div class="col-sm-9">
+						<button type="submit" class="btn btn-primary col-sm-12">保存</button>
+					</div>
+				</div>
+			</form>
+		</div>
 		<!--</div>-->
 	</div>
 </article>
-<link rel="stylesheet" type="text/css" href="/static/css/upload.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/upload.css" />
 <script src="/static/js/core.js" type="text/javascript" charset="utf-8"></script>
 <script src="/static/js/upload.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-
 	CKEDITOR.disableAutoInline = true;
 	
 	$(function(){

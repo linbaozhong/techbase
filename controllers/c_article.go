@@ -83,6 +83,7 @@ func (this *Article) Save() {
 	art := new(models.Articles)
 
 	art.Id, _ = this.GetInt64("id")
+	art.Type, _ = this.GetInt("type")
 	art.Topic = this.GetString("topic")
 	art.TopicCss = this.GetString("topicCss")
 	art.Title = this.GetString("title")

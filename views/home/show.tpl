@@ -57,10 +57,56 @@
 </div>
 <article class="container">
 	<div class="col-md-8 col-xs-8 snow-media-article">
-
+		<h2><span class="snow-color-red snow-media-tag">{{.article.Resource}}</span>
+		&nbsp;<span class="small snow-media-title">{{.article.Title}}</span></h2>
+		{{if gt (len .article.SubTitle) 0}}
+		<h5 class="snow-media-subtitle">———— {{.article.SubTitle}}</h5>
+		{{end}}
+		<div class="small snow-media-published">小编：{{.article.UpdatorName}} &nbsp;&nbsp;&nbsp;&nbsp;{{dateformat (m2t .article.Updated) "2006-01-02"}}</div>
+		{{if gt (len .article.Intro) 0}}
+		<div class="snow-media-intro">{{.article.Intro}}</div>
+		{{end}}
+		{{if gt (len .article.Topic) 0}}
+		<div class="snow-media-topic"><img src="{{.article.Topic}}"/></div>
+		{{end}}
+		<div class="snow-media-body">{{str2html .article.Content}}</div>
+		
+		<!--文章来源-->
+		{{if eq .article.Original 1}}
+			<div class="snow-media-original small">
+				声明：本文系作者 {{.article.Author}} 授权她本营编辑后发表。转载须经过她本营同意并授权。联系邮箱：techbase@tabenying.com。
+			</div>
+		{{else}}
+		<div class="snow-media-original small">
+			声明：本文内容来源于其他网站，转载请注明内容来源和本文链接。
+		</div>
+		{{end}}
+		<div class="snow-padding-top-40 snow-padding-bottom-40 snow-sns">
+			<a class="snow-sns-love" href="javascript:;"><i class="fa fa-heart"></i></a>&nbsp;&nbsp;
+			<a class="snow-sns-weixin" href="javascript:;"><i class="fa fa-weixin"></i></a>
+		</div>
+		
+		{{if eq .article.Original 1}}
+			<!--作者-->
+			{{if ne .article.Author ""}}
+				<hr />
+				<div class="snow-media-author small">原创文章 &nbsp;&nbsp;作者：{{.article.Author}}</div>
+			{{end}}
+		
+		{{else}}
+			<hr />
+			<div class="snow-media-author small">内容来源： &nbsp;&nbsp;<a href={{.article.ResourceUrl}} target=_blank>{{.article.Resource}}</div>
+		{{end}}
+		
 	</div>
 	<div class="col-md-4 col-xs-4">
-		<h5 class="snow-yeqian">热门文章</h5>
+		<h5 class="snow-yeqian">
+			{{if eq .article.Type 0}}
+			热门文章
+			{{else}}
+			其他报道
+			{{end}}
+		</h5>
 		<ul id="snow-hotnews-list">
 			
 		</ul>
@@ -75,6 +121,15 @@
 <script src="/static/js/jquery.qrcode.min.js"></script>
 <script type="text/javascript">
 	$(function(){
+		//窗口标题
+		$('title').text('{{i18n .Lang "app title"}} - {{.article.Title}}');
+		//描述
+		$('#description').attr('content','{{.article.Intro}}');
+		// 文章标签
+		{{if eq .article.Type 0}}
+			$('span.snow-media-tag').text(getBasicName(8,{{.article.Tags}}));
+		{{end}}
+		
 		// 微信公众号左移
 		$('.weixin-public').css('right','auto');
 		$('#go-top').css({
@@ -108,7 +163,7 @@
 			});
 		});
 		// 读取热门文章列表
-		$.getJSON('/home/hotnews',{size:10},function(json){
+		$.getJSON('/home/hotnews',{size:10,type:'{{.article.Type}}'},function(json){
 			if(json.ok){
 				var _li = [];
 				$.each(json.data,function(i,item){
@@ -120,104 +175,23 @@
 				$('#snow-hotnews-list').empty().html(_li.join(''));
 			}
 		})
-		// 读取新闻并渲染至页面
-		$.getJSON('/home/shownews',{id:'{{.articleId}}',review:'{{.review}}'},function(json){
-			if(json.ok){
-				var item = json.data[0],_html = [],_original='',_author='';
-				//窗口标题
-				$('title').text('{{i18n .Lang "app title"}} - ' + item.title);
-				//描述
-				$('#description').attr('content',item.intro);
-				// 正文
-				_html.push('<h2><span class="snow-color-red snow-media-tag">' + getBasicName(8,item.tags) + '</span>');
-				_html.push('&nbsp;<span class="small snow-media-title">' + item.title + '</span></h2>');
-				
-				if(item.subTitle.length){
-					_html.push('<h5 class="snow-media-subtitle">———— ' + item.subTitle + '</h5>');
-				}
-				
-				_html.push('<div class="small snow-media-published">小编：' + item.updatorName + '&nbsp;&nbsp;&nbsp;&nbsp;' + (new Date(item.updated).format()) + '</div>');
-				
-				if(item.intro.length){
-					_html.push('<div class="snow-media-intro">' + item.intro + '</div>');
-				}
-				
-				if(item.topic.length){
-					_html.push('<div class="snow-media-topic"><img src="' + item.topic + '"/></div>');
-				}
-				
-				_html.push('<div class="snow-media-body">' + item.content + '</div>');
-				
-				
-				if(item.original){
-					_original = '声明：本文系作者 ' + item.author + ' 授权她本营编辑后发表。转载须经过她本营同意并授权。联系邮箱：techbase@tabenying.com。';
-					_author =  (item.author=='' ? '' : ('原创文章 &nbsp;&nbsp;作者：'+ item.author));
-				}else{
-					_original = '声明：本文内容来源于其他网站，转载请注明内容来源和本文链接。';
 
-					var _url = item.resourceUrl;
-					
-					if(item.resourceUrl.slice(0,5) != 'http:' && item.resourceUrl.slice(0,6) != 'https:'){
-						_url = 'http://' + item.resourceUrl;
-					}
-					_author = '内容来源： &nbsp;&nbsp;<a href="' + _url + '" target="_blank">'+(item.resourceUrl || '')  + '</a>';
-				}
-
-				_html.push('<div class="snow-media-original small">' + _original + '</div>');
-				_html.push('<div class="snow-padding-top-40 snow-padding-bottom-40 snow-sns">');
-				_html.push('<a class="snow-sns-love" href="javascript:;"><i class="fa fa-heart"></i></a>&nbsp;&nbsp;');
-				_html.push('<a class="snow-sns-weixin" href="javascript:;"><i class="fa fa-weixin"></i></a></div>');
-				
-				if(_author.length){
-					_html.push('<hr />');
-					_html.push('<div class="snow-media-author small">' + _author + '</div>');
-				}
-
-
-				$('.snow-media-article').empty().html(_html.join(''));
-				
+		// 调整图片样式
+		$('.snow-media-article .snow-media-body img').each(function(){
+			var _img = $(this);
+			if(_img.width() >= _img.closest('.snow-media-body').width()){
+				_img.css({
+					width:'100%',
+					height: 'inherit'
+				});
 			}else{
-				
+				_img.parent().css({
+					
+				});
 			}
-			// 调整图片样式
-			$('.snow-media-article .snow-media-body img').each(function(){
-				var _img = $(this);
-				if(_img.width() >= _img.closest('.snow-media-body').width()){
-					_img.css({
-						width:'100%',
-						height: 'inherit'
-					});
-				}else{
-					_img.parent().css({
-						
-					});
-				}
-			});
-			//
-			snow.footerBottom();
 		});
-
-//		//窗口标题
-//		$('title').text('{{i18n .Lang "app title"}} - {{.article.Title}}');
-//		//描述
-//		$('#description').attr('content','{{.article.Intro}}');
-//
-//		// 调整图片样式
-//		$('.snow-media-article .snow-media-body img').each(function(){
-//			var _img = $(this);
-//			if(_img.width() >= _img.closest('.snow-media-body').width()){
-//				_img.css({
-//					width:'100%',
-//					height: 'inherit'
-//				});
-//			}else{
-//				_img.parent().css({
-//					
-//				});
-//			}
-//		});
-//		//
-//		snow.footerBottom();
+		//
+		snow.footerBottom();
 		// 读取当前用户的分享状态
 		$.getJSON('/home/getsns',{id:'{{.articleId}}'},function(json){
 			if(json.ok){

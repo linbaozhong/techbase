@@ -56,5 +56,3 @@ func GetDir(path string) error {
 func MoveFilePath(dst, src string) error {
 	return nil
 }
-
-//移除文件或文件夹

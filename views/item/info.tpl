@@ -12,7 +12,7 @@
 		width: 300px;
 		height: 300px;
 		overflow: hidden;
-		border: 1px solid #ddd;
+		/*border: 1px solid #ddd;*/
 	}
 	#snow-img-list li img{
 	position:absolute;top:0;right: 0;bottom: 0;left: 0;width:100%;margin: auto;
@@ -61,7 +61,7 @@
 		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
 			<div class="row">
 				<div class="col-md-8 col-xs-8">
-					<div style="height: 110px;overflow-y: scroll;margin-bottom:20px;line-height: 1.58em;">{{.introduce.Content}}</div>
+					<div style="height: 110px;overflow-y: hidden;margin-bottom:20px;line-height: 1.58em;">{{.introduce.Content}}</div>
 					<ul>
 						<li style="display: inline-block;margin-right:15px;"><i class="fa fa-map-marker"></i> <span id="company-city">
 
@@ -241,6 +241,19 @@
 			{{end}}
 		</div>
 
+	</div>
+
+<!--相关报道-->
+	<div class="row snow-padding-top-40">
+		<div class="col-md-10 col-md-offset-1">
+			<h4 class="snow-color-red">相关报道</h4>
+			<hr />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-10 col-xs-10 col-md-offset-1 col-xs-offset-1">
+			
+		</div>
 	</div>
 
 	<!--联系方式-- 只有审核人和投资人可见 --->

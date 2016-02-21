@@ -7,12 +7,7 @@ import (
 	"time"
 )
 
-var ()
-
-func init() {
-
-}
-
+//
 func Str2Time(s string) time.Time {
 	s = strings.Replace(s, "/", "-", 0)
 	t, _ := time.Parse(time.RFC3339, s)
@@ -48,9 +43,8 @@ func DirExists(path string) bool {
 
 	if err != nil {
 		return os.IsExist(err)
-	} else {
-		return fi.IsDir()
 	}
+	return fi.IsDir()
 }
 
 //
