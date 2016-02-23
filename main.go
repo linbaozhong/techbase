@@ -17,14 +17,14 @@ const (
 )
 
 func main() {
-	beego.Info(beego.AppName, version)
+	beego.Info(beego.BConfig.AppName, version)
 	beego.Run()
 
 }
 
 func init() {
 	// 日志级别
-	if beego.RunMode == "dev" {
+	if beego.BConfig.RunMode == "dev" {
 		beego.SetLevel(beego.LevelDebug)
 	} else {
 		beego.SetLevel(beego.LevelNotice)

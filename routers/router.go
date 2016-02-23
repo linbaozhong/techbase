@@ -7,7 +7,7 @@ import (
 
 func init() {
 	// 屏蔽路由大小写敏感
-	beego.RouterCaseSensitive = false
+	beego.BConfig.RouterCaseSensitive = false
 
 	// 前段
 	home := &controllers.Home{}

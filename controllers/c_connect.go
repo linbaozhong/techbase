@@ -50,7 +50,7 @@ func (this *Connect) Weixin() {
  */
 func (this *Connect) Wx_Login() {
 	//---生成唯一随机串防止csrf攻击
-	state := this.XsrfToken()
+	state := this.XSRFToken()
 	//---将随机串存入Session
 	this.SetSession("state", state)
 	//---登录的url
@@ -218,7 +218,7 @@ func wx_refresh(act *OpenSign) (err error) {
  */
 func (this *Connect) QQ_Login() {
 	//---生成唯一随机串防止csrf攻击
-	state := this.XsrfToken()
+	state := this.XSRFToken()
 	//---将随机串存入Session
 	this.SetSession("state", state)
 	//---登录的url

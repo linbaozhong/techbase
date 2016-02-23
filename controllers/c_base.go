@@ -61,7 +61,7 @@ func init() {
 	//}
 
 	// 运行模式
-	Dev = beego.RunMode == "dev"
+	Dev = beego.BConfig.RunMode == "dev"
 
 	page.Domain = appconf("site::domain")
 
@@ -296,7 +296,7 @@ func (this *Base) setJsonData(data interface{}) {
 
 	//操作成功，清除token
 	if resp := reflect.Indirect(reflect.ValueOf(data)); resp.FieldByName("Status").Elem().Bool() {
-		this.XsrfToken()
+		this.XSRFToken()
 	}
 	this.Data["json"] = data
 }
@@ -304,14 +304,14 @@ func (this *Base) setJsonData(data interface{}) {
 //返回json响应格式
 func (this *Base) renderJson(data interface{}) {
 	this.setJsonData(data)
-	this.ServeJson()
+	this.ServeJSON()
 	this.end()
 }
 
 //返回jsonp响应
 func (this *Base) renderJsonp(data interface{}) {
 	this.Data["jsonp"] = data
-	this.ServeJsonp()
+	this.ServeJSONP()
 	this.end()
 }
 
@@ -355,7 +355,7 @@ func (this *Base) renderTemplateString(tplString string) error {
 			return err
 		}
 
-		t = t.Delims(beego.TemplateLeft, beego.TemplateRight)
+		t = t.Delims(beego.BConfig.WebConfig.TemplateLeft, beego.BConfig.WebConfig.TemplateRight)
 
 		beego.BeeTemplates[name] = t
 	}
@@ -524,8 +524,8 @@ func (this *Base) parseString(str, p string) []string {
 * xsrf过滤
  */
 func (this *Base) checkXsrf() (bool, string) {
-	if this.CheckXsrfCookie() {
-		return true, this.XsrfToken()
+	if this.CheckXSRFCookie() {
+		return true, this.XSRFToken()
 	}
 	return false, ""
 }
@@ -538,7 +538,7 @@ func (this *Base) checkXsrf() (bool, string) {
 //终止服务
 func (this *Base) end() {
 	this.Layout = ""
-	this.TplNames = ""
+	this.TplName = ""
 
 	this.StopRun()
 }
@@ -562,7 +562,7 @@ func (this *Base) setTplNames(name ...string) {
 	if len(name) > 0 && name[0] != "" {
 		this.actionName = name[0]
 	}
-	this.TplNames = strings.ToLower(fmt.Sprintf("%s/%s.tpl", this.controllerName, this.actionName))
+	this.TplName = strings.ToLower(fmt.Sprintf("%s/%s.tpl", this.controllerName, this.actionName))
 }
 
 //签名

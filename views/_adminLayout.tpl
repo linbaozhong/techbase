@@ -111,7 +111,7 @@
 				</li>
 			</ul>
 		</div>
-		
+        
 		{{.LayoutContent}}
 		{{.Footer}}
 
