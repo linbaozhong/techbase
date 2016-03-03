@@ -19,10 +19,10 @@
 					</a>
 				</div>
 				<ul class="nav navbar-nav" style="margin-left:30px;">
-					{{if eq .index "index"}}
+					{{if eq .index "service"}}
 						<li class="active" ><a href="javascript:;">{{i18n .Lang "shouye"}}</a></li>
 					{{else}}
-						<li><a href="/">{{i18n .Lang "shouye"}}</a></li>
+						<li><a href="/service">{{i18n .Lang "shouye"}}</a></li>
 					{{end}}
 					{{if eq .index "items"}}
 						<li class="active "><a href="javascript:;">{{i18n .Lang "xiangmu"}}</a></li>
@@ -34,11 +34,11 @@
 					{{else}}
 						<li><a href="/media">{{i18n .Lang "meiti"}}</a></li>
 					{{end}}
-					{{if eq .index "baodao"}}
+					<!--{{if eq .index "baodao"}}
 						<li  class="active" ><a href="javascript:;">{{i18n .Lang "baodao"}}</a></li>
 					{{else}}
 						<li><a href="/baodao">{{i18n .Lang "baodao"}}</a></li>
-					{{end}}
+					{{end}}-->
 					{{if eq .index "rili"}}
 						<li class="active"><a href="javascript:;">{{i18n .Lang "rili"}}</a></li>
 					{{else}}

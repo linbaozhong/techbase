@@ -16,6 +16,7 @@ func init() {
 	beego.Router("/signout", home, "post:SignOut")
 	beego.Router("/home/error/:msg", home, "get:Error")
 
+	beego.Router("/service", home, "get:Service")
 	beego.Router("/brandshow", home, "get:Show")
 	beego.Router("/home", home, "get:Home")
 	beego.Router("/media", home, "get:Media")

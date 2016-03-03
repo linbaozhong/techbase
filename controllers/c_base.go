@@ -105,9 +105,9 @@ func (this *Base) Prepare() {
 	} else {
 		this.allowRequest()
 
-		if Dev && (this.currentUser.Role == -1 || this.currentUser.Role > models.Role_Editor) {
-			this.error_page("内部使用，谢绝访问")
-		}
+		// if Dev && (this.currentUser.Role == -1 || this.currentUser.Role > models.Role_Editor) {
+		// 	this.error_page("内部使用，谢绝访问")
+		// }
 	}
 }
 func (this *Base) Finish() {

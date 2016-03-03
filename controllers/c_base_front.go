@@ -7,7 +7,7 @@ type Front struct {
 func (this *Front) Prepare() {
 	this.Base.Prepare()
 
-	this.allowRequest()
+	// this.allowRequest()
 
 	this.Data["index"] = ""
 	this.Data["account"] = this.currentUser

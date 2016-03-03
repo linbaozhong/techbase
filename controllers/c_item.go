@@ -14,39 +14,44 @@ type Item struct {
 func (this *Item) Index() {
 	com := new(models.Company)
 	ids := make([]int64, 0)
-	// 融资状态
-	if apply, err := this.GetInt("apply"); err == nil && (apply == 2 || apply == 3) {
-		this.Data["apply"] = apply
-		com.Apply = apply
-	} else {
-		this.Data["apply"] = -1
-		com.Apply = -1
-	}
-	// 行业
-	if field, err := this.GetInt("field"); err == nil && field >= 0 {
-		this.Data["field"] = field
-		// 按指定行业读取项目id
-		ids = new(models.FieldCompany).GetCompanyId(utils.Int2str(field))
+	// // 融资状态
+	// if apply, err := this.GetInt("apply"); err == nil && (apply == 2 || apply == 3) {
+	// 	this.Data["apply"] = apply
+	// 	com.Apply = apply
+	// } else {
+	// 	this.Data["apply"] = -1
+	// 	com.Apply = -1
+	// }
+	// // 行业
+	// if field, err := this.GetInt("field"); err == nil && field >= 0 {
+	// 	this.Data["field"] = field
+	// 	// 按指定行业读取项目id
+	// 	ids = new(models.FieldCompany).GetCompanyId(utils.Int2str(field))
 
-	} else {
-		this.Data["field"] = -1
-	}
-	// 城市
-	if city, err := this.GetInt("city"); err == nil && city >= 0 {
-		this.Data["city"] = city
-		com.City = city
-	} else {
-		this.Data["city"] = -1
-		com.City = -1
-	}
-	// 是否大赛项目
-	if source, err := this.GetInt("source"); err == nil {
-		this.Data["source"] = source
-		com.Startup = source
-	} else {
-		this.Data["source"] = -1
-		com.Startup = -1
-	}
+	// } else {
+	// 	this.Data["field"] = -1
+	// }
+	// // 城市
+	// if city, err := this.GetInt("city"); err == nil && city >= 0 {
+	// 	this.Data["city"] = city
+	// 	com.City = city
+	// } else {
+	// 	this.Data["city"] = -1
+	// 	com.City = -1
+	// }
+	// // 是否大赛项目
+	// if source, err := this.GetInt("source"); err == nil {
+	// 	this.Data["source"] = source
+	// 	com.Startup = source
+	// } else {
+	// 	this.Data["source"] = -1
+	// 	com.Startup = -1
+	// }
+
+	com.Apply = -1
+	com.City = -1
+	com.Startup = -1
+
 	// 融资轮次
 	loop, err := this.GetInt("loop")
 	if err == nil {
@@ -56,12 +61,11 @@ func (this *Item) Index() {
 		loop = -1
 	}
 
-	//this.trace(this.Data["field"], ids)
-	// 如果指定行业的项目数为空，直接返回空记录集
-	if this.Data["field"] != -1 && len(ids) == 0 {
-		this.Data["companys"] = nil
-		return
-	}
+	// // 如果指定行业的项目数为空，直接返回空记录集
+	// if this.Data["field"] != -1 && len(ids) == 0 {
+	// 	this.Data["companys"] = nil
+	// 	return
+	// }
 
 	// 按指定融资轮次读取项目id
 	ids = new(models.Loops).GetCompany(loop, ids)

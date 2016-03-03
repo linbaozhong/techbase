@@ -14,7 +14,6 @@ type Home struct {
 
 // 首页
 func (this *Home) Get() {
-	this.Data["index"] = "index"
 	com := new(models.Company)
 	//大赛的项目
 	com.Startup = 1
@@ -56,6 +55,10 @@ func (this *Home) Get() {
 	this.setTplNames("index")
 }
 
+func (this *Home)Service(){
+    this.Data["index"] = "service"
+    this.setTplNames()
+}
 // 分页读取新闻列表
 func (this *Home) News() {
 	// 读取分页规则
