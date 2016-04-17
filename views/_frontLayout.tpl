@@ -32,11 +32,11 @@
                 {{else}}
                 <li><a href="/media">{{i18n .Lang "meiti"}}</a></li>
                 {{end}}
-                <!--{{if eq .index "baodao"}}
-						<li  class="active" ><a href="javascript:;">{{i18n .Lang "baodao"}}</a></li>
-					{{else}}
-						<li><a href="/baodao">{{i18n .Lang "baodao"}}</a></li>
-					{{end}}-->
+                {{if eq .index "baodao"}}
+                    <li  class="active" ><a href="javascript:;">{{i18n .Lang "baodao"}}</a></li>
+                {{else}}
+                    <li><a href="/baodao">{{i18n .Lang "baodao"}}</a></li>
+                {{end}}
                 {{if eq .index "rili"}}
                 <li class="active"><a href="javascript:;">{{i18n .Lang "rili"}}</a></li>
                 {{else}}
@@ -73,9 +73,9 @@
         <ul class="">
             <li><a href="/my/profile">我的帐号</a>
             </li>
-            <li><a href="/my/company">我的项目</a>
+            <!--<li><a href="/my/company">我的项目</a>
             </li>
-            <!--<li><a href="/my/touzi">我的投资</a>
+            <li><a href="/my/touzi">我的投资</a>
 				</li>-->
             <li>
                 <hr style="margin: 5px 0;" />
