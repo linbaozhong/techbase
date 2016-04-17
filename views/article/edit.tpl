@@ -9,7 +9,7 @@
 		cursor: pointer;
 	}
 </style>
-<div class="container banner" style="height: 75px;overflow: hidden;">
+<div class="container banner" style="margin-top:-75px;height: 75px;overflow: hidden;z-index: -1;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">

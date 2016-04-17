@@ -1,4 +1,4 @@
-<div class="container banner" style="margin-top:75px;">
+<div class="container banner">
 
 </div>
 <div class="container" style="padding:50px 0;">

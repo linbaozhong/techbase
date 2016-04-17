@@ -2,7 +2,9 @@ package models
 
 import (
 	// "errors"
-	//"fmt"
+	// "fmt"
+	// "techbase/utils"
+
 	"github.com/astaxie/beego/validation"
 )
 
@@ -30,7 +32,7 @@ func (this *Profile) Valid(v *validation.Validation) {
 }
 
 // 增加新账户简介
-func (this *Profile) Post() (error, []Error) {
+func (this *Profile) Post(pwd ...string) (error, []Error) {
 	//数据有效性检验
 	if d, err := dataCheck(this); err != nil {
 		return err, d
@@ -40,13 +42,39 @@ func (this *Profile) Post() (error, []Error) {
 	_profile := new(Profile)
 	_profile.Id = this.Id
 
+	session := db.NewSession()
+	defer session.Close()
+
 	if ok, _ := _profile.Exists(); ok {
 		// 更新
-		_, err = db.Id(this.Id).Update(this)
+		_, err = session.Id(this.Id).Update(this)
 	} else {
 		// 插入
-		_, err = db.Insert(this)
+		_, err = session.Insert(this)
 	}
+	// 错误回滚
+	if err != nil {
+		session.Rollback()
+		return err, nil
+	}
+
+	// _account := new(Accounts)
+	// _account.Id = _profile.Id
+	// _account.LoginName = _profile.Telphone
+
+	// if len(pwd) > 0 && pwd[0] != "" {
+	// 	_account.Password = utils.MD5(pwd[0])
+    //     fmt.Println(pwd[0],_account.Password)
+	// 	_, err = session.Id(_account.Id).Cols("loginname", "password").Update(_account)
+	// 	// 错误回滚
+	// 	if err != nil {
+	// 		session.Rollback()
+	// 		return err, nil
+	// 	}
+	// }
+
+	err = session.Commit()
+
 	return err, nil
 }
 

@@ -66,7 +66,7 @@
 		text-align: center;
 	}
 </style>
-<div class="container banner" style="height: 75px;overflow: hidden;">
+<div class="container banner" style="margin-top:-75px;height: 75px;overflow: hidden;z-index: -1;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -83,13 +83,13 @@
 		<div class="snow-media-body">
 			{{str2html .event.Intro}}
 		</div>
-		<div class="snow-media-original small">声明：本文系作者 授权她本营编辑后发表。转载须经过她本营同意并授权。联系邮箱：techbase@tabenying.com。</div>
+		<!--<div class="snow-media-original small">声明：本文系作者 授权她本营编辑后发表。转载须经过她本营同意并授权。联系邮箱：techbase@tabenying.com。</div>-->
 		<div class="snow-padding-top-40 snow-padding-bottom-40 snow-sns">
-			<a class="snow-sns-love" href="javascript:;"><i class="fa fa-heart"></i></a>&nbsp;&nbsp;
+			<!--<a class="snow-sns-love" href="javascript:;"><i class="fa fa-heart"></i></a>&nbsp;&nbsp;-->
 			<a class="snow-sns-weixin" href="javascript:;"><i class="fa fa-weixin"></i></a></div>
 	</div>
 	<div class="col-md-4 col-xs-4">
-		<h5 class="snow-yeqian">热门文章</h5>
+		<h5 class="snow-yeqian">其他活动</h5>
 		<ul id="snow-hotnews-list">
 
 		</ul>
@@ -117,20 +117,7 @@
 			text: window.location.protocol + '//' + window.location.host + '/m/event/{{.event.Id}}'
 		});
 		// 点赞
-		$('.snow-media-article').on('click', '.snow-sns-love', function() {
-			var _this = $('i', this);
-			$.post('/home/loved', {
-				id: '{{.articleId}}'
-			}, function(json) {
-				if (json.ok) {
-					if (_this.hasClass('snow-color-love')) {
-						_this.removeClass('snow-color-love');
-					} else {
-						_this.addClass('snow-color-love');
-					}
-				}
-			});
-		}).on('click', '.snow-sns-weixin', function() {
+		$('.snow-media-article').on('click', '.snow-sns-weixin', function() {
 			// 分享
 			$('#snow-wrap-qrcode').popWindow({
 				width: 390,
@@ -139,14 +126,14 @@
 			});
 		});
 		// 读取热门文章列表
-		$.getJSON('/home/hotnews', {
-			size: 10
+		$.getJSON('/home/GetEvents', {
+			size: 20
 		}, function(json) {
 			if (json.ok) {
 				var _li = [];
 				$.each(json.data, function(i, item) {
 					_li.push('<li>');
-					_li.push('<a href="/home/show/' + item.id + '">' + item.title + '</a>');
+					_li.push('<a href="/home/event/' + item.id + '">' + item.title + '</a>');
 					_li.push('</li>');
 				});
 				$('#snow-hotnews-list').empty().html(_li.join(''));

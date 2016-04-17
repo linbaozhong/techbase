@@ -1,4 +1,4 @@
-<div class="container banner" style="height: 75px;overflow: hidden;">
+<div class="container banner" style="margin-top:-75px;height: 75px;overflow: hidden;z-index: -1;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -72,7 +72,7 @@
 						if (art.deleted) {
 							_html.push('<a href="javascript:;" class="snow-del" data-id="' + art.id + '" data-value="' + art.deleted + '">还原</a>');
 						} else {
-							_html.push('<a href="/home/show/' + art.id + '?review=1" target="_blank">预览</a>&nbsp;&nbsp;');
+							_html.push('<a href="/home/event/' + art.id + '?review=1" target="_blank">预览</a>&nbsp;&nbsp;');
 							_html.push('<a href="/events/edit/' + art.id + '">编辑</a>&nbsp;&nbsp;');
 							_html.push('<a href="javascript:;" class="snow-del" data-id="' + art.id + '" data-value="' + art.deleted + '">删除</a>');
 						}

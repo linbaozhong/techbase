@@ -39,7 +39,7 @@ func (this *Events) Edit() {
 func (this *Events) List() {
 	evt := new(models.Events)
 
-	es, err := evt.List(false, "")
+	es, err := evt.List(false, 0, "")
 
 	if err == nil {
 		this.renderJson(utils.JsonResult(true, "", es))

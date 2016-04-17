@@ -9,18 +9,19 @@
 		<i class="fa fa-spinner fa-spin fa-2x"></i><span style="vertical-align: super;margin-left: 1em;">正在拼命地读取……</span>
 	</div>
 </div>
-<footer class="container navbar-fixed-bottom" id="footer">
+<div id="footer-padding"></div>
+<footer class="container" id="footer">
 	
 	<div class="col-xs-10 col-md-10 col-sm-10 col-xs-offset-1">
 		<div class="row">
 			<div class="col-xs-6 col-md-6">
-				<h4>公司信息</h4>
-				<p>{{i18n .Lang "company"}}</p>
-				<p>{{i18n .Lang "address"}}</p>
-				<p>{{i18n .Lang "email"}}</p>
+				<h4>{{i18n .Lang "company info"}}</h4>
+				<p>{{i18n .Lang "company"}}：{{i18n .Lang "company 0"}}</p>
+				<p>{{i18n .Lang "address"}}：{{i18n .Lang "address 0"}}</p>
+				<p>{{i18n .Lang "email"}}：{{i18n .Lang "email 0"}}</p>
 			</div>
 			<div class="col-xs-6 col-md-6">
-				<h4>友情链接</h4>
+				<h4>{{i18n .Lang "partners"}}</h4>
 				<p>
 					<a href="http://leanin.org/" target="_blank">
 						<img src="/static/img/leanin.png"/>

@@ -21,21 +21,21 @@
 	margin:30px 0;
 }
 </style>
-<div class="container snow-index" style="margin-top:75px;">
+<div class="container snow-index">
 	<div class="row">
 		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-			<a href="/home/show/18"><img src="/html/images/28.png" alt="" style="height: 400px;" /></a>
+			<a href="/home/show/116"><img src="/html/images/left-top.jpg" alt="" style="height: 400px;" /></a>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-			<a href="/home/show/18"><img src="/html/images/banner.7.29.jpg" alt="" style="height: 400px;" /></a>
+			<a href="/home/show/124"><img src="/html/images/right-top.jpg" alt="" style="height: 400px;" /></a>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-			<a href="/home/show/18"><img src="/html/images/banner.7.29.jpg" alt="" style="height: 200px;" /></a>
+			<a href="/service"><img src="/html/images/left-down.jpg" alt="" style="height: 200px;" /></a>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-			<a href="/home/show/18"><img src="/html/images/28.png" alt="" style="height: 200px;" /></a>
+			<a href="/rili"><img src="/html/images/right-down.jpg" alt="" style="height: 200px;" /></a>
 		</div>
 	</div>
 </div>

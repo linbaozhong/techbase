@@ -18,7 +18,7 @@
 	position:absolute;top:0;right: 0;bottom: 0;left: 0;width:100%;margin: auto;
 	}
 </style>
-<div class="container banner" style="margin-top:75px;">
+<div class="container banner">
 	<div class="slideshow">
 		<ol class="slides" style="height: 345px;">
 			<li class="current text-center" style="background-image: url(/html/images/sign-up-banner.png);">

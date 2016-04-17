@@ -114,12 +114,13 @@ func (this *Item) Info() {
 	//	//联系人信息只有审核人和投资人可见
 	//	if this.currentUser.Role < models.Role_Editor || this.currentUser.Role == models.Role_VC {
 	//联系人信息只有审核人和投资人可见
-	if this.currentUser.Role < models.Role_Editor {
+	if this.currentUser.Role == -1 || this.currentUser.Role >= models.Role_Editor {
+		this.Data["look"] = false
+	} else {
 		this.Data["look"] = true
 		this.getContactInfo(id)
-	} else {
-		this.Data["look"] = false
 	}
+	fmt.Println(this.Data["look"], this.currentUser.Role)
 
 	this.getLinksInfo(id)
 	this.getMembersList(id)

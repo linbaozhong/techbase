@@ -3,7 +3,7 @@
 <script src="/static/js/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="/static/js/locales/bootstrap-datetimepicker.zh-CN.js" type="text/javascript" charset="utf-8"></script>
 <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-datetimepicker.min.css"/>
-<div class="container banner" style="height: 75px;overflow: hidden;">
+<div class="container banner" style="margin-top:-75px;height: 75px;overflow: hidden;z-index: -1;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">

@@ -1,13 +1,29 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego/validation"
+	"strings"
 	"techbase/models"
 	"techbase/utils"
+
+	"github.com/astaxie/beego/validation"
 )
 
 type Accounts struct {
 	Auth
+}
+
+// 检查手机号码是否存在
+func (this *Accounts) Exists() {
+	loginName := this.GetString("loginName")
+
+	account := new(models.Accounts)
+
+	// 检查该账户是否存在
+	if has, _ := account.TelExists(this.currentUser.Id,loginName); has {
+		this.renderJson(utils.JsonResult(true, "", "该手机号码已经存在"))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", ""))
+	}
 }
 
 //帐户简介
@@ -49,7 +65,13 @@ func (this *Accounts) Post() {
 		this.renderJson(utils.JsonResult(false, "", errs))
 		return
 	}
-	// 更新昵称
+	// 更新昵称 和 登录密码
+	account.LoginName = profile.Telphone
+	_password := strings.Trim(this.GetString("password"), " ")
+
+	if len(_password) > 0 {
+		account.Password = utils.MD5(_password)
+	}
 	this.extend(account)
 
 	if err, errs := account.Post(); err == nil {

@@ -1,80 +1,3 @@
-<section class="container" style="margin-top:75px;">
-    <div style="vertical-align: top;padding-top: 25px;">
-        <h1>{{i18n .Lang "yj biaoti"}}</h1>
-        <p style="margin-top: 20px;">
-            {{i18n .Lang "yj neirong" | str2html }}
-        </p>
-        <ul style="margin-top: 30px;">
-            <li class="shuo" style="display: block;">
-                <div class="title">
-                    {{i18n .Lang "shuo 1"}}
-                </div>
-                <div>@{{i18n .Lang "who 1"}}</div>
-            </li>
-            <li class="shuo">
-                <div class="title">
-                    {{i18n .Lang "shuo 2"}}
-                </div>
-                <div>@{{i18n .Lang "who 2"}}</div>
-            </li>
-            <li class="shuo">
-                <div class="title">
-                    {{i18n .Lang "shuo 3"}}
-                </div>
-                <div>@{{i18n .Lang "who 3"}}</div>
-            </li>
-        </ul>
-    </div>
-</section>
-<section class="container">
-    <div style="padding-top:25px;">
-        <h1>我们的优势</h1>
-        <p style="margin-top:20px;">北京市妇联战略合作伙伴
-            <br /> 链接国内外顶尖战略资源
-            <br /> 聚合国内优质女性项目与投资者
-            <br /> 提供精细化的专业创业服务
-            <br /> 转为女性设计的联合办公室
-        </p>
-    </div>
-</section>
-<section class="container">
-    <div style="padding-top:25px;">
-        <h1>我们的成就</h1>
-        <ul class="row snow-chengjiu" style="margin-top:50px;">
-            <li class="col-md-offset-1 col-md-2" data-min="1" data-max="14">
-                <h5>孵化了</h5>
-                <label>1</label><span>个</span>
-                <h5>项目</h5>
-            </li>
-            <li class="col-md-2" data-min="1" data-max="116">
-                <h5>采访了</h5>
-                <label>1</label><span>位</span>
-                <h5>人物</h5>
-            </li>
-            <li class="col-md-2" data-min="1" data-max="45">
-                <h5>举办了</h5>
-                <label>1</label><span>场</span>
-                <h5>线上、线下活动</h5>
-
-            </li>
-            <li class="col-md-2" data-min="1" data-max="400">
-                <h5>链接了</h5>
-                <label>1</label>
-                <label style="margin-left:-10px;">+</label><span>位</span>
-                <h5>女性创业者</h5>
-
-            </li>
-            <li class="col-md-2" data-min="1" data-max="20">
-                <h5>接受了</h5>
-                <label>1</label>
-                <label style="margin-left:-10px;">+</label><span>家</span>
-                <h5>国内外媒体报道</h5>
-
-            </li>
-        </ul>
-    </div>
-</section>
-
 <style type="text/css">
     section:nth-child(2n) {
         background-color: #eee;
@@ -125,6 +48,69 @@
         font-weight: normal;
     }
 </style>
+
+<section class="container">
+    <div style="vertical-align: top;padding-top: 25px;">
+        <h1>{{i18n .Lang "yj biaoti"}}</h1>
+        <p style="margin-top: 20px;">
+            {{i18n .Lang "yj neirong" | str2html }}
+        </p>
+        <ul style="margin-top: 30px;">
+            <li class="shuo" style="display: block;">
+                <div class="title">
+                    {{i18n .Lang "shuo 1"}}
+                </div>
+                <div>@{{i18n .Lang "who 1"}}</div>
+            </li>
+            <li class="shuo">
+                <div class="title">
+                    {{i18n .Lang "shuo 2"}}
+                </div>
+                <div>@{{i18n .Lang "who 2"}}</div>
+            </li>
+            <li class="shuo">
+                <div class="title">
+                    {{i18n .Lang "shuo 3"}}
+                </div>
+                <div>@{{i18n .Lang "who 3"}}</div>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="container">
+    <div style="padding-top:25px;">
+        <h1>{{i18n .Lang "youshi"}}</h1>
+        <p style="margin-top:20px;">{{i18n .Lang "youshi 1"}}
+            <br /> {{i18n .Lang "youshi 2"}}
+            <br /> {{i18n .Lang "youshi 3"}}
+            <br /> {{i18n .Lang "youshi 4"}}
+            <br /> {{i18n .Lang "youshi 5"}}
+        </p>
+    </div>
+</section>
+<section class="container">
+    <div style="padding-top:25px;">
+        <h1>{{i18n .Lang "chengjiu"}}</h1>
+        <ul class="row snow-chengjiu" style="margin-top:50px;">
+            <li class="col-md-offset-1 col-md-2 inc-10" data-min="1" data-max="14">
+                {{i18n .Lang "chengjiu 1" | str2html}}
+            </li>
+            <li class="col-md-2 inc-100" data-min="1" data-max="116">
+                {{i18n .Lang "chengjiu 2" | str2html}}
+            </li>
+            <li class="col-md-2 inc-10" data-min="1" data-max="45">
+                {{i18n .Lang "chengjiu 3" | str2html}}
+            </li>
+            <li class="col-md-2 inc-400" data-min="1" data-max="400">
+                {{i18n .Lang "chengjiu 4" | str2html}}
+            </li>
+            <li class="col-md-2 inc-10" data-min="1" data-max="20">
+                {{i18n .Lang "chengjiu 5" | str2html}}
+            </li>
+        </ul>
+    </div>
+</section>
+
 <script type="text/javascript">
     $(function() {
 		var shuo = $('li.shuo');
@@ -163,11 +149,17 @@
                     }
                 };
                 
-                
+                // 数字轮换
                 $.each(_chengjiu.find('li'),function(index){
-                    var _this = $(this);
-                        
-                    _interval.push(setInterval(_loop,20,_this,index));
+                    var _this = $(this),_inter = 0;
+                    if(_this.hasClass('inc-400')){
+                    	_inter = 10;
+                    }else if(_this.hasClass('inc-100')){
+                    	_inter = 30;
+                    }else{
+                    	_inter = 80;
+                    }
+                    _interval.push(setInterval(_loop,_inter,_this,index));
                 });
             }
         });

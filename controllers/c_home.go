@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"fmt"
+	"time"
 	//	"time"
 	//"github.com/astaxie/beego"
 	"techbase/models"
@@ -55,10 +56,17 @@ func (this *Home) Get() {
 	this.setTplNames("index")
 }
 
-func (this *Home)Service(){
-    this.Data["index"] = "service"
-    this.setTplNames()
+// 登录页
+func (this *Home) Login() {
+	this.setTplNames("login")
 }
+
+// 创业服务
+func (this *Home) Service() {
+	this.Data["index"] = "service"
+	this.setTplNames()
+}
+
 // 分页读取新闻列表
 func (this *Home) News() {
 	// 读取分页规则
@@ -144,7 +152,22 @@ func (this *Home) Events() {
 
 	evt := new(models.Events)
 
-	es, err := evt.List(true, "startTime>? and endTime<?", utils.Millisecond(dt.AddDate(0, 0, -7)), utils.Millisecond(dt.AddDate(0, 1, 7)))
+	es, err := evt.List(true, 0, "startTime>? and endTime<?", utils.Millisecond(dt.AddDate(0, 0, -7)), utils.Millisecond(dt.AddDate(0, 1, 7)))
+
+	if err == nil {
+		this.renderJson(utils.JsonResult(true, "", es))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
+	}
+}
+
+// 读取其他日历
+func (this *Home) GetEvents() {
+	dt := utils.Millisecond(time.Now())
+
+	evt := new(models.Events)
+
+	es, err := evt.List(true, 20, "startTime >= ?", dt)
 
 	if err == nil {
 		this.renderJson(utils.JsonResult(true, "", es))
@@ -295,6 +318,7 @@ func (this *Home) Loved() {
 			this.renderJson(utils.JsonResult(false, "", ""))
 		}
 	}
+	this.renderJson(utils.JsonResult(false, "", ""))
 }
 
 //
@@ -321,6 +345,7 @@ func (this *Home) GetSNS() {
 			this.renderJson(utils.JsonResult(false, "", models.Err(err.Error())))
 		}
 	}
+	this.renderJson(utils.JsonResult(false, "", ""))
 }
 
 //
@@ -351,6 +376,12 @@ func (this *Home) Rili() {
 func (this *Home) About() {
 	this.Data["index"] = "about"
 	this.setTplNames("about")
+}
+
+// 联系我们
+func (this *Home) Contact() {
+	this.Data["index"] = "contact"
+	this.setTplNames("contact")
 }
 
 // 她vc

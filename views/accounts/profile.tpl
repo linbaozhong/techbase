@@ -1,5 +1,5 @@
 <!--
-<div class="container banner" style="height: 75px;overflow: hidden;">
+<div class="container banner" style="margin-top:-75px;height: 75px;overflow: hidden;z-index: -1;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -31,6 +31,12 @@
 					</div>
 				</div>
 				<div class="form-group">
+					<label for="inputPassword" class="col-sm-3 control-label">密码<span class="snow-required"></span></label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id="inputPassword" name="password" placeholder="如需要修改登录密码，请输入新密码" value="">
+					</div>
+				</div>
+				<div class="form-group">
 					<label for="inputEmail" class="col-sm-3 control-label">邮件<span class="snow-required">*</span></label>
 					<div class="col-sm-9">
 						<input type="email" class="form-control" id="inputEmail" required name="email" placeholder="Email" value="{{.profile.Email}}">
@@ -55,6 +61,24 @@
 </article>
 <script type="text/javascript">
 	$(function(){
+        $('#inputTelphone').on('blur',function(){
+            var _this = $(this);
+            var _loginName = $.trim(_this.val());
+            
+            if(_loginName.length != 11){
+                _this.focus;
+                alert('手机号码输入错误');
+                return;
+            }
+            
+            $.post('/accounts/Exists',{loginName:_this.val()},function(result){
+                if(result.ok){
+                    _this.focus();
+                    alert(result.data);
+                }
+            });
+        });
+        
 		$('form').submit(function(e){
 			var _form = $(this);
 			e.preventDefault();

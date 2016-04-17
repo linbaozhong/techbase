@@ -1,8 +1,9 @@
 package routers
 
 import (
-	"github.com/astaxie/beego"
 	"techbase/controllers"
+
+	"github.com/astaxie/beego"
 )
 
 func init() {
@@ -23,6 +24,7 @@ func init() {
 	beego.Router("/baodao", home, "get:Baodao")
 	beego.Router("/rili", home, "get:Rili")
 	beego.Router("/about", home, "get:About")
+	beego.Router("/contact", home, "get:Contact")
 	beego.Router("/herstart", home, "get:HerStart")
 	beego.Router("/brand/:id", home, "get:Brand")
 	beego.AutoRouter(home)
@@ -45,7 +47,7 @@ func init() {
 	com := &controllers.Company{}
 	beego.Router("/my/company", com, "get:Index")
 	beego.Router("/my/apply/:id", com, "get:Apply")
-	beego.Router("/company/:id", com)
+	beego.Router("/company/:id:int64", com)
 	//beego.Router("/company/list", com, "get:List")
 	beego.AutoRouter(com)
 

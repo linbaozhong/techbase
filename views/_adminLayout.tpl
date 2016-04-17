@@ -22,7 +22,7 @@
 	</head>
 
 	<body>
-		<header class="container abs-top abs-center" style="background: rgba(0,0,0,.4);">
+		<header class="container" style="background: rgba(0,0,0,.4);">
 			<nav style="height:65px;margin-top: 10px; padding: 0 20px;">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="/">

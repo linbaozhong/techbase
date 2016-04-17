@@ -1,4 +1,4 @@
-<div class="container banner" style="height: 75px;overflow: hidden;">
+<div class="container banner" style="margin-top:-75px;height: 75px;overflow: hidden;z-index: -1;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -28,10 +28,9 @@
 							<th>昵称</th>
 							<th>电话</th>
 							<th>Email</th>
-							<th>简介</th>
-							<th>注册时间</th>
 							<th>角色</th>
 							<th>禁用</th>
+                            <th></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -41,8 +40,6 @@
 							<td>{{$account.NickName}}</td>
 							<td>{{$account.Telphone}}</td>
 							<td>{{$account.Email}}</td>
-							<td>{{$account.Intro}}</td>
-							<td>{{$t := m2t $account.Updated}}{{date $t "Y-m-d H:i"}}</td>
 							<td>
 								<select value="" data-id="{{$account.Id}}" data-role="{{$account.Role}}">
 									{{$option}}
@@ -51,6 +48,7 @@
 							<td>
 								<input type="checkbox" name="status" data-id="{{$account.Id}}" {{if eq $account.Status 1}}checked{{end}} />
 							</td>
+                            <td><a href="#" class="snow-reset" data-id="{{$account.Id}}">密码重置</a></td>
 						</tr>
 						{{end}}</tbody>
 				</table>
@@ -97,5 +95,19 @@
 				}
 			});
 		});
+        // 密码重置
+        $('a.snow-reset').click(function(){
+            var _self = $(this);
+            $.getJSON('/admin/resetpassword', {
+				id: _self.data('id')
+			}, function(json) {
+				if (json.ok) {
+ 					alert('hi,密码已经重置,不用谢了……');                   
+                } else {
+					alert(json.message);
+				}
+			});
+            return false;
+        });
 	});
 </script>

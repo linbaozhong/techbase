@@ -1,3 +1,6 @@
+html,body{
+	min-height: 100%;
+}
 body {
 	color: #666;
 	font-family: "Microsoft YaHei", "Lucida Grande", "Lucida Sans Unicode", "Helvetica", "Arial", "Verdana", "sans-serif";
@@ -186,17 +189,17 @@ table .btn {
 }
 /*导航条*/
 
-header.abs-top .nav {
+header .nav {
 	margin-top: 10px;
 }
-header.abs-top .nav>li>a {
+header .nav>li>a {
     padding: 15px 12px;
 	color: #fff;
 }
-header.abs-top .nav>li>a:hover{
+header .nav>li>a:hover{
 	color:#f56f74;
 }
-header.abs-top .nav>li.active a {
+header .nav>li.active a {
   font-weight: 700;
   font-size: 1.2em;
   margin-top: -2px;
@@ -460,6 +463,10 @@ form .alert.visible {
 /*页脚*/
 
 #footer {
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	padding: 20px;
 	background-color: #333;
 	line-height: initial;

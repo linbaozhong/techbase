@@ -34,6 +34,43 @@ type OpenSign struct {
 	Avatar_2 string //100*100的qq头像
 }
 
+func (this *Connect) Login() {
+	loginName := this.GetString("loginName")
+	password := this.GetString("password")
+
+	account := new(models.Accounts)
+	account.LoginName = loginName
+	// 检查该账户是否存在
+	if has, err := account.Exists(); has {
+		if account.Password == utils.MD5(password) {
+			this.trace("记录登录日志")
+
+			// 记录登录日志
+			_m_log := new(models.LoginLog)
+			_m_log.AccountId = account.Id
+
+			this.extend(_m_log)
+			// 写登录日志
+			_, err = _m_log.Post()
+
+			if err == nil {
+				// 写入cookie
+				this.cookie("token", account.AccessToken)
+			}
+		} else {
+			this.renderJson(utils.JsonResult(false, "", "密码错误"))
+			return
+		}
+	} else {
+		this.renderJson(utils.JsonResult(false, "", "账号没找到"))
+		return
+
+	}
+	// 保存登录状态
+	this.loginIn(account)
+	this.renderJson(utils.JsonResult(true, "", account))
+}
+
 // 移动端微信登陆弹窗
 func (this *Connect) Pop_Weixin() {
 

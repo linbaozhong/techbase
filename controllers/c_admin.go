@@ -24,13 +24,9 @@ func (this *Admin) Prepare() {
 		if this.IsAjax() {
 			this.renderJson(utils.JsonResult(false, "", "拒绝访问未授权的功能，请联系系统管理员……"))
 			return
-		} else {
-			// 跳转到错误页
-			//this.Redirect(this.UrlFor("Home.Error", ":msg", "拒绝访问未授权的功能，请联系系统管理员……"), 302)
-			//this.end()
-			this.error_page("拒绝访问未授权的功能，请联系系统管理员……")
-			return
 		}
+		this.error_page("拒绝访问未授权的功能，请联系系统管理员……")
+		return
 	}
 }
 
@@ -191,6 +187,29 @@ func (this *Admin) UpdateStatus() {
 	}
 	// 提交更改
 	if err := act.UpdateStatus(); err == nil {
+		this.renderJson(utils.JsonResult(true, "", ""))
+	} else {
+		this.renderJson(utils.JsonResult(false, "", err.Error()))
+	}
+}
+
+// 重置密码
+func (this *Admin) ResetPassword() {
+	if this.currentUser.Role > models.Role_Administrator {
+		this.renderJson(utils.JsonResult(false, "", "拒绝访问未授权的功能，需要网站管理员权限……"))
+		return
+	}
+	//
+	_id, _ := this.GetInt64("id", 0)
+	if _id == 0 {
+		this.renderJson(utils.JsonResult(false, "", "参数错误……"))
+		return
+	}
+
+	_account := new(models.Accounts)
+	_account.Id = _id
+
+	if _, err := _account.ResetPassword(); err == nil {
 		this.renderJson(utils.JsonResult(true, "", ""))
 	} else {
 		this.renderJson(utils.JsonResult(false, "", err.Error()))

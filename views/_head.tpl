@@ -1,4 +1,5 @@
 		<meta property="qc:admins" content="6050272677640117256375" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta id="description" name="description" content=""/>
 		<link rel="shortcut icon" href="/static/img/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css" />

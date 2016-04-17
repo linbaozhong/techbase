@@ -35,7 +35,7 @@
 		color: greenyellow;
 	}
 	.snow-media-article{
-		padding-left:30px;padding-right:30px;min-height: 600px;
+		padding-left:30px;padding-right:30px;padding-bottom:30px;min-height: 600px;
 	}
 	.snow-media-article .snow-media-subtitle{
 		text-indent: 7em;
@@ -47,7 +47,7 @@
 		margin-top: -32px;background: #fff;margin-left: auto;margin-right: auto;width: 288px;text-align: center;
 	}
 </style>
-<div class="container banner" style="height: 75px;overflow: hidden;">
+<div class="container banner" style="margin-top:-75px;height: 75px;overflow: hidden;z-index: -1;">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current banner-1 text-center">
@@ -95,7 +95,7 @@
 		
 		{{else}}
 			<hr />
-			<div class="snow-media-author small">内容来源： &nbsp;&nbsp;<a href={{.article.ResourceUrl}} target=_blank>{{.article.Resource}}</div>
+			<div class="snow-media-author small">内容来源： &nbsp;&nbsp;<a href={{.article.ResourceUrl}} target=_blank>{{.article.Resource}}</a></div>
 		{{end}}
 		
 	</div>
@@ -163,7 +163,7 @@
 			});
 		});
 		// 读取热门文章列表
-		$.getJSON('/home/hotnews',{size:10,type:'{{.article.Type}}'},function(json){
+		$.getJSON('/home/hotnews',{size:20,type:'{{.article.Type}}'},function(json){
 			if(json.ok){
 				var _li = [];
 				$.each(json.data,function(i,item){
@@ -193,7 +193,7 @@
 		//
 		snow.footerBottom();
 		// 读取当前用户的分享状态
-		$.getJSON('/home/getsns',{id:'{{.articleId}}'},function(json){
+		$.getJSON('/home/getsns',{id:'{{.article.Id}}'},function(json){
 			if(json.ok){
 				if(json.data.loved){
 					$('.snow-sns .snow-sns-love i').addClass('snow-color-love');

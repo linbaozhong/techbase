@@ -3,6 +3,7 @@ package models
 import (
 	"fmt"
 	"strings"
+	"techbase/utils"
 )
 
 type Events struct {
@@ -60,7 +61,7 @@ func (this *Events) Get(view bool) (bool, error) {
 	}
 	return db.Where("deleted=?", Undelete).Get(this)
 }
-func (this *Events) List(view bool, condition string, params ...interface{}) ([]EventsView, error) {
+func (this *Events) List(view bool, size int, condition string, params ...interface{}) ([]EventsView, error) {
 	es := make([]EventsView, 0)
 
 	var where string
@@ -72,7 +73,14 @@ func (this *Events) List(view bool, condition string, params ...interface{}) ([]
 	if strings.TrimSpace(condition) != "" {
 		where += " and " + condition
 	}
-	err := db.Sql("select id,title,starttime,endtime,status from events where "+where, params...).Find(&es)
 
+	var err error
+
+	if size > 0 {
+		err = db.Sql("select id,title,starttime,endtime,status from events where "+where+" limit "+utils.Int2str(size), params...).Find(&es)
+
+	} else {
+		err = db.Sql("select id,title,starttime,endtime,status from events where "+where, params...).Find(&es)
+	}
 	return es, err
 }

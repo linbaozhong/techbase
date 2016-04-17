@@ -62,7 +62,7 @@
 		color:#bbb;
 	}
 </style>
-<div class="container banner" style="margin-top:75px;">
+<div class="container banner">
 	<div class="slideshow">
 		<ol class="slides">
 			<li class="current" style="background-image: url(/html/images/media-banner.png);">

@@ -208,9 +208,17 @@ func (this *Articles) HotList(size int, articleType int) ([]ArticlesView, error)
 	// slice承载返回的结果
 	as := make([]ArticlesView, 0)
 
-	err := db.Sql(`select articles.id,articles.title,articles.topic,articles.intro 
-		from (select articleid, sum(readed) as rd,sum(loved),sum(weixin) from snsarticle group by articleid order by rd desc limit ?) as sns
-		left join articles on sns.articleid=articles.id where articles.type=?`, size, articleType).Find(&as)
+	//	var err error
+	//	if articleType == 0 {
+	//		err = db.Sql(`select articles.id,articles.title,articles.topic,articles.intro
+	//		 	from (select articleid, sum(readed) as rd,sum(loved),sum(weixin) from snsarticle group by articleid order by rd desc limit ?) as sns
+	//		 	left join articles on sns.articleid=articles.id where articles.type=? and articles.status=? and articles.deleted=?`, size, articleType, Unlock, Undelete).Find(&as)
+	//	} else {
+	//		err = db.Sql(`select articles.id,articles.title,articles.topic,articles.intro
+	//			from articles where articles.type=? limit ?`, articleType, size).Find(&as)
+	//	}
+	err := db.Sql(`select id,title,topic,intro from articles where type=? and status=? and deleted=? 
+		order by position desc,updated desc limit ?`, articleType, Audit_Yes, Undelete, size).Find(&as)
 
 	return as, err
 }

@@ -3,7 +3,9 @@ package models
 import (
 	//"fmt"
 	// "errors"
-	//"fmt"
+	// "fmt"
+	"zouzhe/utils"
+
 	"github.com/astaxie/beego/validation"
 )
 
@@ -43,6 +45,10 @@ type AccountProfile struct {
 	Updated  int64  `json:"updated"`
 }
 
+// 检查手机号码是否重复
+func(this *Accounts)TelExists(id int64,loginName string)(bool,error){
+    return db.Where("id <> ? and loginName = ?",id,loginName).Get(this)
+}
 // 全部账户列表
 func (this *Accounts) AllList() ([]AccountProfile, error) {
 	as := make([]AccountProfile, 0)
@@ -73,10 +79,12 @@ func (this *Accounts) Post() (error, []Error) {
 	if this.RealName == "" {
 		this.RealName = this.NickName
 	}
-	//数据有效性检验
-	if d, err := dataCheck(this); err != nil {
-		return err, d
-	}
+    // fmt.Println(this)
+	// //数据有效性检验
+	// if d, err := dataCheck(this); err != nil {
+	// 	return err, d
+	// }
+    // fmt.Println("-------------")
 	//
 	var err error
 	if this.Id > 0 {
@@ -98,6 +106,12 @@ func (this *Accounts) GetRole() (role int, status int, err error) {
 		status = Locked
 	}
 	return
+}
+
+// 重置密码
+func (this *Accounts) ResetPassword() (int64, error) {
+	this.Password = utils.MD5("20150222")
+	return db.Id(this.Id).Cols("password").Update(this)
 }
 
 // 更改用户角色

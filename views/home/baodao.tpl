@@ -9,6 +9,10 @@
 </style>
 <div class="container" style="margin-top:75px;padding: 50px;">
 	<dl>
+		<dt>Zihan Ling-2016 30 Under 30 Asia-Forbes</dt>
+		<dd><a href="http://www.forbes.com/pictures/lmh45edfdi/zihan-ling/" target="_blank">凌子涵荣登福布斯2016年30岁以下杰出青年榜单</a></dd>
+		<dt>Fortune Most Powerful Women International 2016</dt>
+		<dd><a href="http://www.fortuneconferences.com/mpw-international-asia-2016/2016-preliminary-speakers/" target="_blank">凌子涵受邀出席《财富》杂志世界最具权势女性峰会，并担任演讲嘉宾</a></dd>
 		<dt>30 Under 30 - BBC</dt>
 		<dd><a href="http://www.bbc.com/news/business-34804573" target="_blank">Zihan Ling, 28, China</a></dd>
 		<dt>Where a Gender Gap Is Little Noted-华尔街日报</dt>
