@@ -12,13 +12,13 @@
 
 <body>
     <header class="container" style="background: #333;">
-        <nav style="height:65px;margin-top: 10px;  padding: 0 20px;">
+        <nav style="height:65px;margin-top: 10px;padding: 0 20px;position: relative;">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">
                     <img src="/static/img/logo001.png" class="img-responsive" alt="logo" style="margin-top: -15px;height: 60px;">
                 </a>
             </div>
-            <ul class="nav navbar-nav" style="margin-left:30px;">
+            <ul class="nav navbar-nav" style="margin-left:20px;">
                 {{if eq .index "service"}}
                 <li class="active"><a href="javascript:;">{{i18n .Lang "shouye"}}</a></li>
                 {{else}}
@@ -52,7 +52,7 @@
                 {{else}}
                 <li><a href="/contact">{{i18n .Lang "contact"}}</a></li>
                 {{end}}
-                <li><a href="/?lang={{if eq .Lang "en-US"}}{{"cn-ZH"}}{{else}}{{"en-US"}}{{end}}">{{i18n .Lang "language"}}</a></li>
+                <!-- <li><a href="/?lang={{if eq .Lang "en-US"}}{{"cn-ZH"}}{{else}}{{"en-US"}}{{end}}">{{i18n .Lang "language"}}</a></li> -->
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="login"><a href="javascript:;">{{i18n .Lang "denglu"}}</a>
@@ -66,6 +66,7 @@
 						<a href="javascript:;">关注我们</a>
 					</li>-->
             </ul>
+            <a href="/?lang={{if eq .Lang "en-US"}}{{"cn-ZH"}}{{else}}{{"en-US"}}{{end}}" title="{{if eq .Lang "en-US"}}{{"中文版"}}{{else}}{{"英文版"}}{{end}}" style="position: absolute;top: -5px;right: -5px;font-size: 12px;color: #f56f74;">{{i18n .Lang "language"}}</a>
         </nav>
     </header>
     <div class="submenu submenu-0">

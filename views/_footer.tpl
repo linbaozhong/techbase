@@ -21,7 +21,7 @@
 				<p>{{i18n .Lang "email"}}：{{i18n .Lang "email 0"}}</p>
 			</div>
 			<div class="col-xs-6 col-md-6">
-				<h4>{{i18n .Lang "partners"}}</h4>
+				<!-- <h4>{{i18n .Lang "partners"}}</h4>
 				<p>
 					<a href="http://leanin.org/" target="_blank">
 						<img src="/static/img/leanin.png"/>
@@ -35,7 +35,7 @@
 					<a href="http://itjuzi.com/" target="_blank">
 						<img src="/static/img/logo4.png"/>
 					</a>
-				</p>
+				</p> -->
 			</div>
 		</div>
 		<div class="row copyright-div">

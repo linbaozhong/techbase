@@ -24,7 +24,7 @@
 <div class="container snow-index">
 	<div class="row">
 		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-			<a href="/home/show/116"><img src="/html/images/left-top.jpg" alt="" style="height: 400px;" /></a>
+			<a href="/home/show/140"><img src="/html/images/left-top.jpg" alt="" style="height: 400px;" /></a>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 			<a href="/home/show/124"><img src="/html/images/right-top.jpg" alt="" style="height: 400px;" /></a>

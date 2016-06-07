@@ -15,7 +15,7 @@
 </div>
 <div class="container">
 
-	<ul class="row header">
+	<ul class="row header" style="padding: 0 60px;">
 		<li class="span">星期日</li>
 		<li class="span">星期一</li>
 		<li class="span">星期二</li>
@@ -30,7 +30,7 @@
 </div>
 
 <style type="text/css">
-	.row {
+	#rili .row {
 		padding: 0 60px;
 	}
 	
